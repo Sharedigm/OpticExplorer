@@ -1,0 +1,169 @@
+/******************************************************************************\
+|                                                                              |
+|                              _tabs-vertical.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$round-border-radius: 10px;
+$rounded-border-radius: 5px;
+
+//
+// styles
+//
+
+.tabs.vertical {
+	display: flex;
+
+	> ul.nav-tabs {
+		display: flex;
+		flex-direction: column;
+		margin-top: 40px;
+		border-bottom: none;
+		
+		li {
+			white-space: nowrap;
+			border: none;
+			outline: none;
+			text-align: left;
+			cursor: pointer;
+			transition: 0.3s;
+			margin-bottom: 5px;
+
+			> a {
+				display: block;		
+				text-decoration: none;
+
+				i {
+					max-width: 14px;
+				}
+			}
+		}
+
+		li + .tooltip {
+			display: none !important;
+		}
+	}
+
+	> .tab-content {
+		display: flex;
+		flex-grow: 1;
+		
+		> .tab-pane {
+			flex-grow: 1;
+			height: 100%;
+
+			.panel {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+//
+// tab borders
+//
+
+.round-tabs,
+.round.auto-corner-tabs {
+	.tabs.vertical > ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: $round-border-radius;
+			}
+		}
+	}
+
+	&:not(.tabs-attached) {
+		.tabs.vertical > ul.nav-tabs {
+			> li {
+				> a {
+					border-radius: $round-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.rounded-tabs,
+.rounded.auto-corner-tabs {
+	.tabs.vertical > ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: $rounded-border-radius;
+			}
+		}
+	}
+}
+
+.square-tabs,
+.square.auto-corner-tabs {
+	.tabs.vertical > ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+//
+// tab attachment
+//
+
+.tabs-attached,
+.tabs-attached.auto-corner-tabs {
+	.tabs.vertical > ul.nav-tabs {
+		> li {
+			> a {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-right-width: 0;
+			}
+		}
+	}
+}
+
+body:not(.tabs-attached) {
+	.tabs.vertical > ul.nav-tabs {
+		margin-right: 10px;
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.tabs.vertical {
+		> ul.nav-tabs {
+			> li {
+				> a {
+					i {
+						display: inline-block;
+						margin: 5px;
+					}
+
+					label {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

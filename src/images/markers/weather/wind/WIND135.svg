@@ -1,0 +1,44 @@
+<svg 
+	xmlns="http://www.w3.org/2000/svg"
+	width="500"
+	height="500"
+	viewBox="0 0 500 500"
+	class="metar bkn marker">
+
+	<style>
+		line {
+			stroke: black; 
+			stroke-width: 10px; 
+			stroke-linecap: round;
+		}
+		path {
+			fill: black;
+			stroke: black;
+			stroke-width: 10px; 
+			stroke-linejoin: round;
+		}
+	</style>
+
+	<g transform="translate(250,250), scale(1,-1)">
+		<line x1="0" y1="0" x2="0" y2="200" />
+
+		<g transform="translate(0,200)">
+			<path d="M 0 25 l 100 0 l -100 -25 z" />
+		</g>
+		<g transform="translate(0,165)">
+			<path d="M 0 25 l 100 0 l -100 -25 z" />
+		</g>
+		<g transform="translate(0,140)">
+			<line x1="0" y1="0" x2="100" y2="25" />
+		</g>
+		<g transform="translate(0,115)">
+			<line x1="0" y1="0" x2="100" y2="25" />
+		</g>
+		<g transform="translate(0,90)">
+			<line x1="0" y1="0" x2="100" y2="25" />
+		</g>
+		<g transform="translate(0,65)">
+			<line x1="0" y1="0" x2="50" y2="12.5" />
+		</g>
+	</g>
+</svg>

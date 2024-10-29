@@ -1,0 +1,138 @@
+{
+	"general": {
+		"day_theme": "light",
+		"night_theme": "light",
+		"color_scheme": "colored",
+
+		"highlight_color": "blue",
+		"accent_color": "none",
+		"material": "none",
+		"transparency": "opaque",
+
+		"corner_style": "rounded",
+		"sidebar_panels": true,
+		"label_icons": false,
+
+		"icon_size": "small",
+		"icon_material": "auto",
+		"icon_corners": "auto",
+		"icon_tilt": "none",
+		"icon_tint": "blue",
+		"icon_background": true,
+		"icon_spinning": false,
+
+		"icon_select_effect": "none",
+		"icon_deselect_effect": "none",
+		"icon_highlight_effect": "none",
+		"icon_unhighlight_effect": "none",
+		"icon_open_effect": "none",
+
+		"system_font": "Geneva",
+		"heading_font": "Geneva",
+		"title_font": "Chicago",
+		"label_font": "Chicago",
+		"font_size": "normal"
+	},
+
+	"desktop": {
+		"desktop_theme": "auto",
+		"launcher_style": "dock",
+
+		"run_menu_items": "icons",
+		"run_menu_corners": "auto",
+		"run_menu_attached": true,
+		"run_menu_autohide": false,
+
+		"taskbar_alignment": "left",
+		"taskbar_handles": true,
+		"taskbar_minimized": false,
+
+		"dock_tilt": "none",
+		"dock_corners": "auto",
+		"dock_attached": true,
+
+		"background_image": null,
+		"background_size": "tile",
+		"background_color": null,
+		"background_repeats": 5,
+
+		"desktop_sidebar_transparency": "auto",
+		"desktop_sidebar_panels": "auto",
+
+		"show_app_name": true,
+		"show_clock": true,
+		"show_led_time": false,
+		"show_app_info": true,
+		"show_trash_in_corner": false,
+		"show_dialog_parallax_shift": false,
+
+		"launcher_open_effect": "slide",
+		"launcher_close_effect": "slide"
+	},
+
+	"controls": {
+		"menubar_width": "thin",
+		"menu_material": "auto",
+		"menu_corners": "auto",
+		"menu_icons": false,
+		"menus_attached": true,
+		"menu_margins": false,
+
+		"button_material": "auto",
+		"button_corners": "auto",
+		"button_icons": false,
+
+		"tab_material": "auto",
+		"tab_corners": "auto",
+		"tab_alignment": "center",
+		"tabs_minimal": false,
+		"tabs_expandable": true,
+		"tabs_attached": true,
+		"tab_margins": true,
+		"tab_icons": false,
+		"tab_close_buttons": true,
+
+		"slider_material": "auto",
+		"slider_corners": "round",
+		"slider_handle_width": "medium",
+
+		"splitter_width": "wide",
+		"splitter_handles": true,
+		"splitter_handle_width": "medium",
+
+		"scrollbar_material": "auto",
+		"scrollbar_width": "thick",
+		"scrollbar_corners": "square"
+	},
+
+	"dialogs": {
+		"dialog_colors": "none",
+		"dialog_material": "none",
+		"dialog_button_colors": "monochrome",
+		"dialog_button_material": "none",
+		"dialog_button_label_colors": "light",
+
+		"dialog_corners": "square",
+		"dialog_button_corners": "square",
+		"dialog_padding": true,
+		"dialog_alert_size": "medium",
+
+		"dialog_header_width": "medium",
+		"dialog_title_style": "center",
+		"dialog_header_icons": false,
+		"dialog_handles": true,
+		"dialog_buttons": true,
+		"dialog_footer_icons": false,
+
+		"dialog_button_alignment": "split",
+		"dialog_button_size": "medium",
+		"dialog_button_width": "square",
+		"dialog_button_labels": true,
+		"dialog_button_outlines": false,
+
+		"dialog_open_effect": "zoom",
+		"dialog_close_effect": "zoom",
+		"dialog_minimize_effect": "zoom",
+		"dialog_unminimize_effect": "zoom"
+	}
+}

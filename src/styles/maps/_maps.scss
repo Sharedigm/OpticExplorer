@@ -1,0 +1,188 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _maps.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$ortho-image-opacity: 0.5;
+$ortho-image-filter: blur(10px);
+
+//
+// colors
+//
+
+$dimensioning-color: colors.$medium-cyan;
+$selection-stroke-color: colors.$medium-cyan;
+$selection-fill-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+.map {
+
+	//
+	// smoothing
+	//
+
+	&.pixelated {
+		image-rendering: pixelated;
+	}
+	&.smoothed {
+		image-rendering: auto;
+	}
+
+	//
+	// map tiles
+	//
+
+	image {
+		pointer-events: none;
+	}
+
+	//
+	// line annotations
+	//
+
+	.dimensioning path {
+		stroke: $dimensioning-color;
+		stroke-width: 2;
+		vector-effect: non-scaling-stroke;
+	}
+
+	//
+	// selection rectangles
+	//
+
+	.selection {
+		stroke: $selection-stroke-color !important;
+		fill: $selection-fill-color !important;
+	}
+
+	//
+	// dimensioning arrows
+	//
+
+	marker#arrow-start.filled, 
+	marker#arrow-end.filled {
+		path {
+			stroke: none;
+		}
+	}
+
+	marker#arrow-start:not(.filled), 
+	marker#arrow-end:not(.filled) {
+		path {
+			stroke-width: 2px;
+			fill: none;
+		}
+	}
+
+	.dimensioning.arrow {
+		text {
+			filter: url(#white-background);
+		}
+	}
+
+	//
+	// map ortho overlays
+	//
+
+	.ortho {
+		pointer-events: auto;
+
+		image {
+			opacity: $ortho-image-opacity;
+			pointer-events: none;
+
+			&:not(.pixelated) {
+				filter: $ortho-image-filter;
+			}
+		}
+
+		path.line {
+			stroke-width: 3;
+			pointer-events: auto;
+		}
+
+		&.selected {
+			image {
+				mix-blend-mode: normal !important;
+				opacity: 1;
+			}
+		}
+	}
+
+	//
+	// photographic maps
+	//
+
+	&.aerial, &.satellite, &.hybrid {
+
+		marker#arrow-start:not(.filled), 
+		marker#arrow-end:not(.filled) {
+			path {
+				stroke: white;
+			}
+		}
+
+		marker#arrow-start.filled, 
+		marker#arrow-end.filled {
+			path {
+				fill: white;
+			}
+		}
+
+		//
+		// selection rectangles
+		//
+
+		rect.selection {
+			fill: $selection-fill-color !important;
+			stroke: $selection-stroke-color !important;
+		}
+
+		//
+		// map ortho overlays
+		//
+
+		.ortho {
+			image {
+				mix-blend-mode: plus-lighter;
+				fill-opacity: 0.75
+			}
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+body[browser="firefox"] {
+	.map {
+
+		// smoothing
+		//
+		&.pixelated {
+			image-rendering: -moz-crisp-edges;
+		}
+	}
+}

@@ -1,0 +1,691 @@
+/******************************************************************************\
+|                                                                              |
+|                                _toolbars.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/buttons";
+
+//
+// variables
+//
+
+$tool-group-shadow: 5px 5px 20px rgba(black, 10%);
+$box-shadow: 5px 5px 20px rgba(black, 10%);
+
+//
+// styles
+//
+
+.toolbar {
+	display: inline-flex;
+	cursor: default;
+
+	&:empty {
+		display: none !important;
+	}
+
+	&.multiline {
+		flex-wrap: wrap;
+	}
+
+	> .icon {
+		width: 25px;
+		height: 25px;
+		margin: 2px;
+		text-align: center;
+
+		i {
+			vertical-align: middle;
+		}
+	}
+
+	//
+	// toolbar controls
+	//
+
+	> .handle {
+		cursor: grab;
+		margin-bottom: 5px;
+
+		&:active {
+			cursor: grabbing;
+		}
+	}
+
+	.controls {
+		width: 25px;
+		height: 25px;
+		margin: 2px;
+		text-align: center;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 5px;
+
+		.expander, .rotator {
+			display: inline-block;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.rotator {
+			i {
+				line-height: 25px;
+			}
+		}
+	}
+
+	.input {
+
+		//
+		// slider inputs
+		//
+
+		input[type="range"] {
+			width: 150px;
+			padding: 0;
+		}
+
+		//
+		// text / number inputs
+		//
+
+		input:not([type="range"]) {
+			height: 25px;
+			min-width: 25px;
+			line-height: 15px;
+			margin: auto;
+		}
+
+		&.selectable {
+			margin: 0;
+			
+			.input-group input {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				margin: 0;
+			}
+		}
+
+		//
+		// number inputs
+		//
+
+		input[type="number"] {
+			 -moz-appearance: textfield;
+			padding: 0;
+		}
+
+		input[type="number"]::-webkit-inner-spin-button, 
+		input[type="number"]::-webkit-outer-spin-button {
+
+			// hide spinners
+			//
+			display: none;
+		}
+
+		//
+		// date inputs
+		//
+
+		input[type="date"] {
+			padding-right: 0;
+		}
+
+		//
+		// range (slider) inputs
+		//
+		
+		input[type="range"] {
+			display: inline-block;
+			height: 30px;
+		}
+
+		input[type="range"]::-ms-tooltip {
+			display: none;
+		}
+	}
+
+	//
+	// input groups
+	//
+
+	.input-group {
+		margin: 2px;
+
+		input {
+			height: 26px;
+			padding: 2px 5px;
+		}
+	}
+
+	.input-group-btn {
+		display: inline-block;
+		font-size: inherit;
+
+		.btn {
+			line-height: 13px;
+		}
+	}
+	
+	.input-label {
+		line-height: 30px;
+		margin: 0 5px;
+	}
+
+	//
+	// toolbar buttons
+	//
+
+	button {
+		cursor: pointer;
+		text-align: center;
+		padding: 1px;
+		margin: 2px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: transparent;
+		background-color: transparent;
+
+		//
+		// toolbar button spacing
+		//
+
+		& + button {
+			margin-left: 2px !important;
+		}
+
+		//
+		// toolbar button size
+		//
+
+		&.btn {
+			line-height: inherit;
+		}
+
+		&:not(.wide) {
+			width: 25px;
+			height: 25px;
+		}
+
+		//
+		// toolbar button icons
+		//
+
+		i {
+			line-height: 20px;
+		}
+
+		span {
+			display: inline-block;
+			margin: 1px;
+		}
+
+		svg {
+			margin-bottom: -4px;
+		}
+
+		&:hover {
+			background: black;
+			color: white;
+
+			i {
+				color: white;
+			}
+
+			svg {
+				fill: white;
+			}
+		}
+
+		//
+		// wide buttons
+		//
+
+		&.wide {
+			width: auto;
+			padding-left: 7px;
+			padding-right: 7px;
+			white-space: nowrap;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.input-group button {
+		margin: 0;	
+	}
+
+	//
+	// toolbar tiles
+	//
+
+	.tile {
+		display: flex;
+		border-width: 1px;
+		border-style: solid;
+		width: 25px;
+		height: 25px;
+		margin: 2px;
+	}
+
+	//
+	// toolbar tool groups
+	//
+
+	.tools {
+		position: absolute; 
+		margin-top: 30px;
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: $tool-group-shadow;
+		flex-direction: column;
+		z-index: 1000;
+		background: white;
+
+		> div {
+
+			.button {
+				margin: 2px;
+			}
+		}
+	}
+
+	.current + .tools {
+		margin-top: -30px;
+		margin-left: -1px;
+
+		> div {
+
+			/*
+			&:first-child {
+				border-bottom-width: 1px;
+				border-bottom-style: dashed;	
+			}
+			*/
+		}
+	}
+
+	//
+	// disabled toolbar elements
+	//
+
+	.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+
+//
+// thin toolbars
+//
+
+.thin-menu-bars {
+	.header-bar, .footer-bar {
+		.toolbar {
+			height: 25px;
+
+			> .icon {
+				margin: 1px;
+			}
+
+			input[type="range"] {
+				height: 25px;
+			}
+
+			.input-label {
+				line-height: 25px;
+			}
+
+			.input-group {
+				margin: 0 2px;
+
+				input {
+					height: 25px;
+				}
+			}
+
+			.button {
+				margin: 0 2px;
+			}
+
+			.tools {
+				margin-top: 26px;
+
+				.button {
+					margin: 1px;
+				}
+			}
+
+			.current + .tools {
+				margin-top: -27px;
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+//
+// mainbar toolbars
+//
+
+.mainbar .toolbar {
+	&.vertical, &.horizontal {
+		position: absolute;
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: $box-shadow;
+		left: -1px;
+		top: -1px;
+
+		//
+		// toolbar controls
+		//
+
+		.controls {
+			width: 25px;
+			height: 25px;
+			margin: 2px;
+			text-align: center;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 5px;
+
+			.expander, .rotator {
+				display: inline-block;
+				text-align: center;
+			}
+		}
+
+		//
+		// toolbar buttons
+		//
+
+		.button {
+			cursor: pointer;
+			text-align: center;
+			width: 25px;
+			height: 25px;
+			border-radius: 5px;
+			margin: 2px;
+
+			i {
+				vertical-align: top;
+			}
+		}
+
+		//
+		// toolbar tiles
+		//
+
+		.tile {
+			border-width: 1px;
+			border-style: solid;
+			width: 25px;
+			height: 25px;
+			margin: 2px;
+		}
+
+		//
+		// toolbar tool group styles
+		//
+
+		.tools {
+			position: absolute; 
+			border-width: 1px;
+			margin: -1px;
+			border-style: solid;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+			display: inline-flex;
+			flex-direction: column;
+		}
+	}
+
+	//
+	// horizontal toolbars
+	//
+
+	&.horizontal {
+		display: flex;
+
+		> .button,
+		> .tools > .button {
+			margin-right: 5px;
+		}
+
+		.tools {
+			margin-top: 29px;
+		}
+
+		.current + .tools {
+			margin-top: -30px;
+			margin-left: -1px;
+		}
+	}
+
+	//
+	// vertical toolbars
+	//
+
+	&.vertical {
+		flex-direction: column;
+
+		.handle {
+			margin-top: 5px;
+		}
+
+		.tools {
+			display: flex;
+			flex-direction: row;
+			margin-top: 0;
+			margin-left: 29px;
+		}
+
+		.current + .tools {
+			margin-top: -30px;
+			margin-left: -1px;
+		}
+	}
+
+	//
+	// collapsed toolbar styles
+	//
+
+	&.collapsed {
+
+		.button {
+			display: none;
+		}
+		
+		.tool-group, .tile {
+			display: none;
+		}
+	}
+}
+
+//
+// toolbar borders
+//
+
+.round-buttons,
+.round.auto-corner-buttons {
+	.toolbar {
+		.button {
+			border-radius: buttons.$round-border-radius;
+		}
+	}
+}
+
+.rounded-buttons,
+.rounded.auto-corner-buttons {
+	.toolbar {
+		.button {
+			border-radius: buttons.$rounded-border-radius;
+		}
+	}
+}
+
+.square-buttons,
+.square.auto-corner-buttons {
+	.toolbar {
+		.button {
+			border-radius: 0;
+		}
+	}
+}
+
+//
+// horizontal toolbars
+//
+
+.toolbar:not(.vertical) {
+	> .handle {
+		width: 7px;
+		margin: 2px;
+		background: rgba(white, 75%);
+		border-width: 1px;
+		border-style: solid;
+	}
+}
+
+.horizontal.toolbar {
+	height: 30px;
+
+	.tools {
+		margin-top: 29px;
+	}
+}
+
+//
+// vertical toolbars
+//
+
+.vertical.toolbar {
+	flex-direction: column;
+
+	> .handle {
+		height: 7px;
+		margin: 2px;
+		background: rgba(white, 75%);
+		border-width: 1px;
+		border-style: solid;
+		margin-bottom: 5px;
+	}
+
+	.tool-group {
+		.tools {
+			flex-direction: row;
+		}
+	}
+
+	.button {
+		margin-top: 5px;
+	}
+}
+
+//
+// collapsed toolbars
+//
+
+.toolbar.collapsed {
+
+	.button {
+		display: none;
+	}
+	
+	.tool-group, .tile {
+		display: none;
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.toolbar {
+
+		//
+		// mobile toolbar spacing
+		//
+
+		> div {
+			padding: 0;
+
+			// 
+			// mobile toolbar buttons
+			//
+
+			.button:not(.wide) {
+				width: buttons.$mobile-min-width;
+
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.mainbar .toolbar {
+
+		//
+		// mobile toolbar controls
+		//
+
+		.controls {
+			width: 50px;
+		}
+
+		&.vertical {
+			.tools {
+				margin-left: 54px;
+			}
+		}
+	}
+}
+
+body[device="phone"] {
+
+	//
+	// hide mobile mainbar toolbars
+	//
+
+	/*
+	.mainbar .toolbar {
+		display: none;
+	}
+	*/
+}
+
+//
+// Firefox compatibility
+//
+
+@-moz-document url-prefix() {
+
+	.toolbar {
+		.button:hover {
+			svg {
+				path, polygon {
+					filter: drop-shadow(0 0 20px white);
+				}
+			}
+		}
+
+		input[type="range"]::-moz-focus-outer {
+			border: 0;
+		}
+	}
+}

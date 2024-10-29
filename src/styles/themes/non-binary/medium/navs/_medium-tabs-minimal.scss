@@ -1,0 +1,76 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-tabs-minimal.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$icon-color: medium-branding.$secondary-color;
+$text-color: text-colors.$dark-color;
+$hover-icon-color: medium-branding.$primary-color;
+$hover-text-color: medium-branding.$primary-color;
+
+//
+// styles
+//
+
+body:not(.binary).tabs-minimal {
+	ul.nav-tabs {
+
+		//
+		// inactive tabs
+		//
+
+		> li:not(.active) {
+			> a {
+				color: $text-color;
+
+				i {
+					color: $icon-color;
+				}
+
+				svg {
+					fill: $icon-color;
+				}
+
+				label {
+					color: $text-color;
+				}
+			}
+
+			> a:hover {
+				color: $hover-text-color;
+
+				i {
+					color: $hover-icon-color;
+				}
+
+				svg {
+					fill: $hover-icon-color;
+				}
+
+				label {
+					color: $hover-text-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+/******************************************************************************\
+|                                                                              |
+|                          _notification-center.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.notification-center.app {
+
+	.body {
+		> .contents {
+			overflow: hidden;
+			height: 100%;
+
+			.content {
+				height: 100%;
+				overflow: auto;
+				background: none;
+			}
+		}
+	}
+}
+
+//
+// dropdown notifications
+//
+
+.connection-requests, .notifications {
+	/*
+	.form-group:first-child .form-label {
+		visibility: hidden;
+		height: 0;
+	}
+	*/
+
+	.form-group:first-child .form-label {
+		font-size: 0;
+	}
+
+	.form-group {
+		.form-control-static {
+			width: 75%;
+			white-space: normal;
+		}
+	}
+}

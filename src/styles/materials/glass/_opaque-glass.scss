@@ -1,0 +1,42 @@
+/******************************************************************************\
+|                                                                              |
+|                               _opaque-glass.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "flat-glass";
+
+//
+// mixins
+//
+
+@mixin shade($color: white, $border-style: outset) {
+	@include flat-glass.shade($color, $border-style, 0%);
+}
+
+@mixin multilayer-shade($color: white, $border-style: outset, $opacity: 100%) {
+	@include flat-glass.multilayer-shade($color, $border-style, 0%);
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color: white, $border-style: outset) {
+	@include flat-glass.shaded($color, $border-style, 0%);
+}
+
+@mixin multilayer-shaded($color: white, $border-style: outset, $opacity: 100%) {
+	@include flat-glass.multilayer-shaded($color, $border-style, 0%);
+}

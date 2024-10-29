@@ -1,0 +1,30 @@
+<svg 
+	id="podcasts-empty-icon" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 16 48 24">
+	
+	<style>
+		.folder-top {
+			fill: tan;
+		}
+		.folder-body {
+			fill: wheat;
+		}
+		.folder-icon {
+			fill: burlywood;
+		}
+	</style>
+
+	<g class="folder-top" transform="translate(0 1.5)">
+		<path d="M 43.5,11.5 H 21 L 16.5,7 h -12 c -3,0 -3,0 -3,3 v 8 h 45 v -3.5 c 0,0 0,-3 -3,-3 z" />
+	</g>
+
+	<g class="folder-body">
+		<path id="folder-cover" d="M 3,16.75 C 1.5,16.75 1.5,18 1.5,18 v 25.75 c 0,2.25 0,2 3,2 h 39 c 3,0 3,0.25 3,-2 V 18 c 0,0 0,-1.25 -1.5,-1.25 z" />
+	</g>
+	
+	<g class="folder-icon" transform="translate(12 19)">
+		<path d="M3.979 15.045c-1.468.978-2.168 2.263-2.231 3.955h-1.748c.069-2.346 1.1-4.186 3.153-5.497l.826 1.542zm15.36-14.045c-1.852 0-3.198.966-4.138 2.619l3.545 6.618c3.4.222 5.254-2.15 5.254-4.575 0-2.598-2.098-4.662-4.661-4.662zm-14.867 10.728l1.557 2.906 10.539-4.229-2.716-5.07-9.38 6.393zm4.765 3.773c.633.619.764 1.648.764 2.558v4.941h1.999v-5.097c0-1.776.662-3.024 1.735-4.207l-4.498 1.805z" />
+	</g>
+</svg>

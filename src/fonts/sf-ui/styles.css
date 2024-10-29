@@ -1,0 +1,17 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'SF UI';
+	src: url('SF-UI-Display-Medium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SF UI';
+	src: url('SF-UI-Display-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}

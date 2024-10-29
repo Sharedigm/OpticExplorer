@@ -1,0 +1,40 @@
+/******************************************************************************\
+|                                                                              |
+|                                _selectors.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.selector {
+	button img {
+		margin: 0 5px;
+		margin-bottom: 3px;
+	}
+
+	.dropdown-menu.open {
+		position: absolute;
+
+		ul.dropdown-menu.inner {
+			position: relative;
+
+			img {
+				margin: 0 5px;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}

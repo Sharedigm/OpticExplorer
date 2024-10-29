@@ -1,0 +1,148 @@
+/******************************************************************************\
+|                                                                              |
+|                                _plastic.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../flat/flat";
+@use "flat-plastic";
+@use "round-plastic";
+@use "rounded-plastic";
+@use "long-round-plastic";
+
+//
+// variables
+//
+
+$border-radius: var(--border-radius);
+
+//
+// mixins
+//
+
+@mixin shade($color) {
+	@include flat-plastic.shade($color);
+
+	&.round {
+		@include round-plastic.shade($color);
+	}
+
+	&.rounded {
+		@include rounded-plastic.shade($color);
+	}
+
+	&.long.round {
+		@include long-round-plastic.shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-plastic.vertical-shade($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shade($color) {
+	@include flat-plastic.multilayer-shade($color);
+
+	&.round {
+		@include round-plastic.multilayer-shade($color);
+	}
+
+	&.rounded {
+		@include rounded-plastic.multilayer-shade($color);
+	}
+
+	&.long.round {
+		@include long-round-plastic.multilayer-shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-plastic.vertical-multilayer-shade($color, $border-radius);
+		}
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color) {
+	@include flat-plastic.shade($color);
+
+	&.round {
+		@include round-plastic.shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-plastic.shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-plastic.shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-plastic.vertical-shaded($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shaded($color) {
+	@include flat-plastic.multilayer-shaded($color);
+
+	&.round {
+		@include round-plastic.multilayer-shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-plastic.multilayer-shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-plastic.multilayer-shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-plastic.vertical-multilayer-shaded($color, $border-radius);
+		}
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.plastic {
+		.shaded, &.plastic.shaded {
+			@include shade(var(--primary-color));
+
+			&.textured {
+				@include multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.plastic {
+		.shaded, &.plastic.shaded {
+			@include flat.shade(var(--primary-color));
+
+			&.textured {
+				@include flat.multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}

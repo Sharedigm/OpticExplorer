@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                               _topic-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.topic-viewer.app {
+	.body > .contents {
+
+		.sidebar {
+			.topics.panel {
+				.items {
+					.subscribed.badge {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.mainbar {
+			.tab-pane {
+				overflow: auto;
+
+				> .topic {
+					padding: 10px;
+					min-height: 100%;
+				}
+
+				> .post {
+					margin: 10px;
+
+					&.selected {
+						margin: 9px;
+					}
+				}
+			}
+		}
+	}
+}

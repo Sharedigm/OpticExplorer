@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                              _responsive.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body[device="desktop"] {
+	.mobile-only {
+		display: none !important;
+	}
+}
+
+body[device="phone"],
+body[device="tablet"]  {
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+body[device="phone"],
+body[device="tablet"]  {
+	.visible-desktop-only {
+		visibility: hidden !important;
+	}
+}
+
+body[os="ios"] {
+	.main-carousel {
+		touch-action: none; -webkit-user-select: none; -webkit-user-drag: none;
+	}
+}
+
+@media (max-width: 640px) {
+	.hidden-xxs {
+		display: none !important;
+	}
+}

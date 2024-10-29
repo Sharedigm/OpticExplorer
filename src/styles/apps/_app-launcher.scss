@@ -1,0 +1,417 @@
+/******************************************************************************\
+|                                                                              |
+|                               _app-launcher.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$tablet-icon-size: 60px;
+
+//
+// styles
+//
+
+.app-launcher.app {
+	overflow: auto;
+
+	.body {
+		width: 100%;
+		height: 100%;
+		font-weight: bold;
+
+		.contents {
+			display: flex;
+
+			//
+			// app icon carousel
+			//
+
+			.main-carousel {
+
+				// full size
+				//
+				width: 100%;
+				height: 100%;
+				margin: auto;
+
+				.carousel-cell {
+					width: 100%;
+					height: 100%;
+
+					.items {
+						display: flex;
+						text-align: center;
+					}
+				}
+
+				//
+				// page navigation
+				//
+
+				.flickity-page-dots {
+					bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// full screen app launcher
+//
+
+.full-screen {
+	.app-launcher.app {
+
+		.body {
+			.contents {
+				display: flex;
+
+				.main-carousel {
+					position: relative;
+					margin: auto;
+
+					// full screen
+					//
+					display: flex;
+					width: 66%;
+					max-height: 66%;
+					transform: scale(1.25);
+
+					.carousel-cell {
+						display: flex;
+
+						.items {
+							display: flex;
+							
+							.icon-grid {
+								position: relative;
+								margin: auto;
+								text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// non-mobile desktop styles
+//
+
+@media (min-height: 360px) and (min-width: variables.$screen-xs-min) {
+	.app-launcher.app {
+		.body {
+
+			// icon carousel
+			//
+			.contents {
+				.main-carousel {
+					width: 90%;
+				}
+			}
+
+			.icon-grid {
+				padding-right: 0;
+				min-height: 0;
+				margin: auto;
+			}
+
+			//
+			// page navigation
+			//
+
+			.flickity-page-dots {
+				bottom: 0;
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	//
+	// mobile icons
+	//
+
+	.app-launcher.app {
+
+		.header-bar {
+			display: none;
+		}
+
+		.body {
+			.main-carousel {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+				.icon-grid {
+					padding: 10px 0 !important;
+					padding-bottom: 25px !important;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.full-screen {
+		.app-launcher.app {
+			.body {
+				.contents {
+					.main-carousel {
+						width: 75%;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// small mobile icons
+	//
+
+	@media (max-width: 360px) {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+
+					//
+					// items
+					//
+
+					.item {
+						width: 75px;
+
+						.icon {
+							width: 60px;
+							height: 60px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// medium mobile icons
+	//
+
+	@media (min-width: 360px) and (max-width: variables.$screen-xs-min) {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+
+					//
+					// items
+					//
+
+					.item {
+						width: 90px;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// large phone icons
+	//
+
+	@media (min-width: variables.$screen-xs-min) and (max-width: variables.$screen-sm-min) {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+
+					//
+					// items
+					//
+
+					.item {
+						width: 100px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.app-launcher.app {
+		.body {
+			.main-carousel {
+				.icon-grid {
+					padding: 25px !important;
+				}
+			}
+		}
+	}
+}
+
+//
+// iphone
+//
+
+body[device="phone"][os="ios"] {
+	.app-launcher.app {
+		.body {
+			.icon-grid {
+				.item {
+					> .row:first-child {
+						.icon {
+							> i {
+								font-size: 35px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body[device="tablet"] {
+
+	//
+	// tablet icons
+	//
+
+	.app-launcher.app {
+		.body {
+			.icon-grid {
+
+				//
+				// items
+				//
+
+				.item {
+					width: 125px;
+					margin: 15px 0;
+
+					> .row:first-child {
+						.icon {
+							width: $tablet-icon-size;
+							height: $tablet-icon-size;
+							
+							i {
+								font-size: 45px;
+							}
+
+							// app loading spinner
+							//
+							.spinner {
+								@include icons.spinner($tablet-icon-size);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (orientation: landscape) {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+
+					//
+					// items
+					//
+
+					.item {
+						margin: 15px 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.round-icons {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+					.item {
+						> .row:first-child {
+							.icon {
+								border-radius: 40px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.rounded-cons {
+		.app-launcher.app {
+			.body {
+				.icon-grid {
+					.item {
+						> .row:first-child {
+							.icon {
+								border-radius: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// ipad 
+//
+
+body[device="tablet"][os="ios"] {
+	.app-launcher.app {
+		.body {
+			.icon-grid {
+
+				//
+				// items
+				//
+
+				.item {
+					> .row:first-child {
+						.icon {
+							width: $tablet-icon-size;
+							height: $tablet-icon-size;
+
+							i {
+								font-size: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

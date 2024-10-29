@@ -1,0 +1,778 @@
+/******************************************************************************\
+|                                                                              |
+|                                _dock-bars.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$small-height: 40px;
+$medium-height: 50px;
+$large-height: 60px;
+$mobile-height: 40px;
+$tablet-height: 80px;
+$small-icon-size: 25px;
+$medium-icon-size: 30px;
+$large-icon-size: 40px;
+$mobile-icon-size: 30px;
+$tablet-icon-size: 60px;
+$tilt: 30deg;
+$round-border-radius: 12px;
+$rounded-border-radius: 7px;
+$shadow: 5px 5px 15px rgba(black, 50%);
+$item-shadow: 2px 2px 5px rgba(black, 25%);
+$divider-width: 2px;
+$divider-style: solid;
+$small-item-indicator-size: 4px;
+$medium-item-indicator-size: 5px;
+$large-item-indicator-size: 6px;
+
+//
+// styles
+//
+
+#dock-bar {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	// disable default selection
+	//
+	@include selection.unselectable;
+
+	.shelf {
+		position: absolute;
+		left: 2.5%;
+		right: 2.5%;
+		bottom: 0;
+		height: $medium-height;
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: $shadow;
+	}
+
+	.dock {
+		position: relative;
+		min-width: 50%;
+		max-width: 95%;
+		margin: auto;
+		padding: 5px;
+		overflow-x: auto;
+		overflow-y: visible;
+		white-space: nowrap;
+		text-align: center;
+
+		// hide scroll bar (Firefox)
+		//
+		scrollbar-width: none;
+
+		// hide scroll bar (Safari)
+		//
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.items {
+			display: inline-flex;
+			width: auto;
+			margin: auto;
+
+			.apps, .tasks, .trash {
+				display: inline-flex;
+				padding: 0;
+				
+				.icons {			
+					.item {
+						display: inline-block;
+						position: relative;
+						margin: 0 5px;
+
+						.icon {
+							position: relative;
+							text-align: center;
+							border-width: 1px;
+							border-style: solid;
+
+							> img {
+								max-width: 100%;
+								max-height: 100%;
+							}
+
+							// app loading spinner
+							//
+							.spinner {
+								position: absolute;
+							}
+						}
+
+						.indicator {
+							margin: 5px auto;
+						}
+					}
+				}
+
+				//
+				// disabled items
+				//
+
+				.item.disabled {
+					opacity: 0.5;
+					pointer-events: none;
+				}
+			}
+
+			.trash {
+				.icon {
+					background: transparent;
+					border: transparent;
+
+					i {
+						color: white;
+						transform: scale(1.5);
+					}
+				}
+			}
+
+			.apps:not(:empty) + .tasks {
+			
+				// task icon separator
+				//
+				.icons:not(:empty) {
+					border-left-width: $divider-width;
+					border-left-style: $divider-style;
+					margin-left: 5px;
+					padding-left: 5px;
+				}
+			}
+
+			.tasks {
+				.icons {
+					.item {
+						.icon {
+							background: none !important;
+							border: transparent;
+							border-radius: 0;
+
+							svg {
+								transform: none;
+							}
+
+							.window-content {
+								position: absolute;
+								width: 100%;
+								top: 8px;
+								left: 0;
+								right: 0;
+								bottom: 0;
+								text-align: center;
+								border-style: solid;
+								border-width: 1px;
+
+								i {
+									vertical-align: text-top;
+									margin: -1px;
+									background: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// flush docks
+	//
+
+	&.attached {
+		.shelf {
+			border-bottom-width: 0;
+		}
+	}
+
+	//
+	// margin docks
+	//
+
+	&:not(.attached) {
+		
+		.shelf {
+			bottom: 5px;
+		}
+
+		.dock {
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	//
+	// tilted docks
+	//
+
+	&.tilted-left, &.tilted-right {
+		.shelf {
+			left: 2.5%;
+			right: 2.5%;
+		}
+	}
+
+	&.tilted-left {
+		.shelf {
+			transform: scaleY(0.5) translateY(50%) skewX($tilt);
+		}
+	}
+
+	&.tilted-right {
+		.shelf {
+			transform: scaleY(0.5) translateY(50%) skewX(-$tilt);
+		}
+	}
+}
+
+//
+// dock borders
+//
+
+.round #dock-bar.auto-corners,
+#dock-bar.round {
+
+	.shelf {
+		border-radius: $round-border-radius;
+	}
+
+	.dock {	
+		.item .indicator {
+			border-radius: 50%;
+		}
+	}
+}
+
+.rounded #dock-bar.auto-corners,
+#dock-bar.rounded {
+
+	.shelf {
+		border-radius: $rounded-border-radius;
+	}
+
+	.dock {	
+		.item .indicator {
+			border-radius: 50%;
+		}
+	}
+}
+
+#dock-bar.attached {
+	.shelf {
+		border-bottom-left-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+}
+
+//
+// non mobile styles
+//
+
+@media (max-height: 480px) {
+	#dock-bar:not(.attached) {
+		.dock {
+			margin-top: 0;
+		}
+	}
+}
+
+//
+// small desktop styles
+//
+
+@media (max-width: variables.$screen-sm-max) {
+	body[device="desktop"] {
+
+		#desktop.docked {
+			.desktop.app {
+				padding-bottom: $small-height;
+			}
+		}
+
+		#dock-bar {
+
+			.shelf {
+				height: $small-height;
+			}
+
+			.dock {
+				height: $small-height;
+
+				.items {
+					.apps, .tasks, .trash {
+						.icons {
+							.item {
+								.icon {
+									width: $small-icon-size;
+									height: $small-icon-size;
+									border-width: 1px;
+
+									> i {
+										font-size: 14px;
+										margin: 4px auto;
+									}
+
+									// app loading spinner
+									//
+									.spinner {
+										@include icons.spinner($small-icon-size);
+									}
+								}
+							}
+						}
+					}
+
+					.apps .icons .item {
+						.indicator {
+							margin: 3px auto;
+							width: $small-item-indicator-size;
+							height: $small-item-indicator-size;
+						}
+					}
+
+					.tasks .icons .item {
+						.icon {
+							.window-content {
+								top: 7px;
+
+								i {
+									font-size: 14px;
+								}
+							}			
+						}
+					}
+				}
+			}
+		}
+
+		&.round, &.rounded {
+			#dock-bar {
+				.dock {
+					.tasks {
+						.icons {
+							.item {
+								.icon {
+									svg {
+										border-radius: 3px;
+									}
+
+									.window-content {
+										border-bottom-left-radius: 3px;
+										border-bottom-right-radius: 3px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// medium desktop styles
+//
+
+@media (min-width: variables.$screen-md-min) and (max-width: variables.$screen-md-max) {
+	body[device="desktop"] {
+
+		#desktop.docked {
+			.desktop.app {
+				padding-bottom: $medium-height;
+			}
+		}
+
+		#dock-bar {
+			.dock {
+				height: $medium-height;
+
+				.items {
+					.apps, .tasks, .trash {
+						.icons {
+							.item {
+								.icon {
+									width: $medium-icon-size;
+									height: $medium-icon-size;
+
+									> i {
+										font-size: 18px;
+										margin: 4px auto;
+									}
+
+									// app loading spinner
+									//
+									.spinner {
+										@include icons.spinner($medium-icon-size);
+									}
+								}
+							}
+						}
+					}
+
+					.apps .icons .item {
+						.indicator {
+							width: $medium-item-indicator-size;
+							height: $medium-item-indicator-size;
+						}
+					}
+
+					.tasks .icons .item {
+						.icon {
+							.window-content {
+								> i {
+									font-size: 17px;
+								}
+							}	
+						}
+					}
+				}
+			}
+		}
+
+		&.round, &.rounded {
+			#dock-bar {
+				.dock {
+					.tasks {
+						.icons {
+							.item {
+								.icon {
+									svg {
+										border-radius: 5px;
+									}
+
+									.window-content {
+										border-bottom-left-radius: 5px;
+										border-bottom-right-radius: 5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// large desktop styles
+//
+
+@media (min-width: variables.$screen-lg-min) {
+	body[device="desktop"] {
+
+		#desktop.docked {
+			.desktop.app {
+				padding-bottom: $large-height;
+			}
+		}
+
+		#dock-bar {
+
+			.shelf {
+				height: $large-height;
+			}
+
+			.dock {
+				height: $large-height;
+
+				.items {
+					.apps, .tasks, .trash {
+						.icons {
+							.item {
+								.icon {
+									width: $large-icon-size;
+									height: $large-icon-size;
+									border-width: 2px;
+
+									> i {
+										font-size: 24px;
+										margin: 7px auto;
+									}
+
+									// app loading spinner
+									//
+									.spinner {
+										@include icons.spinner($large-icon-size);
+									}
+								}
+							}
+						}
+					}
+
+					.apps .icons .item {
+						.indicator {
+							width: $large-item-indicator-size;
+							height: $large-item-indicator-size;
+						}
+					}
+
+					.tasks .icons .item {
+						.icon {
+							.window-content {
+								top: 11px;
+
+								> i {
+									font-size: 24px;
+								}
+							}	
+						}
+					}
+				}
+			}
+		}
+
+		&.round, &.rounded {
+			#dock-bar {
+				.dock {
+					.tasks {
+						.icons {
+							.item {
+								.icon {
+									svg {
+										border-radius: 7px;
+									}
+
+									.window-content {
+										border-bottom-left-radius: 7px;
+										border-bottom-right-radius: 7px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+
+	#desktop.docked {
+		.desktop.app {
+			padding-bottom: $tablet-height;
+		}
+	}
+
+	#dock-bar {
+
+		.shelf {
+			height: $tablet-height;
+		}
+
+		//
+		// dock borders
+		//
+
+		&.round {
+			.shelf {
+				border-radius: $round-border-radius * 2;
+			}
+		}
+
+		&.rounded {
+			.shelf {
+				border-radius: $rounded-border-radius * 2;
+			}
+		}
+
+		&.attached {
+			.shelf {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&:not(.attached) {
+			
+			.shelf {
+				bottom: 20px;
+			}
+
+			.dock {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.dock {
+			height: $tablet-height;
+
+			.items {
+				height: 75px;
+				padding: 5px;
+
+				.apps, .tasks, .trash {
+					.icons {
+						.item {
+							margin: auto 10px;
+							
+							.icon {
+								width: $tablet-icon-size;
+								height: $tablet-icon-size;
+
+								> i {
+									font-size: 25px;
+									margin: 0 auto;
+								}
+
+								// app loading spinner
+								//
+								.spinner {
+									@include icons.spinner($tablet-icon-size);
+								}
+							}
+						}
+					}
+				}
+
+				.apps .icons .item {
+					.indicator {
+						width: $large-item-indicator-size;
+						height: $large-item-indicator-size;
+					}
+				}
+
+				.tasks .icons .item {
+					.icon {
+						.window-content {
+							top: 19px;
+							padding: 2px;
+
+							> i {
+								font-size: 30px;
+							}
+						}	
+					}
+				}
+			}
+		}
+	}
+
+	&.round, &.rounded {
+		#dock-bar {
+			.dock {
+				.tasks {
+					.icons {
+						.item {
+							.icon {
+								svg {
+									border-radius: 15px;
+								}
+
+								.window-content {
+									border-bottom-left-radius: 15px;
+									border-bottom-right-radius: 15px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body[device="phone"] {
+
+	#desktop.docked {
+		.desktop.app {
+			padding-bottom: $mobile-height;
+		}
+	}
+
+	#dock-bar {
+	
+		.shelf {
+			height: $mobile-height;
+		}
+
+		.dock {
+			height: $small-height;
+
+			.items {
+				.apps, .tasks, .trash {
+					.icons {
+						.item {
+							.icon {
+								width: $mobile-icon-size;
+								height: $mobile-icon-size;
+								border-width: 1px;
+
+								> i {
+									font-size: 14px;
+									margin: 4px auto;
+								}
+							}
+						}
+					}
+				}
+
+				.tasks .icons .item {
+					.icon {
+						.window-content {
+							top: 7px;
+							padding: 2px;
+
+							i {
+								font-size: 14px;
+							}
+						}			
+					}
+				}
+			}
+		}
+	}
+
+	&.round, &.rounded {
+		#dock-bar {
+			.dock {
+				.tasks {
+					.icons {
+						.item {
+							.icon {
+								svg {
+									border-radius: 3px;
+								}
+
+								.window-content {
+									border-bottom-left-radius: 3px;
+									border-bottom-right-radius: 3px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

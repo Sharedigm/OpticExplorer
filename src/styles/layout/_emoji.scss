@@ -1,0 +1,74 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _emoji.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$width: 32px;
+$height: 32px;
+$max-width: 320px;
+$max-height: 250px;
+$font-size: 20px;
+$background-hover-color: rgba(colors.$light-grey, 25%);
+
+//
+// styles
+//
+
+.emoji.selector {
+	max-width: $max-width;
+	cursor: default;
+	pointer-events: auto;
+
+	.tab-content {
+		max-height: $max-height;
+		font-size: $font-size;
+		overflow: auto;
+		padding: 0 5px;
+
+		.emoji {
+			display: inline-block;
+			width: $width;
+			height: $height;
+			padding: 2px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 5px;
+			cursor: default;
+
+			&:hover {
+				background: $background-hover-color;
+				cursor: pointer;			
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.emoji.selector {		
+		.nav-tabs {
+			font-size: 20px;
+		}
+	}
+}

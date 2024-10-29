@@ -1,0 +1,30 @@
+<svg 
+	id="smileys-empty-icon" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 16 48 24">
+	
+	<style>
+		.folder-top {
+			fill: tan;
+		}
+		.folder-body {
+			fill: wheat;
+		}
+		.folder-icon {
+			fill: burlywood;
+		}
+	</style>
+
+	<g class="folder-top" transform="translate(0 1.5)">
+		<path d="M 43.5,11.5 H 21 L 16.5,7 h -12 c -3,0 -3,0 -3,3 v 8 h 45 v -3.5 c 0,0 0,-3 -3,-3 z" />
+	</g>
+
+	<g class="folder-body">
+		<path id="folder-cover" d="M 3,16.75 C 1.5,16.75 1.5,18 1.5,18 v 25.75 c 0,2.25 0,2 3,2 h 39 c 3,0 3,0.25 3,-2 V 18 c 0,0 0,-1.25 -1.5,-1.25 z" />
+	</g>
+	
+	<g class="folder-icon" transform="translate(12 19)">
+		<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3.5 8c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm-7 0c.828 0 1.5.671 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.671-1.5-1.5.672-1.5 1.5-1.5zm3.501 10c-2.801 0-4.874-1.846-6.001-3.566l.493-.493c1.512 1.195 3.174 1.931 5.508 1.931 2.333 0 3.994-.736 5.506-1.931l.493.493c-1.127 1.72-3.199 3.566-5.999 3.566z" />
+	</g>
+</svg>

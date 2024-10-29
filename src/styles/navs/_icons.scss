@@ -1,0 +1,184 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _icons.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$width: 20px;
+$height: 18px;
+$font-size: 14px;
+
+//
+// styles
+//
+
+i {
+	font-size: $font-size;
+
+	svg {
+		display: inline;
+		width: $width;
+		height: $height;
+		margin-bottom: -2px;
+	}
+
+	&.fa-check {
+		font-style: italic;
+	}
+
+	//
+	// icon transforms
+	//
+
+	&.rotated {
+		transform: rotate(90deg);
+	}
+
+	&.derotated {
+		transform: rotate(-90deg);
+	}
+
+	&.reversed {
+		transform: scaleX(-1);
+	}
+
+	&.flipped {
+		transform: scaleY(-1);
+	}
+
+	&.rotated.flipped {
+		transform: scaleY(-1) rotate(90deg);
+	}
+
+	&.rotated.reversed {
+		transform: scaleX(-1) rotate(90deg);
+	}
+}
+
+//
+// header icons
+//
+
+h1 i,
+h2 i,
+h3 i {
+	font-size: 100%;
+	text-align: center;
+	margin-right: 10px;
+}
+
+label i {
+	text-align: center;
+	margin-right: 5px;
+}
+
+.header label i{
+	margin-right: 10px;	
+}
+
+//
+// multiple icons
+//
+
+.tooltip + i {
+	margin-left: 5px;
+}
+
+//
+// content header icons
+//
+
+h1 .icon {
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+	margin-right: 20px;
+	width: 60px;
+	height: 60px;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	text-align: center;
+
+	i {
+		float: none;
+		margin: 0;
+		padding: 0;
+		margin-top: 12px;
+		font-size: 32px;
+	}
+}
+
+//
+// flag icons
+//
+
+.flag {
+	margin-bottom: 3px;
+}
+
+//
+// icon scaling
+//
+
+.fa-sm {
+	font-size: 0.75em !important;
+}
+
+.icon2x {
+	-webkit-transform:scale(2.0);
+	-moz-transform:scale(2.0);
+	-o-transform:scale(2.0);
+	margin: 10px;
+	margin-top: 0;
+}
+
+.icon3x {
+	-webkit-transform:scale(3.0);
+	-moz-transform:scale(3.0);
+	-o-transform:scale(3.0);
+	margin: 15px;
+	margin-top: 0;
+}
+
+//
+// image placeholder icons
+//
+
+.icon img.lost,
+.placeholder {
+	display: none;
+}
+
+.lost + .placeholder {
+	// color: red !important;
+	display: block;
+}
+
+//
+// icon spinners
+//
+
+@mixin spinner($size) {
+	border-width: calc($size / 2);
+	border-top-width: calc($size / 2);
+	width: calc($size / 2);
+	height: calc($size);
+	margin-left: calc($size / -2);
+	margin-top: calc($size / -2);
+}

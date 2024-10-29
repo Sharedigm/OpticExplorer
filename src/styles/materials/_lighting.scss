@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _lighting.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$light-color: var(--light-color);
+$light-direction: var(--light-direction);
+$ambient-color: var(--ambient-color);
+
+//
+// mixins
+//
+
+@function lighten($color, $amount) {
+	@return color-mix(in srgb, $light-color $amount, $color);
+}
+
+@function darken($color, $amount) {
+	@return color-mix(in srgb, $ambient-color $amount, $color);
+}
+
+//
+// color mixins
+//
+
+@function lightened($color, $amount) {
+	@return mix(white, $color, $amount);
+}
+
+@function darkened($color, $amount) {
+	@return mix(rgb(0, 0, 127), $color, $amount);
+}

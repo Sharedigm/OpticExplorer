@@ -1,0 +1,152 @@
+/******************************************************************************\
+|                                                                              |
+|                                   _filters.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body.binary {
+	svg.viewport {
+		.shadow {
+			display: none !important;
+		}
+	}
+}
+
+body:not(.binary) {
+	svg.viewport {
+		.shadow {
+			stroke: none;
+			fill: none;
+			pointer-events: none;
+			opacity: 0.25;
+		}
+
+		&.unshadowed {
+			.shadow {
+				display: none !important;
+			}
+		}
+
+		//
+		// shadows
+		//
+
+		.shadow {
+			filter: url(#colored-shadow);
+		}
+
+		.softish.shadow {
+			filter: url(#colored-softish-shadow);
+		}
+
+		.soft.shadow {
+			filter: url(#colored-soft-shadow);
+		}
+
+		.softer.shadow {
+			filter: url(#colored-softer-shadow);
+		}
+
+		//
+		// drop shadows
+		//
+
+		.drop-shadowed {
+			filter: url(#drop-shadowed);
+		}
+
+		//
+		// glow effects
+		//
+
+		.glowing {
+			filter: url(#glowing);
+		}
+
+		.lightly.glowing {
+			filter: url(#lightly-glowing);
+		}
+
+		.strongly.glowing {
+			filter: url(#strongly-glowing);
+		}
+
+		.bright {
+			filter: brightness(2.0);
+		}
+
+		//
+		// filter effects
+		//
+
+		.normal {
+			filter: url(#normal);
+		}
+
+		.multiply {
+			filter: url(#multiply);
+		}
+
+		.screen {
+			filter: url(#screen);
+		}
+
+		.darken {
+			filter: url(#darken);
+		}
+
+		.lighten {
+			filter: url(#lighten);
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+
+		//
+		// shadows
+		//
+
+		.shadow {
+			filter: url(#shadow);
+		}
+
+		.softish.shadow {
+			filter: url(#softish-shadow);
+		}
+
+		.soft.shadow {
+			filter: url(#soft-shadow);
+		}
+
+		.softer.shadow {
+			filter: url(#softer-shadow);
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+@-moz-document url-prefix() {
+	svg {
+		.colored.shadow {
+			opacity: 0.25;
+		}
+	}
+}

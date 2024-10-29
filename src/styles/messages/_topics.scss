@@ -1,0 +1,81 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _topics.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$pager-margin: 10px;
+$post-margin: 10px;
+
+//
+// styles
+//
+
+.topic {
+
+	//
+	// top down posts
+	//
+
+	&:not(.bottom-up) {
+		display: flex;
+		flex-direction: column;
+
+		.new-post:not(.hidden):not(:empty) + .posts-list {
+			margin-top: $post-margin;
+			flex-grow: 1;
+		}
+
+		.pager {
+			margin-top: $pager-margin;
+		}
+	}
+
+	//
+	// bottom up posts
+	//
+
+	&.bottom-up {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: $post-margin;
+
+		.pager {
+			margin-bottom: $pager-margin;
+		}
+
+		.posts {
+			display: flex;
+			flex-direction: column-reverse;
+
+			// post spacing
+			//
+			.post {
+				margin-bottom: $post-margin;
+
+				&.selected {
+					margin-bottom: calc($post-margin - 1px);
+				}
+			}
+		}
+
+		.new-post {
+			margin-bottom: $post-margin;
+		}
+	}
+}

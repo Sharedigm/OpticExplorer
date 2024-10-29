@@ -1,0 +1,107 @@
+/******************************************************************************\
+|                                                                              |
+|                         edit-user-phone-dialog-view.js                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This is a view for editing a phone number of a user's profile.        |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.md', which is part of this source code distribution.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+import FormModalView from '../../../../../../../views/forms/dialogs/form-modal-view.js';
+import UserPhoneFormView from '../../../../../../../views/apps/contact-editor/forms/contacts/contacts/user-phone-form-view.js';
+
+export default FormModalView.extend({
+
+	//
+	// attributes
+	//
+
+	template: template(`
+		<div class="modal-dialog">
+			
+			<div class="modal-header">
+				<div class="heading">
+					<div class="icon">
+						<i class="fa fa-pencil-alt"></i>
+					</div>
+					<div class="title">
+						Edit Phone Number
+					</div>
+				</div>
+			</div>
+		
+			<div class="modal-content">
+				<div class="modal-body"></div>
+				
+				<div class="modal-footer">
+					<div class="buttons">
+						<button class="ok btn btn-primary" data-dismiss="modal" disabled>
+							<i class="fa fa-check"></i>OK
+						</button>
+						<button class="cancel btn" data-dismiss="modal">
+							<i class="fa fa-xmark"></i>Cancel
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	`),
+
+	events: _.extend({}, FormModalView.prototype.events, {
+		'click .ok': 'onClickOk',
+		'click .cancel': 'onClickCancel'
+	}),
+
+	//
+	// setting methods
+	//
+
+	setDisabled: function(disabled) {
+		this.$el.find('.ok').prop('disabled', disabled !== false);
+	},
+
+	//
+	// rendering methods
+	//
+
+	form: function() {
+		return new UserPhoneFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onvalidate: (valid) => this.setDisabled(!valid)
+		});
+	},
+
+	//
+	// mouse event handling methods
+	//
+	
+	onClickOk: function() {
+
+		// submit form
+		//
+		if (this.getChildView('form').apply()) {
+			this.close();
+
+			// perform callback
+			//
+			if (this.options.onchange) {
+				this.options.onchange();
+			}
+		}
+	},
+
+	onClickCancel: function() {
+		this.close();
+	},
+});

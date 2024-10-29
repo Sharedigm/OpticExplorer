@@ -1,0 +1,24 @@
+<svg 
+	id="dxf-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 40 40" 
+	style="background:#8697CB">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(20, 20), scale(0.5), translate(-20, -30)">
+		<g transform="translate(-12.5, 4)">
+			<rect height="15.065" width="15" y="4.5" x="15.5" style="fill:#c8bdb8" />
+			<rect height="7" width="2" y="5.5" x="37.5" style="fill:white" />
+			<rect height="7" width="2" y="20.5" x="37.5" style="fill:white" />
+			<path d="m 43.5, 21.5 -10, 0 0, -10 10, 0 0, 10 z m -8, -2 6, 0 0, -6 -6, 0 0, 6 z" style="fill:white" />
+			<rect height="2" width="7" y="15.5" x="42.5" style="fill:white" />
+			<rect height="2" width="7" y="15.5" x="27.5" style="fill:white" />
+		</g>
+	</g>
+</svg>

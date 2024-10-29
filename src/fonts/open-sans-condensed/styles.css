@@ -1,0 +1,25 @@
+/***************************************************************\
+|                    open sans condensed styles                 |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Open Sans Condensed';
+	src: url('light/OpenSans-CondLight.eot');
+	src: url('light/OpenSans-CondLight.eot?#iefix') format('embedded-opentype'),
+		 url('light/OpenSans-CondLight.woff') format('woff'),
+		 url('light/OpenSans-CondLight.ttf') format('truetype'),
+		 url('light/OpenSans-CondLight.svg#open_sans_condensedbold') format('svg');
+	font-weight: regular;
+	font-style: condensed;
+}
+
+@font-face {
+	font-family: 'Open Sans Condensed Bold';
+	src: url('bold/OpenSans-CondBold.eot');
+	src: url('bold/OpenSans-CondBold.eot?#iefix') format('embedded-opentype'),
+		 url('bold/OpenSans-CondBold.woff') format('woff'),
+		 url('bold/OpenSans-CondBold.ttf') format('truetype'),
+		 url('bold/OpenSans-CondBold.svg#open_sans_condensedbold') format('svg');
+	font-weight: bold;
+	font-style: condensed;
+}

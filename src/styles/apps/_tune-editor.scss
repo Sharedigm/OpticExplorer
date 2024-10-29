@@ -1,0 +1,170 @@
+/******************************************************************************\
+|                                                                              |
+|                               _tune-editor.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.tune-editor.app {
+	.header-bar {
+		.track-bar {
+			.toolbar {
+
+				.elapsed-time {
+					min-width: 50px;
+					line-height: 28px;
+					padding-left: 5px;
+				}
+
+				.repeat {
+					margin-left: 10px;
+				}
+
+				.track-length {
+					min-width: 50px;
+					line-height: 28px;
+					text-align: center;
+				}
+
+				input[type="range"] {
+					display: inline-block;
+					height: 28px;
+				}
+			}
+		}
+	}
+
+	.body {
+		> .contents {
+
+			> .sidebar {
+				.badges {
+					display: none;
+				}
+			}
+
+			> .mainbar {
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+
+				.tabbed-content {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+
+					#tabs {
+						flex-shrink: 0;
+					}
+
+					.tab-content {
+						position: relative;
+						flex-grow: 1;
+
+						// inset shadow
+						//
+						&::after {
+							content: "";
+							box-shadow: inset 0px 0px 10px rgba(black, 15%);
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+							pointer-events: none;
+						}
+
+						.tab-pane {
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							left: 0;
+							right: 0;
+							overflow: auto;
+
+							.split-view {
+								width: 100%;
+								height: 100%;
+								border: none;
+								
+								.mainbar {
+									width: 100%;
+									height: 100%;
+									overflow: auto;
+
+									.cursor {
+										background-color: grey; 
+										opacity: 0.5
+									}
+								}
+
+								.sidebar {
+									overflow: hidden;
+									border: none;
+
+									textarea {
+										width: 100%;
+										height: 100%;
+										resize: none;
+										padding: 10px;
+										outline: none;
+										overflow: auto;
+										border: none;
+										border-radius: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.abcjs-note_selected {
+		fill: grey !important;
+	}
+}
+
+body:not(.dark) {
+	.full-screen {
+		.tune-editor.app {
+			.mainbar {
+				background: white;
+			}
+		}	
+	}
+}
+
+.light.colored {
+	.tune-editor.app {
+		.abcjs-note_selected {
+			fill: grey !important;
+		}
+	}
+}
+
+.dark.colored {
+	.tune-editor.app {
+		svg {
+			path, text {
+				fill: white;
+			}
+		}
+	}
+}

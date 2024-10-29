@@ -1,0 +1,182 @@
+/******************************************************************************\
+|                                                                              |
+|                            _comment-bubbles.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/selection";
+
+//
+// variables
+//
+
+$arrow-width: 5px;
+$round-border-radius: 13px;
+$rounded-border-radius: 7px;
+$border-width: 1px;
+
+//
+// styles
+//
+
+.comment-bubble {
+	position: relative;
+	display: inline-block;
+
+	.comment-inner {
+		display: inline-block;
+		width: 100%;
+		padding: 2px 10px;
+		text-decoration: none;
+		word-break: break-word;
+		color: unset;
+		border-width: $border-width;
+		border-style: solid;
+		border-color: unset;
+		background-color: white;
+
+		// make comment text selectable
+		//
+		@include selection.text-selectable;
+	}
+
+	//
+	// editable content bubbles
+	//
+
+	.comment-inner[contenteditable=true] {
+
+		// prevent overly large cursor on empty elements
+		//
+		&:empty {
+			display: block;
+
+			// placeholder text
+			//
+			&::after {
+				opacity: 0.5;
+			}
+		}
+
+		// prevent multi-line content from including extra div elements.
+		//
+		display: inline-block;
+	}
+
+	//
+	// comment arrows
+	//
+
+	.comment-arrow {
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+	}
+
+	//
+	// centered arrows
+	//
+
+	&.top .comment-arrow {
+		bottom: 1px;
+		left: 50%;
+		border-width: $arrow-width $arrow-width 0;
+		border-top-color: unset;
+	}
+
+	&.bottom .comment-arrow {
+		top: -$arrow-width;
+		left: 18px;
+		border-width: 0 $arrow-width $arrow-width;
+		border-bottom-color: unset;
+	}
+
+	&.right .comment-arrow {
+		top: 50%;
+		margin-top: -$arrow-width;
+		left: -$arrow-width;
+		border-width: $arrow-width $arrow-width $arrow-width 0;
+		margin-top: -$arrow-width;
+		border-right-color: unset;
+	}
+
+	&.left .comment-arrow {
+		top: 50%;
+		margin-top: -$arrow-width;
+		right: -$arrow-width;
+		border-width: $arrow-width 0 $arrow-width $arrow-width;
+		border-left-color: unset;
+	}
+	
+	//
+	// uncentered arrows
+	//
+
+	&.lower.right .comment-arrow {
+		top: $round-border-radius;
+		left: -$arrow-width + 1;
+	}
+
+	&.lower.left .comment-arrow {
+		top: $round-border-radius;
+		right: -$arrow-width + 1;
+	}
+}
+
+.selected {
+	.comment-bubble {
+		.comment-inner {
+			color: white;
+			border-color: black;
+			background-color: black;
+		}
+
+		.item {
+			.name {
+				color: black;
+				background: white;
+			}
+		}
+	}
+}
+
+//
+// comment bubble borders
+//
+
+body.round {
+	.comment-bubble {
+		.comment-inner {
+			border-radius: $round-border-radius;
+		}
+	}
+}
+
+body.rounded {
+	.comment-bubble {
+		.comment-inner {
+			border-radius: $rounded-border-radius;
+		}
+	}
+}
+
+body.square {
+	.comment-bubble {
+		.comment-inner {
+			border-radius: 0;
+		}
+	}
+}

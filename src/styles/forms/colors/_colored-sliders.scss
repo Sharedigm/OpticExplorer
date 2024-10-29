@@ -1,0 +1,120 @@
+/******************************************************************************\
+|                                                                              |
+|                             colored-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin inactive-thumb-colored($color, $hover-color) {
+
+	&::-webkit-slider-thumb {
+		&:not(:active) {
+			background-color: $color;
+			border-color: $color;
+
+			&:hover {
+				background-color: $hover-color;
+				border-color: $hover-color;
+			}
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:not(:active) {
+			background-color: $color;
+			border-color: $color;
+
+			&:hover {
+				background-color: $hover-color;
+				border-color: $hover-color;
+			}
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:not(:active) {
+			background-color: $color;
+			border-color: $color;
+
+			&:hover {
+				background-color: $hover-color;
+				border-color: $hover-color;
+			}
+		}
+	}
+}
+
+@mixin active-thumb-colored($active-color) {
+
+	&::-webkit-slider-thumb {
+		&:active {
+			background-color: $active-color;
+			border-color: $active-color;
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:active {
+			background-color: $active-color;
+			border-color: $active-color;
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:active {
+			background-color: $active-color;
+			border-color: $active-color;
+		}
+	}
+}
+
+@mixin thumb-colored($color, $hover-color, $active-color) {
+	@include inactive-thumb-colored($color, $hover-color);
+	@include active-thumb-colored($active-color);
+}
+
+@mixin track-colored($track-color) {
+
+	&::-webkit-slider-runnable-track {
+		background-color: $track-color;
+	}
+
+	&::-moz-range-track {
+		background-color: $track-color;
+	}
+}
+
+@mixin colored($color, $hover-color, $active-color, $track-color) {
+	@include thumb-colored($color, $hover-color, $active-color);
+	@include track-colored($track-color);
+}

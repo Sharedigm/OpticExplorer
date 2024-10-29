@@ -1,0 +1,86 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dialog-dragging.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$snap-border-color: white;
+$snap-border-radius: 10px;
+$snap-background: rgba(colors.$light-grey, 10%);
+
+//
+// styles
+//
+
+.snap-to {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+
+	&::after {
+		position: absolute;
+		content: "";
+		pointer-events: none;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		// border
+		//
+		border-width: 2px;
+		border-style: dotted;
+		border-color: $snap-border-color;
+		border-radius: $snap-border-radius;
+
+		// color and shaded
+		//
+		background: $snap-background;
+	}
+
+	&.top {
+		&::after {
+			top: 0;
+			bottom: 50%;
+		}
+	}
+	&.bottom {
+		&::after {
+			top: 50%;
+			bottom: 0;
+		}
+	}
+	&.left {
+		&::after {
+			left: 0;
+			right: 50%;
+		}
+	}
+	&.right {
+		&::after {
+			left: 50%;
+			right: 0;
+		}
+	}
+}

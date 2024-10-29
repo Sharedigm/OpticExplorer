@@ -1,0 +1,17 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'FF Meta';
+	src: url('FF-Meta-Normal.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FF Meta';
+	src: url('FF-Meta-Bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}

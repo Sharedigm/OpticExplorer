@@ -1,0 +1,78 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _pagers.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/buttons";
+
+//
+// variables
+//
+
+$input-padding: 0 5px;
+$input-border-radius: 5px;
+
+//
+// styles
+//
+
+.pager {
+	margin: 0;
+	line-height: 1.5em;
+
+	.items-per-page {
+		input {
+			padding: $input-padding;
+			border-radius: $input-border-radius;
+		}
+	}
+
+	.btn-group {
+		display: inline-flex;
+
+		input {
+			border-width: 2px;
+			border-radius: 0;
+			padding: 0 5px;
+			text-align: center;
+		}
+
+		.num-pages {
+			pointer-events: none;
+		}
+	}
+
+	.toolbar {
+		background: none !important;
+	}
+}
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-max) {
+	.pager {
+
+		.items-per-page {
+			float: left;
+		}
+
+		.btn-group {
+			float: right;
+		}
+	}
+}

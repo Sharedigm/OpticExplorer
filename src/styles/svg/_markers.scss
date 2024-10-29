@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                                _markers.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$marker-stroke-width: 2;
+$outlined-stroke-width: 1.5;
+$outlined-fill-opacity: 0.5;
+
+//
+// styles
+//
+
+svg.viewport {
+
+	//
+	// markers
+	//
+
+	svg.marker {
+		overflow: visible;
+		pointer-events: auto;
+
+		svg {
+			overflow: visible;
+		}
+
+		.stroked {
+			stroke: black;
+			stroke-width: $marker-stroke-width;
+			vector-effect: non-scaling-stroke;
+		}
+
+		//
+		// selected markers
+		//
+
+		&.selected {
+			fill: var(--primary-color);
+		}
+
+		//
+		// outlined marhers
+		//
+
+		&.outlined {
+			stroke-width: $outlined-stroke-width;
+
+			svg {
+				overflow: visible;
+			}
+		}
+
+		&.transparent.outlined:not(:hover):not(.selected) {
+			fill-opacity: $outlined-fill-opacity;
+		}
+
+		//
+		// non interactive markers
+		//
+
+		&.unhighlightable {
+			pointer-events: none;
+		}
+
+		//
+		// marker behaviors
+		//
+
+		&.draggable {
+			cursor: move;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			&.vertically {
+				cursor: ns-resize;
+			}
+
+			&.horizontally {
+				cursor: ew-resize;
+			}
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.viewport.dark,
+.dark .viewport.auto {
+
+	svg.marker {
+		.stroked {
+			stroke: white;
+		}
+	}
+}

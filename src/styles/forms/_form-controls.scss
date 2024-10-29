@@ -1,0 +1,238 @@
+/******************************************************************************\
+|                                                                              |
+|                             _form-controls.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$padding: 5px 7px;
+
+//
+// styles
+//
+
+.form-control {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	color: unset;
+	border-color: unset;
+	font-size: 1em;
+	
+	// counter Bootstrap
+	//
+	padding: $padding;
+	z-index: auto !important;
+
+	//
+	// form control elements
+	//
+
+	input[type="radio"], input[type="checkbox"], input[type="color"] {
+		padding-top: 7px;
+		margin-right: 10px;
+	}
+
+	//
+	// remove focus glow
+	//
+
+	&:focus {
+		border-color: unset;
+		-box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+}
+
+.modal {
+	input.form-control {
+		height: 30px;
+	}
+}
+
+textarea.form-control {
+	width: 100%;
+	resize: vertical;
+	padding: 5px 10px;
+	font-weight: normal;
+}
+
+//
+// static form controls
+//
+
+.form-control-static {
+	min-height: auto;
+	margin-top: 5px;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	select {
+		height: 1.5em; 
+	}
+
+	i {
+		margin-left: 10px;
+	}
+}
+
+//
+// form controls grid
+//
+
+.controls-grid {
+	text-align: center;
+
+	.row {
+		> div {
+			padding: 0;
+			
+			.grid-item {
+				max-height: 100px;
+				
+				.radio-inline {
+					min-height: 4em;
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+
+	//
+	// wide horizontal form controls
+	//
+
+	.form-horizontal.wide {
+		.form-group {
+
+			.form-label, .control-label {
+				width: 20%;
+			}
+
+			> .controls, > .static-controls, > .form-control, > .form-control-static, > .input-group {
+				width: 60%;
+			}
+		}
+	}
+
+	//
+	// ultra-wide horizontal form controls
+	//
+
+	.form-horizontal.ultra-wide {
+		.form-group {
+
+			.form-label, .control-label {
+				width: 10%;
+			}
+
+			> .controls, > .static-controls, > .form-control, > .form-control-static, > .input-group {
+				width: 80%;
+			}
+		}
+	}
+
+	//
+	// narrow horizontal form controls
+	//
+
+	.form-horizontal.narrow {
+
+		.form-label, .control-label {
+			width: 33%;
+		}
+
+		> .controls, > .static-controls, > .form-control, > .form-control-static, > .input-group {
+			width: 33%;
+		}
+	}
+}
+
+//
+// small horizontal form controls
+//
+
+@media (max-width:640px) {
+	form.form-horizontal,
+	form.form-horizontal.wide  {
+		.form-group {
+			> .controls, > .form-control, > .input-group {
+				width: 66%;
+			}
+
+			> .form-control-static {
+				width: 66%;
+			}
+		}
+	}
+}
+
+//
+// non-mobile styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.form-horizontal {
+		.inline.controls {
+			display: inline-flex;
+
+			> div {
+				display: inline-block;
+				margin-top: 0;
+			}
+
+			.input-group {
+				display: inline-table;
+				float: left;
+			}
+
+			/*
+			.buttons {
+				margin: 2px 10px;
+			}
+			*/
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	select {
+		max-width: 120px;
+	}
+	
+	form.form-horizontal,
+	form.form-horizontal.wide  {
+		.form-group {
+			> .controls, > .form-control, > .input-group, > .form-control-static {
+				width: 100%;
+			}
+		}
+	}
+}

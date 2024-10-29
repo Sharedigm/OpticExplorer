@@ -1,0 +1,272 @@
+/******************************************************************************\
+|                                                                              |
+|                              _search-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$round-border-radius: 15px;
+$rounded-border-radius: 5px;
+$meter-bar-border-radius: 2px;
+
+//
+// styles
+//
+
+.search-viewer.app {
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.search-bar {
+		display: block;
+		// margin: 10px;
+		padding: 0;
+
+		.input {
+			display: block;
+			position: relative;
+			text-align: left;
+			padding: 0;
+			overflow: auto;
+
+			[contenteditable="true"] {
+				font-family: inherit;
+				font-weight: normal;
+				font-size: inherit;
+				outline: none;
+				flex-grow: 1;
+				line-height: 25px;
+				padding: 10px;
+				float: left;
+				min-width: calc(100% - 75px);
+
+				* {
+					font-family: inherit !important;
+					font-weight: normal !important;
+					font-size: inherit !important;
+				}
+
+				&:empty {
+					&:before {
+						content: var(--search-placeholder);
+						color: colors.$very-light-grey;
+					}
+
+					& + .buttons {
+
+						.submit {
+							opacity: 0.5;
+							pointer-events: none;
+						}
+
+						.clear {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.buttons {
+				margin: 10px;
+				padding: 0;
+			}
+		}
+
+		&.text {
+			--search-placeholder: "Enter search terms.";
+		}
+
+		&.name {
+			--search-placeholder: "Firstname Lastname.";
+		}
+
+		&.url {
+			--search-placeholder: "Enter a URL.";
+		}
+	}
+
+	.well {
+		line-height: 25px;
+
+		.buttons {
+			display: flex;
+			height: 25px;
+			margin-left: auto;
+			float: right;
+		}
+	}
+
+	.search-panel {
+		width: 100%;
+		height: 100%;
+		display: flex;
+
+		.panel {
+			display: inline-block;
+			text-align: center;
+			width: 75%;
+			padding: 20px;
+			margin: auto;
+			color: colors.$very-light-grey;
+
+			.icon i {
+				font-size: 300%;
+				color: colors.$light-grey;
+				margin-bottom: 10px;
+			}
+
+			input[type="file"] {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+.search-results {
+
+	.options {
+		display: block;
+		
+
+		> div {
+			display: inline-block;
+			margin: 0 5px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.items {
+		> .item-list {
+			padding: 0;
+		}
+	}
+
+	.score {
+		background: none !important;
+
+		.rating {
+			display: inline-flex;
+
+			i.fa.fa-star {
+				font-size: 10px !important;
+				margin: 2px 1px !important;
+			}
+
+			/*
+			.bar {
+				display: inline-block;
+				width: 5px;
+				height: 10px;
+				margin: 2px 1px;
+			}
+			*/
+		}
+	}
+
+	.well {
+		line-height: 25px;
+
+		.buttons {
+			display: flex;
+			height: 25px;
+			margin-left: auto;
+			float: right;
+		}
+	}
+
+	.tab-content + .buttons {
+		margin-top: 20px;
+	}
+
+	.credits {
+		margin-top: 10px;
+	}
+}
+
+.page .search-results {
+	.items {
+		border-width: 1px;
+		border-style: solid;
+		overflow: hidden;
+	}
+}
+
+.page {
+	.search-results {
+		.well {
+			.buttons {
+				display: none;
+			}
+		}
+	}
+}
+
+.app {
+	.search-results {
+		// padding: 10px;
+		padding-bottom: 10px;
+
+		.tab-content + .buttons {
+			display: none;
+		}
+	}
+}
+
+//
+// borders
+//
+
+.round {
+	.search-bar {
+		.input {
+			border-radius: $round-border-radius;
+
+			&::-webkit-scrollbar-track {
+				border-radius: $round-border-radius;
+			}
+		}
+	}
+}
+
+.rounded {
+	.search-bar {
+		.input {
+			border-radius: $rounded-border-radius;
+
+			&::-webkit-scrollbar-track {
+				border-radius: $rounded-border-radius;
+			}
+		}
+	}
+}
+
+//
+// hide owner tiles on global search results page
+//
+
+.page .search-results {
+	.owner {
+		display: none !important;
+	}
+}

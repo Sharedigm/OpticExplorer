@@ -1,0 +1,167 @@
+/******************************************************************************\
+|                                                                              |
+|                             _annotations.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin outlined($color, $stroke-width: 3px) {
+	paint-order: stroke;
+	stroke: $color;
+	stroke-width: $stroke-width;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+}
+
+//
+// styles
+//
+
+svg.viewport {
+
+	&.unannotated {
+		.annotation {
+			display: none;
+		}
+	}
+
+	//
+	// text annotations
+	//
+
+	.annotation, .dimensioning {
+		text {
+			font-size: 13px;
+			font-weight: bold;
+			text-anchor: middle;
+			dominant-baseline: middle;
+			opacity: 1.0;
+			stroke: none;
+			fill: initial;
+		}
+	}
+
+	//
+	// line annotations
+	//
+
+	.line, .arc, .arrow {
+		fill: none;
+		stroke-width: 2;
+		vector-effect: non-scaling-stroke;
+		fill: none;
+			
+		path {
+			stroke-width: 2;
+			vector-effect: non-scaling-stroke;
+			fill: none;
+		}
+	}
+
+	path.line {
+		stroke-width: 2;
+		vector-effect: non-scaling-stroke;
+		fill: none;
+	}
+
+	.dimensioning {
+		stroke-dasharray: 5;
+	}
+
+	.arc {
+		fill: none;
+	}
+
+	.dotted {
+		stroke-dasharray: 2,2;	
+	}
+
+	//
+	// text annotations
+	//
+
+	text {
+		filter: url(#white-background);
+	}
+}
+
+//
+// animated annotations
+//
+
+/*
+.animating {
+	.annotation {
+		display: none;
+	}
+}
+*/
+
+//
+// binary annotations
+//
+
+body.binary {
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+
+		//
+		// text annotations
+		//
+
+		text {
+			fill: white;
+			filter: url(#black-background);
+		}
+	}
+}
+
+//
+// non-binary annotations
+//
+
+body:not(.binary) {
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+
+		//
+		// text annotations
+		//
+
+		text {
+			fill: white;
+			filter: url(#dark-background);
+		}
+
+		&.colored {
+			text {
+				fill: white;
+				filter: url(#dark-colored-background);
+			}
+		}
+	}
+}

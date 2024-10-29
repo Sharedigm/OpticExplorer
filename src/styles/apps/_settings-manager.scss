@@ -1,0 +1,238 @@
+/******************************************************************************\
+|                                                                              |
+|                            _settings-manager.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$min-desktop-preview-width: 150px;
+$max-desktop-preview-width: 75%;
+$desktop-preview-icon-size: 100px;
+$pie-size: 100px;
+
+//
+// styles
+//
+
+.settings-manager.app {
+
+	.body {
+		> .contents {
+
+			.mainbar {
+				position: relative;
+				overflow: hidden;
+
+				> form {
+					width: 100%;
+					height: 100%;
+					padding: 10px;
+					overflow: auto;
+				}
+
+				.desktop-settings {
+					flex-direction: column;
+					display: flex;
+
+					.tab-content {
+						height: 100%;
+
+						.apps-settings {
+							height: 100%;
+
+							.buttons {
+								width: 100%;
+								text-align: center;
+							}
+
+							.desktop-app {
+								height: calc(100% - 20px);
+								margin: 0;
+								flex-grow: 1;
+								overflow: hidden;
+
+								.items {
+									.pager {
+										width: 100%;
+										padding: 0;
+										margin: auto;
+
+										.pages {
+											.row {
+												.desktop.preview {
+													min-width: $min-desktop-preview-width;
+													max-width: $max-desktop-preview-width;
+													aspect-ratio: 1.5;
+													pointer-events: auto;
+													
+													i {
+														font-size: $desktop-preview-icon-size;
+														margin: auto;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.pages {
+					height: calc(100% - 30px);
+				}
+
+				.nav-bar {
+					margin-top: -50px;
+				}
+
+				.pie {
+					width: $pie-size;
+					height: $pie-size;
+					margin: auto;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.settings-manager.app {
+		.desktop.preview {
+			.app-preview {
+
+				&.app_launcher {
+					background-image: url('../images/settings/transparent/desktop/desktop-apps.png');
+				}
+
+				&.file_browser {
+					background-image: url('../images/settings/transparent/desktop/desktop-files.png');
+				}
+
+				&.news_browser {
+					background-image: url('../images/settings/transparent/desktop/desktop-news.png');
+				}
+
+				&.direct_messenger {
+					background-image: url('../images/settings/transparent/desktop/desktop-messages.png');
+				}
+
+				&.map_viewer {
+					background-image: url('../images/settings/transparent/desktop/desktop-maps.png');
+				}
+
+				&.calendar {
+					background-image: url('../images/settings/transparent/desktop/desktop-dates.png');
+				}
+
+				&.audio_player {
+					background-image: url('../images/settings/transparent/desktop/desktop-audio.png');
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.settings-manager.app {
+		.desktop.preview {
+			.app-preview {
+
+				&.app_launcher {
+					background-image: url('../images/settings/transparent/tablet/tablet-apps.png');
+				}
+
+				&.file_browser {
+					background-image: url('../images/settings/transparent/tablet/tablet-files.png');
+				}
+
+				&.news_browser {
+					background-image: url('../images/settings/transparent/tablet/tablet-news.png');
+				}
+
+				&.direct_messenger {
+					background-image: url('../images/settings/transparent/tablet/tablet-chats.png');
+				}
+
+				&.map_viewer {
+					background-image: url('../images/settings/transparent/tablet/tablet-maps.png');
+				}
+
+				&.calendar {
+					background-image: url('../images/settings/transparent/tablet/tablet-dates.png');
+				}
+
+				&.audio_player {
+					background-image: url('../images/settings/transparent/tablet/tablet-audio.png');
+				}
+			}
+		}
+	}
+}
+
+//
+// phone styles
+//
+
+body[device="phone"] {
+	.settings-manager.app {
+		.desktop.preview {
+			height: 100%;
+
+			.app-preview {
+
+				&.app_launcher {
+					background-image: url('../images/settings/transparent/mobile/mobile-apps.png');
+				}
+
+				&.file_browser {
+					background-image: url('../images/settings/transparent/mobile/mobile-files.png');
+				}
+
+				&.news_browser {
+					background-image: url('../images/settings/transparent/mobile/mobile-news.png');
+				}
+
+				&.direct_messenger {
+					background-image: url('../images/settings/transparent/mobile/mobile-chats.png');
+				}
+
+				&.map_viewer {
+					background-image: url('../images/settings/transparent/mobile/mobile-maps.png');
+				}
+
+				&.calendar {
+					background-image: url('../images/settings/transparent/mobile/mobile-dates.png');
+				}
+
+				&.audio_player {
+					background-image: url('../images/settings/transparent/mobile/mobile-audio.png');
+				}
+			}
+		}
+	}
+}

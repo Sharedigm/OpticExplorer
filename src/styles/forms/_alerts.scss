@@ -1,0 +1,50 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _alerts.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$padding: 10px;
+$max-height: 200px;
+
+//
+// styles
+//
+
+form {
+	.alert {
+		padding: $padding;
+		max-height: $max-height;
+		margin-bottom: 15px;
+		overflow: auto;
+		
+		label {
+			font-weight: bold;
+			margin-right: 10px;
+			margin-bottom: 0;
+		}
+	}
+
+	.alert-dismissable {
+		padding-right: 25px;
+	}
+
+	.alert:last-child {
+		margin-bottom: 0;
+	}
+}

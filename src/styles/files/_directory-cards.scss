@@ -1,0 +1,241 @@
+/******************************************************************************\
+|                                                                              |
+|                             _directory-cards.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/images";
+
+//
+// variables
+//
+
+$file-icon-width: 60px;
+$file-icon-height: 50px;
+$directory-icon-width: 60px;
+$directory-icon-height: 50px;
+
+//
+// styles
+//
+
+.card-grid {
+	.cards {
+		.item {
+
+			//
+			// file and directory cards
+			//
+
+			&.file,
+			&.directory {
+				> .card {
+					> .icon {
+						svg + .owner {
+
+							// centered owner profile photos
+							//
+							left: 50%;
+							top: 50%;
+							transform: translateX(-50%);
+							border: none;
+							box-shadow: none;
+
+							// no shadows
+							//
+							.thumbnail {
+								filter: none;
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// file cards
+			//
+
+			&.file {
+				> .card {
+					> .icon {
+						width: $file-icon-width;
+						height: $file-icon-height;
+
+						svg + .owner {
+							margin-top: -15px;
+						}
+
+						//
+						// thumbnails
+						//
+
+						> .photo.thumbnail,
+						> .svg.thumbnail {
+							width: auto;
+							height: auto;
+							max-width: $file-icon-width;
+							max-height: $file-icon-height;
+						}
+
+						> .svg.thumbnail {
+							background-color: transparent;
+						}
+					}
+				}
+
+				//
+				// for non-transparent thumbnails, use box shadow
+				// instead of drop shadow for better performance.
+				//
+
+				&:not(.svg):not(.png) {
+					> .card {
+						> .icon {
+
+							//
+							// photo thumbnails
+							//
+
+							.photo.thumbnail {
+								background-color: black;
+								outline: 2px solid white;
+								box-shadow: images.$thumbnail-box-shadow;
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// thumbnail file icons
+			//
+
+			&.preview.file {
+				> .card {
+					> .icon {
+						.owner {
+
+							// upper left owner profile images
+							//
+							margin-left: 0;
+							margin-top: 0;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+
+			//
+			// directory cards
+			//
+
+			&.directory {
+				> .card {
+					> .icon {
+						width: $directory-icon-width;
+						height: $directory-icon-height;
+
+						> img, > svg {
+							width: $directory-icon-width;
+							height: $directory-icon-width;
+						}
+
+						> svg + .owner {
+							margin-top: -10px;
+						}
+					}
+
+					/*
+					.info {
+						.name {
+							font-weight: bold;
+						}
+					}
+					*/
+				}
+			}
+
+			//
+			// volume cards
+			//
+
+			&.volume {
+				> .card {
+					.info {
+						.name {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+
+			//
+			// special file icons
+			//
+
+			&.pdf.file,
+			&.svg.file {
+				> .card {
+					> .icon {
+						> .thumbnail {
+							outline: none;
+							background: none;
+						}
+					}
+				}
+			}
+
+			//
+			// special directory cards
+			//
+
+			&.clipboard.directory, 
+			&.trash.directory {
+				> .card {
+					> .icon {
+						> img, > svg {
+							height: 60px;
+							width: 60px;
+							margin-top: -5px;
+						}		
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// drag image cards
+//
+
+.drag-image {
+	.item {
+		&.file {
+			> .card {
+				> .icon {
+
+					//
+					// thumbnails
+					//
+					
+					.photo.thumbnail {
+						background: none;
+					}
+				}
+			}
+		}
+	}
+}

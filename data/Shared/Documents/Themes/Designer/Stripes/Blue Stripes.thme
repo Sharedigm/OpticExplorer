@@ -1,0 +1,138 @@
+{
+	"general": {
+		"day_theme": "medium",
+		"night_theme": "dark",
+		"color_scheme": "colored",
+
+		"highlight_color": "blue",
+		"accent_color": "none",
+		"material": "none",
+		"transparency": "translucent",
+
+		"corner_style": "round",
+		"sidebar_panels": true,
+		"label_icons": true,
+
+		"icon_size": "medium",
+		"icon_material": "auto",
+		"icon_corners": "auto",
+		"icon_tilt": "none",
+		"icon_tint": "auto",
+		"icon_background": false,
+		"icon_spinning": false,
+
+		"icon_select_effect": "none",
+		"icon_deselect_effect": "none",
+		"icon_highlight_effect": "tilt",
+		"icon_unhighlight_effect": "none",
+		"icon_open_effect": "wobble",
+
+		"system_font": "Avenir",
+		"heading_font": null,
+		"title_font": null,
+		"label_font": null,
+		"font_size": "normal"
+	},
+
+	"desktop": {
+		"desktop_theme": "auto",
+		"launcher_style": "dock",
+
+		"run_menu_items": "icons",
+		"run_menu_corners": "auto",
+		"run_menu_attached": true,
+		"run_menu_autohide": false,
+
+		"taskbar_alignment": "left",
+		"taskbar_handles": true,
+		"taskbar_minimized": false,
+
+		"dock_tilt": "none",
+		"dock_corners": "auto",
+		"dock_attached": true,
+
+		"background_image": "/Shared/Pictures/Desktops/Patterns/Stripes Blue.png",
+		"background_size": "tile",
+		"background_color": "auto",
+		"background_repeats": 5,
+
+		"desktop_sidebar_transparency": "transparent",
+		"desktop_sidebar_panels": "auto",
+
+		"show_app_name": false,
+		"show_clock": true,
+		"show_led_time": true,
+		"show_app_info": true,
+		"show_trash_in_corner": false,
+		"show_dialog_parallax_shift": true,
+
+		"launcher_open_effect": "slide",
+		"launcher_close_effect": "slide"
+	},
+
+	"controls": {
+		"menubar_width": "medium",
+		"menu_material": "auto",
+		"menu_corners": "auto",
+		"menu_icons": true,
+		"menus_attached": true,
+		"menu_margins": false,
+
+		"button_material": "auto",
+		"button_corners": "auto",
+		"button_icons": true,
+
+		"tab_material": "auto",
+		"tab_corners": "auto",
+		"tab_alignment": "center",
+		"tabs_minimal": false,
+		"tabs_expandable": true,
+		"tabs_attached": true,
+		"tab_margins": false,
+		"tab_icons": true,
+		"tab_close_buttons": true,
+
+		"slider_material": "auto",
+		"slider_corners": "round",
+		"slider_handle_width": "medium",
+
+		"splitter_width": "medium",
+		"splitter_handles": true,
+		"splitter_handle_width": "medium",
+
+		"scrollbar_material": "auto",
+		"scrollbar_width": "medium",
+		"scrollbar_corners": "auto"
+	},
+
+	"dialogs": {
+		"dialog_colors": "none",
+		"dialog_material": "auto",
+		"dialog_button_colors": "monochrome",
+		"dialog_button_material": "auto",
+		"dialog_button_label_colors": "light",
+
+		"dialog_corners": "rounded",
+		"dialog_button_corners": "auto",
+		"dialog_padding": true,
+		"dialog_alert_size": "small",
+
+		"dialog_header_width": "thick",
+		"dialog_title_style": "left",
+		"dialog_header_icons": true,
+		"dialog_handles": true,
+		"dialog_buttons": true,
+		"dialog_footer_icons": true,
+
+		"dialog_button_alignment": "right",
+		"dialog_button_size": "large",
+		"dialog_button_width": "square",
+		"dialog_button_labels": true,
+		"dialog_button_outlines": false,
+
+		"dialog_open_effect": "slide",
+		"dialog_close_effect": "slide",
+		"dialog_minimize_effect": "zoom",
+		"dialog_unminimize_effect": "zoom"
+	}
+}

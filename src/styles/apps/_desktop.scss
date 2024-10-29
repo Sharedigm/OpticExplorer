@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _desktop.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+@use "../textures/textures";
+
+//
+// variables
+//
+
+$flickable-cursor: grab;
+$flickable-active-cursor: grabbing;
+
+//
+// styles
+//
+
+#desktop {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+
+	// desktop apps carousel
+	//
+	> .spaces {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		// make carousel content selectable
+		//
+		@include selection.selectable;
+
+		.flickable {
+			cursor: $flickable-cursor;
+			@include selection.unselectable;
+
+			&:active {
+				cursor: $flickable-active-cursor;
+			}
+		}
+
+		&:not(.flickity-enabled) {
+			.spaces.dropdown {
+				display: none;
+			}
+		}
+
+		.modals {
+			position: absolute;
+
+			.modal {
+				position: absolute;
+			}
+		}
+
+		&.is-draggable {
+			.footer-bar {
+				.handle-bar {
+					.handle {
+						cursor: $flickable-cursor;
+
+						&:active {
+							cursor: $flickable-active-cursor;
+						}
+					}
+				}
+			}
+		}
+
+		.flickity-slider.animating {
+
+			// these two lines improve performance on Chrome dramatically!
+			//
+			-webkit-backface-visibility: hidden;
+			-webkit-perspective: 1000;
+		}
+	}
+
+	//
+	// desktop options
+	//
+
+	&.hide-app-name {
+		.desktop.app {
+			.header-bar .app-bar {
+				display: none;
+			}
+		}
+	}
+
+	&.hide-clock {
+		.desktop.app {
+			.header-bar .status-bar .clock {
+				display: none;
+			}
+		}
+	}
+
+	&.hide-app-info {
+		.desktop.app {
+			.header-bar .status-bar .toolbar,
+			.footer-bar .desktop-info-bar {
+				display: none;
+			}
+		}
+	}
+}
+
+#desktop.show-trash-in-corner {
+	.file-browser {
+		.items {
+			.trash {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+
+	//
+	// translucent desktop header bars
+	//
+
+	.translucent:not(.thin-menu-bars) #desktop {
+		.desktop.app {
+			&::before {
+				position: absolute;
+				z-index: 0;
+				content: "";
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 30px;
+				pointer-events: none;
+				@include textures.frosted(15px);
+			}
+		}
+	}
+
+	.translucent.thin-menu-bars #desktop {
+		.desktop.app {
+			&::before {
+				position: absolute;
+				z-index: 0;
+				content: "";
+				left: 0;
+				right: 0;
+				top: 0;
+				height: 25px;
+				pointer-events: none;
+				@include textures.frosted(15px);
+			}
+		}
+	}
+
+	#desktop.show-trash-in-corner {
+		.desktop.app > .body > .app {
+			.mainbar {
+				> .items {
+					.cards {
+						.item.trash {
+							width: 33%;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// medium desktop styles
+	//
+
+	@media (min-width: variables.$screen-md-min) and (max-width: variables.$screen-md-max) {
+		#desktop.show-trash-in-corner {
+			.desktop.app > .body > .app {
+				.mainbar {
+					> .items {
+						.cards {
+							.item.trash {
+								width: 25%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// large desktop styles
+	//
+
+	@media (min-width: variables.$screen-lg-min) {
+		#desktop.show-trash-in-corner {
+			.desktop.app > .body > .app {
+				.mainbar {
+					> .items {
+						.cards {
+							.item.trash {
+								width: 20%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

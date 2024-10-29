@@ -1,0 +1,174 @@
+/******************************************************************************\
+|                                                                              |
+|                               _breadcrumbs.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$padding: 5px 15px;
+$separator-width: 20px;
+$round-border-radius: 15px;
+$rounded-border-radius: 7px;
+
+//
+// colors
+//
+
+$separator-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+.breadcrumb {
+	padding: $padding;
+	display: none;
+
+	> li {
+
+		//
+		// separators
+		//
+
+		& + li:before {
+			width: $separator-width;
+			color: unset;
+		}
+
+		//
+		// icons
+		//
+
+		i {
+			margin: 2px 0;
+			margin-right: 5px;
+			text-decoration: none;
+		}
+
+		//
+		// links
+		//
+
+		a {
+			text-decoration: none;
+
+			&:hover span {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	//
+	// inline layout
+	//
+
+	&.inline {
+		display: inline-flex;
+
+		li {
+			display: inline-flex;
+			flex-shrink: 1;
+			overflow: hidden;
+
+			a {
+				display: inline-flex;
+				overflow: hidden;
+			}
+
+			span {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				vertical-align: middle;
+				cursor: default;
+			}
+
+			&:not(:last-child) {
+				span {
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			&:hover {
+				overflow: visible;
+			}
+			
+			&:first-child {
+				min-width: 15px;
+			}
+
+			&:not(:first-child):not(:hover) {
+				min-width: 30px;
+			}
+		}
+	}
+}
+
+.help .breadcrumb {
+	display: block;
+}
+
+//
+// breadcrumb borders
+//
+
+.round .breadcrumb {
+	border-radius: $round-border-radius;
+}
+
+.rounded .breadcrumb {
+	border-radius: $rounded-border-radius;
+}
+
+.square .breadcrumb {
+	border-radius: 0;
+}
+
+//
+// themed breadcrumbs
+//
+
+.colored {
+	.breadcrumb {
+
+		> li {
+
+			//
+			// separators
+			//
+
+			& + li:before {
+				color: $separator-color;
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.breadcrumb {
+		display: none;
+	}
+}

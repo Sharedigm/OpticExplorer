@@ -1,0 +1,253 @@
+/******************************************************************************\
+|                                                                              |
+|                               _post-forms.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../comments/comment-bubbles";
+
+//
+// variables
+//
+
+$new-post-content: "What's new?";
+$new-message-content: "What's up?";
+$attachments-height: 200px;
+
+//
+// styles
+//
+
+.new-post, .new-comment, .new-reply, .new-message, .new-task {
+	> form {
+		position: relative;
+
+		.message {
+			.tile {
+				margin-right: 10px;
+			}
+			
+			.tile + .info {
+				width: 100%;
+				margin-left: 0 !important;
+				padding-left: 0 !important;
+
+				.comment-bubble {
+					display: block;
+					width: 100%;
+					
+					.comment-inner {
+						height: auto;
+						min-height: 50px;
+
+						// placeholder
+						//
+						&:empty::after {
+							padding: 5px 10px;
+							position: absolute;
+							left: 0;
+							right: 0;
+							top: 0;
+							bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.options {
+			margin-top: 10px;
+
+			.buttons {
+				display: inline-block;
+			}
+
+			.privacy {
+				display: inline-block;
+				margin-top: -5px;
+				white-space: nowrap;
+				float: right;
+			}
+		}
+
+		.where {
+			display: inline-block;
+			white-space: nowrap;
+			margin: 0 5px;
+			height: 25px;
+
+			i {
+				margin: 5px;
+			}
+		}
+
+		.attachments {
+			position: relative;
+
+			.items {
+				display: block;
+				overflow: hidden;
+
+				> div {
+					padding: 0;
+				}
+
+				.icons:not(:empty) {
+					margin-top: 10px;
+				}
+			}
+		}
+
+		.dropzone {
+			margin: -5px;
+			padding: 5px;
+		}
+	}
+}
+
+.new-post {
+	> form .tile + .info {
+
+		// placeholder text
+		//
+		.comment-bubble .comment-inner:empty::after {
+			content: $new-post-content;
+		}
+	}
+}
+
+.new-message {
+	> form {
+		& .tile + .info {
+
+			// placeholder text
+			//
+			.comment-bubble .comment-inner:empty::after {
+				content: $new-message-content;
+			}
+		}
+	}
+}
+
+//
+// new comment borders
+//
+
+body.round {
+	.new-post, .new-comment, .new-reply, .new-message, .new-task {
+		.comment-bubble {
+			.comment-inner {
+				border-radius: comment-bubbles.$round-border-radius;
+			}
+		}
+	}
+}
+
+body.rounded {
+	.new-post, .new-comment, .new-reply, .new-message, .new-task {
+		.comment-bubble {
+			.comment-inner {
+				border-radius: comment-bubbles.$rounded-border-radius;
+			}
+		}
+	}
+}
+
+//
+// non-mobile posts
+//
+
+body[device="desktop"] {
+
+	.new-post, .new-comment, .new-reply, .new-message, .new-task {
+		.buttons {
+			margin-bottom: -5px;
+
+			& + .buttons {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.new-post {
+		.privacy {
+			display: inline-flex;
+		}
+	}
+
+	.new-post, .new-message {
+		.options {
+			margin-left: 60px;
+		}
+	}
+
+	.new-comment, .new-reply {
+		.options {
+			margin-left: 35px;
+		}
+	}
+
+	.modal {
+		.post.panel, .new-comment, .new-reply {
+			.attachments {
+				.items {
+					max-height: $attachments-height;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile post forms
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	.new-post, .new-comment, .new-reply, .new-message, .new-task {
+		> form {
+			.options {
+				text-align: center;
+			}
+		}
+
+		.where {
+			margin-top: 10px;
+			float: right;
+		}
+
+		.privacy {
+			margin-top: 10px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.new-post, .new-comment, .new-reply, .new-message, .new-task {
+		> form {
+			&:not(.focused).empty {
+				.options, .attachments {
+					display: none;
+				}
+			}
+		}
+	}
+}

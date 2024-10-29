@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                                _dark-mode.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// browser dark mode
+//
+
+@media (prefers-color-scheme: dark) {
+	.light-mode-only {
+		display: none;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.dark-mode-only {
+		display: none;
+	}
+}
+
+//
+// application dark theme
+//
+
+body.dark {
+	.light-theme-only {
+		display: none;
+	}
+}
+
+body:not(.dark) {
+	.dark-theme-only {
+		display: none;
+	}
+}

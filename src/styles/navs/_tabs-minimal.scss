@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                              _tabs-minimal.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.tabs-minimal {
+	ul.nav-tabs {
+
+		//
+		// inactive tabs
+		//
+
+		> li:not(.active) {
+			> a {
+				background: transparent !important;
+				border-color: transparent !important;
+			}
+
+			> a:hover {
+				background: transparent !important;
+				border-color: transparent !important;
+			}
+		}
+	}
+}

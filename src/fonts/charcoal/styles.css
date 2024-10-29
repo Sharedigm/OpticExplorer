@@ -1,0 +1,17 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Charcoal';
+	src: url('Charcoal-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Charcoal';
+	src: url('Charcoal-Regular.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

@@ -1,0 +1,122 @@
+/******************************************************************************\
+|                                                                              |
+|                              _map-markers.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$map-marker-color: lighten(red, 15%);
+
+$map-marker-outline-width: 1px;
+$map-marker-outline-color: rgba(white, 100%);
+$map-marker-outline: (-$map-marker-outline-width) 0 0 $map-marker-outline-color, $map-marker-outline-width 0 0 $map-marker-outline-color, 0 $map-marker-outline-width 0 $map-marker-outline-color, 0 (-$map-marker-outline-width) 0 $map-marker-outline-color;
+
+$map-marker-selected-outline: (-$map-marker-outline-width) (-$map-marker-outline-width) 0 white, $map-marker-outline-width (-$map-marker-outline-width) 0 white, (-$map-marker-outline-width) $map-marker-outline-width 0 white, $map-marker-outline-width $map-marker-outline-width 0 white, 0 $map-marker-outline-width white;
+
+//
+// styles
+//
+
+.items-map {
+	.map ~ .layer {
+		.item-list {
+
+			.item {
+				.icon {
+
+					i {
+						&.fa-map-pin,
+						&.fa-map-marker,
+						&.fa-map-marker-alt {
+							font-size: 20px;
+							color: $map-marker-color;
+						}
+
+						&.fa-circle {
+							color: $map-marker-color;
+						}
+
+						&.place-info {
+							color: white !important;
+							filter: none;
+						}
+
+						&.fa-map-pin + i.place-info {
+							margin-left: 1.5px;
+						}
+					}
+				}
+
+				&.highlighted {
+					.icon i {
+						&.fa-circle,
+						&.fa-map-pin,
+						&.fa-map-marker,
+						&.fa-map-marker-alt {
+							color: darken($map-marker-color, 10%);
+						}
+					}
+				}
+
+				&.selected {
+					.icon i {
+						&.fa-circle,
+						&.fa-map-pin,
+						&.fa-map-marker,
+						&.fa-map-marker-alt {
+							color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// unfocused map markers
+//
+
+.modal:not(.focused) .modal-dialog,
+.desktop.app:not(.focused) > .body {
+	.items-map {
+
+		//
+		// map overlays
+		//
+
+		.map ~ .layer {
+			.item-list {
+
+				//
+				// selected markers
+				//	
+					
+				.item.selected {
+					.icon i {
+						&.fa-circle,
+						&.fa-map-pin,
+						&.fa-map-marker,
+						&.fa-map-marker-alt {
+							color: darken($map-marker-color, 10%);
+						}
+					}
+				}
+			}
+		}
+	}
+}

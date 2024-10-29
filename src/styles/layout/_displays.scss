@@ -1,0 +1,60 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _displays.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+//
+// LED displays
+//
+
+.led.dot {
+	font-family: 'LED Dot Matrix';
+	font-weight: normal;
+}
+
+.led.display {
+	font-family: 'LCD';
+	color: red;
+	text-shadow: 0 0 10px;
+	background: black;
+
+	path {
+		filter: url('#glowing');
+	}
+}
+
+//
+// LCD displays
+//
+
+.lcd {
+	font-family: 'LCD';
+	letter-spacing: 2px;
+	color: black;
+	background: white;
+}
+
+.lcd.display {
+	border-width: 2px;
+	border-style: solid;
+}
+
+.lcd.pie {
+	background: none;
+}

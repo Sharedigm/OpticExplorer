@@ -1,0 +1,50 @@
+/******************************************************************************\
+|                                                                              |
+|                        _light-plastic-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../navs/materials/plastic/plastic-btns";
+@use "../../apps/light-desktop";
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light.plastic {
+
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+
+			//
+			// plastic desktop footer bars
+			//
+
+			.desktop.app > .footer-bar {
+
+				//
+				// plastic desktop run menus
+				//
+
+				.run-menu .menu-bar {
+					.dropdown-toggle {
+						@include plastic-btns.shade(light-desktop.$light-run-menu-color);
+					}
+				}
+			}
+		}
+	}
+}

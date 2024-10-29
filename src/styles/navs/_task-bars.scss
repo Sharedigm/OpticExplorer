@@ -1,0 +1,291 @@
+/******************************************************************************\
+|                                                                              |
+|                                _task-bars.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../layout/performance";
+
+//
+// variables
+//
+
+$font-size: 115%;
+$shadow: 3px 3px 10px rgba(black, 33%);
+
+//
+// styles
+//
+
+.footer-bar {
+	.handle-bar {
+		flex-grow: 1;
+	}
+
+	.task-bar {
+		display: flex;
+		border: none;
+
+		.pinned-items:not(:empty) {
+			display: flex;
+			float: left;
+			height: 30px;
+
+			.apps {
+				display: flex;
+				
+				.btn, .btn.colored {
+					// width: $mobile-min-button-width;
+					// margin: 2px;
+					// background: none;
+					// border: transparent;
+					// box-shadow: none;
+
+					width: 30px;
+					min-width: 30px;
+					height: 30px;
+					margin: 0;
+
+					i {
+						line-height: 25px;
+					}
+				}
+			}
+		}
+		
+		.task-list {
+			display: inline;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			pointer-events: auto;
+
+			li {
+				float: left;
+				height: 31px;
+				text-align: center;
+				line-height: 30px;
+				max-width: 200px;
+				padding: 0 10px;
+				margin-bottom: -1px;
+				border-width: 1px;
+				border-style: solid;
+				cursor: pointer;
+
+				// handle long titles
+				//
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+
+				.icon {
+					display: inline-block;
+
+					i {
+						font-size: $font-size;
+					}
+				}
+
+				.title {
+					font-size: 115%;
+					font-weight: normal;
+					display: inline;
+					white-space: nowrap;
+					margin: 0;
+					padding: 0;
+					border: 0;
+				}
+
+				.tooltip {
+					visibility: hidden;
+				}
+			}
+		}
+	}
+}
+
+.spaces.is-draggable {
+	.footer-bar {
+		.handle-bar {
+			padding: 4px 10px;
+			min-width: 44px;
+
+			.handle {
+				display: flex;
+				flex-grow: 1;
+				min-height: 22px;
+			}
+		}
+	}
+}
+
+//
+// task bar borders
+//
+
+.round {
+	.footer-bar {
+		.handle {
+			border-radius: 10px;
+		}
+	}
+}
+
+.rounded {
+	.footer-bar {
+		.handle {
+			border-radius: 5px;
+		}
+	}
+}
+
+//
+// minimized task bars
+//
+
+.task-bar-minimized {
+	.footer-bar {
+
+		.run-menu {
+			.dropdown-toggle {
+				width: 30px;
+				
+				span {
+					display: none;
+				}
+			}
+		}
+
+		.task-bar {
+			.task-list {
+				li {
+					width: 30px;
+					padding: 0;
+
+					.title {
+						display: none;
+					}
+
+					.tooltip {
+						visibility: visible;
+						z-index: 2;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop borders
+//
+
+.round .desktop.app {
+	.task-bar {	
+		.task-list {
+			li {
+				border-radius: 15px;
+			}
+		}
+	}
+}
+
+.rounded {
+	.task-bar {	
+		.task-list {
+			li {
+				border-radius: 0.5em;
+			}
+		}
+	}
+}
+
+.square {
+	.task-bar {	
+		.task-list {
+			li {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.task-bar {
+		float: left;
+	}
+}
+
+//
+// desktop shadows
+//
+
+body:not(.binary) {
+	.task-bar {
+
+		// use hardware acceleration
+		//
+		@include performance.acceleration;
+
+		.task-list li {
+			box-shadow: $shadow;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	//
+	// mobile task bar
+	//
+
+	.desktop {
+		.footer-bar {
+			.task-bar {		
+				.task-list {
+					li {
+						max-width: 100px;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// mobile minimized task bar
+	//
+
+	.task-bar-minimized {
+		.desktop {
+			.footer-bar {
+				.task-bar {
+					.task-list {
+						li {
+							min-width: 50px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

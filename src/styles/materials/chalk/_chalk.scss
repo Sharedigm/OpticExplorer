@@ -1,0 +1,148 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _chalk.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../flat/flat";
+@use "flat-chalk";
+@use "round-chalk";
+@use "rounded-chalk";
+@use "long-round-chalk";
+
+//
+// variables
+//
+
+$border-radius: var(--border-radius);
+
+//
+// mixins
+//
+
+@mixin shade($color) {
+	@include flat-chalk.shade($color);
+
+	&.round {
+		@include round-chalk.shade($color);
+	}
+
+	&.rounded {
+		@include rounded-chalk.shade($color);
+	}
+
+	&.long.round {
+		@include long-round-chalk.shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-chalk.vertical-shade($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shade($color) {
+	@include flat-chalk.multilayer-shade($color);
+
+	&.round {
+		@include round-chalk.multilayer-shade($color);
+	}
+
+	&.rounded {
+		@include rounded-chalk.multilayer-shade($color);
+	}
+
+	&.long.round {
+		@include long-round-chalk.multilayer-shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-chalk.multilayer-shade($color, $border-radius);
+		}
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color) {
+	@include flat-chalk.shaded($color);
+
+	&.round {
+		@include round-chalk.shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-chalk.shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-chalk.shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-chalk.vertical-shaded($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shaded($color) {
+	@include flat-chalk.multilayer-shaded($color);
+
+	&.round {
+		@include round-chalk.multilayer-shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-chalk.multilayer-shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-chalk.multilayer-shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-chalk.multilayer-shaded($color, $border-radius);
+		}
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.chalk {
+		.shaded, &.chalk.shaded {
+			@include shade(var(--primary-color));
+
+			&.textured {
+				@include multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.chalk {
+		.shaded, &.chalk.shaded {
+			@include flat.shade(var(--primary-color));
+
+			&.textured {
+				@include flat.multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}

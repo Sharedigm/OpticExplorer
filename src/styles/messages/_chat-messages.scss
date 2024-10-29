@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                             _chat-messages.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$comment-bubble-width: 75%;
+
+//
+// styles
+//
+
+.messages-list {
+	height: 100%;
+
+	.message {
+
+		// message spacing
+		//
+		& + .message {
+			margin-top: 10px;
+			// border-top: 1px dashed;
+		}
+		&:last-child {
+			padding-bottom:10px;
+		}
+
+		// message alignment
+		//
+		&.user {
+			text-align: left;
+		}
+		&.connection {
+			text-align: right;
+		}
+
+		// comment bubbles
+		//
+		.comment-bubble {
+			max-width: $comment-bubble-width;
+		}
+		&:not(.selected) .comment-bubble {
+			cursor: pointer;
+		}
+
+		// attachments
+		//
+		.image-attachments {
+			margin-bottom: 5px;
+		}
+
+		// specifics
+		//
+		.specifics {
+			display: inline-block;
+
+			/*
+			.info::after {
+				margin-left: -5px;
+				content: ":";
+			}
+			*/
+
+			.when, .where {
+				margin: 0 5px;
+			}
+		}
+	}
+
+	.user.message {
+
+		.tile {
+			float: left;
+			margin-right: 10px;
+			margin-left: 0;
+		}
+
+		.specifics {
+			text-align: left;
+		}					
+	}
+
+	.connection.message {
+
+		.tile {
+			float: right;
+			margin-left: 10px;
+			margin-right: 0;
+		}
+
+		.specifics {
+			text-align: right;
+		}
+	}
+}

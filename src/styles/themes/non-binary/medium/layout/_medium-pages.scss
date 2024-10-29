@@ -1,0 +1,134 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$background-color: white;
+$attention-color: white;
+$attention-icon-color: medium-branding.$secondary-color;
+$attention-background-color: colors.$very-light-grey;
+$footer-heading-color: var(--primary-color);
+$footer-link-color: colors.$light-grey;
+$footer-background-color: colors.$very-light-grey;
+$footer-info-background-color: colors.$ultra-light-grey;
+$odd-section-background-color: colors.$ultra-light-grey;
+$iframe-border-color: colors.$light-grey;
+$items-border-color: colors.$very-very-very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	.page {
+		background-color: $background-color;
+
+		.contents {
+
+			//
+			// attention
+			//
+
+			.attention:not(.icon) {
+				color: $attention-color;
+				background-color: $attention-background-color;
+			}
+
+			//
+			// page sections
+			//
+
+			.section {
+				&:not(.colored):nth-child(odd) {
+					background-color: $odd-section-background-color;
+
+					.well {
+						background-color: white;
+					}
+				}
+			}
+
+			//
+			// borders
+			//
+
+			iframe {
+				border-color: $iframe-border-color;
+			}
+
+			.items {
+				border-color: $items-border-color;
+			}
+		}
+		
+		.footer {
+
+			.info {
+				background-color: $footer-info-background-color;
+
+				.heading {
+					color: $footer-heading-color;	
+				}
+
+				a, a:hover, a:active, a:visited {
+					color: $footer-link-color;	
+				}
+			}
+
+			.branding {
+				color: white;
+				background-color: $footer-background-color;
+
+				a {
+					color: white;
+
+					&:hover {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// attention icons
+	//
+
+	&:not(.icon-backgrounds) {
+		.page {
+			.attention.icon {
+				background-color: transparent !important;
+				border-color: transparent !important;
+
+				i {
+					color: $attention-icon-color;
+				}
+
+				img {
+					filter: drop-shadow(5px 5px 10px colors.faded(black, 33%));
+				}
+			}
+		}
+	}
+}

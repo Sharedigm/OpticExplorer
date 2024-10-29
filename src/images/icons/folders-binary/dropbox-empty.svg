@@ -1,0 +1,36 @@
+<svg 
+	id="dropbox-empty-icon" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 16 48 24">
+	
+	<style>
+		.folder-top {
+			fill: white;
+			stroke: black;
+		}
+		.folder-body {
+			fill: white;
+			stroke: black;
+		}
+		.folder-contents {
+			fill: white;
+			stroke: black;	
+		}
+		.folder-icon {
+			fill: black;
+		}
+	</style>
+
+	<g class="folder-top" transform="translate(0 1.5)">
+		<path d="M 43.5,11.5 H 21 L 16.5,7 h -12 c -3,0 -3,0 -3,3 v 8 h 45 v -3.5 c 0,0 0,-3 -3,-3 z" />
+	</g>
+
+	<g class="folder-body">
+		<path id="folder-cover" d="M 3,16.75 C 1.5,16.75 1.5,18 1.5,18 v 25.75 c 0,2.25 0,2 3,2 h 39 c 3,0 3,0.25 3,-2 V 18 c 0,0 0,-1.25 -1.5,-1.25 z" />
+	</g>
+	
+	<g class="folder-icon" transform="translate(11, 41), scale(.015, -0.015)">
+		<path d="M402 829l494 -305l-342 -285l-490 319zM1388 274v-108l-490 -293v-1l-1 1l-1 -1v1l-489 293v108l147 -96l342 284v2l1 -1l1 1v-2l343 -284zM554 1418l342 -285l-494 -304l-338 270zM1390 829l338 -271l-489 -319l-343 285zM1239 1418l489 -319l-338 -270l-494 304z" />
+	</g>
+</svg>

@@ -1,0 +1,44 @@
+/******************************************************************************\
+|                                                                              |
+|                          _accented-scrollbars.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../colors/colors";
+@use "../../../navs/colors/colored-scrollbars";
+
+//
+// colors
+//
+
+$color: var(--secondary-color);
+$hover-color: colors.darken($color, 10%);
+$default-color: branding.$secondary-color;
+$default-hover-color: darken($default-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	&:not(.dark) {
+
+		//
+		// scrollbar thumbs
+		//
+
+		@include colored-scrollbars.inactive-thumb-colored($color, $hover-color);
+	}
+}

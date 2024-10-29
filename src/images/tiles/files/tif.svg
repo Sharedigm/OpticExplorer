@@ -1,0 +1,18 @@
+<svg 
+	id="tif-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 43 43" 
+	style="background:#57adc0">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(-6.5, 4)">
+		<circle r="5" cy="10" cx="20" style="fill:#f3d55b" />
+		<polygon points="23.517, 24.517 6.5, 39 17.5, 39 49.5, 39 49.5, 28 39.5, 18.5 29, 30" style="fill:#358a9c" />
+	</g>
+</svg>

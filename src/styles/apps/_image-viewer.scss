@@ -1,0 +1,302 @@
+/******************************************************************************\
+|                                                                              |
+|                               _image-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../colors/colors";
+@use "../colors/text-colors";
+
+//
+// variables
+//
+
+$image-shadow: drop-shadow(10px 10px 20px rgba(black, 50%));
+
+//
+// styles
+//
+
+.image-viewer.app {
+
+	.header-bar {
+		.mouse-mode-bar {
+			display: inline-block;
+			
+			.button {
+				i.fa.fa-mouse-pointer {
+					margin-left: 3px;
+				}
+			}
+		}
+
+		.zoom-bar {
+			input[type="range"] {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.body > .contents {
+
+		.sidebar {
+			.image-info.panel {
+				> .info {
+					overflow-y: auto;
+					overflow-x: hidden;
+					height: 300px;
+				}
+			}
+		}
+
+		.mainbar {
+			position: relative;
+
+			.image {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+
+				> img:not(.loading) {
+
+					// center image
+					//
+					margin: auto;
+					flex-grow: 0;
+					flex-shrink: 0;
+					
+					// handle transparent png images
+					//
+					// background-color: $very-very-very-light-grey;
+
+					// fit size
+					//
+					&[width="100%"][height="100%"] {
+						object-fit: contain;
+					}
+
+					// shadow effects
+					//
+					filter: $image-shadow;
+				}
+
+				.caption {
+					display: flex;
+					position: absolute;
+					text-align: center;
+					bottom: 0;
+					padding: 10px;
+					width: 100%;
+
+					.text {
+						background: black;
+						font-size: 125%;
+						padding: 5px 10px;
+						margin: auto;
+						border-radius: 1em;
+						border: 2px solid white;
+						color: white;
+					}
+				}
+
+				&.hide-caption {
+					.caption {
+						display: none;
+					}
+				}
+			}
+
+			.annotation.fineprint {
+				display: inline-block;
+				position: absolute;
+				color: text-colors.$dark-color;
+				background: white;
+				padding: 0 10px;
+				white-space: nowrap;
+			}
+
+			//
+			// full screen mode
+			//
+
+			.image:-webkit-full-screen {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				background: black;
+			}
+			.image:-moz-full-screen {
+				background: black;
+			}
+			.image:-ms-fullscreen {
+				background: black;
+			}
+			.image:fullscreen {
+				background: black;
+			}
+		}
+	}
+
+	.footer-bar {
+		.file-info {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.resolution.items {
+	.item {
+		.preview {
+			background-color: colors.$medium-grey;
+			display: flex;
+			pointer-events: auto;
+
+			.aspect-ratio {
+				color: text-colors.$light-color;
+				margin: auto;
+			}
+		}
+
+		&.selected {
+			.preview {
+				border-width: 1px;
+				border-style: solid;
+			}
+		}
+	}
+}
+
+//
+// colors
+//
+
+/*
+.colored {
+	.image-viewer.app {
+		.body > .contents {
+			.sidebar {
+				.panels {
+					background: $very-very-very-dark-grey;
+				}
+			}
+		}
+	}
+}
+*/
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.image-viewer.app {
+		.header-bar {
+			.zoom-bar {
+				input[type="range"] {
+					width: 125px;
+				}
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.image-viewer.app {
+		.header-bar {
+			.zoom-bar {
+				.input {
+
+					//
+					// range (slider) inputs
+					//
+					
+					input[type="range"] {
+						display: none;
+					}
+				}
+			}
+		}
+		
+		.body {
+			> .contents {
+				.mainbar {
+					.image {
+						overflow: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.image-viewer.app {
+		.mainbar .image {
+			overflow: hidden;
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.image-viewer.app {
+		.mainbar .image {
+			overflow: auto;
+		}
+	}
+}
+
+//
+// Safari compatibility
+//
+
+[browser="safari"] {
+	.image-viewer.app {
+		.image {
+			img.pixelated {
+				transform: none !important;
+				filter: none !important;
+			}
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+@-moz-document url-prefix() {
+	.image-viewer.app {
+		.image {
+			img.pixelated {
+				image-rendering: optimizeSpeed;
+			}
+		}
+	}
+}

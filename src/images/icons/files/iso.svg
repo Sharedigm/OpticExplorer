@@ -1,0 +1,33 @@
+<svg 
+	id="iso-file-icon" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 56 56">
+
+	<style>
+		.file-body {
+			fill: #E9E9E0;
+		}
+		.file-corner {
+			fill: lightgrey;
+		}
+		.file-type text {
+			font-size: 14px;
+			font-family: Lucida Grande, sans-serif; 
+			fill: white;
+		}
+	</style>
+	
+	<path class="file-body" d="M 36.985, 0 H 7.963 C 7.155, 0, 6.5, 0.655, 6.5, 1.926V55c0, 0.345, 0.655, 1, 1.463, 1 h 40.074 c 0.808, 0, 1.463 -0.655, 1.463 -1 V 12.978 c 0 -0.696 -0.093 -0.92 -0.257 -1.085 L 37.607, 0.257 C 37.442, 0.093, 37.218, 0, 36.985, 0 z" />
+	<g class="file-icon">
+		<circle style="fill:#C8BDB8;" cx="27.5" cy="21" r="12" />
+		<circle style="fill:#E9E9E0;" cx="27.5" cy="21" r="3" />
+		<path style="fill:#D3CCC9;" d="M25.379, 18.879c0.132 -0.132, 0.276 -0.245, 0.425 -0.347l -2.361 -8.813 c -1.615, 0.579 -3.134, 1.503 -4.427, 2.796c -1.294, 1.293 -2.217, 2.812 -2.796, 4.427l8.813, 2.361 C 25.134, 19.155, 25.247, 19.011, 25.379, 18.879z" />
+		<path style="fill:#D3CCC9;" d="M30.071, 23.486l2.273, 8.483c1.32 -0.582, 2.56 -1.402, 3.641 -2.484c1.253 -1.253, 2.16 -2.717, 2.743 -4.275 l -8.188 -2.194C30.255, 22.939, 29.994, 23.2, 30.071, 23.486z" />
+	</g>
+	<g class="file-type">
+		<path style="fill:#71C285;" d="M 48.037, 56 H 7.963 C 7.155, 56, 6.5, 55.345, 6.5, 54.537 V 39 h 43 v 15.537 C 49.5, 55.345, 48.845, 56, 48.037, 56 z" />
+		<text x="28" y="52.5" text-anchor="middle">ISO</text>
+	</g>
+	<polygon class="file-corner" points="37.5, 0.151 37.5, 12 49.349, 12" stroke-linejoin="round" />
+</svg>

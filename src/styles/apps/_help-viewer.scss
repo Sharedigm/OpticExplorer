@@ -1,0 +1,235 @@
+/******************************************************************************\
+|                                                                              |
+|                               _help-viewer.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.help-viewer.app {
+	.cover.content {
+		text-align: center;
+
+		.logo {
+			display: inline-flex;
+			aspect-ratio: 1;
+			width: 25%; 
+			min-width: 100px;
+			height: auto; 
+			margin: auto;
+
+			&.rounded {
+				border-radius: 25%;
+			}
+
+			&.round {
+				border-radius: 50%;
+			}
+
+			img {
+				position: relative;
+				width: 80%;
+				max-width: 80%;
+				max-height: 80%;
+				margin: auto;
+			}
+		}
+
+		.brand {
+			border: none;
+			font-size: 400%;
+			text-align: center;
+
+			span {
+				display: inline-block;
+			}
+		}
+
+		.brand, .name {
+			text-align: center;
+		}
+
+		.name {
+			color: white !important;
+			background-color: var(--primary-color);
+			padding: 0 30px;
+			margin: auto;
+		}
+	}
+
+	.body {
+		.contents {
+			.page {
+				background: none;
+
+				.contents {
+					border: none;
+					display: flex;
+					flex-direction: column;
+					padding: 20px;
+					
+					.breadcrumb {
+						display: block;
+					}
+
+					.content {
+						display: flex;
+						flex-grow: 1;
+						flex-direction: column;
+						padding: 10px;
+
+						h1 {
+							margin-top: 0;
+						}
+
+						.section {
+							margin: 0 -30px;
+						}
+
+						.attention {
+							margin: 0 auto;
+
+							& + div {
+								margin-top: 20px;
+							}
+
+							&.title-icon {
+								margin: auto;
+							}
+						}
+
+						ol, ul {
+							> li {
+								margin-bottom: 10px;
+							}		
+						}
+
+						ol {
+							padding-inline-start: 20px;
+
+							// keep things centered
+							//
+							padding-inline-end: 40px;
+
+							li {
+								padding-left: 20px;
+							}
+						}
+
+						ul {
+							padding-inline-start: 30px;
+
+							li {
+								padding-left: 10px;
+							}
+						}
+					}
+
+					.help {
+						display: flex;
+						flex-direction: column;
+						flex-grow: 1;
+					}
+				}
+			}
+
+			/*
+			.breadcrumb {
+				li:first-child {
+					display: none;
+
+					+ li {
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+			*/
+		}
+	}
+}
+
+.rounded {
+	.help-viewer.app {
+		.cover.content {
+			.logo:not(.square):not(.round) {
+				border-radius: 25%;
+			}
+
+			.name {
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+.round {
+	.help-viewer.app {
+		.cover.content {
+			.logo:not(.square):not(.rounded) {
+				border-radius: 50%;
+			}
+
+			.name {
+				border-radius: 20px;
+			}
+		}
+	}
+}
+
+//
+// modal styles
+//
+
+.modal {
+	.help-viewer.app {
+
+		.cover.content {
+			.brand {
+				font-size: 300%;
+			}
+
+			.name {
+				font-size: 150%;
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.help-viewer.app {
+
+		.body {
+			.mainbar {
+				.breadcrumb {
+					display: none;
+				}
+			}
+		}
+
+		.footer-bar {
+			> div:first-child,
+			> div:last-child {
+				width: 25%;
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+/******************************************************************************\
+|                                                                              |
+|                            _directory-lists.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.item-list {
+
+	//
+	// files
+	//
+
+	.file {
+		> .info {
+			> .icon {
+				position: relative;
+				display: inline-flex;
+				justify-content: center;
+			}
+		}
+
+		//
+		// for non-transparent thumbnails, use box shadow 
+		// instead of drop shadow for better performance.
+		//
+
+		&:not(.svg):not(.png) {
+			> .info {
+				> .icon {
+
+					//
+					// thumbnails
+					//
+
+					.photo.thumbnail {
+						margin: auto;
+						outline: 1px solid white;
+						outline-offset: -1px;
+						filter: none;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// directories
+	//
+
+	/*
+	.directory {
+		> .info {
+			.name {
+				font-weight: bold;
+			}
+		}
+	}
+	*/
+}

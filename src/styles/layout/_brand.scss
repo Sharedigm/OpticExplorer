@@ -1,0 +1,227 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _brand.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../colors/outlines";
+
+//
+// variables
+//
+
+$brand-shadow: 3px 3px 10px rgba(black, 50%);
+
+//
+// font sizes
+//
+
+$large-font-size: 7em;
+$medium-large-font-size: 6em;
+$medium-font-size: 5em;
+$small-font-size: 3.5em;
+$extra-small-font-size: 3em;
+
+$short-large-font-size: 8em;
+$short-medium-large-font-size: 7em;
+$short-medium-font-size: 6em;
+$short-small-font-size: 5em;
+$short-extra-small-font-size: 4em;
+
+$long-large-font-size: 6em;
+$long-medium-large-font-size: 5em;
+$long-medium-font-size: 4em;
+$long-small-font-size: 3em;
+$long-extra-small-font-size: 2.5em;
+
+//
+// styles
+//
+
+.welcome.page {
+	.contents {
+		.masthead {
+			.splash {
+
+				.logotype {
+					display: inline-block;
+					margin: auto;
+					margin-top: 0;
+					border-bottom: none;
+
+					// add shadows
+					//
+					&.shadowed {
+						text-shadow: $brand-shadow;
+					}
+
+					// brand components
+					//
+					span {
+						line-height: 1em;
+
+						// text outlines
+						//
+						&.white-outlined {
+							text-shadow: outlines.$white-extra-bold-outline;
+						}
+						&.black-outlined {
+							text-shadow: outlines.$black-extra-bold-outline;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// large 
+//
+
+@media (min-width: variables.$screen-lg-min) {
+	.welcome.page {
+		.contents {
+			.masthead {
+				.splash {
+					.logotype {
+						font-size: $large-font-size;
+
+						&.short {
+							font-size: $short-large-font-size;
+						}
+
+						&.long {
+							font-size: $long-large-font-size;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// medium large
+//
+
+@media (max-width: variables.$screen-lg-min) {
+	.welcome.page {		
+		.contents {
+			.masthead {
+				.splash {
+					.logotype {
+						font-size: $medium-large-font-size;
+
+						&.short {
+							font-size: $short-medium-large-font-size;
+						}
+
+						&.long {
+							font-size: $long-medium-large-font-size;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// medium 
+//
+
+@media (max-width: 1024px) {
+	.welcome.page {		
+		.contents {
+			.masthead {
+				.splash {
+					.logotype {
+						font-size: $medium-font-size;
+
+						&.short {
+							font-size: $short-medium-font-size;
+						}
+
+						&.long {
+							font-size: $long-medium-font-size;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// small
+//
+
+@media (max-width: variables.$screen-sm-min) {
+	.welcome.page {
+		.contents {
+			.masthead {
+				.splash {
+					.logotype {
+						font-size: $small-font-size;
+
+						// text outlines
+						//
+						&.white-outlined {
+							text-shadow: outlines.$white-bold-outline;
+						}
+						&.black-outlined {
+							text-shadow: outlines.$black-bold-outline;
+						}
+
+						&.short {
+							font-size: $short-small-font-size;
+						}
+
+						&.long {
+							font-size: $long-small-font-size;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.welcome.page {
+		> .contents {
+			.masthead {
+				.splash {
+					.logotype {
+						font-size: $extra-small-font-size;
+
+						&.short {
+							font-size: $short-extra-small-font-size;
+						}
+
+						&.long {
+							font-size: $long-extra-small-font-size;
+						}
+					}
+				}
+			}
+		}
+	}
+}

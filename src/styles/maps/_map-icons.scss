@@ -1,0 +1,80 @@
+/******************************************************************************\
+|                                                                              |
+|                               _map-icons.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.icon-grid {
+	.item {
+		.icon {
+			> i, > .thumbnail i {
+
+				& + .fa-info-circle {
+					position: absolute;
+					color: white;
+					filter: none !important;
+				}
+
+				&.fa-map-marker + .fa-info-circle {
+					font-size: 20px;
+					margin-top: -12px;
+				}
+
+				&.fa-map-pin + .fa-info-circle {
+					font-size: 20px;
+					margin-left: 2px;
+					margin-top: -22px;
+				}
+			}
+		}
+	}
+}
+
+.items-map .icon-grid {
+
+	//
+	// items
+	//
+
+	.item {
+		> .row:first-child {
+			.icon {
+
+				//
+				// map marker icons
+				//
+
+				> i, > .thumbnail i {
+
+					+ .fa-info-circle {
+						font-size: 14px;
+					}
+
+					&.fa-map-marker + .fa-info-circle {
+						margin-top: -7px;
+					}
+
+					&.fa-map-pin + .fa-info-circle {
+						margin-left: 2px;
+						margin-top: -15px
+					}
+				}
+			}
+		}
+	}
+}

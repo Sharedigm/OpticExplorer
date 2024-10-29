@@ -1,0 +1,224 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _posts.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/panels";
+
+//
+// variables
+//
+
+$post-selected-border-width: 2px;
+
+//
+// styles
+//
+
+.post.panel, .task.panel {
+
+	> .tile + .info {
+		margin-left: 60px;
+
+		.heading {
+			min-height: 25px;
+
+			.title {
+				.name {
+					display: inline-block;
+
+					// leave room for buttons
+					//
+					max-width: calc(100% - 125px);
+				}
+			}
+
+			.details {
+				display: inline;
+
+				.who, .what, .when, .where {
+					display: inline-block;
+					margin: 2px 5px;
+					margin-left: 0;
+				}
+
+				.badges:not(:empty) {
+					display: inline-block;
+					margin-right: 5px;
+				}
+			}
+
+			.options.buttons {
+				float: right;
+				margin-top: -5px;
+				max-width: 50%;
+			}
+		}
+	}
+
+	.comments.panel {
+		margin-top: 10px;
+	}
+
+	//
+	// attachments
+	//
+
+	.items {
+		display: inline-block;
+		position: relative;
+		overflow: visible;
+	}
+
+	.image-attachments {
+		position: relative;
+		margin-left: -10px;
+		margin-right: -10px;
+			
+		.gallery:not(:empty) {
+			margin-top: 10px;
+		}
+	}
+
+	> .options.buttons {
+		text-align: right;
+		margin-top: 10px;
+	}
+
+	//
+	// comment bubbles
+	//
+
+	.comment-bubble .comment-inner {
+		cursor: default;
+	}
+	
+	.info + .comment-bubble {
+		margin-top: 10px;
+		min-width: 50px;
+	}
+
+	.new-comment:empty {
+		display: none;
+	}
+
+	//
+	// selected posts
+	//
+
+	&.selected {
+		border-width: $post-selected-border-width;
+		border-style: solid;
+		margin: panels.$border-width - $post-selected-border-width;
+	}
+
+	//
+	// unselected posts
+	//
+
+	/*
+	&:not(.selected) {
+		> .tile + .info {
+			.comment-bubble {
+				cursor: pointer;
+			}
+		}
+	}
+	*/
+
+	//
+	// hide unselected options buttons
+	//
+
+	.options-hideable &:not(.selected) {
+		> .tile + .info {
+			.options.buttons {
+				display: none !important;
+			}
+		}
+	}
+
+	//
+	// make posts draggable
+	//
+
+	&[draggable="true"] {
+		position: sticky;
+	}
+}
+
+.posts {
+
+	// post spacing
+	//
+	.post + .post {
+		margin-top: 10px;
+
+		&.selected {
+			margin-top: 9px;
+		}
+	}
+
+	& + .buttons {
+		margin-top: 10px;
+	}
+}
+
+.posts.panel, .tasks.panel {
+	padding: 0;
+	background: none !important;
+}
+
+//
+// hide options buttons
+//
+
+.options-hidden {
+	.optional {
+		display: none !important;
+	}
+
+	.add-btn {
+		display: none !important;
+	}
+}
+
+//
+// mobile posts
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	.post.panel, .task.panel {
+
+		> .tile + .info {
+			.heading {
+				.title {
+					.name {
+						// margin-bottom: 5px;
+					}
+				}
+
+				.details {
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		> .buttons {
+			margin-top: 10px;
+		}
+	}
+}

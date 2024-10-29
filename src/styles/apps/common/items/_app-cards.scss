@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                                _app-cards.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../layout/images";
+
+//
+// variables
+//
+
+$round-icon-border-radius: 50%;
+$rounded-icon-border-radius: 25%;
+
+//
+// styles
+//
+
+.apps-list.card-grid {
+	padding: 10px;
+
+	.card {
+		.icon {
+			border-width: 2px;
+			border-style: solid;
+
+			> img {
+				width: 40px !important;
+				height: 40px !important;
+			}
+		}
+	}
+
+	.divider {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+}
+
+//
+// icon borders
+//
+
+.round-icons .apps-list.card-grid,
+.round.auto-corner-icons .apps-list.card-grid {
+	.item {
+		.card {
+			.icon {
+				border-radius: $round-icon-border-radius;
+			}
+		}
+	}
+}
+
+.rounded-icons .apps-list.card-grid,
+.rounded.auto-corner-icons .apps-list.card-grid {
+	.item {
+		.card {
+			.icon {
+				border-radius: $rounded-icon-border-radius;
+			}
+		}
+	}
+}
+
+.square-icons .apps-list.card-grid,
+.square.auto-corner-icons .apps-list.card-grid {
+	.item {
+		.card {
+			.icon {
+				border-radius: 0;
+			}
+		}
+	}
+}

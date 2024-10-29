@@ -1,0 +1,45 @@
+/******************************************************************************\
+|                                                                              |
+|                               _text-editor.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.text-editor.app {
+	.body {
+		textarea {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border: none;
+			border-radius: 0;
+			padding: 10px;
+			resize: none;
+			background: none;
+		}
+
+		textarea:not(.highlighted) {
+			outline: none;
+		}
+	}
+
+	.footer-bar {
+		#message-bar {
+			flex-grow: 1;
+		}
+	}
+}

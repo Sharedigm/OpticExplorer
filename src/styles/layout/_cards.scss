@@ -1,0 +1,107 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _cards.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+.cards {
+	> .card {
+		display: inline-block;
+		width: 250px;
+		height: 500px;
+		text-align: center;
+		margin-left: 50px;
+		margin-bottom: 50px;
+		overflow: hidden;
+
+		.photo {
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background: var(--primary-color);
+			background-size: cover;
+			background-position: center;
+			overflow: hidden;
+			border: 10px solid var(--primary-color);
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			i {
+				color: white;
+				font-size: 200px;
+				margin: auto;
+			}
+		}
+
+		.name {
+			display: block;
+			font-weight: bold;
+		}
+
+		.title {
+			display: inline-block;
+			font-weight: normal;
+			line-height: 30px;
+			padding: 0 20px;
+			margin-bottom: 10px;
+			color: white;
+			background-color: var(--primary-color);
+		}
+
+		.description {
+			text-align: left;
+		}
+	}
+}
+
+.rounded {
+	.cards {
+		.card {
+			.title {
+				border-radius: 10px;
+			}
+		}
+	}
+}
+
+.round {
+	.cards {
+		.card {
+			.title {
+				border-radius: 15px;
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.cards {
+		text-align: center;
+
+		> .card {
+			margin-left: 0;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,124 @@
+/******************************************************************************\
+|                                                                              |
+|                          _transition-keyframes.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/mixins";
+
+//
+// keyframes
+//
+
+@keyframes fade-in-keyframes {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out-keyframes {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+//
+// sliding transitions
+//
+
+@keyframes slide-from-top-keyframes {
+	from {
+		@include mixins.translate(0, -50%);
+	}
+	to {
+		@include mixins.translate(0, 0);
+	}
+}
+
+@keyframes slide-to-top-keyframes {
+	from {
+		@include mixins.translate(0, 0);
+	}
+	to {
+		@include mixins.translate(0, -50%);
+	}
+}
+
+@keyframes slide-to-bottom-keyframes {
+	from {
+		@include mixins.translate(0, 0);
+	}
+	to {
+		@include mixins.translate(0, 100%);
+	}
+}
+
+@keyframes slide-from-bottom-keyframes {
+	from {
+		@include mixins.translate(0, 100%);
+	}
+	to {
+		@include mixins.translate(0, 0);
+	}
+}
+
+//
+// zooming transitions
+//
+
+@keyframes zoom-to-keyframes {
+	from {
+		@include mixins.scale(1.25);
+	}
+	to {
+		@include mixins.scale(1);
+	}
+}
+
+@keyframes zoom-from-keyframes {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.25);
+	}
+}
+
+//
+// shrinking transitiions
+//
+
+@keyframes shrink-to-bottom-keyframes {
+	from {
+		transform: translate(0, 0) scale(1);
+	}
+	to {
+		transform: translate(0, 50%) scale(0);
+	}
+}
+
+@keyframes grow-from-bottom-keyframes {
+	from {
+		transform: translate(0, 50%) scale(0);
+	}
+	to {
+		transform: translate(0, 0) scale(1);
+	}
+}

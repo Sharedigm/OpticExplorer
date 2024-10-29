@@ -1,0 +1,152 @@
+/******************************************************************************\
+|                                                                              |
+|                               _expandable.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$expander-width: 24px;
+
+//
+// styles
+//
+
+.expandable .expander {
+	display: inline-block;
+
+	button {
+		min-width: $expander-width;
+	}
+}
+
+//
+// dropdown expanders
+//
+
+.dropdown-menu .expandable .expander {
+	button {
+
+		&.btn, &.btn:focus {
+			color: inherit;
+			background: transparent !important;
+			border-color: transparent !important;
+			box-shadow: none !important;
+
+			i {
+				color: inherit;
+			}
+
+			&:active {
+				color: inherit;
+				background: transparent !important;
+				border-color: transparent !important;
+
+				i {
+					color: inherit;
+				}
+			}
+
+			&:hover {
+				color: inherit;
+				background: transparent !important;
+				border-color: transparent !important;
+
+				i {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+//
+// collapsed expandable items
+//
+
+.expandable:not(.expanded) {
+	.expander {
+		.collapse {
+			display: none;
+
+			& + .expand {
+				margin-left: 0;
+			}
+		}
+		
+		.expand {
+			display: inline-block;
+		}
+	}
+
+	.hideable {
+		display: none;
+	}
+}
+
+//
+// expanded expandable items
+//
+
+.expandable.expanded {
+	.expander {
+		.expand {
+			display: none;
+
+			& + .collapse {
+				margin-left: 0;
+			}
+		}
+
+		.collapse {
+			display: inline-block;
+		}
+	}
+
+	.hideable {
+		display: block;
+	}
+
+	.expandable {
+		.expander {
+			// display: none;
+			visibility: hidden;
+		}
+	}
+}
+
+//
+// non button group expanders
+//
+
+div:not(.buttons) {
+
+	//
+	// collapsable panels
+	//
+
+	> .expander {
+		> button.collapse, > button.expand {
+			cursor: pointer;
+			pointer-events: auto;
+			color: inherit !important;
+			background: transparent !important;
+			border-color: transparent !important;
+			box-shadow: none !important;
+
+			i {
+				color: initial;
+				vertical-align: middle;
+				text-shadow: none;
+			}
+		}
+	}
+}

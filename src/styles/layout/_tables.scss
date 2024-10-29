@@ -1,0 +1,537 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _tables.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../layout/layout";
+@use "../colors/colors";
+@use "../colors/text-colors";
+
+//
+// variables
+//
+
+$head-border-width: layout.$border-width;
+$border-width: 1px;
+$rounded-border-radius: 5px;
+$round-border-radius: 10px;
+
+//
+// styles
+//
+
+table {
+	display: table;
+	width: 100%;
+	border-collapse: separate;
+
+	//
+	// table headers
+	//		
+
+	th {
+		padding: 5px;
+		font-weight: normal;
+		outline: none;
+		white-space: nowrap;
+		text-align: center;
+
+		// borders
+		//
+		border-width: 1px;
+		border-style: solid;
+		border-color: unset;
+
+		&:not(:last-child) {
+			border-right-width: 0;
+		}
+
+		//
+		// table header checkboxes, radio buttons
+		//
+
+		input[type="radio"], input[type="checkbox"] {
+			margin-right: 5px;
+		}
+
+		label {
+			font-weight: normal;
+		}
+	}
+
+	thead th {
+		border-bottom: none;
+	}
+
+	tbody {
+		tr:not(:last-child) {
+			th {
+				border-bottom: none;
+			}
+		}
+	}
+
+	//
+	// table rows
+	//
+
+	tbody {
+
+		//
+		// empty tables
+		//
+
+		> .empty {
+			padding: 5px 10px;
+			pointer-events: none;
+			white-space: nowrap;
+		}
+
+		//
+		// table rows
+		//
+
+		tr {
+
+			//
+			// table row selection
+			//
+
+			&.selected {
+				background: black;
+				color: white;
+			}
+
+			//
+			// table row highlighting
+			//
+
+			&.highlighted {
+				color: red !important;
+			}
+
+			//
+			// reorderable table rows
+			//
+
+			&.grabbable {
+				cursor: default;
+			}
+
+			//
+			// table cells
+			//
+
+			td {
+				padding: 5px 10px;
+				// vertical-align: top;
+
+				// borders
+				//
+				border-width: 1px;
+				border-style: solid;
+				border-color: black;
+
+				&:not(:last-child) {
+					border-right-width: 0;
+				}
+
+				&.error {
+					color: colors.$medium-red;
+					outline: 2px solid colors.$medium-red;
+					outline-offset: -2px;
+					background: white;
+				}
+
+				//
+				// disable default highlighting
+				//
+
+				&.highlighted::after {
+					border: none;
+				}
+
+				//
+				// table cell checkboxes, radio buttons
+				//
+
+				input[type="radio"], input[type="checkbox"] {
+					margin: 0 5px;
+				}
+
+				//
+				// editable content
+				//
+
+				&[contenteditable]:focus:not(.error) {
+					outline-offset: -2px;
+					outline-width: 2px;
+					outline-style: solid;
+					color: text-colors.$dark-color !important;
+					background: white !important;
+					cursor: text;
+				}
+			}
+
+			&:not(:last-child) {
+				td {
+					border-bottom-width: 0;
+				}
+			}
+
+			&:not(.first) {
+				td.duplicate {
+					opacity: 0 !important;
+				}
+			}
+		}
+	}
+
+	//
+	// small table columns
+	//
+
+	.th-sm, .td-sm {
+		width: 1%;
+		text-align: center;
+	}
+
+	//
+	// delete table columns
+	//
+
+	th.delete, td.delete {
+		width: 1px;
+	}
+
+	//
+	// protection table columns
+	//
+
+	th.protection, td.protection {
+		width: 1px;
+	}
+
+	//
+	// prepended and appended columns
+	//
+
+	th.prepend, th.append,
+	td.prepend, td.append {
+		width: 1px;
+		border: none;
+		outline: none;
+		background: none;
+	}
+
+	th.prepend, td.prepend {
+		padding-left: 0px;
+	}
+
+	th.append, td.append {
+		padding-right: 0;
+	}
+
+	tr:last-child {
+		tr td.prepend, 
+		tr td.append {
+			border-bottom: none;
+		}
+	}
+
+	//
+	// table cell elements
+	//
+
+	td {
+		i + label {
+			margin-left: 5px;
+		}
+
+		.btn-sm {
+			margin-top: -10px;
+			margin-bottom: -7px;
+		}
+	}
+
+	th.narrow, td.narrow {
+		width: 1px;
+		padding-left: 5px;
+		padding-right: 5px;
+		text-align: center;
+	}
+
+	//
+	// table contents
+	//
+
+	ul {
+		-webkit-padding-start: 10px;
+	}
+
+	label {
+		margin-bottom: 0;
+	}
+}
+
+#show-numbering {
+	margin-top: 20px;
+}
+
+//
+// rounded tables
+//
+
+.round {
+	table:not(.flush) {
+
+		//
+		// top rounded corners
+		//
+
+		thead {
+			tr:first-child {
+				th:first-child, td:first-child {
+					border-top-left-radius: $round-border-radius;
+				}
+				th:last-child, td:last-child {
+					border-top-right-radius: $round-border-radius;
+				}
+			}
+		}
+		
+		//
+		// bottom rounded corners
+		//
+
+		tbody {
+			tr:last-child {
+				th:first-child, td:first-child {
+					border-bottom-left-radius: $round-border-radius;
+				}
+				th:last-child, td:last-child {
+					border-bottom-right-radius: $round-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.rounded {
+	table:not(.flush) {
+
+		//
+		// top rounded corners
+		//
+
+		thead {	
+			tr:first-child {
+				th:first-child, td:first-child {
+					border-top-left-radius: $rounded-border-radius;
+				}
+				th:last-child, td:last-child {
+					border-top-right-radius: $rounded-border-radius;
+				}
+			}
+		}
+		
+		//
+		// bottom rounded corners
+		//
+
+		tbody {
+			tr:last-child {
+				th:first-child, td:first-child {
+					border-bottom-left-radius: $rounded-border-radius;
+				}
+				th:last-child, td:last-child {
+					border-bottom-right-radius: $rounded-border-radius;
+				}
+			}
+		}
+	}
+}
+
+//
+// responsive tables
+//
+
+.responsive {
+	border: none;
+	overflow: auto;
+}
+
+//
+// small tables
+//
+
+@media (max-width: variables.$screen-sm-min) {
+	table {
+		tbody {
+			tr {
+				td {
+					padding: 5px;
+				}
+			}
+		}
+	}
+}
+
+//
+// numbered tables
+//
+
+table.numbered {
+	counter-reset: row-number;
+	tr:not(.ui-sorplaceholder):not(.unnumbered) {
+		td:first-child {
+			&::before {
+				content: counter(row-number) ".";
+				counter-increment: row-number;
+				display: inline-block;
+				min-width: 25px;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	tr:not(.ui-sorplaceholder).unnumbered {
+		td:first-child {
+			padding-left: 3em;
+		}
+	}
+}
+
+table.numbered.constant-width {
+	td:first-child::before {
+		display: inline-block;
+		min-width: 1.5em;
+		margin-right: 0.5em;
+		text-align: right;
+	}
+}
+
+table.numbered.count-bubbles {
+	td:first-child::before {
+		content: counter(row-number);
+		display: inline-block;
+		min-width: 24px;
+		height: 24px;
+		text-align: center;
+		background: white;
+		border-radius: 12px;
+		border: 1px solid colors.$very-very-light-grey;
+	}
+}
+
+//
+// non-mobile tables
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	table {
+
+		// table header icons
+		//
+		/*
+		thead {
+			tr {
+				th {
+					i.fa {
+						margin-right: 5px;
+					}
+
+					i.fa-trash {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		*/
+
+		//
+		// date table columns
+		//
+
+		th.date, td.date {
+			white-space: nowrap;
+		}
+
+		&.bold {
+
+			th, td {
+				padding: 7px 10px;
+			}
+
+			th {
+				> i {
+					font-size: 200%;
+					display: block;
+				}
+			}
+
+			td {
+				> i {
+					font-size: 150%;
+					display: block;
+				}
+			}
+
+			td.bold, span.bold {
+				font-size: 150%;
+				line-height: 100%;
+			}
+
+			span.bold {
+				display: block;
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	table:not(.bold) {
+		thead {
+			tr {
+				th {
+
+					// hide text
+					//
+					i + label {
+						font-size: 0;
+					}
+
+					// show icons
+					//
+					i {
+						font-size: 14px !important;
+						vertical-align: middle;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				td {
+					label {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

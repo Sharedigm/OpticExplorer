@@ -1,0 +1,148 @@
+/******************************************************************************\
+|                                                                              |
+|                                _app-lists.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../layout/images";
+
+//
+// styles
+//
+
+.apps-list {
+	position: relative;
+	min-height: 0;
+	max-height: 100%;
+	margin: auto;
+	margin-bottom: 0;
+
+	.item {
+		white-space: nowrap;
+
+		> .info {
+			> .icon {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				margin-right: 5px;
+				text-align: center;
+				border-width: 1px;
+				border-style: solid;
+
+				> i {
+					line-height: 25px;
+					margin: 0 !important;
+				}
+
+				svg, img {
+					max-width: 100%;
+					max-height: 100%;
+					filter: images.$thumbnail-shadow;
+				}
+			}
+		}
+	}
+
+	.divider {
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		text-align: center;
+		margin: 0 2px;
+		border: none;
+		font-weight: bold;
+		
+		&:last-child {
+			display: block;
+		}
+	}
+}
+
+//
+// app icon shadows
+//
+
+body:not(.binary) {
+	.apps-list {
+		.item {
+			> .info {
+				> .icon {
+					box-shadow: images.$thumbnail-box-shadow;
+				}
+			}
+		}
+	}
+}
+
+//
+// app icon styles
+//
+
+body:not(.binary) {
+	.apps-list {	
+		.item > .info {	
+			.icon > i {
+				display: none;
+			}
+		}
+	}
+}
+
+body.binary {
+	.apps-list {	
+		.item > .info {			
+			.icon > img {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// app list icon borders
+//
+
+.round-icons,
+.round.auto-corner-icons {
+	.apps-list {
+		.item {
+			.icon, .divider {
+				border-radius: images.$round-border-radius;
+			}
+		}
+	}
+}
+
+.rounded-icons,
+.rounded.auto-corner-icons {
+	.apps-list {	
+		.item {
+			.icon, .divider {
+				border-radius: images.$rounded-border-radius;
+			}
+		}
+	}
+}
+
+.square-icons,
+.square.auto-corner-icons {
+	.apps-list {	
+		.item {
+			.icon, .divider {
+				border-radius: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,287 @@
+/******************************************************************************\
+|                                                                              |
+|                                _calculator.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// styles
+//
+
+.calculator.app {
+	.body {
+		flex-grow: 1;
+		margin: auto;
+		margin-top: 0;
+
+		// render button shadows outside of keyboard bounds
+		//
+		overflow: visible;
+
+		.lcd.display {
+			display: block;
+			height: 40px;
+			margin: 10px;
+			padding: 2px 10px;
+			border-radius: 5px;
+			overflow: hidden;
+
+			.digits {
+				font-size: 25px;
+				line-height: 36px;
+				text-align: right;
+			}
+
+			//
+			// mode indicators
+			//
+
+			.indicator {
+				position: absolute;
+				font-size: 10px;
+			}
+
+			mem-mode {
+				margin-top: 0;
+			}
+
+			.trig-mode, .base-mode {
+				margin-top: 10px;
+			}
+
+			.hyp-mode {
+				margin-top: 20px;
+			}
+		}
+
+		.keyboard {
+			display: flex;
+			width: 100%;
+			margin: auto;
+			text-align: center;
+			flex-direction: column;
+
+			.keys {
+				display: inline-block;
+				width: 100%;
+				padding: 10px 5px;
+
+				.row {
+					width: 100%;
+					margin: 0;
+
+					button {
+						width: 20%;
+						height: 25px;
+						margin: 5px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+						&:last-child {
+							margin-right: 0;
+						}
+						&.digit, &.btn-primary {
+							font-size: 20px;
+							padding: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.basic {
+		.display {
+			.indicator {
+				display: none;
+			}
+		}
+
+		.keyboard {	
+			.scientific, .programmer {
+				display: none;
+			}
+		}
+	}
+
+	&.scientific {
+		.display {
+			.base-mode {
+				display: none;
+			}
+		}
+
+		.keyboard {
+			.programmer {
+				display: none;
+			}
+		}
+	}
+
+	&.programmer {
+		.display {
+			.trig-mode, .hyp-mode, .mem-mode {
+				display: none;
+			}
+		}
+
+		.keyboard {
+			.scientific {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.calculator.app {
+		.body {
+			.keyboard {
+				.row {
+					button {
+						width: 60px;
+					}
+				}
+			}
+		}
+
+		&.basic {
+			@media screen and (orientation:landscape) {
+				.body {
+					.lcd.display {
+						margin: 10px auto;
+					}
+				}
+			}
+
+			@media screen and (orientation:portrait) {
+				.body {
+					.keyboard {
+						padding: 0;
+
+						.keys {
+							padding: 0;
+
+							.row {
+								margin-bottom: 10px;
+
+								button {
+									padding: 0;
+									font-size: 1.5em;
+									width: 60px;
+									height: 60px;
+
+									&.btn-primary {
+										font-size: 2em;
+									}
+									&.digit {
+										font-size: 2em;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (orientation:portrait) {
+			.keyboard {
+				.keys {
+					.row {
+						button {
+							margin: 8px 5px;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (orientation:landscape) {
+			.keyboard {
+				.keys {
+					.row {
+						button {
+							margin: 7px 3px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (orientation:landscape) {
+		.calculator.app {
+			.body {
+				width: auto !important;
+				height: auto !important;
+
+				.keyboard {
+					flex-direction: row;
+				}
+			}
+		}
+	}
+}
+
+body[device="phone"], body[device="tablet"] {
+	&.round {
+		.calculator.app {
+			@media screen and (orientation:portrait) {
+				.body {
+					.keyboard {
+						.keys {
+							.row {
+								button {
+									border-radius: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:360px) and (max-width: variables.$screen-xs-min) {
+	.calculator.app {
+		&.basic {
+			.keyboard {
+				button {
+					margin: 10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.calculator.app {
+		.body {
+			transform: scale(1.5);
+		}
+	}
+}

@@ -1,0 +1,174 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _clock.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$background: colors.$very-light-grey;
+$shadow: drop-shadow(4px 4px 2px rgba(black, 50%));
+$digit-font-size: 60px;
+$colon-font-size: 90px;
+
+//
+// styles
+//
+
+.clock.app {
+	.body {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		text-align: center;
+
+		.face {
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			margin: auto;
+
+			.pie {
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+			}
+
+			.digital.display {
+				position: absolute;
+				display: flex;
+				width: 190px;
+				height: 190px;
+				margin: 5px;
+				padding: 10px;
+				border-width: 0;
+				border-radius: 95px;
+
+				.digits {
+					margin: auto;
+					padding: 10px 0;
+
+					.hours, .minutes, .colons, .am-pm, .dow, .seconds {
+						display: inline-block;
+						font-size: $digit-font-size;
+						line-height: 55px;
+					}
+
+					.colons {
+						display: inline-block;
+						font-size: $colon-font-size;
+						vertical-align: super;
+						line-height: 0;
+					}
+				}
+			}
+
+			.analog.display {
+				position: absolute;
+				width: 190px;
+				height: 190px;
+				margin: 5px;
+				padding: 5px;
+				border-width: 0;
+				border-radius: 95px;
+
+				svg {
+					margin-left: -10px;
+					margin-top: -10px;
+
+					#center {
+						stroke-width: 2px;
+					}
+
+					#hands {
+						#hourhand {
+							stroke-width: 5px; 
+						}
+
+						#minutehand {
+							stroke-width: 5px; 
+						}
+
+						#secondhand {
+							stroke-width: 2px; 
+						}
+					}
+				}
+			}
+		}
+
+		.buttons {
+			margin-top: 10px;
+		}
+	}
+
+	&.analog {
+		.digital.display {
+			display: none;
+		}
+	}
+
+	&.digital {
+		.analog.display {
+			display: none;
+		}
+	}
+}
+
+body:not(.binary) {
+	.clock.app {
+		.pie {
+			background: $background;
+		}
+
+		.analog.display {
+			svg {
+				filter: $shadow;
+				overflow: visible;
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.clock.app {
+		.body {
+			transform: scale(2);
+		}
+	}
+}
+
+//
+// Windows Compatibility
+//
+
+[os="windows"] {
+	.clock.app {
+		.body .face {
+			.digital.lcd.display {
+				padding: 0;
+			}
+		}
+	}
+}

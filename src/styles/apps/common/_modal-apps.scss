@@ -1,0 +1,277 @@
+/******************************************************************************\
+|                                                                              |
+|                               _modal-apps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+@use "../../layout/splitters";
+@use "../../dialogs/modals";
+
+//
+// variables
+//
+
+$footer-info-bar-height: 30px;
+$footer-info-bar-line-height: 20px;
+$footer-info-bar-padding: 5px 10px;
+
+//
+// styles
+//
+
+.modal-dialog {
+	.modal-content {
+		.app {
+			width: auto;
+			height: auto;
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			max-height: 100%;
+
+			.body {
+				border-width: 0;
+
+				> .contents {
+					border-width: 1px 0;
+					border-style: solid;
+
+					&:empty {
+						border: none;
+					}
+				}
+
+				// panels
+				//
+				.panels {
+					.heading .buttons {
+						text-align: right;
+						margin-top: -5px;
+					}
+				}
+			}
+
+			.footer-bar {
+				height: 30px;
+
+				//
+				// info bars
+				//
+
+				.address-bar:not(:empty),
+				.info-bar:not(:empty) {
+					width: auto;
+					height: $footer-info-bar-height;
+					line-height: $footer-info-bar-line-height;
+					padding: $footer-info-bar-padding;
+					white-space: nowrap;
+				}
+			}
+		}
+
+		.app + .panel {
+			border-top: none !important;
+
+			.form-group {
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				textarea {
+					max-height: 100px;
+				}
+			}
+		}
+
+		.app + .modal-footer,
+		.body-region + .modal-footer {
+			border-top: none;
+		}
+
+		//
+		// nested apps
+		//
+
+		.modal-body {
+			.app {
+				position: relative;
+				flex-grow: 1;
+			}
+		}
+	}
+
+	&:not(.maximized) {
+		.modal-content {
+			.app {
+				.body {
+					> .contents {
+
+						// mainbar shadows
+						//
+						&.split-view {
+							> .split.mainbar {
+
+								// inset shadow
+								//
+								&::after {
+									content: "";
+									box-shadow: splitters.$mainbar-inset-shadow;
+									position: absolute;
+									left: 0;
+									right: 0;
+									top: 0;
+									bottom: 0;
+									pointer-events: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// thin menu bar modal dialog apps
+//
+
+.thin-menu-bars {
+	.modal-dialog .modal-content .app {
+		.footer-bar {
+			height: 25px;
+
+			.address-bar, .info-bar, .nav-bar, .toolbar {
+				height: 25px;
+			}
+
+			.address-bar:not(:empty), .info-bar:not(:empty) {
+				padding: 3px 10px;
+			}
+		}
+	}
+}
+
+//
+// desktop modal apps
+//
+
+body[device="desktop"] {
+
+	.modals.padded {
+		.modal-dialog {
+			.app {
+				.body:not(.last) {
+					border-left-width: 2px;
+					border-left-style: solid;
+					border-right-width: 2px;
+					border-right-style: solid;
+
+					.contents {
+						border-width: 1px;
+					}
+
+					textarea.highlighted {
+
+						// outline
+						//
+						outline-width: 2px;
+						outline-style: solid;
+						outline-offset: -2px;	
+					}
+				}
+			}
+		}
+	}
+
+	&.round-dialogs,
+	&.round.auto-dialog-corners {
+		.modal-dialog:not(.maximized) {
+			.app {
+
+				&:not(.panel) {
+					border-bottom-left-radius: modals.$round-modal-border-radius;
+					border-bottom-right-radius: modals.$round-modal-border-radius;
+				}
+
+				.body.last {
+					border-bottom-left-radius: modals.$round-modal-border-radius - 1px;
+					border-bottom-right-radius: modals.$round-modal-border-radius - 1px;
+				}
+
+				&:not(.panel) {
+					.footer-bar {
+						border-bottom-left-radius: modals.$round-modal-border-radius - 1px;
+						border-bottom-right-radius: modals.$round-modal-border-radius - 1px;
+					}
+				}
+			}
+		}
+	}
+
+	&.rounded-dialogs,
+	&.rounded.auto-dialog-corners {
+		.modal-dialog:not(.maximized) {
+			.app {
+
+				&:not(.panel) {
+					border-bottom-left-radius: modals.$rounded-modal-border-radius;
+					border-bottom-right-radius: modals.$rounded-modal-border-radius;
+				}
+
+				.body.last {
+					border-bottom-left-radius: modals.$rounded-modal-border-radius - 1px;
+					border-bottom-right-radius: modals.$rounded-modal-border-radius - 1px;
+				}
+
+				&:not(.panel) {
+					.footer-bar {
+						border-bottom-left-radius: modals.$rounded-modal-border-radius - 1px;
+						border-bottom-right-radius: modals.$rounded-modal-border-radius - 1px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// full screen modal apps
+//
+
+.full-screen .modal-dialog {
+	.app {
+		.header-bar {
+			display: none;
+		}
+
+		.body {
+			border: none !important;
+			
+			> div {
+				border: none !important;
+			}
+		}
+
+		.footer-bar {
+			display: none;
+		}
+	}
+}

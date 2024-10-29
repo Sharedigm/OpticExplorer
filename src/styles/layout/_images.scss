@@ -1,0 +1,489 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _images.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/performance";
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$round-border-radius: 15px;
+$rounded-border-radius: 7px;
+$photo-tilt-angle: -7.5deg;
+$photo-box-shadow: 5px 5px 25px rgba(black, 25%);
+$small-photo-box-shadow: 5px 5px 25px rgba(black, 25%);
+$thumbnail-shadow: drop-shadow(3px 3px 5px rgba(black, 25%));
+$thumbnail-box-shadow: 3px 3px 10px (rgba(black, 25%));
+$round-thumbnail-border-radius: 10px;
+$rounded-thumbnail-border-radius: 5px;
+
+$tilt-3d-angle: 7.5deg;
+$tilt-left: skewX($tilt-3d-angle);
+$tilt-right: skewX(-$tilt-3d-angle);
+$tilt-up: skewY(-$tilt-3d-angle);
+$tilt-down: skewY($tilt-3d-angle);
+
+//
+// styles
+//
+
+.pixelated {
+	image-rendering: pixelated !important;
+}
+
+.smooth img {
+	image-rendering: auto !important;
+}
+
+//
+// thumbnails
+//
+
+.thumbnail {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	background-repeat: no-repeat;
+
+	// placeholder icons
+	//
+	text-align: center;
+
+	i {
+		vertical-align: top;
+	}
+}
+
+//
+// thumbnail borders
+//
+
+.round .thumbnail {
+	border-radius: $round-thumbnail-border-radius;
+}
+
+.rounded .thumbnail {
+	border-radius: $rounded-thumbnail-border-radius;
+}
+
+.square .thumbnail {
+	border-radius: 0;
+}
+
+//
+// logo images
+//
+
+.round.logo {
+	border-radius: 50%;
+
+	img {
+		border-radius: 50%;
+	}
+}
+
+.rounded.logo {
+	border-radius: 25%;
+
+	img {
+		border-radius: 25%;
+	}
+}
+
+//
+// icon images
+//
+
+.icon, .tile {
+
+	// use box shadows for thumbnail photos
+	//
+	.thumbnail.photo {
+		box-shadow: $thumbnail-box-shadow;
+	}
+
+	// use drop shadow except photos which use a
+	// box shadow instead which is more efficient.
+	//
+	svg, .thumbnail:not(.photo) {
+		box-shadow: none;
+		text-shadow: none;
+		filter: $thumbnail-shadow;
+	}
+}
+
+.png .icon, .png .tile {
+
+	// use drop shadow except photos which use a
+	// box shadow instead which is more efficient.
+	//
+	.thumbnail {
+		box-shadow: none;
+		filter: $thumbnail-shadow;
+	}
+}
+
+//
+// scaled icon images
+//
+
+//
+// item icon sizes
+//
+
+.small-icons {
+	.items {
+		.item .icon {
+			> svg {
+				transform: scale(0.9);
+			}
+		}
+	}
+}
+
+.large-icons {
+	.items {
+		.item .icon {
+			> svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+//
+// tilted icon images
+//
+
+.tilted {
+
+	// left tilted icons
+	//
+	&.left, .left {
+		.icon, .owner {
+			> svg, > img, > .thumbnail {
+				transform: $tilt-left;
+			}
+		}
+
+		&.small-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-left scale(0.9);
+				}
+			}
+		}
+
+		&.large-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-left scale(1.1);
+				}
+			}
+		}
+	}
+
+	// right tilted icons
+	//
+	&.right, .right {
+		.icon, .owner {
+			> svg, > img, > .thumbnail {
+				transform: $tilt-right;
+			}
+		}
+
+		&.small-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-right scale(0.9);
+				}
+			}
+		}
+
+		&.large-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-right scale(1.1);
+				}
+			}
+		}
+	}
+
+	&.up, .up {
+		.icon, .owner {
+			> svg, > img, > .thumbnail {
+				transform: $tilt-up;
+			}
+		}
+
+		&.small-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-up scale(0.9);
+				}
+			}
+		}
+
+		&.large-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-up scale(1.1);
+				}
+			}
+		}
+	}
+
+	&.down, .down {
+		.icon, .owner {
+			> svg, > img, > .thumbnail {
+				transform: $tilt-down;
+			}
+		}
+
+		&.small-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-down scale(0.9);
+				}
+			}
+		}
+
+		&.large-icons {
+			.icon, .owner {
+				> svg, > img, > .thumbnail {
+					transform: $tilt-down scale(1.1);
+				}
+			}
+		}
+	}
+
+	.tile > .icon > .thumbnail {
+		transform: none !important;
+	}
+}
+
+//
+// photos
+//
+
+.thumbnail.photo {
+	border-radius: 0;
+	background-size: cover;
+	
+	&:after {
+		border-radius: 0;
+	}
+}
+
+.polaroid.photo {
+	border: 8px solid white;
+	border-bottom: 35px solid white;
+	box-sizing: content-box;
+}
+
+.overflow.photo {
+	transform: scale(1.1);
+}
+
+.tilted.photo {
+	transform: rotate($photo-tilt-angle);
+}
+
+.tilted.overflow.photo {
+	transform: rotate($photo-tilt-angle);
+}
+
+.photo, .image {
+
+	&.shadowed {
+		box-shadow: $photo-box-shadow;
+
+		&.small {
+			box-shadow: $small-photo-box-shadow;
+		}
+	}
+}
+
+outlined.photo {
+	border-width: 3px;
+	border-style: 3px;
+}
+
+.glossy.photo::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	// highlight
+	//
+	background: 
+		/* radial-gradient(ellipse 50% 25% at 50% 10%,
+			rgba(white, 75%) 0%,
+			rgba(white, 75%) 10%,
+			rgba(white, 0%) 100%), */
+		linear-gradient(15deg,
+			rgba(white, 75%) 0%,
+			rgba(white, 25%) 10%,
+			rgba(white, 0%) 25%),
+		linear-gradient(-30deg,
+			rgba(black, 0%) 80%,
+			rgba(black, 15%) 90%,
+			rgba(black, 50%) 100%);
+	mix-blend-mode: normal;
+}
+
+//
+// Firefox compatibility
+//
+
+body[browser="firefox"] {
+	img.pixelated {
+
+		// smoothing
+		//
+		image-rendering: -moz-crisp-edges;
+	}
+}
+
+//
+// Safari compatibility
+//
+
+[browser="safari"] {
+
+	.icon, .tile {
+		> svg, .thumbnail {
+
+			// use hardware acceleration
+			//
+			@include performance.acceleration;
+		}
+	}
+
+	//
+	// tilted icon images
+	//
+
+	&.tilted {
+
+		// left tilted icons
+		//
+		&.left, .left {
+			.icon, .tile {
+				> svg, .thumbnail {
+					transform: $tilt-left translateZ(0);
+				}
+			}
+
+			&.small-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-left scale(0.9) translateZ(0);
+					}
+				}
+			}
+
+			&.large-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-left scale(1.1) translateZ(0);
+					}
+				}
+			}
+		}
+
+		// right tilted icons
+		//
+		&.right, .right {
+			.icon, .tile {
+				> svg, .thumbnail {
+					transform: $tilt-right translateZ(0);
+				}
+			}
+
+			&.small-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-right scale(0.9) translateZ(0);
+					}
+				}
+			}
+
+			&.large-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-right scale(1.1) translateZ(0);
+					}
+				}
+			}
+		}
+
+		&.up, .up {
+			.icon, .tile {
+				> svg, .thumbnail {
+					transform: $tilt-up translateZ(0);
+				}
+			}
+
+			&.small-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-up scale(0.9) translateZ(0);
+					}
+				}
+			}
+
+			&.large-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-up scale(1.1) translateZ(0);
+					}
+				}
+			}
+		}
+
+		&.down, .down {
+			.icon, .tile {
+				> svg, .thumbnail {
+					transform: $tilt-down translateZ(0);
+				}
+			}
+
+			&.small-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-down scale(0.9) translateZ(0);
+					}
+				}
+			}
+
+			&.large-icons {
+				.icon, .tile {
+					> svg, .thumbnail {
+						transform: $tilt-down scale(1.1) translateZ(0);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _timer.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$size: 200px;
+$digit-font-size: 60px;
+$colon-font-size: 90px;
+
+//
+// styles
+//
+
+.timer.app {
+	.body {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		text-align: center;
+
+		.face {
+			width: calc($size + 10px);
+			height: calc($size + 10px);
+			border-radius: 50%;
+			margin: auto;
+
+			.pie {
+				position: absolute;
+				width: $size;
+				height: $size;
+			}
+
+			.digital.display {
+				position: absolute;
+				display: flex;
+				width: calc($size - 10px);
+				height: calc($size - 10px);
+				margin: 5px;
+				padding: 10px;
+				border-width: 0;
+				border-radius: 50%;
+
+				.digits {
+					margin: auto;
+					padding: 10px 0;
+
+					.hours, .minutes, .seconds, .hundredths, .colons {
+						display: inline-block;
+						font-size: $digit-font-size;
+						line-height: 55px;
+					}
+
+					.colons {
+						display: inline-block;
+						font-size: $colon-font-size;
+						vertical-align: super;
+						line-height: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.timer.app {
+		.body {
+			transform: scale(2);
+		}
+	}
+}
+
+//
+// Windows Compatibility
+//
+
+[os="windows"] {
+	.timer.app {
+		.body .face {
+			.digital.display {
+				padding: 0;
+			}
+		}
+	}
+}

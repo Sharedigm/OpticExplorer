@@ -1,0 +1,158 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dialog-alerts.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$small-alert-width: 250px;
+$small-prompt-width: 300px;
+$text-shadow: 1px 1px 5px rgba(black, 50%);
+$text-size: 1.25em;
+$round-border-radius: 30px;
+$rounded-border-radius: 10px;
+
+//
+// styles
+//
+
+.modals {
+	.modal {
+		&.alert, &.notify, &.confirm, &.error, &.prompt {
+			.modal-content {
+				.modal-body {
+
+					> .icon {
+						display: inline-block;
+						text-align: center;
+						float: left;
+						margin-right: 20px;
+
+						> i {
+							font-size: 300%;
+							margin: 10px;
+						}
+					}
+
+					p {
+						word-break: break-word;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// small alerts
+	//
+
+	&.small-alerts {
+		.modal {
+
+			&.alert, &.notify, &.confirm {
+				.modal-dialog {
+					width: $small-alert-width;
+					min-width: $small-alert-width;
+				}
+			}
+
+			&.prompt {
+				.modal-dialog {
+					width: $small-prompt-width;
+					min-width: $small-prompt-width;
+				}
+			}
+
+			&.alert, &.notify, &.confirm, &.prompt {
+				.modal-dialog {
+					.modal-content {
+						.modal-body {
+							text-align: center;
+
+							> .icon {
+								float: none;
+								margin-right: 0;
+							}
+						}
+
+						.modal-footer {
+							.buttons {
+								display: inline-flex;
+								width: 100%;
+								flex-direction: row;
+
+								button {
+									flex-grow: 1;
+									width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// special alerts
+//
+
+.welcome.modal, .about.modal {
+	.modal-dialog {
+		.modal-body {
+			display: flex;
+			text-align: center;
+			justify-content: center;
+
+			.logo {
+				display: inline-block; 
+				margin: 10px auto;
+				height: 100px;
+
+				img {
+					height: 100px; 
+				}
+
+				& + h1 {
+					margin: 10px 0;
+				}
+			}
+
+			.tagline, .description {
+				display: inline-block;
+				font-size: $text-size;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0 20px;
+				margin-bottom: 10px;
+
+				&.shadowed {
+					text-shadow: $text-shadow;
+				}
+
+				&.round {
+					border-radius: $round-border-radius;
+				}
+
+				&.rounded {
+					border-radius: $rounded-border-radius;
+				}
+			}
+		}
+	}
+}

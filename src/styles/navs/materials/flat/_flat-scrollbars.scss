@@ -1,0 +1,116 @@
+/******************************************************************************\
+|                                                                              |
+|                           _flat-scrollbars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin inactive-thumb-shade($color, $hover-color) {
+	::-webkit-scrollbar-thumb:not(:active) {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include flat.fill($color);
+		}
+		&:horizontal:hover {
+			@include flat.fill($hover-color);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include flat.fill($color);
+		}
+		&:vertical:hover {
+			@include flat.fill($hover-color);
+		}
+	}
+}
+
+@mixin active-thumb-shade($active-color) {
+	::-webkit-scrollbar-thumb:active {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include flat.fill($active-color);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include flat.fill($active-color);
+		}
+	}
+}
+
+@mixin thumb-shade($color, $hover-color, $active-color) {
+	@include inactive-thumb-shade($color, $hover-color);
+	@include active-thumb-shade($active-color);
+}
+
+//
+// color mixins
+//
+
+@mixin inactive-thumb-shaded($color, $hover-color) {
+	::-webkit-scrollbar-thumb:not(:active) {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include flat.filled($color);
+		}
+		&:horizontal:hover {
+			@include flat.filled($hover-color);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include flat.filled($color);
+		}
+		&:vertical:hover {
+			@include flat.filled($hover-color);
+		}
+	}
+}
+
+@mixin active-thumb-shaded($active-color) {
+	::-webkit-scrollbar-thumb:active {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include flat.filled($active-color);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include flat.filled($active-color);
+		}
+	}
+}
+
+@mixin thumb-shaded($color, $hover-color, $active-color) {
+	@include inactive-thumb-shaded($color, $hover-color);
+	@include active-thumb-shaded($active-color);
+}

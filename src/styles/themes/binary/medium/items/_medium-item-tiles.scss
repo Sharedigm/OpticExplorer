@@ -1,0 +1,144 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-tiles.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/binary-colors";
+@use "../colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.tile-grid {
+		.item {	
+
+			//
+			// all tiles
+			//
+
+			> .tile {
+				> .icon {
+					@include binary-colors.light-grey;
+
+					.thumbnail.photo, svg { 
+
+						// no shadows
+						//
+						filter: none;
+					}
+				}
+			}
+
+			> .specifics {
+				.details {
+					color: black;
+					background-color: white;
+				}
+			}
+
+			//
+			// unselected tiles
+			//
+
+			&:not(.selected) {
+				> .tile {
+					> .name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: black;
+							@include binary-colors.grey;
+							@include binary-text.outline;
+						}
+					}
+				}
+			}
+
+			//
+			// selected tiles
+			//
+
+			&.selected {
+
+				> .tile {
+					outline-color: black;
+
+					> .icon {
+						@include binary-colors.dark-grey;
+
+						.thumbnail { 
+							outline-color: 2px;
+							outline-style: solid;
+							outline-color: black;
+							outline-offset: -2px;
+						}
+
+						> svg {
+							filter: invert(1);
+						}
+					}
+
+					> .name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: black;
+							outline: none;
+							@include binary-text.unoutline;
+						}
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							color: black;
+							background: white;
+							outline-color: black;
+						}
+					}
+				}
+
+				> .specifics {
+					.details {
+						color: white;
+						background-color: black;
+					}
+				}
+			}
+		}
+
+		//
+		// tile icons
+		//
+
+		svg {
+			.tile-icon {
+				path, polygon, rect, circle {
+					fill: black !important;
+				}
+			}
+		}
+	}
+}

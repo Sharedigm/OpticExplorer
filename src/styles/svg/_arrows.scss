@@ -1,0 +1,80 @@
+/******************************************************************************\
+|                                                                              |
+|                               _arrows.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+svg.viewport {
+
+	.arrow {
+
+		//
+		// arrow head markers
+		//
+
+		marker-end: url(#arrow-end);
+
+		&.reverse {
+			marker-start: url(#arrow-start);
+			marker-end: none;
+		}
+
+		&.double {
+			marker-start: url(#arrow-start);
+		}
+
+		.background {
+			stroke-width: 1em;
+			marker-start: none;
+			marker-end: none;
+			vector-effect: non-scaling-stroke;
+			stroke-dasharray: none;
+		}
+	}
+
+	//
+	// arrow head markers
+	//
+
+	#arrow-start, #arrow-end {
+		&.filled {
+			fill: black;
+			stroke: none;
+		}
+
+		&.stroked {
+			fill: none;
+			stroke: black;
+			stroke-width: 2;
+		}
+	}
+
+	&.light {
+		#arrow-start, #arrow-end {
+			&.filled {
+				fill: white;
+				stroke: none;
+			}
+
+			&.stroked {
+				fill: none;
+				stroke: white;
+			}
+		}
+	}
+}

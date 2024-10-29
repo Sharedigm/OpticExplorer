@@ -1,0 +1,20 @@
+<svg 
+	id="file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 60 60" 
+	style="background:#c8bdb8">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g transform="translate(30, 30), scale(0.55), translate(-30, -40)">
+		<g transform="translate(0, 4)">
+			<path class="file-body" d="M 38.985, -2 9.963, -2 C 9.155, -2 8.5, -1.345 8.5, -0.074 L 8.5, 53 c 0, 0.345 0.655, 1 1.463, 1 l 40.074, 0 c 0.808, 0 1.463, -0.655 1.463, -1 l 0, -42.022 c 0, -0.696 -0.093, -0.92 -0.257, -1.085 L 39.607, -1.743 C 39.442, -1.907 39.218, -2 38.985, -2 Z" style="fill:white" />
+			<polygon class="file-corner" transform="translate(2, -2)" points="49.349, 12 37.5, 0.151 37.5, 12 " style="fill:#e9e9e0" />
+		</g>
+	</g>
+</svg>

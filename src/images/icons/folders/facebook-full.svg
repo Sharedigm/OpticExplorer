@@ -1,0 +1,35 @@
+<svg 
+	id="facebook-full-icon" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 16 48 24">
+	
+	<style>
+		.folder-top {
+			fill: tan;
+		}
+		.folder-body {
+			fill: wheat;
+		}
+		.folder-contents {
+			fill: white;
+		}
+		.folder-icon {
+			fill: burlywood;
+		}
+	</style>
+
+	<g class="folder-top" transform="translate(0 1.5)">
+		<path d="M 43.5,11.5 H 21 L 16.5,7 h -12 c -3,0 -3,0 -3,3 v 8 h 45 v -3.5 c 0,0 0,-3 -3,-3 z" />
+	</g>
+
+	<g class="folder-body">
+		<path id="folder-cover" d="M 3,16.75 C 1.5,16.75 1.5,18 1.5,18 v 25.75 c 0,2.25 0,2 3,2 h 39 c 3,0 3,0.25 3,-2 V 18 c 0,0 0,-1.25 -1.5,-1.25 z" />
+	</g>
+
+	<rect class="folder-contents" x="3" y="14.5" width="42" height="2.25" />
+	
+	<g class="folder-icon" transform="translate(14.5, 39), scale(.0125, -0.0125)">
+		<path d="M1248 1408q119 0 203.5 -84.5t84.5 -203.5v-960q0 -119 -84.5 -203.5t-203.5 -84.5h-188v595h199l30 232h-229v148q0 56 23.5 84t91.5 28l122 1v207q-63 9 -178 9q-136 0 -217.5 -80t-81.5 -226v-171h-200v-232h200v-595h-532q-119 0 -203.5 84.5t-84.5 203.5v960 q0 119 84.5 203.5t203.5 84.5h960z" />
+	</g>
+</svg>

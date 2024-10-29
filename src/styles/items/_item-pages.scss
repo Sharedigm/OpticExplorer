@@ -1,0 +1,471 @@
+/******************************************************************************\
+|                                                                              |
+|                              _item-pages.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/selection";
+
+//
+// variables
+//
+
+$badge-shadow: 10px 10px 20px rgba(black, 33%);
+$round-icon-border-radius: 20px;
+$rounded-icon-border-radius: 10px;
+
+//
+// styles
+//
+
+.items .pager {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	//
+	// item pages
+	//
+
+	.pages {
+		display: flex;
+		flex-grow: 1;
+		height: calc(100% - 30px);
+		pointer-events: none;
+
+		.main-carousel {
+			width: 100%;
+			height: 100%;
+
+			//
+			// pages
+			//
+
+			.item {
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				.row {
+					margin: 0;
+				}
+
+				.row:first-child {
+					width: 100%;
+					padding: 10px;
+					padding-bottom: 0;
+					height: calc(100% - 100px);
+					display: inline-flex;
+					flex-direction: column;
+
+					.icon {
+						display: inline-flex;
+						position: relative;
+						width: 100%;
+						height: 100%;
+						padding: 10px;
+						margin: auto;
+						pointer-events: none;
+						border-width: 5px;
+						border-style: solid;
+
+						//
+						// images
+						//
+
+						> img, > svg, > .thumbnail {
+							pointer-events: auto;
+						}
+
+						> img, svg {
+							height: 100%;
+							max-width: 100%;
+							max-height: 100%;
+							margin: auto;
+						}
+
+						> img.photo.thumbnail {
+							width: auto;
+							margin: auto;
+
+							// disable icon tilt, size
+							//
+							transform: none;
+						}
+
+						.badges {
+							position: absolute;
+							display: inline-flex;
+							flex-direction: column;
+							top: 10px;
+							right: 10px;
+
+							.badge {
+								font-size: 200% !important;
+								padding: 2px 15px;
+								border-width: 5px !important;
+								box-shadow: $badge-shadow;
+
+								i {
+									height: 1em;
+									margin: 2px;
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+
+				.row:nth-child(2) {
+					padding-top: 0;
+					max-height: 80px;
+					overflow: hidden;
+
+					.name {
+						display: inline-flex;
+						font-size: 200%;
+						word-break: break-word;
+						padding: 0 10px;
+						margin: 5px;
+						pointer-events: auto;
+						cursor: default;
+						font-weight: bold;
+						line-height: 35px;
+
+						// hyphenation does not work on Chrome
+						//
+						-webkit-hyphens: auto;
+						-moz-hyphens: auto;
+						-ms-hyphens: auto;
+						hyphens: auto;
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							max-height: 70px;
+
+							// display text ellipsis
+							//
+							overflow: hidden;
+							text-overflow: ellipsis;
+							// display: -webkit-inline-box;
+							-webkit-box-orient: vertical;
+							-webkit-line-clamp: 2;
+							margin: 5px;
+						}
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							border-radius: 0;
+							outline-width: 5px;
+							outline-style: solid;
+							margin: 5px;
+							cursor: text;
+
+							// enable text selection
+							//
+							@include selection.text-selectable;
+						}
+					}
+
+					.details {
+						display: inline-block;
+						padding: 0 10px;
+
+						&:empty {
+							display: none;
+						}
+					}
+				}
+			}
+
+			/*
+			.item.file, .item.trash, .item.clipboard {
+				.row:first-child {
+					.icon {
+						> svg, > img:not(.thumbnail) {
+							width: auto;
+							height: 100%;
+						}
+					}
+				}
+			}
+			*/
+
+			.item:not(.selected):not(.highlighted) {
+				.row:first-child {
+					.icon {
+						border-color: transparent;
+					}
+				}	
+			}
+
+
+			//
+			// selected / highlighted pages
+			//
+
+			.item.selected, .item.highlighted {
+				.row:first-child {
+
+					.icon {
+						.badges {
+							top: 10px;
+							right: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.nav-bar {
+		margin-top: 0;
+		font-size: 90%;
+		flex-grow: 0;
+	}
+}
+
+//
+// page borders
+//
+
+.round {
+	.items .pager {
+		.pages {
+			.item {
+				.row:first-child {
+					.icon {
+						border-radius: $round-icon-border-radius;
+
+						.badges {
+							.badge {
+								border-radius: 30px;
+							}
+						}
+					}
+				}
+				.row:nth-child(2) {
+					.name {
+						border-radius: 20px;
+					}
+					.details {
+						border-radius: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.rounded {
+	.items .pager {
+		.pages {
+			.item {
+				.row:first-child {
+					.icon {
+						border-radius: $rounded-icon-border-radius;
+
+						.badges {
+							.badge {
+								border-radius: 15px;
+							}
+						}
+					}
+				}
+				.row:nth-child(2) {
+					.name {
+						border-radius: 10px;
+					}
+					.details {
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// page sizes
+//
+
+@media screen and (orientation:landscape) {
+	.items .pager {
+		.pages {
+			.main-carousel {
+				.item {
+					.row:first-child {
+						.icon {
+							width: auto;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (orientation:portrait) {
+	.items .pager {
+		.pages {
+			.main-carousel {
+				.item {
+					.row:first-child {
+						.icon {
+							width: auto;
+							height: 100%
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body[browser="chrome"] {
+	@media screen and (orientation:landscape) {
+		.items .pager {
+			.pages {
+				.main-carousel {
+					.item {
+						.row:first-child {
+							.icon {
+								> svg {
+									width: auto;
+									height: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (orientation:portrait) {
+		.items .pager {
+			.pages {
+				.main-carousel {
+					.item {
+						.row:first-child {
+							.icon {
+								> svg {
+									width: 100%;
+									height: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body[browser="safari"], body[browser="firefox"]{
+	@media screen and (orientation:landscape) {
+		.items .pager {
+			.pages {
+				.main-carousel {
+					.item {
+						.row:first-child {
+							.icon {
+								width: 75%;
+								height: 100%;
+
+								> svg {
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (orientation:portrait) {
+		.items .pager {
+			.pages {
+				.main-carousel {
+					.item {
+						.row:first-child {
+							.icon {
+								width: auto;
+								height: 100%;
+
+								> svg {
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
+					}
+
+					.item.preview {
+						.row:first-child {
+							.icon {
+								width: 100%;
+								height: 75%;
+							}
+						}				
+					}
+				}
+			}
+		}
+	}
+}
+
+body[browser="safari"][device="phone"] {
+	@media screen and (orientation:portrait) {
+		.items .pager {
+			.pages {
+				.main-carousel {
+					.item {
+						.row:first-child {
+							.icon {
+								width: auto;
+								height: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.items .pager {
+		.pages {
+			.nav-bar {
+				margin: 0 -10px;
+			}
+		}
+	}
+}

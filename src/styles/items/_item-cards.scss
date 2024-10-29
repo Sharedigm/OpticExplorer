@@ -1,0 +1,454 @@
+/******************************************************************************\
+|                                                                              |
+|                               _item-cards.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+@use "../layout/images";
+@use "../items/item-icons";
+
+//
+// variables
+//
+
+$icon-size: 50px;
+$font-size: 35px;
+$round-border-radius: 15px;
+$rounded-border-radius: 5px;
+$round-icon-text-border-radius: item-icons.$round-icon-text-border-radius;
+$rounded-icon-text-border-radius: item-icons.$rounded-icon-text-border-radius;
+
+//
+// styles
+//
+
+.card-grid {
+
+	// disable default selection
+	//
+	@include selection.unselectable();
+
+	//
+	// items
+	//
+
+	.cards {
+		pointer-events: none;
+
+		&:empty {
+			display: none;
+		}
+
+		> .empty {
+			margin: 5px;
+			padding: 10px;
+		}
+
+		.item {
+			pointer-events: none;
+			min-height: 80px;
+
+			.card {
+				display: inline-flex;
+				width: 100%;
+				padding: 10px;
+				pointer-events: auto;
+				pointer-events: none;
+				border-width: 0;
+				border-style: solid;
+				text-align: left;
+				margin-bottom: 10px;
+
+				.icon, .row, .name {
+					display: inline-block;
+					pointer-events: auto;
+				}
+
+				.icon {
+					position: relative;
+					width: $icon-size;
+					min-width: $icon-size;
+					height: $icon-size;
+					text-align: center;
+
+					// center contents
+					//
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					//
+					// icons
+					//
+
+					> i {
+						margin: 0;
+						font-size: $font-size;
+						text-align: center;
+
+						&.fa-user, &.fa-user-friends {
+							font-size: 50px;
+						}
+
+						+ .fa-info-circle {
+							position: absolute;
+							font-size: 14px;
+							color: white;
+							filter: none !important;
+						}
+					}
+
+					//
+					// images
+					//
+
+					> img, > svg, > .thumbnail {
+						width: $icon-size;
+						height: $icon-size;
+						background-size: contain;
+						background-position: center;
+
+						// let icon handle events
+						//
+						pointer-events: none;
+
+						//
+						// placeholders
+						//
+
+						i {
+							font-size: 50px;
+						}
+					}
+
+					//
+					// owner profile photo
+					//
+
+					.owner {
+						position: absolute;
+					}
+
+					> .thumbnail + .owner {
+
+						// shadows
+						//
+						filter: images.$thumbnail-shadow;
+					}
+
+					//
+					// loading spinner
+					//
+
+					.spinner {
+						display: none;
+						width: 50px;
+						height: 50px;
+						margin-left: -25px;
+						margin-top: -25px;
+					}
+				}
+
+				.info {
+					min-height: 50px;
+					padding-left: 5px;
+
+					// text size
+					//
+					font-size: 90%;
+					line-height: 15px;
+
+					// display text ellipsis
+					//
+					overflow: hidden;
+					text-overflow: ellipsis;
+					// display: -webkit-inline-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					max-height: 30px;
+
+					.row {
+						margin: 0;
+
+						&:after {
+							clear:none;
+						}
+					}
+
+					.name {
+						display: inline-block;
+						word-break: break-word;
+						cursor: default;
+						max-width: 100%;
+						padding: 0 5px;
+
+						// hyphenation does not work on Chrome
+						//
+						-webkit-hyphens: auto;
+						-moz-hyphens: auto;
+						-ms-hyphens: auto;
+						hyphens: auto;
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+
+							// display text ellipsis
+							//
+							overflow: hidden;
+							text-overflow: ellipsis;
+							display: -webkit-inline-box;
+							-webkit-box-orient: vertical;
+							-webkit-line-clamp: 2;
+							max-height: 30px;
+						}
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							border-radius: 0;
+							outline-width: 2px;
+							outline-style: solid;
+							cursor: text;
+							margin-bottom: 3px;
+
+							// enable text selection
+							//
+							@include selection.text-selectable();
+						}
+					}
+
+					.priority {
+						padding: 0 5px;
+					}
+
+					.badges {
+						display: inline-block;
+						margin-right: 5px;
+					}
+
+					.row:not(:first-child) {
+						display: table;
+
+						.details {
+							display: inline-block;
+							padding: 0 5px;
+							margin-top: 2px;
+							margin-right: 5px;
+
+							&:empty {
+								display: none;
+							}
+						}
+
+						.badges {
+							display: inline-block;
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				.card {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+//
+// expandable cards
+//
+
+.cards .expandable.item > .card {
+	display: inline-block;
+
+	.icon {
+		float: left;
+	}
+}
+
+//
+// page cards
+//
+
+@media (min-width: variables.$screen-sm-min) {
+	.page {
+		.card-grid {
+			column-count: 2;
+		}
+	}
+}
+
+//
+// card borders
+//
+
+.round-icons .card-grid,
+.round.auto-corner-icons .card-grid {
+	.cards {
+		border-radius: $round-border-radius;
+
+		.item {
+			.card {
+				border-radius: $round-border-radius;
+
+				.info {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							border-radius: $round-icon-text-border-radius;
+						}
+					}
+
+					.details {
+						border-radius: $round-icon-text-border-radius;
+					}
+				}
+			}
+		}
+
+		.empty {
+			border-radius: $round-border-radius;
+		}
+	}
+}
+
+.rounded-icons .card-grid,
+.rounded.auto-corner-icons .card-grid {
+	.cards {
+		border-radius: $rounded-border-radius;
+
+		.item {
+			.card {
+				border-radius: $rounded-border-radius;
+
+				.info {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							border-radius: $rounded-icon-text-border-radius;;
+						}
+					}
+
+					.details {
+						border-radius: $rounded-icon-text-border-radius;;
+					}
+				}
+			}
+		}
+
+		.empty {
+			border-radius: $rounded-border-radius;
+		}
+	}
+}
+
+.square-icons .card-grid,
+.square.auto-corner-icons .card-grid {
+	.cards {
+		border-radius: 0;
+
+		.item {
+			.card {
+				border-radius: 0;
+
+				.info {
+					.name {
+						border-radius: 0;
+					}
+					.details {
+						border-radius: 0;
+					}
+				}
+			}
+		}
+
+		.empty {
+			border-radius: 0;
+		}
+	}
+}
+
+//
+// panel card grids
+//
+
+.panel .card-grid {
+	overflow: hidden;
+
+	.cards {
+		padding: 0;
+		background: none !important;
+		border: none;
+	}
+}
+
+//
+// non-mobile styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.multi-column.card-grid {
+		.cards {
+			column-count: 2;
+			column-gap: 10px;
+		}
+	}
+}
+
+//
+// IE / Edge Compatibility
+//
+
+[browser="explorer"], [browser="edge"] {
+	.card-grid {
+
+		//
+		// items
+		//
+
+		.cards {
+			.item {
+				.card {
+					.icon {
+
+						//
+						// images
+						//
+
+						> .thumbnail {
+							box-shadow: images.$thumbnail-box-shadow;
+						}
+					}
+				}
+			}
+		}
+	}
+}

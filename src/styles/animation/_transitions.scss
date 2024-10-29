@@ -1,0 +1,98 @@
+/******************************************************************************\
+|                                                                              |
+|                              _transitions.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$transition-duration: 0.3s;
+
+//
+// styles
+//
+
+.fading-in {
+	animation: fade-in-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.fading-out {
+	animation: fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+//
+// sliding transitions
+//
+
+.sliding-from-top {
+	animation: slide-from-top-keyframes, fade-in-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.sliding-to-top {
+	animation: slide-to-top-keyframes, fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.sliding-to-bottom {
+	animation: slide-to-bottom-keyframes, fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.sliding-from-bottom {
+	animation: slide-from-bottom-keyframes, fade-in-keyframes;
+	animation-duration: $transition-duration;
+}
+
+//
+// zooming transitions
+//
+
+.zooming-to {
+	animation: zoom-to-keyframes, fade-in-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.zooming-from {
+	animation: zoom-from-keyframes, fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+//
+// shrinking transitions
+//
+
+.growing-in {
+	animation: growing-keyframes, fade-in-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.shrinking-out {
+	animation: shrinking-keyframes, fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.shrinking-to-bottom {
+	animation: shrink-to-bottom-keyframes, fade-out-keyframes;
+	animation-duration: $transition-duration;
+}
+
+.growing-from-bottom {
+	animation: grow-from-bottom-keyframes, fade-in-keyframes;
+	animation-duration: $transition-duration;
+}

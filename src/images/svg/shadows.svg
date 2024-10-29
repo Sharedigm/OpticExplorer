@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<filter id="shadowed" primitiveUnits="userSpaceOnUse">
+
+		<!-- umbra -->
+		<feGaussianBlur in="SourceAlpha" result="umbra" stdDeviation="1"/>
+		<feColorMatrix type="matrix" in="umbra" result="umbra" values=
+			"1  0  0  0  0
+			 0  1  0  0  0
+			 0  0  1  0  0
+			 0  0  0 .25  0"/>
+		<feOffset in="umbra" result="umbra" dx="1" dy="1"></feOffset>
+
+		<!-- penumbra -->
+		<feGaussianBlur in="SourceAlpha" result="penumbra" stdDeviation="4"/>
+		<feColorMatrix type="matrix" in="penumbra" result="penumbra" values=
+			"1  0  0  0  0
+			 0  1  0  0  0
+			 0  0  1  0  0
+			 0  0  0 .25  0"/>
+		<feOffset in="penumbra" result="penumbra" dx="2" dy="2"></feOffset>
+
+		<feMerge>
+			<feMergeNode in="umbra" /> 
+			<feMergeNode in="penumbra" />
+			<feMergeNode in="SourceGraphic"/> 
+		</feMerge>
+	</filter>
+</svg>

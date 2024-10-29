@@ -1,0 +1,26 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Geneva';
+	src: url('Geneva-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geneva';
+	src: url('Geneva-Regular.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*
+@font-face {
+	font-family: 'Geneva';
+	src: url('Geneva-Black.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+*/

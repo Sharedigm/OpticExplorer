@@ -1,0 +1,597 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _modals.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../layout/performance";
+
+//
+// variables
+//
+
+$round-modal-border-radius: 10px;
+$rounded-modal-border-radius: 7px;
+$modal-dialog-shadow: 10px 10px 50px 10px rgba(black, 25%);
+
+//
+// styles
+//
+
+.modals, .modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+#main + .modals {
+	z-index: 1;
+}
+
+.modal {
+
+	// make modal frame transparent to events
+	//
+	pointer-events: none;
+
+	//
+	// modal states
+	//
+
+	&.colored {
+		background: none !important;
+	}
+
+	&.minimized, &.closed {
+		display: none;
+	}
+
+	// slightly offset modals upwards
+	//
+	// padding-bottom: 30px;
+
+	.modal-dialog {
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: $modal-dialog-shadow;
+		left: 0;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		background: white;
+
+		// pointer events
+		//
+		pointer-events: auto;
+		cursor: default;
+
+		// size
+		//
+		width: 600px;
+		margin: auto;
+		min-width: 300px;
+		min-height: 80px;
+		max-width: 100%;
+		max-height: 100%;
+
+		//
+		// unmaximized dialogs
+		//
+		
+		&:not(.maximized) {
+
+			// draggable
+			//
+			.modal-header {
+				cursor: move;
+			}
+		}
+
+		.modal-header {
+			display: flex;
+			justify-content: space-between;
+			padding: 0 10px;
+			border-color: unset;
+			flex-shrink: 0;
+		}
+
+		.modal-content {
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border: none;
+			box-shadow: none;
+
+			.modal-body {
+				display: inline-block;
+				// display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+				width: 100%;
+				overflow: auto;
+				padding: 10px;
+
+				> i.fa.fa-3x {
+					float: left;
+					margin-left: 10px;
+					margin-right: 20px;
+
+					& + p {
+						display: table;
+						white-space: pre-wrap;
+					}
+				}
+
+				legend {
+					border: none;
+					margin: 0px;
+					text-transform: uppercase;
+				}
+			}
+
+			> .panel {
+				border-radius: 0;
+				border-top-style: solid;
+				border-top-width: 1px;
+			}
+
+			/*
+			.panel:first-child,
+			.panel + .modal-footer {
+				border-top: none;
+			}
+			*/
+
+			.modal-footer {
+				position: relative;
+				width: 100%;
+				flex-shrink: 0;
+				bottom: 0;
+				padding: 0 10px;
+				min-height: 30px;
+				border-color: unset;
+
+				.btn + .btn {
+					margin-left: 0;
+				}
+
+				.notes {
+					line-height: 25px;
+					margin: 5px;
+					float: left;
+				}
+
+				.buttons {
+					flex-shrink: 0;
+				}
+			}
+		}
+	}
+}
+
+//
+// dialog placement for short windows
+//
+
+@media (min-width: variables.$screen-sm-min) {
+	@media (max-height: 550px) {
+
+		.modal {
+			text-align: center;
+		}
+
+		.modal:before {
+			content: "";
+			display: inline-block;
+			// height: 100%;
+			vertical-align: middle;
+		}
+
+		.modal-dialog {
+			display: inline-block;
+			text-align: left;
+			vertical-align: middle;
+		}
+	}
+}
+
+//
+// modal events
+//
+
+.modals {
+	pointer-events: none;
+
+	.modal-dialog {
+		pointer-events: auto;
+	}
+}
+
+
+//
+// modal backdrops
+//
+
+.modal.backdrop {
+	pointer-events: all;
+	background-color: rgba(black, 25%);
+}
+
+.modal-open {
+
+	// don't scroll for offscreen dialogs
+	//
+	.modal {
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+}
+
+//
+// modal extents - used for centering variable height modals
+//
+
+.modal-extents {
+	width: 100%;
+	margin: auto;
+}
+
+//
+// non-mobile modals
+//
+
+@media (min-width: variables.$screen-xs-min) {
+
+	.modal {
+		.modal-dialog {
+			.modal-footer {
+				.buttons {
+					margin-top: 5px;
+					margin-bottom: 0;
+
+					.btn + .btn {
+						margin-left: 5px;
+					}
+
+					// counter bootstrap
+					//
+					.btn, .btn + .btn {
+						margin-bottom: 5px;
+					}
+				}
+			}
+
+			//
+			// non resizable modals
+			//
+
+			&.ui-draggable:not(.ui-resizable) {
+
+				// set modal dimensions
+				// 
+				&:not(.fixed-width) {
+					width: 600px;
+				}
+				&:not(.fixed-height) {
+					max-height: 400px;
+				}
+
+				.modal-content {
+					overflow-y: auto;
+
+					.modal-body {
+					
+						// scrollable regions
+						//
+						.vertically.scrollable {
+							overflow: auto;
+
+							p {
+								// avoid horizontal scroll bars
+								//
+								word-break: break-word;
+
+								// respect line breaks
+								//
+								// white-space: break-spaces;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dialog borders
+	//
+
+	.round-dialogs,
+	.round.auto-dialog-corners {
+		.modals .modal {
+			.modal-dialog:not(.maximized) {
+				border-radius: $round-modal-border-radius;
+
+				.modal-header {
+					border-top-left-radius: $round-modal-border-radius - 2px;
+					border-top-right-radius: $round-modal-border-radius - 2px;
+				}
+
+				.modal-content {
+					border-bottom-left-radius: $round-modal-border-radius - 1px;
+					border-bottom-right-radius: $round-modal-border-radius - 1px;
+
+					.modal-footer {
+						border-bottom-left-radius: $round-modal-border-radius - 1px;
+						border-bottom-right-radius: $round-modal-border-radius - 1px;
+					}
+				}
+			}
+		}
+	}
+
+	.rounded-dialogs,
+	.rounded.auto-dialog-corners {
+		.modals .modal {
+			.modal-dialog:not(.maximized) {
+				border-radius: $rounded-modal-border-radius;
+
+				.modal-header {
+					border-top-left-radius: $rounded-modal-border-radius - 2px;
+					border-top-right-radius: $rounded-modal-border-radius - 2px;
+				}
+
+				.modal-content {
+					border-bottom-left-radius: $rounded-modal-border-radius - 1px;
+					border-bottom-right-radius: $rounded-modal-border-radius - 1px;
+
+					.modal-footer {
+						border-bottom-left-radius: $rounded-modal-border-radius - 1px;
+						border-bottom-right-radius: $rounded-modal-border-radius - 1px;
+					}
+				}
+			}
+		}
+	}
+
+	.square-dialogs,
+	.square.auto-dialog-corners {
+		.modals .modal {
+			.modal-dialog:not(.maximized) {
+				border-radius: 0;
+
+				.modal-header {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+
+					/*
+					.handle {
+						border-radius: 0;
+					}
+					*/
+				}
+
+				.modal-content {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+
+					.modal-footer {
+						border-bottom-left-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// hide / show modal elements
+//
+
+.hide-header-icons {
+	.modal-dialog {
+		.modal-header {
+			.heading {
+				.icon {
+					display: none;
+
+					& + .title {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hide-footer-icons {
+	.app .footer-bar {
+		.info-bar {
+			> i {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// desktop modals
+//
+
+body[device="desktop"] {
+	.modal {
+		.modal-dialog {
+
+			//
+			// dragged dialogs
+			//
+
+			&.ui-draggable-dragging {
+
+				// use hardware acceleration
+				//
+				@include performance.acceleration;
+			}
+
+			//
+			// non-resizable dialogs
+			//
+
+			&:not(.ui-resizable):not(.fixed-height) {
+				max-height: 75%;
+			}
+		}
+	}
+}
+
+//
+// mobile modals
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	// prevent rubber banding of modals
+	//
+	position: fixed;
+	overflow: hidden;
+}
+
+//
+// extra small modals
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	.modal-extents {
+		height: auto !important;
+		margin: 0;
+	}
+
+	.modal {
+
+		// don't slightly offset modals upwards
+		//
+		padding-bottom: 0;
+
+		.modal-dialog {
+			.modal-header {
+				.title {
+					margin-right: 0;
+					flex-grow: 1;
+				}
+
+				.buttons {
+					margin-left: 0;
+				}
+			}
+
+			.modal-content {
+				overflow-y: auto;
+				border-radius: 0;
+
+				.modal-body {
+
+					// alerts
+					//
+					> .icon {
+						text-align: center;
+						margin-bottom: 10px;
+					}
+
+					// scrollable regions
+					//
+					.vertically.scrollable {
+						max-height: none;
+					}
+				}
+
+				.modal-footer {
+					.notes {
+						display: none;
+					}
+
+					.buttons {
+						margin-bottom: 10px;
+
+						button {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		.modal-dialog:not(.maximized) {
+			margin-top: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+
+	.modal-open {
+
+		// scroll vertically
+		//
+		.modal {
+			overflow-x: hidden;
+			overflow-y: auto;
+
+			// always use bounce scrolling
+			//
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}
+
+//
+// disable touch events
+//
+
+.ui-draggable, .ui-droppable {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+//
+// IE / Edge Compatibility
+//
+
+[browser="explorer"], [browser="edge"] {
+	.modal {
+
+		// needed for IE
+		//
+		flex-direction: column;
+	}
+}
+
+//
+// Safari compatibility
+//
+
+body[device="desktop"][browser="safari"] {
+	.modal {
+
+		// use hardware acceleration
+		//
+		@include performance.acceleration;
+	}
+}

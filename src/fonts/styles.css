@@ -1,0 +1,38 @@
+/******************************************************************************\
+|                                                                              |
+|                                    fonts.css                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@import "../fonts/bank-gothic/styles.css";
+@import "../fonts/chicago/styles.css";
+@import "../fonts/clear-sans/styles.css";
+@import "../fonts/comic-neue/styles.css";
+@import "../fonts/din/styles.css";
+@import "../fonts/ff-meta/styles.css";
+@import "../fonts/fira-sans/styles.css";
+@import "../fonts/junction/styles.css";
+@import "../fonts/lato/styles.css";
+@import "../fonts/led-dot-matrix/styles.css";
+@import "../fonts/montserrat/styles.css";
+@import "../fonts/news-gothic/styles.css";
+@import "../fonts/open-sans/styles.css";
+@import "../fonts/open-sans-condensed/styles.css";
+@import "../fonts/proxima-nova/styles.css";
+@import "../fonts/pt-sans/styles.css";
+@import "../fonts/raleway/styles.css";
+@import "../fonts/roboto/styles.css";
+@import "../fonts/seven-segment/styles.css";
+@import "../fonts/source-sans-pro/styles.css";
+@import "../fonts/syncopate/styles.css";

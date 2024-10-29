@@ -1,0 +1,98 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-menu-bars.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin colored($open-color, $active-color) {
+	> .nav-menus {
+		.dropdown {
+
+			//
+			// dropdown menu toggles
+			//
+
+			&.open, .dropdown-submenu.open {
+
+				> .dropdown-toggle, > .dropdown-toggle:focus {
+					background-color: $open-color;
+					border-color: $open-color;
+				}
+
+				> .dropdown-toggle:active {
+					background-color: $active-color;
+					border-color: $active-color;
+				}
+			}
+		}
+	}
+}
+
+@mixin labeled($open-text-color, $active-text-color) {
+	> .nav-menus {
+		.dropdown {
+
+			//
+			// dropdown menu toggles
+			//
+
+			&.open, .dropdown-submenu.open {
+				> .dropdown-toggle, > .dropdown-toggle:focus {
+					color: $open-text-color;
+				}
+
+				> .dropdown-toggle:active {
+					color: $active-text-color;
+				}
+			}
+		}
+	}
+}
+
+@mixin marked($open-icon-color, $active-icon-color) {
+	> .nav-menus {
+		.dropdown {
+
+			//
+			// dropdown menu toggles
+			//
+
+			&.open, .dropdown-submenu.open {
+				> .dropdown-toggle, > .dropdown-toggle:focus {
+					i {
+						color: $open-icon-color;
+					}
+
+					svg {
+						fill: $open-icon-color;
+					}
+				}
+
+				> .dropdown-toggle:active {
+					i {
+						color: $active-icon-color;
+					}
+
+					svg {
+						fill: $active-icon-color;
+					}
+				}
+			}
+		}
+	}
+}

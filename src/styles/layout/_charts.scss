@@ -1,0 +1,133 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _charts.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$axis-font-size: 13px;
+$container-padding: 10px;
+$background-color: colors.$very-very-very-light-grey;
+$dark-background-color: colors.$very-dark-grey;
+
+//
+// styles
+//
+
+.chart {
+
+	.jqplot-axis {
+		font-size: $axis-font-size;
+	}
+
+	//
+	// chart backgrounds
+	//
+
+	.jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+		background-color: $background-color;
+		mix-blend-mode: multiply;
+	}
+
+	// chart overlay labels
+	//
+	.jqplot-highlighter-tooltip {
+		background-color: white;
+	}
+}
+
+.chart-container {
+	width: 100%;
+	height: 100%;
+	padding: $container-padding;
+	overflow: auto;
+
+	> div {
+		height: 100%;
+	}
+}
+
+//
+// non-binary charts
+//
+
+body:not(.binary) {
+
+
+	.chart {
+
+		//
+		// chart backgrounds
+		//
+
+		.jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+			background-color: $background-color;
+		}
+	}
+
+	&.light {
+
+		//
+		// light chart backgrounds
+		//
+
+		.chart {
+			.jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+				background-color: white;
+			}
+		}
+	}
+
+	&.dark {
+		.chart {
+
+			//
+			// dark chart backgrounds
+			//
+
+			.jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+				background-color: $dark-background-color;
+			}
+
+			// chart dark overlay labels
+			//
+			.jqplot-highlighter-tooltip {
+				background-color: black;
+			}
+		}
+	}
+}
+
+//
+// chart panes must always be full size for jqplot
+//
+
+.tabbed-content {
+	> .tab-content {
+		.chart.panes {
+			.tab-pane {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+
+				&:not(.active) {
+					width: 100%;
+					height: 100%;
+					visibility: hidden;
+					pointer-events: none;
+				}
+			}
+		}
+	}
+}

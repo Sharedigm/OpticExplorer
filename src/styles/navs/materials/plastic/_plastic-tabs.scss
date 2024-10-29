@@ -1,0 +1,80 @@
+/******************************************************************************\
+|                                                                              |
+|                             _plastic-tabs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/plastic/rounded-plastic";
+
+//
+// mixins
+//
+
+@mixin inactive-shade($color, $hover-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			@include rounded-plastic.shade($color);
+		}
+
+		> a:hover {
+			@include rounded-plastic.shade($hover-color);
+		}
+	}
+}
+
+@mixin active-shade($active-color) {
+	> li.active {
+
+		> a, > a:focus {
+			@include rounded-plastic.shade($active-color);
+		}
+	}
+}
+
+@mixin shade($color, $hover-color, $active-color) {
+	@include inactive-shade($color, $hover-color);
+	@include active-shade($active-color);
+}
+
+//
+// color mixins
+//
+
+@mixin inactive-shaded($color, $hover-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			@include rounded-plastic.shaded($color);
+		}
+
+		> a:hover {
+			@include rounded-plastic.shaded($hover-color);
+		}
+	}
+}
+
+@mixin active-shaded($active-color) {
+	> li.active {
+
+		> a, > a:focus {
+			@include rounded-plastic.shaded($active-color);
+		}
+	}
+}
+
+@mixin shaded($color, $hover-color, $active-color) {
+	@include inactive-shaded($color, $hover-color);
+	@include active-shaded($active-color);
+}

@@ -1,0 +1,161 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colorful-dialog-buttons.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../navs/colors/colored-btns";
+@use "../../../colors/colors";
+@use "../colors/special-colors";
+
+//
+// colors
+//
+
+$minimize-button-color: special-colors.$success-color;
+$maximize-button-color: special-colors.$caution-color;
+$close-button-color: special-colors.$error-color;
+$button-label-color: white;
+$unfocused-button-color: colors.$light-grey;
+$unfocused-button-label-color: colors.$very-dark-grey;
+$dialog-button-dark-label-color: colors.$dark-grey;
+$dialog-unfocused-button-dark-label-color: darken(colors.$dark-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary).colored {
+	.modals.colorful-buttons {
+		&.show-buttons {
+
+			//
+			// focused dialog buttons
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+
+							&.minimize {
+								@include colored-btns.colored($minimize-button-color);
+								@include colored-btns.labeled($button-label-color);
+							}
+
+							&.maximize, &.unmaximize {
+								@include colored-btns.colored($maximize-button-color);
+								@include colored-btns.labeled($button-label-color);
+							}
+
+							&.close-btn {
+								@include colored-btns.colored($close-button-color);
+								@include colored-btns.labeled($button-label-color);
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// unfocused dialog buttons
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+
+							&.minimize {
+								@include colored-btns.colored($unfocused-button-color);
+								@include colored-btns.labeled($unfocused-button-label-color);
+							}
+
+							&.maximize, &.unmaximize {
+								@include colored-btns.colored($unfocused-button-color);
+								@include colored-btns.labeled($unfocused-button-label-color);
+							}
+
+							&.close-btn {
+								@include colored-btns.colored($unfocused-button-color);
+								@include colored-btns.labeled($unfocused-button-label-color);
+							}			
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// hidden dialog buttons
+		//
+
+		&:not(.show-buttons) {
+			.modal.focused .modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+
+							&.minimize {
+								@include colored-btns.colored($minimize-button-color);
+							}
+
+							&.maximize, &.unmaximize {
+								@include colored-btns.colored($maximize-button-color);
+							}
+
+							&.close-btn {
+								@include colored-btns.colored($close-button-color);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dialog button dark labels
+		//
+
+		&.show-buttons {
+			&.dialog-button-dark-labels {
+				.modal.focused .modal-dialog {
+					.modal-header {
+						.buttons {
+							button {
+								@include colored-btns.labeled($dialog-button-dark-label-color);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dialog button labels
+		//
+
+		&.dialog-button-dark-labels {
+			.modal.focused .modal-dialog {
+				.modal-header {
+					.buttons {
+						button:not(:hover) {
+							@include colored-btns.labeled($dialog-button-dark-label-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

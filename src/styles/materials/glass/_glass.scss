@@ -1,0 +1,148 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _glass.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../flat/flat";
+@use "flat-glass";
+@use "round-glass";
+@use "rounded-glass";
+@use "long-round-glass";
+
+//
+// variables
+//
+
+$border-radius: var(--border-radius);
+
+//
+// mixins
+//
+
+@mixin shade($color) {
+	@include flat-glass.shade($color);
+
+	&.round {
+		@include round-glass.shade($color);
+	}
+
+	&.rounded {
+		@include rounded-glass.shade($color);
+	}
+
+	&.long.round {
+		@include long-round-glass.shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-glass.vertical-shade($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shade($color) {
+	@include flat-glass.multilayer-shade($color);
+
+	&.round {
+		@include round-glass.multilayer-shade($color);
+	}
+
+	&.rounded {
+		@include rounded-glass.multilayer-shade($color);
+	}
+
+	&.long.round {
+		@include long-round-glass.multilayer-shade($color, $border-radius);
+
+		&.vertical {
+			@include long-round-glass.vertical-multilayer-shade($color, $border-radius);
+		}
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color) {
+	@include flat-glass.shaded($color);
+
+	&.round {
+		@include round-glass.shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-glass.shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-glass.shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-glass.vertical-shaded($color, $border-radius);
+		}
+	}
+}
+
+@mixin multilayer-shaded($color) {
+	@include flat-glass.multilayer-shaded($color);
+
+	&.round {
+		@include round-glass.multilayer-shaded($color);
+	}
+
+	&.rounded {
+		@include rounded-glass.multilayer-shaded($color);
+	}
+
+	&.long.round {
+		@include long-round-glass.multilayer-shaded($color, $border-radius);
+
+		&.vertical {
+			@include long-round-glass.vertical-multilayer-shaded($color, $border-radius);
+		}
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.glass {
+		.shaded, &.glass.shaded {
+			@include shade(var(--primary-color));
+
+			&.textured {
+				@include multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.glass {
+		.shaded, &.glass.shaded {
+			@include flat.shade(var(--primary-color));
+
+			&.textured {
+				@include flat.multilayer-shade(var(--primary-color));
+			}
+		}
+	}
+}

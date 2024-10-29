@@ -1,0 +1,39 @@
+<svg 
+	id="thme-file-icon" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 56 56">
+
+	<style>
+		.file-body {
+			fill: white;
+			stroke: black;
+			stroke-width: 1px;
+		}
+		.file-icon {
+			fill: black;
+		}
+		.file-corner {
+			fill: white;
+			stroke: black;
+		}
+		.file-type path {
+			fill: black;
+		}
+		.file-type text {
+			font-size: 14px; 
+			font-family: Lucida Grande, sans-serif; 
+			fill: white;
+		}
+	</style>
+	
+	<path class="file-body" d="M 36.985, 0 H 7.963 C 7.155, 0, 6.5, 0.655, 6.5, 1.926 V 55 c 0, 0.345, 0.655, 1, 1.463, 1 h 40.074 c 0.808, 0, 1.463 -0.655, 1.463 -1 V 12.978 c 0 -0.696 -0.093 -0.92 -0.257 -1.085 L 37.607, 0.257 C 37.442, 0.093, 37.218, 0, 36.985, 0 z" />	
+	<g class="file-icon" transform="translate(15, 10), scale(1, 1)">
+		<path d="M 0 21.398 c 5.504.456 3.533 -5.392 8.626 -5.445l2.206 1.841c.549 6.645 -7.579 8.127 -10.832 3.604zm16.878 -8.538c1.713 -2.687 7.016 -11.698 7.016 -11.698.423 -.747 -.515 -1.528 -1.17 -.976 0 0 -7.887 6.857 -10.213 9.03 -1.838 1.719 -1.846 2.504 -2.441 5.336l2.016 1.681c2.67 -1.098 3.439 -1.248 4.792 -3.373 z"/>
+	</g>
+	<polygon class="file-corner" points="37.5, 0.151 37.5, 12 49.349, 12" stroke-linejoin="round" />
+	<g class="file-type">
+		<path d="M 48.037, 56 H 7.963 C 7.155, 56, 6.5, 55.345, 6.5, 54.537 V 39 h 43 v 15.537 C 49.5, 55.345, 48.845, 56, 48.037, 56 z" />
+		<text x="8" y="52.5">THME</text>
+	</g>
+</svg>

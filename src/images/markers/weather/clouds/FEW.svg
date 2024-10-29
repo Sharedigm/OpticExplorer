@@ -1,0 +1,20 @@
+<svg 
+	xmlns="http://www.w3.org/2000/svg"
+	width="500"
+	height="500"
+	viewBox="0 0 500 500"
+	class="metar sct marker">
+
+	<style>
+		.metar.marker circle {
+			fill: white;
+			stroke: black;
+		}
+		.metar.marker path {
+			stroke: black;
+		}
+	</style>
+
+	<circle cx="250" cy="250" r="200" stroke-width="50" />
+	<path d="M 250 50 L 250 450 Z" stroke-width="50" />
+</svg>

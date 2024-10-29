@@ -1,0 +1,105 @@
+/******************************************************************************\
+|                                                                              |
+|                               _mobile-apps.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+
+//
+// variables
+//
+
+$footer-bar-font-size: 11px;
+$footer-bar-line-height: 15px;
+
+//
+// styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.app {
+		
+		.header-bar {
+			text-align: center;
+
+			> div:not(:empty) {
+
+				// header separators
+				//
+				& + div:not(:empty),
+				& + div:empty + div:not(:empty) {
+					border-left: none;
+				}
+			}
+		}
+
+		.body {
+			width: 100%;
+			
+			> .contents {
+				border-width: 0;
+			}
+
+			> .split-view {
+				> .gutter.gutter-vertical {
+					margin-top: -1px;
+				}
+			}
+
+			//
+			// nested apps
+			//
+
+			.app {
+				position: absolute;
+			}
+		}
+
+		.footer-bar {
+			.address-bar {
+				font-size: $footer-bar-font-size;
+
+				i {
+					line-height: $footer-bar-line-height;
+				}
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.app {
+		.footer-bar {
+			.window-size.toolbar {
+				display: none;
+			}
+
+			.status-bar {
+				margin-left: auto;
+			}
+
+			/*
+			.window-size.toolbar,
+			.toolbar:not(:first-child):not([style="display: none;"]) + .status-bar {
+				display: none;
+			}
+			*/
+		}
+	}
+}

@@ -1,0 +1,101 @@
+/******************************************************************************\
+|                                                                              |
+|                                _typography.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$fineprint-font-size: 80%;
+
+//
+// default font style
+//
+
+body {
+	font-family: 'Open Sans';
+	font-size: 16px;
+}
+
+//
+// brand fonts
+//
+
+.tagline {
+	font-variant: normal;
+}
+
+//
+// fonts
+//
+
+.caption {
+	font-style: italic;
+	line-height: 1.25em;
+}
+
+.title {
+	font-weight: bold;
+}
+
+.fineprint {
+	font-size: $fineprint-font-size;
+
+	i {
+		font-size: 100%;
+	}
+}
+
+.emphasis {
+	font-size: 125%;
+	font-style: italic;
+	text-align: center;
+}
+
+//
+// special fonts
+//
+
+.code {
+	font-family: monospace;
+	font-size: 14px;
+	line-height: 1.5em;
+	white-space: pre;
+	overflow: auto;
+	tab-size: 2em;
+
+	&.well {
+		padding: 0 20px !important;
+	}
+}
+
+.math:not(span) {
+	font-style: italic;
+}
+
+.key {
+	word-break: break-all;
+}
+
+//
+// mobile typography - high DPI displays allow reduced font size
+//
+
+body[device="phone"] {
+	#header, #main, .modals {
+		font-size: 90%;
+	}
+}

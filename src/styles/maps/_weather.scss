@@ -1,0 +1,163 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _weather.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+@use "../colors/text-colors";
+
+//
+// variables
+//
+
+$satellite-opacity: 0.75;
+$satellite-blend-mode: screen;
+$radar-opacity: 0.75;
+$radar-blend-mode: normal;
+$temperature-opacity: 1;
+$temperature-blend-mode: hard-light;
+$metar-marker-opacity: 100%;
+$metar-marker-shadow: drop-shadow(2px 2px 5px rgba(black, 75%));
+
+//
+// colors
+//
+
+$vfr-color: colors.$medium-green;
+$mvfr-color: colors.$medium-blue;
+$ifr-color: colors.$medium-red;
+$lifr-color: colors.$medium-magenta;
+
+//
+// styles
+//
+
+.weather.layer {
+
+	.layer {
+
+		// force 3d acceleration
+		//
+		-webkit-transform: translate3d(0, 0, 0);
+
+		.viewport {
+			background: none;
+		}	
+
+		//
+		// specific layer types
+		//
+
+		&.satellite {
+			opacity: $satellite-opacity;
+			filter: contrast(2);
+			mix-blend-mode: $satellite-blend-mode;
+		}
+
+		&.radar {
+			opacity: $radar-opacity;
+			mix-blend-mode: $radar-blend-mode;
+		}
+
+		&.temperature {
+			opacity: $temperature-opacity;
+			mix-blend-mode: $temperature-blend-mode;
+		}
+
+		&.metar {
+			opacity: 1;
+			filter: $metar-marker-shadow;
+
+			.marker {
+				cursor: pointer;
+				fill: rgba($vfr-color, $metar-marker-opacity);
+
+				circle, path {
+					stroke: text-colors.$dark-color;
+					stroke-width: 60;
+
+					text {
+						color: text-colors.$dark-color;
+					}
+				}
+
+				&:not(.ovc) {
+					circle {
+						fill: white;
+					}
+				}
+
+				&:not(.few) {
+					path {
+						stroke: none !important;
+					}
+				}
+
+				text {
+					font-size: 350px;
+					font-family: sans-serif;
+					font-weight: bold;
+				}
+
+				&.vfr {
+					fill: rgba($vfr-color, $metar-marker-opacity);
+
+					circle, path {
+						stroke: $vfr-color;
+					}
+				}
+
+				&.mvfr {
+					fill: rgba($mvfr-color, $metar-marker-opacity);
+
+					circle, path {
+						stroke: $mvfr-color;
+					}
+				}
+
+				&.ifr {
+					fill: rgba($ifr-color, $metar-marker-opacity);
+
+					circle, path {
+						stroke: $ifr-color;
+					}
+				}
+
+				&.lifr {
+					fill: rgba($lifr-color, $metar-marker-opacity);
+
+					circle, path {
+						stroke: $lifr-color;
+					}
+				}
+			}
+		}
+
+		&.wind {
+			opacity: 1;
+			filter: drop-shadow(1px 1px 2px black);
+
+			.viewport {
+				filter: drop-shadow(0px 1px 0px white) drop-shadow(0px -1px 0px white)  drop-shadow(1px 0px 0px white) drop-shadow(-1px 0px 0px white);
+
+				line, path {
+					stroke: black;
+					stroke-width: 1.5;
+					vector-effect: non-scaling-stroke;
+				}
+			}
+		}
+	}
+}

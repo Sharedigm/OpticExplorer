@@ -1,0 +1,78 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _chats.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$mobile-comment-bubble-width: calc(100% - 35px);
+
+//
+// styles
+//
+
+.chat {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 10px;
+	overflow: hidden !important;
+
+	.panel + .panel {
+		margin-top: 10px;
+	}
+
+	.messages {
+		flex-grow: 1;
+		flex-shrink: 1;
+		overflow-y: auto !important;
+		height: 100%;
+
+		// still show panel even if empty
+		//
+		&:empty {
+			display: block;
+		}
+	}
+
+	.new-message {
+		margin-top: 10px;
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.chat {
+		.messages {
+			.messages-list {
+				.message {
+
+					// comment bubbles
+					//
+					.comment-bubble {
+						max-width: $mobile-comment-bubble-width;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<svg 
+	id="rb-file-icon" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 56 56">
+
+	<style>
+		.file-body {
+			fill: #E9E9E0;
+		}
+		.file-corner {
+			fill: lightgrey;
+		}
+		.file-type text {
+			font-size: 14px;
+			font-family: Lucida Grande, sans-serif; 
+			fill: white;
+		}
+	</style>
+	
+	<path class="file-body" d="M 36.985, 0 H 7.963 C 7.155, 0, 6.5, 0.655, 6.5, 1.926 V 55 c 0, 0.345, 0.655, 1, 1.463, 1 h 40.074 c 0.808, 0, 1.463 -0.655, 1.463 -1 V 12.978 c 0 -0.696 -0.093 -0.92 -0.257 -1.085 L 37.607, 0.257 C 37.442, 0.093, 37.218, 0, 36.985, 0 z" />	
+	<g class="file-icon" transform="translate(12, 6)">
+		<g transform="scale(0.06)" >
+			<path d="M176.822,204.5h158.355L256,444.834L176.822,204.5z M187.333,170.167h137.333L256,78.608L187.333,170.167z M367.584,170.167H462l-103-103h-68.666L367.584,170.167z M144.417,170.167l77.25-103h-67.225L50,170.167H144.417z M50,204.5 l158.523,206l-67.896-206H50z M371.372,204.5l-67.358,206L462,204.5H371.372z" style="fill:crimson;"/>
+		</g>
+	</g>
+	<g class="file-type">
+		<path style="fill:crimson;" d="M 48.037, 56 H 7.963 C 7.155, 56, 6.5, 55.345, 6.5, 54.537 V 39 h 43 v 15.537 C 49.5, 55.345, 48.845, 56, 48.037, 56 z" />
+		<text x="28" y="52.5" text-anchor="middle">RB</text>
+	</g>
+	<polygon class="file-corner" points="37.5, 0.151 37.5, 12 49.349, 12" stroke-linejoin="round" />
+</svg>

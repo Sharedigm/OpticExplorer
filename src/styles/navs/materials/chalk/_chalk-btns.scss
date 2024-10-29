@@ -1,0 +1,75 @@
+/******************************************************************************\
+|                                                                              |
+|                               _chalk-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../../../materials/chalk/round-chalk";
+
+//
+// mixins
+//
+
+@mixin shade($color) {
+	@include round-chalk.shade($color, outset);
+
+	&:hover {
+		@include round-chalk.shade(colors.darken($color, 10%), outset);
+	}
+
+	&:active {
+		@include round-chalk.shade(colors.darken($color, 20%), outset);
+	}
+}
+
+@mixin dark-shade($color) {
+	@include round-chalk.shade($color, outset);
+
+	&:hover {
+		@include round-chalk.shade(colors.lighten($color, 10%), outset);
+	}
+
+	&:active {
+		@include round-chalk.shade(colors.lighten($color, 20%), outset);
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color) {
+	@include round-chalk.shaded($color, outset);
+
+	&:hover {
+		@include round-chalk.shaded(darken($color, 10%), outset);
+	}
+
+	&:active {
+		@include round-chalk.shaded(darken($color, 20%), outset);
+	}
+}
+
+@mixin dark-shaded($color) {
+	@include round-chalk.shaded($color, outset);
+
+	&:hover {
+		@include round-chalk.shaded(lighten($color, 10%), outset);
+	}
+
+	&:active {
+		@include round-chalk.shaded(lighten($color, 20%), outset);
+	}
+}

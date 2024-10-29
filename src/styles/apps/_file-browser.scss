@@ -1,0 +1,108 @@
+/******************************************************************************\
+|                                                                              |
+|                              _file-browser.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.file-browser.app {
+
+	.body, .body-region {
+		> .contents {
+
+			.mainbar {
+				position: relative;
+				overflow: hidden;
+				background: none !important;
+
+				.items {
+					overflow: auto;
+
+					/*
+					&[view="tiles"] + .dropzone {
+						color: white;
+					}
+					*/
+				}
+			}
+		}
+	}
+
+	.footer-bar {
+		display: inline-flex;
+		
+		.address-bar {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex-grow: 1;
+
+			.breadcrumb {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background: none;
+			}
+		}
+
+		.directory-info {
+			display: flex;
+			flex-shrink: 0;
+		}
+	}
+
+	.flickity-enabled.is-fullscreen {
+		padding: 10px;
+		background: black;
+	}
+}
+
+//
+// file browser modal dialogs
+//
+
+.modal.dialog {
+	.file-browser + .modal-footer {
+		.address-bar {
+			padding: 2px;
+			font-size: 90%;
+			line-height: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			flex-grow: 1;
+			margin-top: 7px;
+
+			.breadcrumb {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				background: none;
+			}
+		}
+	}
+}
+
+//
+// desktop, tablet styles
+//
+
+body[device="desktop"], body[device="tablet"] {
+	.modal.dialog {
+		.file-browser + .modal-footer {
+			display: inline-flex;
+		}
+	}
+}

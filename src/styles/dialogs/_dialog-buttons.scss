@@ -1,0 +1,689 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dialog-buttons.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/buttons";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$small-dialog-button-size: 12px;
+$small-rect-dialog-button-width: 30px;
+$small-wide-dialog-button-width: 48px;
+$small-dialog-button-font-size: 8px;
+
+$medium-dialog-button-size: 18px;
+$medium-rect-dialog-button-width: 32px;
+$medium-wide-dialog-button-width: 48px;
+$medium-dialog-button-font-size: 12px;
+
+$large-dialog-button-size: buttons.$small-size;
+$large-rect-dialog-button-width: 36px;
+$large-wide-dialog-button-width: 48px;
+$large-dialog-button-font-size: icons.$font-size;
+
+$small-button-shadow: 1px 1px 3px rgba(black, 25%);
+$medium-button-shadow: 2px 2px 5px rgba(black, 25%);
+$mobile-min-dialog-button-width: buttons.$mobile-min-width;
+
+//
+// styles
+//
+
+.modals {
+	.modal-dialog {
+		.modal-header {
+			.buttons {
+				display: flex;
+				white-space: nowrap;
+				margin: auto 0;
+
+				// keep button spacing consistent
+				//
+				font-family: sans-serif;
+
+				//
+				// buttons
+				//
+
+				button {
+					display: inline-flex;
+					margin: auto;
+					margin-top: -1px;
+
+					// dialog button spacing
+					//
+					&:not([style*="display:none"]) + button {
+						margin-left: 10px;
+					}
+
+					// counter Bootstrap
+					//
+					opacity: 1;
+
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.buttons.left:not(:empty) {
+				padding-right: 10px;
+			}
+
+			.buttons.right:not(:empty) {
+				padding-left: 10px;
+			}
+		}
+
+		//
+		// unmaximized / maximized dialog buttons
+		//
+
+		&:not(.maximized) .modal-header {
+			button.unmaximize {
+				display: none;
+			}
+		}
+
+		&.maximized .modal-header {
+			button.maximize {
+				display: none;
+			}
+		}
+	}
+
+	//
+	// unfocused dialogs
+	//
+
+	.modal:not(.focused) .modal-dialog {
+		.modal-header {
+			.buttons {
+				button {
+					pointer-events: none;
+				}
+			}
+		}
+	}
+
+	//
+	// hidden dialog buttons
+	//
+
+	&:not(.show-buttons) {
+		.modal-dialog {
+			.modal-header {
+				.buttons {
+					button:not(:hover) {
+						background: none !important;
+						border: none !important;
+						box-shadow: none !important;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dialog button styles
+	//
+
+	&.left-buttons {
+
+		// show left dialog buttons
+		//
+		.modal-dialog:not(.maximized) {
+			.modal-header {
+				.buttons.left {
+					background: none !important;
+				}	
+			}
+		}
+
+		// cloak right dialog buttons
+		//
+		&.center-titles .modal-dialog {
+			.modal-header {
+				.buttons.right {
+					button {
+						visibility: hidden;
+					}
+				}
+			}
+		}
+
+		// hide right dialog buttons
+		//
+		&:not(.center-titles) .modal-dialog {
+			.modal-header {
+				.buttons.right {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.split-buttons {
+
+		.modal-dialog:not(.maximized) {
+			.modal-header {
+
+				// show dialog buttons
+				//
+				.buttons {
+					background: none !important;
+				}
+			}
+
+			&.fixed-width {
+				.modal-header {
+					.buttons.left {
+
+						// hide minimize button
+						//
+						button.minimize {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.modal-dialog {
+			.modal-header {
+
+				.buttons.left {
+
+					// hide maximize buttons
+					//
+					button.maximize, button.unmaximize {
+						display: none;
+					}
+				}
+
+				.buttons.right {
+
+					// hide close button
+					//
+					button.close-btn {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.center-titles {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons.left {
+
+						// cloak maximize button
+						//
+						button.minimize {
+							// visibility: hidden;
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		&:not(.center-titles) {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons.left {
+
+						// hide minimize button
+						//
+						button.minimize {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.right-buttons {
+
+		// show right dialog buttons
+		//
+		.modal-dialog:not(.maximized) {
+			.modal-header {
+				.buttons.right {
+					background: none !important;
+				}
+			}
+		}
+
+		// cloak left dialog buttons
+		//
+		&.center-titles .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					button {
+						visibility: hidden;
+					}
+				}
+			}
+		}
+
+		// hide left dialog buttons
+		//
+		&:not(.center-titles) .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					display: none;
+				}
+			}
+		}
+	}
+
+	//
+	// non-minimizable dialogs
+	//
+
+	&.hide-minimize .modal-dialog {
+		.modal-header {
+
+			.buttons {
+				button.minimize {
+					display: none;
+
+					& + button {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// large dialog buttons
+	//
+
+	&.rect-buttons {
+		.modal-dialog {
+			.modal-header {
+
+				.buttons {					
+					button {
+						width: $large-rect-dialog-button-width;
+					}
+				}
+			}
+		}
+	}
+
+	&.wide-buttons {
+		.modal-dialog {
+			.modal-header {
+
+				.buttons {					
+					button {
+						width: $large-wide-dialog-button-width;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// medium dialog buttons
+	//
+
+	&.medium-buttons {
+		.modal-dialog {
+			.modal-header {
+
+				.buttons {					
+					button {
+						width: $medium-dialog-button-size;
+						height: $medium-dialog-button-size;
+						min-width: auto;
+						margin-top: 0 !important;
+
+						i {
+							font-size: $medium-dialog-button-font-size;
+						}
+					}
+				}
+			}
+		}
+
+		&.rect-buttons {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons {					
+						button {
+							width: $medium-rect-dialog-button-width;
+						}
+					}
+				}
+			}
+		}
+
+		&.wide-buttons {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons {					
+						button {
+							width: $medium-wide-dialog-button-width;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// small dialog buttons
+	//
+
+	&.small-buttons {
+		.modal-dialog {
+			.modal-header {
+
+				.buttons {
+					button {
+						width: $small-dialog-button-size;
+						height: $small-dialog-button-size;
+						min-width: $small-dialog-button-size;
+						margin: auto;
+
+						// small dialog button spacing
+						//
+						&:not([style*="display:none"]) + button {
+							margin-left: 8px;
+						}
+
+						i {
+							font-size: $small-dialog-button-font-size;
+						}
+					}
+				}
+			}
+		}
+
+		&.rect-buttons {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons {					
+						button {
+							width: $small-rect-dialog-button-width;
+						}
+					}
+				}
+			}
+		}
+
+		&.wide-buttons {
+			.modal-dialog {
+				.modal-header {
+
+					.buttons {					
+						button {
+							width: $small-wide-dialog-button-width;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// center titles
+	//
+
+	&.split-buttons.center-titles {
+		.modal-dialog.ui-resizable {
+			.modal-header {
+				.handle.left {
+					padding-left: $large-dialog-button-size + 5px;
+				}
+			}
+		}
+	}
+
+	&.medium-buttons.split-buttons.center-titles {
+		.modal-dialog.ui-resizable {
+			.modal-header {
+				.handle.left {
+					padding-left: $medium-dialog-button-size + 5px;
+				}
+			}
+		}	
+	}
+
+	&.small-buttons.split-buttons.center-titles {
+		.modal-dialog.ui-resizable {
+			.modal-header {
+				.handle.left {
+					padding-left: $small-dialog-button-size + 5px;
+				}
+			}
+		}	
+	}
+}
+
+//
+// dialog button corners
+//
+
+.modals.round-dialog-button-corners,
+.round .modals.auto-dialog-button-corners {
+	.modal-dialog {
+		.modal-header {
+			.buttons {
+				button {
+					border-radius: buttons.$round-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.modals.rounded-dialog-button-corners,
+.rounded .modals.auto-dialog-button-corners {
+	.modal-dialog {
+		.modal-header {
+			.buttons {
+				button {
+					border-radius: buttons.$rounded-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.modals.square-dialog-button-corners,
+.square .modals.auto-dialog-button-corners {
+	.modal-dialog {
+		.modal-header {
+			.buttons {
+				button {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+//
+// modal dialog button shadows
+//
+
+body:not(.binary) {
+
+	.modals:not(.flat-dialog-buttons):not(.auto-dialog-buttons),
+	&:not(.flat) .modals.auto-dialog-buttons {
+
+		&:not(.medium-buttons):not(.small-buttons) {
+			.modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+							box-shadow: buttons.$shadow;
+						}
+					}
+				}
+			}
+		}
+
+		&.medium-buttons {
+			.modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+							box-shadow: $medium-button-shadow;
+						}
+					}
+				}
+			}
+		}
+
+		&.small-buttons {
+			.modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+							box-shadow: $small-button-shadow;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.modals.flat-dialog-buttons,
+	&.flat .modals.auto-dialog-buttons {
+		.modal-dialog {
+			.modal-header {
+				.buttons {
+					button {
+						box-shadow: none;	
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.modals:not(.show-button-labels) {
+
+		//
+		// dialog button label hiding
+		//
+
+		.modal.focused {
+			.modal-dialog {
+				.modal-header {
+					.buttons:not(:hover) {
+						button i {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.modal:not(.focused) {
+			.modal-dialog {
+				.modal-header {
+					.buttons {
+						button i {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.modals {
+		.modal-dialog {
+			.modal-header {
+				.buttons {
+
+					button {
+						min-width: $mobile-min-dialog-button-width;
+					}
+
+					//
+					// hide maximize / unmaximize buttons on mobile
+					//
+
+					button.maximize, button.unmaximize {
+						display: none;
+					}
+				}
+			}	
+		}
+	}
+}
+
+body[device="phone"] {
+	.modals {
+
+		&.left-buttons .modal-dialog {
+			.modal-header {
+				.buttons.right {
+					display: none;
+				}
+			}	
+		}
+
+		&.split-buttons .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					button:not(.close-btn) {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.right-buttons .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					display: none;
+				}
+			}	
+		}
+	}
+}

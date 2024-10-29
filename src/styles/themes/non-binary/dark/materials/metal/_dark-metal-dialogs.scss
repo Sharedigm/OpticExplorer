@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-metal-dialogs.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/metal/flat-metal";
+@use "../../dialogs/dark-dialogs";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.dark.metal.modals,
+	&.dark.metal .auto-material.modals {
+
+		//
+		// dark metal focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			.modal-header {
+				@include flat-metal.shaded(dark-dialogs.$header-color, inset);
+			}
+		}
+
+		//
+		// dark metal unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			.modal-header {
+				@include flat-metal.shaded(dark-dialogs.$unfocused-header-color, inset);
+			}
+		}
+	}
+}

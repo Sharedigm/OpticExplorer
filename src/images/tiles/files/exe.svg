@@ -1,0 +1,22 @@
+<svg 
+	id="exe-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 30 30" 
+	style="background:#9777a8">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(15, 15), scale(0.5), translate(-15, -22.5)">
+		<g transform="translate(0, -26)">
+			<path d="m 21.5, 50 c -0.1, 0 -0.2, -0.015 -0.299, -0.046 -0.527, -0.165 -0.821, -0.726 -0.656, -1.253 l 5, -16 c 0.165, -0.527 0.726, -0.821 1.253, -0.656 0.527, 0.165 0.821, 0.726 0.656, 1.253 l -5, 16 c -0.133, 0.428 -0.528, 0.702 -0.954, 0.702 z" style="fill:white" />
+			<circle r="1.5" cy="37.5" cx="17" style="fill:white" />
+			<circle r="1.5" cy="44.5" cx="17" style="fill:white" />
+			<path d="m 11.5, 48 -2, 0 c -3.86, 0 -7, -3.14 -7, -7 0, -3.86 3.14, -7 7, -7 l 2, 0 c 0.552, 0 1, 0.448 1, 1 0, 0.552 -0.448, 1 -1, 1 l -2, 0 c -2.757, 0 -5, 2.243 -5, 5 0, 2.757 2.243, 5 5, 5 l 2, 0 c 0.552, 0 1, 0.448 1, 1 0, 0.552 -0.448, 1 -1, 1 z" style="fill:white" />
+		</g>
+	</g>
+</svg>

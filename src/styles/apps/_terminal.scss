@@ -1,0 +1,63 @@
+/******************************************************************************\
+|                                                                              |
+|                                _terminal.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$font-family: 'Monaco', sans-serif;
+
+//
+// colors
+//
+
+$color: #00ff00;
+$background-color: black;
+
+//
+// styles
+//
+
+.terminal.app {
+	.body {
+		.contents {
+			color: $color;
+			background-color: $background-color;
+			padding: 10px;
+
+			.command-line {
+				font-family: $font-family;
+
+				display: flex;
+				white-space: pre-wrap;
+
+				.prompt:before {
+					content: "> ";
+				}
+
+				.cursor {
+					color: darkgrey;
+
+					&:after {
+						// content: "_";
+						content: "▊";
+					}
+				}
+			}
+		}
+	}
+}

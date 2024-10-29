@@ -1,0 +1,62 @@
+/******************************************************************************\
+|                                                                              |
+|                              _contact-editor.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.contact-editor.app {
+	.body {
+		> .contents {
+			.mainbar {
+				.tab-pane > div {
+					width: 100%;
+					height: 100%;
+					overflow: auto;
+
+					> .contact-info {
+						padding: 10px;
+
+						.form-group {
+							margin-top: 0;
+						}
+
+						.organization.panel,
+						.info.panel {
+							margin-top: 10px;
+
+							> form {
+								padding: 0;
+
+								.items {
+									overflow-x: hidden;
+									overflow-y: hidden;
+								}
+							}
+
+							.map-marker {
+								display: inline-block;
+								text-align: right;
+								pointer-events: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

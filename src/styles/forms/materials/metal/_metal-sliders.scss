@@ -1,0 +1,252 @@
+/******************************************************************************\
+|                                                                              |
+|                              _metal-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/metal/round-metal";
+@use "../../../materials/flat/flat";
+@use "../../../forms/sliders";
+
+//
+// mixins
+//
+
+@mixin inactive-thumb-shade($color, $hover-color) {
+	-webkit-appearance: none;
+
+	//
+	// Webkit slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:not(:active) {
+			@include round-metal.shade($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shade($hover-color);
+			}
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:not(:active) {
+			@include round-metal.shade($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shade($hover-color);
+			}
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:not(:active) {
+			@include round-metal.shade($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shade($hover-color);
+			}
+		}
+	}
+}
+
+@mixin active-thumb-shade($active-color) {
+	-webkit-appearance: none;
+
+	//
+	// Webkit active slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:active {
+			@include round-metal.shade($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+
+	//
+	// Firefox active slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:active {
+			@include round-metal.shade($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+
+	//
+	// IE active slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:active {
+			@include round-metal.shade($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+}
+
+@mixin thumb-shade($color, $hover-color, $active-color) {
+	@include inactive-thumb-shade($color, $hover-color);
+	@include active-thumb-shade($active-color);
+}
+
+@mixin track-shade($color) {
+	-webkit-appearance: none;
+	box-shadow: none;
+
+	&::-webkit-slider-runnable-track {
+		@include flat.shade($color);
+	}
+
+	&::-moz-range-track {
+		@include flat.shade($color);
+	}
+}
+
+@mixin shade($thumb-color, $thumb-hover-color, $thumb-active-color, $track-color) {
+	@include thumb-shade($thumb-color, $thumb-hover-color, $thumb-active-color);
+	@include track-shade($track-color);
+}
+
+//
+// color mixins
+//
+
+@mixin inactive-thumb-shaded($color, $hover-color) {
+	-webkit-appearance: none;
+
+	//
+	// Webkit slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:not(:active) {
+			@include round-metal.shaded($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shaded($hover-color);
+			}
+		}
+	}
+
+	//
+	// Firefox slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:not(:active) {
+			@include round-metal.shaded($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shaded($hover-color);
+			}
+		}
+	}
+
+	//
+	// IE slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:not(:active) {
+			@include round-metal.shaded($color);
+			transform: scale(-1) rotate(var(--light-direction));
+			box-shadow: sliders.$thumb-shadow;
+
+			&:hover {
+				@include round-metal.shaded($hover-color);
+			}
+		}
+	}
+}
+
+@mixin active-thumb-shaded($active-color) {
+	-webkit-appearance: none;
+
+	//
+	// Webkit active slider thumbs
+	//
+
+	&::-webkit-slider-thumb {
+		&:active {
+			@include round-metal.shaded($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+
+	//
+	// Firefox active slider thumbs
+	//
+
+	&::-moz-range-thumb {
+		&:active {
+			@include round-metal.shaded($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+
+	//
+	// IE active slider thumbs
+	//
+
+	&::-ms-thumb {
+		&:active {
+			@include round-metal.shaded($active-color);
+			transform: scale(-1) rotate(var(--light-direction));
+		}
+	}
+}
+
+@mixin thumb-shaded($color, $hover-color, $active-color) {
+	@include inactive-thumb-shaded($color, $hover-color);
+	@include active-thumb-shaded($active-color);
+}
+
+@mixin track-shaded($color) {
+	-webkit-appearance: none;
+	box-shadow: none;
+
+	&::-webkit-slider-runnable-track {
+		@include flat.shaded($color);
+	}
+
+	&::-moz-range-track {
+		@include flat.shaded($color);
+	}
+}
+
+@mixin shaded($thumb-color, $thumb-hover-color, $thumb-active-color, $track-color) {
+	@include thumb-shaded($thumb-color, $thumb-hover-color, $thumb-active-color);
+	@include track-shaded($track-color);
+}

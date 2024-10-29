@@ -1,0 +1,278 @@
+/******************************************************************************\
+|                                                                              |
+|                                _sections.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../layout/pages";
+
+//
+// variables
+//
+
+$padding: 30px 50px;
+$margin: 0 -50px;
+$icon-grid-size: 125px;
+$carousel-height: 150px;
+$brand-logo-shadow: drop-shadow(3px 3px 10px rgba(black, 33%));
+
+//
+// styles
+//
+
+.page .section {
+	padding: $padding;
+	margin: $margin;
+
+	&.primary {
+		background-color: var(--primary-color) !important;
+		color: white !important;
+
+		h1, h2, h3 {
+			color: white !important;
+		}
+	}
+
+	h2 {
+		.icon {
+			float: left;
+			height: 1em !important;
+			transform: scale(2);
+			margin-left: 15px;
+			margin-right: 30px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.well {
+		border: none;
+	}
+
+	.items {
+		height: auto;
+	}
+
+	.carousel {
+		margin: $margin;
+		height: $carousel-height;
+		overflow: hidden;
+
+		.carousel-cell {
+			height: $carousel-height !important;
+
+			.app-icons {
+				.icon {
+					width: 50px;
+					height: 50px;
+
+					img {
+						width: 40px;
+						height: 40px;
+					}
+				}
+			}
+
+			.logo {
+				width: 60px;
+				height: 60px;
+				margin: auto;
+
+				img {
+					display: block;
+					max-width: 100%;
+					max-height: 100%;
+					margin: auto;
+					filter: $brand-logo-shadow;
+				}
+			}
+		}
+	}
+
+	.icons.carousel {
+		.carousel-cell {
+			display: flex;
+			width: 150px;
+			margin-right: 10px;
+			border-radius: 5px;
+			counter-increment: gallery-cell;
+		}
+	}
+
+	.icon-grid.large {
+		text-align: center;
+		font-size: 12px;
+
+		.item {
+			width: $icon-grid-size;
+			height: $icon-grid-size;
+			transform: translate(0,50px) scale(1.5);
+
+			.icon {
+				width: 50px;
+				height: 50px;
+
+				img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+		}
+	}
+
+	&.colored {
+		color: white;
+
+		h2 {
+			color: white !important;
+			border-color: white !important;
+
+			i {
+				color: white !important;
+			}
+		}
+
+		a {
+			color: white !important;
+
+			&:hover {
+				color: white !important;
+			}
+
+			&:active {
+				color: white !important;
+			}
+		}
+
+		.icon i {
+			color: white !important;
+		}
+
+		.well {
+			h2 {
+				color: unset !important;
+
+				i {
+					color: var(--primary-color) !important;
+				}
+			}
+
+			a {
+				color: var(--primary-color) !important;
+
+				&:hover {
+					color: var(--primary-color) !important;
+				}
+
+				&:active {
+					color: var(--primary-color) !important;
+				}
+			}
+		}
+	}
+
+	& + p {
+		margin-top: 15px;
+	}
+}
+
+//
+// app page sections
+//
+
+.app .page .section {
+	padding: 30px;
+}
+
+.dark {
+	.page .section {
+		&.colored {
+			h2 {
+				color: white !important;
+			}
+
+			a {
+				&:hover {
+					color: white !important;
+				}
+
+				&:active {
+					color: white !important;
+				}	
+			}
+		}
+	}
+}
+
+//
+// non-small page sections
+//
+
+@media (min-width: variables.$screen-sm-min) {
+	.page .section {
+		> .row {
+			display: flex;
+			flex-direction: row;
+		}
+
+		// alternate left-right section direction
+		//
+		&:nth-of-type(even):not(.details) {
+			> .row {
+				flex-direction: row-reverse;
+			}
+
+			.carousel {
+				margin-right: 0;
+			}
+		}
+
+		&:nth-of-type(odd) {
+			.carousel {
+				margin-left: 0;
+			}
+		}
+
+		/*
+		&:last-child {
+			margin-bottom: -50px;
+		}
+		*/
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"] {
+	.page .section {
+
+		h2 {
+			margin-top: 0;
+
+			.icon {
+				margin-top: -3px;
+			}
+		}
+
+		> .row {
+			flex-direction: column;
+
+			> div + div {
+				margin-top: 20px;
+			}
+		}
+	}
+}

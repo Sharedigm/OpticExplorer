@@ -1,0 +1,137 @@
+/******************************************************************************\
+|                                                                              |
+|                                _app-icons.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$icon-size: 60px;
+
+//
+// styles
+//
+
+.app-icons.icon-grid {
+
+	&.panel {
+		padding-top: 30px;
+	}
+
+	> a {
+		color: inherit !important;
+	}
+
+	//
+	// items
+	//
+
+	.item {
+		> .row:first-child {
+
+			.icon {
+				border-width: 2px;
+				margin: 0;
+				pointer-events: auto;
+				cursor: default;
+				width: $icon-size;
+				height: $icon-size;
+
+				> i {
+					font-size: 35px;
+				}
+			}
+		}
+
+		> .row:nth-child(2) {
+			.name {
+				font-weight: bold;
+				cursor: default;
+
+				// allow for a little extra space for app names
+				//
+				margin: 0 -4px; 
+			}
+		}
+	}
+
+	//
+	// selected items
+	//
+
+	.item.selected {
+		> .row:first-child {
+			.icon {
+				border-width: 2px !important;
+
+				> i {
+					// color: white !important;
+				}
+			}
+		}
+	}
+
+	//
+	// disabled items
+	//
+
+	.item.disabled {
+		opacity: 0.5;
+		pointer-events: none;
+
+		.icon {
+			pointer-events: none;
+
+			img {
+				pointer-events: none !important;
+			}
+		}
+	}
+}
+
+//
+// app icon borders
+//
+
+.round-icons,
+.round.auto-corner-icons {
+	.app-icons.icon-grid .item > .row:first-child, 
+	.apps .icons {
+		.icon {
+			border-radius: 50%;
+		}
+	}
+}
+
+.rounded-icons,
+.rounded.auto-corner-icons {
+	.app-icons.icon-grid .item > .row:first-child, 
+	.apps .icons {
+		.icon {
+			border-radius: 25%;
+		}
+	}
+}
+
+.square-icons,
+.square.auto-corner-icons {
+	.app-icons.icon-grid .item > .row:first-child, 
+	.apps .icons {
+		.icon {
+			border-radius: 0;
+		}
+	}
+}

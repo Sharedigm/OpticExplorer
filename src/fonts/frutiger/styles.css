@@ -1,0 +1,17 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Frutiger';
+	src: url('Frutiger-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Frutiger';
+	src: url('Frutiger-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

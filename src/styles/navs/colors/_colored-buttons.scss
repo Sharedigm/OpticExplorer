@@ -1,0 +1,96 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-buttons.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../navs/buttons";
+@use "../../colors/colors";
+
+//
+// mixins
+//
+
+@mixin colored($color) {
+
+	&:hover {
+		background: $color;
+		border-color: $color;
+	}
+
+	/*
+	&:active {
+		background: colors.darken($color, 10%);
+		border-color: colors.darken($color, 10%);
+	}
+	*/
+
+	&.selected {
+		background: $color;
+		border-color: $color;
+	}
+}
+
+@mixin dark-colored($color) {
+
+	&:hover {
+		background: $color;
+		border-color: $color;
+	}
+
+	/*
+	&:active {
+		background: colors.lighten($color, 10%);
+		border-color: colors.lighten($color, 10%);
+	}
+	*/
+
+	&.selected {
+		background: $color;
+		border-color: $color;
+	}
+}
+
+//
+// button label colored
+//
+
+@mixin label($color) {
+	color: $color;
+
+	span {
+		color: $color;
+	}	
+}
+
+@mixin icon($color) {
+	i {
+		color: $color;
+	}
+
+	svg {
+		fill: $color;
+	}	
+}
+
+@mixin labeled($color) {
+	&:hover {
+		@include label($color);
+		@include icon($color);
+	}
+	&.selected {
+		@include label($color);
+		@include icon($color);
+	}
+}

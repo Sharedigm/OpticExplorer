@@ -1,0 +1,108 @@
+/******************************************************************************\
+|                                                                              |
+|                               _video-player.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../colors/colors";
+
+//
+// styles
+//
+
+.video-player.app {
+	.header-bar {
+		.clip-bar {
+			.toolbar {
+
+				.elapsed-time {
+					min-width: 50px;
+					padding-left: 5px;
+				}
+
+				.repeat {
+					margin-left: 10px;
+				}
+
+				.clip-duration {
+					min-width: 50px;
+					text-align: center;
+				}
+
+				input[type="range"] {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.body > .contents {
+		.mainbar {
+			.video {
+				display: flex;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+
+				video:not(.loading) {
+					max-width: 100%;
+					max-height: 100%;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+
+	.footer-bar {
+		display: flex;
+		text-align: center;
+
+		.nav-bar {
+			flex-grow: 1;
+			text-align: center;
+			white-space: nowrap;
+		}
+
+		.file-info {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.video-player.app {
+		.header-bar {
+			.clip-bar {
+				input[type="range"] {
+					width: 100px;
+				}
+			}
+
+			.volume-bar {
+				input[type="range"] {
+					width: 75px;
+				}
+			}
+		}
+	}
+}

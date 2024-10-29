@@ -1,0 +1,15 @@
+.DS_Store
+.ipynb_checkpoints/
+.jupyter/
+log/
+config/
+backups/
+electron/
+<<<<<<< HEAD
+presentations/
+*.swp
+.env
+=======
+*.swp
+.env
+>>>>>>> e2e85a74a4ddc4bf126ee2dab83ae5a9d10d06a0

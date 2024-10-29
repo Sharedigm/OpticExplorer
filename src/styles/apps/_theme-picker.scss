@@ -1,0 +1,62 @@
+/******************************************************************************\
+|                                                                              |
+|                             _theme-picker.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.theme-picker.app {
+	.body {
+		width: 100%;
+		height: 100%;
+
+		.contents {
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+
+			label {
+				display: block;
+				text-align: center;
+			}
+
+			.items {
+				display: flex;
+				width: 100%;
+				text-align: center;
+				min-height: 0;
+				overflow: auto;
+
+				.icon-grid {
+					margin: auto;
+					min-height: auto;
+				}
+
+				.card-grid {
+					width: 100%;
+				}
+			}
+
+			.well {
+				flex-shrink: 0;
+				text-align: center;
+				margin: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+}

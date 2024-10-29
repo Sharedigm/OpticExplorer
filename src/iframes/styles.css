@@ -1,0 +1,54 @@
+body {
+	font-family: sans-serif;
+	padding: 50px;
+	line-height: 1.5;
+}
+
+.figure {
+	width: 100%;
+	text-align: center;
+	margin: 30px;
+}
+
+.figure iframe {
+	width: 800;
+	height: 600;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.music.figure iframe {
+	height: 240;
+}
+
+.figure .caption {
+	font-style: italic;
+	margin: 15px;
+}
+
+/*
+// light theme
+*/
+
+.figure iframe {
+	border-color: lightgrey;
+}
+
+/*
+// dark theme
+*/
+
+@media (prefers-color-scheme: dark) { 
+	body {
+		color: white;
+		background: #202030;
+	}
+
+	.figure iframe {
+		border-color: #303040;
+	}
+
+	a {
+		color: cornflowerblue;
+	}
+}

@@ -1,0 +1,62 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _links.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$color: unset;
+$hover-color: unset;
+
+//
+// styles
+//
+
+a {
+	color: $color;
+	cursor: pointer;
+
+	&:hover {
+		color: $hover-color;
+	}
+
+	&.unstyled {
+		color: $color !important;
+		text-decoration: none !important;
+	}
+}
+
+//
+// Firefox links
+//
+
+@-moz-document url-prefix() {
+
+	a, a:active, a:focus {
+		
+		// Firefox displays a dotted outline around links by default
+		//
+		outline: none;
+	}
+
+	a:hover {
+		
+		// Firefox displays a dotted outline around links by default
+		//
+		outline: none;
+	}
+}

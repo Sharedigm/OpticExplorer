@@ -1,0 +1,171 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+@use "../lighting";
+
+//
+// mixins
+//
+
+@mixin color($color, $border-style: flat) {
+
+	// ambient
+	//
+	background-color: $color;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lighten($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darken($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin fill($color) {
+
+	// ambient
+	//
+	background-color: $color;
+}
+
+@mixin shade($color, $border-style: flat) {
+	@include color($color, $border-style);
+
+	&.round {
+		@include color($color, $border-style);
+	}
+
+	&.rounded {
+		@include color($color, $border-style);
+	}
+
+	&.long.round {
+		@include fill($color);
+	}
+}
+
+@mixin multilayer-shade($color) {
+	@include color($color);
+
+	&.round {
+		@include color($color);
+	}
+
+	&.rounded {
+		@include color($color);
+	}
+
+	&.long.round {
+		@include fill($color);
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin colored($color, $border-style: flat) {
+
+	// ambient
+	//
+	background-color: $color;
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lightened($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darkened($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin filled($color) {
+
+	// ambient
+	//
+	background-color: $color;
+}
+
+@mixin shaded($color, $border-style: flat) {
+	@include colored($color, $border-style);
+
+	&.round {
+		@include colored($color, $border-style);
+	}
+
+	&.rounded {
+		@include colored($color, $border-style);
+	}
+
+	&.long.round {
+		@include filled($color);
+	}
+}
+
+@mixin multilayer-shaded($color) {
+	@include colored($color);
+
+	&.round {
+		@include colored($color);
+	}
+
+	&.rounded {
+		@include colored($color);
+	}
+
+	&.long.round {
+		@include filled($color);
+	}
+}
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	.flat {
+		.shaded, &.flat.shaded {
+			@include shade(var(--primary-color));
+
+			&.textured {
+				@include shade(var(--primary-color));
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	.flat {
+		.shaded, &.flat.shaded {
+			@include shade(var(--primary-color));
+
+			&.textured {
+				@include shade(var(--primary-color));
+			}
+		}
+	}
+}

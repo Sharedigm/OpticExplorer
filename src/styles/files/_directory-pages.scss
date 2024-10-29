@@ -1,0 +1,108 @@
+/******************************************************************************\
+|                                                                              |
+|                            _directory-pages.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$owner-profile-size: 100px;
+
+//
+// styles
+//
+
+.pages .main-carousel {
+
+	//
+	// file and directory icons
+	//
+
+	.file,
+	.directory {
+		.row:first-child {
+			> .icon {
+				.owner.tile {
+
+					// centered owner profile photos
+					//
+					position: absolute;
+					width: $owner-profile-size;
+					height: $owner-profile-size;
+					left: 50%;
+					top: 50%;
+					pointer-events: auto;
+
+					.thumbnail {
+						margin-left: -50px;
+						margin-top: -50px;
+						border-radius: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	.file {
+		.row:first-child {
+			> .icon {
+				.owner.tile {
+					margin-top: -5px;
+
+					.thumbnail {
+						left: 50%;
+						top: -100px;
+					}
+				}
+
+				.photo.thumbnail + .owner.tile {
+					margin-left: -50%;
+					margin-top: 0;
+					left: 50%;
+					top: -100px;
+
+					.thumbnail {
+						margin-left: -50px;
+						margin-top: 100px;
+					}
+				}
+			}
+		}
+
+		&.selected {
+			.row:first-child {
+				> .icon {
+					.photo.thumbnail + .owner.tile {
+						.thumbnail {
+							margin-left: -55px;
+							margin-top: 95px;
+						}
+					}
+				}
+			}	
+		}
+	}
+
+	.directory {
+		.row:first-child {
+			> .icon {
+				.owner.tile {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,197 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _profile.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$profile-photo-small-size: 200px;
+$profile-photo-small-font-size: 150px;
+
+$profile-photo-medium-size: 200px;
+$profile-photo-medium-font-size: 150px;
+
+$profile-photo-large-size: 200px;
+$profile-photo-large-font-size: 150px;
+
+$profile-photo-size: $profile-photo-medium-size;
+$profile-photo-font-size: $profile-photo-medium-font-size;
+
+//
+// styles
+//
+
+.user-profile-header {
+	text-align: center;
+
+	.profile.photo {
+		display: inline-flex;
+		position: relative;
+		background-color: black;
+		background-size: cover; 
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		width: $profile-photo-size;
+		height: $profile-photo-size;
+		image-rendering: auto;
+		margin: -10px auto;
+
+		.thumbnail.missing {
+			margin: auto;
+
+			i {
+				font-size: $profile-photo-font-size;
+				margin: auto;
+			}
+		}
+
+		.buttons {
+			position: absolute;
+			right: 0;
+			margin: 5px;
+		}
+
+		&.rounded {
+			border-radius: 15px;
+		}
+	}
+}
+
+table {
+	td {
+		.profile.thumbnail {
+			width: 25px;
+			height: 25px;
+			background-size: cover; 
+			float: left; 
+			margin: -2px;
+			margin-right: 10px; 
+		}
+	}
+}
+
+//
+// cover / background photo
+//
+
+.cover.photo {
+	position: relative;
+	background-size: cover; 
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	image-rendering: auto;
+	padding: 30px;
+
+	> .buttons {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		.btn {
+			margin-top: 0;
+		}
+	}
+}
+
+.round {
+	.cover.photo {
+		border-top-left-radius: 7px;
+		border-top-right-radius: 7px;
+	}
+}
+
+.rounded {
+	.cover.photo {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+	}
+}
+
+//
+// medium styles
+//
+
+/*
+@media (max-width: variables.$screen-sm-min) {
+	.page {
+		.profile.photo {
+			width: $profile-photo-small-size;
+			height: $profile-photo-small-size;
+
+			.thumbnail.missing i {
+				font-size: $profile-photo-small-font-size;
+			}
+		}
+	}
+
+	.modal-dialog {
+		.profile.photo {
+			width: $profile-photo-small-size;
+			height: $profile-photo-small-size;
+
+			.thumbnail.missing i {
+				font-size: $profile-photo-small-font-size;
+			}
+		}
+	}
+}
+*/
+
+//
+// large styles
+//
+
+@media (min-width: variables.$screen-md-min) {
+	.page {
+		.profile.photo {
+			width: $profile-photo-large-size;
+			height: $profile-photo-large-size;
+
+			.thumbnail.missing i {
+				font-size: $profile-photo-large-font-size;
+			}
+		}
+	}
+
+	/*
+	.modal-dialog {
+		.profile.photo {
+			width: $profile-photo-medium-size;
+			height: $profile-photo-medium-size;
+
+			.thumbnail.missing i {
+				font-size: $profile-photo-medium-font-size;
+			}
+		}
+	}
+	*/
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.page {
+		.cover.photo {
+			margin: -10px;
+			margin-bottom: 0;
+		}	
+	}
+}

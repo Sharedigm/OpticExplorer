@@ -1,0 +1,24 @@
+<svg 
+	xmlns="http://www.w3.org/2000/svg"
+	width="500"
+	height="500"
+	viewBox="0 0 500 500"
+	class="metar sct marker">
+
+	<style>
+		.metar.marker circle {
+			fill: white;
+			stroke: black;
+		}
+		.metar.marker path {
+			stroke: black;
+		}
+		.metar.marker text { 
+			font: 350px sans-serif;
+			font-weight: bold;
+		}
+	</style>
+
+	<circle cx="250" cy="250" r="200" stroke-width="50" />
+	<text x="100" y="375">M</text>
+</svg>

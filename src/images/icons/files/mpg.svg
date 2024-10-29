@@ -1,0 +1,31 @@
+<svg 
+	id="mpg-file-icon" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 56 56">
+
+	<style>
+		.file-body {
+			fill: #E9E9E0;
+		}
+		.file-corner {
+			fill: lightgrey;
+		}
+		.file-type text {
+			font-size: 14px;
+			font-family: Lucida Grande, sans-serif; 
+			fill: white;
+		}
+	</style>
+	
+	<path class="file-body" d="M36.985, 0H7.963C7.155, 0, 6.5, 0.655, 6.5, 1.926V55c0, 0.345, 0.655, 1, 1.463, 1 h 40.074 c 0.808, 0, 1.463 -0.655, 1.463 -1V12.978c0 -0.696 -0.093 -0.92 -0.257 -1.085L37.607, 0.257C37.442, 0.093, 37.218, 0, 36.985, 0 z" />
+	<g class="file-icon">
+		<path style="fill:#C8BDB8;" d="M24.5, 28c -0.166, 0 -0.331 -0.041 -0.481 -0.123C23.699, 27.701, 23.5, 27.365, 23.5, 27V13 c 0 -0.365, 0.199 -0.701, 0.519 -0.877c0.321 -0.175, 0.71 -0.162, 1.019, 0.033l11, 7C36.325, 19.34, 36.5, 19.658, 36.5, 20 s -0.175, 0.66 -0.463, 0.844l -11, 7C24.874, 27.947, 24.687, 28, 24.5, 28z" />
+		<path style="fill:#C8BDB8;" d="M28.5, 35c -8.271, 0 -15 -6.729 -15 -15s6.729 -15, 15 -15s15, 6.729, 15, 15S36.771, 35, 28.5, 35z M28.5, 7 c -7.168, 0 -13, 5.832 -13, 13s5.832, 13, 13, 13s13 -5.832, 13 -13S35.668, 7, 28.5, 7z" />
+	</g>
+	<g class="file-type">
+		<path style="fill:#FF5364;" d="M 48.037, 56 H 7.963 C 7.155, 56, 6.5, 55.345, 6.5, 54.537 V 39 h 43 v 15.537 C 49.5, 55.345, 48.845, 56, 48.037, 56 z" />
+		<text x="28" y="52.5" text-anchor="middle">MPG</text>
+	</g>
+	<polygon class="file-corner" points="37.5, 0.151 37.5, 12 49.349, 12" stroke-linejoin="round" />
+</svg>

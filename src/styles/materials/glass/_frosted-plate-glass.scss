@@ -1,0 +1,64 @@
+/******************************************************************************\
+|                                                                              |
+|                              _frosted-glass.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "plate-glass";
+
+//
+// variables
+//
+
+$opacity: 66%;
+$max-opacity: 75%;
+$blur: 20px;
+
+//
+// mixins
+//
+
+@mixin frosted($blur: $blur) {
+	backdrop-filter: blur($blur);
+	-webkit-backdrop-filter: blur($blur);
+}
+
+@mixin polished {
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+}
+
+@mixin shade($color: white, $opacity: $opacity, $max-opacity: $max-opacity) {
+	@include plate-glass.shade($color, $opacity, $max-opacity);
+	@include frosted();
+}
+
+@mixin multilayer-shade($color: white, $opacity: $opacity, $max-opacity: $max-opacity) {
+	@include plate-glass.multilayer-shade($color, $opacity, $max-opacity);
+	@include frosted();
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color: white, $opacity: $opacity, $max-opacity: $max-opacity) {
+	@include plate-glass.shaded($color, $opacity, $max-opacity);
+	@include frosted();
+}
+
+@mixin multilayer-shaded($color: white, $opacity: $opacity, $max-opacity: $max-opacity) {
+	@include plate-glass.multilayer-shaded($color, $opacity, $max-opacity);
+	@include frosted();
+}

@@ -1,0 +1,101 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _badges.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$min-width: 16px;
+$padding: 0 3px;
+$shadow: 1px 1px 5px rgba(black, 50%);
+$icon-font-size: 85%;
+$round-border-radius: 10px;
+$rounded-border-radius: 5px;
+
+//
+// styles
+//
+
+.badge {
+	min-width: $min-width;
+	font-weight: bold;
+	padding: $padding;
+	box-shadow: $shadow;
+
+	// border style
+	//
+	border-width: 2px;
+	border-style: solid;
+
+	i {
+		height: 10px;
+		min-width: 10px;
+		font-size: $icon-font-size;
+		vertical-align: top;
+		margin: 1px;
+	}
+
+	img, svg {
+		height: 14px;
+		width: auto;
+		fill: white;
+		margin: -1px;
+	}
+
+	&.active {
+		cursor: pointer;
+	}
+
+	&::empty {
+		display: none;
+	}
+
+	.group {
+		.icon {
+			margin: 0;
+			padding: 0;
+			height: 15px;
+		}
+
+		white-space: nowrap;
+	}
+}
+
+.badges {
+	display: inline-flex;
+	flex-direction: column;
+
+	&:empty {
+		display: none;
+	}
+}
+
+//
+// badge borders
+//
+
+.round .badge {
+	border-radius: $round-border-radius;
+}
+
+.rounded .badge {
+	border-radius: $rounded-border-radius;
+}
+
+.square .badge {
+	border-radius: 0;
+}

@@ -1,0 +1,79 @@
+/******************************************************************************\
+|                                                                              |
+|                               _lightboxes.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$round-border-radius: 15px;
+$rounded-border-radius: 7px;
+
+//
+// styles
+//
+
+.fancybox-skin {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	background: none !important;
+	filter: drop-shadow(5px 5px 20px black);
+
+	.fancybox-outer {
+		background: none;
+
+		.fancybox-inner {
+			background: none;
+
+			.fancybox-image {
+				background: none;
+			}
+		}
+	}
+
+	.fancybox-title {
+		font-size: 16px;
+		font-style: italic;
+	}
+}
+
+.smooth img {
+	.fancybox-image {
+		img {
+			image-rendering: auto !important;
+		}
+	}
+}
+
+//
+// fancybox borders
+//
+
+.round {
+	.fancybox-skin {
+		.fancybox-image {
+			border-radius: $round-border-radius;
+		}
+	}
+}
+
+.rounded {
+	.fancybox-skin {
+		.fancybox-image {
+			border-radius: $rounded-border-radius;
+		}
+	}
+}

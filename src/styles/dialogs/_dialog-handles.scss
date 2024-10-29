@@ -1,0 +1,294 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dialog-handles.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$round-modal-handle-border-radius: 15px;
+$rounded-modal-handle-border-radius: 5px;
+$large-dialog-handle-height: 22px;
+$medium-dialog-handle-height: 18px;
+$small-dialog-handle-height: 14px;
+
+//
+// styles
+//
+
+.modal-dialog {
+	.modal-header {
+
+		.handle, .buttons {
+			height: $large-dialog-handle-height;
+			margin: auto 0;
+		}
+
+		.handle {
+			flex-grow: 1;
+			overflow: hidden;
+		}
+	}
+}
+
+.modals.show-handles .modal-dialog {
+	.modal-header {
+		.handle {
+			min-width: 24px;
+		}
+	}
+}
+
+.modals.left-titles .modal-dialog {
+	.modal-header {
+		.handle.left {
+			display: none;
+		}
+	}
+}
+
+.modals.right-titles .modal-dialog {
+	.modal-header {
+		.handle.right {
+			display: none;
+		}
+	}
+}
+
+//
+// medium modal headers
+//
+
+.modals.medium-buttons {
+	.modal-dialog {
+		.modal-header {
+			>.handle, > .buttons {
+				height: $medium-dialog-handle-height;
+			}
+		}
+	}
+}
+
+//
+// small modal headers
+//
+
+.modals.small-buttons {
+	.modal-dialog {
+		.modal-header {
+			> .handle, > .buttons,  {
+				height: $small-dialog-handle-height;
+			}
+		}
+	}
+}
+
+//
+// handle borders
+//
+
+.modals.round-dialog-button-corners,
+.round .modals.auto-dialog-button-corners {
+
+	&.left-titles .modal-dialog {
+		.modal-header {
+			.handle.right {
+				border-radius: $round-modal-handle-border-radius;
+			}
+		}
+	}
+
+	&.center-titles {
+
+		// non-resizeable dialogs / modals
+		//
+		.modal-dialog:not(.ui-resizable) {
+			.modal-header {
+				.handle {
+					border-radius: $round-modal-handle-border-radius;
+				}
+
+				.buttons.left + .handle {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+
+					& + .heading + .handle {
+						border-top-right-radius: 0;
+						border-bottom-right-radius: 0;
+					}
+				}
+			}
+		}
+
+		&.left-buttons .modal-dialog {
+			.modal-header {
+				.handle.left {
+					border-radius: $round-modal-handle-border-radius !important;
+				}
+				.handle.right {
+					border-top-left-radius: $round-modal-handle-border-radius;
+					border-bottom-left-radius: $round-modal-handle-border-radius;
+				}
+				.buttons.right {
+					border-top-right-radius: $round-modal-handle-border-radius;
+					border-bottom-right-radius: $round-modal-handle-border-radius;
+				}
+			}
+		}
+
+		&.split-buttons .modal-dialog {
+			.modal-header {
+				.handle.left {
+					border-radius: $round-modal-handle-border-radius;
+				}
+				.handle.right {
+					border-radius: $round-modal-handle-border-radius;
+				}
+			}
+		}
+
+		&.right-buttons .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					border-top-left-radius: $round-modal-handle-border-radius;
+					border-bottom-left-radius: $round-modal-handle-border-radius;
+				}
+				.handle.left {
+					border-top-right-radius: $round-modal-handle-border-radius;
+					border-bottom-right-radius: $round-modal-handle-border-radius;
+				}
+				.handle.right {
+					border-radius: $round-modal-handle-border-radius !important;
+				}
+			}
+		}
+	}
+
+	&.right-titles .modal-header {
+		.handle.left {
+			border-radius: $round-modal-handle-border-radius;
+		}
+	}
+}
+
+.modals.rounded-dialog-button-corners,
+.rounded .modals.auto-dialog-button-corners {
+
+	&.left-titles .modal-dialog {
+		.modal-header {
+			.handle.right {
+				border-radius: $rounded-modal-handle-border-radius;
+			}
+		}
+	}
+
+	&.center-titles {
+
+		// non-resizeable dialogs / modals
+		//
+		.modal-dialog:not(.ui-resizable) {
+			.modal-header {
+				.handle {
+					border-radius: $rounded-modal-handle-border-radius;
+				}
+
+				.buttons + .handle.left {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+		}
+
+		&.left-buttons .modal-dialog {
+			.modal-header {
+				.handle.left {
+					border-radius: $rounded-modal-handle-border-radius;
+				}
+				.handle.right {
+					border-top-left-radius: $rounded-modal-handle-border-radius;
+					border-bottom-left-radius: $rounded-modal-handle-border-radius;
+				}
+				.buttons.right {
+					border-top-right-radius: $rounded-modal-handle-border-radius;
+					border-bottom-right-radius: $rounded-modal-handle-border-radius;
+				}
+			}
+		}
+
+		&.split-buttons .modal-dialog {
+			.modal-header {
+				.handle.left {
+					border-radius: $rounded-modal-handle-border-radius;
+				}
+				.handle.right {
+					border-radius: $rounded-modal-handle-border-radius;
+				}
+			}
+		}
+
+		&.right-buttons .modal-dialog {
+			.modal-header {
+				.buttons.left {
+					border-top-left-radius: $rounded-modal-handle-border-radius;
+					border-bottom-left-radius: $rounded-modal-handle-border-radius;
+				}
+				.handle.left {
+					border-top-right-radius: $rounded-modal-handle-border-radius;
+					border-bottom-right-radius: $rounded-modal-handle-border-radius;
+				}
+				.handle.right {
+					border-radius: $rounded-modal-handle-border-radius;
+				}
+			}
+		}
+	}
+
+	&.right-titles .modal-dialog {
+		.modal-header {
+			.handle.left {
+				border-radius: $rounded-modal-handle-border-radius;
+			}
+		}
+	}
+}
+
+//
+// show / hide dialog handles
+//
+
+.modals.show-handles {
+	.modal:not(.focused) {
+		.modal-dialog {
+			.modal-header {
+				.handle, .buttons {
+					background: none !important;
+				}
+			}
+		}
+	}	
+}
+
+.modals:not(.show-handles) {
+	.modal {
+		.modal-dialog {
+			.modal-header {
+				.handle, .buttons {
+					background: none !important;
+				}
+			}
+		}
+	}
+}

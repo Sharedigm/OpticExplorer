@@ -1,0 +1,273 @@
+/******************************************************************************\
+|                                                                              |
+|                             _directory-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/images";
+
+//
+// variables
+//
+
+$file-icon-size: 50px;
+$directory-icon-size: 60px;
+
+//
+// styles
+//
+
+.icon-grid {
+	.item {
+
+		//
+		// file and directory icons
+		//
+
+		&.file,
+		&.directory {
+
+			> .row:first-child {
+				.owner {
+
+					// centered owner profile photos
+					//
+					left: 50%;
+					top: 50%;
+					margin-left: -12px;
+					margin-top: -12px;
+					border: none;
+				}
+			}
+		}
+
+		//
+		// files
+		//
+
+		&.file {
+			> .row:first-child {
+
+				.icon {
+
+					//
+					// thumbnails
+					//
+
+					.photo.thumbnail,
+					.svg.thumbnail {
+						width: auto;
+						height: auto;
+						max-width: $file-icon-size;
+						max-height: $file-icon-size;
+					}
+
+					.svg.thumbnail {
+						background-color: transparent;
+					}
+				}
+
+				.owner {
+					margin-top: -15px;
+				}
+			}
+
+			//
+			// for non-transparent thumbnails, use box shadow 
+			// instead of drop shadow for better performance.
+			//
+
+			&:not(.svg):not(.png) {
+				> .row:first-child {
+					.icon {
+
+						//
+						// photo thumbnails
+						//
+
+						.photo.thumbnail {
+							background-color: black;
+							outline: 2px solid white;
+							box-shadow: images.$thumbnail-box-shadow;
+							filter: none;
+						}
+					}
+				}
+			}
+
+			//
+			// thumbnail file icons
+			//
+
+			&.preview {
+				> .row:first-child {
+					.owner {
+
+						// upper left owner profile images
+						//
+						margin-left: 0;
+						margin-top: 0;
+						left: 0;
+						top: 0;
+
+						// lift owner profile image
+						//
+						.thumbnail {
+							filter: images.$thumbnail-shadow;
+						}
+					}
+				}
+
+				&.selected, *.highlighted {
+					> .row:first-child {
+						.owner {
+
+							// upper left owner profile images
+							//
+							margin-left: -2px;
+							margin-top: -2px;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+
+			//
+			// special file icons
+			//
+
+			&.pdf, &.svg {
+				> .row:first-child {
+					.icon {
+						.thumbnail {
+							outline: none;
+							background: none;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// directory icons
+		//
+
+		&.directory {
+			> .row:first-child {
+				.icon {
+
+					> img, > svg {
+						width: $directory-icon-size;
+						height: $directory-icon-size;
+					}
+				}
+
+				.owner {
+					margin-top: -9px;
+
+					// no shadows
+					//
+					.thumbnail {
+						filter: none;
+						drop-shadow: none;
+					}
+				}
+			}
+
+			/*
+			> .row:nth-child(2) {
+				.name {
+					font-weight: bold;
+				}
+			}
+			*/
+		}
+	}
+}
+
+//
+// drag image icons
+//
+
+.drag-image {
+	.item {
+		&.file {
+			> .row:first-child {
+				.icon {
+
+					//
+					// thumbnails
+					//
+
+					.photo.thumbnail {
+						background: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// small mobile icons
+//
+
+/*
+@media (max-width:360px) {
+	.icon-grid {
+		.item {
+
+			//
+			// directory icons
+			//
+
+			&.directory {
+				> .row:first-child {
+					.icon {
+						img, svg {
+							height: 50px;
+							width: 50px;
+						}
+					}
+
+					//
+					// owner profile photo
+					//
+
+					.owner {
+						margin-top: -8px;
+					}
+				}
+			}
+
+			//
+			// special directory icons
+			//
+
+			&.clipboard.directory, 
+			&.trash.directory {
+				> .row:first-child {
+					.icon {
+						img, svg {
+							height: 50px;
+							width: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+*/

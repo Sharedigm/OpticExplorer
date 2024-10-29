@@ -1,0 +1,113 @@
+/******************************************************************************\
+|                                                                              |
+|                                _pdf-viewer.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$zoom-bar-width: 150px;
+
+//
+// styles
+//
+
+.pdf-viewer.app {
+		
+	.header-bar {
+		.zoom-bar {
+			input[type="range"] {
+				margin-right: 5px;
+			}
+		}
+	}
+	
+	.body > .contents {
+
+		/*
+		.sidebar {
+			.panels {
+				background: black;
+
+				.pages.panel {
+					padding: 0;
+					background: none !important;
+					border-color: transparent !important;
+
+					label {
+						display: none;
+					}
+
+					.tile-grid {
+						background: none;
+						text-align: center;
+					}
+				}
+			}
+		}
+		*/
+	}
+}
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.pdf-viewer.app {
+
+		.header-bar {
+			.zoom-bar {
+				input[type="range"] {
+					width: $zoom-bar-width;
+				}
+			}
+		}
+
+		.footer-bar {
+			> div:first-child,
+			> div:last-child {
+				width: 25%;
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.pdf-viewer.app {
+		.header-bar {
+			.zoom-bar {
+				.input {
+
+					//
+					// range (slider) inputs
+					//
+					
+					input[type="range"] {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

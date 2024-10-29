@@ -1,0 +1,323 @@
+/******************************************************************************\
+|                                                                              |
+|                               _map-items.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$map-text-shadow: 1px 1px 3px black, 0px 0px 1px black;
+$map-text-outline: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+$map-icon-shadow: drop-shadow(2px 2px 2px rgba(black, 25%));
+
+//
+// styles
+//
+
+.item {
+	.geoorientation.marker {
+
+		// only show geo-orientation markers on map
+		//
+		display: none;
+
+		i {
+			&.fa-location-arrow {
+				transform: rotate(-45deg);
+			}
+
+			&.fa-video {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}
+
+.items-map {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 0 !important;
+
+	.layer {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		.items {
+			padding: 0;
+			overflow: hidden !important;
+		}
+	}
+
+	//
+	// overlays
+	//
+
+	.layer:not(:first-child) {
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		pointer-events: none;
+	}
+
+	.controls {
+		padding: 5px 10px;
+		text-align: right;
+
+		.buttons {
+			display: inline-block;
+			pointer-events: auto;
+		}
+	}
+
+	.item {
+		position: absolute;
+
+		.geoorientation.marker {
+			display: inline-block;
+		}
+
+		&.selected {
+			z-index: 1;
+		}
+	}
+
+	.icon-grid {
+		.item {
+			margin-left: -50px;
+			margin-top: -50px;
+
+			> .row:first-child {
+				.icon {
+					> i:not(.fa-info-circle) {
+						font-size: 35px;
+					}
+				}
+			}
+
+			> .row:nth-child(2) {
+				position: relative;
+
+				.name {
+					font-weight: bold;
+				}
+			}
+
+			/*
+			&.highlighted, &.selected {
+				.icon {
+					background: none !important;
+					border-color: transparent !important;
+					pointer-events: none;
+
+					i, .thumbnail {
+						pointer-events: auto;
+					}
+				}
+			}
+			*/
+		}
+	}
+
+	.item-list {
+		.item {
+			margin-left: -22px;
+			margin-top: -25px;
+
+			&:not(.selected):not(.highlighted) > div.info {
+				background: none !important;
+			}
+
+			> .info {
+				font-weight: bold;
+				background: none !important;
+
+				.icon {
+					&:not(.thumbnail) {
+						background: none !important;
+					}
+
+					&.thumbnail {
+						background: white;
+						padding: 2px;
+					}
+
+					i {
+						margin-right: -10px;
+					}
+				}
+
+				.details {
+					display: none;
+				}
+			}
+
+			&.selected {
+				> .info {
+					.icon:not(.thumbnail) {
+						&.place {
+							background-color: transparent !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.card-grid {
+		.cards .item {
+			margin-left: -40px;
+			margin-top: -55px;
+
+			.card {
+				width: 200px;
+
+				.icon {
+
+					//
+					// icons
+					//
+
+					> i {
+
+						&.fa-map-marker + .fa-info-circle {
+							margin-top: -7px;
+						}
+
+						&.fa-map-pin + .fa-info-circle {
+							margin-left: 2px;
+							margin-top: -15px
+						}
+					}
+				}
+
+				&:not(.selected) {
+					.name, .details {
+						color: black !important;
+					}
+				}
+			}
+		}
+	}
+
+	.tile-grid {
+		.item {
+			margin-left: -48px;
+			margin-top: -65px;
+
+			> .tile {
+				>.icon {
+					> i, > .thumbnail i {
+
+						&.fa-map-marker + .fa-info-circle {
+							left: 28px;
+							top: 3px;
+						}
+
+						&.fa-map-pin + .fa-info-circle {
+							left: 29px;
+							top: 0px;
+						}
+					}
+				}
+			}
+		}
+
+		&.little {
+			.item {
+				margin-left: -36px;
+				margin-top: -50px;
+			}
+		}
+		&.medium {
+			.item {
+				margin-left: -48px;
+				margin-top: -65px;
+			}
+		}
+		&.large {
+			.item {
+				margin-left: -75px;
+				margin-top: -100px;
+			}
+		}
+	}
+
+	.connections .tile-grid {
+		.item {
+			> .tile {
+				background: none !important;
+			}
+		}
+	}
+
+	//
+	// items maps options
+	//
+
+	.tile-grid {
+		padding: 0 !important;
+	}
+
+	&.hide-item-names {
+		.name {
+			display: none !important;
+		}
+	}
+
+	&.hide-geo-orientations {
+		.geoorientation.marker {
+			display: none !important;
+		}
+	}
+}
+
+//
+// place cards
+//
+
+.card-grid {
+	.place.item {
+		.card {
+
+			.name {
+				font-weight: bold;
+			}
+
+			.info {
+				.details {
+					background: transparent !important;
+				}
+			}
+		}
+	}
+}
+
+//
+// items maps corners
+//
+
+.round {
+	.items-map {
+		.item-list {
+			.icon {
+				border-radius: 50% !important;
+			}
+		}
+	}
+}

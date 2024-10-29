@@ -1,0 +1,480 @@
+/******************************************************************************\
+|                                                                              |
+|                              _desktop-apps.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+
+//
+// variables
+//
+
+$header-bar-shadow: 0 0 10px rgba(black, 15%);
+$footer-bar-shadow: 0 0 10px rgba(black, 25%);
+$desktop-preview-shadow: drop-shadow(5px 5px 10px rgba(black, 50%));
+$round-desktop-info-bar-border-radius: 15px;
+$rounded-desktop-info-bar-border-radius: 7px;
+
+//
+// styles
+//
+
+.desktop.app {
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+
+	// use fixed size for centered svg backgrounds
+	//
+	&.svg {
+		background-size: 512px 512px;
+	}
+
+	> .body {
+		background: none;
+		border: none;
+		flex-grow: 1;
+		overflow-y: auto;
+
+		.fullscreen.btn {
+			display: none;
+		}
+	
+		> .app {
+			overflow: hidden;
+		
+			> .header-bar {
+				background: white;
+				border-style: solid;
+				border-width: 1px 0;
+				box-shadow: none;
+
+				//
+				// app bars
+				//
+
+				.app-bar {
+					padding: 5px 10px;
+					font-weight: bold;
+
+					i {
+						margin-right: 10px;
+					}
+				}
+			}
+
+			> .body {
+				position: relative;
+
+				// disable grab cursor 
+				//
+				cursor: default;
+
+				> .contents {
+					width: 100%;
+					height: 100%;
+					background: none;
+					outline-offset: -2px;
+					border: none;
+					border-radius: 0;
+
+					.content {
+						.panels {
+							> .panel {
+								box-shadow: 2px 2px 5px rgba(black, 25%);
+							}
+						}
+					}
+				}
+
+				> .split-view {
+
+					> .mainbar {
+
+						//
+						// single tabs
+						//
+
+						/*
+						ul.nav-tabs {
+							> li:only-child {
+								> a, > a:focus {
+									i.fa-times, i.fa-xmark {
+										display: none;
+									}
+
+									&:hover {
+										i.fa-times, i.fa-xmark {
+											display: none;
+										}			
+									}	
+								}
+							}
+						}
+						*/
+
+						//
+						// destop tabs
+						//
+
+						.tab-content {
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+
+		.split-view > .split::after {
+			box-shadow: none;
+		}
+
+		> .app-launcher,
+		> .file-browser .mainbar .tab-pane {
+			background: none !important;
+
+			> .items:not(.overlay), .carousel-cell {
+
+				//
+				// desktop items
+				//
+
+				.item {
+					.name {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+
+		//
+		// desktop app help messages
+		//
+
+		.help.message {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			width: 75%;
+			height: 50%;
+			margin: auto;
+			border-radius: 10px;
+		}
+	}
+
+	> .footer-bar {
+		display: flex;
+		background: white;
+		box-shadow: none;
+		border-top-width: 1px;
+		border-top-style: solid;
+		z-index: 1;
+			
+		> div {
+			margin-top: -1px;
+		}
+
+		> div:not(.desktop-info-bar) {
+			border: none !important;
+		}
+
+		.desktop-info-bar {
+			display: inline-flex;
+			flex-shrink: 0;
+			border-width: 1px;
+			border-style: solid;
+			height: 30px;
+
+			&:not(.empty) {
+				padding: 0 5px;
+			}
+
+			> div {
+				display: inline-flex;
+
+				.toolbar {
+					display: inline-flex;
+				}
+			}
+
+			.directory-info {
+				display: inline-flex;
+			}
+
+			.desktop-info {
+				display: inline-flex;
+
+				span {
+					display: inline-block;
+				}
+			}
+
+			.expand-window {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// desktop app borders
+//
+
+.round {
+	.desktop.app {
+		.footer-bar {
+			.desktop-info-bar {
+				border-top-left-radius: $round-desktop-info-bar-border-radius;
+				border-bottom-left-radius: $round-desktop-info-bar-border-radius;
+			}
+		}
+	}
+}
+
+.rounded {
+	.desktop.app {
+		.footer-bar {
+			.desktop-info-bar {
+				border-top-left-radius: $rounded-desktop-info-bar-border-radius;
+				border-bottom-left-radius: $rounded-desktop-info-bar-border-radius;
+			}
+		}
+	}
+}
+
+//
+// desktop clocks
+//
+
+.status-bar {
+	.clock:not(:empty) {
+		padding: 5px 10px;
+		cursor: pointer;
+
+		i.fa-clock {
+			font-size: 14px;
+			margin: 2px 0;
+			margin-right: 5px;
+		}
+
+		.digits {
+			display: inline-block;
+
+			&.led {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+//
+// thin desktop header bars
+//
+
+.thin-menu-bars {
+	.desktop.app {
+		> .body > .app > .header-bar {
+
+			.app-bar {
+				padding: 3px 10px;
+			}
+
+			.status-bar {
+				.clock:not(:empty) {
+					padding: 3px 10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop shadows
+//
+
+body:not(.binary){
+	.desktop.app {
+
+		> .body {
+			> .app {
+				> .header-bar {
+					box-shadow: $header-bar-shadow;
+				}
+			}
+		}
+
+		> .footer-bar {
+			box-shadow: $footer-bar-shadow;
+		}
+	}
+
+	&:not(.flat) {
+		.desktop.preview {
+			filter: $desktop-preview-shadow;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.desktop {
+
+		.file-browser {
+			.mainbar .items {
+				> .card-grid {
+					column-count: 1;
+				}
+			}
+		}
+
+		.text-messenger {
+			.mainbar {
+				.messages.panel {
+					background: none;
+					padding: 0 10px;
+					margin-top: -10px;
+					margin-bottom: -10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	.windowed-app-only {
+		display: none;
+	}
+
+	.desktop.app {
+		> .body > .app {
+			> .header-bar {					
+				> .status-bar {
+					display: none;
+				}
+			}
+
+			.body {
+				> .contents {
+
+					// overlap heading border
+					//
+					&.split-view {
+						height: calc(100% + 1px) !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+
+	.desktop.app {
+		> .body > .app > .header-bar {
+			.address-bar {
+				width: 50%;
+			}
+		}
+	}
+}
+
+:not(:-webkit-full-screen) {
+
+	//
+	// desktop card grids
+	//
+
+	body[device="desktop"] {
+
+		//
+		// small desktop card grids
+		//
+
+		@media (min-width: variables.$screen-sm-min) and (max-width: variables.$screen-sm-max) {
+			.desktop.app > .body > .file-browser.app {
+				.mainbar {
+					.multi-column.card-grid .cards {
+						column-count: 3;
+					}
+				}
+			}
+		}
+
+		//
+		// medium desktop card grids
+		//
+
+		@media (min-width: variables.$screen-md-min) and (max-width: variables.$screen-md-max) {
+			.desktop.app > .body > .file-browser.app {
+				.mainbar {
+					.multi-column.card-grid .cards {
+						column-count: 4;
+					}
+				}
+			}
+		}
+
+		//
+		// large desktop card grids
+		//
+
+		@media (min-width: variables.$screen-lg-min) {
+			.desktop.app > .body > .file-browser.app {
+				.mainbar {
+					.multi-column.card-grid .cards {
+						column-count: 5;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop app visibility
+//
+
+body[device="desktop"] {
+	.modals {
+		.desktop-app-only {
+			display: none !important;
+		}
+	}
+
+	.app.desktop > .body {
+		.windowed-app-only {
+			display: none !important;
+		}
+	}
+}
+
+body[device="phone"], body[device="tablet"] {
+	.windowed-app-only {
+		display: none !important;
+	}
+}

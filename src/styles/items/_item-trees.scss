@@ -1,0 +1,180 @@
+/******************************************************************************\
+|                                                                              |
+|                               _item-trees.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$nesting-width: 30px;
+$panel-nesting-width: 25px;
+
+//
+// styles
+//
+
+//
+// directories
+//
+
+.item-tree {
+	padding: 0;
+
+	> .info {
+		margin-left: 0;
+
+		/*
+		> .name {
+			font-weight: bold;
+		}
+		*/
+
+		> .specifics {
+			> .details {
+				display: inline-block;
+
+				&:empty {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.item-list {
+		margin-left: $nesting-width;
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	.empty {
+		margin-left: $nesting-width;
+	}
+
+	//
+	// outlines
+	//
+
+	/*
+	&.selected, &.highlighted {
+		outline-width: 2px;
+		outline-style: solid;
+		outline-offset: -2px;
+	}
+	*/
+
+	//
+	// top level trees
+	//
+
+	&.top {
+
+		.expander {
+			width: $nesting-width;
+		}
+
+		//
+		// hide top folder
+		//
+
+		&:not(.show-root) {
+			> .info {
+				display: none;
+			}
+		}
+		
+		& > .item-list {
+			padding: 0;
+			margin: 0;
+		}
+
+		//
+		// nested items
+		//
+
+		.item:not(.item-tree) {
+			> .info {
+				margin-left: $nesting-width;
+			}
+		}
+	}
+}
+
+//
+// panel trees
+//
+
+.panel {
+	.top.item-tree {
+
+		.expander {
+			width: $panel-nesting-width;
+		}
+
+		.item:not(.item-tree) {
+			> .info {
+				margin-left: $panel-nesting-width;
+			}
+		}
+	}
+
+	.item-tree:not(.top) {
+		.item-list {
+			margin-left: $panel-nesting-width;
+		}
+	}
+}
+
+//
+// nested tree borders
+//
+
+.round, .rounded {
+	.item-tree.top:not(.collapsed) {
+		.item-tree {
+
+			&:not(.collapsed) {
+				.info {
+					border-radius: 0 !important;
+				}			
+			}
+
+			.item-list {
+				.info {
+					border-radius: 0 !important;
+				}		
+			}
+		}
+	}
+}
+
+//
+// mobile expander buttons
+//
+
+body[device="phone"], body[device="tablet"] {
+	.item-tree {
+
+		//
+		// button sizes
+		//
+		
+		.expander {
+			button.btn-sm {
+				min-width: 24px;
+			}
+		}
+	}
+}

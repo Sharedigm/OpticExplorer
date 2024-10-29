@@ -1,0 +1,372 @@
+/******************************************************************************\
+|                                                                              |
+|                               _splitters.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$mainbar-inset-shadow: inset 0px 0px 15px rgba(black, 15%);
+
+//
+// styles
+//
+
+.split-view {
+	height: 100%;
+
+	// use scrollbars on split panes instead of container
+	//
+	overflow: hidden;
+
+	&.horizontal {
+		display: flex;
+	}
+
+	> .split {
+		position: relative;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: auto;
+	}
+
+	> .gutter {
+		display: flex;
+		background-repeat: no-repeat;
+		background-position: 50%;
+		border-style: solid;
+		background-color: white;
+		overflow: hidden;
+
+		.handle {
+			margin: auto;
+		}
+
+		&.gutter-horizontal {
+			border-width: 0 1px;
+			cursor: ew-resize;
+
+			.handle {
+				width: 75%;
+			}
+		}
+
+		&.gutter-vertical {
+			border-width: 1px 0;
+			cursor: ns-resize;
+
+			.handle {
+				height: 75%;
+			}
+		}
+	}
+
+	/*
+	> .split.split-horizontal, 
+	> .gutter.gutter-horizontal {
+		height: 100%;
+		float: left;
+	}
+	*/
+}
+
+//
+// splitter widths
+//
+
+body.no-splitters {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				width: 0;
+			}
+			&.gutter-vertical {
+				height: 0;
+			}
+		}
+	}
+}
+
+body.narrow-splitters {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				width: 5px;
+
+				.handle {
+					max-width: 3px;
+				}
+			}
+			&.gutter-vertical {
+				height: 5px;
+
+				.handle {
+					max-height: 5px;
+				}
+			}
+		}
+	}
+}
+
+body {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				width: 10px;
+
+				.handle {
+					max-width: 5px;
+				}
+			}
+			&.gutter-vertical {
+				height: 10px;
+
+				.handle {
+					max-height: 5px;
+				}
+			}
+		}
+	}
+}
+
+body.wide-splitters {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				width: 15px;
+
+				.handle {
+					max-width: 8px;
+				}
+			}
+			&.gutter-vertical {
+				height: 15px;
+
+				.handle {
+					max-height: 8px;
+				}
+			}
+		}
+	}
+}
+
+//
+// splitter handles
+//
+
+body.hide-splitter-handles {
+	.split-view {
+		> .gutter {
+			.handle {
+				display: none;
+			}
+		}
+	}
+}
+
+body.narrow-splitter-handles {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				.handle {
+					height: 10px;
+				}
+			}
+			&.gutter-vertical {
+				.handle {
+					width: 10px;
+				}
+			}
+		}
+	}
+}
+
+body {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				.handle {
+					height: 100px;
+				}
+			}
+			&.gutter-vertical {
+				.handle {
+					width: 100px;
+				}
+			}
+		}
+	}
+}
+
+body.wide-splitter-handles {
+	.split-view {
+		> .gutter {
+			&.gutter-horizontal {
+				.handle {
+					height: 200px;
+				}
+			}
+			&.gutter-vertical {
+				.handle {
+					width: 200px;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.split-view {
+		> .gutter {
+
+			.handle {
+				background-image: none !important;
+			}
+
+			button.btn-sm {
+				position: absolute;
+				z-index: 1;
+			}
+
+			&.gutter-horizontal {
+				button.btn-sm {
+
+					// position
+					//
+					top: 50%;
+					margin-top: -25px;
+
+					// size
+					//
+					height: 50px;
+					width: 30px;
+					min-width: 0;
+				}
+			}
+
+			&.gutter-vertical {
+				button.btn-sm {
+
+					// position
+					//
+					left: 50%;
+					margin-left: -25px;
+
+					// size
+					//
+					max-width: none;
+				}
+			}
+		}
+
+		//
+		// button icons
+		//
+
+		&:not(.flipped) {
+			&.closed {
+				> .gutter-vertical {
+					button {
+						i.fa-caret-up {
+							display: none;
+						}
+					}
+				}
+				> .gutter-horizontal {
+					button {
+						i.fa-caret-left {
+							display: none;
+						}
+					}
+				}
+			}
+			&:not(.closed) {
+				> .gutter-vertical {
+					button {
+						margin-top: -10px;
+						i.fa-caret-down {
+							display: none;
+						}
+					}
+				}
+				> .gutter-horizontal {
+					button {
+						i.fa-caret-right {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		&.flipped {
+			&.closed {
+				> .gutter-vertical {
+					button {
+						margin-top: -10px;
+						i.fa-caret-down {
+							display: none;
+						}
+					}
+				}
+				> .gutter-horizontal {
+					button {
+						i.fa-caret-right {
+							display: none;
+						}
+					}
+				}
+			}
+			&:not(.closed) {
+				> .gutter-vertical {
+					button {
+						i.fa-caret-up {
+							display: none;
+						}
+					}
+				}
+				> .gutter-horizontal {
+					button {
+						i.fa-caret-left {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// inactive splitter buttons
+	//
+
+	.tab-pane:not(.active) {
+		.split-view {
+			> .gutter {
+				button {
+					display: none;
+				}
+			}
+		}
+	}
+}

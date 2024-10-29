@@ -1,0 +1,24 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Junction';
+	src: url('Junction-regular.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Junction';
+	src: url('Junction-bold.otf') format('opentype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Junction Light';
+	src: url('Junction-light.otf') format('opentype');
+	font-weight: lighter;
+	font-style: normal;
+}

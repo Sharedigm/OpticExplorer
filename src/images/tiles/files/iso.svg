@@ -1,0 +1,22 @@
+<svg 
+	id="iso-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 30 30" 
+	style="background:#71c285">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(15, 15), scale(0.5), translate(-15, -22.5)">
+		<g transform="translate(-15.5, -3)">
+			<circle r="12" cy="18" cx="30.5" style="fill:#c8bdb8" />
+			<circle r="3" cy="18" cx="30.5" style="fill:white" />
+			<path d="m 28.379, 15.879 c 0.132, -0.132 0.276, -0.245 0.425, -0.347 L 26.443, 6.719 c -1.615, 0.579 -3.134, 1.503 -4.427, 2.796 -1.294, 1.293 -2.217, 2.812 -2.796, 4.427 l 8.813, 2.361 c 0.101, -0.148 0.214, -0.292 0.346, -0.424 z" style="fill:#d3ccc9" />
+			<path d="m 33.071, 20.486 2.273, 8.483 c 1.32, -0.582 2.56, -1.402 3.641, -2.484 1.253, -1.253 2.16, -2.717 2.743, -4.275 L 33.54, 20.016 c -0.285, -0.077 -0.546, 0.184 -0.469, 0.47 z" style="fill:#d3ccc9" />
+		</g>
+	</g>
+</svg>

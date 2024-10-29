@@ -1,0 +1,89 @@
+/******************************************************************************\
+|                                                                              |
+|                                _jqplot.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$title-size: 1.25em;
+
+//
+// styles
+//
+
+.jqplot-title {
+	font-size: $title-size !important;
+	font-weight: bold !important;
+	margin-bottom: 10px !important;
+}
+
+//
+// table axes
+//
+
+.jqplot-axis {
+	padding-top: 10px;
+	height: 50px !important;
+}
+
+.jqplot-yaxis-label {
+	padding-left: 20px;
+}
+
+//
+// table legends
+//
+
+table.jqplot-table-legend,
+table.jqplot-cursor-legend {
+	position: absolute;
+	width: auto;
+	margin: 10px;
+	border: none;
+	background: none;
+}
+
+.jqplot-table-legend-swatch {
+	width:0px;
+	height:0px;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-left-width: 6px;
+	border-right-width: 6px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+}
+
+.jqplot-table-legend-swatch-outline {
+	outline-color: black;
+	outline-width: 1px;
+	outline-style: solid;
+	margin-right: 10px;
+}
+
+//
+// overlay annotations
+//
+
+.jqplot-point-label.vertical-line-label {
+	display: inline-block;
+	position: absolute;
+	margin-top: 30px;
+	padding: 10px;
+}
+
+.jqplot-highlighter-tooltip {
+	padding: 0 5px;
+	z-index: 2;
+}

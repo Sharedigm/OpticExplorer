@@ -1,0 +1,7 @@
+<svg id="window-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50">
+	<rect class="window-icon-body" y="12" style="fill:#ECF0F1;" width="50" height="38"/>
+	<rect class="window-icon-header" y="0" style="fill:#546A79;" width="50" height="14"/>
+	<circle class="window-icon-button" style="fill:#ED7161;" cx="7" cy="7" r="3"/>
+	<circle class="window-icon-button" style="fill:#EFC41A;" cx="16" cy="7" r="3"/>
+	<circle class="window-icon-button" style="fill:#4FBA6E;" cx="25" cy="7" r="3"/>
+</svg>

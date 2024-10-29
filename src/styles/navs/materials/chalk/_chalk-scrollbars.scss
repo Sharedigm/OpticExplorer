@@ -1,0 +1,117 @@
+/******************************************************************************\
+|                                                                              |
+|                           _chalk-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/chalk/long-round-chalk";
+@use "../../../navs/scrollbars";
+
+//
+// mixins
+//
+
+@mixin inactive-thumb-shade($color, $hover-color) {
+	::-webkit-scrollbar-thumb:not(:active) {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include long-round-chalk.shade($color, scrollbars.$border-radius, none);
+		}
+		&:horizontal:hover {
+			@include long-round-chalk.shade($hover-color, scrollbars.$border-radius, none);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include long-round-chalk.vertical-shade($color, scrollbars.$border-radius, none);
+		}
+		&:vertical:hover {
+			@include long-round-chalk.vertical-shade($hover-color, scrollbars.$border-radius, none);
+		}
+	}
+}
+
+@mixin active-thumb-shade($active-color) {
+	 ::-webkit-scrollbar-thumb:active {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include long-round-chalk.shade($active-color, scrollbars.$border-radius, none);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include long-round-chalk.vertical-shade($active-color, scrollbars.$border-radius, none);
+		}
+	}
+}
+
+@mixin thumb-shade($color, $hover-color, $active-color) {
+	@include inactive-thumb-shade($color, $hover-color);
+	@include active-thumb-shade($active-color);
+}
+
+//
+// color mixins
+//
+
+@mixin inactive-thumb-shaded($color, $hover-color) {
+	::-webkit-scrollbar-thumb:not(:active) {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include long-round-chalk.shaded($color, scrollbars.$border-radius, none);
+		}
+		&:horizontal:hover {
+			@include long-round-chalk.shaded($hover-color, scrollbars.$border-radius, none);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include long-round-chalk.vertical-shaded($color, scrollbars.$border-radius, none);
+		}
+		&:vertical:hover {
+			@include long-round-chalk.vertical-shaded($hover-color, scrollbars.$border-radius, none);
+		}
+	}
+}
+
+@mixin active-thumb-shaded($active-color) {
+	 ::-webkit-scrollbar-thumb:active {
+
+		// horizontal scrollbars
+		//
+		&:horizontal {
+			@include long-round-chalk.shaded($active-color, scrollbars.$border-radius, none);
+		}
+
+		// vertical scrollbars
+		//
+		&:vertical {
+			@include long-round-chalk.vertical-shaded($active-color, scrollbars.$border-radius, none);
+		}
+	}
+}
+
+@mixin thumb-shaded($color, $hover-color, $active-color) {
+	@include inactive-thumb-shaded($color, $hover-color);
+	@include active-thumb-shaded($active-color);
+}

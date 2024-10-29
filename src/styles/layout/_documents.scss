@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                               _documents.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$shadow: 10px 10px 100px rgba(black, 50%);
+
+//
+// styles
+//
+
+.pdf.document {
+	display: flex;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	background: none;
+
+	canvas {
+		position: relative;
+
+		// center canvas
+		//
+		margin: auto;
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+
+	&.inset {
+		canvas {
+			box-shadow: $shadow;
+		}
+	}
+}

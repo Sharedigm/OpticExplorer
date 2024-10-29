@@ -1,0 +1,140 @@
+/******************************************************************************\
+|                                                                              |
+|                             _items-tinted.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/images";
+
+//
+// variables
+//
+
+$red-tinted: hue-rotate(300deg);
+$orange-tinted: hue-rotate(345deg);
+$yellow-tinted: hue-rotate(15deg);
+$green-tinted: hue-rotate(60deg);
+$teal-tinted: hue-rotate(120deg);
+$aqua-tinted: hue-rotate(150deg);
+$cyan-tinted: hue-rotate(165deg);
+$blue-tinted: hue-rotate(180deg);
+$violet-tinted: hue-rotate(220deg);
+$purple-tinted: hue-rotate(250deg);
+$magenta-tinted: hue-rotate(260deg);
+$grey-tinted: saturate(0);
+$untinted: hue-rotate(0);
+
+//
+// styles
+//
+
+@mixin tint-directory-icons($tint) {
+	.items {
+		.directory:not(.clipboard):not(.trash) .icon {
+			> svg {
+				filter: $tint images.$thumbnail-shadow;
+			}
+		}
+
+		.item-list {
+			.directory:not(.selected):not(.highlighted):not(.clipboard):not(.trash) > .info .icon {
+				filter: $tint;
+			}
+		}
+	}
+}
+
+//
+// tinted directory icons
+//
+
+body:not(.binary) {
+
+	&:not(.tinted) {
+		.items {
+			.directory:not(.selected):not(.highlighted) .icon {
+				svg {
+					filter: $untinted images.$thumbnail-shadow;
+				}
+			}
+
+			.item-list {
+				.directory:not(.selected):not(.highlighted) > .info .icon {
+					filter: none;
+				}
+			}
+		}
+	}
+
+	
+	&.red-tinted,
+	&.red.auto-tinted {
+		@include tint-directory-icons($red-tinted);
+	}
+
+	&.orange-tinted,
+	&.orange.auto-tinted {
+		@include tint-directory-icons($orange-tinted);
+	}
+
+	&.yellow-tinted,
+	&.yellow.auto-tinted {
+		@include tint-directory-icons($yellow-tinted);
+	}
+
+	&.green-tinted,
+	&.green.auto-tinted {
+		@include tint-directory-icons($green-tinted);
+	}
+
+	&.teal-tinted,
+	&.teal.auto-tinted {
+		@include tint-directory-icons($teal-tinted);
+	}
+
+	&.aqua-tinted,
+	&.aqua.auto-tinted {
+		@include tint-directory-icons($aqua-tinted);
+	}
+
+	&.cyan-tinted,
+	&.cyan.auto-tinted {
+		@include tint-directory-icons($cyan-tinted);
+	}
+
+	&.blue-tinted,
+	&.blue.auto-tinted {
+		@include tint-directory-icons($blue-tinted);
+	}
+
+	&.violet-tinted,
+	&.violet.auto-tinted {
+		@include tint-directory-icons($violet-tinted);
+	}
+
+	&.purple-tinted,
+	&.purple.auto-tinted {
+		@include tint-directory-icons($purple-tinted);
+	}
+
+	&.magenta-tinted,
+	&.magenta.auto-tinted {
+		@include tint-directory-icons($magenta-tinted);
+	}
+
+	&.grey-tinted,
+	&.grey.auto-tinted {
+		@include tint-directory-icons($grey-tinted);
+	}
+}

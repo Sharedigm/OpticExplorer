@@ -1,0 +1,108 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-tabs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin inactive-colored($color, $hover-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			background-color: $color;
+			border-color: $color;
+		}
+
+		> a:hover {
+			background-color: $hover-color;
+			border-color: $hover-color;
+		}
+	}
+}
+
+@mixin active-colored($active-color) {
+	> li.active {
+
+		> a, > a:focus {
+			background-color: $color;
+			border-color: $color;
+		}
+	}
+}
+
+@mixin colored($color, $hover-color, $active-color) {
+	@include inactive-colored($color, $hover-color);
+	@include active-colored($active-color);
+}
+
+@mixin inactive-labeling($icon-color, $text-color, $hover-icon-color, $hover-text-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			color: $text-color;
+
+			i {
+				color: $icon-color;
+			}
+
+			svg {
+				fill: $icon-color;
+			}
+
+			label {
+				color: $text-color;
+			}
+		}
+
+		> a:hover {
+			color: $hover-text-color;
+
+			i {
+				color: $hover-icon-color;
+			}
+
+			svg {
+				fill: $hover-icon-color;
+			}
+
+			label {
+				color: $hover-text-color;
+			}
+		}
+	}
+}
+
+@mixin active-labeling($icon-color, $text-color) {
+	> li.active {
+
+		> a, > a:focus {
+			color: $text-color;
+
+			i {
+				color: $icon-color;
+			}
+
+			svg {
+				fill: $icon-color;
+			}
+
+			label {
+				color: $text-color;
+			}
+		}
+	}
+}

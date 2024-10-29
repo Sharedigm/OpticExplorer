@@ -1,0 +1,286 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _forms.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$addon-width: 25px;
+$addon-height: 25px;
+
+$round-border-radius: 15px;
+$rounded-border-radius: 5px;
+
+$round-alert-border-radius: 15px;
+$rounded-alert-border-radius: 5px;
+
+//
+// styles
+//
+
+form {
+
+	.well {
+		margin: 10px 0;
+	}
+
+	.notes {
+		text-align: right;
+	}
+
+	//
+	// form labels
+	//
+
+	label {
+		margin-bottom: 0;
+	}
+
+	//
+	// separators
+	//
+
+	.separator {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.separator::before, .separator::after {
+		content: "- ";
+	}
+
+	//
+	// multi part forms
+	//
+
+	/*
+	&:not(:first-child) {
+		margin-top: 5px;
+	}
+	*/
+
+	//
+	// units
+	//
+
+	.percentage::after {
+		content: "%"
+	}
+}
+
+//
+// input corners
+//
+
+.round {
+	input, textarea {
+		border-radius: $round-border-radius;
+	}
+}
+
+.rounded {
+	input, textarea {
+		border-radius: $rounded-border-radius;
+	}
+}
+
+.square {
+	input, textarea {
+		border-radius: 0;
+	}
+}
+
+//
+// form help 
+//
+
+input, label {
+	& + i.fa-question-circle {
+		margin-left: 10px;
+	}
+}
+
+select {
+	& + i.fa-question-circle {
+		margin-left: 5px;
+	}
+}
+
+//
+// form alert warnings
+//
+
+.alert-warning {
+	label {
+		margin: 0;
+		margin-right: 10px;
+	}
+}
+
+.round {
+	.alert-warning {
+		border-radius: $round-alert-border-radius;
+	}
+}
+
+.rounded {
+	.alert-warning {
+		border-radius: $rounded-alert-border-radius;
+	}
+}
+
+//
+// horizontal forms
+//
+
+.form-horizontal {
+	width: 100%;
+
+	.form-group {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.top.buttons {
+		float: right;
+		margin-top: -5px;
+	}
+}
+
+//
+// inline forms
+//
+
+.form-inline {
+	.input-group {
+
+		input {
+			height: 25px;
+		}
+
+		select {
+			height: 24px;
+			margin: 0 2px;
+		}
+
+		.input-group-addon {
+			width: $addon-width;
+			height: $addon-height;
+			padding: 0;
+			text-align: center;
+
+			i {
+				margin: 4px;
+			}
+		}
+
+		.input-group-addon:last-child, 
+		.input-group-btn:last-child {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+		.input-group-addon.select {
+			padding: 0;
+		}
+	}
+}
+
+//
+// panel forms
+//
+
+form.panel {
+	.form-group {
+		padding: 5px 0;
+
+		.control-label {
+			margin-bottom: 5px;
+		}
+
+		& + .form-group:not([style*="display:none"]) {
+			border-top-style: solid;
+			border-top-width: 1px;
+			padding-top: 10px;
+		}
+	}
+}
+
+//
+// form icon grids
+//
+
+form > .icon-grid {
+	text-align: center;
+	// padding: 10px;
+}
+
+//
+// modal horizontal forms
+//
+
+/*
+.modal-dialog {
+	.modal-content {
+		form {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			.tab-content {
+				position: relative;
+				height: 100%;
+				overflow-y: auto;
+
+				.tab-pane {
+					form.form-horizontal {
+						display: block !important;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+*/
+
+body[device="desktop"] {
+	form.form-vertical {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.tab-content {
+			position: relative;
+			height: 100%;
+			overflow-y: auto;
+
+			.tab-pane {
+				form.form-horizontal {
+					display: block !important;
+					height: auto;
+				}
+			}
+		}
+
+		> .items {
+			overflow: visible;
+		}
+	}
+}

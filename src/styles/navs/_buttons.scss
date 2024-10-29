@@ -1,0 +1,146 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _buttons.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$small-size: 25px;
+$large-size: 30px;
+$mobile-min-width: 50px;
+$icon-image-size: 20px;
+$shadow: 2px 2px 7px rgba(black, 25%);
+$active-shadow: 1px 1px 5px rgba(black, 50%);
+$round-border-radius: 15px;
+$rounded-border-radius: 5px;
+
+//
+// styles
+//
+
+button {
+	cursor: pointer;
+
+	> svg, > img {
+		display: inline-block;
+		width: $icon-image-size;
+		height: $icon-image-size;
+		margin: 0 auto;
+	}
+
+	i {
+		font-size: icons.$font-size;
+		font-style: normal;
+		pointer-events: none;
+	}
+
+	//
+	// disabled buttons
+	//
+
+	&:disabled {
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+}
+
+//
+// expander buttons
+//
+
+.expander button {
+	border: none;
+	background: none;
+}
+
+//
+// button borders
+//
+
+.round-buttons,
+.round.auto-corner-buttons {
+	button {
+		border-radius: $round-border-radius;
+	}
+}
+
+.rounded-buttons,
+.rounded.auto-corner-buttons {
+	button {
+		border-radius: $rounded-border-radius;
+	}
+}
+
+.square-buttons,
+.square.auto-corner-buttons {
+	button {
+		border-radius: 0;
+	}
+}
+
+//
+// buttons active
+//
+
+:not(.keyboard-accessible) {
+	.button:active {
+		outline: none !important;
+	}
+}
+
+//
+// button shadows
+//
+
+body:not(.binary):not(.flat-buttons):not(.flat.auto-buttons) {
+
+	button.selected, .buttons button.selected, {
+		box-shadow: $shadow;
+
+		&:active {
+			box-shadow: $active-shadow;
+		}
+	}
+
+	button:hover {
+		box-shadow: $shadow;
+	}
+}
+
+//
+// desktop buttons
+//
+
+body[device="desktop"] {
+
+	//
+	// button spacing
+	//
+
+	button + button,
+	.expander + button,
+	button + .expander,
+	button + .tooltip + button,
+	button + .popover + button,
+	button + .popover + .tooltip + button {
+		margin-left: 5px;
+	}
+}

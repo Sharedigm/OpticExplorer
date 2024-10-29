@@ -1,0 +1,367 @@
+/******************************************************************************\
+|                                                                              |
+|                               _run-menus.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/task-bars";
+@use "../navs/buttons";
+@use "../navs/scrollbars";
+
+//
+// variables
+//
+
+$run-menu-toggle-height: 30px;
+$font-size: task-bars.$font-size;
+$icon-grid-width: 450px;
+$card-grid-width: 450px;
+$card-grid-columns: 2;
+
+//
+// styles
+//
+
+#desktop {
+	.footer-bar {
+		.run-menu {
+
+			.menu-bar {
+				margin: 0;
+
+				.dropup:not(.open) {
+					.items {
+						display: none;
+					}
+				}
+
+				.dropdown-toggle {
+					display: inline-flex;
+					justify-content: center;
+					font-style: italic;
+					font-weight: bold;
+					height: $run-menu-toggle-height;
+					padding: 0;
+					border-width: 1px;
+					border-bottom-width: 0;
+					border-style: solid;
+
+					img.logo {
+						height: 16px;
+						margin: 6px;
+					}
+
+					i {
+						// override extra small menu bar icon hiding
+						//
+						display: inline-block !important;
+						margin: 8px;
+					}
+
+					span {
+						font-size: task-bars.$font-size;
+						line-height: 30px;
+						padding-right: 10px;
+						margin: 0;
+					}
+				}
+
+				.items {
+					display: flex;
+					position: absolute;
+					bottom: 30px;
+					cursor: default;
+					pointer-events: none;
+
+					> ul, > div {
+						position: absolute;
+						display: block;
+						z-index: 1500;
+						bottom: 0;
+						overflow-y: auto;
+					}
+
+					.icon-grid, .apps-list {
+						position: relative;
+						min-height: auto;
+						max-height: 100%;
+						margin: auto;
+						margin-bottom: 0;
+						font-weight: bold;
+						border-width: 1px;
+						border-style: solid;
+						pointer-events: auto;
+					}
+
+					.icon-grid {
+						text-align: center;
+						padding-top: 20px;
+						padding-bottom: 0;
+					}
+
+					.card-grid.apps-list {
+						padding: 10px;
+					}
+
+					.apps-list {
+						padding: 0;
+
+						> li {
+							> a {
+								padding: 0;
+								margin: 3px;
+							}
+						}
+					}
+
+					.divider {
+						border: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// run menu items
+//
+
+#desktop.run-menu-icons {
+	.footer-bar {
+		.run-menu {
+			.card-grid, .apps-list:not(.card-grid) {
+				display: none !important;
+			}
+		}
+	}
+}
+
+#desktop.run-menu-cards {
+	.footer-bar {
+		.run-menu {
+			.app-icons, .apps-list:not(.card-grid) {
+				display: none !important;
+			}
+		}
+	}
+}
+
+#desktop.run-menu-lists {
+	.footer-bar {
+		.run-menu {
+			.app-icons, .card-grid {
+				display: none !important;
+			}
+		}
+	}
+}
+
+//
+// run menu borders
+//
+
+.round #desktop.auto-run-menu-corners,
+#desktop.round-run-menus {
+	.footer-bar .run-menu {
+		.menu-bar {
+
+			// round run menu toggle
+			//
+			.dropdown-toggle {
+				border-radius: buttons.$round-border-radius;
+			}
+
+			// round run menu items
+			//
+			.items {
+				.icon-grid, .dropdown-menu {
+					border-radius: scrollbars.$round-radius;
+				}
+			}
+		}
+	}
+}
+
+.rounded #desktop {
+	.footer-bar .run-menu {
+		.menu-bar {
+
+			// rounded run menu toggle
+			//
+			.dropdown-toggle {
+				border-radius: buttons.$rounded-border-radius;
+			}
+
+			// rounded run menu items
+			//
+			.items {
+				.icon-grid, .dropdown-menu {
+					border-radius: scrollbars.$rounded-radius;
+				}
+			}
+		}
+	}
+}
+
+.square #desktop.auto-run-menu-corners,
+#desktop.square-run-menus {
+	.footer-bar .run-menu {
+		.menu-bar {
+
+			// square run menu toggle
+			//
+			.dropdown-toggle {
+				border-radius: 0;
+			}
+
+			// square run menu items
+			//
+			.items {
+				.icon-grid, .dropdown-menu {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+//
+// run menu attachment
+//
+
+#desktop.attached-run-menus {
+	.footer-bar {
+		.run-menu {
+			.menu-bar {
+
+				.dropdown-toggle {
+					border-top-left-radius: 0 !important;
+					border-bottom-left-radius: 0 !important;
+				}
+
+				.items {
+					padding-bottom: 0;
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				.icon-grid, .dropdown-menu {
+					border-bottom-left-radius: 0 !important;
+					border-bottom-right-radius: 0 !important;
+				}
+			}
+		}
+	}
+}
+
+//
+// run menu alignment
+//
+
+#desktop.task-bar-centered {
+
+	.left.handle-bar {
+		flex-shrink: 1;
+		flex-grow: 2;
+	}
+
+	.run-menu {
+		margin-left: auto;
+	}
+
+	.task-bar {
+		margin-right: auto;
+		flex-grow: 0;
+	}
+
+	.desktop-info-bar {
+		min-width: calc(25% - 15px);
+		justify-content: center;
+		flex-shrink: 0;
+	}
+}
+
+#desktop:not(.task-bar-centered) {
+
+	.footer-bar {
+		.run-menu {	
+			.icon-grid, .dropdown-menu {
+				margin-left: 0 !important;
+			}
+
+			.dropdown-toggle {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+
+		.left.handle-bar {
+			display: none;
+		}
+	}	
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"],
+body[device="tablet"] {
+	#desktop {
+		.footer-bar {
+			.run-menu {
+				.menu-bar {
+					.items {
+						.icon-grid {
+							width: $icon-grid-width;
+						}
+
+						.card-grid {
+							width: $card-grid-width;
+
+							.cards {
+								column-count: $card-grid-columns;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"] {
+	#desktop {
+		.footer-bar {
+			.run-menu {
+				.menu-bar {
+					.dropdown-toggle {
+						min-width: 50px;
+					}
+
+					.items {
+						.icon-grid {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

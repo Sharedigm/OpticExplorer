@@ -1,0 +1,115 @@
+/******************************************************************************\
+|                                                                              |
+|                             _project-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$task-icon-size: 40px;
+
+//
+// styles
+//
+
+.project-viewer.app {
+
+	.body > .contents {
+		.mainbar {
+			.project {
+				// padding: 10px;
+				height: 100%;
+				overflow: auto;
+			}
+
+			.task {
+				padding: 10px;
+				overflow: auto;
+				max-height: 100%;
+
+				.task-title {
+					.icon {
+						display: inline-flex;
+						width: 50px;
+						height: 50px;
+
+						i {
+							font-size: $task-icon-size;
+							display: unset;
+							margin: auto;
+						}
+					}
+				}
+
+				.title.form-group {
+					margin: 0;
+
+					.controls {
+						.form-control-static {
+							margin-bottom: 10px;
+						}
+					}
+				}
+
+				/*
+				h3 {
+					font-weight: bold;
+				}
+				*/
+
+				.panel + .panel {
+					margin-top: 10px;
+				}
+
+				.buttons {
+					float: right;
+					margin-top: -5px;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+// body[device="phone"], body[device="tablet"] {
+	.project-viewer.app {
+		.body > .contents {
+			.mainbar {
+				.task {
+					.task-info {
+						.task-title {
+							width: 100%;
+							text-align: center;
+
+							.control-label, .task-icon {
+								width: 100%;
+								text-align: center;
+								padding: 0;
+							}
+
+							.controls {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+// }

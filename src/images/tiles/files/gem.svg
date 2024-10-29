@@ -1,0 +1,19 @@
+<svg 
+	id="gem-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 30 30" 
+	style="background:crimson">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(6.5, 4)">
+		<g transform="scale(0.033)" >
+			<path d="M176.822,204.5h158.355L256,444.834L176.822,204.5z M187.333,170.167h137.333L256,78.608L187.333,170.167z M367.584,170.167H462l-103-103h-68.666L367.584,170.167z M144.417,170.167l77.25-103h-67.225L50,170.167H144.417z M50,204.5 l158.523,206l-67.896-206H50z M371.372,204.5l-67.358,206L462,204.5H371.372z" style="fill:white;"/>
+		</g>
+	</g>
+</svg>

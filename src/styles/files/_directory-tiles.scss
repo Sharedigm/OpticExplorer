@@ -1,0 +1,131 @@
+/******************************************************************************\
+|                                                                              |
+|                            _directory-tiles.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/images";
+
+//
+// variables
+//
+
+$little-tile-size: 90px;
+
+//
+// styles
+//
+
+.tile-grid {
+	.item {
+
+		//
+		// file tiles
+		//
+
+		&.file {
+			.tile {
+				background: white;
+
+				.owner {
+
+					// shadows
+					//
+					.thumbnail {
+						filter: images.$thumbnail-shadow;
+					}
+				}
+			}
+
+			//
+			// image tiles
+			//
+
+			&.png, &.svg {
+				.tile {
+					> .thumbnail {
+						background-color: transparent;
+					}
+				}
+			}
+		}
+
+		//
+		// directory tiles
+		//
+
+		&.directory {
+			.tile {
+
+				// owner profile photos
+				//
+				.owner {
+					top: 50%;
+					left: 50%;
+					margin-left: -12px;
+					margin-top: -12px;
+					box-shadow: none;
+
+					// no shadows
+					//
+					.thumbnail {
+						filter: none;
+					}
+				}
+
+				/*
+				.name {
+					font-weight: bold;
+				}
+				*/
+			}
+		}
+	}
+}
+
+//
+// alternate tile sizes
+//
+
+.little.tile-grid {
+	.item {
+		&.directory {
+			.tile {
+			
+				// owner profile photos
+				//
+				.owner {
+					margin-left: -9px;
+					margin-top: -13px;
+				}
+			}
+		}
+	}
+}
+
+.large.tile-grid {
+	.item {
+		&.directory {
+			.tile {
+
+				// owner profile photos
+				//
+				.owner {
+					margin-left: -18px;
+					margin-top: -26px;
+				}
+			}
+		}
+	}
+}

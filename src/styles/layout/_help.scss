@@ -1,0 +1,146 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _help.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$round-menu-image-border-radius: 9px;
+$round-dialog-image-border-radius: 9px;
+$round-figure-dialog-image-border-radius: 5px;
+
+$rounded-menu-image-border-radius: 7px;
+$rounded-dialog-image-border-radius: 7px;
+$rounded-figure-dialog-image-border-radius: 3px;
+
+//
+// styles
+//
+
+.page {
+
+	//
+	// menu images
+	//
+
+	img.menu {
+		width: 220px;
+	}
+
+	img.nested.dropdown.menu {
+		width: 440px;
+	}
+
+	img.doubly.nested.dropdown.menu {
+		width: 660px;
+	}
+
+	//
+	// search bar images
+	//
+
+	img.search {
+		width: 300px;
+		border-radius: 15px;
+	}
+
+	//
+	// sidebar images
+	//
+
+	img.sidebar {
+		width: 172px;
+	}
+}
+
+//
+// help image borders
+//
+
+.round .page {
+	img {
+
+		//
+		// menu images
+		//
+
+		&.dropdown.menu {
+			border-bottom-left-radius: $round-menu-image-border-radius;
+			border-bottom-right-radius: $round-menu-image-border-radius;
+		}
+
+		&.dropup.menu {
+			border-top-left-radius: $round-menu-image-border-radius;
+			border-top-right-radius: $round-menu-image-border-radius;
+		}
+
+		&.run.menu {
+			border-bottom-left-radius: $round-menu-image-border-radius;
+		}
+	}
+}
+
+.rounded .page {
+	img {
+
+		//
+		// menu images
+		//
+
+		&.dropdown.menu {
+			border-bottom-left-radius: $rounded-menu-image-border-radius;
+			border-bottom-right-radius: $rounded-menu-image-border-radius;
+		}
+
+		&.dropup.menu {
+			border-top-left-radius: $rounded-menu-image-border-radius;
+			border-top-right-radius: $rounded-menu-image-border-radius;
+		}
+
+		&.run.menu {
+			border-bottom-left-radius: $rounded-menu-image-border-radius;
+		}
+	}
+}
+
+//
+// dialog box images
+//
+
+.round-dialogs {
+	img.dialog {
+		border-radius: $round-dialog-image-border-radius;
+	}
+
+	.figure.row {
+		img.dialog {
+			border-radius: $round-figure-dialog-image-border-radius;
+		}
+	}
+}
+
+.rounded-dialogs {
+	img.dialog {
+		border-radius: $rounded-dialog-image-border-radius;
+	}
+
+	.figure.row {
+		img.dialog {
+			border-radius: $rounded-figure-dialog-image-border-radius;
+		}
+	}
+}

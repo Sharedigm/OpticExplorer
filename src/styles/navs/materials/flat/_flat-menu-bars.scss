@@ -1,0 +1,66 @@
+/******************************************************************************\
+|                                                                              |
+|                            _flat-menu-bars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin color($open-color, $active-color) {
+	> .nav-menus {
+
+		//
+		// dropdown menu toggles
+		//
+
+		> .dropdown.open {
+
+			> .dropdown-toggle, > .dropdown-toggle:focus {
+				@include flat.color($open-color);
+			}
+
+			> .dropdown-toggle:active {
+				@include flat.color($active-color);
+			}
+		}
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin colored($open-color, $active-color) {
+	> .nav-menus {
+
+		//
+		// dropdown menu toggles
+		//
+
+		> .dropdown.open {
+
+			> .dropdown-toggle, > .dropdown-toggle:focus {
+				@include flat.colored($open-color);
+			}
+
+			> .dropdown-toggle:active {
+				@include flat.colored($active-color);
+			}
+		}
+	}
+}

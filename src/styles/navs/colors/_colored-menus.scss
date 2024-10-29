@@ -1,0 +1,92 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-menus.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// mixins
+//
+
+@mixin colored($open-color, $hover-color, $active-color) {
+	> li:not(.dropdown-toggle):not(.disabled) {
+
+		&.open > a {
+			background: $open-color;
+			border-color: $open-color;
+		}
+
+		a:hover {
+			background: $hover-color;
+			border-color: $hover-color;
+		}
+
+		a:active {
+			background: $active-color;
+			border-color: $active-color;
+		}
+	}
+}
+
+@mixin labeled($open-text-color, $hover-text-color, $active-text-color) {
+	> li:not(.dropdown-toggle):not(.disabled) {
+
+		&.open > a {
+			color: $open-text-color;
+		}
+
+		a:hover {
+			color: $hover-text-color;
+		}
+
+		a:active {
+			color: $active-text-color;
+		}
+	}
+}
+
+@mixin marked($open-icon-color, $hover-icon-color, $active-icon-color) {
+	> li:not(.dropdown-toggle):not(.disabled) {
+
+		&.open > a {
+			i {
+				color: $open-icon-color;
+			}
+
+			svg {
+				fill: $open-icon-color;
+			}
+		}
+
+		a:hover {
+			i {
+				color: $hover-icon-color;
+			}
+
+			svg {
+				fill: $hover-icon-color;
+			}
+		}
+
+		a:active {
+			i {
+				color: $active-icon-color;
+			}
+
+			svg {
+				fill: $active-icon-color;
+			}
+		}
+	}
+}

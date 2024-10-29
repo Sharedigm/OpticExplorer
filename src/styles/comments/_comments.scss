@@ -1,0 +1,192 @@
+/******************************************************************************\
+|                                                                              |
+|                                _comments.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/tiles";
+
+//
+// variables
+//
+
+$comment-panel-padding: 5px;
+$comment-panel-header-padding: 0 5px;
+
+//
+// styles
+//
+
+.comments.panel {
+	padding: $comment-panel-padding;
+
+	.header {
+		padding: $comment-panel-header-padding;
+
+		// make expanders easier to click on mobile
+		//
+		.expander {
+			height: 25px;
+			line-height: 25px;
+
+			i {
+				margin: 0 5px;
+			}
+		}
+	}
+
+	.comments-list {
+		margin: 0 5px;
+		margin-top: 10px;
+
+		.comment {
+			padding: 0;
+			
+			&:not(:first-child) {
+				margin-top: 5px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+			
+			&:not(.selected) {
+				> .info > .comment-bubble {
+					cursor: pointer;
+				}
+			}
+
+			> .tile {
+				.image {
+					background: none;
+				}
+
+				+ .info {
+					margin-left: tiles.$medium-size;
+				}
+			}
+
+			> .small.tile {
+				+ .info {
+					margin-left: tiles.$small-size + 10px;
+				}
+			}
+
+			.info {
+
+				//
+				// comment bubbles
+				//
+
+				.comment-bubble {
+
+					&.block {
+						display: block;
+					}
+
+					.comment-inner {
+						.title {
+							display: inline;
+							padding: 0;
+
+							.name {
+								margin-right: 10px;
+							}
+							
+							.message {
+								font-weight: normal;
+							}
+						}
+					}
+
+					//
+					// attachments
+					//
+
+					.image-attachments {
+						.gallery {
+							clear: both;
+							margin: 5px 0;
+						}
+					}
+				}
+
+				//
+				// other info
+				//
+
+				.specifics {
+					min-height: 25px;
+					margin-top: 5px;
+					margin-bottom: 5px;
+
+					.when, .expander {
+						display: inline-block;
+						padding: 5px;
+						margin: 5px;
+						min-height: 25px;
+					}
+
+					.expander {
+						i {
+							margin-right: 5px;
+						}
+					}
+
+					.options.buttons {
+						display: inline-block;
+						margin-top: 0;
+						margin-left: 5px;
+					}
+				}
+			}
+
+			//
+			// hide unselected options buttons
+			//
+
+			.options-hideable &:not(.selected) {
+				> .info {
+					.specifics {
+						.options.buttons {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// new comment forms
+	//
+
+	.new-comment {
+		padding: 5px;
+		
+		> form .tile + .info {
+
+			// placeholder text
+			//
+			.comment-bubble .comment-inner:empty::after {
+				content: "Your comment?";
+			}
+		}
+
+		.spacer {
+			width: 25px;
+			margin-right: 15px;
+		}
+	}
+}

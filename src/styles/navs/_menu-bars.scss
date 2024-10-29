@@ -1,0 +1,238 @@
+/******************************************************************************\
+|                                                                              |
+|                               _menus-bars.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+@use "../navs/menus";
+
+//
+// variables
+//
+
+$height: 30px;
+$thin-height: 25px;
+$shadow: 3px 3px 7px rgba(black, 33%);
+
+//
+// styles
+//
+
+.menu-bar {
+	display: inline-block;
+	top: 0;
+	border-radius: 0;
+
+	// disable default selection
+	//
+	@include selection.unselectable;
+
+	> ul.nav-menus {
+		border-bottom: none;
+		margin-bottom: 0;
+
+		> li {
+			display: inline-flex;
+			height: $height;
+			float: none;
+			border: none;
+			margin-bottom: 0;
+
+			& + li {
+				margin-left: -5px;
+			}
+
+			> a {
+				display: flex;
+				padding: 5px 10px;
+				border-radius: 0;
+				border-width: 1px;
+				border-style: solid;
+				border-color: transparent;
+
+				i {
+					margin: auto;
+					margin-right: 0;
+
+					& + span {
+						line-height: 15px;
+						margin: auto;
+						margin-left: 5px;
+					}
+				}
+			}
+
+			&.open {
+				a {
+					border-color: transparent;
+
+					&:hover {
+						border-color: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+.hide-menu-icons {
+	.menu-bar {
+		> ul.nav-menus {
+			> li.dropdown {
+				> a {
+					i {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// iconified menu bars
+//
+
+.iconified .menu-bar {
+	.nav-menus {
+		> li {
+			> a > i {
+				margin-right: 0;
+			}
+
+			span {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// thin menu bars
+//
+
+.thin-menu-bars {
+	.menu-bar {
+		.nav-menus {
+			> li {
+				height: $thin-height;
+
+				> a {
+					padding: 1px 10px;
+				}
+			}
+		}
+	}
+}
+
+//
+// menu bar shadows
+//
+
+body:not(.binary):not(.flat-menus):not(.flat.auto-menus) {
+	.menu-bar {
+		> ul.nav-menus {
+			> li:not(.disabled).open {
+				> a {
+					box-shadow: $shadow;
+				}
+			}
+		}
+	}
+}
+
+//
+// menus corners
+//
+
+.round-menus,
+.round.auto-corner-menus {
+	.menu-bar > .nav-menus > li {
+		> .dropdown-toggle {
+			border-radius: menus.$round-border-radius;
+		}
+	}
+}
+
+.rounded-menus,
+.rounded.auto-corner-menus {
+	.menu-bar > .nav-menus > li {
+		> .dropdown-toggle {
+			border-radius: menus.$rounded-border-radius;
+		}
+	}
+}
+
+.menus-attached {
+	.header-bar {
+		.menu-bar > .nav-menus > li {
+			> .dropdown-toggle {
+				border-radius: 0 !important;
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.menu-bar {
+		> ul.nav-menus {
+			> li {
+				> a {
+
+					//
+					// hide icons
+					//
+
+					i {
+						display: none;
+					}
+				}
+
+				//
+				// hide help menus
+				//
+
+				&.help {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.menu-bar {
+		text-align: center;
+	}
+}
+
+//
+// IE / Edge Compatibility
+//
+
+[browser="explorer"], [browser="edge"] {
+	.menu-bar {
+		max-height: 30px;
+	}
+}

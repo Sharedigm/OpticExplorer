@@ -1,0 +1,94 @@
+/******************************************************************************\
+|                                                                              |
+|                                _projects.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$pager-margin: 10px;
+$task-margin: 10px;
+
+//
+// styles
+//
+
+.project:not(.item) {
+
+	//
+	// top down tasks
+	//
+
+	&:not(.bottom-up) {
+		display: flex;
+		flex-direction: column;
+
+		.tasks {
+			flex-grow: 1;
+		}
+
+		.pager {
+			margin: $pager-margin;
+		}
+	}
+
+	//
+	// bottom up tasks
+	//
+
+	&.bottom-up {
+		display: flex;
+		flex-direction: column-reverse;
+		margin-top: $task-margin;
+
+		.pager {
+			margin: $pager-margin;
+		}
+
+		.new-task {
+			margin-bottom: $task-margin;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	.project:not(.item) {
+
+		//
+		// tasks
+		//
+
+		.task.item {
+			> .tile + .info {
+
+				.title {
+					display: inline;
+				}
+
+				.details {
+					display: inline;
+				}
+			}
+		}
+	}
+}	

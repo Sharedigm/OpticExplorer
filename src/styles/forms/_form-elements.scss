@@ -1,0 +1,159 @@
+/******************************************************************************\
+|                                                                              |
+|                             _form-elements.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$round-input-border-radius: 15px;
+$rounded-input-border-radius: 5px;
+
+//
+// styles
+//
+
+input {
+	&:focus {
+		outline: none;
+	}
+}
+
+//
+// required form elements
+//
+
+:not(input).required:after {
+	content: "*";
+	margin-left: 5px;
+}
+
+//
+// color inputs
+//
+
+.controls input[type="color"] {
+	vertical-align: sub;
+	border: none;
+}
+
+//
+// select inputs
+//
+
+select {
+	padding: 0 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: unset;
+	color: black;
+	background: white;
+
+	// remove gloss from selectors (Safari)
+	//
+	-webkit-appearance: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+table select {
+	padding: 2px 10px;
+	margin: -2px 0px;
+}
+
+//
+// file inputs
+//
+
+input[type="file"] {
+	display: inline-block;
+	padding: 3px 10px;
+	width: auto;
+	white-space: nowrap;
+	overflow: hidden;
+
+	&::-webkit-file-upload-button {
+		display: none;
+	}
+}
+
+//
+// text inputs
+//
+
+input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"] {
+	font-size: 1em;
+	padding: 10px;
+}
+
+//
+// number inputs
+//
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+
+	// hide spinners
+	//
+	display: none;
+}
+
+input[type="number"] {
+
+	// hide spinners
+	//
+	 -moz-appearance: textfield;
+}
+
+// Add file name only if data attribute is set.
+// This addresses a Safari specific problem with
+// not displaying the filenames of file inputs.
+//
+input[data-file]::after {
+	content: attr(data-file);
+}
+
+input[type=file]::-webkit-file-upload-button {
+	display: none;
+}
+
+//
+// select borders
+//
+
+.round {
+	select {
+		border-radius: $round-input-border-radius;
+	}
+}
+
+.rounded {
+	select {
+		border-radius: $rounded-input-border-radius;
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	select {
+		border-radius: 15px;
+	}
+}

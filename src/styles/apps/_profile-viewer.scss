@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                             _profile-viewer.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// styles
+//
+
+.profile-viewer.app {
+	.body, .body-region {
+		> .contents {
+			.mainbar {
+
+				.user-panels {
+					position: relative;
+					padding: 10px;
+					overflow: auto;
+				}
+			}
+		}
+	}
+}
+
+//
+// non-mobile styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.profile-viewer.app {
+		.body > .contents {
+			.mainbar {
+				td.sender, td.recipient {
+					width: 33%;
+				}
+			}
+		}
+	}
+}

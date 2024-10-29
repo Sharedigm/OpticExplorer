@@ -1,0 +1,523 @@
+/******************************************************************************\
+|                                                                              |
+|                                _layout.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$border-width: 1px;
+
+//
+// styles
+//
+
+body {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+
+	> svg {
+		position: absolute;
+	}
+}
+
+#header {
+	min-height: 40px;
+	position: relative;
+	z-index: 1;
+}
+
+#main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	z-index: 0;
+
+	// always use bounce scrolling
+	//
+	-webkit-overflow-scrolling: touch;
+
+	// loading graphic
+	//
+	> .loading {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		img {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			top: 50%;
+			left: 50%;
+			margin-left: -15px;
+			margin-top: -15px;
+		}
+
+		.message {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			margin-top: 60px;
+			margin-left: -25%;
+			position: relative;
+			text-align: center;
+		}
+	}
+}
+
+//
+// expand to container
+//
+
+.full-screen {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.full-size {
+	width: 100%;
+	height: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.full-size.overlay {
+	position: absolute;
+	top: 0;
+}
+
+//
+// fit container
+//
+
+.fit.width {
+	width: 100%;
+	height: auto;
+}
+
+.fit.height {
+	width: auto;
+	height: 100%;
+}
+
+.fit.size {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.screen {
+	top: 50px;
+	width: 100%;
+	height: 100%;
+}
+
+//
+// alignment
+//
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.left.aligned {
+	text-align: left;
+}
+
+.center.aligned {
+	text-align: center;
+}
+
+.right.aligned {
+	text-align: right;
+}
+
+.middle.aligned {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+//
+// formatting
+//
+
+.inline {
+	display: inline-block;
+}
+
+.containing {
+	overflow: auto;
+}
+
+.unpadded {
+	padding: 0;
+}
+
+.unbacked {
+	background: none !important;
+}
+
+.index {
+	counter-reset: rule;
+
+	.row {
+		div:first-child {
+			text-align: center;
+			
+			i {
+				font-size: 50px;
+				width: 100px;
+			}
+		}
+	}
+
+	ol > li {
+		list-style: none;
+
+		// use sequential numbering
+		//
+		& :before {
+			counter-increment: rule;
+			content: counter(rule) ". ";
+			float: left;
+			width: 30px;
+			text-align: left;
+		}
+	}
+
+	/*
+	.item-tree {
+		.info {
+			.expander + .icon {
+				i {
+					font-size: 20px;
+					margin: 0;
+					margin-left: 10px;
+				}
+
+				& + .name {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+	*/
+}
+
+.group {
+	margin-left: 50px;
+}
+
+.content {
+	padding: 10px;
+}
+
+.layers {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+//
+// borders
+//
+
+.round {
+	.content {
+		border-radius: 5px;
+	}
+}
+
+.rounded {
+	.content {
+		border-radius: 3px;
+	}
+}
+
+//
+// appended notes
+//
+
+.notes {
+	margin-top: 15px;
+	
+	:not(input).required:after {
+		margin-right: 5px;
+	}
+}
+
+//
+// ruling
+//
+
+hr {
+	border-top: 0;
+}
+
+.user-profile-header {
+	.cover.photo {
+		pointer-events: none;
+	}
+
+	.buttons {
+		pointer-events: auto;
+	}
+
+	.alternate.buttons {
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		margin: 10px;
+	}
+
+	hr {
+		// width: 50%;
+		margin: 10px auto;
+	}
+}
+
+body.icon-spinning {
+	.profile.photo {
+		.buttons {
+			display: none;
+		}
+	}
+}
+
+body:not(.icon-spinning) {
+	.user-profile-header {
+		.alternate.buttons {
+			display: none;
+		}
+	}	
+}
+
+//
+// scrolling
+//
+
+.scrollable {
+	overflow: auto;
+}
+
+.horizontally.scrollable {
+	width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.vertically.scrollable {
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+
+	// always use bounce scrolling
+	//
+	-webkit-overflow-scrolling: touch;
+}
+
+//
+// wells
+//
+
+.well {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	margin-bottom: 10px;
+
+	&.emphasis {
+		width: 75%;
+		margin: 25px auto;
+	}
+
+	h3:first-child {
+		margin-top: 10px;
+	}
+}
+
+.round .well {
+	border-radius: 15px;
+}
+
+.rounded .well {
+	border-radius: 7px;
+}
+
+.square .well {
+	border-radius: 0;
+}
+
+//
+// aspect ratio control
+//
+
+@mixin fixed-aspect-ratio($ratio: 66%) {
+	width: 100%;
+	padding-top: $ratio;
+	position: relative;
+
+	> .inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+@mixin fixed-aspect-ratio-50 {
+	@include fixed-aspect-ratio(50%);
+}
+
+@mixin fixed-aspect-ratio-66 {
+	@include fixed-aspect-ratio(66%);
+}
+
+@mixin fixed-aspect-ratio-75 {
+	@include fixed-aspect-ratio(75%);
+}
+
+@mixin fixed-aspect-ratio-100 {
+	@include fixed-aspect-ratio(100%);
+}
+
+//
+// multi column layout
+//
+
+.multi-region {
+	display: flex;
+	border-radius: 0;
+
+	.side.panel {
+		min-width: 25%;
+		margin-right: 15px;
+	}
+}
+
+.flex-row {
+	display: flex; 
+	flex-direction: row;
+}
+
+//
+// search results
+//
+
+#search + #results {
+	margin-top: 15px;
+}
+
+//
+// remove margins for small window sizes
+//
+
+@media (max-width: 800px) {
+	.container {
+		width: 100%;
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	
+	.content {
+		padding: 10px;
+		// background: none !important;
+	}
+
+	.col-xs-12 {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.multi-region {
+		flex-direction: column;
+
+		.side.panel {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+//
+// override Bootstrap large container width
+//
+
+@media (min-width:1200px) {
+	.container {
+		width: 970px;
+	}
+}
+
+//
+// IE / Edge Compatibility
+//
+
+[browser="explorer"], [browser="edge"] {
+	-ms-overflow-style: none;
+	
+	#main {
+		-ms-overflow-style: none;
+	}
+
+	.fit.width {
+		height: none;
+	}
+
+	.fit.height {
+		width: none;
+	}
+
+	.fit.size {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+}

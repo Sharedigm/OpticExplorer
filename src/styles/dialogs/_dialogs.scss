@@ -1,0 +1,265 @@
+/******************************************************************************\
+|                                                                              |
+|                                _dialogs.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$full-screen-backdrop-color: rgba(black, 50%);
+$full-screen-backdrop-blur: 50px;
+$full-screen-backdrop-filter: blur($full-screen-backdrop-blur);
+
+//
+// styles
+//
+
+.modal {
+	.modal-dialog.ui-resizable {
+
+		.modal-body {
+			display: flex;
+			flex-direction: column;
+			max-height: 100%;
+			overflow: auto;
+		}
+
+		.window-size.toolbar {
+			margin: 0 5px;
+		}
+	}
+}
+
+//
+// full screen dialogs
+//
+
+.full-screen {
+	.fullscreen.btn {
+		display: none;
+	}
+}
+
+.modal.progressive {
+	.amount {
+		div {
+			display: inline-block; 
+			text-align: right;
+			white-space: nowrap;
+		}
+	}
+}
+
+//
+// maximized dialogs
+//
+
+.modal-dialog.maximized {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100% !important;
+	height: 100% !important;
+	border: none;
+	border-radius: 0;
+	overflow: hidden;
+
+	.modal-header {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.modal-content {
+		border-radius: 0;
+		
+		.modal-body {
+			display: flex;
+			border-radius: 0;
+
+			.footer-bar {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		.window-size.toolbar {
+			.shrink-window, .grow-window {
+				display: none;
+			}
+		}
+	}
+}
+
+.overlay-controls {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1500;
+
+	.content {
+		padding: 5px;
+		
+		button + button,
+		button + .tooltip + button {
+			margin-left: 10px;
+		}
+	}
+}
+
+//
+// full screen dialogs
+//
+
+.modal.full-screen {
+	.modal-dialog {
+
+		.modal-header {
+			display: none;
+		}
+
+		.modal-content {
+			max-height: 100% !important;
+		}
+	}
+
+	&.transparent {
+		.modal-dialog {
+			background: $full-screen-backdrop-color !important;
+			backdrop-filter: $full-screen-backdrop-filter;
+			-webkit-backdrop-filter: $full-screen-backdrop-filter;
+		
+			.modal-content {
+				background: none !important;
+			}
+		}
+	}
+}
+
+//
+// desktop dialogs
+//
+
+body[device="desktop"] {
+
+	// leave room for scroll bars
+	//
+	.overlay-controls {
+		margin: 10px;
+	}
+}
+
+//
+// mobile dialogs
+//
+
+body[device="tablet"], body[device="phone"] {
+	.modal {
+		.modal-dialog {
+			.window-size.toolbar {
+				.shrink-window, .grow-window {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+//
+// small dialogs
+//
+
+//@media (max-width: $screen-sm-min) {
+@media (max-width:650px) {
+	.dialog-region {
+		.modal-dialog {
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
+
+//
+// extra small dialogs
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.modal {
+		.modal-dialog {
+
+			// maximize
+			//
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			max-width: 100%;
+			border-radius: 0;
+			overflow: hidden;
+
+			margin: 0 !important;
+			height: 100% !important;
+
+			.modal-header {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+
+				.handle {
+					visibility: hidden;
+				}
+
+				// hide unmaximize button
+				//
+				.buttons {
+					button.maximize,
+					button.unmaximize {
+						display: none;
+					}
+				}
+			}
+
+			.modal-body {
+				border-radius: 0;
+				overflow: auto;
+
+				.footer-bar {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+
+			//
+			// mobile resizable dialogs
+			//
+
+			.modal-dialog.ui-resizable {
+				min-width: 360px;
+			}
+		}
+	}
+}
+
+//
+// ugly Google picker compatibility
+//
+
+.picker-dialog {
+	z-index: 1500 !important;
+}

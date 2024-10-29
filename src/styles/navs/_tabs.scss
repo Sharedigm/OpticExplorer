@@ -1,0 +1,614 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _tabs.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$icon-size: icons.$font-size;
+$shadow: 3px 3px 7px rgba(black, 33%);
+$close-button-size: 13px;
+$close-button-font-size: 11px;
+$min-width: 10%;
+$max-width: 33.33%;
+$height: 27px;
+$mobile-max-width: 50%;
+$round-border-radius: 10px;
+$rounded-border-radius: 5px;
+
+//
+// tabs
+//
+
+ul.nav-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+
+	//
+	// tab borders
+	//
+
+	&.tabs-attached {
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+		border-color: unset;
+	}
+
+	&:not(.tabs-attached) {
+		border-bottom: none;
+	}
+
+	//
+	// single tabs
+	//
+
+	/*
+	> li:only-child {
+		display: none;
+	}
+	*/
+
+	//
+	// all tabs
+	//
+
+	> li {
+		display: inline-block;
+		border: none;
+		margin-bottom: 0;
+
+		> a {
+			display: flex;
+			height: 100%;
+			padding: 0 5px;
+			margin-bottom: 0;
+			margin-right: 0;
+			white-space: nowrap;
+			justify-content: center;
+			line-height: $height;
+
+			// display text ellipsis
+			//
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			// disable default selection
+			//
+			@include selection.unselectable;
+
+			i {
+				flex-shrink: 0;
+				font-size: $icon-size;
+				margin: auto 0;
+				margin-right: 5px;
+			}
+
+			.icon {
+				display: flex;
+				margin-right: 5px;
+
+				.thumbnail {
+					width: 25px;
+					height: 25px;
+					margin: auto;
+					background-size: cover;
+				}
+			}
+
+			.name {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin: auto 0;
+			}
+
+			i.fa-times, i.fa-xmark {
+				font-size: $close-button-font-size;
+				line-height: $close-button-font-size;
+				width: $close-button-size;
+				height: $close-button-size;
+				border-width: 1px;
+				border-style: solid;
+				border-color: transparent;
+				vertical-align: top;
+				text-align: center;
+				margin: auto 0;
+				margin-left: 5px;
+				margin-right: 0;
+				display: none;
+			}
+
+			label {
+				display: inline-block;
+				margin: 0;
+				max-width: 200px;
+				vertical-align: bottom;
+				font-weight: normal;
+
+				// display text ellipsis
+				//
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.badges {
+				margin: auto 5px;
+			}
+		}
+
+		//
+		// Bootstrap overrides
+		//
+
+		> a, > a:focus {
+			border-width: 1px;
+			border-style: solid;
+			border-color: unset;
+			outline: none;
+
+			&:hover {
+				border-width: 1px;
+				border-style: solid;
+				border-color: unset;
+				outline: none;
+			}
+		}
+
+		&:last-child {
+			> a {
+				margin-right: 0;
+			}
+		}
+
+		//
+		// active tabs
+		//
+
+		&.active {
+			> a, > a:focus {
+				color: white;
+				background: black;
+				outline: none;
+				border-color: black;
+
+				i.fa-times, i.fa-xmark {
+					display: inline-block;
+					cursor: pointer;
+				}
+
+				&:hover {
+					color: white;
+					background: black;
+					outline: none;
+					border-color: black;
+
+					i.fa-times, i.fa-xmark {
+						display: inline-block;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		//
+		// inactive tabs
+		//
+
+		&:not(.active) {
+			> a, > a:focus {
+				cursor: pointer;
+
+				label {
+					cursor: inherit;
+				}
+
+				&:hover {
+					cursor: pointer;
+
+					label {
+						cursor: inherit;
+					}
+				}
+			}
+		}
+	}
+
+	&.compact {
+		> li {
+			> a {
+				padding: 5px 0;
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+//
+// tab borders
+//
+
+.round-tabs,
+.round.auto-corner-tabs {
+	ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: $round-border-radius;
+
+				i {
+					border-radius: calc($close-button-size / 2);
+				}
+
+				.icon {
+					.thumbnail {
+						border-radius: 7px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.rounded-tabs,
+.rounded.auto-corner-tabs {
+	ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: $rounded-border-radius;
+
+				i {
+					border-radius: 3px;
+				}
+
+				.icon {
+					.thumbnail {
+						border-radius: 3px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.square-tabs,
+.square.auto-corner-tabs {
+	ul.nav-tabs {
+		> li {
+			> a {
+				border-radius: 0;
+
+				i {
+					border-radius: 0;
+				}
+
+				.icon {
+					.thumbnail {
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// tab alignment
+//
+
+.left-tabs, .center-tabs {
+	div:not(.tabs.vertical), form {
+		> ul.nav-tabs {
+			> li:last-child {
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+.right-tabs, .center-tabs {
+	div:not(.tabs.vertical), form {
+		> ul.nav-tabs {
+			> li:first-child {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+//
+// tab attachment
+//
+
+.tabs-attached,
+.tabs-attached.auto-corner-tabs {
+	div:not(.tabs.vertical), form {
+		> ul.nav-tabs {
+			> li {
+				> a {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+body.tabs-attached {
+	:not(.vertical) > ul.nav-tabs {
+		border-bottom-width: 2px;
+		border-bottom-style: solid;
+
+		> li {
+			margin-bottom: 0;
+
+			a {
+				border-bottom: none;
+			}
+		}
+	}
+}
+
+//
+// tab expansion
+//
+
+body.tabs-expandable {
+	:not(.vertical) > ul.nav-tabs {
+		> li {
+			min-width: $min-width;
+			max-width: $max-width;
+			flex-grow: 1;
+			text-align: center;
+		}
+	}
+
+	&.center-tabs {
+		:not(.vertical) > ul.nav-tabs {
+			> li {
+				margin: auto;
+			}
+		}
+	}
+}
+
+//
+// tab width
+//
+
+body.tabs-expandable {
+	:not(.vertical) > ul.nav-tabs.auto-width {
+		> li {
+			min-width: none !important;
+			max-width: none !important;
+		}
+	}
+}
+
+//
+// tab margins
+//
+
+body.tab-margins {
+	ul.nav-tabs {
+		> li + li {
+			padding-left: 2px;
+		}
+	}
+}
+
+body:not(.tab-margins):not(.tabs-minimal) {
+	:not(.vertical) > ul.nav-tabs {
+		> li {
+
+			&:not(:last-child) {
+				> a {
+					border-right-width: 0;
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+				}
+			}
+
+			&:not(:first-child) {
+				> a {
+					border-left-width: 0;
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+//
+// tab shadows
+//
+
+body:not(.binary):not(.flat-tabs):not(.flat.auto-tabs) {
+
+	&.tabs-minimal {
+		ul.nav-tabs {
+			> li.active {
+				> a[role="tab"] {
+					box-shadow: $shadow;
+				}
+			}
+		}
+	}
+
+	&:not(.tabs-minimal) {
+		ul.nav-tabs {
+			> li {
+				> a[role="tab"] {
+					box-shadow: $shadow;
+				}
+			}
+		}
+	}
+}
+
+//
+// flush tabs
+//
+
+:not(.menu-bar):not(.button-bar) > .nav-tabs.flush {
+	min-height: calc($height + 2px);
+	margin-bottom: 0;
+	border-bottom-width: 1px;
+}
+
+//
+// inset tabs
+//
+
+.nav-tabs.inset {
+	border: none;
+}
+
+//
+// tabbed content
+//
+
+.tabbed-content {
+	display: flex;
+	flex-direction: column;
+
+	// let tabs handle overflow
+	//
+	overflow: hidden !important;
+
+	> .tabs {
+		ul {
+			max-height: 91px;
+			overflow: auto;
+		}
+	}
+
+	> .tab-content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		> .toolbar {
+			position: absolute;
+		}
+
+		.panes {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 0;
+
+			.tab-pane {
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				&:not(.active) {
+					width: 0;
+					height: 0;
+				}
+			}
+		}
+
+		> .tab-pane {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	ul.nav-tabs.collapsed-xs {
+		> li {
+			> a {
+				i {
+					margin-left: 5px;
+				}
+
+				span {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+//
+// tab icons
+//
+
+body[device="desktop"] {
+	&.hide-tab-icons {
+		ul.nav-tabs {
+			> li {
+				> a[role="tab"] {
+					i:not(.fa-times):not(.fa-xmark) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	&.tabs-expandable {
+		:not(.vertical) > ul.nav-tabs {
+			> li {
+				max-width: $max-width;
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	ul.nav-tabs {
+		> li {
+			> a {
+				padding: 5px;
+			}
+		}
+	}
+
+	&.tabs-expandable {
+		:not(.vertical) > ul.nav-tabs {
+			> li {
+				max-width: $mobile-max-width;
+			}
+		}
+	}
+}

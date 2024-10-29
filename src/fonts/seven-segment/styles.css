@@ -1,0 +1,10 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Seven Segment';
+	src: url('Seven-Segment.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

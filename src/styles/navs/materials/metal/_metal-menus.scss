@@ -1,0 +1,60 @@
+/******************************************************************************\
+|                                                                              |
+|                              _metal-menus.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/metal/rounded-metal";
+
+//
+// mixins
+//
+
+@mixin shade($open-color, $hover-color, $active-color) {
+	> li:not(.dropdown-toggle):not(.disabled) {
+
+		&.open > a {
+			@include rounded-metal.shade($open-color);
+		}
+
+		a:hover {
+			@include rounded-metal.shade($hover-color);
+		}
+
+		a:active {
+			@include rounded-metal.shade($active-color);
+		}
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($open-color, $hover-color, $active-color) {
+	> li:not(.dropdown-toggle):not(.disabled) {
+
+		&.open > a {
+			@include rounded-metal.shaded($open-color);
+		}
+
+		a:hover {
+			@include rounded-metal.shaded($hover-color);
+		}
+
+		a:active {
+			@include rounded-metal.shaded($active-color);
+		}
+	}
+}

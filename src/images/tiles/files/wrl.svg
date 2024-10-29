@@ -1,0 +1,17 @@
+<svg 
+	id="wrl-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 30 30" 
+	style="background:slateblue">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(16, 20), scale(0.5), translate(-15, -22.5)">
+		<path d="m23 5 v12.185l-11 5.673v-12.14l9.864-5.19-10.367-5.517-10.331 5.453 9.834 5.23v12.164l-11-5.674v-12.248l.009.005-.009-.019 11.5-6.064 11.5 6.142 z" />
+	</g>
+</svg>

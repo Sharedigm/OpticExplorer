@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _svg.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$selection-opacity: 0.25;
+
+//
+// styles
+//
+
+svg.defs {
+
+	// take out of flow
+	//
+	position: fixed;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	//
+	// selection regions
+	//
+
+	.selection {
+		pointer-events: none;
+		vector-effect: non-scaling-stroke;
+		fill-opacity: $selection-opacity;
+	}
+}

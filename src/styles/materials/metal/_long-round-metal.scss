@@ -1,0 +1,569 @@
+/******************************************************************************\
+|                                                                              |
+|                           _long-round-metal.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+@use "../lighting";
+
+//
+// variables
+//
+
+$highlight-size: 50%;
+$highlight-strength: 100%;
+$highlight-offset: 10%;
+$highlight-width: 10%;
+
+$specular-size: 75%;
+$specular-strength: 100%;
+
+//
+// mixins
+//
+
+@mixin shade($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// left shaded
+		//
+		linear-gradient(to right,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shaded
+		//
+		linear-gradient(to left,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to bottom,
+			lighting.lighten($color, 25%) 0%,
+			lighting.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(var(--light-direction),
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(var(--light-direction),
+			transparent 66%,
+			lighting.lighten($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		lighting.darken($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lighten($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darken($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin vertical-shade($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// top shaded
+		//
+		linear-gradient(to bottom,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// bottom shaded
+		//
+		linear-gradient(to top,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to right,
+			lighting.lighten($color, 25%) 0%,
+			lighting.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to right,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to right,
+			transparent 66%,
+			lighting.lighten($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		lighting.darken($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lighten($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darken($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+//
+// multilayer mixins
+//
+
+@mixin multilayer-shade($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// left shaded
+		//
+		linear-gradient(to right,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shaded
+		//
+		linear-gradient(to left,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to bottom,
+			lighting.lighten($color, 25%) 0%,
+			lighting.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to bottom,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat;
+
+	// diffuse
+	//
+	background-color: lighting.darken($color, 50%);
+
+	// overlay layer
+	//
+	position: relative;
+	overflow: hidden;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		mix-blend-mode: screen;
+
+		background:
+
+			// left shaded
+			//
+			linear-gradient(to right,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// right shaded
+			//
+			linear-gradient(to left,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(var(--light-direction),
+				transparent 66%,
+				lighting.lighten($color, 10%) 100%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lighten($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darken($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin vertical-multilayer-shade($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// top shaded
+		//
+		linear-gradient(to bottom,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// bottom shaded
+		//
+		linear-gradient(to top,
+			lighting.darken($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to right,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat;
+
+	// diffuse
+	//
+	background-color: lighting.darken($color, 50%);
+
+	// overlay layer
+	//
+	position: relative;
+	overflow: hidden;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		mix-blend-mode: screen;
+
+		background:
+
+			// top shaded
+			//
+			linear-gradient(to bottom,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// bottom shaded
+			//
+			linear-gradient(to top,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to right,
+				lighting.lighten($color, 25%) 0%,
+				lighting.lighten($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+				lighting.lighten($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+				transparent calc($highlight-size + $border-width)) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to right,
+				transparent 66%,
+				lighting.lighten($color, 10%) 100%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lighten($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darken($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// left shaded
+		//
+		linear-gradient(to right,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shaded
+		//
+		linear-gradient(to left,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to bottom,
+			lighting.lightened($color, 25%) 0%,
+			lighting.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(var(--light-direction),
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(var(--light-direction),
+			transparent 66%,
+			lighting.lighten($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		lighting.darkened($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lightened($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darkened($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin vertical-shaded($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// top shaded
+		//
+		linear-gradient(to bottom,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// bottom shaded
+		//
+		linear-gradient(to top,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to right,
+			lighting.lightened($color, 25%) 0%,
+			lighting.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to right,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat,
+
+		// reflected
+		//
+		linear-gradient(to right,
+			transparent 66%,
+			lighting.lightened($color, 10%) 100%) no-repeat,
+
+		// diffuse
+		//
+		lighting.darken($color, 50%);
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lightened($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darkened($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+//
+// multilayer mixins
+//
+
+@mixin multilayer-shaded($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// left shaded
+		//
+		linear-gradient(to right,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// right shaded
+		//
+		linear-gradient(to left,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// highlight
+		//
+		linear-gradient(to bottom,
+			lighting.lightened($color, 25%) 0%,
+			lighting.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+			lighting.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+			transparent calc($highlight-size + $border-width)) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to bottom,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat;
+
+	// diffuse
+	//
+	background-color: lighting.darkened($color, 50%);
+
+	// overlay layer
+	//
+	position: relative;
+	overflow: hidden;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		mix-blend-mode: screen;
+
+		background:
+
+			// left shaded
+			//
+			linear-gradient(to right,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// right shaded
+			//
+			linear-gradient(to left,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(var(--light-direction),
+				transparent 66%,
+				lighting.lightened($color, 10%) 100%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lightened($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darkened($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}
+
+@mixin vertical-multilayer-shaded($color: white, $border-radius: 50%, $border-style: outset, $border-width: 2px) {
+	background:
+
+		// top shaded
+		//
+		linear-gradient(to bottom,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// bottom shaded
+		//
+		linear-gradient(to top,
+			lighting.darkened($color, 40%) 0%,
+			transparent $border-radius) no-repeat,
+
+		// specular
+		//
+		linear-gradient(to right,
+			transparent 0%,
+			$color 25%,
+			transparent $specular-size) no-repeat;
+
+	// diffuse
+	//
+	background-color: lighting.darkened($color, 50%);
+
+	// overlay layer
+	//
+	position: relative;
+	overflow: hidden;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		pointer-events: none;
+		mix-blend-mode: screen;
+
+		background:
+
+			// top shaded
+			//
+			linear-gradient(to bottom,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// bottom shaded
+			//
+			linear-gradient(to top,
+				black 0%,
+				transparent $border-radius) no-repeat,
+
+			// highlight
+			//
+			linear-gradient(to right,
+				lighting.lightened($color, 25%) 0%,
+				lighting.lightened($color, 75%) calc($highlight-offset - $highlight-width / 2 + $border-width),
+				lighting.lightened($color, 75%) calc($highlight-offset + $highlight-width / 2 + $border-width),
+				transparent calc($highlight-size + $border-width)) no-repeat,
+
+			// reflected
+			//
+			linear-gradient(to right,
+				transparent 66%,
+				lighting.lightened($color, 10%) 100%) no-repeat;
+	}
+
+	// borders
+	//
+	@if ($border-style == inset) {
+		border-color: lighting.lightened($color, 10%);
+	} @else if ($border-style == outset) {
+		border-color: lighting.darkened($color, 10%);
+	} @else if ($border-style != none) {
+		border-color: $color;
+	}
+}

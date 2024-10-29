@@ -1,0 +1,72 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dialog-headers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$header-height: 30px;
+$thin-header-height: 25px;
+$thick-header-height: 35px;
+
+//
+// styles
+//
+
+.modals {
+
+	.modal {
+		.modal-dialog {
+			.modal-header {
+				height: $header-height;
+			}
+
+			.modal-content {
+				max-height: calc(100% - $header-height);
+			}
+		}
+	}
+
+	&.small-buttons.thin-headers,
+	&.medium-buttons.thin-headers {
+		.modal {
+			.modal-dialog {
+				.modal-header {
+					height: $thin-header-height;
+				}
+
+				.modal-content {
+					max-height: calc(100% - $thin-header-height);
+				}
+			}
+		}
+	}
+
+	&.thick-headers {
+		.modal {
+			.modal-dialog {
+				.modal-header {
+					height: $thick-header-height;
+				}
+
+				.modal-content {
+					max-height: calc(100% - $thick-header-height);
+				}
+			}
+		}
+	}
+}

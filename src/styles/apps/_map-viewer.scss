@@ -1,0 +1,136 @@
+/******************************************************************************\
+|                                                                              |
+|                                _map-viewer.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.map-viewer.app {
+
+	.header-bar {
+		.search-bar {
+			.search-by-coords {
+				input {
+					// max-width: 100px;
+				}
+			}
+		}
+	}
+
+	.sidebar {
+		.panel:not(:first-child) {
+			.geolocation.badge, .geoposition.badge {
+				display: none;
+			}
+		}
+	}
+
+	.mainbar {
+		.geolocation.badge, .geoposition.badge {
+			display: none;
+		}
+	}
+
+	// crosshairs overlay
+	//
+	.crosshairs {
+		position: absolute;
+		text-align: center;
+		left: 50%;
+		top: 50%;
+		width: 25px;
+		height: 25px;
+		margin-left: -12px;
+		margin-top: -12px;
+		pointer-events: none;
+		background: rgba(white, 50%);
+
+		img {
+			width: 25px;
+			height: 25px;
+		}
+
+		/*
+		&::after {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			content: "+";
+			font-family: "Font Awesome";
+			font-size: 25px;
+			line-height: 25px;
+			color: black;
+			text-align: center;
+			box-shadow: none;
+		}
+		*/
+	}
+}
+
+.info-bar {	
+	.latitude, .longitude {
+		width: 60px;
+	}
+}
+
+//
+// crosshair borders
+//
+
+.round .map-viewer.app {
+
+	// crosshairs overlay
+	//
+	.crosshairs {
+		border-radius: 12px;
+	}
+}
+
+.rounded .map-viewer.app {
+
+	// crosshairs overlay
+	//
+	.crosshairs {
+		border-radius: 5px;
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.info-bar {	
+		.latitude, .longitude {
+			width: 50px;
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+[browser="firefox"] {
+	.map-viewer.app {
+		.crosshairs {
+			&::after {
+				line-height: 25px;
+			}
+		}
+	}
+}

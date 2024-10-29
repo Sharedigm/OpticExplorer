@@ -1,0 +1,386 @@
+/******************************************************************************\
+|                                                                              |
+|                               _form-groups.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// variables
+//
+
+$controls-height: 30px;
+
+//
+// styles
+//
+
+.form-group {
+
+	//
+	// margins
+	//
+
+	&:first-child {
+		margin-top: 5px;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	& + table {
+		margin-top: 10px;
+	}
+
+	//
+	// form group controls
+	//
+
+	.controls {
+		min-height: $controls-height;
+
+		//
+		// control items
+		//
+
+		.control-inline,
+		.checkbox-inline,
+		.radio-inline,
+		.color-inline,
+		.range-input {
+			display: inline-block;
+		}
+
+		.control-inline,
+		.checkbox-inline,
+		.radio-inline,
+		.range-input {
+			margin: 5px 0;
+			margin-right: 10px;
+
+			label {
+				display: inline;
+				padding-top: 0;
+
+				&.left {
+					float: left; 
+					text-align: right; 
+					margin-right: 10px;
+				}
+				&.right {
+					float: right; 
+					text-align: left; 
+					margin-left: 10px;
+				}
+			}
+
+			input[type="text"], input[type="number"] {
+				height: 25px;
+				line-height: 15px;
+				padding: 5px;
+			}
+
+			//
+			// range inputs
+			//
+
+			input[type="range"] {
+				width: 150px;
+				padding: 0;
+			}
+		}
+
+		> i {
+			position: relative;
+			line-height: 30px;
+			vertical-align: middle;
+		}
+
+		> select {
+			height: 30px;
+			line-height: 30px;
+			float: left;
+			border-width: 1px;
+			border-style: solid;
+			margin-right: 10px;
+
+			+ label {
+				margin-top: 7px;
+			}
+		}
+
+		//
+		// form buttons
+		//
+
+		div + button.btn {
+			margin-left: 10px;
+			margin-top: 2px;
+		}
+
+		//
+		// items
+		//
+
+		.files, .connections {
+			display: inline-block; 
+			min-height: 100px; 
+			float: left;
+		}
+	}
+
+	//
+	// form labels
+	//
+
+	.form-label, .control-label {
+		vertical-align: top;
+		padding-top: 5px;
+		padding-right: 15px;
+		line-height: 15px;
+
+		//
+		// form label icons
+		//
+
+		i:not(.form-icon) {
+			margin-right: 5px;
+		}
+
+		/*
+		&::after {
+			content: ":"
+		}
+		*/
+	}
+
+	//
+	// form group buttons
+	//
+
+	.buttons {
+		margin-top: 10px;
+		margin-bottom: -10px;
+
+		.btn {
+			margin: 2px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.hide-label-icons {
+
+	label {
+		i {
+			display: none;
+		}
+	}
+
+	.form-group {
+		.form-label:not(.form-label-static), .control-label {
+			i {
+				display: none;
+			}
+		}
+	}
+}
+
+//
+// sequential forms
+//
+
+form + form {
+	.form-group:first-child {
+		margin-top: 0;
+	}
+}
+
+//
+// horizontal form groups
+//
+
+.form-horizontal .form-group {
+
+	//
+	// labels
+	//
+
+	.form-label, .control-label {
+		float: left;
+		text-align: right;
+		width: 25%;
+		line-height: 20px;
+	}
+
+	//
+	// controls
+	//
+
+	> .controls, > .static-controls, > .form-control, > .form-control-static, > .input-group {
+		display: inline-block;
+		vertical-align: middle;
+		width: 50%;
+
+		&.wide {
+			width: 75%;
+		}
+	}
+
+	>.form-control-static {
+		padding-top: 0;
+	}
+
+	.radio, .checkbox, .radio-inline, .checkbox-inline, .color-inline {
+		padding-top: 0;
+	}
+}
+
+//
+// vertically scrollable forms groups
+//
+
+/*
+.vertically.scrollable form {	
+	.form-group:first-child {
+		margin-top: 0;
+	}
+}
+*/
+
+//
+// row form groups
+//
+
+//
+// multi column form group lists
+//
+
+.multi-column.row {
+	.panel .content {
+
+		.form-group {
+			margin-top: 5px;
+			margin-bottom: 5px;
+			line-height: 25px;
+		}
+
+		// first form group
+		//
+		.form-group:first-child,
+		.buttons + .form-group {
+			margin-top: 0;
+		}
+
+		// last form group
+		//
+		.form-group:last-child {
+			margin-bottom: 0;
+		}
+
+		/*
+		.list form:first-of-type {
+		 	min-height: 75px;
+		}
+		*/
+
+		.list:empty {
+		 	display: none;
+		}
+	}
+
+	/*
+	.panel .content:not(:empty) {
+		min-height: 75px;
+	}
+	*/
+
+	.panel .content:empty {
+		display: none;
+	}
+}
+
+//
+// small form group lists
+//
+
+@media (max-width: variables.$screen-md-min) {
+	.list {
+		form {
+
+			// first form group
+			//
+			:not(.details) .form-group {
+
+				.form-label {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	form.form-horizontal {
+		.form-group {
+
+			.form-label,
+			.control-label {
+				width: 100%;
+				text-align: left;
+			}
+
+			.form-control-static {
+				width: 100%;
+			}
+
+			label.error {
+				margin-left: 0;
+			}
+		}
+	}
+
+	form.form-horizontal.inline {
+		.form-group {
+
+			.form-label,
+			.control-label {
+				float: left;
+				width: 25%;
+				text-align: right;
+			}
+
+			.form-control-static {
+				width: 75% !important;
+			}
+		}
+	}
+}
+
+//
+// tablet forms
+//
+
+body[device="tablet"] {
+	.form-group {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}

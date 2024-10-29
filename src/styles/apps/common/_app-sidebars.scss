@@ -1,0 +1,388 @@
+/******************************************************************************\
+|                                                                              |
+|                              _app-sidebars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../layout/panels";
+
+//
+// variables
+//
+
+$padding: 10px;
+
+//
+// styles
+//
+
+.sidebar {
+	position: relative;
+	overflow: auto;
+
+	.panels {
+		padding: $padding;
+
+		// allow just a bit of 
+		// extra vertical space
+		//
+		// padding-bottom: 5px;
+
+		.header {
+			display: flex;
+			
+			label {
+				margin: 5px;
+				margin-right: 0;
+			}
+
+			.buttons {
+				margin: 0;
+				padding: 2px 5px;
+				flex-grow: 1;
+				text-align: right;
+
+				.btn {
+					margin: 0;
+				}
+			}
+		}
+
+		label {
+			i {
+				width: 15px;
+				text-align: center;
+				margin: 0 2px;
+				margin-right: 10px;
+			}
+
+			& + button {
+				margin: 2px 5px;
+				float: right;
+			}
+		}
+		
+		.panel {
+			padding: 2px;
+			overflow: visible;
+			margin-bottom: 0;
+	
+			border-width: 0px;
+			border-style: solid;
+			border-color: unset;
+
+			> .item-info {
+				/*
+				margin: auto;
+				display: flex;
+				justify-content: center;
+				*/
+
+				.icon-grid {
+					margin-top: 15px;
+					margin-bottom: 30px;
+				}
+			}
+
+			.items {
+				position: relative;
+
+				> :first-child {
+					padding: 0;
+				}
+
+				.icon-grid, .tile-grid {
+					text-align: center;
+				}
+
+				> .card-grid {
+					padding: 10px;
+
+					.empty {
+						padding: 2px;
+					}
+				}
+			}
+
+			ul.list {
+				li {
+					text-align: left;
+					list-style-type: none;
+					max-height: 30px;
+					overflow: hidden;
+					white-space: nowrap;
+
+					i {
+						width: 20px;
+						line-height: 20px;
+						margin-right: 5px;
+					}
+
+					.badge {
+						float: right;
+						margin: 5px;
+					}
+
+					.value {
+						float: right;
+
+						i {
+							line-height: 1em;
+							vertical-align: sub;
+							margin: 0;
+						}							
+					}
+				}
+			}
+
+			ul.menu {
+				padding-left: 0;
+			}
+
+			.form-horizontal {
+				.control-label, .controls {
+					width: 100%;
+					float: none;
+					text-align: left;
+				}
+			}
+
+			.nav-tabs {
+				margin: 0 10px;
+			}
+
+			.form-group {
+				margin: 5px;
+
+				p {
+					padding: 0 5px;
+				}
+			}
+		}
+
+		//
+		// spacing between (non-empty) wells
+		//
+
+		/*
+		> div:not(:empty):not(:last-child) {
+			margin-bottom: 10px;
+		}
+		*/
+
+		> div:not(:empty) + div:not(:empty) {
+			margin-top: 10px;
+		}
+
+		> div:not(:empty) + div:empty + div:not(:empty) {
+			margin-top: 10px;
+		}
+
+		> div:not(:empty) + div:empty + div:empty + div:not(:empty) {
+			margin-top: 10px;
+		}
+
+		> div:not(:empty) + div:empty + div:empty + div:empty + div:not(:empty) {
+			margin-top: 10px;
+		}
+
+		> div:not(:empty) + div:empty + div:empty + div:empty + div:empty + div:not(:empty) {
+			margin-top: 10px;
+		}
+
+		> div:not(:empty) + div:empty + div:empty + div:empty + div:empty + div:empty + div:not(:empty) {
+			margin-top: 10px;
+		}
+	}
+
+	//
+	// sidebar navigation
+	//
+
+	ul.nav:not(.nav-tabs) {
+		list-style-type: none;
+		
+		li {
+			a {
+				padding: 2px 5px;
+				
+				i {
+					width: 20px;
+					line-height: 20px;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		i.fa-lock {
+			margin-right: 0;
+		}
+	}
+
+	.nav.menu {
+		a {
+			display: flex;
+
+			.name {
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+.mainbar {
+
+	//
+	// bottom bar info lists
+	//
+
+	.sidebar {
+		.item-list {
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+		}
+	}
+}
+
+//
+// app sidebar borders
+//
+
+body.round {
+	.sidebar {
+
+		.header {
+			border-top-left-radius: panels.$round-border-radius;
+			border-top-right-radius: panels.$round-border-radius;
+		}
+
+		.panels {			
+			.panel {
+
+				> .item-info {
+					border-radius: 50%;
+				}
+
+				//
+				// round item lists
+				//
+
+				.item-list {
+					.item:last-child .info {
+						border-bottom-left-radius: panels.$round-border-radius - 1px;
+						border-bottom-right-radius: panels.$round-border-radius - 1px;
+					}
+				}
+
+				//
+				// round nav lists
+				//
+
+				ul:last-child {
+					li:last-child {
+						border-bottom-left-radius: panels.$round-border-radius - 1px;
+						border-bottom-right-radius: panels.$round-border-radius - 1px;
+
+						a {
+							border-bottom-left-radius: panels.$round-border-radius - 1px;
+							border-bottom-right-radius: panels.$round-border-radius - 1px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.rounded {
+	.sidebar {
+
+		.header {
+			border-top-left-radius: panels.$rounded-border-radius;
+			border-top-right-radius: panels.$rounded-border-radius;
+		}
+
+		.panels {			
+			.panel {
+
+				> .item-info {
+					border-radius: 10px;
+				}
+
+				//
+				// rounded item lists
+				//
+
+				.item-list {
+					.item:last-child .info {
+						border-bottom-left-radius: panels.$rounded-border-radius - 1px;
+						border-bottom-right-radius: panels.$rounded-border-radius - 1px;
+					}
+				}
+
+				//
+				// rounded nav lists
+				//
+
+				ul:last-child {
+					li:last-child {
+						border-bottom-left-radius: panels.$rounded-border-radius - 1px;
+						border-bottom-right-radius: panels.$rounded-border-radius - 1px;
+
+						a {
+							border-bottom-left-radius: panels.$rounded-border-radius - 1px;
+							border-bottom-right-radius: panels.$rounded-border-radius - 1px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop sidebars
+//
+
+#desktop.sidebar-panels,
+body.sidebar-panels #desktop.auto-sidebar-panels {
+	.desktop.app > .body {
+		.sidebar {
+			.panels {
+				margin: 10px;
+			}
+		}
+	}
+}
+
+//
+// modal sidebars
+//
+
+body:not(.sidebar-panels) {
+	.app {
+		.body, .body-region {
+			.contents {
+				> .sidebar {				
+					.panels {			
+						.panel {
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+phpmd ./app ansi unusedcode

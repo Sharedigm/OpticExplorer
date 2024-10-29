@@ -1,0 +1,37 @@
+/******************************************************************************\
+|                                                                              |
+|                              _text-colors.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "colors";
+
+//
+// colors
+//
+
+$dark-color: colors.$very-very-dark-grey;
+$light-color: colors.$very-very-light-grey;
+
+//
+// glowing mixins
+//
+
+@mixin glow($color: white) {
+	text-shadow: 0 0 10px $color;
+}
+
+@mixin unglow {
+	text-shadow: none;
+}

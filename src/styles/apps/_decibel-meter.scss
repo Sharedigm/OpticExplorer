@@ -1,0 +1,157 @@
+/******************************************************************************\
+|                                                                              |
+|                              _decibel-meter.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$size: 200px;
+$digit-font-size: 60px;
+$colon-font-size: 90px;
+
+//
+// styles
+//
+
+.decibel-meter.app {
+	.body {
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		text-align: center;
+
+		.face {
+			width: calc($size + 10px);
+			height: calc($size + 10px);
+			border-radius: 50%;
+			margin: auto;
+
+			.digital.display {
+				position: absolute;
+				display: flex;
+				width: $size;
+				height: $size;
+				margin: 0;
+				padding: 10px;
+				border-width: 5px;
+				border-radius: 50%;
+				border-style: solid;
+				border-color: colors.$light-grey;
+
+				.decibel.digits {
+					margin: auto;
+					padding: 10px 0;
+
+					.value {
+						display: inline-block;
+						font-size: $digit-font-size;
+						line-height: 55px;
+					}
+				}
+
+				.max.digits {
+					padding: 0;
+					position: absolute;
+					width: 100%;
+					left: 0px;
+					bottom: 0;
+
+					.value {
+						font-size: 200%;
+					}
+				}
+			}
+
+			svg {
+				width: $size;
+				height: $size;
+				position: absolute;
+
+				// allow glow to extend past svg borders
+				//
+				overflow: visible;
+
+				.wedge {
+					stroke-width: 2;
+					stroke-linecap: round;
+					overflow: visible;
+				}
+			}
+
+			.digital.display.led + svg {
+				.wedge {
+
+					&:not(.active) {
+						filter: url(#dark);
+					}
+
+					&.active {
+						path {
+							filter: url('#glowing');
+						}
+					}
+				}
+			}
+
+			.digital.display.lcd + svg {
+				.wedge {
+
+					&:not(.active) {
+						fill: colors.$very-light-grey;
+						stroke: colors.$very-light-grey;
+					}
+
+					&.active {
+						path {
+							fill: black;
+							stroke: black;
+							filter: drop-shadow(0 0 10px black);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.timer.app {
+		.body {
+			transform: scale(2);
+		}
+	}
+}
+
+//
+// Windows Compatibility
+//
+
+[os="windows"] {
+	.timer.app {
+		.body .face {
+			.digital.lcd.display {
+				padding: 0;
+			}
+		}
+	}
+}

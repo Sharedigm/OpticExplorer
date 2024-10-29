@@ -1,0 +1,116 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dialog-titles.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$heading-height: 24px;
+$icon-line-height: 25px;
+$icon-max-width: 25px;
+
+//
+// styles
+//
+
+.modals {
+	.modal-dialog {
+		.modal-header {
+			.heading {
+				display: inline-flex;
+				flex-shrink: 1;
+				height: $heading-height;
+				overflow: hidden;
+				margin: auto 0;
+
+				//
+				// icons
+				//
+
+				.icon {
+					flex-grow: 0;
+					line-height: $icon-line-height;
+					max-width: $icon-max-width;
+
+					i {
+						font-size: 125%;
+						line-height: 24px;
+						margin-left: 2px;
+						vertical-align: top;
+					}
+
+					img, svg {
+						height: 20px;
+						margin: 2px 0;
+					}
+				}
+
+				.icon + .title {
+					margin-left: 5px;
+				}
+
+				//
+				// titles
+				//
+
+				.title {
+					font-size: 125%;
+					font-weight: normal;
+					line-height: 24px;
+					height: 24px;
+					line-height: 24px;
+					min-width: 24px;
+					border-bottom: none;
+					flex-grow: 0;
+
+					// handle long titles
+					//
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	&.left-titles .modal-dialog {
+		.modal-header {
+			.heading {
+				padding-right: 10px;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&.center-titles .modal-dialog {
+		.modal-header {
+			.heading {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&.right-titles .modal-dialog {
+		.modal-header {
+			.heading {
+				padding-left: 10px;
+				margin-left: auto;
+			}
+		}
+	}
+}

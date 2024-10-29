@@ -1,0 +1,542 @@
+/******************************************************************************\
+|                                                                              |
+|                              _item-icons.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/selection";
+
+//
+// variables
+//
+
+$icon-size: 100px;
+$icon-image-size: 70px;
+$icon-thumbnail-size: 50px;
+$icon-font-size: 50px;
+$icon-text-spacing: 2px;
+$icon-margin: 2px;
+$icon-h-spacing: 0;
+$icon-v-spacing: 5px;
+$round-icon-border-radius: 10%;
+$round-icon-text-border-radius: 7px;
+$rounded-icon-border-radius: 5%;
+$rounded-icon-text-border-radius: 3px;
+
+//
+// styles
+//
+
+.icon-grid {
+
+	// text size
+	//
+	font-size: 90%;
+	line-height: 15px;
+		
+	// disable default selection
+	//
+	@include selection.unselectable;
+
+	//
+	// items
+	//
+
+	.item {
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		width: $icon-size;
+		height: $icon-size;
+		pointer-events: none;
+
+		// internal spacing
+		//
+		padding: 0 1px;
+
+		// external spacing
+		//
+		margin: $icon-margin 0;
+
+		> .row:first-child {
+			display: inline-block;
+			position: relative;
+
+			.icon {
+				position: relative;
+				width: $icon-image-size;
+				height: $icon-image-size;
+				pointer-events: none;
+
+				// center contents
+				//
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				// icon borders
+				//
+				padding: 8px 0;
+				border-width: 0;
+				border-style: solid;
+
+				//
+				// icons
+				//
+
+				> i, > .thumbnail i {
+					margin: 0;
+					font-size: $icon-font-size;
+					text-align: center;
+					pointer-events: auto;
+
+					// make icons clickable
+					//
+					pointer-events: auto;
+				}
+				
+				//
+				// images
+				//
+
+				> img, > svg, > .thumbnail {
+					width: $icon-thumbnail-size;
+					height: $icon-thumbnail-size;
+					background-size: contain;
+					background-position: center;
+
+					// make images clickable
+					//
+					pointer-events: auto;
+				}
+
+				//
+				// colored icons
+				//
+
+				&.colored {
+					width: 60px;
+					height: 60px;
+					border-width: 2px;
+				}
+			}
+
+			//
+			// owner profile photo
+			//
+
+			.owner {
+				position: absolute;
+				pointer-events: auto;
+			}
+
+			//
+			// info badges
+			//
+
+			.badges {
+				position: absolute;
+				display: inline-flex;
+				flex-direction: column;
+				top: 0;
+				right: 0;
+				max-width: 100%;
+				max-height: 100%;
+
+				// make badges clickable
+				//
+				pointer-events: auto;
+			}
+
+			//
+			// loading spinner
+			//
+
+			.spinner {
+				display: none;
+				width: 50px;
+				height: 50px;
+				margin-left: -25px;
+				margin-top: -25px;
+			}
+		}
+
+		> .row:nth-child(2) {
+			margin: $icon-text-spacing 0;
+
+			.name {
+				display: inline-block;
+				word-break: break-word;
+				padding: 0 4px;
+				cursor: default;
+
+				// make names clickable
+				//
+				pointer-events: auto;
+
+				// hyphenation does not work on Chrome
+				//
+				-webkit-hyphens: auto;
+				-moz-hyphens: auto;
+				-ms-hyphens: auto;
+				hyphens: auto;
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					
+					// display text ellipsis
+					//
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-inline-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					max-height: 30px;
+				}
+
+				//
+				// editable names
+				//
+
+				&[contenteditable="true"] {
+					border-radius: 0;
+					outline-width: 2px;
+					outline-style: solid;
+					padding: 0 2px;
+					margin: 0 2px;
+					cursor: text;
+
+					// remove from flow
+					//
+					position: relative;
+					z-index: 1;
+
+					// enable text selection
+					//
+					@include selection.text-selectable;
+				}
+			}
+		}
+
+		> .row:nth-child(3) {
+			margin: $icon-text-spacing 0;
+			
+			.details {
+				padding: 0 5px;
+
+				// display text ellipsis
+				//
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-inline-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 3;
+				max-height: 50px;
+
+				&:empty {
+					display: none;
+				}
+			}
+		}
+
+		//
+		// detailed items
+		//
+
+		&.detailed {
+			min-height: $icon-size + 20px;
+		}
+
+		&.detailed2 {
+			min-height: $icon-size + 30px + $icon-margin;
+		}
+
+		&.detailed3 {
+			min-height: $icon-size + 45px + $icon-margin;
+		}
+
+		//
+		// selected / highlighted items
+		//
+
+		&.selected, &.highlighted {
+
+			> .row:first-child {
+				.icon {
+					border-width: 2px;
+					filter: none;
+				}
+			}
+
+			> .row:nth-child(2) {
+				.name {
+					color: white;
+					background-color: black;
+					text-shadow: none;
+				}
+			}
+
+			&::after {
+				border: none;
+			}
+		}
+
+		&.selected {
+			> .row:first-child {
+				.icon {
+					pointer-events: auto;
+
+					> i, > .thumbnail i,
+					> img, > svg, > .thumbnail {
+						pointer-events: none;
+					}
+				}
+			}
+		}
+
+		//
+		// disabled icons
+		//
+
+		&.disabled:not(.selected),
+		&.disabled.selected {
+			> .row:first-child .icon,
+			> .row:nth-child(2) .name,
+			> .row:nth-child(3) .details {
+				pointer-events: none !important;
+			}
+		}
+	}
+}
+
+//
+// icon borders
+//
+
+.round-icons .icon-grid,
+.round.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.icon {
+				border-radius: $round-icon-border-radius;
+			}
+		}
+
+		> .row:nth-child(2) {
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: $round-icon-text-border-radius;
+				}
+			}
+		}
+
+		> .row:nth-child(3) {			
+			.details {
+				border-radius: $round-icon-text-border-radius;
+			}
+		}
+	}
+}
+
+.rounded-icons .icon-grid,
+.rounded.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.icon {
+				border-radius: $rounded-icon-border-radius;
+			}
+		}
+
+		> .row:nth-child(2) {
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: $rounded-icon-text-border-radius;
+				}
+			}
+		}
+
+		> .row:nth-child(3) {			
+			.details {
+				border-radius: $rounded-icon-text-border-radius;
+			}
+		}
+	}
+}
+
+.square-icons .icon-grid,
+.square.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.icon {
+				border-radius: 0;
+			}
+		}
+
+		> .row:nth-child(2) {
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: 0;
+				}
+			}
+		}
+
+		> .row:nth-child(3) {			
+			.details {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+//
+// colored icon backgrounds
+//
+
+body:not(.icon-backgrounds) {
+	.icon-grid, .app-icons {
+		.item:not(.selected) {
+			.icon.colored {
+				background: none !important;
+				border-color: transparent !important;
+				box-shadow: none !important;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		.icon.colored {
+			background: none !important;
+			border-color: transparent !important;
+			box-shadow: none !important;
+		}
+	}
+}
+
+//
+// colored icon borders
+//
+
+.round-icons .icon-grid,
+.round.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.colored.icon {
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+.rounded-icons .icon-grid,
+.rounded.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.colored.icon {
+				border-radius: 25%;
+			}
+		}
+	}
+}
+
+.square-icons .icon-grid,
+.square.auto-corner-icons .icon-grid {
+	.item {
+		> .row:first-child {
+			.colored.icon {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.icon-grid {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center;
+	}
+}
+
+//
+// mobile icons - fit 4 icon columns across iPhone X screen
+//
+
+@media (min-width:360px) and (max-width: variables.$screen-xs-min) {
+	.items > .icon-grid {
+
+		//
+		// items
+		//
+
+		> .item {
+			width: 88px;
+		}
+	}
+}
+
+//
+// mobile icons - fit 3 friend icon columns across iPhone screen
+//
+
+@media (max-width:320px) {
+
+	.panel {
+		.icon-grid {
+
+			//
+			// items
+			//
+
+			> .item {
+				width: 90px;
+			}
+		}
+	}
+
+	.page {
+		.icon-grid {
+
+			//
+			// items
+			//
+
+			> .item {
+				width: 75px;
+			}
+		}	
+	}
+}

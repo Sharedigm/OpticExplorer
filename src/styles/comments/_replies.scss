@@ -1,0 +1,76 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _replies.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/tiles";
+
+//
+// variables
+//
+
+$replies-margin-left: 35px;
+
+//
+// styles
+//
+
+.comment {
+
+	.replies {
+		margin-left: $replies-margin-left;
+	}
+
+	.reply {
+		padding: 0;
+
+		&:not(.selected) {
+			> .info > .comment-bubble {
+				cursor: pointer;
+			}
+		}
+
+		.info {
+			margin-left: tiles.$small-size + 10px;
+		}
+	}
+
+	//
+	// new reply forms
+	//
+
+	.new-reply {
+		margin: 10px 0;
+		margin-left: 35px;
+		
+		> form .tile + .info {
+			margin-left: tiles.$medium-size;
+
+			// placeholder text
+			//
+			.comment-bubble .comment-inner:empty::after {
+				content: "Your reply?";
+			}
+		}
+
+		.spacer {
+			width: 35px;
+		}
+
+		&:empty {
+			display: none;
+		}
+	}
+}

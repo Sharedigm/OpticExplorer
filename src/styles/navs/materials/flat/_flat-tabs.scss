@@ -1,0 +1,80 @@
+/******************************************************************************\
+|                                                                              |
+|                               _flat-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin inactive-shade($color, $hover-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			@include flat.color($color);
+		}
+
+		> a:hover {
+			@include flat.color($hover-color);
+		}
+	}
+}
+
+@mixin active-shade($active-color) {
+	> li.active {
+
+		> a, > a:focus {
+			@include flat.color($active-color);
+		}
+	}
+}
+
+@mixin shade($color, $hover-color, $active-color) {
+	@include inactive-shade($color, $hover-color);
+	@include active-shade($active-color);
+}
+
+//
+// color mixins
+//
+
+@mixin inactive-shaded($color, $hover-color) {
+	> li:not(.active) {
+
+		> a, > a:focus {
+			@include flat.colored($color);
+		}
+
+		> a:hover {
+			@include flat.colored($hover-color);
+		}
+	}
+}
+
+@mixin active-shaded($active-color) {
+	> li.active {
+
+		> a, > a:focus {
+			@include flat.colored($active-color);
+		}
+	}
+}
+
+@mixin shaded($color, $hover-color, $active-color) {
+	@include inactive-shaded($color, $hover-color);
+	@include active-shaded($active-color);
+}

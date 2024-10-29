@@ -1,0 +1,561 @@
+/******************************************************************************\
+|                                                                              |
+|                                   _apps.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+@use "../../navs/icons";
+
+//
+// variables
+//
+
+$round-message-border-radius: 20px;
+$rounded-message-border-radius: 10px;
+
+//
+// styles
+//
+
+.app {
+	display: flex;
+	flex-direction: column;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background: none;
+
+	//
+	// header and footer bars
+	//
+
+	.header-bar, .footer-bar {
+		width: 100%;
+		max-width: 100%;
+
+		> div {
+			display: inline-block;
+
+			&:not(:empty) {
+				max-width: 100%;
+
+				// separators
+				//
+				& + div:not(:empty) {
+					border-left-style: dashed;
+					border-left-width: 1px;
+				}
+			}
+
+			&:empty {
+				display: none;
+
+				& + div {
+					border-left: none !important;
+				}
+			}
+		}
+
+		.toolbar {
+			display: inline-flex;
+			max-width: 100%;
+			background: none !important;
+			border: none;
+		}
+
+		//
+		// text inputs
+		//
+
+		.address-bar, .search-bar {
+			width: 100%;
+
+			.searches:empty {
+				width: 0;
+			}
+
+			.toolbar {
+				width: 100%;
+
+				.input-group {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	//
+	// header bar
+	//
+
+	.header-bar {
+		top: 0;
+		width: 100%;
+
+		//
+		// toolbars
+		//
+
+		.toolbar {
+			justify-content: center;
+		}
+
+		//
+		// address and search bars
+		//
+
+		.address-bar, .search-bar {
+			padding: 0 5px;
+			
+			.toolbar {
+				width: 100%;
+
+				.form-inline {
+					width: 100%;
+
+					.input-group {
+						input {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.nav-bar {
+			display: inline-block;
+			.toolbar {
+				display: inline-block;
+				> div {
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	//
+	// body
+	//
+
+	.body {
+		position: relative;
+		width: 100%;
+		flex-grow: 1;
+		overflow: hidden;
+		border-color: transparent;
+
+		&:first-child {
+			> .contents {
+				border-top: none !important;
+			}
+		}
+
+		.contents {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-width: 0;
+			border-style: solid;
+			border-top-width: 1px;
+			overflow: auto;
+
+			> .mainbar {
+				position: relative;
+				overflow: hidden;				
+				width: 100%;
+				height: 100%;
+
+				> form {
+					height: 100%;
+					overflow: auto;
+				}
+
+				> .items {
+
+					&:not(.overlay) {
+						position: static;
+					}
+
+					/*
+					> .icon-grid,  {
+						padding: 10px;
+						padding-right: 0;
+					}
+
+					> .item-list, > .item-tree {
+						padding: 10px;
+					}
+
+					> .card-grid .cards {
+						border-radius: 0;
+					}
+
+					> .tile-grid {
+						padding: 5px;
+						padding-right: 0;
+					}
+					*/
+				}
+
+				> div:not(.tooltip):not(.popover) {
+					width: 100%;
+					height: 100%;
+					overflow: auto;
+					border-radius: 0;
+				}
+			}
+		}
+
+		//
+		// app help messages
+		//
+
+		.clickable {
+			pointer-events: auto !important;
+			cursor: pointer !important;
+		}
+
+		.message.overlay {
+			display: flex;
+			justify-content: center;
+			pointer-events: none;
+
+			.help.message {
+				position: absolute;
+				width: 75%;
+				min-height: 50%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 50px;
+				text-align: center;
+				border: none;
+				top: 50%;
+				left: 10%;
+				transform: translateY(-50%);
+				font-size: 200%;
+				line-height: 1em;
+				pointer-events: none;
+				overflow: hidden;
+
+				.icon {
+					pointer-events: none;
+
+					i {
+						display: block;
+						font-size: 200%;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// footer bar
+	//
+
+	.footer-bar {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		> div {
+			display: flex;
+		}
+
+		//
+		// spacing
+		//
+
+		> div:last-child:not(.nav-bar) {
+			justify-content: flex-end;
+			
+			.info-bar {
+				text-align: right;
+			}
+		}
+
+		> div {
+
+			// footer separators
+			//
+			border-style: dashed;
+			border-width: 0;
+
+			+ div {
+				border-left-width: 1px;
+			}
+		}
+
+		> div.nav-bar {
+			display: inline-block;
+		}
+
+		//
+		// header / footer buttons
+		//
+
+		button, .button {
+			&.btn-sm {
+				i {
+					margin-right: 0;
+				}
+			}
+		}
+
+		//
+		// header / footer bars
+		//
+
+		.nav-bar {
+			flex-grow: 1;
+			text-align: center;
+			white-space: nowrap;
+		}
+
+		> div:not(.task-bar):not(.run-menu) {
+			font-size: 90%;
+		}
+
+		.address-bar, .info-bar, .nav-bar, .toolbar {
+			height: 30px;
+
+			.icon-size {
+				margin-left: 5px;
+				margin-top: -5px;
+			}
+		}
+		
+		.address-bar, .search-bar {
+			padding: 0 5px;
+		}
+
+		.status-bar {
+			flex-shrink: 0;
+
+			> div {
+				display: flex;
+			}
+		}
+
+		.toolbar {
+			&:last-child {
+				justify-content: flex-end;
+			}
+		}
+			
+		.size {
+			margin-left: 10px;
+		}
+	}
+
+	//
+	// info bars
+	//
+
+	.info-bar:not(:empty) {
+		display: inline-block;
+		width: auto;
+		height: 30px;
+		line-height: 20px;
+		padding: 5px;
+		white-space: nowrap;
+		overflow: hidden;
+
+		span {
+			display: inline-block;
+		}
+		
+		i {
+			font-size: icons.$font-size;
+			line-height: 20px;
+			margin-right: 5px;
+			float: left;
+		}
+
+		.button i {
+			margin-right: 0;
+		}
+	}
+
+	//
+	// tile size sliders
+	//
+
+	input[type="range"].size {
+		width: 100px;
+	}
+
+	//
+	// fixed sized desktop apps
+	//
+
+	&.fixed-size {
+		height: 100%;
+
+		.body {
+			flex-grow: 0 !important;
+			margin: auto;
+		}
+	}
+	
+	//
+	// app panels
+	//
+
+	&.panel {
+		background: none !important;
+
+		& + .panel {
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+	}
+
+	//
+	// desktop previews
+	//
+
+	.desktop.preview {
+		border-width: 1px;
+		border-style: solid;
+
+		&.icon {
+			border-width: 2px;
+		}
+	}
+}
+
+//
+// thin menu bars
+//
+
+.thin-menu-bars {
+	.app {
+	
+		.header-bar {
+			> div {
+				max-height: 25px;
+			}
+		}
+
+		.footer-bar {
+			.input {
+				margin: 0;
+			}
+		}
+	}
+}
+
+//
+// help message borders
+//
+
+body.round {
+	.message.overlay {
+		.help.message {
+			border-radius: $round-message-border-radius;
+		}
+	}
+}
+
+body.rounded {
+	.message.overlay {
+		.help.message {
+			border-radius: $rounded-message-border-radius;
+		}
+	}
+}
+
+body.square {
+	.message.overlay {
+		.help.message {
+			border-radius: 0;
+		}
+	}
+}
+
+//
+// desktop apps
+//
+
+body[device="desktop"] {
+	.app {
+
+		//
+		// desktop app header bars
+		//
+
+		.header-bar {
+			> div {
+				display: inline-block;
+				height: 30px;
+				float: left;
+
+				&:empty {
+					width: 0;
+					min-width: 0;
+				}
+			}
+
+			.address-bar, .search-bar {
+				width: 25%;
+				min-width: 350px;
+			}
+
+			.status-bar {
+				float: right;
+
+				.status {
+					display: flex;
+				}
+			}
+		}
+
+		//
+		// desktop app footer bars
+		//
+
+		.footer-bar {
+
+			//
+			// sizing
+			//
+
+			> div:first-child,
+			> div:last-child {
+				min-width: 125px;
+			}
+		}
+	}
+}
+
+//
+// IE / Edge Compatibility
+//
+
+[browser="explorer"], [browser="edge"] {
+	.app {
+		.body {
+			.contents {
+				-ms-overflow-style: auto;
+			}
+		}
+	}
+}

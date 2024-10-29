@@ -1,0 +1,276 @@
+/******************************************************************************\
+|                                                                              |
+|                                   _btns.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/icons";
+
+//
+// variables
+//
+
+$small-size: 25px;
+$large-size: 30px;
+$mobile-min-width: 50px;
+$shadow: 2px 2px 7px rgba(black, 25%);
+$active-shadow: 1px 1px 5px rgba(black, 50%);
+$round-border-radius: 15px;
+$rounded-border-radius: 5px;
+
+//
+// styles
+//
+
+.hide-icons {
+	.btn:not(.btn-sm):not(.input-group-addon) {
+		i {
+			display: none !important;
+		}
+	}
+}
+
+.btn {
+	text-align: center;
+	font-variant: normal;
+	font-weight: inherit;
+	font-size: 100%;
+	line-height: 1em;
+	padding: 5px 10px;
+	cursor: pointer;
+	border-color: unset;
+
+	&:focus, &:active:focus {
+		outline: none;
+	}
+
+	&:active {
+		-webkit-box-shadow: none;
+		-box-shadow: none;
+	}
+
+	i {
+		font-size: 14px;
+		margin-right: 5px;
+		pointer-events: none;
+	}
+
+	//
+	// disabled buttons
+	//
+
+	&:disabled {
+		color: unset;
+		background-color: unset;
+		border-color: unset;
+		cursor: not-allowed;
+
+		&:hover {
+			color: unset;
+			background-color: unset;
+			border-color: unset;
+			cursor: not-allowed;
+		}
+	}
+
+	//
+	// primary buttons
+	//
+
+	&.btn-primary, &.btn-primary:focus {
+		color: unset;
+		background-color: unset;
+		border-color: unset;
+
+		&:hover {
+			color: unset;
+			background-color: unset;
+			border-color: unset;
+		}
+	}
+
+	//
+	// dropdown toggles
+	//
+
+	&.dropdown-toggle {
+		.filter-option {
+			line-height: 15px;
+		}
+	}
+}
+
+//
+// buttons active / focus
+//
+
+:not(.keyboard-accessible) {
+	.btn:focus {
+		outline: none !important;
+	}
+}
+
+//
+// btn shadows
+//
+
+body:not(.binary):not(.flat-buttons):not(.flat.auto-buttons) {
+
+	.btn, {
+		box-shadow: $shadow;
+
+		&:hover {
+			box-shadow: $shadow;
+		}
+
+		&:active {
+			box-shadow: $active-shadow;
+		}
+	}
+}
+
+//
+// btn sizes
+//
+
+.btn-sm {
+	min-width: $small-size;
+	height: $small-size;
+	padding: 0;
+	margin: 0;
+	
+	i {
+		margin: auto;
+	}
+}
+
+.btn-md {
+	min-width: $small-size;
+	height: $small-size;
+	margin: 0;
+	
+	i {
+		margin: auto;
+	}
+}
+
+.btn-lg {
+	min-width: $large-size;
+	font-size: 18px;
+	line-height: 16px;
+
+	i {
+		font-size: 18px;
+	}
+}
+
+//
+// button groups
+//
+
+.buttons {
+	&:empty {
+		display: none;
+	}
+	
+	.btn {
+		margin-bottom: 5px;
+	}
+}
+
+.buttons-inline {
+	display: inline-block;
+	
+	.btn {
+		margin-bottom: 5px;
+		// margin-right: 5px;
+	}
+}
+
+.panel + .buttons,
+table + .buttons {
+	margin-top: 10px;
+}
+
+.row .content {
+	> div > form > .buttons {
+		float: right;
+	}
+}
+
+//
+// mobile buttons
+//
+
+body[device="phone"], body[device="tablet"] {
+
+	//
+	// button sizes
+	//
+
+	.btn-sm, .input-group-addon.btn {
+		min-width: $mobile-min-width;
+	}
+
+	.buttons {
+		.btn-sm + .btn-sm {
+			margin-left: 2px;
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	//
+	// button groups
+	//
+
+	.modal-footer {
+		.buttons {
+			.btn:not(.btn-sm) {
+				width: 100%;
+				margin-top: 10px;
+				font-size: initial;
+				padding: 10px 20px;
+				margin-left: 0;
+			}
+		}
+	}
+
+	body.round-buttons {
+		.buttons {
+			.btn:not(.btn-sm) {
+				border-radius: 20px;
+			}
+		}
+	}
+
+	.flex-row .buttons {
+		width: 100%;
+	}
+
+	.modal-footer {
+		.buttons {
+			.btn + .btn {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+}

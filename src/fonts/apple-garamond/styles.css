@@ -1,0 +1,17 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Garamond';
+	src: url('AppleGaramond.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Garamond';
+	src: url('AppleGaramond-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}

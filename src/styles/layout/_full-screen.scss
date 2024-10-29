@@ -1,0 +1,304 @@
+/******************************************************************************\
+|                                                                              |
+|                               _full-screen.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/performance";
+@use "../items/item-icons";
+@use "../items/item-tiles";
+
+//
+// variables
+//
+
+$card-width: 240px;
+$icon-size: item-icons.$icon-size;
+
+//
+// styles
+//
+
+.windowed-only {
+	display: initial;
+}
+
+.full-screen-only {
+	display: none;
+}
+
+.windowed-visible {
+	visibility: visible;
+}
+
+.full-screen-visible {
+	visibility: hidden;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+//
+// full screen visibility
+//
+
+:-webkit-full-screen {
+
+	.windowed-only {
+		display: none !important;
+	}
+
+	.full-screen-only {
+		display: initial !important;
+	}
+
+	.windowed-visible {
+		visibility: hidden !important;
+	}
+
+	.full-screen-visible {
+		visibility: visible !important;
+	}
+}
+
+:-moz-full-screen {
+
+	.windowed-only {
+		display: none !important;
+	}
+
+	.full-screen-only {
+		display: initial !important;
+	}
+
+	.windowed-visible {
+		visibility: hidden !important;
+	}
+
+	.full-screen-visible {
+		visibility: visible !important;
+	}
+}
+
+//
+// full screen desktop files
+//
+
+:-webkit-full-screen {
+	.desktop.app > .body > .app .mainbar .items {
+
+		// scroll horizontally
+		// 
+		// overflow-x: auto;
+		// overflow-y: hidden;
+
+		.icon-grid,
+		.tile-grid,
+		.card-grid {
+			min-width: 100%;
+			height: 100%;
+			padding-bottom: 0;
+
+			-webkit-column-fill: auto;
+			-moz-column-fill: auto;
+			column-fill: auto;
+
+			-webkit-column-gap: 0;
+			-moz-column-gap: 0;
+			column-gap: 0;
+
+			.file,
+			.directory {
+
+				// avoid column / page breaks
+				//
+				-webkit-column-break-inside: avoid;
+				page-break-inside: avoid;
+				-moz-column-break-inside: avoid;
+				column-break-inside: avoid;
+				break-inside: avoid;
+			}
+		}
+
+		//
+		// icon grids
+		//
+
+		.icon-grid {
+			-webkit-column-width: $icon-size;
+			-moz-column-width: $icon-size;
+			column-width: $icon-size;
+
+			// fix Chrome rendering problem
+			//
+			.badges {
+
+				// use hardware acceleration
+				//
+				@include performance.acceleration;
+			}
+		}
+
+		//
+		// tile grids
+		//
+
+		.tile-grid {
+			-webkit-column-gap: 20px;
+			-moz-column-gap: 20px;
+			column-gap: 20px;
+		}
+
+		.tile-grid.little {
+			-webkit-column-width: item-tiles.$small-size;
+			-moz-column-width: item-tiles.$small-size;
+			column-width: item-tiles.$small-size;
+		}
+
+		.tile-grid.medium {
+			-webkit-column-width: item-tiles.$medium-size;
+			-moz-column-width: item-tiles.$medium-size;
+			column-width: item-tiles.$medium-size;
+		}
+
+		.tile-grid.large {
+			-webkit-column-width: item-tiles.$large-size;
+			-moz-column-width: item-tiles.$large-size;
+			column-width: item-tiles.$large-size;
+		}
+
+		//
+		// card grids
+		//
+
+		.card-grid {
+			-webkit-column-width: $card-width;
+			-moz-column-width: $card-width;
+			column-width: $card-width;
+
+			.cards {
+				column-count: 1;
+				padding: 0;
+				margin: 0;
+				margin-right: 10px;
+			}		
+		}
+	}
+
+	body[browser="chrome"] {
+		.desktop.app .body .app .mainbar .items {
+			.icon-grid,
+			.tile-grid {
+
+				.file,
+				.directory {
+
+					// fixes Chrome full screen column reflow issues
+					//
+					float: left;
+				}
+			}
+		}
+	}
+}
+
+:-moz-full-screen {
+	.desktop.app .body .app .mainbar .items {
+
+		// scroll horizontally
+		// 
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		.icon-grid,
+		.tile-grid {
+			min-width: 100%;
+			height: 100%;
+
+			-webkit-column-fill: auto;
+			-moz-column-fill: auto;
+			column-fill: auto;
+
+			-webkit-column-gap: 0;
+			-moz-column-gap: 0;
+			column-gap: 0;
+
+			.file,
+			.directory {
+
+				// avoid column / page breaks
+				//
+				-webkit-column-break-inside: avoid;
+				page-break-inside: avoid;
+				-moz-column-break-inside: avoid;
+				column-break-inside: avoid;
+				break-inside: avoid;
+			}
+		}
+
+		//
+		// icon grids
+		//
+
+		.icon-grid {
+			-webkit-column-width: $icon-size;
+			-moz-column-width: $icon-size;
+			column-width: $icon-size;
+		}
+
+		//
+		// tile grids
+		//
+
+		.tile-grid {
+			-webkit-column-gap: 20px;
+			-moz-column-gap: 20px;
+			column-gap: 20px;
+		}
+
+		.tile-grid.little {
+			-webkit-column-width: item-tiles.$small-size;
+			-moz-column-width: item-tiles.$small-size;
+			column-width: item-tiles.$small-size;
+		}
+
+		.tile-grid.medium {
+			-webkit-column-width: item-tiles.$medium-size;
+			-moz-column-width: item-tiles.$medium-size;
+			column-width: item-tiles.$medium-size;
+		}
+
+		.tile-grid.large {
+			-webkit-column-width: item-tiles.$large-size;
+			-moz-column-width: item-tiles.$large-size;
+			column-width: item-tiles.$large-size;
+		}
+
+		//
+		// card grids
+		//
+
+		.card-grid {
+			-webkit-column-width: $card-width;
+			-moz-column-width: $card-width;
+			column-width: $card-width;
+
+			.cards {
+				column-count: 1;
+				padding: 0;
+			}		
+		}
+	}
+}

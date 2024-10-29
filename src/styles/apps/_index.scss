@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "common";
+@use "app-launcher";
+@use "audio-player";
+@use "calculator";
+@use "calendar";
+@use "clock";
+@use "code-editor";
+@use "communicator";
+@use "contact-editor";
+@use "decibel-meter";
+@use "desktop";
+@use "chat-browser";
+@use "chat-viewer";
+@use "file-browser";
+@use "help-viewer";
+@use "image-viewer";
+@use "map-viewer";
+@use "post-viewer";
+@use "notification-center";
+@use "pdf-viewer";
+@use "profile-browser";
+@use "profile-viewer";
+@use "project-browser";
+@use "project-viewer";
+@use "search-viewer";
+@use "settings-browser";
+@use "settings-manager";
+@use "terminal";
+@use "text-editor";
+@use "theme-manager";
+@use "theme-picker";
+@use "timer";
+@use "topic-browser";
+@use "topic-viewer";
+@use "tune-editor";
+@use "video-player";
+@use "web-browser";

@@ -1,0 +1,168 @@
+/******************************************************************************\
+|                                                                              |
+|                            _theme-manager.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$desktop-preview-width: 200px;
+$desktop-preview-height: 133px;
+
+//
+// styles
+//
+
+.theme-manager.app {
+
+	.mainbar {
+		> .content {
+			padding: 10px;
+			height: 100%;
+			overflow: auto;
+
+			//
+			// previews
+			//
+
+			.desktop.preview {
+				display: inline-block;
+				width: $desktop-preview-width;
+				height: $desktop-preview-height;
+				border-color: black;
+
+				.launcher-preview {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+				}
+			}
+
+			.controls-preview {
+				.controls {
+					width: 75%;
+					margin: 25px auto;
+					text-align: center;
+
+					.menu-bar {
+						width: 200px;
+						height: 50px;
+
+						.nav-menus {
+							float: left;
+
+							.dropdown {
+								display: block;
+							}
+						}
+					}
+				}
+			}
+
+			.desktop-app,
+			.background-image {
+				> .controls {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+body[device="desktop"] {
+	.theme-manager.app {
+
+		.desktop.preview {
+			width: 200px;
+			height: 133px;
+
+			.launcher-preview {
+				&.taskbar {
+					background-image: url('../images/settings/transparent/desktop/desktop-task-bar.png');
+				}
+
+				&.dock {
+					background-image: url('../images/settings/transparent/desktop/desktop-dock-bar.png');
+				}
+
+				&.menu {
+					background-image: url('../images/settings/transparent/desktop/desktop-run-menu.png');
+				}
+			}
+		}
+	}
+}
+
+//
+// tablet styles
+//
+
+body[device="tablet"] {
+	.theme-manager.app {
+
+		.desktop.preview {
+			width: 200px;
+			height: 266px;
+
+			.launcher-preview {
+				&.taskbar {
+					background-image: url('../images/settings/transparent/tablet/tablet-task-bar.png');
+				}
+
+				&.dock {
+					background-image: url('../images/settings/transparent/tablet/tablet-dock-bar.png');
+				}
+
+				&.menu {
+					background-image: url('../images/settings/transparent/tablet/tablet-run-menu.png');
+				}
+			}
+		}
+	}
+}
+
+//
+// phone styles
+//
+
+body[device="phone"] {
+	.theme-manager.app {
+
+		.desktop.preview {
+			width: 133px;
+			height: 236px;
+
+			.launcher-preview {
+				&.taskbar {
+					background-image: url('../images/settings/transparent/mobile/mobile-task-bar.png');
+				}
+
+				&.dock {
+					background-image: url('../images/settings/transparent/mobile/mobile-dock-bar.png');
+				}
+
+				&.menu {
+					background-image: url('../images/settings/transparent/mobile/mobile-run-menu.png');
+				}
+			}
+		}
+	}
+}

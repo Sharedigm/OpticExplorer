@@ -1,0 +1,149 @@
+/******************************************************************************\
+|                                                                              |
+|                             _directory-items.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/performance";
+
+//
+// styles
+//
+
+.file-type {
+	text {
+		font-size: 14px;
+	}
+}
+
+body:not(.binary):not(.flat-icons):not(.auto-icons), 
+body:not(.binary):not(.flat).auto-icons {
+
+	//
+	// files
+	//
+
+	.file-body {
+		fill: url('#file-body-gradient');
+	}
+
+	.file-corner {
+		fill: url('#file-corner-gradient');
+	}
+	
+	//
+	// folders
+	//
+
+	.folder-top {
+		fill: url('#folder-top-gradient');
+	}
+
+	.folder-body {
+		fill: url('#folder-body-gradient');
+	}
+
+	//
+	// clipboard folders
+	//
+
+	.clipboard-handle {
+		fill: url('#clipboard-handle-gradient');
+	}
+
+	.clipboard-body {
+		fill: url('#clipboard-body-gradient');
+	}
+
+	.clipboard-paper {
+		fill: url('#clipboard-paper-gradient');
+	}
+
+	//
+	// trash folders
+	//
+
+	.trash-body {
+		fill: url('#trash-body-gradient');
+	}
+
+	.trash-lid {
+		fill: url('#trash-body-gradient');
+	}
+}
+
+//
+// non-3D icons
+//
+
+.tilted.left, .tilted.right, .tilted.up, .tilted.down {
+	.items {
+		.trash.directory,
+		.volume {
+			.icon {
+				> img, > svg, > .thumbnail {
+					transform: none;
+				}
+			}
+		}
+	}
+
+	&.small-icons {
+		.items {
+			.trash.directory,
+			.volume {
+				.icon {
+					> img, > svg, > .thumbnail {
+						transform: scale(0.9);
+					}
+				}
+			}
+		}
+	}
+
+	&.large-icons {
+		.items {
+			.trash.directory,
+			.volume {
+				.icon {
+					> img, > svg, > .thumbnail {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// Safari compatibility
+//
+
+[browser="safari"] {
+	&.tilted.left, &.tilted.right, &.tilted.up, &.tilted.down {
+		.items {
+			.trash.directory,
+			.volume {
+				.icon {
+					> img, > svg, > .thumbnail {
+
+						// use hardware acceleration
+						//
+						@include performance.acceleration;
+					}
+				}
+			}
+		}
+	}
+}

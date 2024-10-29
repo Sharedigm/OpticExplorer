@@ -1,0 +1,70 @@
+/******************************************************************************\
+|                                                                              |
+|                                _selection.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/performance";
+@use "../colors/colors";
+
+//
+// variables
+//
+
+$image-selection-color: lighten(colors.$very-light-grey, 50%);
+$image-selection-border-color: white;
+
+//
+// styles
+//
+
+.selection {
+	pointer-events: none;
+	border-width: 1px;
+	border-style: solid;
+
+	// use hardware acceleration
+	//
+	@include performance.acceleration;
+}
+
+.image .selection {
+	border-color: $image-selection-border-color;
+	background: $image-selection-color;
+}
+
+//
+// selection mixins
+//
+
+@mixin selectable {
+	-webkit-user-select: auto;	// Chrome / Safari
+	-moz-user-select: auto;		// Firefox
+	-ms-user-select: auto;		// IE10+
+	user-select: auto;
+}
+
+@mixin text-selectable {
+	-webkit-user-select: text; 	// Chrome / Safari        
+	-moz-user-select: text; 	// Firefox
+	-ms-user-select: text; 		// IE10+
+	user-select: text;
+}
+
+@mixin unselectable {
+	-webkit-user-select: none; 	// Chrome / Safari
+	-moz-user-select: none; 	// Firefox
+	-ms-user-select: none; 		// IE10+
+	user-select: none;
+}

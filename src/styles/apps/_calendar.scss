@@ -1,0 +1,187 @@
+/******************************************************************************\
+|                                                                              |
+|                               _calendar.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+
+//
+// styles
+//
+
+.calendar.app {
+	.mainbar {
+		display: flex;
+
+		> .month, > .day {
+			width: 100%;
+			height: auto !important;
+			max-height: 100%;
+			overflow: auto !important;
+			padding: 10px;
+			margin: auto;
+
+			.heading {
+				text-align: center;
+
+				h1 {
+					margin-top: 0;
+					margin-bottom: 5px;
+					border: none;
+
+					.month, .day {
+						font-weight: bold;
+					}
+				}
+			}
+
+			table {
+				width: 100%;
+				
+				th {
+					padding: 5px 0;
+				}
+				
+				th, td {
+					vertical-align: middle;
+					pointer-events: auto;
+
+					i {
+						margin-right: 5px;
+					}
+
+					.hour, .date {
+						margin: auto;
+						white-space: nowrap;
+						pointer-events: none;
+						cursor: auto;
+					}
+
+					.hour {
+						width: 3em;
+					}
+
+					.date {
+						width: 2em;
+					}
+				}
+
+				td {
+					position: relative;
+					padding: 0;
+					position: relative;
+
+					> span {
+						position: absolute;
+						padding: 2px 5px;
+					}	
+
+					.badge {
+						position: absolute;
+						bottom: 5px;
+						right: 2px;
+						z-index: 1;
+
+						i {
+							margin-right: 3px;
+						}
+					}
+				}
+
+				td.selected {
+					outline-width: 2px;
+					outline-style: solid;
+					outline-offset: -2px;
+					z-index: 1;
+				}
+			}
+		}
+
+		> .month {
+
+			// render fixed aspect ratio cells
+			//
+			tbody {
+				td {
+					width: 14% !important;
+					padding-bottom: 10% !important;
+				}
+			}
+		}
+
+		> .day {
+
+			// render fixed aspect ratio cells
+			//
+			tbody {
+				td {
+					width: 16% !important;
+					padding-bottom: 13% !important;
+				}
+			}
+		}
+	}
+}
+
+//
+// desktop styles
+//
+
+.desktop.app {
+	> .body {
+		> .calendar.app {
+			.mainbar {
+				h1.heading {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+//
+// event lists
+//
+
+.events {
+	p {
+		white-space: pre-wrap;
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+	.calendar.app {
+		.mainbar {
+			> .month, > .day {
+				table {
+					thead {
+						tr {
+
+							// don't hide header text
+							//
+							th {
+								font-size: inherit;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

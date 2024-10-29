@@ -1,0 +1,365 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _panels.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/tiles";
+
+//
+// variables
+//
+
+$border-width: 1px;
+$round-border-radius: 10px;
+$rounded-border-radius: 5px;
+
+//
+// styles
+//
+
+.panel, ul.panels > li {
+	padding: 10px;
+	margin-top: 0;
+	margin-bottom: 0;
+	box-shadow: none;
+	flex-shrink: 0;
+	border-width: $border-width;
+	border-color: unset;
+
+	&:empty {
+		display: none;
+	}
+
+	//
+	// headers
+	//
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
+
+		.heading, .buttons {
+			margin-top: -5px;
+		}
+
+		.heading {
+			line-height: 25px;
+			margin-bottom: 5px;
+			overflow: hidden;
+		}
+
+		.buttons {
+			text-align: right;
+			margin-bottom: -5px;
+		}
+
+		.icon {
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+
+	.header + .section {
+		margin-top: 5px;
+	}
+
+	//
+	// headings
+	//
+
+	.heading {
+		
+		> .title {
+			display: inline;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin-right: 10px;
+		}
+
+		.buttons {
+			float: right;
+			text-align: right;
+		}
+
+		> i {
+			margin-right: 5px;
+		}
+	}
+
+	//
+	// info
+	//
+
+	.tile {
+		float: left;
+
+		> .icon i {
+			font-size: 3em;
+			margin: 5px;
+		}
+	}
+	
+	.tile + .info,
+	.icon + .info {
+		min-height: tiles.$medium-size;
+
+		.fineprint {
+			line-height: 1.5em;
+
+			.expander {
+				margin-top: -5px;
+				margin-bottom: -5px;
+			}
+		}
+	}
+
+	.small.tile + .info {
+		min-height: tiles.$small-size + 10px;
+	}
+
+	.buttons + .panels {
+		margin-top: 0;
+	}
+
+	.content {
+		clear: both;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.content:empty {
+		display: none;
+	}
+
+	//
+	// panel sections
+	//
+
+	.section {
+		margin-top: 10px;
+		padding-top: 10px;
+		border-top-style: dashed;
+		border-top-width: 1px;
+	}
+
+	&.active {
+		cursor: pointer;
+	}
+
+	//
+	// nested panels
+	//
+
+	.panel {
+		.header {
+			.buttons {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+img + .panel:not(:empty) {
+	margin-top: 10px;
+}
+
+.flush.panel {
+	border-radius: 0;
+}
+
+// remove duplicate borders
+//
+.app + .panel {
+	border: none;
+}
+
+//
+// panel borders
+//
+
+.round {
+	.panels {
+		border-radius: $round-border-radius * 2;
+	}
+	.panel, ul.panels > li, .panels > div {
+		border-radius: $round-border-radius;
+	}
+}
+
+.rounded {
+	.panels {
+		border-radius: $rounded-border-radius * 2;
+	}
+
+	.panel, ul.panels > li, .panels > div, .panels {
+		border-radius: $rounded-border-radius;
+	}
+}
+
+.square {
+	.panels {
+		border-radius: 0;
+	}
+
+	.panel, ul.panels > li, .panels > div {
+		border-radius: 0;
+	}
+}
+
+//
+// panel lists
+//
+
+ul.panels {
+	list-style-type: none;
+	margin-bottom: 0;
+	padding: 0;
+	clear: both;
+	padding: 5px;
+
+	&.multi-column {
+		column-gap: 0;
+	}
+
+	> li {
+		padding: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 10px
+		}
+
+		// avoid column / page breaks
+		//
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		-moz-column-break-inside: avoid;
+		column-break-inside: avoid;
+		break-inside: avoid;
+
+		> form {
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		> form {
+			.tile {
+				margin-right: 10px;
+			}
+
+			.form-label {
+				width: 100%;
+				text-align: left;
+			}
+
+			.form-group {
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			.form-group:first-child,
+			.buttons + .form-group {
+				margin-top: 0;
+			}
+
+			.form-group:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		// nested panels
+		//
+		.panel {
+			margin-top: 10px;
+			min-height: 35px;
+			padding: 5px;
+
+			li {
+				.panel {
+					// margin: -5px;
+					margin-top: 5px;
+				}
+
+				form > .panel {
+					// padding: 10px;
+					// padding: 0 10px;
+					padding: 0;
+					padding-left: 15px;
+				}
+			}
+
+			.buttons {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.form-label {
+		display: none;
+	}
+
+	.hideable {
+		.form-label {
+			display: block;
+		}
+	}
+}
+
+.panel .panels {
+	padding: 0;
+	// margin: -5px;
+	margin-bottom: 0;
+
+	&:not(:first-child) {
+		margin-top: 0;
+	}
+}
+
+ul.panels:empty {
+	display: none;
+	margin-bottom: 0;
+}
+
+/*
+ul:empty::after {
+	content: "None.";	
+}
+*/
+
+.round {
+	ul.panels {
+		border-radius: 5px;
+	}
+}
+
+.rounded {
+	ul.panels {
+		border-radius: 3px;
+	}
+}
+
+.square {
+	ul.panels {
+		border-radius: 0;
+	}
+}
+
+//
+// tab panels
+//
+
+.tab-pane .panel {
+	position: relative;
+}

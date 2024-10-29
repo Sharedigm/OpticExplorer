@@ -1,0 +1,191 @@
+/******************************************************************************\
+|                                                                              |
+|                                _colored.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "colors";
+
+//
+// styles
+//
+
+body {
+	--primary-color: #{colors.$medium-grey};
+	--secondary-color: #{colors.$very-light-grey};
+}
+
+body.red {
+	--primary-color: #{colors.$medium-red};
+}
+
+body.raspberry {
+	--primary-color: #{colors.$medium-raspberry};
+}
+
+body.red-orange {
+	--primary-color: #{colors.$medium-red-orange};
+}
+
+body.red-orange {
+	--primary-color: #{colors.$medium-red-orange};
+}
+
+body.orange {
+	--primary-color: #{colors.$medium-orange};
+}
+
+body.gold {
+	--primary-color: #{colors.$medium-gold};
+}
+
+body.yellow {
+	--primary-color: #{colors.$medium-yellow};
+}
+
+body.lime {
+	--primary-color: #{colors.$medium-lime};
+}
+
+body.green {
+	--primary-color: #{colors.$medium-green};
+}
+
+body.teal {
+	--primary-color: #{colors.$medium-teal};
+}
+
+body.aqua {
+	--primary-color: #{colors.$medium-aqua};
+}
+
+body.cyan {
+	--primary-color: #{colors.$medium-cyan};
+}
+
+body.blue {
+	--primary-color: #{colors.$medium-blue};
+}
+
+body.indigo {
+	--primary-color: #{colors.$medium-indigo};
+}
+
+body.violet {
+	--primary-color: #{colors.$medium-violet};
+}
+
+body.plum {
+	--primary-color: #{colors.$medium-plum};
+}
+
+body.purple {
+	--primary-color: #{colors.$medium-purple};
+}
+
+body.magenta {
+	--primary-color: #{colors.$medium-magenta};
+}
+
+body.grey {
+	--primary-color: #{colors.$medium-grey};
+}
+
+body.brown {
+	--primary-color: #{colors.$medium-brown};
+}
+
+//
+// accent color styles
+//
+
+.red-accented {
+	--secondary-color: #{colors.$medium-red};
+}
+
+.raspberry-accented {
+	--secondary-color: #{colors.$medium-raspberry};
+}
+
+.red-orange-accented {
+	--secondary-color: #{colors.$medium-red-orange};
+}
+
+.red-orange-accented {
+	--secondary-color: #{colors.$medium-red-orange};
+}
+
+.orange-accented {
+	--secondary-color: #{colors.$medium-orange};
+}
+
+.gold-accented {
+	--secondary-color: #{colors.$medium-gold};
+}
+
+.yellow-accented {
+	--secondary-color: #{colors.$medium-yellow};
+}
+
+.lime-accented {
+	--secondary-color: #{colors.$medium-lime};
+}
+
+.green-accented {
+	--secondary-color: #{colors.$medium-green};
+}
+
+.teal-accented {
+	--secondary-color: #{colors.$medium-teal};
+}
+
+.aqua-accented {
+	--secondary-color: #{colors.$medium-aqua};
+}
+
+.cyan-accented {
+	--secondary-color: #{colors.$medium-cyan};
+}
+
+.blue-accented {
+	--secondary-color: #{colors.$medium-blue};
+}
+
+.indigo-accented {
+	--secondary-color: #{colors.$medium-indigo};
+}
+
+.violet-accented {
+	--secondary-color: #{colors.$medium-violet};
+}
+
+.plum-accented {
+	--secondary-color: #{colors.$medium-plum};
+}
+
+.purple-accented {
+	--secondary-color: #{colors.$medium-purple};
+}
+
+.magenta-accented {
+	--secondary-color: #{colors.$medium-magenta};
+}
+
+.grey-accented {
+	--secondary-color: #{colors.$medium-grey};
+}
+
+.brown-accented {
+	--secondary-color: #{colors.$medium-brown};
+}

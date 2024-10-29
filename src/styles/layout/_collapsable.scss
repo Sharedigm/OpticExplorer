@@ -1,0 +1,130 @@
+/******************************************************************************\
+|                                                                              |
+|                                _collapsable.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$expander-width: 24px;
+
+//
+// styles
+//
+
+.collapsable .expander {
+	display: inline-block;
+
+	button {
+		min-width: $expander-width;
+	}
+}
+
+//
+// dropdown expanders
+//
+
+.dropdown-menu .collapsable .expander {	
+	button {
+
+		&.btn, &.btn:focus {
+			color: inherit;
+			background: transparent !important;
+			border-color: transparent !important;
+
+			i {
+				color: inherit;
+			}
+
+			&:active {
+				color: inherit;
+				background: transparent !important;
+				border-color: transparent !important;
+
+				i {
+					color: inherit;
+				}
+			}
+
+			&:hover {
+				color: inherit;
+				background: transparent !important;
+				border-color: transparent !important;
+
+				i {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+.collapsable:not(.collapsed) {
+	> .info,
+	> :not(.hideable) > .info {
+		.expander {
+			.collapse {
+				display: inline-block;
+			}
+			
+			.expand {
+				display: none;
+
+				& + .collapse {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	> .hideable,
+	> .info .hideable,
+	> :not(.hideable) > .hideable {
+		display: block;
+	}
+
+	> .non-hideable,
+	> .info .non-hideable,
+	> :not(.hideable) > .non-hideable {
+		display: none;
+	}
+}
+
+.collapsable.collapsed {
+	> .info,
+	> :not(.hideable) > .info {
+		.expander {
+			.expand {
+				display: inline-block;
+			}
+
+			.collapse {
+				display: none;
+
+				& + .expand {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	> .hideable,
+	> .info .hideable,
+	> :not(.hideable) > .hideable {
+		display: none;
+	}
+
+	> .non-hideable,
+	> .info .non-hideable,
+	> :not(.hideable) > .non-hideable {
+		display: unset;
+	}
+}

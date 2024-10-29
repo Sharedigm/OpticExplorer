@@ -1,0 +1,96 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _crawler.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/performance";
+
+//
+// variables
+//
+
+$spacing: 20px;
+
+//
+// styles
+//
+
+.crawler {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	overflow: hidden;
+
+	// use hardware acceleration
+	//
+	@include performance.acceleration;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+
+		// needed to display overlay 
+		// for some versions of Chrome
+		//
+		@include performance.acceleration;
+	}
+
+	.tilted3d {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		display: inline-block;
+		perspective-origin: center middle;
+		overflow: visible;
+
+		.images {
+			text-align: center;
+			overflow: visible;
+
+			.row {
+				display: block;
+				position: relative;
+				text-align: center;
+				white-space: nowrap;
+				overflow: visible;
+				margin: 5px auto;
+
+				.item {
+					position: relative;
+					display: inline-block;
+					height: 100px;
+
+					img {
+						height: 100%;
+					}
+
+					.caption {
+						color: white;
+						text-align:center;
+						font-family: sans-serif;
+					}
+				}
+			}
+
+			&.annotated {
+				.row {
+					.item {
+						margin: $spacing;
+					}
+				}
+			}	
+		}
+	}
+}

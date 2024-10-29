@@ -1,0 +1,96 @@
+/******************************************************************************\
+|                                                                              |
+|                             _radio-buttons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/text-colors";
+
+//
+// variables
+//
+
+$width: 14px;
+$height: 14px;
+$border-width: 2px;
+$border-style: solid;
+$color: white;
+$select-color: black;
+$selected-border-color: text-colors.$dark-color;
+
+//
+// styles
+//
+
+form {
+
+	//
+	// radio button inputs
+	//
+
+	input[type="radio"] {
+		appearance: none;
+		width: $width;
+		height: $height;
+		border-radius: 50%;
+		border-width: $border-width;
+		border-style: $border-style;
+		background: $color;
+
+		&:checked {
+			background-color: $select-color;
+			border-color: $selected-border-color !important;
+			outline: none;
+		}
+
+		&:disabled {
+			border: none;
+		}
+	}
+}
+
+//
+// horizontal forms
+//
+
+.form-horizontal {
+
+	.radio, .checkbox {
+		padding-top: 5px;
+	}
+
+	.radio-inline, .checkbox-inline, .color-inline {
+
+		&:not(:last-child) {
+			margin-right: 5px;
+		}
+
+		input[type="checkbox"] {
+			position: relative;
+			float: left;
+		}
+
+		i {
+			margin-left: 10px;
+		}
+	}
+
+	.radio-inline, .checkbox-inline {
+		font-weight: bold;
+	}
+
+	.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+		margin-left: 0;
+	}
+}

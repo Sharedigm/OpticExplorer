@@ -1,0 +1,501 @@
+/******************************************************************************\
+|                                                                              |
+|                              _item-lists.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../layout/images";
+@use "../navs/selection";
+
+//
+// variables
+//
+
+$icon-size: 14px;
+$round-border-radius: 7px;
+$rounded-border-radius: 5px;
+$thumbnail-size: 25px;
+
+//
+// styles
+//
+
+.item-list, .item-tree {
+	list-style-type: none;
+	counter-reset: row;
+	padding: 2px;
+	margin: 0;
+
+	&:empty {
+		display: none;
+	}
+
+	.item-list {
+		font-size: inherit;
+	}
+	
+	.contents > div {
+		counter-increment: row;
+	}
+
+	//
+	// list items
+	//
+
+	.item {
+		pointer-events: none;
+	}
+
+	.info {
+		display: flex;
+		vertical-align: middle;
+		overflow: hidden;
+		padding: 2px;
+		pointer-events: none;
+
+		// text size
+		//
+		font-size: 90%;
+		line-height: 15px;
+
+		> input[type="checkbox"] {
+			margin: 5px;
+			pointer-events: auto;
+		}
+
+		> .icon, > .tile {
+			position: relative;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			flex-shrink: 0;
+			pointer-events: auto;
+
+			.thumbnail {
+				max-width: $thumbnail-size;
+				max-height: $thumbnail-size;
+				margin: 0;
+
+				&:not(.photo):not(.pdf) {
+					width: 100%;
+					height: 100%;
+					background-size: cover !important;
+				}
+			}
+
+			> img:not(.thumbnail.photo) {
+				filter: images.$thumbnail-shadow;
+			}
+
+			.thumbnail.photo {
+				box-shadow: images.$thumbnail-box-shadow;
+			}
+		}
+				
+		> .icon, > .status {
+			width: 25px;
+			height: 25px;
+
+			i {
+				font-size: $icon-size;
+				line-height: 25px;
+			}
+		}
+
+		> .status {
+			float: left;
+			width: 30px;
+			height: 25px;
+			margin: 0;
+			flex-shrink: 0;
+			padding-left: 5px;
+			cursor: pointer;
+			pointer-events: auto;
+
+			i {
+				margin: auto;
+			}
+		}
+
+		> .icon {
+			position: relative;
+			
+			i.fa-spinner {
+				display: none;
+			}
+
+			.thumbnail {
+				position: relative;
+				margin: auto;
+				filter: images.$thumbnail-shadow;
+
+				&::after {
+					position: absolute;
+					content: '';
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		> .name {
+			display: inline-block;
+			word-break: break-word;
+			vertical-align: middle;
+			padding: 0 5px;
+			margin: 5px 0;
+			pointer-events: auto;
+			cursor: default;
+
+			&:empty {
+				display: none;
+			}
+
+			// keep on one line
+			//
+			white-space: nowrap;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 1;
+
+			// show overflow using ellipsis
+			//
+			overflow: hidden;
+			text-overflow: ellipsis;
+			hyphens: auto;
+
+			//
+			// editable names
+			//
+
+			&[contenteditable="true"] {
+				overflow: visible;
+				white-space: normal;
+				-webkit-line-clamp: none;
+
+				border-radius: 0;
+				outline-width: 2px;
+				outline-style: solid;
+				cursor: text;
+
+				// enable text selection
+				//
+				@include selection.text-selectable;
+			}
+		}
+
+		.specifics {
+			display: inline-flex;
+			flex-grow: 1;
+			flex-shrink: 0;
+			justify-content: flex-end;
+			white-space: nowrap;
+			max-height: 25px;
+			overflow: hidden;
+
+			> div {
+				display: inline-block;
+			}
+
+			.badges {
+				margin-right: 5px;
+				line-height: 25px;
+
+				.badge {
+					pointer-events: auto;
+				}
+			}
+
+			.details {
+				display: inline-block;
+				max-width: 100%;
+				padding: 0 5px;
+				margin: 5px;
+
+				// keep on one line
+				//
+				white-space: nowrap;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 1;
+
+				// show overflow using ellipsis
+				//
+				overflow: hidden;
+				text-overflow: ellipsis;
+				hyphens: auto;
+
+				&:empty {
+					display: none;
+				}
+				
+				i {
+					pointer-events: auto;
+					text-align: center;
+				}
+
+				&:empty {
+					display: none;
+				}
+			}
+
+			.priority {
+				padding: 5px;
+			}
+		}
+
+		&.loading {
+			> .info {
+				.icon {
+					i.fa-spinner {
+						display: inline-block;
+						position: absolute;
+						margin-left: -1px;
+						animation: spinning-keyframes 2s linear infinite;
+					}
+				}
+			}
+		}
+
+		//
+		// selected / highlighted items
+		//
+	
+		&.selected, &.highlighted {
+			> .info {
+
+				.name {
+					color: white;
+					background: black;
+
+					// don't draw text ellipsis if highlighted or selected
+					//
+					// display: inline-block;
+				}
+			}
+		}
+	}
+
+	&.inline {
+		display: inline-block;
+
+		.item {
+			display: inline-block;
+
+			// item spacing
+			//
+			margin-right: 5px;
+
+			> .info {
+				display: inline-flex;
+				max-width: 250px;
+
+				.specifics {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	//
+	// dragged files and directories
+	//
+
+	.drag-image {
+		width: 100%;
+
+		.item {
+			> .info {
+
+				// hide specifics
+				//
+				.specifics {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.empty {
+		font-size: 90%;
+	}
+}
+
+.items .item-list,
+.items-map .item-list {
+	.item {
+
+		// disable default selection
+		//
+		@include selection.unselectable;
+	}
+}
+
+.multiline.item-list {
+	.item {
+		.info {
+			> .name {
+				white-space: normal;
+			}
+		}
+	}
+}
+
+.panel .item-list {
+	.item {
+		.info {
+			> .icon, > .status {
+				margin: 0;
+			}
+		}
+	}
+}
+
+//
+// list borders
+//
+
+.round .item-list {
+	.item {
+		> .info {
+			.icon, .thumbnail:not(.photo) {
+				border-radius: $round-border-radius;
+
+				&::after {
+					border-radius: $round-border-radius;
+				}
+			}
+
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: $round-border-radius;
+				}
+			}
+
+			.specifics {
+				.details {
+					border-radius: $round-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.rounded .item-list {
+	.item {
+		> .info {
+			.icon, .thumbnail:not(.photo) {
+				border-radius: $rounded-border-radius;
+
+				&::after {
+					border-radius: $rounded-border-radius;
+				}
+			}
+
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: $rounded-border-radius;
+				}
+			}
+
+			.specifics {
+				.details {
+					border-radius: $rounded-border-radius;
+				}
+			}
+		}
+	}
+}
+
+.square .item-list {
+	.item {
+		> .info {
+			.icon, .thumbnail {
+				border-radius: 0;
+
+				&::after {
+					border-radius: 0;
+				}
+			}
+
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					border-radius: 0;
+				}
+			}
+
+			.specifics {
+				.details {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+.item-list {
+	.item {
+		.info {
+			label {
+				margin: 5px;
+				margin-right: 10px;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.item-list:not(.inline) {
+
+		//
+		// list items
+		//
+
+		.item {
+			> .info {
+				padding: 5px 0;
+				padding-right: 0;
+			}
+		}
+	}
+}

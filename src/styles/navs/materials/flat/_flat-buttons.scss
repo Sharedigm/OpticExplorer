@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                              _flat-buttons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../../../materials/flat/flat";
+
+//
+// mixins
+//
+
+@mixin shade($color) {
+
+	&:hover {
+		@include flat.color($color);
+	}
+
+	&:active {
+		@include flat.color(colors.darken($color, 10%));
+	}
+
+	&.selected {
+		@include flat.color($color);
+	}
+}
+
+@mixin dark-shade($color) {
+
+	&:hover {
+		@include flat.color($color);
+	}
+
+	&:active {
+		@include flat.color(colors.lighten($color, 10%));
+	}
+
+	&.selected {
+		@include flat.color($color);
+	}
+}
+
+//
+// color mixins
+//
+
+@mixin shaded($color) {
+
+	&:hover {
+		@include flat.colored($color);
+	}
+
+	&:active {
+		@include flat.colored(colors.darken($color, 10%));
+	}
+
+	&.selected {
+		@include flat.colored($color);
+	}
+}
+
+@mixin dark-shaded($color) {
+
+	&:hover {
+		@include flat.colored($color);
+	}
+
+	&:active {
+		@include flat.colored(colors.lighten($color, 10%));
+	}
+
+	&.selected {
+		@include flat.colored($color);
+	}
+}

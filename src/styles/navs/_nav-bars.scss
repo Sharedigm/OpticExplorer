@@ -1,0 +1,527 @@
+/******************************************************************************\
+|                                                                              |
+|                               _navs-bars.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../bootstrap/variables";
+@use "../navs/buttons";
+
+//
+// variables
+//
+
+$nav-bar-shadow: 0 0 10px rgba(black, 15%);
+$nav-bar-brand-padding: 0 10px;
+$nav-bar-brand-width: 40px;
+$nav-bar-brand-logo-height: 20px;
+$indicator-bar-shadow: 1px 1px 5px rgba(black, 50%);
+
+//
+// styles
+//
+
+.navbar {
+	position: absolute;
+	height: 100%;
+	min-height: unset;
+	border-radius: 0;
+	border: none;
+	margin-bottom: 0;
+
+	&.shadowed {
+		box-shadow: $nav-bar-shadow;
+	}
+
+	.navbar-brand {
+		min-width: $nav-bar-brand-width;
+		height: 100%;
+		padding: $nav-bar-brand-padding;
+		margin: auto;
+		flex-shrink: 0;
+
+		.brand {
+			display: flex;
+			height: 100%;
+			cursor: pointer;
+
+			.logo {
+				display: flex;
+				height: $nav-bar-brand-logo-height;
+				max-height: 100%;
+				margin: auto;
+			}
+
+			.logotype {
+				display: inline-block;
+				padding-top: 2px;
+				margin: auto;
+			}
+
+			.logo + .logotype {
+				margin-left: 5px;
+			}
+		}
+
+		& + .navbar-nav {
+			flex-grow: 1;
+		}
+	}
+
+	.self .tile {
+		float: left;
+
+		& + .name {
+			margin-left: 5px;
+			line-height: 25px;
+		}
+	}
+
+	.navbar-nav {
+		display: flex;
+		padding: 0;
+
+		> li {
+			display: flex;
+
+			a {
+				background: none;
+
+				&:hover {
+					background: none;
+				}
+			}
+
+			.dropdown-toggle {
+				background: none !important;
+			}
+
+			&.active {
+				a {
+					cursor: default;
+
+					i, label {
+						cursor: default;
+					}
+				}
+			}
+
+			/*
+			> .dropdown-menu {
+				margin-top: -1px;
+			}
+			*/
+		}
+
+		//
+		// apps bar
+		//
+
+		&.apps {
+
+			&:not(:empty) {
+				padding: 0 5px;
+				border-left: 1px dashed;
+				border-right: 1px dashed;
+			}
+
+			> li {
+				padding: 5px 0;
+				margin: auto;
+
+				&.current {					
+					a {
+						cursor: default;
+
+						> i {
+							filter: none !important;
+						}
+
+						&:hover {
+							cursor: default;
+
+							> i {
+								filter: none !important;
+							}
+						}
+					}
+				}
+
+				&:not(.current) {
+					a {
+						background: none !important;
+						border-color: transparent !important;
+					}
+				}
+
+				> a {
+					width: buttons.$small-size;
+					height: buttons.$small-size;
+					border-width: 1px;
+					border-style: solid;
+					padding: 0;
+					margin: auto 5px;
+					text-align: center;
+
+					i {
+						margin: 0;
+						line-height: buttons.$small-size;
+						margin-top: -1px;
+						pointer-events: auto;
+					}
+				}
+			}
+		}
+
+		> li {
+
+			> a {
+				padding: 0 15px;
+				margin: auto;
+
+				> label {
+					font-weight: normal;
+					cursor: pointer;
+					margin-bottom: 0;
+				}
+				
+				> i + label {
+					margin-left: 5px;
+				}
+
+				> i.fa-caret-down {
+					margin-right: 0;
+				}
+
+				> i + .badge {
+					margin-left: -5px;
+				}
+			}
+		}
+	}
+
+	.navbar-collapse.collapse {
+		display: flex !important;
+		height: 100% !important;
+		white-space: nowrap;
+	}
+
+	.navbar-right {
+		display: flex;
+		justify-content: flex-end;
+		margin-left: 10px;
+
+		.profile-photo {
+			display: inline-block;
+			float: left;
+			background-size: cover;
+			width: 25px;
+			height: 25px;
+			margin-top: -3px;
+			margin-right: 10px;
+		}
+
+		.storage-indicator {
+			.indicator {
+				display: inline-flex;
+				height: 15px;
+
+				i {
+					margin-right: 5px;
+				}
+
+				.amount {
+					line-height: 15px;
+					margin-right: 5px;
+				}
+
+				.bar {
+					width: 50px;
+					padding: 2px;
+					margin: 1px;
+					border-width: 1px;
+					border-style: solid;
+					border-radius: 7px;
+
+					.inner {
+						width: 0%;
+						height: 7px;
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+
+		.buttons {
+			margin-bottom: 0;
+		}
+
+		.navbar-form {
+			display: flex;
+			padding: 0;
+			margin: 0;
+			margin-right: 10px;
+
+			.buttons {
+				margin: auto;
+
+				.btn {
+					height: 30px;
+					min-width: 30px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	//
+	// active state
+	//
+
+	.navbar-nav {
+		> li > a:active,
+		> .active > a {
+			outline: none;
+			background-color: transparent;
+		}
+	}
+}
+
+.navbar-inverse {
+	background-color: black;
+}
+
+body:not(.flat) {
+	.navbar {
+		.navbar-nav {
+
+			//
+			// indicator bar
+			//
+
+			.indicator {
+				.bar {
+					.inner {
+						box-shadow: $indicator-bar-shadow;
+					}
+				}
+			}
+
+			//
+			// apps bar
+			//
+
+			&.apps {
+				> li {
+
+					&.current {					
+						a {
+							box-shadow: buttons.$shadow;
+
+							&:hover {
+								box-shadow: buttons.$shadow;
+							}
+						}
+					}
+
+					&:not(.current) {
+						a {
+							box-shadow: none;
+
+							&:hover {
+								box-shadow: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// nav lists
+//
+
+.nav.list {
+	.active {
+		cursor: pointer;
+	}
+}
+
+//
+// counter Bootstrap styles
+//
+
+.navbar-collapse {
+	border-top: none;
+}
+
+.navbar-nav {
+	margin: 0;
+}
+
+//
+// nav bar borders
+//
+
+.round-buttons,
+.round.auto-corner-buttons {
+	.navbar-nav.apps {
+		> li {
+			> a {
+				border-radius: buttons.$round-border-radius;
+			}
+		}
+	}
+}
+
+.rounded-buttons,
+.rounded.auto-corner-buttons {
+	.navbar-nav.apps {
+		> li {
+			> a {
+				border-radius: buttons.$rounded-border-radius;
+			}
+		}
+	}
+}
+
+.square-buttons,
+.square.auto-corner-buttons {
+	.navbar-nav.apps {
+		> li {
+			> a {
+				border-radius: 0;
+			}
+		}
+	}
+}
+
+//
+// prevent bootstrap header collapse
+//
+
+.navbar-collapse.collapse {
+	display: block!important;
+}
+
+.navbar-nav > li, .navbar-nav {
+	float: left !important;
+}
+
+//
+// hide header icons
+//
+
+.hide-header-icons {
+
+	// hide heading navbar icons
+	//
+	.heading.navbar-nav {
+		li a > i {
+			display: none;
+		}
+	}
+}
+
+//
+// small styles
+//
+
+@media (max-width: variables.$screen-sm-min) {
+
+	.navbar {
+
+		.navbar-collapse {
+			padding: 0;
+		}
+
+		.navbar-nav {
+			li {
+				text-align: center;
+				// flex-grow: 1;
+
+				> a {
+					padding: 10px 7px;
+				}
+			}
+		}
+	}
+}
+
+//
+// extra small styles
+//
+
+@media (max-width: variables.$screen-xs-min) {
+
+	// override Bootstrap max menu height
+	//
+	.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+		max-height: none;
+	}
+
+	.navbar {
+
+		.navbar-brand {
+			text-align: center;
+			flex-shrink: 0;
+		}
+	}
+
+	// when not signed in, hide logotype
+	// to make space for nav links
+	//
+	#header:not(.user-header) .navbar {
+		.logotype {
+			display: none;
+		}
+	}
+}
+
+//
+// large navs
+//
+
+@media (min-width: variables.$screen-md-max) {
+	.navbar {
+		.nav.heading li {
+			padding: 0 10px;
+		}
+	}
+}
+
+//
+// mobile navs
+//
+
+body[device="phone"], body[device="tablet"] {
+	.navbar {
+		.navbar-nav {
+
+			//
+			// apps bar
+			//
+
+			&.apps {
+				> li {
+					> a {
+						width: buttons.$mobile-min-width;
+					}
+				}
+			}
+		}
+	}
+}
