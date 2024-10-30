@@ -1,0 +1,459 @@
+{
+	"name": "User Guide & Reference",
+	"logo": {
+		"src": "images/logos/logo.png",
+		"background": "var(--primary-color)"
+	},
+	"version": "2.0",
+	"items": {
+
+		"getting-started": {
+			"name": "Getting Started",
+			"icon": "fa fa-bicycle",
+			"items": {
+				"creating-account": {
+					"name": "Creating an Account",
+					"icon": "fa fa-pencil-alt"
+				},
+				"using-desktop": {
+					"name": "Using Your Desktop",
+					"icon": "fa fa-desktop"
+				},
+				"session-toolbar": {
+					"name": "The Session Toolbar",
+					"icon": "fa fa-sign-in-alt"
+				},
+				"setting-desktop-app": {
+					"name": "Setting Your Desktop App",
+					"icon": "fa fa-cog"
+				},
+				"running-on-ios": {
+					"name": "Running on iOS (Apple iPhone or iPad)",
+					"icon": "fa fa-mobile"
+				}
+			}
+		},
+
+		"apps": {
+			"name": "Apps",
+			"icon": "fa fa-rocket",
+			"items": {
+				"app-launcher": {
+					"name": "Apps",
+					"icon": "fa fa-rocket"
+				},
+				"audio-player": {
+					"name": "Audio",
+					"icon": "fa fa-volume-up"
+				},
+				"calculator": {
+					"name": "Calculator",
+					"icon": "fa fa-calculator"
+				},
+				"calendar": {
+					"name": "Calendar",
+					"icon": "fa fa-calendar-alt"
+				},
+				"chat-browser": {
+					"name": "Chats",
+					"icon": "fa fa-comments"
+				},
+				"clock": {
+					"name": "Clock",
+					"icon": "fa fa-clock"
+				},
+				"code-editor": {
+					"name": "Code",
+					"icon": "fa fa-code"
+				},
+				"connection-manager": {
+					"name": "Connections",
+					"icon": "fa fa-user-friends"
+				},
+				"contact-editor": {
+					"name": "Contacts",
+					"icon": "fa fa-address-book"
+				},
+				"conversations": {
+					"name": "Conversations",
+					"icon": "fa fa-satellite-dish"
+				},
+				"decibel-meter": {
+					"name": "Decibels",
+					"icon": "fa fa-volume-up"
+				},
+				"file-browser": {
+					"name": "Files",
+					"icon": "fa fa-file"
+				},
+				"help-viewer": {
+					"name": "Help",
+					"icon": "fa fa-question-circle"
+				},
+				"image-viewer": {
+					"name": "Images",
+					"icon": "fa fa-image"
+				},
+				"map-viewer": {
+					"name": "Maps",
+					"icon": "fa fa-map"
+				},
+				"notification-center": {
+					"name": "Notifications",
+					"icon": "fa fa-exclamation-triangle"
+				},
+				"pdf-viewer": {
+					"name": "PDF",
+					"icon": "fa fa-file-pdf"
+				},
+				"profile-browser": {
+					"name": "People",
+					"icon": "fa fa-search"
+				},
+				"profile-viewer": {
+					"name": "Profile",
+					"icon": "fa fa-user"
+				},
+				"project-browser": {
+					"name": "Projects",
+					"icon": "fa fa-clipboard"
+				},
+				"settings-browser": {
+					"name": "Settings",
+					"icon": "fa fa-cog"
+				},
+				"project-viewer": {
+					"name": "Tasks",
+					"icon": "fa fa-check"
+				},
+				"text-editor": {
+					"name": "Text",
+					"icon": "fa fa-file-alt"
+				},
+				"theme-manager": {
+					"name": "Themes",
+					"icon": "fa fa-paint-brush"
+				},
+				"timer": {
+					"name": "Timer",
+					"icon": "fa fa-hourglass"
+				},
+				"tune-editor": {
+					"name": "Tunes",
+					"icon": "fa fa-music"
+				},
+				"video-player": {
+					"name": "Videos",
+					"icon": "fa fa-video"
+				},
+				"web-browser": {
+					"name": "Web",
+					"icon": "fa fa-cloud"
+				}
+			}
+		},
+
+		"customizing-environment": {
+			"name": "Customizing Your Environment",
+			"icon": "fa fa-paint-brush",
+			"items": {
+				"selecting-themes": {
+					"name": "Selecting a Theme",
+					"icon": "fa fa-mouse-pointer"
+				},
+				"changing-background": {
+					"name": "Changing Your Background",
+					"icon": "fa fa-image"
+				},
+				"customizing-appearance": {
+					"name": "Customizing Appearance",
+					"icon": "fa fa-eye"
+				},
+				"customizing-text": {
+					"name": "Customizing Text",
+					"icon": "fa fa-font"
+				},
+				"customizing-clock": {
+					"name": "Customizing Your Desktop Clock",
+					"icon": "fa fa-clock"
+				},
+				"customizing-sounds": {
+					"name": "Customizing Sounds",
+					"icon": "fa fa-volume-up"
+				}
+			}
+		},
+
+		"working-with-files": {
+			"name": "Working With Files",
+			"icon": "fa fa-file",
+			"items": {
+				"uploading-files": {
+					"name": "Uploading Files",
+					"icon": "fa fa-upload"
+				},
+				"downloading-files": {
+					"name": "Downloading Files",
+					"icon": "fa fa-download"
+				},
+				"opening-files": {
+					"name": "Opening Files",
+					"icon": "fa fa-folder-open"
+				},
+				"viewing-files": {
+					"name": "Viewing Files",
+					"icon": "fa fa-eye"
+				},
+				"viewing-file-details": {
+					"name": "Viewing File Details",
+					"icon": "fa fa-tags"
+				},
+				"viewing-hidden-items": {
+					"name": "Viewing Hidden Items",
+					"icon": "far fa-file"
+				},
+				"viewing-file-info": {
+					"name": "Viewing File Info",
+					"icon": "fa fa-info-circle"
+				},
+				"creating-folders": {
+					"name": "Creating Folders",
+					"icon": "fa fa-folder"
+				},
+				"manipulating-files": {
+					"name": "Manipulating Files",
+					"icon": "fa fa-copy"
+				},
+				"compressing-files": {
+					"name": "Compressing and Uncompressing Files",
+					"icon": "fa fa-compress"
+				},
+				"searching-for-files": {
+					"name": "Searching for Files",
+					"icon": "fa fa-search"
+				}
+			}
+		},
+
+		"working-with-images": {
+			"name": "Working With Images",
+			"icon": "fa fa-image",
+			"items": {
+				"previewing-images": {
+					"name": "Previewing Images",
+					"icon": "fa fa-eye"
+				},
+				"using-image-viewer": {
+					"name": "Using the Image Viewer",
+					"icon": "fa fa-image"
+				},
+				"viewing-exif-info": {
+					"name": "Viewing Photo Exif Information",
+					"icon": "fa fa-table"
+				},
+				"searching-for-images": {
+					"name": "Searching for Images",
+					"icon": "fa fa-search"
+				}
+			}
+		},
+
+		"creating-profile": {
+			"name": "Creating Your Profile",
+			"icon": "fa fa-user-circle",
+			"items": {
+				"viewing-profile": {
+					"name": "Viewing Your Profile",
+					"icon": "fa fa-eye"
+				},
+				"setting-profile-photos": {
+					"name": "Setting Your Profile Photos",
+					"icon": "fa fa-camera"
+				},
+				"entering-profile-info": {
+					"name": "Entering Your Profile Info",
+					"icon": "fa fa-keyboard"
+				},
+				"adding-profile-details": {
+					"name": "Adding Your Profile Details",
+					"icon": "fa fa-list"
+				},
+				"viewing-home-page": {
+					"name": "Viewing Your Public Home Page",
+					"icon": "fa fa-home"
+				}
+			}
+		},
+
+		"building-social-network": {
+			"name": "Building Your Social Network",
+			"icon": "fa fa-user-friends",
+			"items": {
+				"finding-connections": {
+					"name": "Finding Connections",
+					"icon": "fa fa-search"
+				},
+				"sending-connection-requests": {
+					"name": "Sending and Receiving Connection Requests",
+					"icon": "fa fa-envelope"
+				},
+				"inviting-new-users": {
+					"name": "Inviting New Users",
+					"icon": "fa fa-envelope"
+				},
+				"viewing-connections": {
+					"name": "Viewing Connections",
+					"icon": "fa fa-eye"
+				},
+				"viewing-connection-details": {
+					"name": "Viewing Connection Details",
+					"icon": "fa fa-tags"
+				},
+				"viewing-connection-info": {
+					"name": "Viewing Connection Info",
+					"icon": "fa fa-info-circle"
+				},
+				"managing-groups": {
+					"name": "Managing Groups of Connections",
+					"icon": "fa fa-user"
+				}
+			}
+		},
+
+		"sharing-files": {
+			"name": "Sharing Files",
+			"icon": "fa fa-share",
+			"items": {
+				"sharing-overview": {
+					"name": "Sharing Overview",
+					"icon": "fa fa-eye"
+				},
+				"sharing-by-invitation": {
+					"name": "Sharing by Invitation",
+					"icon": "fa fa-envelope"
+				},
+				"sharing-by-post": {
+					"name": "Sharing by News Post",
+					"icon": "fa fa-newspaper"
+				},
+				"sharing-by-link": {
+					"name": "Sharing by Link",
+					"icon": "fa fa-link"
+				},
+				"expiring-links": {
+					"name": "Expiring Links",
+					"icon": "fa fa-clock"
+				},
+				"protecting-links": {
+					"name": "Protecting Links",
+					"icon": "fa fa-key"
+				},
+				"sharing-by-email": {
+					"name": "Sharing by Email",
+					"icon": "fa fa-envelope"
+				},
+				"sharing-by-home-page": {
+					"name": "Sharing by Public Home Page",
+					"icon": "fa fa-home"
+				}
+			}
+		},
+
+		"sharing-messages": {
+			"name": "Sharing Messages",
+			"icon": "fa fa-comments",
+			"items": {
+				"viewing-chats": {
+					"name": "Viewing Chats",
+					"icon": "fa fa-eye"
+				},
+				"creating-chats": {
+					"name": "Creating Chats",
+					"icon": "fa fa-comments"
+				},
+				"inviting-friends": {
+					"name": "Inviting Connections to a Chat",
+					"icon": "fa fa-envelope"
+				},
+				"sending-messages": {
+					"name": "Sending Direct Messages",
+					"icon": "fa fa-envelope"
+				},
+				"adding-attachments": {
+					"name": "Adding Attachments",
+					"icon": "fa fa-link"
+				},
+				"viewing-chat-info": {
+					"name": "Viewing Chat Info",
+					"icon": "fa fa-info-circle"
+				},
+				"searching-messages": {
+					"name": "Searching Messages",
+					"icon": "fa fa-search"
+				}
+			}
+		},
+
+		"sharing-news": {
+			"name": "Sharing News",
+			"icon": "fa fa-newspaper",
+			"items": {
+				"reading-news": {
+					"name": "Reading News",
+					"icon": "fa fa-eye"
+				},
+				"posting-news": {
+					"name": "Posting News",
+					"icon": "fa fa-newspaper"
+				},
+				"adding-attachments": {
+					"name": "Adding Attachments",
+					"icon": "fa fa-link"
+				},
+				"managing-privacy": {
+					"name": "Managing Privacy",
+					"icon": "fa fa-lock"
+				},
+				"adding-topics": {
+					"name": "Adding Topics",
+					"icon": "fa fa-hashtag"
+				},
+				"sharing-topics": {
+					"name": "Sharing Topics",
+					"icon": "fa fa-share"
+				},
+				"viewing-topic-info": {
+					"name": "Viewing Topic Info",
+					"icon": "fa fa-info-circle"
+				},
+				"searching-news": {
+					"name": "Searching News",
+					"icon": "fa fa-search"
+				}
+			}
+		},
+
+		"managing-account": {
+			"name": "Managing Your Account",
+			"icon": "fa fa-user",
+			"items": {
+				"viewing-account": {
+					"name": "Viewing Your Account",
+					"icon": "fa fa-eye"
+				},
+				"changing-account": {
+					"name": "Changing Your Email or Username",
+					"icon": "fa fa-pencil-alt"
+				},
+				"changing-password": {
+					"name": "Changing Your Password",
+					"icon": "fa fa-key"
+				},
+				"deleting-account": {
+					"name": "Deleting Your Account",
+					"icon": "fa fa-trash-alt"
+				}
+			}
+		}
+	}
+}

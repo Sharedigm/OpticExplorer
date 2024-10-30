@@ -1,0 +1,54 @@
+{
+	"icon": "fa fa-hand-paper",
+	"title": "Welcome!",
+	"greeting": "Welcome to <%= application.name %>!",
+	"message": "We hope that you enjoy using <%= application.name %> to store, manage, and share your data. ",
+	"delay": 3000,
+
+	"options": {
+		"view_video": {
+			"message": "See a video tour of the features and benefits.",
+			"icon": "fa fa-video",
+			"label": "View Video",
+			"path": "/Shared/Documents/Videos/Introduction.mp4",
+			"enabled": false
+		},
+		"view_slide_show": {
+			"message": "See a slide show tour of the features and benefits.",
+			"icon": "fa fa-desktop",
+			"label": "View Slide Show",
+			"path": "/Shared/Documents/Presentations/Introduction/",
+			"enabled": false
+		},
+		"set_theme": {
+			"message": "Set a user interface theme for your preferred style.",
+			"icon": "fa fa-paint-brush",
+			"label": "Set Theme",
+			"enabled": false
+		},
+		"edit_profile": {
+			"message": "Edit your personal profile info for others to see.",
+			"icon": "fa fa-user-circle",
+			"label": "Edit Profile",
+			"enabled": false
+		},
+		"invite_contacts": {
+			"message": "Invite contacts from your Google account to connect.",
+			"icon": "fa fa-envelope",
+			"label": "Invite Contacts",
+			"enabled": false
+		},
+		"import_contacts": {
+			"message": "Import your contacts from your Google account.",
+			"icon": "fa fa-id-card",
+			"label": "Import Contacts",
+			"enabled": false
+		},
+		"set_notifications": {
+			"message": "Set your notification channel preferences.",
+			"icon": "fa fa-exclamation-triangle",
+			"label": "Set Notifications",
+			"enabled": false
+		}
+	}
+}

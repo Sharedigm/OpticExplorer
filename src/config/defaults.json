@@ -1,0 +1,104 @@
+{
+	"colors": [
+		"red", "orange", "gold", "yellow", "green", "teal", "aqua", "cyan", "blue", "violet",
+		"magenta", "brown", "grey"
+	],
+
+	"contact": {
+		"description": "For questions and comments, please fill out the contact form below: ",
+		"subjects": [
+			"Question",
+			"Comment",
+			"Feature Request",
+			"Upgrading My Account",
+			"Setting Up My Own Instance",
+			"Bug Report",
+			"Security Incident",
+			"Other"
+		],
+		"label": "Submit Question"
+	},
+
+	"desktop": {
+		"show_app_launcher": true,
+		"preferences": {
+			"desktop_apps": {
+				"phone": ["app_launcher"],
+				"tablet": ["app_launcher"],
+				"desktop": ["file_browser", "communicator", "search_viewer"]
+			},
+			"pinned_apps": []
+		}
+	},
+
+	"dialogs": {
+		"sizes": {
+			"tiny": [600, 400],
+			"small": [720, 480],
+			"medium": [900, 600],
+			"large": [1200, 800]
+		},
+		"scale": [0.75, 0.75],
+		"margin": [100, 100]
+	},
+
+	"help": {
+		"show_app": true,
+		"show_pdf": false,
+		"show_topic": "Sharedigm",
+		"show_contact": true
+	},
+
+	"releases": {
+	},
+
+	"search": {
+		"placeholder": "Search for terms or text.",
+		"options": ["view_kind", "detail_kind", "create_date"],
+		"hidden": true,
+
+		"index": {
+			"name": "search index",
+			"icon": "<i class=\"fa fa-search\"></i>"
+		},
+		"directory": "/Shared"
+	},
+
+	"settings": {
+		"enable_notifications": true,
+		"mute_sounds": false,
+		"volume": 5
+	},
+
+	"text": {
+
+		"titles": [
+			".title", ".jqplot-title",
+			".app-bar",
+			".context-menu",
+			".heading",
+			".popover-title",
+			".dropzone",
+			".app th", ".modal th", 
+			".app .help.message"
+		],
+
+		"labels": [
+			"label",
+			".header label",
+			".dropdown .form-label",
+			".app .form-label", ".modal .form-label",
+			".app .control-label", ".modal .control-label",
+			".menu-bar .dropdown-toggle",
+			".menu-bar .dropdown-menu li a",
+			".nav-tabs",
+			".btn",
+			"input",
+			"select"
+		],
+
+		"headings": [
+			"h1", "h2", "h3"
+		]
+	}
+}

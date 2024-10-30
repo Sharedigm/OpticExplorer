@@ -1,0 +1,72 @@
+{
+	"servers": {
+		"authentication": "/services/public/api",
+		"api": "/services/public/api",
+		"images": "images"
+	},
+
+	"storage": {
+		"dropbox": {
+			"appKey": "Your API Key Here"
+		},
+
+		"google": {
+			"developerKey": "Your Developer Key Here",
+			"clientId": "Your Client ID Here"
+		}
+	},
+
+	"mapping": {
+		"bingmaps": {
+			"server": "https://t2.ssl.ak.dynamic.tiles.virtualearth.net/comp/ch"
+		},
+
+		"microsoftmaps": {
+			"servers": {
+				"maps": "http://r3.ortho.tiles.virtualearth.net",
+				"aerial": "http://a0.ortho.tiles.virtualearth.net",
+				"hybrid": "http://h1.ortho.tiles.virtualearth.net"
+			}
+		},
+
+		"iflightplanner": {
+			"server": "https://maps.iflightplanner.com"
+		},
+
+		"accuweather": {
+			"server": "https://api.accuweather.com/maps/v1/models/gfs/zxy",
+			"appKey": "Your API Key Here"
+		},
+
+		"aviationweather": {
+			"server": "https://aviationweather.gov/cgi-bin/tilecache/tc.php"
+		},
+
+		"mapbox": {
+			"server": "https://a.tiles.mapbox.com/v4/mapbox.terrain-rgb",
+			"appKey": "Your API Key Here"
+		}
+	},
+
+	"geocoding": {
+		"google": {
+			"server": "https://maps.googleapis.com/maps/api/geocode/json",
+			"apiKey": "Your API Key Here"
+		},
+
+		"us_census": {
+			"server": "http://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json",
+			"appKey": "address"
+		}
+	},
+
+	"autocomplete": {
+		"google": {
+			"server": "https://maps.googleapis.com/maps/api/place/autocomplete/json",
+			"apiKey": "Your API Key Here"
+		}
+	},
+	
+	"usePushState": false,
+	"debug": true
+}

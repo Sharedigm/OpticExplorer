@@ -1,0 +1,1425 @@
+{
+	"files": {
+		"font": "fa fa-file",
+		"icon": "file.svg",
+
+		"names": {
+			"makefile": {
+				"font": "fa fa-cube",
+				"icon": "make.svg"
+			},
+			"gemfile": {
+				"font": "fa fa-gem",
+				"icon": "gem.svg"
+			}
+		},
+
+		"extensions": {
+			"": {
+				"icon": "file.svg",
+				"font": "fa fa-file",
+				"color": "silver",
+				"app": null
+			},
+			"abc": {
+				"icon": "abc.svg",
+				"font": "fa fa-music",
+				"color": "#996577",
+				"app": "tune_editor"
+			},
+			"adb": {
+				"icon": "adb.svg",
+				"font": "fa fa-file-code",
+				"color": "#9777A8",
+				"app": "code_editor"
+			},
+			"ads": {
+				"icon": "ads.svg",
+				"font": "fa fa-file-code",
+				"color": "#9777A8",
+				"app": "code_editor"
+			},
+			"ai": {
+				"icon": "ai.svg",
+				"font": "fa fa-object-group",
+				"color": "#FFC14F",
+				"app": null
+			},
+			"avi": {
+				"icon": "avi.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": null
+			},
+			"bmp": {
+				"icon": "bmp.svg",
+				"font": "fa fa-file-image",
+				"color": "#8a9c35",
+				"app": "image_viewer"
+			},
+			"c": {
+				"icon": "c.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"	
+			},
+			"c++": {
+				"icon": "c++.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"cc": {
+				"icon": "cc.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"clj": {
+				"icon": "clj.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"cp": {
+				"icon": "cp.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"cpp": {
+				"icon": "cpp.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"cs": {
+				"icon": "cs.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"css": {
+				"icon": "css.svg",
+				"font": "fa fa-file-code",
+				"color": "#0096E6",
+				"app": "code_editor"
+			},
+			"csv": {
+				"icon": "csv.svg",
+				"font": "fa fa-file-excel",
+				"color": "#F36FA0",
+				"app": "code_editor"
+			},
+			"cxx": {
+				"icon": "cxx.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"d": {
+				"icon": "d.svg",
+				"font": "fa fa-file-code",
+				"color": "#a40000",
+				"app": "code_editor"
+			},
+			"dart": {
+				"icon": "dart.svg",
+				"font": "fa fa-file-code",
+				"color": "dodgerblue",
+				"app": "code_editor"	
+			},
+			"dbf": {
+				"icon": "dbf.svg",
+				"font": "fa fa-file-excel",
+				"color": "#E96360",
+				"app": null
+			},
+			"dng": {
+				"icon": "dng.svg",
+				"font": "fa fa-file-image",
+				"color": "#358a9c",
+				"app": "image_viewer"
+			},
+			"doc": {
+				"icon": "doc.svg",
+				"font": "fa fa-file-word",
+				"color": "#0096E6",
+				"app": null
+			},
+			"docx": {
+				"icon": "docx.svg",
+				"font": "fa fa-file-word",
+				"color": "#0096E6",
+				"app": null
+			},
+			"ds_store": {
+				"icon": "ds_store.svg",
+				"font": "fab fa-apple",
+				"color": "silver",
+				"app": null
+			},
+			"dwg": {
+				"icon": "dwg.svg",
+				"font": "fa fa-object-group",
+				"color": "#8697CB",
+				"app": null		
+			},
+			"dxf": {
+				"icon": "dxf.svg",
+				"font": "fa fa-object-group",
+				"color": "#8697CB",
+				"app": null
+			},
+			"e": {
+				"icon": "e.svg",
+				"font": "fa fa-file-code",
+				"color": "grey",
+				"app": "code_editor"	
+			},
+			"elm": {
+				"icon": "elm.svg",
+				"font": "fa fa-file-code",
+				"color": "#60B5CC",
+				"app": "code_editor"	
+			},
+			"eot": {
+				"icon": "eot.svg",
+				"font": "fa fa-font",
+				"color": "grey",
+				"app": null	
+			},
+			"exe": {
+				"icon": "exe.svg",
+				"font": "fa fa-play",
+				"color": "#9777A8",
+				"app": null		
+			},
+			"f": {
+				"icon": "f.svg",
+				"font": "fa fa-file-code",
+				"color": "#734f96",
+				"app": "code_editor"
+			},
+			"fla": {
+				"icon": "fla.svg",
+				"font": "fa fa-object-group",
+				"color": "#CE3C3B",
+				"app": null
+			},
+			"flac": {
+				"icon": "flac.svg",
+				"font": "fa fa-file-audio",
+				"color": "#7D6599",
+				"app": "audio_player"
+			},
+			"for": {
+				"icon": "for.svg",
+				"font": "fa fa-file-code",
+				"color": "#734f96",
+				"app": "code_editor"
+			},
+			"gem": {
+				"icon": "gem.svg",
+				"font": "fa fa-gem",
+				"color": "crimson",
+				"app": "code_editor"
+			},
+			"gif": {
+				"icon": "gif.svg",
+				"font": "fa fa-file-image",
+				"color": "#659c35",
+				"app": "image_viewer"
+			},
+			"glsl": {
+				"icon": "glsl.svg",
+				"font": "fa fa-file-code",
+				"color": "#5586a4",
+				"app": "code_editor"
+			},
+			"go": {
+				"icon": "go.svg",
+				"font": "fa fa-file-code",
+				"color": "steelblue",
+				"app": "code_editor"
+			},
+			"gvy": {
+				"icon": "gvy.svg",
+				"font": "fa fa-file-code",
+				"color": "#619cbc",
+				"app": "code_editor"
+			},
+			"gz": {
+				"icon": "gz.svg",
+				"font": "fa fa-file-zipper",
+				"color": "grey",
+				"app": null
+			},
+			"h": {
+				"icon": "h.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"	
+			},
+			"hbs": {
+				"icon": "hbs.svg",
+				"font": "fa fa-file-code",
+				"color": "sienna",
+				"app": "code_editor"	
+			},
+			"htm": {
+				"icon": "html.svg",
+				"font": "fa fa-file-code",
+				"color": "#EC6630",
+				"app": "code_editor"
+			},
+			"html": {
+				"icon": "html.svg",
+				"font": "fa fa-file-code",
+				"color": "#EC6630",
+				"app": "code_editor"
+			},
+			"hs": {
+				"icon": "hs.svg",
+				"font": "fa fa-file-code",
+				"color": "#453a62",
+				"app": "code_editor"
+			},
+			"ini": {
+				"icon": "ini.svg",
+				"font": "fa fa-gear",
+				"color": "silver",
+				"app": "code_editor"
+			},
+			"iso": {
+				"icon": "iso.svg",
+				"font": "fa fa-bullseye",
+				"color": "#71C285",
+				"app": null
+			},
+			"java": {
+				"icon": "java.svg",
+				"font": "fa fa-file-code",
+				"color": "sienna",
+				"app": "code_editor"
+			},
+			"jpg": {
+				"icon": "jpg.svg",
+				"font": "fa fa-file-image",
+				"color": "#14a045",
+				"app": "image_viewer"
+			},
+			"jpeg": {
+				"icon": "jpeg.svg",
+				"font": "fa fa-file-image",
+				"color": "#14a045",
+				"app": "image_viewer"
+			},
+			"jl": {
+				"icon": "jl.svg",
+				"font": "fa fa-file-code",
+				"color": "#EEAF4B",
+				"app": "code_editor"
+			},
+			"js": {
+				"icon": "js.svg",
+				"font": "fa fa-file-code",
+				"color": "#EEAF4B",
+				"app": "code_editor"
+			},
+			"json": {
+				"icon": "json.svg",
+				"font": "fa fa-file-code",
+				"color": "#EEAF4B",
+				"app": "code_editor"
+			},
+			"kml": {
+				"icon": "kml.svg",
+				"font": "fa fa-globe-americas",
+				"color": "royalblue",
+				"app": "map_viewer"
+			},
+			"less": {
+				"icon": "less.svg",
+				"font": "fa fa-file-code",
+				"color": "#0096E6",
+				"app": "code_editor"
+			},
+			"lisp": {
+				"icon": "lisp.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"lsp": {
+				"icon": "lsp.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"lua": {
+				"icon": "lua.svg",
+				"font": "fa fa-file-code",
+				"color": "#000080",
+				"app": "code_editor"
+			},
+			"m": {
+				"icon": "m.svg",
+				"font": "fa fa-file-code",
+				"color": "royalblue",
+				"app": "code_editor"
+			},
+			"m4a": {
+				"icon": "m4a.svg",
+				"font": "fa fa-file-audio",
+				"color": "#7D6599",
+				"app": "audio_player"
+			},
+			"m4p": {
+				"icon": "m4p.svg",
+				"font": "fa fa-file-audio",
+				"color": "#7D6599",
+				"app": "audio_player"
+			},
+			"md": {
+				"icon": "md.svg",
+				"font": "fa fa-file-alt",
+				"color": "#90BAE1",
+				"app": "code_editor"
+			},
+			"mid": {
+				"icon": "mid.svg",
+				"font": "fa fa-music",
+				"color": "#996577",
+				"app": "audio_player"
+			},
+			"midi": {
+				"icon": "midi.svg",
+				"font": "fa fa-music",
+				"color": "#996577",
+				"app": "audio_player"
+			},
+			"mm": {
+				"icon": "mm.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"mov": {
+				"icon": "mov.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"mp3": {
+				"icon": "mp3.svg",
+				"font": "fa fa-file-audio",
+				"color": "#7D6599",
+				"app": "audio_player"
+			},
+			"mp4": {
+				"icon": "mp4.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"mpeg": {
+				"icon": "mpeg.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"mpg": {
+				"icon": "mpg.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"ogg": {
+				"icon": "ogg.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"otf": {
+				"icon": "otf.svg",
+				"font": "fa fa-font",
+				"color": "grey",
+				"app": null
+			},
+			"p": {
+				"icon": "p.svg",
+				"font": "fa fa-file-code",
+				"color": "#9777A8",
+				"app": "code_editor"
+			},
+			"pages": {
+				"icon": "pages.svg",
+				"font": "fa fa-file-alt",
+				"color": "darkorange",
+				"app": null
+			},
+			"pas": {
+				"icon": "pas.svg",
+				"font": "fa fa-file-code",
+				"color": "#9777A8",
+				"app": "code_editor"
+			},
+			"pdf": {
+				"icon": "pdf.svg",
+				"font": "fa fa-file-pdf",
+				"color": "#CC4B4C",
+				"app": "pdf_viewer"
+			},
+			"php": {
+				"icon": "php.svg",
+				"font": "fa fa-file-code",
+				"color": "#EC6630",
+				"app": "code_editor"
+			},
+			"pl": {
+				"icon": "pl.svg",
+				"font": "fa fa-file-code",
+				"color": "deepskyblue",
+				"app": "code_editor"
+			},
+			"png": {
+				"icon": "png.svg",
+				"font": "fa fa-file-image",
+				"color": "#359c8a",
+				"app": "image_viewer"
+			},
+			"ppt": {
+				"icon": "ppt.svg",
+				"font": "fa fa-file-powerpoint",
+				"color": "#F6712E",
+				"app": null
+			},
+			"pptx": {
+				"icon": "pptx.svg",
+				"font": "fa fa-file-powerpoint",
+				"color": "#F6712E",
+				"app": null
+			},
+			"psd": {
+				"icon": "psd.svg",
+				"font": "fa fa-file-image",
+				"color": "#5889C4",
+				"app": "image_viewer"
+			},
+			"py": {
+				"icon": "py.svg",
+				"font": "fa fa-file-code",
+				"color": "forestgreen",
+				"app": "code_editor"
+			},
+			"r": {
+				"icon": "r.svg",
+				"font": "fa fa-file-code",
+				"color": "royalblue",
+				"app": "code_editor"
+			},
+			"rar": {
+				"icon": "rar.svg",
+				"font": "fa fa-file-zipper",
+				"color": "grey",
+				"app": null
+			},
+			"rb": {
+				"icon": "rb.svg",
+				"font": "fa fa-gem",
+				"color": "crimson",
+				"app": "code_editor"
+			},
+			"rs": {
+				"icon": "rs.svg",
+				"font": "fa fa-file-code",
+				"color": "sienna",
+				"app": "code_editor"
+			},
+			"rtf": {
+				"icon": "rtf.svg",
+				"font": "fa fa-file-alt",
+				"color": "#90BAE1",
+				"app": null
+			},
+			"s": {
+				"icon": "s.svg",
+				"font": "fa fa-file-code",
+				"color": "royalblue",
+				"app": "code_editor"
+			},
+			"sass": {
+				"icon": "sass.svg",
+				"font": "fa fa-file-code",
+				"color": "#0096E6",
+				"app": "code_editor"
+			},
+			"sc": {
+				"icon": "sc.svg",
+				"font": "fa fa-file-code",
+				"color": "sienna",
+				"app": "code_editor"
+			},
+			"scm": {
+				"icon": "scm.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"sh": {
+				"icon": "sh.svg",
+				"font": "fa fa-file-code",
+				"color": "grey",
+				"app": "code_editor"
+			},
+			"sql": {
+				"icon": "sql.svg",
+				"font": "fa fa-database",
+				"color": "steelblue",
+				"app": "code_editor"
+			},
+			"svg": {
+				"icon": "svg.svg",
+				"font": "fa fa-file-image",
+				"color": "#E57E25",
+				"app": "image_viewer"
+			},
+			"swift": {
+				"icon": "swift.svg",
+				"font": "fa fa-file-code",
+				"color": "tomato",
+				"app": "code_editor"
+			},
+			"tar": {
+				"icon": "tar.svg",
+				"font": "fa fa-file-zipper",
+				"color": "grey",
+				"app": null
+			},
+			"tcl": {
+				"icon": "tcl.svg",
+				"font": "fa fa-file-code",
+				"color": "#f14729",
+				"app": "code_editor"
+			},
+			"tex": {
+				"icon": "tex.svg",
+				"font": "fa fa-file-code",
+				"color": "grey",
+				"app": "code_editor"
+			},
+			"text": {
+				"icon": "text.svg",
+				"font": "fa fa-file-alt",
+				"color": "#95A5A5",
+				"app": "text_editor"
+			},
+			"tfw": {
+				"icon": "tfw.svg",
+				"font": "fa fa-globe-americas",
+				"color": "royalblue",
+				"app": "map_viewer"
+			},
+			"tga": {
+				"icon": "tga.svg",
+				"font": "fa fa-file-image",
+				"color": "#358a9c",
+				"app": "image_viewer"
+			},
+			"thme": {
+				"icon": "thme.svg",
+				"font": "fa fa-paint-roller",
+				"color": "silver",
+				"app": "theme_manager"
+			},
+			"tif": {
+				"icon": "tif.svg",
+				"font": "fa fa-file-image",
+				"color": "#358a9c",
+				"app": "image_viewer"
+			},
+			"tiff": {
+				"icon": "tiff.svg",
+				"font": "fa fa-file-image",
+				"color": "#358a9c",
+				"app": "image_viewer"
+			},
+			"tpl": {
+				"icon": "tpl.svg",
+				"font": "fa fa-file-code",
+				"color": "#EC6630",
+				"app": "code_editor"
+			},
+			"ts": {
+				"icon": "ts.svg",
+				"font": "fa fa-file-code",
+				"color": "#3178c6",
+				"app": "code_editor"
+			},
+			"ttf": {
+				"icon": "ttf.svg",
+				"font": "fa fa-font",
+				"color": "grey",
+				"app": null
+			},
+			"txt": {
+				"icon": "txt.svg",
+				"font": "fa fa-file-alt",
+				"color": "#95A5A5",
+				"app": "text_editor"
+			},
+			"url": {
+				"icon": "url.svg",
+				"font": "fa fa-chain",
+				"color": "#0096E6",
+				"app": "web_browser"
+			},
+			"vbs": {
+				"icon": "vbs.svg",
+				"font": "fa fa-file-code",
+				"color": "cornflowerblue",
+				"app": "code_editor"
+			},
+			"vcf": {
+				"icon": "vcf.svg",
+				"font": "fa fa-id-card",
+				"color": "hotpink",
+				"app": "contact_editor"
+			},
+			"vrml": {
+				"icon": "vrml.svg",
+				"font": "fa fa-cube",
+				"color": "slateblue",
+				"app": "code_editor"
+			},
+			"wav": {
+				"icon": "wav.svg",
+				"font": "fa fa-file-audio",
+				"color": "#996577",
+				"app": "audio_player"
+			},
+			"webm": {
+				"icon": "webm.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": "video_player"
+			},
+			"wmv": {
+				"icon": "wmv.svg",
+				"font": "fa fa-file-video",
+				"color": "#FF5364",
+				"app": null
+			},
+			"woff": {
+				"icon": "woff.svg",
+				"font": "fa fa-font",
+				"color": "grey",
+				"app": null
+			},
+			"wrl": {
+				"icon": "wrl.svg",
+				"font": "fa fa-cube",
+				"color": "slateblue",
+				"app": "code_editor"
+			},
+			"xls": {
+				"icon": "xls.svg",
+				"font": "fa fa-file-excel",
+				"color": "#91CDA0",
+				"app": null
+			},
+			"xlsx": {
+				"icon": "xlsx.svg",
+				"font": "fa fa-file-excel",
+				"color": "#91CDA0",
+				"app": null
+			},
+			"xml": {
+				"icon": "xml.svg",
+				"font": "fa fa-file-code",
+				"color": "#9777A8",
+				"app": "code_editor"
+			},
+			"yaml": {
+				"icon": "yaml.svg",
+				"font": "fa fa-file-code",
+				"color": "#f2511f",
+				"app": "code_editor"
+			},
+			"yml": {
+				"icon": "yml.svg",
+				"font": "fa fa-file-code",
+				"color": "#f2511f",
+				"app": "code_editor"
+			},
+			"zip": {
+				"icon": "zip.svg",
+				"font": "fa fa-file-zipper",
+				"color": "grey",
+				"app": null
+			}
+		}
+	},
+
+	"archives": {
+		"extensions": [
+			"gz",
+			"tar",
+			"zip"
+		]
+	},
+
+	"audio": {
+		"extensions": [
+			"flac",
+			"m4a",
+			"m4p",
+			"mid",
+			"midi",
+			"mp3",
+			"wav"
+		]
+	},
+
+	"images": {
+		"extensions": [
+			"bmp",
+			"dng",
+			"gif",
+			"jpg",
+			"jpeg",
+			"png",
+			"psd",
+			"svg",
+			"tga",
+			"tif",
+			"tiff"
+		]
+	},
+
+	"videos": {
+		"extensions": [
+			"avi",
+			"mp4",
+			"mov",
+			"ogg",
+			"webm",
+			"mpeg",
+			"mpg",
+			"wmv"
+		]
+	},
+
+	"maps": {
+		"extensions": [
+			"kml"
+		]
+	},
+
+	"folders": {
+		"font": ["far fa-folder", "fa fa-folder"],
+		"icon": ["folder-empty.svg", "folder-full.svg"],
+
+		"albums": {
+			"audio": {
+				"font": "fa fa-compact-disc",
+				"icon": "albums-full.svg"
+			},
+
+			"image": {
+				"font": "fa fa-image",
+				"icon": "images-full.svg"
+			},
+
+			"video": {
+				"font": "fa fa-video",
+				"icon": "videos-full.svg"
+			}
+		},
+
+		"names": {
+			"": {
+				"font": "fa fa-home",
+				"icon": ["home-empty.svg", "home-full.svg"]
+			},
+
+			".git": {
+				"font": "fab fa-github",
+				"icon": ["git-empty.svg", "git-full.svg"]
+			},
+
+			".Clipboard": {
+				"font": "fa fa-clipboard",
+				"icon": ["clipboard-empty.svg", "clipboard-full.svg"]
+			},
+
+			".Messages": {
+				"font": "fa fa-comment",
+				"icon": ["messages-empty.svg", "messages-full.svg"]
+			},
+
+			".News": {
+				"font": "fa fa-newspaper",
+				"icon": ["news-empty.svg", "news-full.svg"]
+			},
+
+			"Aerial": {
+				"font": "fa fa-helicopter",
+				"icon": ["aerial-empty.svg", "aerial-full.svg"]
+			},
+
+			"Albums": {
+				"font": "fa fa-record-vinyl",
+				"icon": ["albums-empty.svg", "albums-full.svg"]
+			},
+
+			"Amazon": {
+				"font": "fab fa-amazon",
+				"icon": ["amazon-empty.svg", "amazon-full.svg"]
+			},
+
+			"Apple": {
+				"font": "fab fa-apple",
+				"icon": ["apple-empty.svg", "apple-full.svg"]
+			},
+
+			"Apps": {
+				"font": "fa fa-rocket",
+				"icon": ["apps-empty.svg", "apps-full.svg"]
+			},
+
+			"Archives": {
+				"font": "fa fa-file-zipper",
+				"icon": ["archives-empty.svg", "archives-full.svg"]
+			},
+
+			"Astro": {
+				"font": "fa fa-moon",
+				"icon": ["astro-empty.svg", "astro-full.svg"]
+			},
+
+			"Astronomy": {
+				"font": "fa fa-moon",
+				"icon": ["astro-empty.svg", "astro-full.svg"]
+			},
+
+			"Audio": {
+				"font": "fa fa-volume-up",
+				"icon": ["audio-empty.svg", "audio-full.svg"]
+			},
+
+			"Audiobooks": {
+				"font": "fa fa-book",
+				"icon": ["books-empty.svg", "books-full.svg"]
+			},
+
+			"Avatars": {
+				"font": "fa fa-user",
+				"icon": ["profile-empty.svg", "profile-full.svg"]
+			},
+
+			"Bills": {
+				"font": "fa fa-money-bill",
+				"icon": ["bills-empty.svg", "bills-full.svg"]
+			},
+
+			"Code": {
+				"font": "fa fa-code",
+				"icon": ["code-empty.svg", "code-full.svg"]
+			},
+
+			"Collections": {
+				"font": "fa fa-cubes",
+				"icon": ["collections-empty.svg", "collections-full.svg"]
+			},
+
+			"Contacts": {
+				"font": "fa fa-id-card",
+				"icon": ["contacts-empty.svg", "contacts-full.svg"]
+			},
+
+			"Controllers": {
+				"font": "fa fa-gamepad",
+				"icon": ["controllers-empty.svg", "controllers-full.svg"]
+			},
+
+			"CSS": {
+				"font": "fa fa-code",
+				"icon": ["code-empty.svg", "code-full.svg"]
+			},
+
+			"Data": {
+				"font": "fa fa-chart-column",
+				"icon": ["data-empty.svg", "data-full.svg"]
+			},
+
+			"Desktops": {
+				"font": "fa fa-desktop",
+				"icon": ["desktops-empty.svg", "desktops-full.svg"]
+			},
+
+			"Documents": {
+				"font": "fa fa-file-alt",
+				"icon": ["documents-empty.svg", "documents-full.svg"]
+			},
+
+			"Dropbox": {
+				"font": "fab fa-dropbox",
+				"icon": ["dropbox-empty.svg", "dropbox-full.svg"]
+			},
+
+			"Emoji": {
+				"font": "fa fa-smile",
+				"icon": ["emoji-empty.svg", "emoji-full.svg"]
+			},
+
+			"EmojiTwo": {
+				"font": "fa fa-smile",
+				"icon": ["emoji-empty.svg", "emoji-full.svg"]
+			},
+
+			"Facebook": {
+				"font": "fab fa-facebook-square",
+				"icon": ["facebook-empty.svg", "facebook-full.svg"]
+			},
+
+			"Fashion": {
+				"font": "fa fa-person-dress",
+				"icon": ["fashion-empty.svg", "fashion-full.svg"]
+			},
+
+			"Favorites": {
+				"font": "fa fa-star",
+				"icon": ["favorites-empty.svg", "favorites-full.svg"]
+			},
+
+			"Flowers": {
+				"font": "fa fa-gear",
+				"icon": ["flowers-empty.svg", "flowers-full.svg"]
+			},
+
+			"Fonts": {
+				"font": "fa fa-font",
+				"icon": ["fonts-empty.svg", "fonts-full.svg"]
+			},
+
+			"Games": {
+				"font": "fa fa-gamepad",
+				"icon": ["games-empty.svg", "games-full.svg"]
+			},
+
+			"Genres": {
+				"font": "fa fa-headphones",
+				"icon": ["genres-empty.svg", "genres-full.svg"]
+			},
+
+			"Github": {
+				"font": "fab fa-github",
+				"icon": ["github-empty.svg", "github-full.svg"]
+			},
+
+			"GitHub": {
+				"font": "fab fa-github",
+				"icon": ["github-empty.svg", "github-full.svg"]
+			},
+
+			"Google": {
+				"font": "fab fa-google",
+				"icon": ["google-empty.svg", "google-full.svg"]
+			},
+
+			"Graphics": {
+				"font": "fa fa-object-group",
+				"icon": ["graphics-empty.svg", "graphics-full.svg"]
+			},
+
+			"Home": {
+				"font": "fa fa-home",
+				"icon": ["home-empty.svg", "home-full.svg"]
+			},
+
+			"HTML": {
+				"font": "fa fa-code",
+				"icon": ["markup-empty.svg", "markup-full.svg"]
+			},
+
+			"Images": {
+				"font": "fa fa-image",
+				"icon": ["images-empty.svg", "images-full.svg"]
+			},
+
+			"Instagram": {
+				"font": "fab fa-instagram-square",
+				"icon": ["instagram-empty.svg", "instagram-full.svg"]
+			},
+
+			"Internet Shortcuts": {
+				"font": "fa fa-chain",
+				"icon": ["internet-shortcuts-empty.svg", "internet-shortcuts-full.svg"]
+			},
+
+			"Invoices": {
+				"font": "fa fa-money-bill",
+				"icon": ["money-empty.svg", "money-full.svg"]
+			},
+
+			"JS": {
+				"font": "fa fa-code",
+				"icon": ["scripts-empty.svg", "scripts-full.svg"]
+			},
+
+			"Landscapes": {
+				"font": "fa fa-image",
+				"icon": ["images-empty.svg", "images-full.svg"]
+			},
+
+			"Library": {
+				"font": "fa fa-book",
+				"icon": ["books-empty.svg", "books-full.svg"]
+			},
+
+			"Mac": {
+				"font": "fab fa-apple",
+				"icon": ["apple-empty.svg", "apple-full.svg"]
+			},
+
+			"Macro": {
+				"font": "fa fa-microscope",
+				"icon": ["macro-empty.svg", "macro-full.svg"]
+			},
+
+			"Maps": {
+				"font": "fa fa-map",
+				"icon": ["maps-empty.svg", "maps-full.svg"]
+			},
+
+			"Messages": {
+				"font": "fa fa-comment",
+				"icon": ["messages-empty.svg", "messages-full.svg"]
+			},
+
+			"Microsoft": {
+				"font": "fab fa-windows",
+				"icon": ["microsoft-empty.svg", "microsoft-full.svg"]
+			},
+
+			"Models": {
+				"font": "fa fa-cube",
+				"icon": ["models-empty.svg", "models-full.svg"]
+			},
+
+			"Movies": {
+				"font": "fa fa-film",
+				"icon": ["movies-empty.svg", "movies-full.svg"]
+			},
+
+			"Music": {
+				"font": "fa fa-music",
+				"icon": ["music-empty.svg", "music-full.svg"]
+			},
+
+			"Nature": {
+				"font": "fa fa-tree",
+				"icon": ["trees-empty.svg", "trees-full.svg"]
+			},
+
+			"News": {
+				"font": "fa fa-newspaper",
+				"icon": ["news-empty.svg", "news-full.svg"]
+			},
+
+			"Notes": {
+				"font": "fa fa-sticky-note",
+				"icon": ["notes-empty.svg", "notes-full.svg"]
+			},
+
+			"Patents": {
+				"font": "fa fa-lightbulb",
+				"icon": ["patents-empty.svg", "patents-full.svg"]
+			},
+
+			"People": {
+				"font": "fa fa-users",
+				"icon": ["people-empty.svg", "people-full.svg"]
+			},
+
+			"Pets": {
+				"font": "fa fa-dog",
+				"icon": ["pets-empty.svg", "pets-full.svg"]
+			},
+
+			"Photos": {
+				"font": "fa fa-camera",
+				"icon": ["photos-empty.svg", "photos-full.svg"]
+			},
+
+			"Pictures": {
+				"font": "fa fa-image",
+				"icon": ["pictures-empty.svg", "pictures-full.svg"]
+			},
+
+			"Playlists": {
+				"font": "fa fa-list",
+				"icon": ["playlists-empty.svg", "playlists-full.svg"]
+			},
+
+			"Podcasts": {
+				"font": "fa fa-microphone",
+				"icon": ["podcasts-empty.svg", "podcasts-full.svg"]
+			},
+
+			"Portraits": {
+				"font": "fa fa-user",
+				"icon": ["portraits-empty.svg", "portraits-full.svg"]
+			},
+
+			"Posts": {
+				"font": "fa fa-comment",
+				"icon": ["news-empty.svg", "news-full.svg"]
+			},
+
+			"Presentations": {
+				"font": "fa fa-file-powerpoint",
+				"icon": ["presentations-empty.svg", "presentations-full.svg"]
+			},
+
+			"Profile": {
+				"font": "fa fa-user",
+				"icon": ["profile-empty.svg", "profile-full.svg"]
+			},
+
+			"Proposals": {
+				"font": "fa fa-scroll",
+				"icon": ["proposals-empty.svg", "proposals-full.svg"]
+			},
+
+			"Public": {
+				"font": "fa fa-globe",
+				"icon": ["public-empty.svg", "public-full.svg"]
+			},
+
+			"Publications": {
+				"font": "fa fa-book",
+				"icon": ["publications-empty.svg", "publications-full.svg"]
+			},
+
+			"Research": {
+				"font": "fa fa-flask",
+				"icon": ["research-empty.svg", "research-full.svg"]
+			},
+
+			"Resumes": {
+				"font": "fa fa-list-check",
+				"icon": ["resumes-empty.svg", "resumes-full.svg"]
+			},
+
+			"Scripts": {
+				"font": "fa fa-code",
+				"icon": ["scripts-empty.svg", "scripts-full.svg"]
+			},
+
+			"Shared": {
+				"font": "fa fa-share",
+				"icon": ["shared-empty.svg", "shared-full.svg"]
+			},
+
+			"Sites": {
+				"font": "fa fa-cloud",
+				"icon": ["websites-empty.svg", "websites-full.svg"]
+			},
+
+			"Smileys": {
+				"font": "fa fa-smile",
+				"icon": ["emoji-empty.svg", "emoji-full.svg"]
+			},
+
+			"Snapchat": {
+				"font": "fab fa-snapchat-square",
+				"icon": ["snapchat-empty.svg", "snapchat-full.svg"]
+			},
+
+			"Songs": {
+				"font": "fa fa-headphones",
+				"icon": ["songs-empty.svg", "songs-full.svg"]
+			},
+
+			"Sounds": {
+				"font": "fa fa-volume-up",
+				"icon": ["sounds-empty.svg", "sounds-full.svg"]
+			},
+
+			"Soundtracks": {
+				"font": "fa fa-play-circle",
+				"icon": ["soundtracks-empty.svg", "soundtracks-full.svg"]
+			},
+
+			"Sports": {
+				"font": "fa fa-football",
+				"icon": ["football-empty.svg", "football-full.svg"]
+			},
+
+			"Spreadsheets": {
+				"font": "fa fa-calculator",
+				"icon": ["calculations-empty.svg", "calculations-full.svg"]
+			},
+
+			"Travel": {
+				"font": "fa fa-suitcase",
+				"icon": ["suitcase-empty.svg", "suitcase-full.svg"]
+			},
+
+			"Styles": {
+				"font": "fa fa-code",
+				"icon": ["code-empty.svg", "code-full.svg"]
+			},
+
+			"Templates": {
+				"font": "fa fa-code",
+				"icon": ["markup-empty.svg", "markup-full.svg"]
+			},
+
+			"Tests": {
+				"font": "fa fa-check",
+				"icon": ["tests-empty.svg", "tests-full.svg"]
+			},
+
+			"Themes": {
+				"font": "fa fa-paint-brush",
+				"icon": ["themes-empty.svg", "themes-full.svg"]
+			},
+
+			"Trash": {
+				"font": ["far fa-trash-alt", "fa fa-trash-alt"],
+				"icon": ["trash-empty.svg", "trash-full.svg"]
+			},
+
+			"Tunes": {
+				"font": "fa fa-music",
+				"icon": ["music-empty.svg", "music-full.svg"]
+			},
+
+			"Twemoji": {
+				"font": "fab fa-twitter-square",
+				"icon": ["twitter-empty.svg", "twitter-full.svg"]
+			},
+
+			"Twitter": {
+				"font": "fab fa-twitter-square",
+				"icon": ["twitter-empty.svg", "twitter-full.svg"]
+			},
+
+			"Uploads": {
+				"font": ["fa fa-upload", "fa fa-upload"],
+				"icon": ["uploads-empty.svg", "uploads-full.svg"]
+			},
+
+			"Utilities": {
+				"font": "fa fa-wrench",
+				"icon": ["utilities-empty.svg", "utilities-full.svg"]
+			},
+
+			"Videos": {
+				"font": "fa fa-video",
+				"icon": ["videos-empty.svg", "videos-full.svg"]
+			},
+
+			"Views": {
+				"font": "fa fa-eye",
+				"icon": ["views-empty.svg", "views-full.svg"]
+			},
+
+			"Volumes": {
+				"font": "fa fa-database",
+				"icon": ["volumes-empty.svg", "volumes-full.svg"]
+			},
+
+			"Websites": {
+				"font": "fa fa-cloud",
+				"icon": ["websites-empty.svg", "websites-full.svg"]
+			},
+
+			"Wildlife": {
+				"font": "fa fa-horse",
+				"icon": ["deer-empty.svg", "deer-full.svg"]
+			},
+
+			"Windows": {
+				"font": "fab fa-windows",
+				"icon": ["windows-empty.svg", "windows-full.svg"]
+			}
+		}
+	},
+
+	"volumes": {
+		"extensions": {
+			"s3": {
+				"font": "fa fa-database",
+				"icon": "s3.svg"
+			},
+			"ftp": {
+				"font": "fa fa-database",
+				"icon": "ftp.svg"
+			},
+			"sftp": {
+				"font": "fa fa-database",
+				"icon": "sftp.svg"
+			},
+			"dpbx": {
+				"font": "fa fa-database",
+				"icon": "dpbx.svg"
+			},
+			"gdrv": {
+				"font": "fa fa-database",
+				"icon": "gdrv.svg"
+			}
+		}
+	},
+
+	"languages": {
+		"extensions": {
+			"adb": "ada",
+			"ads": "ada",
+			"c": "c_cpp",
+			"c++": "c_cpp",
+			"cc": "c_cpp",
+			"clj": "clojure",
+			"cp": "c_cpp",
+			"cpp": "c_cpp",
+			"cs": "csharp",
+			"cxx": "c_cpp",
+			"e": "eiffel",
+			"f": "fortran",
+			"for": "fortran",
+			"go": "golang",
+			"gvy": "groovy",
+			"h": "c_cpp",
+			"hbs": "handlebars",
+			"hs": "haskell",
+			"htm": "html",
+			"html": "html",
+			"jl": "julia",
+			"js": "javascript",
+			"json": "javascript",
+			"kml": "xml",
+			"lsp": "lisp",
+			"m": "matlab",
+			"md": "markdown",
+			"mm": "objectivec",
+			"p": "pascal",
+			"pas": "pascal",
+			"pl": "perl",
+			"py": "python",
+			"rb": "ruby",
+			"rs": "rust",
+			"sc": "scala",
+			"s": "r",
+			"scm": "scheme",
+			"tex": "latex",
+			"ts": "typescript",
+			"vbs": "vbscript",
+			"yml": "yaml",
+			"yaml": "yaml"
+		}
+	}
+}

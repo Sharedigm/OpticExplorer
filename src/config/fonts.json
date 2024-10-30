@@ -1,0 +1,230 @@
+{
+	"Arial": {
+		"font-family": "Arial, Helvetica Neue, Helvetica, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Avant Garde": {
+		"font-family": "Avant Garde, Avantgarde, Century Gothic, CenturyGothic, AppleGothic, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Avenir": {
+		"font-family": "Avenir, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/avenir/styles.css"
+	},
+	"Bank Gothic": {
+		"font-family": "Bank Gothic, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/bank-gothic/styles.css"
+	},
+	"Calibri": {
+		"font-family": "Calibri, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/calibri/styles.css"
+	},
+	"Charcoal": {
+		"font-family": "Charcoal, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/charcoal/styles.css"
+	},
+	"Chicago": {
+		"font-family": "Chicago, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/chicago/styles.css"
+	},
+	"Clear Sans": {
+		"font-family": "Clear Sans, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/clear-sans/styles.css"
+	},
+	"Comic Neue": {
+		"font-family": "Comic Neue, Comic Sans MS, sans-serif",
+		"font-size": 14,
+		"font-weight": "bold",
+		"url": "fonts/comic-neue/styles.css"
+	},
+	"Courier": {
+		"font-family": "Courier, Courier New, sans-serif",
+		"font-size": 12,
+		"font-weight": "bold",
+		"url": null
+	},
+	"Din": {
+		"font-family": "Din, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/din/styles.css"
+	},
+	"F18": {
+		"font-family": "F18, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/f1.8/styles.css"
+	},
+	"FF Meta": {
+		"font-family": "FF Meta, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/ff-meta/styles.css"
+	},
+	"Fira Sans": {
+		"font-family": "Fira Sans, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/fira-sans/styles.css"
+	},
+	"Futura": {
+		"font-family": "Futura",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Garamond": {
+		"font-family": "Garamond",
+		"font-size": 18,
+		"font-weight": "normal",
+		"url": "fonts/apple-garamond/styles.css"
+	},
+	"Geneva": {
+		"font-family": "Geneva",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/geneva/styles.css"
+	},
+	"Gill Sans": {
+		"font-family": "Gill Sans",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Helvetica": {
+		"font-family": "Helvetica Neue, Helvetica, Arial, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Lato": {
+		"font-family": "Lato, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/lato/styles.css"
+	},
+	"Lucida": {
+		"font-family": "Lucida Sans Unicode, Lucida Grande, Lucida Sans, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Montserrat": {
+		"font-family": "Montserrat, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/montserrat/styles.css"
+	},
+	"Noto Sans": {
+		"font-family": "Noto Sans, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/noto-sans/styles.css"
+	},
+	"Open Sans": {
+		"font-family": "Open Sans, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/open-sans/styles.css"
+	},
+	"Open Sans Condensed Bold": {
+		"font-family": "Open Sans Condensed Bold, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/open-sans-condensed/styles.css"
+	},
+	"Proxima Nova": {
+		"font-family": "Proxima Nova, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/proxima-nova/styles.css"
+	},
+	"PT Sans": {
+		"font-family": "PT Sans, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/pt-sans/styles.css"
+	},
+	"Raleway": {
+		"font-family": "Raleway, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": "fonts/raleway/styles.css"
+	},
+	"Roboto": {
+		"font-family": "Roboto, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/roboto/styles.css"
+	},
+	"Segoe UI": {
+		"font-family": "Segoe UI, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/segoe-ui/styles.css"
+	},
+	"Seven Segment": {
+		"font-family": "Seven Segment, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/seven-segment/styles.css"
+	},
+	"Source Sans Pro": {
+		"font-family": "Source Sans Pro, sans-serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": "fonts/source-sans-pro/styles.css"
+	},
+	"SF UI": {
+		"font-family": "SF UI, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/sf-ui/styles.css"
+	},
+	"Syncopate": {
+		"font-family": "Syncopate, sans-serif",
+		"font-size": 10,
+		"font-weight": "normal",
+		"url": "fonts/syncopate/styles.css"
+	},
+	"Tahoma": {
+		"font-family": "Tahoma, Verdana, Segoe, sans-serif",
+		"font-size": 13,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Times": {
+		"font-family": "Times New Roman, serif",
+		"font-size": 15,
+		"font-weight": "normal",
+		"url": null
+	},
+	"Trebuchet": {
+		"font-family": "Trebuchet MS, Tahoma, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/trebuchet/styles.css"
+	},
+	"Ubuntu": {
+		"font-family": "Ubuntu, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/ubuntu/styles.css"
+	}
+}

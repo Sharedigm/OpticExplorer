@@ -1,0 +1,1626 @@
+{
+	"app_launcher": {
+		"name": "Apps",
+		"icon": "fa fa-rocket",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "orange",
+		"preferences": {
+			"window_size": "medium",
+			"full_screen": true
+		}
+	},
+	
+	"audio_player": {
+		"name": "Audio",
+		"icon": "fa fa-volume-up",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "plum",
+		"preferences": {
+			"home_directory": "Music/",
+			"view_kind": "lists",
+			"detail_kind": "artist",
+			"sort_kind": "track_number",
+			"volume": 5,
+			"track_looping": false,
+			"album_looping": true,
+			"window_size": "medium",
+			"toolbars": [
+				"play",
+				"volume"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"favorites",
+				"track_info"
+			],
+			"show_analyser": true,
+			"analyzer_size": {
+				"phone": 25,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"favorites": {
+			"#1": "Music/",
+			"#2": "Audio/"
+		}
+	},
+
+	"calculator": {
+		"name": "Calculator",
+		"icon": "fa fa-calculator",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "green",
+		"preferences": {
+			"mode": "basic"
+		}
+	},
+
+	"calendar": {
+		"name": "Calendar",
+		"icon": "fa fa-calendar-alt",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"view_kind": "month",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 225,
+				"desktop": 225
+			},
+			"sidebar_panels": [
+				"events"
+			]
+		}
+	},
+
+	"chat_browser": {
+		"name": "Chats",
+		"icon": "fa fa-comments",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "blue",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": "messages",
+			"date_format": "date_only",
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"actions"
+			]
+		}
+	},
+	
+	"clock": {
+		"name": "Clock",
+		"icon": "fa fa-clock",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"mode": "analog",
+			"show_mode": true
+		}
+	},
+
+	"code_editor": {
+		"name": "Code",
+		"icon": "fa fa-code",
+		"platform": "all",
+		"category": "productivity",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "teal",
+		"preferences": {
+			"home_directory": "Code/",
+			"show_gutter": true,
+			"show_indent_guides": true,
+			"show_print_margin": false,
+			"show_invisibles": false,
+			"font_size": 12,
+			"tab_size": 4,
+			"soft_tabs": false,
+			"soft_wrap": "off",
+			"key_binding": "default",
+			"highlight_active_line": false,
+			"highlight_selected": true,
+			"select_full_line": true,
+			"animated_scroll": true,
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"files"
+			],
+			"sidebar_view_kind": {
+				"phone": "trees",
+				"tablet": "trees",
+				"desktop": "trees"
+			},
+			"show_console": false,
+			"console_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"favorites": {
+			"#1": "Code/"
+		}
+	},
+
+	"connection_manager": {
+		"name": "Connections",
+		"icon": "fa fa-user-friends",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "blue",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": null,
+			"date_format": "date_only",
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"map_mode": "hybrid",
+			"map_view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"show_item_names": true,
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"groups"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "icons",
+				"desktop": "icons"
+			}
+		},
+		"group_icon_selector_path": "/Shared/Pictures"
+	},
+	
+	"contact_editor": {
+		"name": "Contacts",
+		"icon": "fa fa-address-book",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "raspberry",
+		"preferences": {
+			"home_directory": "Contacts/",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"contacts"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			}
+		}
+	},
+
+	"decibel_meter": {
+		"name": "Decibels",
+		"icon": "fa fa-volume-up",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "plum",
+		"preferences": {
+			"display": "led",
+			"sensitivity": 100
+		}
+	},
+
+	"communicator": {
+		"name": "Discussions",
+		"icon": "fa fa-message",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "blue",
+		"defaults": {
+			"topic": {
+				"name": "What's New",
+				"description": "This is the default topic.",
+				"required": true
+			}
+		},
+		"features": {
+			"emoji": true,
+			"files": true,
+			"pictures": true,
+			"audio": true,
+			"music": true,
+			"video": true,
+			"maps": true,
+			"uploads": true,
+			"locations": true
+		},
+		"preferences": {
+			"default_topic": "What's New",
+			"posts_per_page": 10,
+			"posts_direction": "top_down",
+			"messages_per_page": 50,
+			"default_privacy": "connections",
+			"show_comments": false,
+			"show_options": true,
+			"show_elapsed_time": true,
+			"translation": false,
+			"language": "English",
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 200,
+				"desktop": 200
+			},
+			"sidebar_panels": [
+				"info",
+				"topics",
+				"chats"
+			],
+			"sidebar_info_kind": {
+				"phone": "cards",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"copy_attachments": true,
+			"storage_directory": ".News/",
+			"messages_directory": ".Messages/"
+		}
+	},
+
+	"post_viewer": {
+		"name": "Comments",
+		"icon": "fa fa-newspaper",
+		"platform": "all",
+		"category": "social",
+		"disabled": true,
+		"hidden": true,
+		"args": false,
+		"color": "blue",
+		"preferences": {
+			"show_comments": true,
+			"show_options": true,
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"topics"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"storage_directory": ".News/"
+		}
+	},
+
+	"file_browser": {
+		"name": "Files",
+		"icon": "fa fa-folder",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": {
+				"phone": "size",
+				"tablet": "size",
+				"desktop": null
+			},
+			"date_format": "date_only",
+			"open_folders_in_new_window": false,
+			"show_hidden_files": false,
+			"show_file_extensions": false,
+			"show_thumbnails": true,
+			"show_image_names": true,
+			"show_clipboard_confirm": false,
+			"properties": [
+				"places",
+				"links",
+				"shares",
+				"indices"
+			],
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"show_desktop_sidebar": false,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"favorites",
+				"shared"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"map_mode": "hybrid",
+			"map_view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"show_item_names": true,
+			"show_geo_orientations": true,
+			"slide_duration": 2,
+			"slide_looping": true
+		},
+		"favorites": {
+			"#1": "~/",
+			"#2": "Documents/",
+			"#3": "Pictures/",
+			"#4": "Profile/",
+			"#5": "Music/",
+			"#6": "Videos/",
+			"#7": "Trash/"
+		},
+		"shared_directory": "/Shared",
+		"max_thumbnail_file_size": 100000000,
+		"max_thumbnail_svg_file_size": 1000000,
+		"share_invitation_message": "Check this out!"
+	},
+
+	"help_viewer": {
+		"name": "Help",
+		"icon": "fa fa-question-circle",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "red",
+		"preferences": {
+			"window_size": "medium",
+			"toolbars": [
+				"nav",
+				"page"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 0
+			},
+			"sidebar_panels": [
+				"index"
+			]
+		}
+	},
+
+	"image_viewer": {
+		"name": "Images",
+		"icon": "fa fa-image",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "gold",
+		"preferences": {
+			"home_directory": "Pictures/",
+			"background_color": null,
+			"zoom_duration": 100,
+			"rotate_duration": 500,
+			"slide_duration": 5,
+			"slide_looping": true,
+			"window_size": "medium",
+			"toolbars": [
+				"mouse_mode",
+				"zoom_mode",
+				"zoom",
+				"image"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"images"
+			],
+			"sidebar_view_kind": {
+				"phone": "tiles",
+				"tablet": "tiles",
+				"desktop": "tiles"
+			},
+			"sidebar_tile_size": {
+				"phone": "small",
+				"tablet": "medium",
+				"desktop": "large"
+			},
+			"show_image_info": false,
+			"info_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		}
+	},
+
+	"mail_reader": {
+		"name": "Mail",
+		"icon": "fa fa-envelope",
+		"platform": "all",
+		"category": "productivity",
+		"disabled": true,
+		"hidden": true,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"window_size": "medium"
+		}
+	},
+
+	"map_viewer": {
+		"name": "Maps",
+		"icon": "fa fa-map",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "green",
+		"preferences": {
+			"use_my_location": false,
+			"latitude": 39.8283,
+			"longitude": 98.5795,
+			"zoom_level": 2,
+			"max_zoom_level": 11,
+			"map_mode": "hybrid",
+			"aero_mode": "vfr",
+			"search_kind": null,
+			"window_size": "medium",
+			"map_layers": [
+				"crosshairs",
+				"photos",
+				"videos",
+				"overlays",
+				"people",
+				"places",
+				"favorites"
+			],
+			"weather_layers": [
+				"satellite",
+				"radar"
+			],
+			"toolbars": {
+				"phone": [
+					"nav",
+					"mouse_mode",
+					"nav_mode"
+				],
+				"tablet": [
+					"nav",
+					"mouse_mode",
+					"nav_mode",
+					"map"
+				],
+				"desktop": [
+					"nav",
+					"mouse_mode",
+					"nav_mode",
+					"map"
+				]		
+			},
+			"map_view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"show_grid": true,
+			"show_smoothing": true,
+			"show_item_names": true,
+			"show_geo_orientations": true,
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"maps",
+				"photos",
+				"videos",
+				"overlays",
+				"people",
+				"places",
+				"favorites"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"pan_duration": 500,
+			"zoom_duration": 500,
+			"zoom_to_duration": 5,
+			"measuring_units": "metric",
+			"arrow_style": "filled",
+			"label_style": "rotated",
+			"home_directory": "Maps/",
+			"photos_directory": "Pictures/",
+			"videos_directory": "Videos/",
+			"uploads_directory": "Uploads/",
+			"dropbox_directory": "Pictures/Dropbox/",
+			"google_directory": "Pictures/Google/"
+		},
+		"markers": {
+			"Places": {
+				"Home": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e0.svg",
+				"Building": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e2.svg",
+				"Hospital": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e5.svg",
+				"Institute": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3db.svg",
+				"Church": "/Shared/Pictures/Twemoji/Travel/Buildings/26ea.svg"
+			}
+		},
+		"maps_directory": "/Shared/Documents/Maps/"
+	},
+	
+	"chat_viewer": {
+		"name": "Messages",
+		"icon": "fa fa-comment",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
+		"color": "blue",
+		"features": {
+			"emoji": true,
+			"files": true,
+			"pictures": true,
+			"audio": true,
+			"music": true,
+			"video": true,
+			"maps": true,
+			"uploads": true,
+			"locations": true
+		},
+		"preferences": {
+			"messages_per_page": 50,
+			"window_size": "medium",
+			"show_elapsed_time": true,
+			"translation": false,
+			"language": "English",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 200,
+				"desktop": 200
+			},
+			"sidebar_panels": [
+				"info",
+				"chats"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"copy_attachments": true,
+			"messages_directory": ".Messages/"
+		},
+		"new_chat_invitation_message": "Hi. Let's chat!",
+		"join_chat_invitation_message": "Hi. You're invited to join a chat!"
+	},
+
+	"notification_center": {
+		"name": "Notifications",
+		"icon": "fa fa-exclamation-triangle",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "gold",
+		"sizes": {
+			"small": [320, 480],
+			"medium": [400, 600],
+			"large": [600, 900]
+		},
+		"channels": {
+			"connect_invitations": [],
+			"share_invitations": [],
+			"topic_invitations": [],
+			"chat_invitations": [],
+			"comments": [],
+			"replies": [],
+			"likes": []
+		}
+	},
+
+	"pdf_viewer": {
+		"name": "PDF",
+		"icon": "fa fa-file-pdf",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "white",
+		"preferences": {
+			"home_directory": "Documents/",
+			"background_color": null,
+			"zoom_duration": 100,
+			"window_size": "medium",
+			"toolbars": [
+				"zoom_mode",
+				"zoom",
+				"page"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"pages"
+			],
+			"sidebar_tile_size": {
+				"phone": "small",
+				"tablet": "medium",
+				"desktop": "large"
+			}
+		}
+	},
+
+	"profile_browser": {
+		"name": "People",
+		"icon": "fa fa-users",
+		"platform": "mobile",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "blue",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": "location",
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"nav",
+				"search"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"actions"
+			]
+		},
+		"invitation_message": "I'd like to invite you to use this platform, which I use to store, manage, and share my data!"
+	},
+
+	"profile_viewer": {
+		"name": "Profile",
+		"icon": "fa fa-user-circle",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "blue",
+		"preferences": {
+			"open_connections_in_new_window": false,
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"activity",
+				"status",
+				"actions",
+				"mutual_connections"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"photos_view_kind": {
+				"phone": "gallery",
+				"tablet": "gallery",
+				"desktop": "gallery"
+			}
+		},
+		"contacts": {
+			"websites": {
+				"Categories": {
+					"homepage": {
+						"icon": "fa fa-home",
+						"label": "Homepage"
+					},
+					"blog": {
+						"icon": "fa fa-comment",
+						"label": "Blog"						
+					},
+					"business": {
+						"icon": "fa fa-money-bill",
+						"label": "Business"						
+					},
+					"photos": {
+						"icon": "fa fa-camera",
+						"label": "Photos"						
+					},
+					"videos": {
+						"icon": "fa fa-video",
+						"label": "Videos"						
+					},
+					"music": {
+						"icon": "fa fa-music",
+						"label": "Music"						
+					},
+					"portfolio": {
+						"icon": "fa fa-briefcase",
+						"label": "Portfolio"						
+					},
+					"interest": {
+						"icon": "fa fa-smile",
+						"label": "Interest"						
+					},
+					"social": {
+						"icon": "fa fa-users",
+						"label": "Social"						
+					}
+				},
+				"Commercial": {
+					"etsy": {
+						"icon": "fab fa-etsy",
+						"label": "Etsy"						
+					},
+					"facebook": {
+						"icon": "fab fa-facebook-official",
+						"label": "Facebook"						
+					},
+					"flickr": {
+						"icon": "fab fa-flickr",
+						"label": "Flickr"						
+					},
+					"github": {
+						"icon": "fab fa-github",
+						"label": "GitHub"						
+					},
+					"instagram": {
+						"icon": "fab fa-instagram",
+						"label": "Instagram"						
+					},
+					"linkedin": {
+						"icon": "fab fa-linkedin-square",
+						"label": "LinkedIn"						
+					},
+					"pinterest": {
+						"icon": "fab fa-pinterest",
+						"label": "Pinterest"						
+					},
+					"snapchat": {
+						"icon": "fab fa-snapchat-ghost",
+						"label": "Snapchat"						
+					},
+					"twitter": {
+						"icon": "fab fa-twitter-square",
+						"label": "Twitter"						
+					},
+					"vimeo": {
+						"icon": "fab fa-vimeo",
+						"label": "Vimeo"						
+					},
+					"wordpress": {
+						"icon": "fab fa-wordpress",
+						"label": "Wordpress"						
+					},
+					"youtube": {
+						"icon": "fab fa-youtube",
+						"label": "YouTube"						
+					}
+				}
+			}
+		},
+		"avatars_directory": "/Shared/Pictures/Avatars",
+		"cover_photos_directory": "/Shared/Pictures/Desktops"
+	},
+
+	"project_browser": {
+		"name": "Projects",
+		"icon": "fa fa-clipboard",
+		"platform": "all",
+		"category": "productivity",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "brown",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": "tasks",
+			"date_format": "date_only",
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"actions"
+			]
+		}
+	},
+
+	"project_viewer": {
+		"name": "Tasks",
+		"icon": "fa fa-check",
+		"platform": "all",
+		"category": "productivity",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "green",
+		"defaults": {
+			"project": {
+				"name": "To Do List",
+				"description": "This is the default project.",
+				"required": true
+			}
+		},
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "lists"
+			},
+			"tile_size": "medium",
+			"detail_kind": "priority",
+			"date_format": "date_only",
+			"default_project": "To Do List",
+			"tasks_per_page": 10,
+			"show_comments": false,
+			"show_options": true,
+			"show_elapsed_time": true,
+			"sort_kind": "title",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"tasks"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"info",
+				"projects"
+			],
+			"sidebar_info_kind": {
+				"phone": "cards",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"copy_attachments": true,
+			"storage_directory": "Projects/"
+		},
+		"project_icon_selector_path": "/Shared/Pictures",
+		"project_invitation_message": "I thought you might be interested in this!"
+	},
+
+	"search_viewer": {
+		"name": "Search",
+		"icon": "fa fa-search",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"search": ["index", "files", "posts"],
+			"target": "text",
+			"min_score": 50,
+			"max_results": 100,
+			"view_kind": "cards",
+			"items_per_page": 30,
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"detail_kind": {
+				"phone": "size",
+				"tablet": "size",
+				"desktop": "size"
+			},
+			"date_format": "date_only",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 225,
+				"desktop": 225
+			},
+			"sidebar_panels": [
+				"params"
+			]
+		}
+	},
+
+	"settings_browser": {
+		"name": "Settings",
+		"icon": "fa fa-cogs",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "grey",
+		"preferences": {
+			"view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			},
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 35,
+				"desktop": 35
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"settings"
+			],
+			"sidebar_view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			}
+		}
+	},
+
+	"settings_manager": {
+		"name": "Settings Manager",
+		"icon": "fa fa-cog",
+		"platform": "all",
+		"category": "system",
+		"disabled": true,
+		"hidden": true,
+		"args": false,
+		"color": "grey",
+		"preferences": {
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"settings",
+				"preferences"
+			],
+			"sidebar_view_kind": {
+				"phone": "icons",
+				"tablet": "icons",
+				"desktop": "icons"
+			}
+		},
+		"upgrade_account_url": "#contact"
+	},
+
+	"terminal": {
+		"name": "Terminal",
+		"icon": "fa fa-terminal",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
+		"color": "green",
+		"preferences": {
+			"font_size": 13,
+			"window_size": "medium"
+		}
+	},
+
+	"text_editor": {
+		"name": "Text",
+		"icon": "fa fa-file-alt",
+		"platform": "all",
+		"category": "productivity",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "teal",
+		"preferences": {
+			"font": "Open Sans",
+			"font_size": 14,
+			"window_size": "medium"
+		}
+	},
+
+	"theme_manager": {
+		"name": "Themes",
+		"icon": "fa fa-paint-roller",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "grey",
+		"preferences": {
+			"home_directory": "/Shared/Documents/Themes/",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"actions",
+				"themes"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			}
+		},
+		"colors": [
+			"red", "orange", "gold", "yellow", "green", "teal", "aqua", "cyan", "blue", "violet",
+			"magenta", "brown", "grey"
+		],
+		"backgrounds_directory": "/Shared/Pictures/Desktops"
+	},
+
+	"theme_picker": {
+		"name": "Theme Picker",
+		"icon": "fa fa-mouse-pointer",
+		"platform": "all",
+		"category": "system",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
+		"color": "grey",
+		"preferences": {
+			"themes": [
+				"/Shared/Documents/Themes/Common/Colorful.thme",
+				"/Shared/Documents/Themes/Common/Dark.thme",
+				"/Shared/Documents/Themes/Common/Light.thme",
+				"/Shared/Documents/Themes/Common/Standard.thme",
+				"/Shared/Documents/Themes/Mac/System 1X.thme",
+				"/Shared/Documents/Themes/Mac/X Monterey.thme",
+				"/Shared/Documents/Themes/Linux/Linux Penguin.thme",
+				"/Shared/Documents/Themes/Linux/Ubuntu Beaver.thme",
+				"/Shared/Documents/Themes/Windows/Windows XP.thme",
+				"/Shared/Documents/Themes/Windows/Windows 10.thme",
+				"/Shared/Documents/Themes/Windows/Windows 11.thme",
+				"/Shared/Documents/Themes/Windows/Windows 11 Dark.thme"
+			],
+			"window_size": "small"
+		}
+	},
+
+	"timer": {
+		"name": "Timer",
+		"icon": "fa fa-hourglass",
+		"platform": "all",
+		"category": "utility",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "cyan",
+		"preferences": {
+			"display": "led",
+			"show_hours": true,
+			"show_hundredths": true,
+			"direction": "up",
+			"hours": 0,
+			"minutes": 0,
+			"seconds": 0
+		}
+	},
+
+	"topic_browser": {
+		"name": "Topics",
+		"icon": "fa fa-hashtag",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "blue",
+		"preferences": {
+			"view_kind": {
+				"phone": "cards",
+				"tablet": "cards",
+				"desktop": "icons"
+			},
+			"tile_size": "medium",
+			"detail_kind": "members",
+			"date_format": "date_only",
+			"sort_kind": "name",
+			"sort_order": "increasing",
+			"window_size": "medium",
+			"toolbars": [
+				"nav"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"actions"
+			]
+		}
+	},
+
+	"topic_viewer": {
+		"name": "Comments",
+		"icon": "fa fa-hashtag",
+		"platform": "all",
+		"category": "social",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
+		"color": "blue",
+		"defaults": {
+			"topic": {
+				"name": "What's New",
+				"description": "This is the default topic.",
+				"required": true
+			}
+		},
+		"features": {
+			"emoji": true,
+			"files": true,
+			"pictures": true,
+			"audio": true,
+			"music": true,
+			"video": true,
+			"maps": true,
+			"uploads": true,
+			"locations": true
+		},
+		"preferences": {
+			"default_topic": "What's New",
+			"posts_per_page": 10,
+			"posts_direction": "top_down",
+			"default_privacy": "connections",
+			"show_comments": false,
+			"show_options": true,
+			"show_elapsed_time": true,
+			"translation": false,
+			"language": "English",
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 200,
+				"desktop": 200
+			},
+			"sidebar_panels": [
+				"info",
+				"topics"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"copy_attachments": true,
+			"storage_directory": ".News/"
+		},
+		"topic_icon_selector_path": "/Shared/Pictures",
+		"topic_invitation_message": "I thought you might be interested in this topic!"
+	},
+
+	"tune_editor": {
+		"name": "Tunes",
+		"icon": "fa fa-music",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "magenta",
+		"preferences": {
+			"home_directory": "/Music",
+			"notation_size": 100,
+			"fit_width": false,
+			"tune_looping": false,
+			"window_size": "medium",
+			"toolbars": [
+				"nav",
+				"track"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"tunes"
+			],
+			"show_markup": true,
+			"markup_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		}
+	},
+
+	"video_player": {
+		"name": "Videos",
+		"icon": "fa fa-video",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "violet",
+		"preferences": {
+			"home_directory": "Videos/",
+			"background_color": null,
+			"volume": 5,
+			"clip_looping": false,
+			"album_looping": true,
+			"window_size": "medium",
+			"toolbars": [
+				"clip", 
+				"volume",
+				"video"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 30,
+				"desktop": 30
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"videos"
+			],
+			"sidebar_view_kind": {
+				"phone": "tiles",
+				"tablet": "tiles",
+				"desktop": "tiles"
+			},
+			"sidebar_tile_size": {
+				"phone": "small",
+				"tablet": "medium",
+				"desktop": "large"
+			},
+			"show_video_info": false,
+			"info_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		}
+	},
+
+	"web_browser": {
+		"name": "Web",
+		"icon": "fa fa-cloud",
+		"platform": "all",
+		"category": "multimedia",
+		"disabled": false,
+		"hidden": true,
+		"args": true,
+		"color": "violet",
+		"preferences": {
+			"homepage": "https://www.google.com/webhp?igu=1",
+			"home_directory": "Favorites/",
+			"window_size": "medium",
+			"toolbars": [
+				"nav", 
+				"address"
+			],
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 175,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"favorites"
+			]
+		},
+		"favorites": {
+			"Google": "https://www.google.com/webhp?igu=1",
+			"Bing": "https://www.bing.com",
+			"Wikipedia": "https://www.wikipedia.org"
+		}
+	}
+}
