@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                           _dark-chalk-colored.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/chalk";
+
+//
+// colors
+//
+
+$color: $dark-grey;
+$selected-color: $very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.dark.chalk {
+
+		//
+		// chalk colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.chalk($dark-color);
+			}
+
+			&.raspberry {
+				.chalk($dark-color);
+			}
+
+			&.red-orange {
+				.chalk($dark-color);
+			}
+
+			&.orange {
+				.chalk($dark-color);
+			}
+
+			&.yellow {
+				.chalk($dark-color);
+			}
+
+			&.lime {
+				.chalk($dark-color);
+			}
+
+			&.green {
+				.chalk($dark-color);
+			}
+
+			&.teal {
+				.chalk($dark-color);
+			}
+
+			&.aqua {
+				.chalk($dark-color);
+			}
+
+			&.cyan {
+				.chalk($dark-color);
+			}
+
+			&.blue {
+				.chalk($dark-color);
+			}
+
+			&.indigo {
+				.chalk($dark-color);
+			}
+
+			&.violet {
+				.chalk($dark-color);
+			}
+
+			&.plum {
+				.chalk($dark-color);
+			}
+
+			&.purple {
+				.chalk($dark-color);
+			}
+
+			&.magenta {
+				.chalk($dark-color);
+			}
+
+			&.brown {
+				.chalk($dark-color);
+			}
+
+			&.grey {
+				.chalk($dark-color);
+			}
+
+			&.black {
+				.chalk($dark-color);
+			}
+
+			&.white {
+				.chalk($dark-color);
+			}
+
+			&.copper {
+				.chalk($dark-color);
+			}
+
+			&.silver {
+				.chalk($dark-color);
+			}
+
+			&.gold {
+				.chalk($dark-color);
+			}
+		}
+
+		//
+		// chalk selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.chalk($selected-dark-color);
+			}
+
+			&.raspberry {
+				.chalk($selected-dark-color);
+			}
+
+			&.red-orange {
+				.chalk($selected-dark-color);
+			}
+
+			&.orange {
+				.chalk($selected-dark-color);
+			}
+
+			&.yellow {
+				.chalk($selected-dark-color);
+			}
+
+			&.lime {
+				.chalk($selected-dark-color);
+			}
+
+			&.green {
+				.chalk($selected-dark-color);
+			}
+
+			&.teal {
+				.chalk($selected-dark-color);
+			}
+
+			&.aqua {
+				.chalk($selected-dark-color);
+			}
+
+			&.cyan {
+				.chalk($selected-dark-color);
+			}
+
+			&.blue {
+				.chalk($selected-dark-color);
+			}
+
+			&.indigo {
+				.chalk($selected-dark-color);
+			}
+
+			&.violet {
+				.chalk($selected-dark-color);
+			}
+
+			&.plum {
+				.chalk($selected-dark-color);
+			}
+
+			&.purple {
+				.chalk($selected-dark-color);
+			}
+
+			&.magenta {
+				.chalk($selected-dark-color);
+			}
+
+			&.brown {
+				.chalk($selected-dark-color);
+			}
+
+			&.grey {
+				.chalk($selected-dark-color);
+			}
+
+			&.black {
+				.chalk($selected-dark-color);
+			}
+
+			&.white {
+				.chalk($selected-dark-color);
+			}
+
+			&.copper {
+				.chalk($selected-dark-color);
+			}
+
+			&.silver {
+				.chalk($selected-dark-color);
+			}
+
+			&.gold {
+				.chalk($selected-dark-color);
+			}
+		}
+	}
+}

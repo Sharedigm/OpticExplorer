@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 5,546,232 Example 3 (Ricoh smc Pentax-F 35-80mm F4-5.6)
+[constants]
+[variable distances]
+Focal Length	35.96	50	75
+Angle of View	64.2	46.8	31.8
+F-Number	3.9	4.6	5.9
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	27.99	14.73	3.42
+Bf	42.6	52.5	70.13
+Aperture Diameter	16.144	16.111	15.950
+[lens data]					
+1	39.540	1.65	1.77250	27.62	49.6
+2	16.866	6.51		22.24	
+3	-103.932	1.60	1.80610	22.44	40.9
+4	-518.960	0.10		22.44	
+5	22.598	2.77	1.80518	21.26	25.4
+6	31.345	d6		21.26	
+6.5	AS	1.20		16.144	
+7	47.904	3.21	1.69680	16.46	55.5
+8	-47.904	0.10		16.46	
+9	15.447	4.81	1.51633	15.76	64.1
+10	-43.109	5.61	1.83400	15.76	37.2
+11	15.150	3.68		13.68	
+12	-67.864	2.44	1.58267	14.54	46.4
+13	-25.449	Bf		14.54	
+[figure]
+source	Data/US005546232_Figure09P.png
+originX	17.28
+originY	131.46
+ppmm	3.763
+[notes]
+Bill: Production figure is intermediate (50mm).

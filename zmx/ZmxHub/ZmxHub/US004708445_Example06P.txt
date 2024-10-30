@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 4,708,445 Example 6 (Olympus Zuiko Auto-Macro 50mm F2)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50	undefined
+Angle of View	45.6	undefined
+F-Number	2.06	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.5
+d0	Infinity	122.43
+d4	0.120	4.010
+Bf(p)	undefined	undefined
+Bf	38.35	63.58
+[lens data]
+1	60.300	1.390	1.60342	27.26	38.01
+2	29.470	2.010		25.00	
+3	91.005	3.380	1.72916	25.00	54.68
+4	-86.915	d4		26.91
+5	20.495	6.080	1.77250	24.88	49.66
+6	37.700	1.520		22.54	
+7	248.860	1.165	1.58144	22.54	40.75
+8	19.280	5.180		20.44
+8AS	AS	4.98		19.165
+9	-23.650	1.080	1.68250	19.91	44.65
+10	233.545	4.645	1.72000	22.48	46.03
+11	-35.510	0.100		22.48	
+12	-82.525	2.865	1.77250	22.48	49.66
+13	-29.710	0.100		22.48	
+14	177.220	4.225	1.77250	21.80	49.66
+15	-33.205	1.275	1.75520	25.10	27.51
+16	-215.630	Bf		25.10
+[figure]
+source	Data/US004708445_FigureP.png
+originX	74.34
+originY	97.53
+ppmm	1.997
+[notes]
+Bill: Measured d0

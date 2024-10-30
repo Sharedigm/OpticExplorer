@@ -1,0 +1,230 @@
+/******************************************************************************\
+|                                                                              |
+|                        _medium-flat-colored-icons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/flat/flat";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.flat-icons,
+	&.colored.flat.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// flat colored icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+
+				&.red {
+					@include flat.shaded(colors.$medium-red, outset);
+				}
+
+				&.raspberry {
+					@include flat.shaded(colors.$medium-raspberry, outset);
+				}
+
+				&.red-orange {
+					@include flat.shaded(colors.$medium-red-orange, outset);
+				}
+
+				&.orange {
+					@include flat.shaded(colors.$medium-orange, outset);
+				}
+
+				&.yellow {
+					@include flat.shaded(colors.$medium-yellow, outset);
+				}
+
+				&.lime {
+					@include flat.shaded(colors.$medium-lime, outset);
+				}
+
+				&.green {
+					@include flat.shaded(colors.$medium-green, outset);
+				}
+
+				&.teal {
+					@include flat.shaded(colors.$medium-teal, outset);
+				}
+
+				&.aqua {
+					@include flat.shaded(colors.$medium-aqua, outset);
+				}
+
+				&.cyan {
+					@include flat.shaded(colors.$medium-cyan, outset);
+				}
+
+				&.blue {
+					@include flat.shaded(colors.$medium-blue, outset);
+				}
+
+				&.indigo {
+					@include flat.shaded(colors.$medium-indigo, outset);
+				}
+
+				&.violet {
+					@include flat.shaded(colors.$medium-violet, outset);
+				}
+
+				&.plum {
+					@include flat.shaded(colors.$medium-plum, outset);
+				}
+
+				&.purple {
+					@include flat.shaded(colors.$medium-purple, outset);
+				}
+
+				&.magenta {
+					@include flat.shaded(colors.$medium-magenta, outset);
+				}
+
+				&.brown {
+					@include flat.shaded(colors.$medium-brown, outset);
+				}
+
+				&.grey {
+					@include flat.shaded(colors.$medium-grey, outset);
+				}
+
+				&.black {
+					@include flat.shaded(colors.$medium-black, outset);
+				}
+
+				&.white {
+					@include flat.shaded(colors.$medium-white, outset);
+				}
+
+				&.copper {
+					@include flat.shaded(colors.$medium-copper, outset);
+				}
+
+				&.silver {
+					@include flat.shaded(colors.$medium-silver, outset);
+				}
+
+				&.gold {
+					@include flat.shaded(colors.$medium-gold, outset);
+				}
+			}
+
+			//
+			// selected flat colored icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				&.red {
+					@include flat.shaded(colors.$dark-red, outset);
+				}
+
+				&.raspberry {
+					@include flat.shaded(colors.$dark-raspberry, outset);
+				}
+
+				&.red-orange {
+					@include flat.shaded(colors.$dark-red-orange, outset);
+				}
+
+				&.orange {
+					@include flat.shaded(colors.$dark-orange, outset);
+				}
+
+				&.yellow {
+					@include flat.shaded(colors.$dark-yellow, outset);
+				}
+
+				&.lime {
+					@include flat.shaded(colors.$dark-lime, outset);
+				}
+
+				&.green {
+					@include flat.shaded(colors.$dark-green, outset);
+				}
+
+				&.teal {
+					@include flat.shaded(colors.$dark-teal, outset);
+				}
+
+				&.aqua {
+					@include flat.shaded(colors.$dark-aqua, outset);
+				}
+
+				&.cyan {
+					@include flat.shaded(colors.$dark-cyan, outset);
+				}
+
+				&.blue {
+					@include flat.shaded(colors.$dark-blue, outset);
+				}
+
+				&.indigo {
+					@include flat.shaded(colors.$dark-indigo, outset);
+				}
+
+				&.violet {
+					@include flat.shaded(colors.$dark-violet, outset);
+				}
+
+				&.plum {
+					@include flat.shaded(colors.$dark-plum, outset);
+				}
+
+				&.purple {
+					@include flat.shaded(colors.$dark-purple, outset);
+				}
+
+				&.magenta {
+					@include flat.shaded(colors.$dark-magenta, outset);
+				}
+
+				&.brown {
+					@include flat.shaded(colors.$dark-brown, outset);
+				}
+
+				&.grey {
+					@include flat.shaded(colors.$dark-grey, outset);
+				}
+
+				&.black {
+					@include flat.shaded(colors.$dark-black, outset);
+				}
+
+				&.white {
+					@include flat.shaded(colors.$dark-white, outset);
+				}
+
+				&.copper {
+					@include flat.shaded(colors.$dark-copper, outset);
+				}
+
+				&.silver {
+					@include flat.shaded(colors.$dark-silver, outset);
+				}
+
+				&.gold {
+					@include flat.shaded(colors.$dark-gold, outset);
+				}
+			}
+		}
+	}
+}

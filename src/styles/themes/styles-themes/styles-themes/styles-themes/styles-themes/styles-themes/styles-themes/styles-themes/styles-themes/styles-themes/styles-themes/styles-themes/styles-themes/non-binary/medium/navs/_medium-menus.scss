@@ -1,0 +1,215 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-menus.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+@use "../apps/common/medium-apps";
+@use "../items/medium-item-lists";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$color: medium-apps.$background-color;
+$icon-color: colors.$medium-grey;
+$text-color: text-colors.$dark-color;
+$border-color: darken($color, 10%);
+$item-divider-color: $border-color;
+
+$disabled-color: none;
+$disabled-icon-color: colors.$very-light-grey;
+$disabled-text-color: colors.$very-light-grey;
+
+$inline-text-color: medium-branding.$primary-color;
+$inline-icon-color: medium-branding.$secondary-color;
+$inline-item-odd-color: medium-item-lists.$odd-item-background-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// dropdown menus
+	//
+
+	.dropdown-menu, .menu-content {
+		background: $color;
+		border-color: $border-color;
+	}
+
+	//
+	// dropdown panels
+	//
+
+	ul.panels li {
+		border-color: $item-divider-color;
+	}
+
+	//
+	// transparent dropdowns
+	//
+
+	&.transparent {
+		.dropdown-menu, .menu-content {
+			@include plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// translucent dropdowns
+	//
+
+	&.translucent {
+		.dropdown-menu, .menu-content {
+			@include frosted-plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// translucent nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// menus
+	//
+
+	.menu, .dropdown-menu {
+		color: $text-color;
+		border-color: $border-color;
+
+		//
+		// menu items
+		//
+
+		> li {
+
+			//
+			// enabled menu items
+			//
+
+			&:not(.open):not(.disabled) {
+				color: $text-color;
+
+				> a {
+					color: $text-color;
+					background: none;
+
+					> i {
+						color: $icon-color;
+						fill: $icon-color;
+					}
+
+					//
+					// menu check marks
+					//
+
+					&:not(.app-item):not(:hover) {
+						> i.fa-check {
+							color: $text-color;
+						}
+					}
+				}
+			}
+
+			//
+			// disabled menu items
+			//
+
+			&.disabled {
+				color: $disabled-text-color;
+				background-color: $disabled-color;
+				border-color: $disabled-color;
+
+				> a {
+					color: $disabled-text-color;
+
+					> i {
+						color: $disabled-icon-color;
+						fill: $disabled-icon-color;
+					}	
+				}
+			}
+		}
+
+		//
+		// dividers
+		//
+
+		.divider:not(.disabled) {
+			border-color: $item-divider-color;
+			background-color: $item-divider-color;
+		}
+	}
+
+	//
+	// inline menus
+	//
+
+	.menu {
+
+		//
+		// inline menu items
+		//
+
+		> li {
+
+			//
+			// zebra striping
+			//
+
+			&:nth-child(odd) {
+				background-color: $inline-item-odd-color;
+			}
+
+			//
+			// enabled menu items
+			//
+
+			&:not(.disabled) {
+				> a {
+					color: $inline-text-color;
+
+					> i {
+						color: $inline-icon-color;
+						fill: $inline-icon-color;
+					}
+				}
+			}
+		}
+	}
+}

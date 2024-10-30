@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 5,434,713 Example 2 (Nikon AI AF Fisheye-Nikkor 16mm f/2.8D)
+[constants]
+[variable distances]
+Focal Length	15.6686	undefined
+Angle of View	180	undefined
+Angle of View(m)	179.42	107.67
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.033333333
+d0	Infinity	461.5288
+d10	0.0890	1.0964
+Bf	38.6304	39.0621
+[lens data]
+1	69.258	1.70	1.64000	52.61	60.0
+2	15.165	10.25		29.30	
+3	130.305	1.70	1.62041	30.27	60.1
+4	14.794	4.00		22.82	
+5	32.412	8.00	1.62588	20.27	35.7
+6	-15.298	9.00	1.79668	20.27	45.4
+7	-38.750	7.05		14.48	
+7AS	AS	3.93		14.357
+8	-81.004	1.20	1.58144	15.40	40.8
+9	24.002	5.00	1.51823	16.61	58.9
+10	-20.608	0.89		16.61	
+11	46.733	5.50	1.51860	19.63	70.0
+12	-19.219	1.30	1.78470	19.63	26.1
+13	-40.706	0.85		21.66	
+14	Infinity	1.20	1.51680	23.21	64.1
+15	Infinity	Bf		23.21	
+[figure]
+source	Data/US005434713_Example02_Tale53-Fig1.png
+ppmm	10.65534101
+originX	8
+originY	287.5
+[notes]
+Bill: Patent says f/2.9 but f/2.8 worked.

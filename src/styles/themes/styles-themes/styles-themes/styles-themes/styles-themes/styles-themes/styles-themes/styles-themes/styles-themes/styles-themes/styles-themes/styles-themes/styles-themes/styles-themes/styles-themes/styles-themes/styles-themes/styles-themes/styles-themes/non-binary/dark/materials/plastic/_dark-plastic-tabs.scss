@@ -1,0 +1,46 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-plastic-tabs.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/plastic/rounded-plastic";
+@use "../../navs/dark-tabs";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.dark.plastic-tabs,
+	&.dark.plastic.auto-tabs {
+		ul.nav-tabs {
+
+			//
+			// dark plastic inactive tabs
+			//
+
+			> li:not(.active) {
+				> a,
+				> a:focus {
+					@include rounded-plastic.shaded(dark-tabs.$color);
+				}
+
+				> a:hover {
+					@include rounded-plastic.shaded(dark-tabs.$hover-color);
+				}		
+			}
+		}
+	}
+}

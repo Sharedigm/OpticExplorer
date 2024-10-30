@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 8,970,966 Example 2 (Canon EF40mm f2.8 STM)
+[constants]
+[variable distances]
+Focal Length	39.00
+Angle of View	58.04
+F-Number	2.80
+Image Height	43.28
+Total Length	62.51
+Magnification	0
+d0	Infinity
+Bf	39.00
+P	9.01
+P'	-16.10
+H	20.40
+H'	0.00
+[lens data]
+1	38.185	3.07	1.83481	18.64	42.7
+2	-93.918	1.20	1.53172	17.40	48.8
+3	13.191	2.20		13.62	
+4	15.211	2.01	1.69680	13.34	55.5
+5	28.380	2.33		13.02	
+6	AS	5.12		12.84	
+7	-11.637	1.00	1.69895	12.47	30.1
+8	132.356	3.35	1.83481	13.78	42.7
+9	-18.087	0.15		14.44	
+10	-39.511	3.08	1.58313	15.17	59.4
+11	-15.371	Bf		16.50	
+[aspherical data]
+10	-39.511	0	-3.4255E-05	4.6012E-08	-2.0635E-09	1.3485E-11
+[figure]	
+source	Data/US008970966_Figure02AP.png
+originX	20.53
+originY	102.54
+ppmm	2.937
+[notes]
+Bill: Patent provides diameters. Identical to JP2013-137411
+

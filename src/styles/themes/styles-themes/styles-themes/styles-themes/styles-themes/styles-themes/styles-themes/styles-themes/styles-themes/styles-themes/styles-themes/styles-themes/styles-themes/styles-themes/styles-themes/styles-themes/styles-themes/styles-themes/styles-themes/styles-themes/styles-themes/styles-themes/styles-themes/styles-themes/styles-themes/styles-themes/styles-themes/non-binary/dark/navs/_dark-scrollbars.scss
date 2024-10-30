@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-scrollbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-scrollbars";
+
+//
+// colors
+//
+
+$color: colors.$dark-grey;
+$hover-color: lighten($color, 10%);
+$active-color: lighten($color, 20%);
+$track-color: darken(colors.$very-very-dark-grey, 5%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	//
+	// scrollbar thumbs and tracks
+	//
+
+	@include colored-scrollbars.colored($color, $hover-color, $active-color, $track-color);
+}

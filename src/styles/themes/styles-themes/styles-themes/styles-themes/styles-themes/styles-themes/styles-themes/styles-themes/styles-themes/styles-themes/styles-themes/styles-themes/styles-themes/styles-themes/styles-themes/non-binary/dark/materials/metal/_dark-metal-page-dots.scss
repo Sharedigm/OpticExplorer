@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                         _dark-metal-page-dots.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/metal/round-metal";
+@use "../../navs/dark-page-dots";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.dark.metal {
+		.flickity-page-dots {
+			.dot {
+				@include round-metal.shaded(dark-page-dots.$color);
+
+				//
+				// selected page dots
+				//
+
+				&.is-selected {
+					@include round-metal.shaded(dark-page-dots.$selected-color);
+				}
+			}
+		}
+	}
+}

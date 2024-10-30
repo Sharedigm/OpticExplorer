@@ -1,0 +1,32 @@
+[descriptive data]
+title	DE 1,157,000 Example 1 (Zeiss Flektogon 50mm F4)
+[constants]
+Scaled 50	100
+[variable distances]
+Focal Length	50
+Angle of View	75
+F-Number	4
+Total Length	80.860
+Image Height	70
+Magnification	0
+d0	Infinity
+Bf	61.665
+[lens data]
+1	165.8900	11.375	1.69806	69.78	53.6
+2	-123.2350	3.035	1.54212	69.78	59.6
+3	26.2585	38.110		42.71
+4	52.1400	3.505	1.68169	23.70	41.9
+5	-208.5500	0.190		23.70
+6	30.3345	9.670	1.68169	20.12	41.9
+7	30.3345	2.865		16.58
+7AS	AS	1.305		15.356
+8	-52.6100	1.705	1.67254	16.28	32.2
+9	16.9305	5.310	1.50040	18.40	65.2
+10	56.8750	3.790	1.68078	18.40	47.2
+11	-30.7895	Bf		18.40
+[figure]
+source	Data/DE01157000_Figure01P.png
+originX	145.30
+originY	214.56
+ppmm	3.866
+[notes]

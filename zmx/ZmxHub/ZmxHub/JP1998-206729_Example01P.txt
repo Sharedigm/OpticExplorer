@@ -1,0 +1,42 @@
+[descriptive data]
+title	JP 1998-206729 Example 1 (Mamiya AF APO 300mm f4.5 IF)
+[constants]
+Scaled	300	100
+[variable distances]
+Focal Length	299.52	undefined
+Angle of View	13.59	undefined
+F-Number	4.63	undefined
+Image Height	70	70
+Magnification	0	-0.11337
+S	Infinity	2100
+d0	Infinity	2744.84
+d8	25.314	39.714
+d12	61.521	47.121
+d12AS	46.064	31.664
+Bf(p)	96.42	96.42
+Bf	95.39	95.39
+[lens data]
+1	128.106	7.692	1.488	65.52	70.2
+2	Infinity	0.513		65.52	
+3	93.093	8.205	1.497	63.20	81.6
+4	865.455	1.404		63.20	
+5	1014.507	3.591	1.613	61.28	44.3
+6	60.402	3.078		56.73	
+7	65.112	8.718	1.497	58.28	81.6
+8	336.444	d8		58.28	
+9	-975.246	3.078	1.540	47.96	59.5
+10	70.197	6.369		45.84
+11	82.695	4.104	1.762	46.72	26.5
+12	120.693	d12AS		45.29
+12AS	AS	15.457		40.402
+13	215.709	5.130	1.488	39.48	70.2
+14	-95.226	40.290		39.48	
+15	-68.118	3.078	1.713	32.16	53.9
+16	-335.439	Bf		33.74	
+[figure]
+source	Data/JP1998-206729_Figure02P.png
+originX	29.38
+originY	108.72
+ppmm	2.900
+[notes]
+Bill: do and Magnification measured. S does not make sense.

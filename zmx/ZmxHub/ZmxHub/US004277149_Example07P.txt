@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,277,149 Example 7 (Konica Minolta 45mm F2 MD Rokkor)
+[constants]
+Scaled	45	1
+[variable distances]
+Focal Length	45
+Angle of View	51.4
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	36.0630
+[lens data]
+1	37.4850	2.9250	1.7810	25.25	44.5
+2	332.7480	0.1125		25.25
+3	19.4535	3.3525	1.7495	24.24	50.1
+4	29.2545	1.3500		21.15
+5	69.6015	1.1700	1.7006	25.81	30.1
+6	15.4440	4.3640		17.66
+6AS	AS	4.7800		16.972
+7	-13.0095	1.1700	1.6398	17.53	35.3
+8	-72.9855	3.8250	1.7545	21.26	50.1
+9	-17.6670	0.1125		21.26
+10	622.3500	2.9700	1.6968	22.74	55.5
+11	-32.7600	Bf		22.74
+[figure]	
+source	Data/US004277149_FigureP.png
+originX	87.29
+originY	530.79
+ppmm	39.900
+[notes]

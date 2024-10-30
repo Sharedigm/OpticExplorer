@@ -1,0 +1,147 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-apps.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../layout/light-panels";
+@use "../../../medium/apps/common/medium-apps";
+
+//
+// colors
+//
+
+$background-color: white;
+$sidebar-color: $background-color;
+$sidebar-panel-color: light-panels.$background-color;
+$sidebar-header-background-color: transparent;
+$border-color: medium-apps.$border-color;
+$transparent-sidebar-color: colors.faded($sidebar-color, 50%);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.app {
+		
+		.header-bar, .footer-bar {
+			color: text-colors.$dark-color;
+
+			.app-bar, .info-bar, .address-bar, .toolbar {
+
+				i {
+					color: colors.$light-grey;
+				}
+
+				.button.selected, .input-group-addon.btn {
+					i {
+						color: inherit;
+					}
+				}
+
+				.btn-primary {
+					i {
+						color: white;
+					}
+				}
+			}
+		}
+
+		.body, .body-region {
+			border-color: $background-color;
+
+			> .contents {
+				border-color: $border-color;
+
+				> .split {
+					border-color: $border-color;
+
+					&.sidebar {
+						background-color: $sidebar-color;
+
+						.header {
+							background-color: $sidebar-header-background-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// panels following apps
+		//
+
+		& + .panel {
+			border-color: $border-color;
+		}
+	}
+
+	//
+	// light opaque app sidebars
+	//
+
+	&.opaque {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light transparent app sidebars
+	//
+
+	&.transparent, &.translucent {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $transparent-sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// app sidebar panels
+	//
+
+	&.sidebar-panels {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+
+						.header {
+							background-color: transparent;
+						}
+
+						.panel {
+							background-color: $sidebar-panel-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

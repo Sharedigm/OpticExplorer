@@ -1,0 +1,94 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-comment-bubbles.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+
+//
+// colors
+//
+
+$color: back;
+$background-color: white;
+$border-color: black;
+$arrow-color: black;
+$comment-select-color: black;
+
+//
+// styles
+//
+
+body.binary {
+	.comment-bubble {
+		> .comment-inner {
+			color: $color;
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		//
+		// comment arrows
+		//
+
+		&.top > .comment-arrow {
+			border-top-color: $arrow-color;
+		}
+		&.right > .comment-arrow {
+			border-right-color: $arrow-color;
+		}
+		&.left > .comment-arrow {
+			border-left-color: $arrow-color;
+		}
+		&.bottom > .comment-arrow {
+			border-bottom-color: $arrow-color;
+		}
+	}
+
+	//
+	// selected comments
+	//
+
+	.selected > .comment-bubble,
+	.selected > .info > .comment-bubble {
+		> .comment-inner {
+			color: white;
+			background-color: $comment-select-color;
+			border-color: $comment-select-color;
+			@include binary-text.unoutline;
+
+			a {
+				color: white;
+			}
+		}
+
+		//
+		// selected comment arrows
+		//
+
+		&.top > .comment-arrow {
+			border-top-color: $comment-select-color;
+		}
+		&.right > .comment-arrow {
+			border-right-color: $comment-select-color;
+		}
+		&.left > .comment-arrow {
+			border-left-color: $comment-select-color;
+		}
+		&.bottom > .comment-arrow {
+			border-bottom-color: $comment-select-color;
+		}
+	}
+}

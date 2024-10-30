@@ -1,0 +1,47 @@
+[descriptive data]
+title	JP 2009-282554 Example 6 (Canon EF28-90mm f4-5.6 II USM)
+[variable distances]
+Focal Length	28.90	50.02	86.89
+Angle of View	73.60	46.80	28.00
+F-Number	3.84	4.45	5.88
+Image Height	43.28	43.28	43.28
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	34.38	12.71	1.09
+d11	2.00	6.87	12.46
+d15	14.09	9.21	3.62
+d19	0.00	13.06	36.80
+Bf(p)	undefined	undefined	undefined
+Bf	38.71	38.71	38.71
+[lens data]
+1	37.748	1.80	1.622992	38.64	58.2
+2	18.350	9.59		31.04	
+3	-90.850	1.60	1.622992	30.68	58.2
+4	43.103	0.15		29.12	
+5	28.478	2.62	1.846660	28.86	23.8
+6	48.635	d6		28.86	
+7	50.008	2.00	1.701536	20.12	41.2
+8	-267.513	0.10		20.12	
+9	26.915	1.00	1.846660	20.07	23.8
+10	15.023	5.26	1.603112	20.07	60.6
+11	-101.063	d11		20.07
+12	AS	1.80		13.963
+13	-68.910	0.80	1.688931	14.78	31.1
+14	13.828	2.64	1.846660	14.78	23.8
+15	39.654	d15		14.78
+16	-90.382	1.00	1.583060	19.68	30.2
+17	-205.313	0.40		19.68	
+18	-190.913	2.42	1.516330	19.68	64.1
+19	-29.325	d19		20.86	
+20	FS	Bf		27.24	
+[aspherical data]
+17	-205.313	0	1.91256E-05	4.84357E-08	-2.85693E-10	1.98932E-12
+[figure]
+source	Data/JP2009-282554_Figure21P.png
+originX	15.20
+originY	117.39
+ppmm	3.356
+[notes]
+Bill: Figure is for intermediate focal length and also looks focused closer than infinity.
+Telephoto 0.05mm too long.

@@ -1,0 +1,117 @@
+/******************************************************************************\
+|                                                                              |
+|                              _data-sheets.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+
+//
+// variables
+//
+
+$title-font-size: 1.25em;
+$title-align: center;
+$title-margin-bottom: 10px;
+$columns: 2;
+
+//
+// styles
+//
+
+.data-sheet {
+
+	.title {
+		font-size: $title-font-size;
+		text-align: $title-align;
+		margin-bottom: $title-margin-bottom;
+	}
+
+	.description {
+		text-align: center;
+	}
+
+	.panels {
+		padding-bottom: 10px;
+
+		.panel {
+			margin-bottom: 10px;
+			break-inside: avoid-column;
+
+			.header {
+				margin-bottom: 10px;
+			}
+
+			.control-label {
+				width: 50%;
+			}
+
+			.table {
+				column-count: $columns;
+				margin-bottom: -5px;
+			}
+
+			.tile {
+				float: none;
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin-right: 5px;
+				border: 1px;
+				border-style: solid;
+				border-color: black;
+			}
+		}
+	}
+}
+
+.data-sheet-editor {
+	.form-horizontal {
+		column-width: 140px;
+
+		.form-group {
+			.control-label {
+				width: 50%;
+			}
+
+			label {
+				width: 100px;
+				white-space: nowrap;
+			}
+
+			.tile {
+				float: none;
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				margin-right: 5px;
+				border: 1px;
+				border-style: solid;
+				border-color: black;
+			}
+		}
+	}
+}
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.data-sheet {
+		.panels {
+			column-count: 2;
+			column-gap: 10px;
+		
+			.control-label {
+				width: 50%;
+			}
+		}
+	}
+}

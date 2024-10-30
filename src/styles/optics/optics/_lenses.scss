@@ -1,0 +1,323 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _lenses.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$mono-lens-color: #606070;
+$selected-mono-lens-color: darken($mono-lens-color, 10%);
+$hover-color: colors.$medium-blue;
+$select-color: colors.$medium-blue;
+$dark-hover-color: colors.$medium-blue;
+$dark-select-color: colors.$medium-blue;
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.lens {
+		overflow: visible;
+
+		.filled {
+			.transmitted {
+				fill-opacity: 1;
+				stroke-opacity: 0;
+				mix-blend-mode: hard-light;
+			}
+
+			.diffuse {
+				fill-opacity: 0;
+				stroke-opacity: 0;
+			}
+
+			.specular {
+				fill: url(#highlight);
+				fill-opacity: 1;
+				mix-blend-mode: lighten;
+				stroke-opacity: 0;
+				pointer-events: none;
+			}
+		}
+
+		.stroked {
+			.edges {
+				stroke-width: 2;
+				vector-effect: non-scaling-stroke;
+			}
+		}
+
+		//
+		// back components
+		//
+
+		> .back {
+			pointer-events: none;
+
+			.filled {
+				.specular {
+					fill: url(#inverse-highlight);
+					fill-opacity: 0.5;
+				}
+			}
+
+			.stroked {
+				.edges {
+					stroke-opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+//
+// lens layers
+//
+
+.layer .lens {
+	overflow: visible;
+
+	.stroked {
+		stroke-width: 2;
+		vector-effect: non-scaling-stroke;
+	}
+}
+
+.layer[name="underlay"] .lens {
+	pointer-events: none;
+}
+
+//
+// binary lenses
+//
+
+body.binary {
+	.optics .viewport {
+		.lens {
+			fill: grey;
+			stroke: black;
+
+			&.selected {
+				fill: darken(grey, 20%);
+			}
+		}
+	}
+}
+
+//
+// monochrome lenses
+//
+
+body.monochrome {
+	.optics .viewport {
+		.lens {
+			fill: $mono-lens-color;
+			stroke: $mono-lens-color;
+
+			&.selected {
+				fill: $selected-mono-lens-color;
+			}
+		}
+	}
+}
+
+// This needs to be at the top level for Firefox.
+//
+.stroked {
+	fill-opacity: 0;
+}
+
+//
+// dark lenses
+//
+
+.optics .viewport.dark,
+body.dark .optics .viewport.auto {
+	.lens {
+
+		.filled {
+			.transmitted {
+				mix-blend-mode: normal;
+				fill-opacity: 0.25;
+			}
+
+			.diffuse {
+				mix-blend-mode: overlay;
+				fill-opacity: 0.5;
+			}
+
+			.specular {
+				mix-blend-mode: plus-lighter;
+				fill-opacity: 0.5;
+			}
+		}
+
+		&:hover {
+			.filled {
+				.transmitted {
+					fill-opacity: 0.5;
+				}
+			}
+		}
+
+		&.selected {
+			.filled {
+				.transmitted {
+					fill-opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+//
+// colored lenses
+//
+
+body.colored {
+	.optics .viewport {
+		.lens {
+
+			//
+			// highlighted lenses
+			//
+
+			&:hover {
+
+				.filled {
+					.transmitted {
+						fill: $hover-color;
+					}
+				}
+
+				.stroked {
+					.edges {
+						stroke: $hover-color;
+					}
+				}
+			}
+
+			//
+			// selected lenses
+			//
+
+			&.selected {
+
+				.filled {
+					.transmitted {
+						fill: $select-color;
+					}
+				}
+
+				.stroked {
+					.edges {
+						stroke: $select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark colored lenses
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+		.lens {
+
+			//
+			// dark highlighted lenses
+			//
+
+			&:hover {
+
+				.filled {
+					.transmitted {
+						fill: $dark-hover-color;
+					}
+				}
+
+				.stroked {
+					.edges {
+						stroke: $dark-hover-color;
+					}
+				}
+			}
+
+			//
+			// dark selected lenses
+			//
+
+			&.selected {
+
+				.filled {
+					.transmitted {
+						fill: $dark-select-color;
+					}
+				}
+
+				.stroked {
+					.edges {
+						stroke: $dark-select-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+[browser="firefox"] {
+
+	.optics .viewport {
+		.lens {
+			visibility: visible;
+
+			.filled {
+				.transmitted {
+					mix-blend-mode: normal !important;
+					fill-opacity: 0.25 !important;
+				}
+
+				.diffuse {
+					mix-blend-mode: overlay !important;
+					fill-opacity: 0.125 !important;
+				}
+
+				.specular {
+					mix-blend-mode: normal !important;
+					fill-opacity: 1 !important;
+				}
+			}
+
+			> .back {
+				.filled {
+					.specular {
+						fill-opacity: 0.5 !important;
+					}
+				}
+			}
+		}
+
+		[name="shadows"] {
+			opacity: 0.5;
+		}
+	}
+}

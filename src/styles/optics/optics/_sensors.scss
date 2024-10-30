@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _sensors.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$color: colors.$dark-grey;
+$hover-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+$dark-color: colors.$light-grey;
+$dark-hover-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+//
+// styles
+//
+
+.optics .viewport {
+	.elements {
+
+		.sensor {
+			overflow: visible;
+
+			path {
+				stroke-width: 3;
+				vector-effect: non-scaling-stroke;
+			}
+		}
+	}
+}
+
+//
+// binary sensors
+//
+
+body.binary {
+
+	.optics .viewport {
+		.elements {
+			.sensor {
+				stroke: black;
+			}
+		}
+	}
+}
+
+//
+// non-binary sensors
+//
+
+body:not(.binary) {
+
+	.optics .viewport {
+		.elements {
+
+			.sensor {
+				stroke: $color;
+
+				&:hover {
+					path {
+						stroke: $hover-color;
+					}
+				}
+
+				&.selected {
+					path {
+						stroke: $select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark sensors
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+		.elements {
+
+			.sensor {
+				stroke: $dark-color;
+
+				&:hover {
+					path {
+						stroke: $dark-hover-color;
+					}
+				}
+
+				&.selected {
+					path {
+						stroke: $dark-select-color;
+					}
+				}
+			}
+		}
+	}
+}

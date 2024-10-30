@@ -89,6 +89,7 @@ export default Backbone.Router.extend({
 		// contact routes
 		//
 		'contact': 'showContact',
+		'contribute': 'showContribute',
 
 		// help routes
 		//
@@ -645,18 +646,18 @@ export default Backbone.Router.extend({
 		import(
 			'./utilities/web/query-string.js'
 		).then((QueryString) => {
-			if (QueryString.default.has('file')) {
+			if (QueryString.default.hasParam('file')) {
 
 				// show file downloaded page
 				//
-				this.showFileDownloaded(QueryString.default.value('file', {
+				this.showFileDownloaded(QueryString.default.getParam('file', {
 					queryString: queryString
 				}));
-			} else if (QueryString.default.has('folder')) {
+			} else if (QueryString.default.hasParam('folder')) {
 
 				// show folder downloaded page
 				//
-				this.showFolderDownloaded(QueryString.default.value('folder', {
+				this.showFolderDownloaded(QueryString.default.getParam('folder', {
 					queryString: queryString
 				}));
 			}
@@ -820,6 +821,19 @@ export default Backbone.Router.extend({
 		});
 	},
 
+	showContribute: function() {
+		import(
+			'./views/contact/contribute-view.js'
+		).then((ContributeView) => {
+
+			// show contribute page
+			//
+			application.showPage(new ContributeView.default(), {
+				nav: 'contribute'
+			});
+		});
+	},
+
 	//
 	// help route methods
 	//
@@ -844,17 +858,13 @@ export default Backbone.Router.extend({
 
 	showInfo: function(address) {
 		this.fetchTemplate(address, (text) => {
-			let nav = address.contains('/')? address.split('/')[0] : address;
-			if (nav == 'welcome') {
-				nav = undefined;
-			}
 
 			// show info page
 			//
 			application.showPage(new BaseView({
 				template: template(text)
 			}), {
-				nav: nav
+				nav: address.contains('/')? address.split('/')[0] : address
 			});
 		});
 	},

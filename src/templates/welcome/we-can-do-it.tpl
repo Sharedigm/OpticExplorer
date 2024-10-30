@@ -23,37 +23,33 @@
 	<div class="section">
 		<div class="row" style="flex-direction:row">
 			<div class="col-sm-6">
-				<div class="content">
-					<h2>Personal Reasons To Care: </h2>
-					<ol>
-						<li>You want to have more choice in the software and web services that are available to you rather than just being satisfied with a handful of choices from the tech giants. </li>
+				<h2>Personal Reasons To Care: </h2>
+				<ol>
+					<li>You want to have more choice in the software and web services that are available to you rather than just being satisfied with a handful of choices from the tech giants. </li>
 
-						<li>You are concerned about the privacy and control of your own data and don't like the idea of being exploited for survelliance capitalism. </li>
+					<li>You are concerned about the privacy and control of your own data and don't like the idea of being exploited for survelliance capitalism. </li>
 
-						<li>You care about the ability to control and archive your data long into the future, regardless of corporate or policy changes that are outside of your control. </li>
+					<li>You care about the ability to control and archive your data long into the future, regardless of corporate or policy changes that are outside of your control. </li>
 
-						<li>You would like the option of being able to customize and tailor your personal tech to fit your individual needs or style instead of just using a one size fits all solution. </li>
+					<li>You would like the option of being able to customize and tailor your personal tech to fit your individual needs or style instead of just using a one size fits all solution. </li>
 
-						<li>You are a tech worker and you would like the option of being able to work for smaller, local employers rather than just a few large mega-corporations. </li>
-					</ol>
-				</div>
+					<li>You are a tech worker and you would like the option of being able to work for smaller, local employers rather than just a few large mega-corporations. </li>
+				</ol>
 			</div>
 
 			<div class="col-sm-6">
-				<div class="content">
-					<h2>Societal Reasons To Care: </h2>
-					<ol>
-						<li>You are concerned about the effects of monopoly power and the corruption and anti-competitive behavior that occurs when too much power is controlled by a small number of people or companies. </li>
+				<h2>Societal Reasons To Care: </h2>
+				<ol>
+					<li>You are concerned about the effects of monopoly power and the corruption and anti-competitive behavior that occurs when too much power is controlled by a small number of people or companies. </li>
 
-						<li>You are against the current lottery based economy where all economic rewards go to a small number of winners. </li>
+					<li>You are against the current lottery based economy where all economic rewards go to a small number of winners. </li>
 
-						<li>You care about the falling rate of entrepreneurship and the ability for innovative people to start new companies with a chance at survival. </li>
+					<li>You care about the falling rate of entrepreneurship and the ability for innovative people to start new companies with a chance at survival. </li>
 
-						<li>You are concerned about the prospects of the population's data being funnelled through a small number of easily monitored and controlled data silos. </li>
+					<li>You are concerned about the prospects of the population's data being funnelled through a small number of easily monitored and controlled data silos. </li>
 
-						<li>You care about the pace of innovation in science and technology which has been declining steadily over the past few decades (The "Great Stagnation"). </li>
-					</ol>
-				</div>
+					<li>You care about the pace of innovation in science and technology which has been declining steadily over the past few decades (The "Great Stagnation"). </li>
+				</ol>
 			</div>
 		</div>
 	</div>

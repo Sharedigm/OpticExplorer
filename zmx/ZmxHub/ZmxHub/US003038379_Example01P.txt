@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 3,038,379 Example 1 (Schneider Cinegon 1.8 / 10)
+[constants]
+Scaled	10	1
+[variable distances]
+Focal Length	10
+Angle of View	66
+F-Number	1.8
+Image Height	13
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	17.41
+[lens data]
+1	-120.400	0.980	1.7440	28.88	44.9
+2	17.070	9.750	1.5014	24.69	56.5
+3	-30.610	0.100		24.69
+4	38.040	4.100	1.7400	20.40	28.2
+5	-41.880	1.460	1.5128	20.40	57.2
+6	7.910	15.110		12.60	
+6AS	AS	10.000		9.823
+7	1317.000	0.980	1.6727	15.00	32.2
+8	28.280	4.880	1.5687	15.00	63.1
+9	-19.500	0.050		15.00	
+10	47.460	3.410	1.6425	18.02	58.1
+11	-53.030	0.050		18.02
+12	24.400	5.120	1.5400	18.08	59.7
+13	-20.940	0.880	1.7282	18.08	28.3
+14	140.100	Bf		20.15
+[figure]
+source	Data/US003038379_Figure01P.png
+originX	59.39
+originY	165.60
+ppmm	8.741
+[notes]
+Bill: Image Height unknown.

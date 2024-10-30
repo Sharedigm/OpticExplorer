@@ -1,0 +1,32 @@
+[descriptive data]
+title	CH 321571 Example 1 (Zeiss Distagon 60mm F5.6)
+[constants]
+Scaled	60	1
+[variable distances]
+Focal Length	60
+Angle of View	undefined
+F-Number	5.6
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	67.08
+Bf	67.05
+[lens data]
+1	43.36182	1.1490	1.55232	30.90	63.5
+2	18.28548	14.8566		25.44
+3	48.65304	3.8040	1.62299	17.43	58.1
+4	-137.12580	0.3798		14.91
+5	14.94852	4.9554	1.62045	14.97	38.0
+6	-44.11026	1.1190	1.72342	13.19	38.0
+7	13.13310	3.0000		11.85
+7AS	AS	1.7556		11.374
+8	-43.36182	0.7992	1.60140	11.76	38.3
+9	15.38508	5.3454	1.63854	12.46	55.5
+10	-22.04706	Bf		15.31
+[figure]
+source	Data/CH321571_Figure01P.png
+originX	11.43
+originY	158.36
+ppmm	9.053
+[notes]

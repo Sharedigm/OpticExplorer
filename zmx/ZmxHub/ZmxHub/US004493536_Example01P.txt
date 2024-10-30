@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,493,536 Example 1 (Konica Minolta 28mm F2.8 MD v2)
+[constants]
+Scaled	28	100
+[variable distances]
+Focal Length	28
+Angle of View	76
+F-Number	2.8
+Total Length	48.38
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	35.75
+[lens data]
+1	43.565	1.677	1.78831	31.16	47.32
+2	18.029	21.339		26.36
+3	30.265	7.854	1.80500	17.85	44.53
+4	-61.600	2.046		15.37
+4AS	AS	6.08		14.099
+5	-17.265	4.343	1.75000	18.60	25.14
+6	60.105	0.798		14.70
+7	-79.411	2.080	1.77250	14.70	49.77
+8	-19.001	0.084		17.48
+9	-498.523	2.078	1.69680	19.51	56.47
+10	-30.895	Bf		19.51
+[figure]
+source	Data/US004493536_Figure01P.png
+originX	34.54
+originY	196.49
+ppmm	7.960
+[notes]

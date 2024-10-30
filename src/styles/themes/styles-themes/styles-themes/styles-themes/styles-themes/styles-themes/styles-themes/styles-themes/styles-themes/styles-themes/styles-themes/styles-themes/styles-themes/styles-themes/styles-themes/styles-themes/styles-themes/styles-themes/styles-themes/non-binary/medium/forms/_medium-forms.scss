@@ -1,0 +1,107 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-forms.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$legend-color: text-colors.$dark-color;
+$notes-color: text-colors.$dark-color;
+$help-color: colors.$light-grey;
+$secondary-color: colors.$medium-grey;
+
+$input-color: text-colors.$dark-color;
+$input-background-color: white;
+$input-border-color: colors.$very-very-light-grey;
+$input-addon-color: colors.$very-very-very-light-grey;
+$input-focus-color: var(--primary-color);
+$content-background-color: colors.fade(colors.$very-very-light-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// legends
+	//
+
+	legend {
+		color: $legend-color;
+	}
+
+	.notes {
+		color: $notes-color;
+	}
+	
+	//
+	// inputs
+	//
+
+	.input-group {
+		.input-group-addon:not(.btn) {
+			background-color: $input-addon-color;
+			border-color: $input-border-color;
+		}
+	}
+
+	input:not([type="range"]):not([type="radio"]) {
+		color: $input-color;
+		background-color: $input-background-color;
+		border-color: $input-border-color;
+		outline: none;
+
+		&:focus {
+			border-color: $input-focus-color;
+			box-shadow: 0 1px 1px colors.faded(black, 7.5%), 0 0 8px $input-focus-color;
+		}
+
+		&::placeholder {
+			opacity: 0.75;
+		}
+	}
+
+	select {
+		border-color: $input-border-color;
+	}
+
+	form {
+
+		//
+		// form help
+		//
+
+		i.fa-question-circle {
+			color: $help-color;
+		}
+	}
+
+	span.secondary {
+		color: $secondary-color;
+	}
+
+	.search-bar .input {
+		&:focus-within {
+			border-color: colors.fade($input-focus-color, 75%) !important;
+				box-shadow: 1px 1px 10px 0 colors.fade($input-focus-color, 50%) !important;
+		}
+	}
+}

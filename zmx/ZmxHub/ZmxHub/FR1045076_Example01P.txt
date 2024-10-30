@@ -1,0 +1,30 @@
+[descriptive data]
+title	FR 1.045.076 Example 1 (Cosina Voigtlander Telomar 180mm f5.5)
+[constants]
+Scaled	180	1
+[variable distances]
+Focal Length	180
+Angle of View	undefined
+F-Number	5.4
+Image Height	110
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	71.43
+[lens data]
+1	43.6482	6.6888	1.58360	34.29	46.2
+2	-83.8296	0.2106		34.29
+3	-83.8296	2.5110	1.72755	33.53	28.4
+4	172.0566	36.3556		33.53
+4AS	AS	12.68		21.509
+5	172.0566	5.2308	1.62355	31.04	47.0
+6	-216.6210	7.9434		31.04
+7	-32.0292	3.1338	1.58264	36.26	42.1
+8	74.4138	5.5764	1.75512	39.08	27.0
+9	-369.7776	Bf		39.08
+[figure]
+source	Data/FR1045076_Figure01P.png
+originX	182.67
+originY	317.50
+ppmm	13.513
+[notes]

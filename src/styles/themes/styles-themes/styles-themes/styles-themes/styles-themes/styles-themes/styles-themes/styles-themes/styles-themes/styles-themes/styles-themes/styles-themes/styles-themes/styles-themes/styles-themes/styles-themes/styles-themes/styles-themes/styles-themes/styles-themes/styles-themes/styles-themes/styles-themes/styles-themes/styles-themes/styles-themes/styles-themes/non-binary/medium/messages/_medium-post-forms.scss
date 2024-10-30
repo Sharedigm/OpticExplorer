@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-post-forms.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$new-comment-background-color: white;
+$new-comment-border-color: darken(colors.$very-very-very-light-grey, 5%);
+$new-comment-arrow-color: colors.$very-very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.new-post, .new-comment, .new-reply, .new-message {
+		.comment-bubble {
+
+			.comment-inner {
+				background-color: $new-comment-background-color;
+				border-color: $new-comment-border-color;
+			}
+
+			//
+			// new comment arrows
+			//
+
+			&.top .comment-arrow {
+				border-top-color: $new-comment-arrow-color;
+			}
+			&.right .comment-arrow {
+				border-right-color: $new-comment-arrow-color;
+			}
+			&.left .comment-arrow {
+				border-left-color: $new-comment-arrow-color;
+			}
+			&.bottom .comment-arrow {
+				border-bottom-color: $new-comment-arrow-color;
+			}
+		}
+	}
+}

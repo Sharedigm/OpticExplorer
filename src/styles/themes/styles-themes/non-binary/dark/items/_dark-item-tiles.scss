@@ -1,0 +1,209 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-item-tiles.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../navs/dark-selection";
+
+//
+// variables
+//
+
+$background-opacity: 25%;
+
+//
+// colors
+//
+
+$background-color: colors.faded(colors.$very-very-light-grey, $background-opacity);
+$grid-color: white;
+$grid-background-color: colors.$ultra-dark-grey;
+$name-color: text-colors.$light-color;
+$name-background-color: colors.faded(black, 50%);
+$details-background-color: colors.faded(colors.$very-light-grey, 75%);
+$highlighted-border-color: colors.$very-light-grey;
+$selected-border-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.tile-grid {
+
+		//
+		// items
+		//
+
+		.item {
+
+			> .tile {
+				background-color: $background-color;
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: $name-color;
+						background-color: $name-background-color;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						color: text-colors.$dark-color;
+						background-color: white;
+						outline-color: dark-selection.$edit-highlight-color;
+					}
+				}
+			}
+
+			> .specifics {
+				.details {
+					background-color: $details-background-color;
+				}
+			}
+		}
+
+		//
+		// highlighted items
+		//
+
+		.item.highlighted {
+
+			.tile {
+				border-color: $highlighted-border-color;
+
+				.icon::after {
+					border-color: $highlighted-border-color;
+				}
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+						background-color: dark-selection.$highlight-color;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						border-top-color: dark-selection.$highlight-color;
+					}
+				}
+			}
+		}
+		
+		//
+		// selected items
+		//
+
+		.item.selected {
+
+			.tile {
+				border-color: $selected-border-color;
+
+				.icon::after {
+					border-color: $selected-border-color;
+				}
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						border-top-color: dark-selection.$select-color;
+					}
+				}
+			}
+
+			.details {
+				color: white;
+				background-color: dark-selection.$select-color;
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.tile-grid {
+
+			.item.selected {
+
+				.tile {
+					border-color: dark-selection.$highlight-color;
+
+					.icon::after {
+						border-color: dark-selection.$highlight-color;
+					}
+
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: dark-selection.$highlight-color;
+						}
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							color: text-colors.$dark-color;
+							background-color: white;
+							outline-color: dark-selection.$edit-highlight-color;
+						}
+					}
+				}
+
+				.details {
+					color: white;
+					background-color: dark-selection.$highlight-color;
+				}
+			}
+		}
+	}
+}

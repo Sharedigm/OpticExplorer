@@ -1,0 +1,50 @@
+[descriptive data]				
+title	CN 110501809 Example 1 (Zhong Yi 85mm f2.8 1-5X Super Macro)
+[constants]
+[variable distances]				
+Focal Length	85	25
+Angle of View	undefined	undefined
+F-Number	undefined	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined			
+Magnification	-1.0	-5.0
+d0	269.6	99.28
+d19	0.26	42.92
+Bf(p)	undefined	undefined
+Bf	100.36	100.36
+[lens data]					
+1	69.3	2.87	1.846	33.18	23.78	HZF52A
+2	208.9	0.1		32.81		
+3	27.1	5.75	1.497	31.40	81.61	HFK61
+4	191.8	0.1		30.52		
+5	45.5	4.02	1.497	28.80	81.61	HFK61
+6	-519.1	0		27.53		
+7	-519.1	1.42	1.883	27.53	39.22	HZLaF68N
+8	101.7	2.29		26.00		
+9	AS	4.14		24.65		
+10	36.2	2.23	1.846	21.22	23.78	HZF52A
+11	13.692	0		18.61		
+12	13.692	8.29	1.497	18.61	81.61	HFK61
+13	-25.53	0.31		17.51		
+14	-23.9815	1.64	1.883	17.23	39.22	HZLaF68N
+15	32.397	1.26		16.82		
+16	34.655	5	1.883	17.35	39.22	HZLaF68N
+17	21.003	0		17.29		
+18	21.003	4.37	1.846	17.29	23.78	HZF52A
+19	-89.12	d19		17.34		
+20	98.63	1	1.883	16.22	39.22	HZLaF68N
+21	20.1283	3.95		15.69		
+22	-29.65	3.56	1.497	16.08	81.61	HFK61
+23	23.38	0		18.71		
+24	23.38	4.72	1.636	18.71	35.35	HF7
+25	-57.667	Bf		19.24		
+[figure]					
+source	Data/CN110501809_Figure01P.png
+originX	7.10
+originY	115.40
+ppmm	10.505
+[notes]
+Bill: d19 way too high 42.92 (is 5x) -> 0.26 (is 1x) Figure appears to be at 1x
+Specfications say 272mm at 1x (f = 85mm) and 100mm at 5x (f = 25mm)
+Measured f# makes sense 2.8 * ( 1 + 1 / 0.466 ) = 8.81
+Production figure diameters appear clipped at about 20mm.

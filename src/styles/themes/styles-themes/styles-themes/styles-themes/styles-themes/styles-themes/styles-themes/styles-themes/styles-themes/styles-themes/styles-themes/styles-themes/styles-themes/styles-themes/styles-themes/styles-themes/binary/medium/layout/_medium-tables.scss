@@ -1,0 +1,78 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-tables.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	table {
+
+		thead {
+			th {
+				color: white;
+				background: black;
+				border-color: black;
+				@include binary-text.unoutline;
+
+				label {
+					@include binary-text.unoutline;
+				}
+			}
+		}
+
+		tbody {
+			background: white;
+
+			//
+			// selected color
+			//
+
+			td.selected:not(.item)::after {
+				border-color: black;	
+			}
+
+			//
+			// highlighted color
+			//
+
+			td.highlighted {
+				@include binary-colors.light-grey;
+				@include binary-text.outline;
+			}
+		}
+
+		&.tablesorter {
+			thead tr {
+				.tablesorter-header:not(.sorter-false) {
+					background-image: url(../../../../vendor/jquery/tablesorter/images/bg-light.gif);
+				}
+
+				.tablesorter-headerAsc:not(.sorter-false) {
+					background-image: url(../../../../vendor/jquery/tablesorter/images/asc-light.gif);
+				}
+
+				.tablesorter-headerDesc:not(.sorter-false) {
+					background-image: url(../../../../vendor/jquery/tablesorter/images/desc-light.gif);
+				}
+			}
+		}
+	}
+}

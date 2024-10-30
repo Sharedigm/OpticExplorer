@@ -1,0 +1,55 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-task-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../dialogs/light-dialogs";
+
+//
+// colors
+//
+
+$item-color: light-dialogs.$header-color;
+$icon-color: light-dialogs.$unfocused-title-icon-color;
+$text-color: light-dialogs.$title-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	//
+	// light unminimized task bars
+	//
+
+	#desktop:not(.task-bar-minimized) .task-bar {
+		.task-list {
+			li {
+				background-color: $item-color;
+				border-color: $item-color;
+
+				i {
+					color: $icon-color;
+				}
+
+				.title {
+					color: $text-color;
+				}
+			}
+		}
+	}
+}

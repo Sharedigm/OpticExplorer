@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 2013/0033768 Example 2 (Sony Sonnar T* E 24mm F1.8 ZA)
+[constants]
+[variable distances]
+Focal Length	23.28	undefined
+Angle of View	61.72	undefined
+F-Number	1.85	undefined
+Image Height	28.4	28.4
+Total Length	undefined	undefined
+Magnification	0	-0.25
+d0	Infinity	78.71
+d12	1.005	5.133
+d14	7.603	3.474
+Bf	22.374	22.374
+[lens data]
+1	52.254	1.000	1.487	25.62	70.44
+2	13.715	5.495		20.90	
+3	25.387	1.000	1.589	20.98	61.25
+4	14.610	3.000		18.72	
+5	18.860	4.197	1.835	19.16	42.72
+6	1119.730	9.292		19.16	
+7	AS	4.238		14.584
+8	-11.656	1.000	1.755	14.88	27.53
+9	45.550	4.655	1.618	18.80	63.40
+10	-16.688	0.400		18.80	
+11	31.808	5.000	1.801	19.68	45.45
+12	-26.041	d12		19.68	
+13	138.976	1.000	1.697	19.68	55.46
+14	20.701	d14		18.62	
+15	344.293	3.740	1.618	22.92	63.40
+16	-33.618	Bf		22.92	
+[aspherical data]
+4	14.610	0	-3.65895E-05	-2.02766E-07	1.66758E-10	-6.21785E-12
+11	31.808	0	-1.28119E-05	2.85341E-08		
+12	-26.041	0	2.49503E-05	-3.18958E-08	2.80615E-10	-6.64956E-13
+[figure]
+source	Data/US20130033768_Figure04P.png
+originX	32.59
+originY	183.87
+ppmm	6.099
+[notes]
+Bill: d0 measured.

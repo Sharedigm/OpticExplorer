@@ -1,0 +1,208 @@
+/******************************************************************************\
+|                                                                              |
+|                              _data-editor.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../bootstrap/variables";
+@use "../../colors/colors";
+@use "../../themes/binary/medium/colors/binary-colors2";
+
+//
+// colors
+//
+
+$monochrome-tile-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+.data-editor {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	.tab-content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+
+		.tab-pane {
+			position: absolute !important;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	table {
+		tr {
+			display: table-row;
+
+			// table row cursor
+			//
+			.grabbable {
+				cursor: grabbing;
+			}
+
+			th, td {
+				white-space: nowrap;
+
+				//
+				// table cell tiles
+				//
+
+				.tile {
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					margin-right: 5px;
+					border: 1px;
+					border-style: solid;
+					border-color: black;
+				}
+			}
+		}
+	}
+
+	.tab-pane:not(.coeffs):not(.data) {
+		form {
+			padding: 15px;
+		}
+	}
+
+	#coeffs-list {
+		mjx-mo {
+			display: none;
+		}
+	}
+
+	.math.well {
+		width: 75%;
+		padding: 10px;
+		margin: auto;
+	}
+
+	mjx-container[jax="CHTML"][display="true"] {
+		display: inline;
+	}
+
+	.input-group {
+		.input-group-addon .units {
+			width: 40px;
+		}
+	}
+}
+
+//
+// binary data editors
+//
+
+body.binary {
+	.data-editor {
+		table {
+			tr {
+				th, td {
+					.tile {
+						@include binary-colors2.GREY();
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// monochrome data editors
+//
+
+body.monochrome {
+	.data-editor {
+		table {
+			tr {
+				th, td {
+					.tile {
+						background-color: $monochrome-tile-color !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// non-bimary data editors
+//
+
+body:not(.binary) {
+
+	.data-editor {
+		table {
+			tr {
+				th, td {
+					&.material {
+						.tile {
+							mix-blend-mode: hard-light;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark data editors
+	//
+
+	&.dark {
+		.data-editor {
+			table {
+				tr {
+					th, td {
+						&.material {
+							.tile {
+								mix-blend-mode: normal;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// non-small styles
+//
+
+@media (min-width: variables.$screen-xs-min) {
+	.data-editor {
+		table {
+			tr {
+				th, td {
+
+					// make columns equally spaced
+					//
+					width: 10%;
+
+					// make selected columns wider
+					//
+					&.kind, &.material, &.name {
+						width: 15%;
+					}
+				}
+			}
+		}
+	}
+}

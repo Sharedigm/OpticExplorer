@@ -1,0 +1,27 @@
+[descriptive data]
+title	DE 434 759 C Example 1 (Steinheil 50mm F3.5 Triple-Anastigmat Cassar Series 0)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	3.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	41.98
+[lens data]
+1	20.34	3.0	1.6094	15.07
+2	-126.45	3.02		15.07
+2AS	AS	1.75		12.157
+3	-21.77	1.0	1.6138	12.58
+4	20.835	5.175		12.58
+5	206.6	3.0	1.6094	14.67
+6	-18.42	Bf		14.67
+[figure]
+source	Data/DE00434759_Figure01P.png
+originX	38.11
+originY	297.32
+ppmm	17.528
+[notes]

@@ -1,0 +1,34 @@
+[descriptive data]				
+title	US 2,983,193 Example 1 (Kodak Aero Ektar 153mm F3.5)
+[constants]
+Scaled	153	100
+[variable distances]				
+Focal Length	153
+Angle of View	undefined
+F-Number	3.5
+Image Height	80.82
+Total Length	undefined			
+Magnification	0			
+d0	Infinity			
+Bf(p)	undefined
+Bf	93.93
+[lens data]				
+1	73.042	9.64	1.740	65.53	45.8
+2	135.665	0.61		65.53	
+3	43.773	10.56	1.693	58.16	56.2
+4	83.324	5.36	1.683	55.86	30.9
+5	31.243	29.08		43.57	
+5AS	AS	26.00		28.749
+6	-36.491	3.06	1.667	42.36	32.2
+7	-2190.960	9.49	1.740	54.58	43.9
+8	-45.977	0.15		54.58	
+9	-1548.360	7.50	1.740	58.18	46.4
+10	-114.796	Bf		58.18	
+[figure]
+source	Data/US002983193_Figure01P.png
+originX	137.87
+originY	481.21
+ppmm	7.065
+[notes]
+Bill: Angle of View and Image Height from specification.
+Kodak Ektar Lenses brochure seems to have the 152.58mm and 310.64mm figures reversed.

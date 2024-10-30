@@ -1,0 +1,42 @@
+[descriptive data]
+title	JP1999-281892 Example 6 (Canon MP-E65mm f2.8 1-5X Macro Photo)
+[constants]
+[variable distances]
+Focal Length	65.77579	undefined
+Angle of View	undefined	undefined
+F-Number	undefined	undefined
+Image Height	43.2	43.2
+Magnification	-1.0	-5.0
+d0	114.95	50.45
+d6	6.96	3.05
+d11	2.12	6.03
+d13	3.29	133.05
+Bf(p)	undefined	undefined
+Bf	74.99	74.99
+[lens data]
+1	28.068	5.09	1.74400	22.69	44.8
+2	1032.711	0.15		22.69
+3	21.012	4.87	1.49700	19.99	81.5
+4	-57.447	2.16	1.58144	18.76	40.8
+5	14.357	4.30		15.34
+6	AS	d6		14.176
+7	-18.044	4.51	1.74950	13.99	35.0
+8	1922.365	3.12	1.48749	15.90	70.2
+9	-24.837	0.15		15.90
+10	565.384	3.30	1.76200	17.77	40.1
+11	-45.406	d11		17.77
+12	-2244.283	2.47	1.58313	19.40	59.4
+13	-83.403	d13		19.40
+14	-44.679	2.95	1.80518	25.23	25.4
+15	-33.913	2.53		25.23
+16	-39.542	1.97	1.57501	26.29	41.5
+17	39.542	7.48		26.29
+18	61.320	4.92	1.74400	31.59	44.8
+19	-223.369	Bf		31.59
+[figure]
+source	Data/JP1999-281892_Figure16P.png
+originX	29.53
+originY	94.51
+ppmm	2.278
+[notes]
+Bill: Measured d0.

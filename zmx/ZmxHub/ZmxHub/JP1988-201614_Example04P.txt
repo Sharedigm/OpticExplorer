@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 1988-201614 Example 4 (Konica Minolta AF 35mm F2)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	36.40
+[lens data]
+1	61.192	1.453	1.53172	31.10	48.9
+2	17.022	12.468		25.18
+3	35.324	9.013	1.83400	25.16	37.1
+4	-70.283	1.473		25.16
+5	-33.705	1.508	1.69895	28.17	30.1
+6	Infinity	3.633	1.77250	28.17	49.8
+7	-31.206	3.789		24.78
+7AS	AS	4.949		20.093
+8	-24.702	2.013	1.80518	19.82	25.4
+9	61.919	2.013		18.88
+10	-45.881	2.700	1.78590	20.99	44.2
+11	-22.538	0.118		20.99
+12	152.563	3.920	1.77250	24.90	49.6
+13	-39.287	Bf		24.90
+[figure]
+source	Data/JP1988-201614_Figure04P.png
+originX	63.15
+originY	136.29
+ppmm	3.736
+[notes]

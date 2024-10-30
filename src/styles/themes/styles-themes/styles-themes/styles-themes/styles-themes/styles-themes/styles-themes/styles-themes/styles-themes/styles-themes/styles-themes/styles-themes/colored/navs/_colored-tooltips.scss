@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-tooltips.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$color: white;
+$background-color: var(--primary-color);
+$arrow-color: $background-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.tooltip {
+
+		.tooltip-inner {
+			color: $color;
+			background-color: $background-color;
+		}
+
+		&.top .tooltip-arrow {
+			border-top: 5px solid $arrow-color;
+		}
+
+		&.bottom .tooltip-arrow {
+			border-bottom: 5px solid $arrow-color;
+		}
+
+		&.left .tooltip-arrow {
+			border-left: 5px solid $arrow-color;
+		}
+
+		&.right .tooltip-arrow {
+			border-right: 5px solid $arrow-color;
+		}
+	}
+}

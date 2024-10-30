@@ -1,0 +1,61 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-app-launcher.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../layout/images";
+
+//
+// colors
+//
+
+$icon-color: colors.$medium-grey;
+$icon-hover-color: $icon-color;
+$icon-active-color: colors.darken($icon-hover-color, 10%);
+$icon-border-color: colors.darken($icon-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	.app-launcher.app .icon-grid, 
+	.app-icons {
+		.item {
+			.icon {
+				box-shadow: images.$thumbnail-box-shadow;
+				
+				> img {
+					filter: images.$thumbnail-shadow;
+
+					& + i {
+						display: none;
+					}
+				}
+
+				&:not(.colored) {
+					background: $icon-color;
+					border-color: $icon-border-color;
+
+					&:active {
+						background: $icon-active-color;
+						border-color: $icon-border-color;
+					}
+				}
+			}
+		}
+	}
+}

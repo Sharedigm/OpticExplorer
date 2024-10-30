@@ -1,0 +1,28 @@
+[descriptive data]
+title	DE 444 150 C Example 1 (Cosina Voigtlander Tele-Dynar 100mm f6.3)
+[constants]
+[variable distances]
+Focal Length	100
+Angle of View	undefined
+F-Number	6.3
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	63.46
+[lens data]
+1	23.70	3.67	1.6143	16.87	56.4
+2	-28.88	1.57	1.6462	16.87	33.9
+3	Infinity	7.35		16.87
+3.5	AS	3.68		11.820
+4	-39.39	1.05	1.5835	10.92	41.9
+5	22.37	2.63		11.55
+6	186.44	1.31	1.6143	10.66	56.4
+7	52.52	2.10	1.6462	11.65	33.9
+8	-47.33	Bf		11.65
+[figure]
+source	Data/DE00444150_Figure01P.png
+originX	38.30
+originY	314.47
+ppmm	16.553
+[notes]

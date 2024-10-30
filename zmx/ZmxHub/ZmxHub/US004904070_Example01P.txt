@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,904,070 Example 1 (Ricoh smc PENTAX-FA 600mm F4ED[IF])
+[constants]
+Scaled	600	100
+[variable distances]
+Focal Length	600	undefined
+Angle of View	4.2	undefined
+F-Number	4	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.09854
+d0	Infinity	6000
+d9	42.18	59.82
+d12	68.04	50.40
+d12AS	56.04	38.40
+Bf	133.74	133.74
+[lens data]
+1	237.078	24.72	1.49700	150.12	81.6
+2	-367.578	34.08		150.12	
+3	-232.800	6.12	1.74320	132.12	49.3
+4	449.916	1.02		132.12	
+5	199.542	20.28	1.49700	132.60	81.6
+6	-446.568	126.54		132.60	
+7	89.730	4.56	1.69350	79.87	53.2
+8	52.908	14.76	1.48749	79.87	70.2
+9	226.008	d9		79.87
+10	-309010.356	4.02	1.78472	53.52	25.7
+11	-300.708	3.06	1.58913	53.52	61.2
+12	80.070	d12AS		53.52
+12AS	AS	12.00		36.336
+13	-166.458	5.10	1.59270	39.12	35.3
+14	-115.098	Bf		39.12	
+[figure]
+source	Data/US004904070_Figure01P.png
+originX	28.33
+originY	95.72
+ppmm	0.981
+[notes]

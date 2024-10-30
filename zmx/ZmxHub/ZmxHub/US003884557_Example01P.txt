@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,884,557 Example 1 (Olympus 50mm f3.5 Zuiko Auto-Macro)
+[variable distances]
+Focal Length	51.780	51.688
+Angle of View	45	undefined
+F-Number	3.5	undefined
+Magnification	0	-0.2
+Image Height	43.26	43.26
+d0	Infinity	293.00
+d5	10.90	10.775
+d5AS	5.65	5.525
+d7	0.20	0.325
+Bf(p)	undefined	undefined
+Bf	37.15	47.09
+[lens data]
+1	24.549	4.13	1.72000	21.54	43.70
+2	47.203	0.25		20.47
+3	14.356	4.26	1.67003	16.64	47.25
+4	70.080	1.30	1.67270	16.64	32.10
+5	9.613	5.25		10.96
+5AS	AS	d5AS		10.188
+6	-10.177	1.54	1.76182	11.47	26.55
+7	-13.869	d7		13.65	
+8	-54.008	3.66	1.67000	16.49	57.33
+9	-15.167	Bf		16.49
+[figure]
+source	Data/US003884557_Figure01P.png
+originX	115.22
+originY	320.79
+ppmm	25.430
+[notes]
+Bill: Angle of View computed. d0 measured.

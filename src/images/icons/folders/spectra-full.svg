@@ -1,0 +1,36 @@
+<svg 
+	id="wavelengths-full-icon" 
+	xmlns:svg="http://www.w3.org/2000/svg" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 16 48 24">
+	
+	<style>
+		.folder-top {
+			fill: tan;
+		}
+		.folder-body {
+			fill: wheat;
+		}
+		.folder-contents {
+			fill: white;
+		}
+		.folder-icon {
+			fill: burlywood;
+		}
+	</style>
+
+	<g class="folder-top" transform="translate(0 1.5)">
+		<path d="M 43.5,11.5 H 21 L 16.5,7 h -12 c -3,0 -3,0 -3,3 v 8 h 45 v -3.5 c 0,0 0,-3 -3,-3 z" />
+	</g>
+
+	<rect class="folder-contents" x="3" y="14.5" width="42" height="2.25" />
+
+	<g class="folder-body">
+		<path id="folder-cover" d="M 3,16.75 C 1.5,16.75 1.5,18 1.5,18 v 25.75 c 0,2.25 0,2 3,2 h 39 c 3,0 3,0.25 3,-2 V 18 c 0,0 0,-1.25 -1.5,-1.25 z" />
+	</g>
+
+	<g class="folder-icon" transform="translate(6, 13) scale(0.7)">
+		<path d="M6.245, 37c0.038 -10, 8.618 -19.129, 19.2 -19.129c10.581, 0, 19.161, 9.129, 19.2, 19.129h4.801 c -0.039 -13 -10.77 -23.93 -24 -23.93C12.213, 13.07, 1.483, 24, 1.445, 37H6.245z"></path>
+		<path d="M13.674, 37c0.032 -6, 5.29 -11.712, 11.771 -11.712c6.481, 0, 11.737, 5.712, 11.77, 11.712h3.924 c -0.033 -8 -7.045 -15.636 -15.694 -15.636C16.794, 21.364, 9.782, 29, 9.751, 37H13.674z"></path>
+	</g>
+</svg>

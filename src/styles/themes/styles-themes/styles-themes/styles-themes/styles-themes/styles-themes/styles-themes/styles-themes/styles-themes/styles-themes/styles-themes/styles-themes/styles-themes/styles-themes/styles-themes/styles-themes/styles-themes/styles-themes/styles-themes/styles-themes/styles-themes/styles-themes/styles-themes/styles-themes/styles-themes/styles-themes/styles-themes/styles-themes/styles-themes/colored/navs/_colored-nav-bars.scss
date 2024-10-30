@@ -1,0 +1,92 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-nav-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+
+//
+// colors
+//
+
+$active-color: white;
+$active-background-color: var(--primary-color);
+$indicator-color: var(--primary-color);
+$default-active-background-color: branding.$primary-color;
+$default-indicator-color: branding.$primary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.navbar {
+
+		//
+		// navigation
+		//
+
+		.navbar-nav {
+			
+			> li {
+
+				//
+				// active state
+				//
+
+				&.active {
+					background-color: $active-background-color;
+
+					> a, > a:focus {
+						color: $active-color;
+						background-color: transparent;
+
+						i, label {
+							color: $active-color;
+						}
+					}
+				}
+
+				//
+				// open state
+				//
+
+				&.open {
+					background-color: $active-background-color;
+
+					> a, > a:focus {
+						color: $active-color;
+
+						i, label {
+							color: $active-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// nav bar indicators
+		//
+
+		.indicator {
+			.bar {
+				.inner {
+					background-color: $indicator-color;
+				}
+			}
+		}
+	}
+}

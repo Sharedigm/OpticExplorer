@@ -1,0 +1,56 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-run-menus.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// dark menu styles
+//
+
+body.binary.dark {
+	.footer-bar .run-menu {
+		.nav {
+			.dropup {
+				.dropdown-toggle {
+					color: white;
+					background-color: black;
+					border-color: black;
+					@include binary-text.unoutline;
+				}
+
+				&.open {
+					.dropdown-toggle {
+						color: black;
+						background-color: white;	
+					}
+				}
+			}
+		}
+
+		.icon-grid {
+			@include binary-colors.grey;
+		}
+
+		.dropdown-menu {
+			.divider {
+				color: black;
+				background: white;		
+			}
+		}
+	}
+}

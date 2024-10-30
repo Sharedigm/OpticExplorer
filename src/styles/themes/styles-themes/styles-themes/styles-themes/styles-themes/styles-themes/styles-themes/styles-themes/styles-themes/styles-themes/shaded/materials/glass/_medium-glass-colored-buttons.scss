@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                     _medium-glass-colored-buttons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/materials/glass/glass-btns";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.glass.colored {
+		.colored.btn {
+
+			&.red {
+				@include glass-btns.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include glass-btns.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include glass-btns.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include glass-btns.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include glass-btns.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include glass-btns.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include glass-btns.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include glass-btns.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include glass-btns.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include glass-btns.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include glass-btns.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include glass-btns.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include glass-btns.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include glass-btns.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include glass-btns.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include glass-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include glass-btns.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include glass-btns.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include glass-btns.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include glass-btns.shaded(colors.$medium-white);
+			}
+		}
+	}
+}

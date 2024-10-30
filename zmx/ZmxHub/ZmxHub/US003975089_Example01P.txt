@@ -1,0 +1,53 @@
+[descriptive data]
+title	US 3,975,089 Example 1 (Vivitar Series 1 35-85mm f2.8)
+[constants]
+[variable distances]
+Focal Length	36	83
+F-Number	2.8	2.8
+Total Length	133.7	135.7
+Image Height	43.27	43.27
+Magnification	0	0
+d0	Infinity	Infinity
+d6	0.47	19.48
+d9	15.94	5.01
+d12	9.33	1.19
+Bf(p)	40.06	40.06
+Bf	45.82	46.37
+[lens data]
+1	135.72	2.60	1.805	63.94	25.5
+2	46.71	2.84		54.92	
+3	46.50	13.80	1.531	55.10	62.1
+4	-152.15	0.10		55.10	
+5	41.84	6.60	1.694	52.02	53.3
+6	125.20	d6		52.02	
+7	140.19	3.10	1.847	31.48	23.8
+8	-60.45	1.10	1.834	31.48	37.3
+9	17.98	d9		20.94
+10	-16.56	1.00	1.498	17.09	65.1
+11	22.97	3.10	1.785	20.42	25.7
+12	-112.11	d12		20.42
+13	53.32	2.90	1.620	21.44	60.3
+14	-42.06	1.00		21.44
+14AS	AS	1.00		20.824
+15	-502.33	5.00	1.487	22.48	70.4
+16	-14.89	0.90	1.805	22.48	25.5
+17	-45.59	11.53		22.48
+18	125.96	3.50	1.639	23.00	45.1
+19	-25.90	5.98		23.00	
+20	-19.40	1.296	1.805	24.12	25.5
+21	-35.59	Bf		24.12	
+[figure]
+source	Data/US003975089_Figure01P.png
+originX	85.93
+originY	335.72
+ppmm	7.738
+[notes]
+Bill: Production figure shown at about 60mm. Patent has AS in non-sense place, production figure makes more sense.
+Note that L5 overhang L6. THe Optical Bench thinks this is overlapping glass but it is not.
+Something slightly off, Bf should be constant and focal lengths are off.
+Variable distances seem to agree with Table II
+Some group focal lengths are a bit off.
+I	0.0157	63.38 -> 0.0157 (1-6)
+II	-0.395	-25.33 -> -0.0395 (7-9)
+III	-0.0098	-100.26 -> -0.0100 ~ (10-12)
+IV	0.0333	31.33 -> 0.319 ! (13-21)

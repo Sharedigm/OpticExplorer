@@ -1,0 +1,61 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-annotations.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: text-colors.$dark-color;
+$stroke-color: colors.$medium-grey;
+$dark-color: white;
+$dark-stroke-color: colors.$very-very-very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	.annotation {
+		fill: $color;
+	}
+
+	//
+	// line annotations
+	//
+
+	.line, .arc, .arrow {
+		stroke: $stroke-color;
+	}
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+		.annotation {
+			fill: $dark-color;
+
+			//
+			// line annotations
+			//
+
+			.line, .arc, .arrow {
+				stroke: $dark-stroke-color;
+			}
+		}
+	}
+}

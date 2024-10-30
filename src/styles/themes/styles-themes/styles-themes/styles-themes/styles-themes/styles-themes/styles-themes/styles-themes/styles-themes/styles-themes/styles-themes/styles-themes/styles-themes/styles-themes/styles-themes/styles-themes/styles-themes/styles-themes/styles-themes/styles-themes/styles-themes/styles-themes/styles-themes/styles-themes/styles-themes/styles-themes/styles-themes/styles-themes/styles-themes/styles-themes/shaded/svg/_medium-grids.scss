@@ -1,0 +1,43 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-grids.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+		.viewport, .medium.viewport {
+
+			//
+			// viewport grids
+			//
+
+			pattern svg path {
+				stroke: colors.$medium-blue;
+			}
+
+			&.background {
+
+				//
+				// viewport background grids
+				//
+
+				pattern svg path {
+					stroke: white;
+				}
+			}
+		}
+	}
+}

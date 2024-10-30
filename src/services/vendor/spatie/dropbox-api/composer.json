@@ -1,0 +1,56 @@
+{
+    "name": "spatie/dropbox-api",
+    "description": "A minimal implementation of Dropbox API v2",
+    "keywords": [
+        "spatie",
+        "dropbox-api",
+        "dropbox",
+        "api",
+        "v2"
+    ],
+    "homepage": "https://github.com/spatie/dropbox-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Vanderbist",
+            "email": "alex.vanderbist@gmail.com",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        },
+        {
+            "name": "Freek Van der Herten",
+            "email": "freek@spatie.be",
+            "homepage": "https://spatie.be",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "graham-campbell/guzzle-factory": "^4.0.2|^5.0|^6.0|^7.0",
+        "guzzlehttp/guzzle": "^6.2|^7.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10.1",
+        "phpstan/phpstan": "^1.10.16",
+        "phpunit/phpunit": "^9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Spatie\\Dropbox\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spatie\\Dropbox\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "pint": "vendor/bin/pint",
+        "phpstan": "vendor/bin/phpstan analyze"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

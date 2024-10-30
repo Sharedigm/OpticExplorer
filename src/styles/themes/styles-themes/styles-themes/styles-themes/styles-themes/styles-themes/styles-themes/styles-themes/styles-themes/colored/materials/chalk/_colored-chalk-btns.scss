@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-chalk-buttons.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/chalk/chalk-btns";
+@use "../../../../navs/materials/chalk/chalk-buttons";
+@use "../../navs/colored-btns";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary).colored {
+	&.chalk-buttons,
+	&.chalk.auto-buttons {
+
+		//
+		// styled buttons
+		//
+
+		.btn:not(.btn-primary):not(.colored):not(:disabled) {
+
+			//
+			// special buttons
+			//
+
+			&.success {
+				@include chalk-buttons.shade(colored-forms.$success-color);
+			}
+
+			&.caution {
+				@include chalk-buttons.shade(colored-forms.$caution-color);
+			}
+
+			&.warning {
+				@include chalk-buttons.shade(colored-forms.$warning-color);
+			}
+		}
+	}
+}
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk-buttons,
+		&.chalk.auto-buttons {
+
+			//
+			// chalk styled buttons
+			//
+
+			.btn {
+
+				//
+				// chalk primary buttons
+				//
+
+				&.btn-primary {
+					@include chalk-btns.shade(colored-btns.$primary-color);
+
+					&:disabled {
+						@include chalk-btns.shade(colored-btns.$disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk-buttons,
+		&.chalk.auto-buttons {
+
+			//
+			// chalk styled buttons
+			//
+
+			.btn {
+
+				//
+				// chalk primary buttons
+				//
+
+				&.btn-primary {
+					@include chalk-btns.shaded(colored-btns.$default-primary-color);
+
+					&:disabled {
+						@include chalk-btns.shaded(colored-btns.$default-disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+[descriptive data]
+title	US 2018/0196240 Example 11 (Nikon 1 Nikkor VR 10-30mm f/3.5-5.6 PD-Zoom)
+[constants]
+[variable distances]
+Focal Length	10.200	20.000	29.400	undefined	undefined	undefined
+Angle of View	76.2	undefined	30.4	undefined	undefined	undefined
+F-Number	3.60	undefined	6.40	undefined	undefined	undefined
+Image Height	16.38	16.38	16.38	16.38	16.38	16.38
+Total Length	63.000	undefined	59.200	undefined	undefined	undefined
+Magnification	0	0	0	-0.06321	-0.13414	-0.20574
+S	Infinity	Infinity	Infinity	200.000	200.000	200.000
+d0	Infinity	Infinity	Infinity	151.82	142.91	138.66
+d6	18.51	6.32	2.14	18.51	6.32	2.14
+d13	1.57	6.56	11.21	1.98	8.15	14.40
+d15	5.36	8.74	11.31	4.95	7.16	8.12
+Bf	13.30	13.30	13.30	13.30	13.30	13.30
+[lens data]
+1	131.926	0.800	1.618	18.38	63.3
+2	9.887	2.207		14.48
+3	22.899	1.000	1.623	14.48	58.2
+4	9.089	0.862		13.19
+5	11.594	1.892	2.001	14.06	25.5
+6	17.515	d6		12.58	
+7	15.735	3.218	1.619	8.96	63.9
+8	-10.904	0.800	1.603	8.38	38.0
+9	-75.326	2.678		8.38	
+10	AS	1.500		6.631
+11	16.112	0.800	1.583	7.64	46.5
+12	6.544	2.114	1.498	7.64	82.6
+13	-31.376	d13		7.64	
+14	39.745	0.800	1.619	7.24	63.9
+15	10.560	d15		6.40	
+16	-23.030	2.584	1.517	13.52	63.9
+17	-10.518	Bf		13.52	
+[aspherical data]
+3	22.899	0	-3.833E-04	9.067E-06	-6.487E-08	7.866E-11
+4	9.089	0	-5.554E-04	8.416E-06	-3.144E-08	-7.595E-10
+7	15.735	0	-6.517E-05	-1.259E-06	3.629E-08	8.838E-11
+14	39.745	0	8.336E-04	-3.542E-05	1.312E-07	3.038E-08
+15	10.560	0	1.164E-03	-4.103E-05	8.025E-07	-4.760E-09
+16	-23.030	0	1.801E-04	1.181E-06	-3.912E-08	1.795E-11
+17	-10.518	0	1.621E-04	1.593E-06	-2.352E-08	-1.206E-10
+[figure]
+source	Data/US20180196240_Figure30AP.png
+originX	17.64
+originY	117.16
+ppmm	4.029
+[notes]
+Bill: Measured Magnification and d0.

@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 5,548,447 Example 1 (Fujifilm Fujinon 60mm F4 Super EBC (GA645 Professional))
+[constants]
+Scaled	60	100
+[variable distances]
+Focal Length	60
+Angle of View	59.2
+F-Number	4
+Total Length	71.02
+Image Height	68.3
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	44.45
+[lens data]
+1	18.5970	2.442	1.83400	22.34	37.34
+2	25.3692	0.096		21.58
+3	17.9484	2.910	1.78590	19.22	43.93
+4	24.8694	0.324		16.39
+5	31.8390	0.972	1.80518	19.22	25.50
+6	13.3884	1.986		14.05
+7	32.5086	2.676	1.72342	14.61	37.99
+8	69.3306	4.568		12.92
+8AS	AS	2.32		11.062
+9	-31.6698	2.082	1.83400	15.80	37.34
+10	-22.1628	0.960		17.54
+11	-14.5392	1.020	1.64769	16.14	33.90
+12	-271.8666	0.000		21.55
+13	-271.8666	4.194	1.78590	21.55	43.93
+14	-19.7280	Bf		21.55
+[figure]
+source	Data/US005548447_Figure01P.png
+originX	28.68
+originY	282.82
+ppmm	22.469
+[notes]

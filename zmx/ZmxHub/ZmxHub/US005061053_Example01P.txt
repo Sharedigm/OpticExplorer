@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 5,061,053 Example 1 (Ricoh smc Pentax-FA 70-200mm F4-5.6)
+[constants]
+[variable distances]
+Focal Length	72.00	135.01	195.00	undefined
+Angle of View	34.4	17.8	12.4	undefined
+F-Number	4.1	4.8	5.6	undefined
+Image Height	43.2	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined	undefined
+Magnification	0	0	0	-0.08692
+d0	Infinity	Infinity	Infinity	924.02
+d4	9.25	30.62	37.19	9.25
+d9	23.68	10.97	3.00	23.68
+d9AS	22.78	10.07	2.10	22.78
+d14	33.71	33.71	33.71	37.67
+d16	11.78	11.78	11.78	7.82
+Bf	39.85	52.14	65.88	53.27
+[lens data]
+1	56.821	2.50	1.80518	43.62	25.4
+2	39.226	2.04		43.62	
+3	40.890	9.35	1.51633	43.18	64.1
+4	-194.297	d4		43.18	
+5	-73.745	1.50	1.69680	23.14	55.5
+6	54.282	2.30		23.14	
+7	-60.886	1.60	1.69680	24.42	55.5
+8	30.057	3.90	1.80518	24.42	25.4
+9	409.381	d9AS		24.42	
+9AS	AS	0.90		24.386
+10	65.971	4.46	1.51633	25.48	64.1
+11	-65.971	0.10		25.48	
+12	43.333	5.51	1.51633	25.41	64.1
+13	-43.333	1.70	1.80518	25.41	25.4
+14	-439.612	d14		25.41
+15	80.409	4.54	1.58267	27.82	46.4
+16	-195.051	d16		27.82	
+17	-26.679	1.70	1.58913	28.46	61.2
+18	-80.821	Bf		28.46	
+[figure]
+source	Data/US005061053_Figure01P.png
+originX	4.52
+originY	40.55
+ppmm	1.580
+[notes]
+Bill: Production figure is not focused at Infinity; added scenario #4

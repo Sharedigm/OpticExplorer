@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 2014-026184 Example 4 (Ricoh smc Pentax-DA 50mm F1.8)
+[constants]
+[variable distances]
+Focal Length	51.5
+Angle of View	31.0
+F-Number	1.8
+Image Height	28.48
+Total Length	72.37
+Magnification	0
+d0	Infinity
+Bf	38.52
+[lens data]
+1	36.153	4.688	1.80610	28.84	40.9
+2	599.014	0.150		28.84
+3	26.640	4.226	1.78590	25.81	44.2
+4	39.190	1.682		23.53
+5	290.940	2.300	1.74077	23.33	27.8
+6	18.454	4.145		20.32
+7	AS	6.087		20.163
+8	-17.128	1.500	1.76182	19.90	26.6
+9	-68.666	5.217	1.80610	23.31	40.9
+10	-21.644	0.100		23.31
+11	113.830	3.757	1.77250	23.15	49.6
+12	-52.855	Bf		23.15
+[figure]
+source	Data/JP2014-026184_Figure10P.png
+originX	111.82
+originY	225.39
+ppmm	6.256
+[notes]

@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,139,264 Example 2 (Ricoh smc Pentax-M 200mm F4.0)
+[constants]
+Scaled	200	100
+[variable distances]
+Focal Length	200
+Angle of View	12.4
+F-Number	4.0
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	62.65
+[lens data]
+1	59.82	7.06	1.51633	51.44	64.1
+2	431.72	8.40		51.44
+3	-392.52	2.06	1.76182	49.00	26.6
+4	181.00	0.10		49.00
+5	56.72	6.54	1.51633	47.81	64.1
+6	152.98	33.22		47.81
+6AS	AS	0		31.289
+7	53.38	3.50	1.51633	33.92	64.1
+8	73.74	28.68		31.72	
+9	-28.36	2.88	1.76200	23.55	40.2
+10	309.42	4.12	1.76182	26.02	26.6
+11	-54.14	Bf		26.02
+[figure]
+source	Data/US004139264_Figure03P.png
+originX	8.51
+originY	82.53
+ppmm	2.968
+[notes]

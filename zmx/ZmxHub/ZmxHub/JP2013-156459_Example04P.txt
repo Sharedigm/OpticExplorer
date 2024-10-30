@@ -1,0 +1,41 @@
+[descriptive data]
+title	JP 2013-156459 Example 4 (Sigma 30mm F2.8 (dp2 Merrill/Quattro))
+[constants]
+[variable distances]
+Focal Length	29.60	29.26
+Angle of View	52.05	51.12
+F-Number	2.86	2.91
+Image Height	28.40	28.40
+Total Length	39.83	40.39
+Magnification	0	-0.03124
+S	Infinity	1000
+d0	Infinity	959.610
+d9	2.320	2.880
+Bf	0	0
+[lens data]
+1	15.36	3.500	1.88300	14.44	40.80
+2	-151.19	0.900	1.67270	14.44	32.17
+3	17.50	2.450		9.42	
+4	AS	3.580		8.387
+5	-15.47	0.800	1.69895	8.42	30.05
+6	15.47	3.150	1.88300	12.40	40.80
+7	-94.35	0.690		12.40	
+8	34.82	3.350	1.77250	15.24	49.47
+9	-26.18	d9		15.24	
+10	150.15	0.900	1.58144	17.42	40.89
+11	43.88	5.460		17.42	
+12	-12.38	0.900	1.53172	17.72	48.84
+13	-1000.00	0.150		22.62	
+14	63.82	4.550	1.91082	26.24	35.25
+15	-49.10	1.000		26.24	
+16	CG	1.200	1.52301	27.96	58.59
+17	CG	4.930		27.96	
+[aspherical data]
+9	-26.18	0	5.9228E-05	-9.4471E-09
+[figure]
+source	Data/JP2013-156459_Figure16P.png
+originX	34.05
+originY	209.26
+ppmm	13.923
+[notes]
+Bill: Magnification measured.

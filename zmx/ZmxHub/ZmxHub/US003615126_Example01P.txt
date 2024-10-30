@@ -1,0 +1,28 @@
+[descriptive data]
+title	US 3,615,126 Example 1 (Konica Minolta Hexar 38mm F2.8)
+[constants]
+Scaled	38	1
+[variable distances]
+Focal Length	38
+Angle of View	60
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	29.1004
+Bf	28.79
+[lens data]
+1	12.5704	3.800	1.80420	14.86	46.6
+2	36.0962	1.026		12.21
+3	-108.4482	1.710	1.75690	12.06	31.7
+4	11.6812	1.596		11.01
+5	45.6570	0.950	1.72825	11.03	28.3
+6	12.5704	3.800	1.83060	12.01	36.5
+7	-35.2222	1.24		12.01
+7AS	AS	Bf		10.409
+[figure]
+source	Data/US003615126_Figure01P.png
+originX	38.59
+originY	117.89
+ppmm	13.478
+[notes]

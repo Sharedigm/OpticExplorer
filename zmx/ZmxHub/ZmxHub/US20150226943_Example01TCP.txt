@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 2015/0226943 Example 1 TC (Olympus MC-14 M.Zuiko Digital 1.4X Teleconverter)
+[constants]
+Lateral Magnification	1.414
+Lateral Magnification(m)	1.41404
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	21.64
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+29	FS	1.8574		15.418
+
+30	-290.3757	2.64	1.80518	21.11	25.46
+31	-57.8821	1.04		21.11
+32	-324.6838	1.10	1.80400	20.03	46.57
+33	13.8612	8.79	1.59270	19.73	35.31
+34	-22.2537	1.10	1.83481	19.73	42.71
+35	42.2116	0.25		20.40
+36	20.6554	8.15	1.61340	22.09	44.27
+37	-28.9825	1.10	1.84666	22.09	23.78
+38	157.3317	11.88		22.09
+
+39	CG	4.00	1.51633	29.08	64.14
+40	CG	0.80		29.08	
+[figure]
+source	Data/US20150226943_Figure02P.png
+originX	27.47
+originY	224.58
+ppmm	7.199
+[notes]
+Bill: Set FS to restrict image height.

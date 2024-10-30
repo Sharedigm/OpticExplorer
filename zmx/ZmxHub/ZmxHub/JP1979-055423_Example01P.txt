@@ -1,0 +1,29 @@
+[descriptive data]
+title	JP 1979-055423 Example 1 (Konica Minolta Hexanon AR 135mm F3.5)
+[constants]
+Scaled	135	1
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	3.5
+Total Length	120.825
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	59.130
+[lens data]
+1	47.8440	5.4945	1.51633	39.06	64.1
+2	525.5145	0.9990		39.06	
+3	32.8860	5.4945	1.51633	36.78	64.1
+4	101.3715	13.7025		36.78	
+5	607.6215	1.9980	1.76180	25.74	27.1
+6	23.9760	3.7000		21.48	
+6AS	AS	27.2990		21.198
+7	69.2820	2.9970	1.80518	27.84	25.4
+8	282.5280	Bf		27.84	
+[figure]
+source	Data/JP1979-055423_Figure01P.png
+originX	21.05
+originY	61.49
+ppmm	2.586
+[notes]

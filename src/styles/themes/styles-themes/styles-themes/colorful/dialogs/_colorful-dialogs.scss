@@ -1,0 +1,127 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colorful-dialogs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$header-color: var(--primary-color);
+$title-icon-color: colors.$very-very-light-grey;
+$title-color: white;
+$border-color: $header-color;
+$unfocused-header-color: colors.darken($header-color, 10%);
+$unfocused-title-icon-color: $title-icon-color;
+$unfocused-title-color: $title-color;
+$unfocused-border-color: colors.darken($border-color, 20%);
+$default-header-color: branding.$primary-color;
+$default-border-color: $default-header-color;
+$default-unfocused-header-color: darken($default-header-color, 10%);
+$default-unfocused-border-color: darken($default-border-color, 20%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colorful {
+	.modals {
+
+		//
+		// focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			border-color: $border-color !important;
+
+			.modal-header {
+				background-color: $header-color;
+				border-color: $header-color;
+
+				.icon {
+
+					//
+					// title icon color
+					//
+
+					i {
+						color: $title-icon-color;
+					}
+
+					svg {
+						fill: $title-icon-color;
+					}
+				}
+
+				.title {
+
+					// clipped title ellipsis color
+					//
+					color: $title-color;
+
+					// title header text color
+					//
+					h1 {
+						color: $title-color;
+					}
+				}
+			}
+		}
+
+		//
+		// unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			border-color: $unfocused-border-color !important;
+
+			.modal-header {
+				background-color: $unfocused-header-color;
+				border-color: $unfocused-header-color;
+
+				.icon {
+
+					//
+					// unfocused title icon color
+					//
+
+					i {
+						color: $unfocused-title-icon-color;
+					}
+
+					svg {
+						fill: $unfocused-title-icon-color;
+					}
+				}
+
+				.title {
+
+					// clipped title ellipsis color
+					//
+					color: $unfocused-title-color;
+
+					// title header text color
+					//
+					h1 {
+						color: $unfocused-title-color;
+					}
+				}
+			}
+		}
+	}
+}

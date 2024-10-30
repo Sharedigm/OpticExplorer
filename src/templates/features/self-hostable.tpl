@@ -38,6 +38,6 @@
 
 	<h2><i class="fa fa-info-circle"></i>For More Information</h2>
 	<ul>
-		<li>See the <a href="http://www.cloudkitty.org">CloudKitty</a> family of self-hostable platforms based upon the <%= application.name %> platform.
+		<li>See the documentation: <a href="#installation">Setting Up Your Own Instance</a></li>
 	</ul>
 </div>

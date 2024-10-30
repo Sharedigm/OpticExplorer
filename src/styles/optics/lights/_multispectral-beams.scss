@@ -1,0 +1,145 @@
+/******************************************************************************\
+|                                                                              |
+|                           _multispectral-beams.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.multispectral.beam {
+
+		//
+		// filled paths
+		//
+
+		.filled {
+			mix-blend-mode: screen;
+			fill-opacity: 0.5;
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					mix-blend-mode: screen;
+					stroke-opacity: 1;
+				}
+			}
+
+			> .transmitted {
+				mix-blend-mode: screen;
+			}
+
+			> .obstructed {
+				mix-blend-mode: screen;
+			}
+
+			> .reflected {
+				mix-blend-mode: normal;
+			}
+		}
+	}
+}
+
+//
+// light viewports
+//
+
+.optics .viewport.light,
+.light .optics .viewport.auto {
+
+	.multispectral.beam {
+
+		//
+		// filled paths
+		//
+
+		.filled {
+			mix-blend-mode: multiply;
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					stroke-opacity: 0.5;
+				}
+			}
+
+			> .transmitted {
+				mix-blend-mode: multiply;
+			}
+
+			> .obstructed {
+				mix-blend-mode: multiply;
+			}
+
+			> .reflected {
+				mix-blend-mode: multiply;
+			}
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.optics .viewport.dark,
+.dark .optics .viewport.auto {
+
+	.multispectral.beam {
+
+		//
+		// filled paths
+		//
+
+		.filled {
+			mix-blend-mode: screen;
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			> .transmitted {
+				mix-blend-mode: screen;
+			}
+
+			> .obstructed {
+				mix-blend-mode: screen;
+			}
+
+			> .reflected {
+				mix-blend-mode: screen;
+			}
+		}
+	}
+}

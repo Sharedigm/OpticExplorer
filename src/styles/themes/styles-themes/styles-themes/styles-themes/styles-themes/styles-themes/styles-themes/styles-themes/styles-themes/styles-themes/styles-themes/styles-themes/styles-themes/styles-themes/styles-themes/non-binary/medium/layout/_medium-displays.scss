@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-displays.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$led-color: red;
+$led-glow: 0 0 10px red, 0 0 20px red;
+$led-dot-glow: 0 0 3px lighten(red, 20%);
+
+$lcd-light-color: colors.$light-grey;
+$lcd-dark-color: black;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// led displays
+	//
+
+	.led {
+		color: $led-color;
+		text-shadow: $led-glow;
+
+		&.dot {
+			text-shadow: $led-dot-glow;
+		}
+	}
+
+
+	.led.pie {	
+		.slice {
+
+			&.empty {
+				background: $lcd-light-color;
+			}
+
+			&.full {
+				background: $lcd-dark-color;
+			}
+
+			&.half-full {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					$led-color 0%) !important;
+			}
+		}
+	}
+
+	//
+	// lcd displays
+	//
+
+	.lcd.display {
+		background: colors.$very-very-light-grey;
+		border-color: colors.$very-very-very-light-grey;
+		border-style: inset;
+
+		.digits {
+			filter: drop-shadow(2px 2px 2px colors.faded(black, 50%));
+			text-shadow: none;
+		}
+	}
+
+	&:not(.flat) {
+		.lcd.display {
+			background: linear-gradient(to bottom,
+				colors.$very-very-very-light-grey 0,
+				colors.$light-grey 100%);
+		}
+	}
+
+	.lcd.pie {	
+		.slice {
+
+			&.empty {
+				background: $lcd-light-color;
+			}
+
+			&.full {
+				background: $lcd-dark-color;
+			}
+
+			&.half-full {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					$lcd-dark-color 0%);
+			}
+
+			&.half-empty {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					$lcd-light-color 0%);
+			}
+		}
+	}
+}

@@ -1,0 +1,1830 @@
+################################################################################
+#                                                                              #
+#                                  Hikari.optc                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: J-SF15
+    catalog: Hikari
+    n: 1.698950
+    v: 30.130690
+
+  - name: K5
+    catalog: Hikari
+    n: 1.522490
+    v: 59.731237
+
+  - name: E-SK4
+    catalog: Hikari
+    n: 1.612716
+    v: 58.732984
+
+  - name: E-LASFH17
+    catalog: Hikari
+    n: 2.000690
+    v: 25.454379
+
+  - name: J-SK11
+    catalog: Hikari
+    n: 1.563840
+    v: 60.706839
+
+  - name: J-LASF02
+    catalog: Hikari
+    n: 1.799520
+    v: 42.086944
+
+  - name: J-LASFH13
+    catalog: Hikari
+    n: 1.903660
+    v: 31.274235
+
+  - name: E-SK15
+    catalog: Hikari
+    n: 1.622990
+    v: 58.225162
+
+  - name: E-LAF11
+    catalog: Hikari
+    n: 1.756920
+    v: 31.591329
+
+  - name: P-SK12S
+    catalog: Hikari
+    n: 1.585930
+    v: 59.652170
+
+  - name: E-SF11
+    catalog: Hikari
+    n: 1.784723
+    v: 25.679481
+
+  - name: E-BAF3
+    catalog: Hikari
+    n: 1.582670
+    v: 46.476921
+
+  - name: E-F5
+    catalog: Hikari
+    n: 1.603420
+    v: 38.012852
+
+  - name: J-FK01A
+    catalog: Hikari
+    n: 1.497000
+    v: 81.638620
+
+  - name: J-SF03
+    catalog: Hikari
+    n: 1.846660
+    v: 23.796566
+
+  - name: Q-LASFH58S
+    catalog: Hikari
+    n: 1.851080
+    v: 40.123706
+
+  - name: LF6
+    catalog: Hikari
+    n: 1.567320
+    v: 42.699778
+
+  - name: E-SF1
+    catalog: Hikari
+    n: 1.717362
+    v: 29.522238
+
+  - name: J-LAK011
+    catalog: Hikari
+    n: 1.741000
+    v: 52.765834
+
+  - name: J-LAK13
+    catalog: Hikari
+    n: 1.693500
+    v: 53.203150
+
+  - name: E-LASF04
+    catalog: Hikari
+    n: 1.815540
+    v: 44.342093
+
+  - name: SF4
+    catalog: Hikari
+    n: 1.755200
+    v: 27.641217
+
+  - name: J-BAK2
+    catalog: Hikari
+    n: 1.539960
+    v: 59.523574
+
+  - name: J-LASFH9
+    catalog: Hikari
+    n: 1.902650
+    v: 35.725382
+
+  - name: Q-LAF010S
+    catalog: Hikari
+    n: 1.743000
+    v: 49.247590
+
+  - name: J-LAF01
+    catalog: Hikari
+    n: 1.700000
+    v: 48.103628
+
+  - name: E-BK7
+    catalog: Hikari
+    n: 1.516800
+    v: 64.108694
+
+  - name: LAF3
+    catalog: Hikari
+    n: 1.717000
+    v: 48.125992
+
+  - name: E-PSK03
+    catalog: Hikari
+    n: 1.603001
+    v: 65.460398
+
+  - name: E-LAF7
+    catalog: Hikari
+    n: 1.749497
+    v: 35.281419
+
+  - name: BAK2
+    catalog: Hikari
+    n: 1.539960
+    v: 59.681919
+
+  - name: J-LASF015
+    catalog: Hikari
+    n: 1.804000
+    v: 46.597670
+
+  - name: P-LASFH11S
+    catalog: Hikari
+    n: 1.773870
+    v: 47.253126
+
+  - name: Q-LAK13S
+    catalog: Hikari
+    n: 1.697200
+    v: 53.288704
+
+  - name: J-K5
+    catalog: Hikari
+    n: 1.522490
+    v: 59.213983
+
+  - name: J-LAF3
+    catalog: Hikari
+    n: 1.717000
+    v: 47.974566
+
+  - name: SF15
+    catalog: Hikari
+    n: 1.698950
+    v: 30.089686
+
+  - name: BASF6
+    catalog: Hikari
+    n: 1.667551
+    v: 42.009450
+
+  - name: E-LASF08
+    catalog: Hikari
+    n: 1.882997
+    v: 40.764336
+
+  - name: BAF10
+    catalog: Hikari
+    n: 1.670030
+    v: 47.049915
+
+  - name: SF8
+    catalog: Hikari
+    n: 1.688930
+    v: 31.144745
+
+  - name: SF03
+    catalog: Hikari
+    n: 1.846660
+    v: 23.884051
+
+  - name: J-LAK09
+    catalog: Hikari
+    n: 1.734000
+    v: 51.508682
+
+  - name: E-BASF8
+    catalog: Hikari
+    n: 1.723420
+    v: 37.950657
+
+  - name: Q-PSKH1S
+    catalog: Hikari
+    n: 1.592550
+    v: 67.856871
+
+  - name: J-F1
+    catalog: Hikari
+    n: 1.625880
+    v: 35.722376
+
+  - name: J-LAK7
+    catalog: Hikari
+    n: 1.651600
+    v: 58.571700
+
+  - name: E-LASF09
+    catalog: Hikari
+    n: 1.816000
+    v: 46.623347
+
+  - name: BAF11
+    catalog: Hikari
+    n: 1.666720
+    v: 48.360121
+
+  - name: Q-SF6S
+    catalog: Hikari
+    n: 1.803010
+    v: 25.531943
+
+  - name: SF9
+    catalog: Hikari
+    n: 1.654460
+    v: 33.855439
+
+  - name: BASF7
+    catalog: Hikari
+    n: 1.701540
+    v: 41.166978
+
+  - name: J-FKH1
+    catalog: Hikari
+    n: 1.497820
+    v: 82.571305
+
+  - name: E-SFH1
+    catalog: Hikari
+    n: 1.808090
+    v: 22.787261
+
+  - name: P-LAF010S
+    catalog: Hikari
+    n: 1.742999
+    v: 49.277592
+
+  - name: J-LASFH24
+    catalog: Hikari
+    n: 1.902000
+    v: 25.263033
+
+  - name: SF14
+    catalog: Hikari
+    n: 1.761820
+    v: 26.556302
+
+  - name: E-F8
+    catalog: Hikari
+    n: 1.595510
+    v: 39.216011
+
+  - name: E-LAK18
+    catalog: Hikari
+    n: 1.729157
+    v: 54.658831
+
+  - name: J-LAF2
+    catalog: Hikari
+    n: 1.744000
+    v: 44.804167
+
+  - name: E-SK18
+    catalog: Hikari
+    n: 1.638540
+    v: 55.479598
+
+  - name: J-LASF014
+    catalog: Hikari
+    n: 1.788000
+    v: 47.354706
+
+  - name: E-LASF010
+    catalog: Hikari
+    n: 1.834000
+    v: 37.159899
+
+  - name: J-LLF6
+    catalog: Hikari
+    n: 1.531720
+    v: 48.779637
+
+  - name: E-LLF2
+    catalog: Hikari
+    n: 1.540720
+    v: 47.224817
+
+  - name: E-LASFH2
+    catalog: Hikari
+    n: 1.766840
+    v: 46.804913
+
+  - name: Q-LAK52S
+    catalog: Hikari
+    n: 1.677980
+    v: 54.893431
+
+  - name: E-PSK02
+    catalog: Hikari
+    n: 1.618000
+    v: 63.372017
+
+  - name: KZFH1
+    catalog: Hikari
+    n: 1.612658
+    v: 44.404011
+
+  - name: LAF2
+    catalog: Hikari
+    n: 1.744000
+    v: 45.009021
+
+  - name: J-LAK04
+    catalog: Hikari
+    n: 1.651000
+    v: 56.237891
+
+  - name: E-BAF12
+    catalog: Hikari
+    n: 1.639300
+    v: 44.882939
+
+  - name: LLF6
+    catalog: Hikari
+    n: 1.531721
+    v: 49.142236
+
+  - name: J-LASF09A
+    catalog: Hikari
+    n: 1.816000
+    v: 46.594128
+
+  - name: F1
+    catalog: Hikari
+    n: 1.625882
+    v: 35.649693
+
+  - name: J-KZFH4
+    catalog: Hikari
+    n: 1.552981
+    v: 55.071703
+
+  - name: E-LASF05
+    catalog: Hikari
+    n: 1.834807
+    v: 42.722417
+
+  - name: SF5
+    catalog: Hikari
+    n: 1.672700
+    v: 32.154391
+
+  - name: E-F16
+    catalog: Hikari
+    n: 1.592701
+    v: 35.298957
+
+  - name: J-LAK12
+    catalog: Hikari
+    n: 1.677900
+    v: 55.348146
+
+  - name: LF7
+    catalog: Hikari
+    n: 1.575010
+    v: 41.536400
+
+  - name: E-LAK14
+    catalog: Hikari
+    n: 1.696797
+    v: 55.523908
+
+  - name: LAF09
+    catalog: Hikari
+    n: 1.697000
+    v: 48.530571
+
+  - name: E-SF10
+    catalog: Hikari
+    n: 1.728250
+    v: 28.459666
+
+  - name: LAK7
+    catalog: Hikari
+    n: 1.651599
+    v: 58.552980
+
+  - name: E-SK14
+    catalog: Hikari
+    n: 1.603112
+    v: 60.669444
+
+  - name: J-SK10
+    catalog: Hikari
+    n: 1.622800
+    v: 57.101320
+
+  - name: J-SF2
+    catalog: Hikari
+    n: 1.647690
+    v: 33.723654
+
+  - name: J-LASF03
+    catalog: Hikari
+    n: 1.806100
+    v: 40.975266
+
+  - name: Q-LASFH19S
+    catalog: Hikari
+    n: 1.820980
+    v: 42.656702
+
+  - name: E-SK5
+    catalog: Hikari
+    n: 1.589130
+    v: 61.162060
+
+  - name: E-LAK02
+    catalog: Hikari
+    n: 1.670000
+    v: 57.344444
+
+  - name: J-SF14
+    catalog: Hikari
+    n: 1.761820
+    v: 26.584374
+
+  - name: J-BASF2
+    catalog: Hikari
+    n: 1.664460
+    v: 35.870305
+
+  - name: E-LAK09
+    catalog: Hikari
+    n: 1.734000
+    v: 51.483015
+
+  - name: LASF02
+    catalog: Hikari
+    n: 1.799520
+    v: 42.242359
+
+  - name: BAK4
+    catalog: Hikari
+    n: 1.568829
+    v: 56.049408
+
+  - name: J-LASF08
+    catalog: Hikari
+    n: 1.883000
+    v: 40.657188
+
+  - name: E-LASF017
+    catalog: Hikari
+    n: 1.794997
+    v: 45.287974
+
+  - name: J-LLF1
+    catalog: Hikari
+    n: 1.548140
+    v: 45.509935
+
+  - name: J-LASF013
+    catalog: Hikari
+    n: 1.804400
+    v: 39.607321
+
+  - name: J-K3
+    catalog: Hikari
+    n: 1.518230
+    v: 58.816848
+
+  - name: J-LASFH23
+    catalog: Hikari
+    n: 1.850000
+    v: 27.027002
+
+  - name: SF13
+    catalog: Hikari
+    n: 1.740771
+    v: 27.644962
+
+  - name: LAK011
+    catalog: Hikari
+    n: 1.741000
+    v: 52.672067
+
+  - name: E-SSK8
+    catalog: Hikari
+    n: 1.617720
+    v: 49.779142
+
+  - name: E-FKH2
+    catalog: Hikari
+    n: 1.456000
+    v: 91.320735
+
+  - name: LAF9
+    catalog: Hikari
+    n: 1.795040
+    v: 28.565137
+
+  - name: J-SFH2
+    catalog: Hikari
+    n: 1.860740
+    v: 23.077896
+
+  - name: J-PSK03
+    catalog: Hikari
+    n: 1.603000
+    v: 65.441311
+
+  - name: Q-PSKH4S
+    catalog: Hikari
+    n: 1.592450
+    v: 66.923806
+
+  - name: E-LAK011
+    catalog: Hikari
+    n: 1.741000
+    v: 52.672087
+
+  - name: J-FK01
+    catalog: Hikari
+    n: 1.497000
+    v: 81.730179
+
+  - name: K3
+    catalog: Hikari
+    n: 1.518230
+    v: 58.909268
+
+  - name: J-SF13
+    catalog: Hikari
+    n: 1.740770
+    v: 27.740933
+
+  - name: Q-FKH2S
+    catalog: Hikari
+    n: 1.455620
+    v: 91.307727
+
+  - name: J-LF7
+    catalog: Hikari
+    n: 1.575010
+    v: 41.512435
+
+  - name: Q-LASFH59S
+    catalog: Hikari
+    n: 1.820980
+    v: 42.502165
+
+  - name: E-SK2
+    catalog: Hikari
+    n: 1.607380
+    v: 56.746973
+
+  - name: E-LASFH9
+    catalog: Hikari
+    n: 1.902650
+    v: 35.699754
+
+  - name: J-SF5
+    catalog: Hikari
+    n: 1.672700
+    v: 32.185454
+
+  - name: E-LAF01
+    catalog: Hikari
+    n: 1.699998
+    v: 48.078853
+
+  - name: J-LASFH15
+    catalog: Hikari
+    n: 1.950000
+    v: 29.366344
+
+  - name: Q-LASF03S
+    catalog: Hikari
+    n: 1.806040
+    v: 40.737356
+
+  - name: E-F3
+    catalog: Hikari
+    n: 1.612930
+    v: 36.996203
+
+  - name: E-LAK13
+    catalog: Hikari
+    n: 1.693501
+    v: 53.203153
+
+  - name: J-PSKH4
+    catalog: Hikari
+    n: 1.593490
+    v: 67.001281
+
+  - name: E-SF7
+    catalog: Hikari
+    n: 1.639800
+    v: 34.563661
+
+  - name: E-LASF02
+    catalog: Hikari
+    n: 1.799520
+    v: 42.242361
+
+  - name: E-LF5
+    catalog: Hikari
+    n: 1.581439
+    v: 40.738479
+
+  - name: E-LAK8
+    catalog: Hikari
+    n: 1.712995
+    v: 53.875777
+
+  - name: SF2
+    catalog: Hikari
+    n: 1.647690
+    v: 33.841849
+
+  - name: J-BAK4
+    catalog: Hikari
+    n: 1.568830
+    v: 56.000795
+
+  - name: Q-FK01S
+    catalog: Hikari
+    n: 1.496490
+    v: 81.671513
+
+  - name: LLF1
+    catalog: Hikari
+    n: 1.548139
+    v: 45.867807
+
+  - name: PK2
+    catalog: Hikari
+    n: 1.518210
+    v: 65.027672
+
+  - name: P-LASFH12S
+    catalog: Hikari
+    n: 1.790628
+    v: 44.984151
+
+  - name: E-LASF021
+    catalog: Hikari
+    n: 1.850260
+    v: 32.348145
+
+  - name: E-BASF2
+    catalog: Hikari
+    n: 1.664460
+    v: 35.913500
+
+  - name: J-LAK02
+    catalog: Hikari
+    n: 1.670000
+    v: 57.349561
+
+  - name: E-SSK5
+    catalog: Hikari
+    n: 1.658441
+    v: 50.892288
+
+  - name: E-BAK1
+    catalog: Hikari
+    n: 1.572500
+    v: 57.738955
+
+  - name: J-LASF08A
+    catalog: Hikari
+    n: 1.883000
+    v: 40.688965
+
+  - name: E-LASF03
+    catalog: Hikari
+    n: 1.806100
+    v: 40.942316
+
+  - name: E-LAK9
+    catalog: Hikari
+    n: 1.691000
+    v: 54.814122
+
+  - name: J-SSK1
+    catalog: Hikari
+    n: 1.617200
+    v: 53.967464
+
+  - name: J-LAK14
+    catalog: Hikari
+    n: 1.696800
+    v: 55.520369
+
+  - name: E-SF6
+    catalog: Hikari
+    n: 1.805181
+    v: 25.430397
+
+  - name: J-LASFH24HS
+    catalog: Hikari
+    n: 1.902000
+    v: 25.263033
+
+  - name: E-LAK12
+    catalog: Hikari
+    n: 1.677900
+    v: 55.397503
+
+  - name: Q-PSKH2S
+    catalog: Hikari
+    n: 1.618750
+    v: 63.733391
+
+  - name: E-F2
+    catalog: Hikari
+    n: 1.620041
+    v: 36.258932
+
+  - name: E-BAF4
+    catalog: Hikari
+    n: 1.605620
+    v: 43.767613
+
+  - name: J-FK5
+    catalog: Hikari
+    n: 1.487490
+    v: 70.318793
+
+  - name: E-KF6
+    catalog: Hikari
+    n: 1.517420
+    v: 52.304664
+
+  - name: Q-LASFH18S
+    catalog: Hikari
+    n: 1.851170
+    v: 40.049815
+
+  - name: E-SK12
+    catalog: Hikari
+    n: 1.583130
+    v: 59.387186
+
+  - name: SFS3
+    catalog: Hikari
+    n: 1.784700
+    v: 26.207574
+
+  - name: J-SF4
+    catalog: Hikari
+    n: 1.755200
+    v: 27.571110
+
+  - name: J-LASF05
+    catalog: Hikari
+    n: 1.834810
+    v: 42.733437
+
+  - name: J-SK16
+    catalog: Hikari
+    n: 1.620410
+    v: 60.245509
+
+  - name: E-LAK04
+    catalog: Hikari
+    n: 1.651000
+    v: 56.171366
+
+  - name: J-LF6
+    catalog: Hikari
+    n: 1.567320
+    v: 42.578098
+
+  - name: J-BAF12
+    catalog: Hikari
+    n: 1.639300
+    v: 44.834133
+
+  - name: J-PSK02
+    catalog: Hikari
+    n: 1.618000
+    v: 63.339027
+
+  - name: J-SFS3
+    catalog: Hikari
+    n: 1.784700
+    v: 26.268169
+
+  - name: J-LASFH9A
+    catalog: Hikari
+    n: 1.902650
+    v: 35.770703
+
+  - name: Q-LAFPH1S
+    catalog: Hikari
+    n: 1.743104
+    v: 49.436916
+
+  - name: J-PKH1
+    catalog: Hikari
+    n: 1.518600
+    v: 69.890785
+
+  - name: J-LASFH2
+    catalog: Hikari
+    n: 1.766840
+    v: 46.777867
+
+  - name: SK16
+    catalog: Hikari
+    n: 1.620409
+    v: 60.280874
+
+  - name: J-LASFH22
+    catalog: Hikari
+    n: 1.848500
+    v: 43.790731
+
+  - name: SF12
+    catalog: Hikari
+    n: 1.648311
+    v: 33.769773
+
+  - name: J-LAK18
+    catalog: Hikari
+    n: 1.729160
+    v: 54.611531
+
+  - name: P-LASF03S
+    catalog: Hikari
+    n: 1.806040
+    v: 40.774175
+
+  - name: E-BAF8
+    catalog: Hikari
+    n: 1.623740
+    v: 47.044346
+
+  - name: E-LASF016
+    catalog: Hikari
+    n: 1.772499
+    v: 49.607590
+
+  - name: Q-LAK53S
+    catalog: Hikari
+    n: 1.693430
+    v: 53.300774
+
+  - name: SSK1
+    catalog: Hikari
+    n: 1.617200
+    v: 53.959056
+
+  - name: J-LASF09
+    catalog: Hikari
+    n: 1.816000
+    v: 46.589656
+
+  - name: J-SF8
+    catalog: Hikari
+    n: 1.688930
+    v: 31.163593
+
+  - name: J-BASF8
+    catalog: Hikari
+    n: 1.723420
+    v: 38.029744
+
+  - name: J-LAF09
+    catalog: Hikari
+    n: 1.697000
+    v: 48.449887
+
+  - name: P-LASFH18S
+    catalog: Hikari
+    n: 1.851170
+    v: 40.049954
+
+  - name: BASF2
+    catalog: Hikari
+    n: 1.664460
+    v: 35.913505
+
+  - name: SK15
+    catalog: Hikari
+    n: 1.622990
+    v: 58.225167
+
+  - name: F8
+    catalog: Hikari
+    n: 1.595510
+    v: 39.216026
+
+  - name: SF11
+    catalog: Hikari
+    n: 1.784721
+    v: 25.833679
+
+  - name: BAF3
+    catalog: Hikari
+    n: 1.582670
+    v: 46.476929
+
+  - name: J-LASFH21
+    catalog: Hikari
+    n: 1.953750
+    v: 32.334656
+
+  - name: J-LAF7
+    catalog: Hikari
+    n: 1.749500
+    v: 35.248835
+
+  - name: LAK04
+    catalog: Hikari
+    n: 1.651000
+    v: 56.171381
+
+  - name: E-LASF015
+    catalog: Hikari
+    n: 1.804000
+    v: 46.575968
+
+  - name: LASF010
+    catalog: Hikari
+    n: 1.834000
+    v: 37.338765
+
+  - name: KZFS4
+    catalog: Hikari
+    n: 1.613400
+    v: 44.291828
+
+  - name: SSK2
+    catalog: Hikari
+    n: 1.622300
+    v: 53.057571
+
+  - name: LAK12
+    catalog: Hikari
+    n: 1.677900
+    v: 55.397516
+
+  - name: SK9
+    catalog: Hikari
+    n: 1.614050
+    v: 55.061200
+
+  - name: E-LAF3
+    catalog: Hikari
+    n: 1.717004
+    v: 47.933096
+
+  - name: J-LAK01
+    catalog: Hikari
+    n: 1.640000
+    v: 60.193092
+
+  - name: LAF7
+    catalog: Hikari
+    n: 1.749501
+    v: 35.186731
+
+  - name: J-LAF05
+    catalog: Hikari
+    n: 1.762000
+    v: 40.113731
+
+  - name: J-F8
+    catalog: Hikari
+    n: 1.595510
+    v: 39.212992
+
+  - name: E-BAK2
+    catalog: Hikari
+    n: 1.539956
+    v: 59.455634
+
+  - name: J-BK7A
+    catalog: Hikari
+    n: 1.516800
+    v: 64.129950
+
+  - name: J-KZFH1
+    catalog: Hikari
+    n: 1.612660
+    v: 44.457955
+
+  - name: E-LF7
+    catalog: Hikari
+    n: 1.575006
+    v: 41.481733
+
+  - name: J-SK2
+    catalog: Hikari
+    n: 1.607380
+    v: 56.739966
+
+  - name: E-SF5
+    catalog: Hikari
+    n: 1.672700
+    v: 32.107703
+
+  - name: E-F1
+    catalog: Hikari
+    n: 1.625882
+    v: 35.649694
+
+  - name: P-PSKH1S
+    catalog: Hikari
+    n: 1.592550
+    v: 67.858832
+
+  - name: E-SF15
+    catalog: Hikari
+    n: 1.698947
+    v: 30.128584
+
+  - name: E-SK11
+    catalog: Hikari
+    n: 1.563839
+    v: 60.679041
+
+  - name: J-LASFH17
+    catalog: Hikari
+    n: 2.000690
+    v: 25.455728
+
+  - name: J-SK15
+    catalog: Hikari
+    n: 1.622990
+    v: 58.122114
+
+  - name: J-SF7
+    catalog: Hikari
+    n: 1.639800
+    v: 34.546201
+
+  - name: J-LASFH17HS
+    catalog: Hikari
+    n: 2.000690
+    v: 25.455728
+
+  - name: E-LASFH13
+    catalog: Hikari
+    n: 1.903660
+    v: 31.273204
+
+  - name: J-BAF3
+    catalog: Hikari
+    n: 1.582670
+    v: 46.484267
+
+  - name: J-LF5
+    catalog: Hikari
+    n: 1.581440
+    v: 40.977199
+
+  - name: J-BASF7
+    catalog: Hikari
+    n: 1.701540
+    v: 41.018469
+
+  - name: J-SF11
+    catalog: Hikari
+    n: 1.784720
+    v: 25.638420
+
+  - name: E-SF03
+    catalog: Hikari
+    n: 1.846660
+    v: 23.776466
+
+  - name: J-BAF11
+    catalog: Hikari
+    n: 1.666720
+    v: 48.331725
+
+  - name: SK4
+    catalog: Hikari
+    n: 1.612720
+    v: 58.472693
+
+  - name: J-BAF10
+    catalog: Hikari
+    n: 1.670030
+    v: 47.141079
+
+  - name: J-BASF6
+    catalog: Hikari
+    n: 1.667550
+    v: 41.873908
+
+  - name: E-LAK06
+    catalog: Hikari
+    n: 1.677900
+    v: 50.708792
+
+  - name: J-SF10
+    catalog: Hikari
+    n: 1.728250
+    v: 28.378835
+
+  - name: Q-SK12S
+    catalog: Hikari
+    n: 1.585930
+    v: 59.621704
+
+  - name: J-LASFH16
+    catalog: Hikari
+    n: 2.001000
+    v: 29.123651
+
+  - name: E-LAF02
+    catalog: Hikari
+    n: 1.720000
+    v: 43.683353
+
+  - name: J-SK14
+    catalog: Hikari
+    n: 1.603110
+    v: 60.693804
+
+  - name: J-SF6
+    catalog: Hikari
+    n: 1.805180
+    v: 25.448348
+
+  - name: J-BALF4
+    catalog: Hikari
+    n: 1.579570
+    v: 53.742830
+
+  - name: E-SK10
+    catalog: Hikari
+    n: 1.622799
+    v: 57.035463
+
+  - name: LAK09
+    catalog: Hikari
+    n: 1.734000
+    v: 51.483018
+
+  - name: E-SF14
+    catalog: Hikari
+    n: 1.761820
+    v: 26.556301
+
+  - name: E-LAK10
+    catalog: Hikari
+    n: 1.719995
+    v: 50.228454
+
+  - name: LASFH6
+    catalog: Hikari
+    n: 1.806100
+    v: 33.267264
+
+  - name: E-SF4
+    catalog: Hikari
+    n: 1.755199
+    v: 27.510087
+
+  - name: E-PSKH1
+    catalog: Hikari
+    n: 1.593190
+    v: 67.900540
+
+  - name: SF1
+    catalog: Hikari
+    n: 1.717360
+    v: 29.486634
+
+  - name: E-LASF01
+    catalog: Hikari
+    n: 1.785900
+    v: 44.174088
+
+  - name: E-LF6
+    catalog: Hikari
+    n: 1.567320
+    v: 42.699788
+
+  - name: SK18
+    catalog: Hikari
+    n: 1.638540
+    v: 55.479588
+
+  - name: F5
+    catalog: Hikari
+    n: 1.603420
+    v: 38.109129
+
+  - name: E-K5
+    catalog: Hikari
+    n: 1.522490
+    v: 59.731259
+
+  - name: J-LAF04
+    catalog: Hikari
+    n: 1.757000
+    v: 47.862723
+
+  - name: PK1
+    catalog: Hikari
+    n: 1.503780
+    v: 66.815093
+
+  - name: E-FK5
+    catalog: Hikari
+    n: 1.487490
+    v: 70.406429
+
+  - name: P-LAK13S
+    catalog: Hikari
+    n: 1.697200
+    v: 53.210741
+
+  - name: LLF2
+    catalog: Hikari
+    n: 1.540720
+    v: 47.224798
+
+  - name: J-KF6
+    catalog: Hikari
+    n: 1.517420
+    v: 52.203782
+
+  - name: Q-LASFH12S
+    catalog: Hikari
+    n: 1.790630
+    v: 44.984543
+
+  - name: E-LAF010
+    catalog: Hikari
+    n: 1.743200
+    v: 49.314451
+
+  - name: E-LAF2
+    catalog: Hikari
+    n: 1.743997
+    v: 44.786312
+
+  - name: E-LASKH2
+    catalog: Hikari
+    n: 1.754999
+    v: 52.314919
+
+  - name: LASF01
+    catalog: Hikari
+    n: 1.785900
+    v: 44.174079
+
+  - name: J-SK18
+    catalog: Hikari
+    n: 1.638540
+    v: 55.340468
+
+  - name: E-LLF6
+    catalog: Hikari
+    n: 1.531717
+    v: 48.862886
+
+  - name: E-LASFH6
+    catalog: Hikari
+    n: 1.806100
+    v: 33.265207
+
+  - name: J-LLF2
+    catalog: Hikari
+    n: 1.540720
+    v: 46.966429
+
+  - name: J-LAFH3
+    catalog: Hikari
+    n: 1.795040
+    v: 28.692277
+
+  - name: E-LASF014
+    catalog: Hikari
+    n: 1.788001
+    v: 47.378774
+
+  - name: J-LASF010
+    catalog: Hikari
+    n: 1.834000
+    v: 37.183793
+
+  - name: P-SK5S
+    catalog: Hikari
+    n: 1.588870
+    v: 61.151080
+
+  - name: Q-LASFPH2S
+    catalog: Hikari
+    n: 1.765437
+    v: 46.751378
+
+  - name: E-LAKH1
+    catalog: Hikari
+    n: 1.748099
+    v: 52.304982
+
+  - name: SF10
+    catalog: Hikari
+    n: 1.728250
+    v: 28.346990
+
+  - name: E-SF8
+    catalog: Hikari
+    n: 1.688931
+    v: 31.070978
+
+  - name: J-LAF016
+    catalog: Hikari
+    n: 1.801000
+    v: 34.923057
+
+  - name: E-LAK7
+    catalog: Hikari
+    n: 1.651597
+    v: 58.543058
+
+  - name: J-F5
+    catalog: Hikari
+    n: 1.603420
+    v: 38.028464
+
+  - name: J-LAFH3HS
+    catalog: Hikari
+    n: 1.795040
+    v: 28.692277
+
+  - name: J-SFH1
+    catalog: Hikari
+    n: 1.808090
+    v: 22.738831
+
+  - name: E-FKH1
+    catalog: Hikari
+    n: 1.497820
+    v: 82.515656
+
+  - name: Q-SK55S
+    catalog: Hikari
+    n: 1.588870
+    v: 61.131395
+
+  - name: E-BASF7
+    catalog: Hikari
+    n: 1.701540
+    v: 41.166985
+
+  - name: J-LASF021
+    catalog: Hikari
+    n: 1.850260
+    v: 32.352867
+
+  - name: E-BAF11
+    catalog: Hikari
+    n: 1.666718
+    v: 48.315694
+
+  - name: J-LAK8
+    catalog: Hikari
+    n: 1.713000
+    v: 53.958770
+
+  - name: E-BAK4
+    catalog: Hikari
+    n: 1.568832
+    v: 56.338294
+
+  - name: J-LAK7R
+    catalog: Hikari
+    n: 1.651600
+    v: 58.618566
+
+  - name: BASF8
+    catalog: Hikari
+    n: 1.723421
+    v: 37.969147
+
+  - name: F2
+    catalog: Hikari
+    n: 1.620040
+    v: 36.331342
+
+  - name: SF6
+    catalog: Hikari
+    n: 1.805182
+    v: 25.443058
+
+  - name: J-SK4
+    catalog: Hikari
+    n: 1.612720
+    v: 58.540463
+
+  - name: E-FK01
+    catalog: Hikari
+    n: 1.497000
+    v: 81.629798
+
+  - name: KF6
+    catalog: Hikari
+    n: 1.517420
+    v: 52.304670
+
+  - name: E-SF13
+    catalog: Hikari
+    n: 1.740769
+    v: 27.784828
+
+  - name: E-KZFH1
+    catalog: Hikari
+    n: 1.612660
+    v: 44.461379
+
+  - name: J-BK7
+    catalog: Hikari
+    n: 1.516800
+    v: 63.880667
+
+  - name: BASF12
+    catalog: Hikari
+    n: 1.669980
+    v: 39.233289
+
+  - name: J-SF1
+    catalog: Hikari
+    n: 1.717360
+    v: 29.572863
+
+  - name: E-LAF05
+    catalog: Hikari
+    n: 1.762001
+    v: 40.107044
+
+  - name: E-LASFH15
+    catalog: Hikari
+    n: 1.950000
+    v: 29.365360
+
+  - name: SSK8
+    catalog: Hikari
+    n: 1.617720
+    v: 49.779141
+
+  - name: E-LAK01
+    catalog: Hikari
+    n: 1.639999
+    v: 60.087359
+
+  - name: Q-SK52S
+    catalog: Hikari
+    n: 1.582860
+    v: 59.504606
+
+  - name: E-LAF9
+    catalog: Hikari
+    n: 1.795040
+    v: 28.542951
+
+  - name: P-LASFH19S
+    catalog: Hikari
+    n: 1.820980
+    v: 42.656255
+
+  - name: Q-SK15S
+    catalog: Hikari
+    n: 1.622910
+    v: 58.302401
+
+  - name: J-F2
+    catalog: Hikari
+    n: 1.620040
+    v: 36.396775
+
+  - name: J-SSK8
+    catalog: Hikari
+    n: 1.617720
+    v: 49.813967
+
+  - name: BASF4
+    catalog: Hikari
+    n: 1.651280
+    v: 38.218241
+
+  - name: E-LAFH2
+    catalog: Hikari
+    n: 1.803840
+    v: 33.889217
+
+  - name: E-SFH2
+    catalog: Hikari
+    n: 1.860740
+    v: 23.060801
+
+  - name: J-FKH2
+    catalog: Hikari
+    n: 1.456000
+    v: 91.374829
+
+  - name: J-LASF017
+    catalog: Hikari
+    n: 1.795000
+    v: 45.309666
+
+  - name: E-LASF013
+    catalog: Hikari
+    n: 1.804398
+    v: 39.578982
+
+  - name: J-LAF016HS
+    catalog: Hikari
+    n: 1.801000
+    v: 34.923057
+
+  - name: E-LLF1
+    catalog: Hikari
+    n: 1.548141
+    v: 45.786481
+
+  - name: E-LAF09
+    catalog: Hikari
+    n: 1.697000
+    v: 48.530590
+
+  - name: KZFH2
+    catalog: Hikari
+    n: 1.671629
+    v: 38.797887
+
+  - name: LAF11
+    catalog: Hikari
+    n: 1.756920
+    v: 31.704801
+
+  - name: J-BAF8
+    catalog: Hikari
+    n: 1.623740
+    v: 47.008663
+
+  - name: E-LAF016
+    catalog: Hikari
+    n: 1.800999
+    v: 34.963582
+
+  - name: Q-LASFPH3S
+    catalog: Hikari
+    n: 1.795256
+    v: 45.252757
+
+  - name: LAK9
+    catalog: Hikari
+    n: 1.691000
+    v: 54.814152
+
+  - name: J-LASF016
+    catalog: Hikari
+    n: 1.772500
+    v: 49.620185
+
+  - name: J-LASKH2
+    catalog: Hikari
+    n: 1.755000
+    v: 52.336325
+
+  - name: BAF4
+    catalog: Hikari
+    n: 1.605620
+    v: 43.767629
+
+  - name: J-LAF010
+    catalog: Hikari
+    n: 1.743200
+    v: 49.257188
+
+  - name: J-LASFH6
+    catalog: Hikari
+    n: 1.806100
+    v: 33.344981
+
+  - name: E-LAFH3
+    catalog: Hikari
+    n: 1.795041
+    v: 28.688901
+
+  - name: E-SFS3
+    catalog: Hikari
+    n: 1.784696
+    v: 26.295354
+
+  - name: E-PKH1
+    catalog: Hikari
+    n: 1.518601
+    v: 69.973177
+
+  - name: J-LASF021HS
+    catalog: Hikari
+    n: 1.850260
+    v: 32.352867
+
+  - name: J-F3
+    catalog: Hikari
+    n: 1.612930
+    v: 36.944974
+
+  - name: J-SF6HS
+    catalog: Hikari
+    n: 1.805180
+    v: 25.448348
+
+  - name: J-LASFH13HS
+    catalog: Hikari
+    n: 1.903660
+    v: 31.274235
+
+  - name: SK2
+    catalog: Hikari
+    n: 1.607380
+    v: 56.746975
+
+  - name: J-SF03HS
+    catalog: Hikari
+    n: 1.846660
+    v: 23.796566
+
+  - name: J-BAF4
+    catalog: Hikari
+    n: 1.605620
+    v: 43.484529
+
+  - name: J-F16
+    catalog: Hikari
+    n: 1.592700
+    v: 35.271777
+
+  - name: Q-SK5S
+    catalog: Hikari
+    n: 1.588870
+    v: 61.177645
+
+  - name: J-LASF01
+    catalog: Hikari
+    n: 1.785900
+    v: 44.169881
+
+  - name: E-LAF04
+    catalog: Hikari
+    n: 1.756998
+    v: 47.826989
+
+  - name: J-SK12
+    catalog: Hikari
+    n: 1.583130
+    v: 59.419851
+
+  - name: E-SK16
+    catalog: Hikari
+    n: 1.620411
+    v: 60.291663
+
+  - name: P-FKH2S
+    catalog: Hikari
+    n: 1.455620
+    v: 91.248565
+
+  - name: J-LASF05HS
+    catalog: Hikari
+    n: 1.834810
+    v: 42.733437
+
+  - name: J-PSKH1
+    catalog: Hikari
+    n: 1.593190
+    v: 67.900555
+
+  - name: E-SF2
+    catalog: Hikari
+    n: 1.647689
+    v: 33.799707
+
+  - name: P-FK01S
+    catalog: Hikari
+    n: 1.496488
+    v: 81.546118
+
+  - name: LF5
+    catalog: Hikari
+    n: 1.581440
+    v: 40.777871
+
+  - name: J-LAK10
+    catalog: Hikari
+    n: 1.719990
+    v: 50.267183
+
+  - name: BAF8
+    catalog: Hikari
+    n: 1.623741
+    v: 47.076980
+
+  - name: J-SK5
+    catalog: Hikari
+    n: 1.589130
+    v: 61.219474
+
+  - name: SF7
+    catalog: Hikari
+    n: 1.639800
+    v: 34.563664
+
+  - name: J-SSK5
+    catalog: Hikari
+    n: 1.658440
+    v: 50.835655
+
+  - name: Q-LASFH11S
+    catalog: Hikari
+    n: 1.773870
+    v: 47.252399
+
+  - name: J-BAK1
+    catalog: Hikari
+    n: 1.572500
+    v: 57.291343
+
+  - name: F3
+    catalog: Hikari
+    n: 1.612930
+    v: 36.996191
+
+  - name: E-K3
+    catalog: Hikari
+    n: 1.518229
+    v: 58.933640
+
+  - name: E-SSK1
+    catalog: Hikari
+    n: 1.617200
+    v: 54.009900
+
+  - name: E-BALF4
+    catalog: Hikari
+    n: 1.579570
+    v: 53.711462
+
+  - name: J-LAK9
+    catalog: Hikari
+    n: 1.691000
+    v: 54.934151
+
+  - name: J-LAF02
+    catalog: Hikari
+    n: 1.720000
+    v: 43.610054
+
+  - name: E-BAF10
+    catalog: Hikari
+    n: 1.670029
+    v: 47.236541
+
+  - name: J-LAK06
+    catalog: Hikari
+    n: 1.677900
+    v: 50.668606
+
+  - name: E-BASF6
+    catalog: Hikari
+    n: 1.667551
+    v: 41.964323

@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                          _colored-chalk-tabs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/chalk/chalk-tabs";
+@use "../../navs/colored-tabs";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk-tabs,
+		&.chalk.auto-tabs {
+			ul.nav-tabs {
+
+				//
+				// active tabs
+				//
+
+				@include chalk-tabs.active-shade(colored-tabs.$active-color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk-tabs,
+		&.chalk.auto-tabs {
+			ul.nav-tabs {
+
+				//
+				// active tabs
+				//
+
+				@include chalk-tabs.active-shaded(colored-tabs.$default-active-color);
+			}
+		}
+	}
+}

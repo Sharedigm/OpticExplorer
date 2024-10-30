@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1983-129411 Example 1 (Nikon TC-16A)
+[constants]
+Lateral Magnification	1.6
+Lateral Magnification(m)	1.59999
+d0	-36.6054
+[variable distances]
+Focal Length	-75.3339
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	44.0080
+[lens data]
+1	133.317	2.5	1.59507	21.86	35.5
+2	-51.168	0.5		21.86
+3	-190.874	1.0	1.84042	22.95	43.3
+4	24.064	0.5		21.73
+5	27.743	4.0	1.59507	22.72	35.5
+6	-109.951	1.5		22.72	
+7	-31.481	1.0	1.84042	22.48	43.3
+8	2846.347	0.1		24.82
+9	37.218	2.5	1.51118	25.18	50.9
+10	115.703	Bf		25.18
+[figure]
+source	Data/JP1983-129411_Figure03bRCLP.png
+originX	153.20
+originY	443.50
+ppmm	11.934
+[notes]

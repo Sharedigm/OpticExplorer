@@ -1,0 +1,30 @@
+[descriptive data]
+title	DE 1 282 311 B Example 1 (Meyer Optik Gorlitz 135mm F2.8 Orestor)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	undefined
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	51.98
+Bf	51.97
+[lens data]
+1	88.02	7.43	1.61375	50.26	56.3
+2	Infinity	0.68		50.26
+3	39.69	21.74	1.60729	47.83	49.2
+4	-127.71	5.40	1.69895	47.83	30.1
+5	26.73	11.49		29.95
+5AS	AS	18.35		26.284
+6	-670.95	4.19	1.63854	22.03	55.5
+7	340.20	5.94		22.03
+8	226.80	4.73	1.69895	26.29	30.1
+9	-141.75	Bf		26.29
+[figure]
+source	Data/DE01282311_Figure01P.png
+originX	78.07
+originY	199.19
+ppmm	5.486
+[notes]

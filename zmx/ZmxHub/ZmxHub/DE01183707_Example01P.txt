@@ -1,0 +1,29 @@
+[descriptive data]
+title	DE 1,183,707 Example 1 (Leica Elmar-M 135mm F4)
+[constants]
+Scaled	135	1
+[variable distances]
+Focal Length	135
+Angle of View	undefined
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	64.36
+[lens data]
+1	65.22660	5.74965	1.57125	34.13	55.8
+2	Infinity	3.31020	1.58403	34.13	41.4
+3	279.63765	0.28620		34.13
+4	37.27350	8.62245	1.51871	31.88	64.0
+5	-156.40290	18.67320	1.60718	31.88	37.8
+6	24.97500	3.38		20.98	
+6AS	AS	19.74010		20.113
+7	70.36470	3.59100	1.69416	22.68	30.9
+8	151.05555	Bf		22.68
+[figure]
+source	Data/DE01183707_Figure01P.png
+originX	25.52
+originY	50.55
+ppmm	2.269
+[notes]

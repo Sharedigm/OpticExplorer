@@ -1,0 +1,43 @@
+[descriptive data]
+title	US 3,830,559 Example 1 (Olympus 24mm f2 J Zuiko Auto-W)
+[constants]
+Scaled	24	100
+[variable distances]
+Focal Length	24	undefined
+Angle of View	84	undefined
+F-Number	2	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.025
+d0	Infinity	956.52
+d11	2.35	1.60
+d11AS	0.90	0.15
+d16	0.20	0.95
+Bf(p)	undefined	undefined
+Bf	37.51	38.13
+[lens data]
+1	41.236	4.90	1.757	36.32	47.9
+2	127.189	0.20		36.32	
+3	49.479	1.76	1.620	29.06	60.3
+4	17.710	1.96		22.60	
+5	28.648	1.47	1.620	24.18	60.3
+6	13.035	2.84		19.36	
+7	22.014	1.47	1.670	21.46	57.3
+8	14.601	3.43		17.44	
+9	23.168	1.47	1.773	19.54	49.6
+10	13.564	11.27	1.596	19.54	39.2
+11	-56.947	d11AS		19.54	
+11AS	AS	1.45		17.556
+12	-106.255	10.29	1.773	19.62	49.6
+13	-12.476	1.57	1.689	21.38	31.1
+14	55.102	2.20		21.38	
+15	-68.016	2.69	1.697	21.56	55.6
+16	-21.257	d16		21.56	
+17	89.977	3.72	1.697	24.34	55.6
+18	-55.014	Bf		24.34	
+[figure]
+source	Data/US003830559_Figure01P.png
+originX	75.94
+originY	338.99
+ppmm	16.015
+[notes]
+Bill: d0 measured.

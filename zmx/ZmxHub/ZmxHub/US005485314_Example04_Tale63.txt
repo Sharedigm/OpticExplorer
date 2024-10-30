@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 5,485,314 Example 4 (Nikon AF Zoom-Nikkor 28-80mm f/3.3-5.6G)
+[constants]
+[variable distances]
+Focal Length	28.8000	50.0000	77.6000
+Angle of View	76.6	undefined	30.8
+F-Number	3.4	undefined	5.8
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d5	39.2856	13.4711	0.9985
+d13	0.0000	8.0000	16.0000
+Bf	42.8194	50.9667	63.9884
+Aperture Diameter	17.255	17.310	17.365
+[lens data]
+1	97.086	2.20	1.77279	44.94	49.5
+2	19.500	0.03	1.49712	33.28	55.9
+3	16.891	7.81		33.28
+4	26.633	3.80	1.80458	35.09	25.5
+5	42.414	d5		33.73
+6	25.554	4.10	1.64000	19.47	60.0
+7	-186.207	0.73		19.47
+7AS	AS	0.67		17.255	
+8	22.446	3.45	1.51680	18.11	64.1
+9	267.680	0.70		16.61
+10	-61.313	6.85	1.79504	16.61	28.6
+11	18.917	1.35		14.65
+12	141.576	2.45	1.64831	14.65	33.7
+13	-29.366	d13		16.92
+14	FS	Bf		14.3	
+[aspherical data]
+3	16.891	-0.3431	-4.3090E-06	-1.4986E-08	2.6086E-11	-2.6365E-13
+[figure]	
+source	Data/US005485314_Example04_Tale63-Fig1.png
+originX	12.5
+originY	230.5
+ppmm	9.719
+[notes]
+Bill: Middle AD is interpolated.

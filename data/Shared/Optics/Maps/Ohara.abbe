@@ -1,0 +1,2065 @@
+################################################################################
+#                                                                              #
+#                                  Ohara.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: LAH64
+    catalog: Ohara
+    n: 1.788001
+    v: 47.385275
+
+  - name: S-BSM18
+    catalog: Ohara
+    n: 1.638539
+    v: 55.380028
+
+  - name: PBM2
+    catalog: Ohara
+    n: 1.620041
+    v: 36.256658
+
+  - name: S-TIM39
+    catalog: Ohara
+    n: 1.666800
+    v: 33.054985
+
+  - name: S-LAL20
+    catalog: Ohara
+    n: 1.699300
+    v: 51.112184
+
+  - name: PBM28
+    catalog: Ohara
+    n: 1.688930
+    v: 31.082901
+
+  - name: S-LAH66
+    catalog: Ohara
+    n: 1.772499
+    v: 49.598371
+
+  - name: S-LAH89
+    catalog: Ohara
+    n: 1.851500
+    v: 40.782269
+
+  - name: S-LAM73
+    catalog: Ohara
+    n: 1.793600
+    v: 37.089450
+
+  - name: S-LAL61
+    catalog: Ohara
+    n: 1.740999
+    v: 52.636502
+
+  - name: S-NBH53
+    catalog: Ohara
+    n: 1.737999
+    v: 32.261312
+
+  - name: S-BAL22
+    catalog: Ohara
+    n: 1.568729
+    v: 63.104860
+
+  - name: LAL59
+    catalog: Ohara
+    n: 1.733997
+    v: 51.488026
+
+  - name: BSM36
+    catalog: Ohara
+    n: 1.642495
+    v: 58.369399
+
+  - name: S-FPL55
+    catalog: Ohara
+    n: 1.438750
+    v: 94.661059
+
+  - name: S-TIM8
+    catalog: Ohara
+    n: 1.595509
+    v: 39.242273
+
+  - name: S-BSM22
+    catalog: Ohara
+    n: 1.622296
+    v: 53.169067
+
+  - name: L-LAM60
+    catalog: Ohara
+    n: 1.743198
+    v: 49.295578
+
+  - name: BAM3
+    catalog: Ohara
+    n: 1.582673
+    v: 46.423092
+
+  - name: S-TIH57
+    catalog: Ohara
+    n: 1.963000
+    v: 24.114400
+
+  - name: S-LAL7
+    catalog: Ohara
+    n: 1.651597
+    v: 58.550655
+
+  - name: LAL18
+    catalog: Ohara
+    n: 1.729157
+    v: 54.683134
+
+  - name: BSL3
+    catalog: Ohara
+    n: 1.498308
+    v: 65.026785
+
+  - name: PBH11W
+    catalog: Ohara
+    n: 1.784718
+    v: 25.712726
+
+  - name: TIH14
+    catalog: Ohara
+    n: 1.761821
+    v: 26.517966
+
+  - name: BAL5
+    catalog: Ohara
+    n: 1.547393
+    v: 53.550738
+
+  - name: PBH11
+    catalog: Ohara
+    n: 1.784718
+    v: 25.712726
+
+  - name: S-NPH2
+    catalog: Ohara
+    n: 1.922860
+    v: 18.896912
+
+  - name: BAH27
+    catalog: Ohara
+    n: 1.701536
+    v: 41.242277
+
+  - name: L-LAL13
+    catalog: Ohara
+    n: 1.693500
+    v: 53.185799
+
+  - name: PBH13W
+    catalog: Ohara
+    n: 1.740769
+    v: 27.793228
+
+  - name: S-BSM14
+    catalog: Ohara
+    n: 1.603112
+    v: 60.641080
+
+  - name: S-TIL27
+    catalog: Ohara
+    n: 1.575006
+    v: 41.505207
+
+  - name: S-LAH93
+    catalog: Ohara
+    n: 1.905250
+    v: 35.036826
+
+  - name: BAM12
+    catalog: Ohara
+    n: 1.639300
+    v: 44.878032
+
+  - name: S-BAL14
+    catalog: Ohara
+    n: 1.568832
+    v: 56.363897
+
+  - name: S-TIM35
+    catalog: Ohara
+    n: 1.698947
+    v: 30.127865
+
+  - name: S-TIH20
+    catalog: Ohara
+    n: 1.705850
+    v: 30.244176
+
+  - name: BAL41
+    catalog: Ohara
+    n: 1.563839
+    v: 60.695914
+
+  - name: BAH11
+    catalog: Ohara
+    n: 1.666718
+    v: 48.317266
+
+  - name: BSM16
+    catalog: Ohara
+    n: 1.620410
+    v: 60.271913
+
+  - name: PBL35Y
+    catalog: Ohara
+    n: 1.581591
+    v: 40.855991
+
+  - name: BPM51
+    catalog: Ohara
+    n: 1.613397
+    v: 44.266767
+
+  - name: S-TIH3
+    catalog: Ohara
+    n: 1.739998
+    v: 28.296005
+
+  - name: BSM9
+    catalog: Ohara
+    n: 1.614047
+    v: 54.971106
+
+  - name: L-TIM28P
+    catalog: Ohara
+    n: 1.694529
+    v: 30.655992
+
+  - name: S-BAL3
+    catalog: Ohara
+    n: 1.571351
+    v: 52.952106
+
+  - name: LAH52
+    catalog: Ohara
+    n: 1.799516
+    v: 42.241337
+
+  - name: LAM7
+    catalog: Ohara
+    n: 1.749497
+    v: 35.278026
+
+  - name: LAM51
+    catalog: Ohara
+    n: 1.699998
+    v: 48.078869
+
+  - name: LAL14
+    catalog: Ohara
+    n: 1.696796
+    v: 55.528037
+
+  - name: S-TIL2
+    catalog: Ohara
+    n: 1.540720
+    v: 47.227127
+
+  - name: S-NBH8
+    catalog: Ohara
+    n: 1.720467
+    v: 34.707984
+
+  - name: S-BSM81
+    catalog: Ohara
+    n: 1.639999
+    v: 60.078127
+
+  - name: S-LAH51
+    catalog: Ohara
+    n: 1.785896
+    v: 44.202637
+
+  - name: S-BSM2
+    catalog: Ohara
+    n: 1.607379
+    v: 56.816076
+
+  - name: S-BAM4
+    catalog: Ohara
+    n: 1.605620
+    v: 43.706978
+
+  - name: L-LAH81
+    catalog: Ohara
+    n: 1.806100
+    v: 40.400738
+
+  - name: S-LAL56
+    catalog: Ohara
+    n: 1.677898
+    v: 50.722184
+
+  - name: S-BAL2
+    catalog: Ohara
+    n: 1.570989
+    v: 50.799858
+
+  - name: S-NBH52V
+    catalog: Ohara
+    n: 1.673000
+    v: 38.256077
+
+  - name: LAH53
+    catalog: Ohara
+    n: 1.806098
+    v: 40.948508
+
+  - name: S-TIM5
+    catalog: Ohara
+    n: 1.603420
+    v: 38.027347
+
+  - name: S-BAH28
+    catalog: Ohara
+    n: 1.723420
+    v: 37.955602
+
+  - name: LAL54
+    catalog: Ohara
+    n: 1.650996
+    v: 56.154774
+
+  - name: S-LAM52
+    catalog: Ohara
+    n: 1.720000
+    v: 43.689812
+
+  - name: BPH45
+    catalog: Ohara
+    n: 1.718502
+    v: 33.515702
+
+  - name: TIH23
+    catalog: Ohara
+    n: 1.784696
+    v: 26.298170
+
+  - name: PBH71
+    catalog: Ohara
+    n: 1.922864
+    v: 21.288699
+
+  - name: PBL21
+    catalog: Ohara
+    n: 1.573092
+    v: 42.576094
+
+  - name: S-TIM22
+    catalog: Ohara
+    n: 1.647689
+    v: 33.792803
+
+  - name: BAH10
+    catalog: Ohara
+    n: 1.670029
+    v: 47.253429
+
+  - name: PBM25
+    catalog: Ohara
+    n: 1.672700
+    v: 32.101636
+
+  - name: S-NSL36
+    catalog: Ohara
+    n: 1.517417
+    v: 52.430903
+
+  - name: S-LAH92
+    catalog: Ohara
+    n: 1.891899
+    v: 37.134024
+
+  - name: S-BSM15
+    catalog: Ohara
+    n: 1.622992
+    v: 58.165763
+
+  - name: S-BAL42
+    catalog: Ohara
+    n: 1.583126
+    v: 59.374673
+
+  - name: FTM8
+    catalog: Ohara
+    n: 1.532565
+    v: 45.914102
+
+  - name: S-TIL26
+    catalog: Ohara
+    n: 1.567322
+    v: 42.817076
+
+  - name: BSM16C
+    catalog: Ohara
+    n: 1.620410
+    v: 60.254106
+
+  - name: L-LAL12
+    catalog: Ohara
+    n: 1.677900
+    v: 54.887440
+
+  - name: S-NBH5
+    catalog: Ohara
+    n: 1.654115
+    v: 39.682794
+
+  - name: PBH10
+    catalog: Ohara
+    n: 1.728249
+    v: 28.462300
+
+  - name: BSM21
+    catalog: Ohara
+    n: 1.617196
+    v: 54.040511
+
+  - name: S-NPH3
+    catalog: Ohara
+    n: 1.959060
+    v: 17.471252
+
+  - name: BAH26
+    catalog: Ohara
+    n: 1.667551
+    v: 41.927521
+
+  - name: S-NBM51
+    catalog: Ohara
+    n: 1.613397
+    v: 44.267706
+
+  - name: S-BAL35
+    catalog: Ohara
+    n: 1.589130
+    v: 61.135024
+
+  - name: BAH71
+    catalog: Ohara
+    n: 1.701998
+    v: 40.097173
+
+  - name: S-BAH32
+    catalog: Ohara
+    n: 1.669979
+    v: 39.271035
+
+  - name: BSM4
+    catalog: Ohara
+    n: 1.612716
+    v: 58.749129
+
+  - name: PBM8Y
+    catalog: Ohara
+    n: 1.595509
+    v: 39.260208
+
+  - name: BAM25
+    catalog: Ohara
+    n: 1.603230
+    v: 42.320943
+
+  - name: BAH30
+    catalog: Ohara
+    n: 1.650158
+    v: 39.390461
+
+  - name: S-NBH52
+    catalog: Ohara
+    n: 1.672999
+    v: 38.148170
+
+  - name: L-BBH1
+    catalog: Ohara
+    n: 2.101949
+    v: 16.785097
+
+  - name: LAL58
+    catalog: Ohara
+    n: 1.693495
+    v: 50.807634
+
+  - name: APL1
+    catalog: Ohara
+    n: 1.517277
+    v: 69.563209
+
+  - name: S-LAL60
+    catalog: Ohara
+    n: 1.725999
+    v: 53.565698
+
+  - name: L-PHL2
+    catalog: Ohara
+    n: 1.558800
+    v: 62.558541
+
+  - name: LAM66
+    catalog: Ohara
+    n: 1.800999
+    v: 34.965762
+
+  - name: S-LAH67
+    catalog: Ohara
+    n: 1.794997
+    v: 45.293967
+
+  - name: S-LAH88
+    catalog: Ohara
+    n: 1.916499
+    v: 31.604148
+
+  - name: L-TIH53
+    catalog: Ohara
+    n: 1.846660
+    v: 23.773536
+
+  - name: S-LAH71
+    catalog: Ohara
+    n: 1.850259
+    v: 32.270120
+
+  - name: PBH4
+    catalog: Ohara
+    n: 1.755199
+    v: 27.512146
+
+  - name: LAH65
+    catalog: Ohara
+    n: 1.804000
+    v: 46.575911
+
+  - name: PBL1Y
+    catalog: Ohara
+    n: 1.548141
+    v: 45.733282
+
+  - name: PBM3
+    catalog: Ohara
+    n: 1.612929
+    v: 36.994096
+
+  - name: S-APL
+    catalog: Ohara
+    n: 1.517277
+    v: 69.563190
+
+  - name: L-LAL15
+    catalog: Ohara
+    n: 1.693040
+    v: 52.930600
+
+  - name: PBM8
+    catalog: Ohara
+    n: 1.595508
+    v: 39.213424
+
+  - name: PBM22
+    catalog: Ohara
+    n: 1.647689
+    v: 33.802937
+
+  - name: S-LAH95
+    catalog: Ohara
+    n: 1.903659
+    v: 31.343065
+
+  - name: S-BAL12
+    catalog: Ohara
+    n: 1.539956
+    v: 59.462478
+
+  - name: BSM10
+    catalog: Ohara
+    n: 1.622799
+    v: 57.063643
+
+  - name: S-FPM2
+    catalog: Ohara
+    n: 1.595220
+    v: 67.735723
+
+  - name: PBH21
+    catalog: Ohara
+    n: 1.922861
+    v: 20.884172
+
+  - name: S-TIM25
+    catalog: Ohara
+    n: 1.672700
+    v: 32.099206
+
+  - name: S-BAH54
+    catalog: Ohara
+    n: 1.695000
+    v: 42.167111
+
+  - name: L-LAH53
+    catalog: Ohara
+    n: 1.806249
+    v: 40.907302
+
+  - name: PBL26
+    catalog: Ohara
+    n: 1.567322
+    v: 42.831708
+
+  - name: LAH78
+    catalog: Ohara
+    n: 1.901355
+    v: 31.550244
+
+  - name: NSL33
+    catalog: Ohara
+    n: 1.514536
+    v: 54.714595
+
+  - name: S-LAM55
+    catalog: Ohara
+    n: 1.762001
+    v: 40.100176
+
+  - name: S-LAL10
+    catalog: Ohara
+    n: 1.719995
+    v: 50.230564
+
+  - name: L-LAH90
+    catalog: Ohara
+    n: 1.832200
+    v: 40.097595
+
+  - name: S-LAH53V
+    catalog: Ohara
+    n: 1.806099
+    v: 40.929791
+
+  - name: LAL7
+    catalog: Ohara
+    n: 1.651597
+    v: 58.519433
+
+  - name: BAM9
+    catalog: Ohara
+    n: 1.643279
+    v: 47.850606
+
+  - name: LAH54
+    catalog: Ohara
+    n: 1.815543
+    v: 44.361146
+
+  - name: S-TIM2
+    catalog: Ohara
+    n: 1.620041
+    v: 36.263378
+
+  - name: S-PHM51
+    catalog: Ohara
+    n: 1.617001
+    v: 62.800809
+
+  - name: S-BSM28
+    catalog: Ohara
+    n: 1.617722
+    v: 49.815052
+
+  - name: L-LAH86
+    catalog: Ohara
+    n: 1.902699
+    v: 31.005320
+
+  - name: S-BAM3
+    catalog: Ohara
+    n: 1.582673
+    v: 46.423175
+
+  - name: LAL12
+    catalog: Ohara
+    n: 1.677900
+    v: 55.337587
+
+  - name: PHM53
+    catalog: Ohara
+    n: 1.603001
+    v: 65.479908
+
+  - name: PBL6Y
+    catalog: Ohara
+    n: 1.531717
+    v: 48.956017
+
+  - name: PBM4
+    catalog: Ohara
+    n: 1.616588
+    v: 36.632973
+
+  - name: S-YGH52
+    catalog: Ohara
+    n: 1.786500
+    v: 50.001717
+
+  - name: PBH3
+    catalog: Ohara
+    n: 1.739998
+    v: 28.283809
+
+  - name: S-LAH60
+    catalog: Ohara
+    n: 1.834000
+    v: 37.160487
+
+  - name: PBL2
+    catalog: Ohara
+    n: 1.540720
+    v: 47.233680
+
+  - name: LAM61
+    catalog: Ohara
+    n: 1.720002
+    v: 46.035166
+
+  - name: S-NBH55
+    catalog: Ohara
+    n: 1.799999
+    v: 29.844688
+
+  - name: BPH35
+    catalog: Ohara
+    n: 1.644496
+    v: 40.817749
+
+  - name: S-TIH10
+    catalog: Ohara
+    n: 1.728250
+    v: 28.460599
+
+  - name: S-LAM59
+    catalog: Ohara
+    n: 1.697002
+    v: 48.516066
+
+  - name: TIH53
+    catalog: Ohara
+    n: 1.846659
+    v: 23.780116
+
+  - name: S-FPL53
+    catalog: Ohara
+    n: 1.438750
+    v: 94.946025
+
+  - name: S-FTL10
+    catalog: Ohara
+    n: 1.501372
+    v: 56.421009
+
+  - name: S-LAM7
+    catalog: Ohara
+    n: 1.749497
+    v: 35.283397
+
+  - name: LAH58
+    catalog: Ohara
+    n: 1.882997
+    v: 40.778667
+
+  - name: BSL22
+    catalog: Ohara
+    n: 1.518206
+    v: 65.039654
+
+  - name: PBH56
+    catalog: Ohara
+    n: 1.841390
+    v: 24.559059
+
+  - name: BAM5
+    catalog: Ohara
+    n: 1.607289
+    v: 49.188575
+
+  - name: TIM11
+    catalog: Ohara
+    n: 1.620955
+    v: 35.880852
+
+  - name: FTM16
+    catalog: Ohara
+    n: 1.592701
+    v: 35.296315
+
+  - name: S-BSM9
+    catalog: Ohara
+    n: 1.614047
+    v: 54.990097
+
+  - name: BSM71
+    catalog: Ohara
+    n: 1.648497
+    v: 53.035185
+
+  - name: BAL3
+    catalog: Ohara
+    n: 1.571351
+    v: 52.968158
+
+  - name: FPL51
+    catalog: Ohara
+    n: 1.496999
+    v: 81.614660
+
+  - name: S-NPH4
+    catalog: Ohara
+    n: 1.892860
+    v: 20.361810
+
+  - name: PBH14W
+    catalog: Ohara
+    n: 1.761819
+    v: 26.553651
+
+  - name: S-NPH5
+    catalog: Ohara
+    n: 1.858955
+    v: 22.728736
+
+  - name: BAL2
+    catalog: Ohara
+    n: 1.570989
+    v: 50.797474
+
+  - name: BAH77
+    catalog: Ohara
+    n: 1.701539
+    v: 41.210010
+
+  - name: BSM2
+    catalog: Ohara
+    n: 1.607379
+    v: 56.815789
+
+  - name: BAM4
+    catalog: Ohara
+    n: 1.605620
+    v: 43.723021
+
+  - name: S-FPL52
+    catalog: Ohara
+    n: 1.455999
+    v: 90.288026
+
+  - name: S-BSM25
+    catalog: Ohara
+    n: 1.658441
+    v: 50.877554
+
+  - name: LAH59
+    catalog: Ohara
+    n: 1.816000
+    v: 46.626446
+
+  - name: BAM23
+    catalog: Ohara
+    n: 1.607167
+    v: 40.263160
+
+  - name: S-LAM58
+    catalog: Ohara
+    n: 1.720000
+    v: 41.978463
+
+  - name: S-TIH11
+    catalog: Ohara
+    n: 1.784723
+    v: 25.683446
+
+  - name: LAH75
+    catalog: Ohara
+    n: 1.873996
+    v: 35.258591
+
+  - name: LAM60
+    catalog: Ohara
+    n: 1.743198
+    v: 49.309053
+
+  - name: PBM39
+    catalog: Ohara
+    n: 1.666799
+    v: 33.046816
+
+  - name: YGH51
+    catalog: Ohara
+    n: 1.754998
+    v: 52.326713
+
+  - name: S-TIM28
+    catalog: Ohara
+    n: 1.688931
+    v: 31.075450
+
+  - name: S-LAH55V
+    catalog: Ohara
+    n: 1.834807
+    v: 42.725324
+
+  - name: PBM5
+    catalog: Ohara
+    n: 1.603420
+    v: 38.012915
+
+  - name: LAH63
+    catalog: Ohara
+    n: 1.804398
+    v: 39.581254
+
+  - name: PHM52
+    catalog: Ohara
+    n: 1.617999
+    v: 63.386441
+
+  - name: S-BSM4
+    catalog: Ohara
+    n: 1.612716
+    v: 58.716945
+
+  - name: S-NBH53V
+    catalog: Ohara
+    n: 1.737999
+    v: 32.326590
+
+  - name: LAL13
+    catalog: Ohara
+    n: 1.693501
+    v: 53.231566
+
+  - name: BSM93
+    catalog: Ohara
+    n: 1.640998
+    v: 56.927542
+
+  - name: L-LAH87
+    catalog: Ohara
+    n: 1.770300
+    v: 47.401904
+
+  - name: S-LAH52Q
+    catalog: Ohara
+    n: 1.799520
+    v: 42.239506
+
+  - name: LAH55
+    catalog: Ohara
+    n: 1.834807
+    v: 42.723720
+
+  - name: S-TIM3
+    catalog: Ohara
+    n: 1.612929
+    v: 37.005342
+
+  - name: L-LAH91
+    catalog: Ohara
+    n: 1.764500
+    v: 49.096913
+
+  - name: BAM8
+    catalog: Ohara
+    n: 1.623740
+    v: 47.097220
+
+  - name: LAL52
+    catalog: Ohara
+    n: 1.669999
+    v: 57.327972
+
+  - name: S-TIH4
+    catalog: Ohara
+    n: 1.755199
+    v: 27.512089
+
+  - name: S-LAM54
+    catalog: Ohara
+    n: 1.756998
+    v: 47.823170
+
+  - name: S-LAL11
+    catalog: Ohara
+    n: 1.658296
+    v: 57.332589
+
+  - name: FTL8
+    catalog: Ohara
+    n: 1.511179
+    v: 51.020607
+
+  - name: L-BAL35P
+    catalog: Ohara
+    n: 1.592080
+    v: 60.993997
+
+  - name: BAL11
+    catalog: Ohara
+    n: 1.572501
+    v: 57.760854
+
+  - name: PBL27
+    catalog: Ohara
+    n: 1.575006
+    v: 41.491052
+
+  - name: PBM35
+    catalog: Ohara
+    n: 1.698947
+    v: 30.121211
+
+  - name: S-FPM3
+    catalog: Ohara
+    n: 1.537750
+    v: 74.703119
+
+  - name: BAL50
+    catalog: Ohara
+    n: 1.559625
+    v: 61.172671
+
+  - name: PBH53W
+    catalog: Ohara
+    n: 1.846658
+    v: 23.885544
+
+  - name: PBM9
+    catalog: Ohara
+    n: 1.620451
+    v: 38.119955
+
+  - name: S-APL1
+    catalog: Ohara
+    n: 1.517277
+    v: 69.563209
+
+  - name: LAH80
+    catalog: Ohara
+    n: 1.885000
+    v: 30.163795
+
+  - name: NSL7
+    catalog: Ohara
+    n: 1.511121
+    v: 60.485793
+
+  - name: S-LAH54
+    catalog: Ohara
+    n: 1.815543
+    v: 44.361146
+
+  - name: PHM51
+    catalog: Ohara
+    n: 1.617001
+    v: 62.800809
+
+  - name: BSM28
+    catalog: Ohara
+    n: 1.617722
+    v: 49.832320
+
+  - name: S-TIL6
+    catalog: Ohara
+    n: 1.531717
+    v: 48.840718
+
+  - name: LAL10
+    catalog: Ohara
+    n: 1.719995
+    v: 50.254429
+
+  - name: LAM55
+    catalog: Ohara
+    n: 1.762001
+    v: 40.100947
+
+  - name: LAM3
+    catalog: Ohara
+    n: 1.717004
+    v: 47.942632
+
+  - name: BAH78
+    catalog: Ohara
+    n: 1.723421
+    v: 38.034270
+
+  - name: L-LAH84
+    catalog: Ohara
+    n: 1.808350
+    v: 40.548503
+
+  - name: S-PHM53
+    catalog: Ohara
+    n: 1.603001
+    v: 65.443648
+
+  - name: L-BAL42
+    catalog: Ohara
+    n: 1.583126
+    v: 59.385694
+
+  - name: S-LAL12
+    catalog: Ohara
+    n: 1.677900
+    v: 55.341195
+
+  - name: S-LAH63Q
+    catalog: Ohara
+    n: 1.804400
+    v: 39.580489
+
+  - name: BPH40
+    catalog: Ohara
+    n: 1.676498
+    v: 37.537388
+
+  - name: BAL12
+    catalog: Ohara
+    n: 1.539955
+    v: 59.454008
+
+  - name: S-TIM27
+    catalog: Ohara
+    n: 1.639799
+    v: 34.466422
+
+  - name: PBH23
+    catalog: Ohara
+    n: 1.784702
+    v: 26.216753
+
+  - name: S-LAH97
+    catalog: Ohara
+    n: 1.755000
+    v: 52.318818
+
+  - name: S-BSM10
+    catalog: Ohara
+    n: 1.622799
+    v: 57.052723
+
+  - name: PBL25Y
+    catalog: Ohara
+    n: 1.581439
+    v: 40.768047
+
+  - name: BAH54
+    catalog: Ohara
+    n: 1.695000
+    v: 42.167111
+
+  - name: BSM24
+    catalog: Ohara
+    n: 1.617646
+    v: 55.049782
+
+  - name: S-LAH58
+    catalog: Ohara
+    n: 1.882997
+    v: 40.765107
+
+  - name: FPL53
+    catalog: Ohara
+    n: 1.438750
+    v: 94.960437
+
+  - name: FTL10
+    catalog: Ohara
+    n: 1.501372
+    v: 56.399833
+
+  - name: S-NPH53
+    catalog: Ohara
+    n: 1.846660
+    v: 23.883950
+
+  - name: S-FTM16
+    catalog: Ohara
+    n: 1.592701
+    v: 35.310075
+
+  - name: PBH3W
+    catalog: Ohara
+    n: 1.739998
+    v: 28.287409
+
+  - name: BSL7
+    catalog: Ohara
+    n: 1.516330
+    v: 64.150145
+
+  - name: L-LAM72
+    catalog: Ohara
+    n: 1.733099
+    v: 48.896607
+
+  - name: SSL5
+    catalog: Ohara
+    n: 1.521299
+    v: 52.553447
+
+  - name: S-TIH53
+    catalog: Ohara
+    n: 1.846660
+    v: 23.777940
+
+  - name: LAM59
+    catalog: Ohara
+    n: 1.697002
+    v: 48.535864
+
+  - name: LAL9
+    catalog: Ohara
+    n: 1.691002
+    v: 54.843220
+
+  - name: S-FPL51
+    catalog: Ohara
+    n: 1.496999
+    v: 81.545888
+
+  - name: FSL5
+    catalog: Ohara
+    n: 1.487490
+    v: 70.210260
+
+  - name: S-BSM71
+    catalog: Ohara
+    n: 1.648498
+    v: 53.023881
+
+  - name: S-NBH57
+    catalog: Ohara
+    n: 1.850249
+    v: 30.046429
+
+  - name: S-NSL2
+    catalog: Ohara
+    n: 1.516016
+    v: 56.858179
+
+  - name: BPM4
+    catalog: Ohara
+    n: 1.613400
+    v: 43.841533
+
+  - name: L-BAL35
+    catalog: Ohara
+    n: 1.589130
+    v: 61.152601
+
+  - name: PBH25W
+    catalog: Ohara
+    n: 1.761797
+    v: 27.107726
+
+  - name: YGH52
+    catalog: Ohara
+    n: 1.786500
+    v: 50.001717
+
+  - name: BSL7Y
+    catalog: Ohara
+    n: 1.516330
+    v: 64.243778
+
+  - name: S-LAM61
+    catalog: Ohara
+    n: 1.720002
+    v: 46.024571
+
+  - name: PBH1
+    catalog: Ohara
+    n: 1.717362
+    v: 29.513538
+
+  - name: S-LAL54Q
+    catalog: Ohara
+    n: 1.651000
+    v: 56.238379
+
+  - name: LAH60
+    catalog: Ohara
+    n: 1.834000
+    v: 37.166863
+
+  - name: S-FSL5Y
+    catalog: Ohara
+    n: 1.487490
+    v: 70.354425
+
+  - name: PBM6
+    catalog: Ohara
+    n: 1.636358
+    v: 35.376536
+
+  - name: S-YGH51
+    catalog: Ohara
+    n: 1.754998
+    v: 52.321434
+
+  - name: L-BSL7
+    catalog: Ohara
+    n: 1.516330
+    v: 64.065129
+
+  - name: S-LAH55VS
+    catalog: Ohara
+    n: 1.834809
+    v: 42.743680
+
+  - name: S-LAM60
+    catalog: Ohara
+    n: 1.743198
+    v: 49.339444
+
+  - name: S-LAH75
+    catalog: Ohara
+    n: 1.873996
+    v: 35.258594
+
+  - name: S-LAH63
+    catalog: Ohara
+    n: 1.804398
+    v: 39.586150
+
+  - name: S-NSL3
+    catalog: Ohara
+    n: 1.518229
+    v: 58.902057
+
+  - name: PBL1
+    catalog: Ohara
+    n: 1.548141
+    v: 45.781144
+
+  - name: S-NBH56
+    catalog: Ohara
+    n: 1.854779
+    v: 24.798980
+
+  - name: S-TIH13
+    catalog: Ohara
+    n: 1.740769
+    v: 27.789359
+
+  - name: BAM21
+    catalog: Ohara
+    n: 1.626059
+    v: 39.215631
+
+  - name: LAL8
+    catalog: Ohara
+    n: 1.712995
+    v: 53.845848
+
+  - name: PBH55
+    catalog: Ohara
+    n: 1.849860
+    v: 24.054274
+
+  - name: BSL21
+    catalog: Ohara
+    n: 1.503779
+    v: 66.814545
+
+  - name: LAM58
+    catalog: Ohara
+    n: 1.720000
+    v: 41.989859
+
+  - name: S-LAH60V
+    catalog: Ohara
+    n: 1.833999
+    v: 37.206855
+
+  - name: TIH11
+    catalog: Ohara
+    n: 1.784723
+    v: 25.677885
+
+  - name: BSM25
+    catalog: Ohara
+    n: 1.658441
+    v: 50.861723
+
+  - name: BAH22
+    catalog: Ohara
+    n: 1.664459
+    v: 35.812757
+
+  - name: S-LAH59
+    catalog: Ohara
+    n: 1.816000
+    v: 46.620561
+
+  - name: FPL52
+    catalog: Ohara
+    n: 1.455999
+    v: 90.318880
+
+  - name: PBH14
+    catalog: Ohara
+    n: 1.761819
+    v: 26.553651
+
+  - name: NSL5
+    catalog: Ohara
+    n: 1.522494
+    v: 59.790926
+
+  - name: S-LAH96
+    catalog: Ohara
+    n: 1.763850
+    v: 48.488692
+
+  - name: S-LAH79
+    catalog: Ohara
+    n: 2.003300
+    v: 28.273280
+
+  - name: S-BAL11
+    catalog: Ohara
+    n: 1.572501
+    v: 57.742980
+
+  - name: PBL25
+    catalog: Ohara
+    n: 1.581439
+    v: 40.753351
+
+  - name: S-BAL50
+    catalog: Ohara
+    n: 1.559625
+    v: 61.172671
+
+  - name: S-LAL13
+    catalog: Ohara
+    n: 1.693501
+    v: 53.205327
+
+  - name: S-TIH6
+    catalog: Ohara
+    n: 1.805181
+    v: 25.425363
+
+  - name: L-BAL43
+    catalog: Ohara
+    n: 1.585729
+    v: 59.696980
+
+  - name: S-BSM93
+    catalog: Ohara
+    n: 1.640998
+    v: 56.927542
+
+  - name: L-LAM69
+    catalog: Ohara
+    n: 1.730770
+    v: 40.508156
+
+  - name: PBM18Y
+    catalog: Ohara
+    n: 1.595509
+    v: 38.767114
+
+  - name: S-PHM52
+    catalog: Ohara
+    n: 1.618000
+    v: 63.333504
+
+  - name: S-TIM1
+    catalog: Ohara
+    n: 1.625882
+    v: 35.699614
+
+  - name: LAM2
+    catalog: Ohara
+    n: 1.743997
+    v: 44.787528
+
+  - name: S-LAL52
+    catalog: Ohara
+    n: 1.669999
+    v: 57.327972
+
+  - name: L-LAH85
+    catalog: Ohara
+    n: 1.854000
+    v: 40.393284
+
+  - name: LAL11
+    catalog: Ohara
+    n: 1.658296
+    v: 57.332589
+
+  - name: PBH23W
+    catalog: Ohara
+    n: 1.784702
+    v: 26.216753
+
+  - name: LAM54
+    catalog: Ohara
+    n: 1.756998
+    v: 47.815604
+
+  - name: S-LAH55
+    catalog: Ohara
+    n: 1.834807
+    v: 42.713673
+
+  - name: PBH18
+    catalog: Ohara
+    n: 1.721506
+    v: 29.243262
+
+  - name: BAL35Y
+    catalog: Ohara
+    n: 1.589130
+    v: 61.233033
+
+  - name: BSM22
+    catalog: Ohara
+    n: 1.622296
+    v: 53.186644
+
+  - name: PBH13
+    catalog: Ohara
+    n: 1.740769
+    v: 27.793228
+
+  - name: S-LAH65V
+    catalog: Ohara
+    n: 1.803999
+    v: 46.583432
+
+  - name: BAL7
+    catalog: Ohara
+    n: 1.588750
+    v: 51.179278
+
+  - name: BAL22
+    catalog: Ohara
+    n: 1.568729
+    v: 63.162358
+
+  - name: S-LAL59
+    catalog: Ohara
+    n: 1.733997
+    v: 51.470570
+
+  - name: BSL1
+    catalog: Ohara
+    n: 1.510091
+    v: 63.635037
+
+  - name: L-TIM28
+    catalog: Ohara
+    n: 1.689479
+    v: 31.023399
+
+  - name: S-BSM36
+    catalog: Ohara
+    n: 1.642495
+    v: 58.369399
+
+  - name: BSM7
+    catalog: Ohara
+    n: 1.607291
+    v: 59.375631
+
+  - name: S-BAH27
+    catalog: Ohara
+    n: 1.701536
+    v: 41.239440
+
+  - name: S-LAM3
+    catalog: Ohara
+    n: 1.717004
+    v: 47.927969
+
+  - name: PBL26Y
+    catalog: Ohara
+    n: 1.567322
+    v: 42.855569
+
+  - name: S-LAL18
+    catalog: Ohara
+    n: 1.729157
+    v: 54.680013
+
+  - name: FSL3
+    catalog: Ohara
+    n: 1.464499
+    v: 65.938855
+
+  - name: L-BBH2
+    catalog: Ohara
+    n: 2.102999
+    v: 18.051064
+
+  - name: S-NBH51
+    catalog: Ohara
+    n: 1.749504
+    v: 35.332480
+
+  - name: S-TIH14
+    catalog: Ohara
+    n: 1.761821
+    v: 26.517885
+
+  - name: PBM28W
+    catalog: Ohara
+    n: 1.688930
+    v: 31.082901
+
+  - name: L-PHL1
+    catalog: Ohara
+    n: 1.564550
+    v: 60.818065
+
+  - name: S-TIH53W
+    catalog: Ohara
+    n: 1.846660
+    v: 23.777940
+
+  - name: L-BAL42P
+    catalog: Ohara
+    n: 1.585930
+    v: 59.248294
+
+  - name: PBL6
+    catalog: Ohara
+    n: 1.531717
+    v: 48.904553
+
+  - name: S-LAH64
+    catalog: Ohara
+    n: 1.788001
+    v: 47.368522
+
+  - name: BSM18
+    catalog: Ohara
+    n: 1.638539
+    v: 55.384768
+
+  - name: BPH5
+    catalog: Ohara
+    n: 1.654115
+    v: 39.687638
+
+  - name: LAL61
+    catalog: Ohara
+    n: 1.740999
+    v: 52.648747
+
+  - name: L-NBH54
+    catalog: Ohara
+    n: 1.902000
+    v: 25.101413
+
+  - name: LAH66
+    catalog: Ohara
+    n: 1.772499
+    v: 49.601340
+
+  - name: S-FSL5
+    catalog: Ohara
+    n: 1.487490
+    v: 70.236252
+
+  - name: S-LAH52
+    catalog: Ohara
+    n: 1.799516
+    v: 42.225007
+
+  - name: S-LAL9
+    catalog: Ohara
+    n: 1.691002
+    v: 54.822578
+
+  - name: S-TIM6
+    catalog: Ohara
+    n: 1.636358
+    v: 35.391923
+
+  - name: S-BSL7
+    catalog: Ohara
+    n: 1.516330
+    v: 64.142022
+
+  - name: L-LAH94
+    catalog: Ohara
+    n: 1.860999
+    v: 37.097767
+
+  - name: S-TIH1
+    catalog: Ohara
+    n: 1.717362
+    v: 29.518091
+
+  - name: S-TIH18
+    catalog: Ohara
+    n: 1.721507
+    v: 29.232330
+
+  - name: S-LAL14
+    catalog: Ohara
+    n: 1.696797
+    v: 55.532241
+
+  - name: S-LAM51
+    catalog: Ohara
+    n: 1.699998
+    v: 48.080479
+
+  - name: S-BAM12
+    catalog: Ohara
+    n: 1.639300
+    v: 44.872804
+
+  - name: PBH72
+    catalog: Ohara
+    n: 1.915356
+    v: 21.171926
+
+  - name: PBL22
+    catalog: Ohara
+    n: 1.589206
+    v: 41.079210
+
+  - name: BAL14
+    catalog: Ohara
+    n: 1.568832
+    v: 56.339266
+
+  - name: PBH25
+    catalog: Ohara
+    n: 1.761797
+    v: 27.107724
+
+  - name: BSM14
+    catalog: Ohara
+    n: 1.603112
+    v: 60.704896
+
+  - name: BAH13
+    catalog: Ohara
+    n: 1.668921
+    v: 44.987354
+
+  - name: S-TIL25
+    catalog: Ohara
+    n: 1.581439
+    v: 40.747566
+
+  - name: BPH50
+    catalog: Ohara
+    n: 1.739997
+    v: 31.710001
+
+  - name: BSM51Y
+    catalog: Ohara
+    n: 1.603109
+    v: 60.651225
+
+  - name: S-BAL41
+    catalog: Ohara
+    n: 1.563839
+    v: 60.666575
+
+  - name: S-BAH11
+    catalog: Ohara
+    n: 1.666718
+    v: 48.325247
+
+  - name: S-BSM16
+    catalog: Ohara
+    n: 1.620411
+    v: 60.289582
+
+  - name: NSL2
+    catalog: Ohara
+    n: 1.516016
+    v: 56.800755
+
+  - name: NSL3
+    catalog: Ohara
+    n: 1.518229
+    v: 58.966406
+
+  - name: TPH55
+    catalog: Ohara
+    n: 1.755502
+    v: 25.066156
+
+  - name: S-BAH10
+    catalog: Ohara
+    n: 1.670029
+    v: 47.230916
+
+  - name: PBH4W
+    catalog: Ohara
+    n: 1.755199
+    v: 27.512146
+
+  - name: PBM27
+    catalog: Ohara
+    n: 1.639799
+    v: 34.477127
+
+  - name: S-TIH23
+    catalog: Ohara
+    n: 1.784696
+    v: 26.291221
+
+  - name: BSM15
+    catalog: Ohara
+    n: 1.622992
+    v: 58.143312
+
+  - name: BAL42
+    catalog: Ohara
+    n: 1.583126
+    v: 59.373789
+
+  - name: BPH8
+    catalog: Ohara
+    n: 1.720467
+    v: 34.716156
+
+  - name: S-NPH1W
+    catalog: Ohara
+    n: 1.808095
+    v: 22.760817
+
+  - name: BAL15
+    catalog: Ohara
+    n: 1.556711
+    v: 58.689461
+
+  - name: NSL36
+    catalog: Ohara
+    n: 1.517417
+    v: 52.412251
+
+  - name: LAL56
+    catalog: Ohara
+    n: 1.677898
+    v: 50.723364
+
+  - name: BSM81
+    catalog: Ohara
+    n: 1.639999
+    v: 60.091709
+
+  - name: LAH51
+    catalog: Ohara
+    n: 1.785896
+    v: 44.186159
+
+  - name: S-LAL54
+    catalog: Ohara
+    n: 1.650996
+    v: 56.163717
+
+  - name: L-LAH83
+    catalog: Ohara
+    n: 1.864000
+    v: 40.577742
+
+  - name: S-LAL8
+    catalog: Ohara
+    n: 1.712995
+    v: 53.867058
+
+  - name: S-TIL1
+    catalog: Ohara
+    n: 1.548141
+    v: 45.784277
+
+  - name: LAM52
+    catalog: Ohara
+    n: 1.720000
+    v: 43.705625
+
+  - name: S-LAH53
+    catalog: Ohara
+    n: 1.806098
+    v: 40.925996
+
+  - name: BAH28
+    catalog: Ohara
+    n: 1.723420
+    v: 37.949115
+
+  - name: PBM2Y
+    catalog: Ohara
+    n: 1.620041
+    v: 36.269263
+
+  - name: PBM1
+    catalog: Ohara
+    n: 1.625882
+    v: 35.700668
+
+  - name: LAH67
+    catalog: Ohara
+    n: 1.794997
+    v: 45.293967
+
+  - name: LAL60
+    catalog: Ohara
+    n: 1.725999
+    v: 53.565698
+
+  - name: PBH6
+    catalog: Ohara
+    n: 1.805177
+    v: 25.435012
+
+  - name: S-LAM66
+    catalog: Ohara
+    n: 1.800999
+    v: 34.967403
+
+  - name: S-LAH65
+    catalog: Ohara
+    n: 1.804000
+    v: 46.570373
+
+  - name: S-LAH65VS
+    catalog: Ohara
+    n: 1.804000
+    v: 46.527532
+
+  - name: S-NSL5
+    catalog: Ohara
+    n: 1.522494
+    v: 59.835417
+
+  - name: LAH71
+    catalog: Ohara
+    n: 1.850259
+    v: 32.285940
+
+  - name: BAL15Y
+    catalog: Ohara
+    n: 1.556711
+    v: 58.679177
+
+  - name: PBL7
+    catalog: Ohara
+    n: 1.548689
+    v: 45.555746
+
+  - name: L-LAH85V
+    catalog: Ohara
+    n: 1.854000
+    v: 40.378368
+
+  - name: PBM11
+    catalog: Ohara
+    n: 1.620955
+    v: 35.880852
+
+  - name: S-LAL19
+    catalog: Ohara
+    n: 1.729160
+    v: 54.095223
+
+  - name: BAH32
+    catalog: Ohara
+    n: 1.669979
+    v: 39.279752
+
+  - name: S-BSM21
+    catalog: Ohara
+    n: 1.617195
+    v: 54.062144
+
+  - name: S-LAM2
+    catalog: Ohara
+    n: 1.743997
+    v: 44.786431
+
+  - name: BAL35
+    catalog: Ohara
+    n: 1.589130
+    v: 61.182174
+
+  - name: PBH53
+    catalog: Ohara
+    n: 1.846658
+    v: 23.885544
+
+  - name: BSM6
+    catalog: Ohara
+    n: 1.613749
+    v: 56.365919
+
+  - name: PBH6W
+    catalog: Ohara
+    n: 1.805177
+    v: 25.435012
+
+  - name: SSL2
+    catalog: Ohara
+    n: 1.529441
+    v: 51.722557
+
+  - name: S-LAL58
+    catalog: Ohara
+    n: 1.693495
+    v: 50.810652
+
+  - name: L-LAH84P
+    catalog: Ohara
+    n: 1.812250
+    v: 40.294279
+
+  - name: BSM23
+    catalog: Ohara
+    n: 1.614839
+    v: 51.172377
+
+  - name: S-NPH1
+    catalog: Ohara
+    n: 1.808095
+    v: 22.760817
+
+  - name: TIH6
+    catalog: Ohara
+    n: 1.805181
+    v: 25.432057
+
+  - name: S-FPL51Y
+    catalog: Ohara
+    n: 1.497003
+    v: 81.138165

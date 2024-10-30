@@ -1,0 +1,195 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// buttons
+	//
+
+	.button {
+		&:active, &.selected {
+			color: white;
+			background: black;
+			border-color: black;
+			text-shadow: none;
+
+			i {
+				color: white;
+			}
+
+			svg {
+				fill: white;
+			}
+		}
+	}
+
+	//
+	// styled buttons
+	//
+
+	.btn {	
+		color: black;
+		background: white;
+		border-color: black;
+
+		&:active {
+			color: white;
+			background: black;
+			border-color: black;
+		}
+
+		//
+		// primary buttons
+		//
+
+		&.btn-primary, &.btn-primary:focus {
+			color: white;
+			background-color: black;
+			border-color: black;
+
+			&:disabled {
+				border-style: dashed;
+				border-color: white;
+			}
+		}
+
+		//
+		// disabled buttons
+		//
+
+		&:disabled, &:disabled:hover {
+			opacity: 1;
+			color: black;
+			background-color: white;
+			border-color: black;
+			border-style: dashed;
+		}
+	}
+
+	#main, .modals {
+
+		//
+		// outlined primary buttons
+		//
+
+		.btn.btn-primary {
+			position: relative;
+			color: black;
+			background-color: white;
+			border-width: 2px;
+			border-style: solid !important;
+			border-color: unset;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-width: 1px;
+				border-style: solid;
+				border-color: black;
+				margin: 1px;
+				pointer-events: none;
+			}
+
+			&:active {
+				color: white;
+				background-color: black;
+				border-color: black;
+			}
+
+			&:disabled {
+				&::after {
+					border-style: dashed;
+				}
+			}
+		}
+	}
+
+	&.rounded-buttons,
+	&.rounded.auto-corner-buttons {
+		.btn.btn-primary {
+			border-radius: 7px;
+
+			&::after {
+				border-radius: 5px;
+			}
+		}
+	}
+
+	&.round-buttons,
+	&.round.auto-corner-buttons {
+		.btn.btn-primary {
+			border-radius: 17px;
+
+			&::after {
+				border-radius: 15px;
+			}
+		}
+	}
+
+	//
+	// desktop styles
+	//
+
+	&[device="desktop"] {
+
+		//
+		// styled buttons
+		//
+
+		.btn {				
+			&:not(:active):not(:disabled):hover {
+				color: black;
+				@include binary-colors.grey;
+				@include binary-text.outline;
+			}
+
+			//
+			// primary buttons
+			//
+
+			&.btn-primary:hover {
+				color: white;
+				background-color: black;
+				border-color: black;
+			}
+
+			//
+			// disabled buttons
+			//
+
+			&:disabled:hover {
+				opacity: 1;
+				color: black;
+				background-color: white;
+				border-color: black;
+				border-style: dashed;
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 3,524,697 Example 1 (Nikon Fisheye-Nikkor 6mm f/5.6)
+[constants]
+Scaled	6.2	10
+[variable distances]
+Focal Length	6.2
+Angle of View	220
+Angle of View(m)	220.48
+F-Number	5.6
+Image Height	21.6
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	11.16
+[lens data]
+1	55.0076	2.790	1.61272	77.25	58.6
+2	18.8207	15.190		37.35
+3	55.5688	2.418	1.62041	32.61	60.3
+4	8.8667	9.610		17.04
+5	-41.0948	0.806	1.48848	13.15	70.3
+6	10.6188	3.596	1.78470	13.15	26.0
+7	36.3233	1.984		13.15	
+8	Infinity	1.178	1.51743	8.61	58.5
+9	Infinity	2.480		8.61	
+9AS	AS	1.488		3.360
+10	-1996.9264	3.472	1.78477	9.80	26.0
+11	9.1859	7.006	1.74372	14.52	45.0
+12	-34.9463	0.124		14.52	
+13	-189.7083	2.976	1.76765	17.15	46.5
+14	-17.9726	10.664		17.15	
+15	39.9386	1.612	1.78485	21.64	26.0
+16	13.7789	10.788	1.62230	21.64	53.1
+17	-43.0950	Bf		21.64	
+[figure]
+source	Data/US003524697_Figure01P.png
+originX	7.52
+originY	128.59
+ppmm	3.088
+[notes]			
+Bill: Image Height from Angle of View. Doesn't quite match patent figure.			

@@ -1,0 +1,29 @@
+[descriptive data]
+title	US 2,720,140 Example 3 (Zeiss Sonnar T f4 150mm)
+[constants]
+Scaled	150	1
+[variable distances]
+Focal Length	150
+Angle of View	28
+F-Number	4
+Image Height	79
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	80.68
+[lens data]
+1	74.225	10.889	1.66672	44.54	48.4
+2	231.369	0.248		44.54	
+3	34.124	15.837	1.62041	38.24	60.3
+4	-429.588	2.228	1.72342	38.24	38.0
+5	24.157	16.644		25.17
+5AS	AS	14.04		23.852
+6	540.471	10.889	1.70154	30.18	41.1
+7	-25.774	10.394	1.60140	32.36	38.3
+8	-372.011	Bf		39.36	
+[figure]
+source	Data/US002720140_Figure03P.png
+originX	53.01
+originY	250.82
+ppmm	9.122
+[notes]					

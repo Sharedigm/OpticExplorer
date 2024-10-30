@@ -1,0 +1,181 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-apps.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../../dark/layout/dark-panels";
+
+//
+// colors
+//
+
+$background-color: colors.$very-dark-grey;
+$border-color: lighten($background-color, 10%);
+
+$sidebar-color: darken($background-color, 10%);
+$sidebar-panel-color: dark-panels.$background-color;
+$sidebar-header-background-color: transparent;
+$sidebar-label-color: white;
+$transparent-sidebar-color: colors.faded($sidebar-color, 50%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.app {
+	
+		.header-bar, .footer-bar {
+			color: text-colors.$light-color;
+			background: darken($background-color, 10%);
+
+			.app-bar, .info-bar, .address-bar, .toolbar {
+
+				i {
+					color: colors.$light-grey;
+				}
+			
+				.button.selected, .input-group-addon.btn {
+					i {
+						color: inherit;
+					}
+				}
+
+				.btn-primary {
+					i {
+						color: white;
+					}
+				}
+			}
+
+			//
+			// dark breadcrumb links
+			//
+
+			.address-bar {
+				.breadcrumb a {
+					color: text-colors.$dark-color;
+				}
+			}
+
+			//
+			// dark item separators
+			//
+
+			> div {
+				border-color: $border-color;
+			}
+		}
+
+		.body, .body-region {
+			border-color: $background-color;
+
+			> .contents {
+				border-color: $border-color;
+
+				> .split {
+					border-color: $border-color;
+
+					&.sidebar {
+						background-color: $sidebar-color;
+
+						.header {
+							background-color: $sidebar-header-background-color;
+						}
+
+						.panels {
+							.panel {
+								label {
+									color: $sidebar-label-color;
+
+									.panels {
+										.panel {
+											background-color: $sidebar-panel-color;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// panels following apps
+		//
+
+		& + .panel {
+			border-color: $border-color;
+		}
+	}
+
+	//
+	// dark opaque app sidebars
+	//
+
+	&.opaque {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark transparent app sidebars
+	//
+
+	&.transparent, &.translucent {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $transparent-sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// app sidebar panels
+	//
+
+	&.sidebar-panels {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+
+						.header {
+							background-color: transparent;
+						}
+
+						.panel {
+							background-color: $sidebar-panel-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

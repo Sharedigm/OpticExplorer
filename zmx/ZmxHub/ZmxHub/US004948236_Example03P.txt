@@ -1,0 +1,25 @@
+[descriptive data]
+title	US 4,948,236 Example 3 (Ricoh smc Pentax 6x7 120mm f3.5 Soft)
+[variable distances]
+Focal Length	120
+Angle of View	40.8
+F-Number	3.5
+Image Height	89.6
+Magnification	0
+d0	Infinity
+Bf	91.548
+[lens data]
+1	35.020	9.52	1.65844	46.88	50.9
+2	87.796	3.01	1.72825	46.88	28.5
+3	48.642	9.43		39.00	
+3AS	AS	5.08		27.882
+4	-293.220	3.01	1.72825	32.68	28.5
+5	54.796	4.31		32.68	
+6	75.370	7.51	1.80610	41.84	40.9
+7	-116.618	Bf		41.84	
+[figure]
+source	Data/US004948236_Figure05P.png
+originX	17.20
+originY	79.42
+ppmm	2.674
+[notes]

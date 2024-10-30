@@ -1,0 +1,159 @@
+################################################################################
+#                                                                              #
+#                               Scidmore28.optc                                #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Myriam Philippe DERELLE                                    #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -78.8 mm
+        diameter: 36 mm
+        coating: multi
+      - type: spherical
+        curvature: 56.6 mm
+        diameter: 36 mm
+        coating: none
+    thickness: 2.8 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.64769
+      v: 33.85
+      catalog: Schott
+      name: SF2
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 56.6 mm
+        diameter: 36 mm
+        coating: none
+      - type: spherical
+        curvature: -37.78 mm
+        diameter: 36 mm
+        coating: multi
+    thickness: 12.9 mm
+    spacing: 0.3 mm
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 48 mm
+        coating: multi
+      - type: spherical
+        curvature: -52.6 mm
+        diameter: 48 mm
+        coating: multi
+    thickness: 11.2 mm
+    spacing: 0.3 mm
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 132.5 mm
+        diameter: 48 mm
+        coating: multi
+      - type: spherical
+        curvature: -132.5 mm
+        diameter: 48 mm
+        coating: multi
+    thickness: 8.9 mm
+    spacing: 0.3 mm
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 52.6 mm
+        diameter: 48 mm
+        coating: multi
+      - type: spherical
+        curvature: -52.6 mm
+        diameter: 48 mm
+        coating: none
+    thickness: 17.9 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -52.6 mm
+        diameter: 48 mm
+        coating: none
+      - type: spherical
+        curvature: 52.6 mm
+        diameter: 48 mm
+        coating: multi
+    thickness: 3.3 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.64769
+      v: 33.85
+      catalog: Schott
+      name: SF2
+
+LIGHTS:
+
+  - type: beam
+    distance: 14.54 mm
+    width: 4 mm
+    offset: 0
+    angle: 0
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 14.54 mm
+    width: 4 mm
+    offset: 0
+    angle: -30 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: ray
+    distance: 14.54 mm
+    offset: 0
+    angle: 30 deg
+    color: "#ff0000"
+
+  - type: distant
+    distance: 32.2637 mm
+    angle: -158.691 deg
+    number_of_rays: 100
+
+OBJECTS: []

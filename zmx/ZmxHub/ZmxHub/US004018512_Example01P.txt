@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,018,512 Example 1 (Fujifilm Fujinon-W 35mm f1.9 EBC)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35
+Angle of View	63
+F-Number	1.9
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	37.517
+[lens data]
+1	41.97585	1.75	1.51633	28.20	64.0
+2	18.86570	17.57		24.54	
+3	33.01340	6.755	1.77252	24.27	49.6
+4	-63.07630	0.6		24.27
+4AS	AS	5.7		22.468
+5	-21.87675	3.50	1.72000	20.94	43.7
+6	-13.20760	1.05	1.62606	20.94	39.1
+7	38.79015	2.1		20.94
+8	-84.73290	1.05	1.69895	20.94	30.1
+9	44.87175	4.2	1.69680	23.23	55.6
+10	-29.21065	0.35		23.23
+11	-123.62525	2.8	1.69680	25.55	55.6
+12	-35.69195	0.35		25.55
+13	-634.55350	2.8	1.69680	23.23	55.6
+14	-76.12220	Bf		23.23
+[figure]
+source	Data/US004018512_Figure01P.png
+originX	16.06
+originY	68.97
+ppmm	4.308
+[notes]

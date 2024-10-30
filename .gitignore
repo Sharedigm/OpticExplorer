@@ -2,9 +2,9 @@
 .ipynb_checkpoints/
 .jupyter/
 log/
-Private/
+private/
 backups/
 electron/
-presentations/
+videos/
 *.swp
 .env

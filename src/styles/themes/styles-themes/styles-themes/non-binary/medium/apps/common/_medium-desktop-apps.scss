@@ -1,0 +1,337 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-desktop-apps.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../../../../materials/glass/plate-glass";
+@use "../../../../../materials/glass/frosted-glass";
+@use "../../../medium/apps/common/medium-apps";
+
+//
+// colors
+//
+
+$header-bar-color: text-colors.$dark-color;
+$header-bar-icon-color: colors.$medium-grey;
+$header-bar-background-color: colors.$ultra-light-grey;
+$header-bar-border-color: medium-apps.$border-color;
+$header-bar-opacity: plate-glass.$opacity;
+$sidebar-panels-color: colors.faded(white, 50%);
+$preview-border-color: colors.$very-light-grey;
+$mainbar-background-color: white;
+$message-color: colors.$very-very-very-light-grey;
+$message-background-color: colors.faded(colors.$medium-grey, 50%);
+$transparent-header-bar-background-color: colors.$ultra-light-grey;
+$transparent-sidebar-color: colors.faded(white, 75%);
+$transparent-sidebar-label-color: white;
+$transparent-sidebar-panel-color: colors.faded(medium-apps.$background-color, medium-apps.$sidebar-panel-opacity);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.desktop.app {
+		> .body {
+
+			//
+			// desktop apps
+			//
+
+			> .app {
+				border: none;
+
+				//
+				// desktop header bars
+				//
+
+				.header-bar {
+					color: $header-bar-color;
+					background-color: $header-bar-background-color;
+					border-color: $header-bar-border-color;
+
+					.app-bar {
+						> i {
+							color: $header-bar-icon-color;
+						}				
+					}
+
+					.toolbar {
+						.button:not(.selected):not(:hover) {
+							> i {
+								color: $header-bar-icon-color;
+							}
+						}
+					}
+
+					.clock {
+						.icon {
+							> i {
+								color: $header-bar-icon-color;
+							}		
+						}
+					}
+				}
+
+				.mainbar {
+					background-color: $mainbar-background-color;
+
+					.items {
+
+						//
+						// drop zone
+						//
+
+						& + .dropzone {
+							color: white;
+						}
+					}
+				}
+			}
+
+			> .file-browser {
+				.mainbar {
+
+					//
+					// desktop app help messages
+					//
+
+					.help.message {
+						color: $message-color !important;
+						background-color: $message-background-color !important;
+
+						i {
+							color: $message-color !important;
+						}
+					}
+				}
+			}
+
+			> .app-launcher, 
+			> .app .mainbar,
+			> .app .sidebar .panel {
+
+				// no inset shadows
+				//
+				> .body {
+					> .contents::after {
+						box-shadow: none;
+					}
+				}
+
+				//
+				// desktop headings
+				//
+
+				.heading h1 {
+					color: white;
+				}
+			}
+		}
+	}
+
+	//
+	// transparent desktop header bars
+	//
+
+	&.transparent, &.translucent {
+		.desktop.app > .body > .app {
+
+			> .header-bar {
+				@include plate-glass.shaded($header-bar-background-color,
+				$header-bar-opacity);
+			}
+		}
+	}
+
+	//
+	// opaque desktop app sidebars
+	//
+
+	&.opaque #desktop.auto-sidebars,
+	#desktop.opaque-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						color: text-colors.$dark-color;
+						background-color: medium-apps.$sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// transparent desktop app sidebars
+	//
+
+	&.transparent #desktop.auto-sidebars,
+	#desktop.transparent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						color: white;
+						background-color: transparent;
+
+						.item .icon i,
+						label i, .icon i {
+							color: white;
+						}
+
+						.panels > .panel, label, .expander .btn i {
+							color: white !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// translucent desktop app sidebars
+	//
+
+	&.translucent #desktop.auto-sidebars,
+	#desktop.translucent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						color: text-colors.$dark-color !important;
+						background-color: $transparent-sidebar-color;
+						@include frosted-glass.frosted();
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// opaque desktop app sidebar panels
+	//
+
+	#desktop.opaque-sidebars.sidebar-panels,
+	&.opaque #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.opaque-sidebars,
+	&.opaque.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: medium-apps.$sidebar-color;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								background-color: medium-apps.$sidebar-panel-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// transparent desktop app sidebar panels
+	//
+
+	#desktop.transparent-sidebars.sidebar-panels,
+	&.transparent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.transparent-sidebars,
+	&.transparent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: transparent;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								@include plate-glass.shaded(white, 50%, 75%);
+								color: text-colors.$dark-color !important;
+
+								.panels > .panel, label {
+									color: text-colors.$dark-color !important;
+								}
+
+								.expander i {
+									color: text-colors.$dark-color !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// translucent desktop app sidebar panels
+	//
+
+	#desktop.translucent-sidebars.sidebar-panels,
+	&.translucent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.translucent-sidebars,
+	&.translucent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						@include frosted-glass.polished();
+
+						.panels {
+							background-color: $sidebar-panels-color;
+							@include frosted-glass.frosted();
+
+							.panel {
+								@include plate-glass.shaded(white, 25%, 50%);
+								@include frosted-glass.frosted();
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// no desktop app sidebar panels
+	//
+
+	#desktop:not(.sidebar-panels):not(.auto-sidebar-panels),
+	&:not(.sidebar-panels) #desktop.auto-sidebar-panels {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						.panels {
+							.panel {
+								background: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

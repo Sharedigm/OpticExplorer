@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,195,912 Example 2 (Fujifilm Fujinon-Z 43-75mm F3.5-4.5)
+[constants]
+Scaled	45	1
+[variable distances]
+Focal Length	45.000	74.835
+Angle of View	52	33
+F-Number	3.5	4.5
+Total Length	48.5325	63.8595
+Image Height	43.2	43.2
+Magnification	0	0
+d0	Infinity	Infinity
+d6	41.53995	1.06785
+Bf(p)	undefined	undefined
+Bf	49.67	67.13
+Aperture Diameter	18.239	17.421
+[lens data]
+1	126.39600	1.6425	1.68893	40.49	31.1
+2	26.52975	6.3675		35.09
+3	570.38850	1.2330	1.62299	36.79	58.1
+4	45.22905	0.2070		36.79
+5	32.90670	6.5700	1.68893	34.97	31.1
+6	3422.28150	d6		34.97
+7	28.92105	3.0825	1.69680	21.86	55.6
+8	236.02680	0.2070		21.86
+9	21.21255	2.8755	1.67790	20.40	55.5
+10	44.15895	2.7680		20.40
+10AS	AS	2.92		18.239
+11	513.34650	1.2330	1.80518	17.00	25.5
+12	16.47990	4.7340		15.25
+13	64.36980	5.4000	1.66680	16.43	33.1
+14	-64.36980	Bf		16.43
+[figure]
+source	Data/US004195912_Figure04P.png
+originX	35.86
+originY	136.58
+ppmm	6.158
+[notes]

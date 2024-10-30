@@ -1,0 +1,52 @@
+[descriptive data]
+title	DE 1 447 293 A1 Example 1 (Zeiss Vario-Sonnar 85-250mm F4)
+[constants]
+[variable distances]
+Focal Length	85.6	115.4	154.7	201.7	221.1	246.7
+Angle of View	undefined	undefined	undefined	undefined	undefined	undefined
+F-Number	4	4	4	4	4	4
+Image Height	43.2	43.2	43.2	43.2	43.2	43.2
+Magnification	0	0	0	0	0	0
+d0	Infinity	Infinity	Infinity	Infinity	Infinity	Infinity
+d6	1.50	28.50	50.98	68.50	74.00	80.12
+d13	84.92	45.58	18.08	5.89	5.00	6.30
+d16	1.50	13.84	18.86	13.53	8.92	1.50
+Bf	96.05	96.05	96.05	96.05	96.05	96.05
+[lens data]
+1	398.111	5.0	1.72311	67.74	29.30
+2	129.570	2.0		64.14	
+3	137.250	7.5	1.51871	64.02	63.96
+4	-833.590	0.1		64.02	
+5	112.200	7.5	1.51871	64.24	63.96
+6	1778.300	d6		64.24	
+7	523.300	2.5	1.69400	40.96	54.60
+8	85.976	4.0		38.00	
+9	-530.880	4.0	1.72311	37.92	29.30
+10	-110.600	2.0	1.69400	39.04	54.60
+11	51.212	8.6		39.04	
+12	59.566	4.0	1.72311	38.54	29.30
+13	128.640	d13		37.28	
+14	-115.480	1.0	1.62554	39.27	57.87
+15	135.290	4.0	1.57832	40.64	41.04
+16	-177.830	d16		40.64
+17	87.222	10.5	1.50347	42.83	56.32
+18	-45.316	1.5	1.72311	42.83	29.30
+19	-147.490	0.1		42.83
+20	49.403	7.45	1.51871	43.12	63.96
+21	-480.010	0.1		43.12
+22	40.388	7.5	1.51871	39.57	63.96
+23	2985.140	0.81		37.96
+23AS	AS	7.34		36.871
+24	-172.780	2.2	1.78869	30.96	43.53
+25	27.384	24.0		27.60
+26	135.290	4.5	1.53604	26.02	55.15
+27	-149.620	Bf		26.02	
+[figure]
+source	Data/DE01447293_Figure01.png
+originX	78.40
+originY	480.05
+ppmm	6.527
+[notes]
+Bill: Patent Figure is for 154.7mm
+US4303312A says "A photographic objective of continuously variable focal length is known, for instance, 
+under the name of Vario-Sonnar 4/85-250 and from German Pat. No. 1447293."

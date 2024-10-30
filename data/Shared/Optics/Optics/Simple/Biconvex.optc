@@ -1,0 +1,41 @@
+################################################################################
+#                                                                              #
+#                                Biconvex.optc                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Darius Laprise                                             #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 50 mm
+        diameter: 50 mm
+        coating: none
+      - type: spherical
+        curvature: -50 mm
+        diameter: 50 mm
+        coating: none
+    thickness: 13 mm
+    spacing: 10 mm
+    material:
+      n: 1.5
+      v: 50
+      name: 
+
+LIGHTS:
+
+  - type: point
+    distance: 48.0127 mm
+    offset: 0.167527 mm
+    number_of_rays: 100
+
+OBJECTS: []

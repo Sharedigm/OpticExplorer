@@ -15,7 +15,6 @@ module.exports = {
 		"$": "readonly",
 		"config": "writable",
 		"application": "writable",
-		"module": "readonly",
 		"template": "readonly",
 		"require": "readonly",
 		"Backbone": "readonly",
@@ -33,6 +32,7 @@ module.exports = {
 		"Stripe": "readonly",
 		"jsSHA": "readonly",
 		"Dropbox": "readonly",
-		"MathJax": "readonly"
+		"MathJax": "readonly",
+		"Yaml": "readonly"
 	}
 }

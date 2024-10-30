@@ -1,0 +1,35 @@
+[descriptive data]
+title	US 4,457,596 Example 1 (Nikon "Pikaichi" L35AF 35mm f/2.8)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	62.3
+F-Number	2.8
+Image Height	42
+Total Length	37.765	// 107.9 * 35 / 100
+Magnification	0
+d0	Infinity
+Bf(p)	26.705
+Bf	24.90
+[lens data]
+1	11.191	2.004	1.71300	14.54	54
+2	16.357	0.200		13.34
+3	13.529	1.803	1.77279	12.97	49.4
+4	25.333	0.852		11.57
+5	-92.526	0.902	1.68893	11.57	31.1
+6	9.860	1.503		11.07
+7	29.283	3.006	1.77279	11.07	49.4
+8	-11.055	0.802	1.62041	11.10	60.4
+9	-67.350	0.900		11.10
+10	AS	0.898		9.399
+11	FS	Bf		9.399
+[figure]
+source	Data/US004457596_Example01_Tale33-Fig1.png
+ppmm	39.47356239
+originX	8
+originY	294.5
+[notes]
+Bill: This is the production lens.
+Note weird boundary between 2nd and 3rd elements on the diagram.
+Tweaked Bf from 76.3 * 35 / 100 = 26.705 to 24.90

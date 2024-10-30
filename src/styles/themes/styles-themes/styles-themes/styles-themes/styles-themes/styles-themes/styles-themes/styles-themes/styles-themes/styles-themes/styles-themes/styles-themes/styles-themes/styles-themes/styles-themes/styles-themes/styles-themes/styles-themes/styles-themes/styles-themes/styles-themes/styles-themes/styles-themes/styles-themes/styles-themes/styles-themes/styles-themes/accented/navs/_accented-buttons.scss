@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                            _accented-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../navs/colors/colored-buttons";
+@use "../../../navs/colors/colored-btns";
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$hover-color: var(--secondary-color);
+$selected-color: colors.darken($hover-color, 20%);
+$label-color: white;
+$default-hover-color: branding.$secondary-color;
+$default-selected-color: colors.darken($default-hover-color, 20%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+
+	//
+	// buttons
+	//
+
+	button {
+		&:hover {
+			@include colored-buttons.colored($hover-color);
+			@include colored-buttons.labeled($label-color);
+		}
+
+		&.selected {
+			@include colored-btns.colored($selected-color);
+			@include colored-buttons.labeled($label-color);
+		}
+	}
+}

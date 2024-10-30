@@ -1,0 +1,75 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-trees.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/medium-selection";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$expander-color: inherit;
+$selected-expander-color: white;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.item-tree {
+
+		//
+		// tree expanders
+		//
+
+		&:not(.selected):not(.highlighted) {
+			> .info {
+				.expander {
+					button i {
+						color: $expander-color;
+					}
+				}
+			}
+		}
+
+		&.selected, &.highlighted {
+			outline-color: medium-selection.$highlight-color;
+
+			> .info {
+				.expander {
+					button i {
+						color: $selected-expander-color;
+					}
+				}
+			}
+		}
+
+		//
+		// tree icons
+		//
+
+		&:not(.selected):not(.highlighted) {
+			> .info {
+				.icon {
+					i {
+						color: tan !important;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 3,490,825 Example 1 (Ricoh Pentax Ultra-Achromatic-Takumar 85mm F4.5)
+[constants]
+Scaled	85	100
+[variable distances]
+Focal Length	85
+Angle of View	29
+F-Number	4.5
+Image Height	43.28
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	66.71
+[lens data]
+1	-32.725	1.275	1.45854	19.17	69.6
+2	96.467	0.850		21.22	
+3	47.175	4.250	1.43387	21.15	94.9
+4	-44.962	0.170		21.15
+5	20.825	5.100	1.43387	21.09	94.9
+6	-115.895	3.225		20.59
+6AS	AS	4.000		17.325
+7	-32.300	1.700	1.45854	17.40	69.6
+8	17.006	5.950		14.79
+9	33.150	3.400	1.43387	16.56	94.9
+10	-51.388	Bf		16.56
+[figure]
+source	Data/US003490825_Figure01P.png
+originX	50.17
+originY	101.00
+ppmm	6.512
+[notes]

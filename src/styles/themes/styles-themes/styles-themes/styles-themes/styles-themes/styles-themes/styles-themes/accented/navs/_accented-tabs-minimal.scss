@@ -1,0 +1,64 @@
+/******************************************************************************\
+|                                                                              |
+|                         _accented-tabs-minimal.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$icon-color: var(--secondary-color);
+$icon-hover-color: colors.darken($icon-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	&:not(.dark).tabs-minimal {
+		ul.nav-tabs {
+
+			//
+			// inactive tabs
+			//
+
+			> li:not(.active) {
+				> a {
+
+					i {
+						color: $icon-color;
+					}
+
+					svg {
+						fill: $icon-color;
+					}
+				}
+
+				> a:hover {
+
+					i {
+						color: $icon-hover-color;
+					}
+
+					svg {
+						fill: $icon-hover-color;
+					}
+				}
+			}
+		}
+	}
+}

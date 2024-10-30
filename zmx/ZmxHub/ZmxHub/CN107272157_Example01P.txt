@@ -1,0 +1,44 @@
+[descriptive data]				
+title	CN 107272157 Example 1 (Zhong Yi SpeedMaster 25mm F0.95)
+[constants]
+[variable distances]				
+Focal Length	25			
+Angle of View	undefined			
+F-Number	0.95			
+Image Height	21.68
+Total Length	undefined			
+Magnification	0				
+d0	Infinity
+Bf(p)	undefined				
+Bf	10.68			
+[lens data]					
+1	65.00	3.52	1.741	27.70	51.7	HLAK67
+2	-146.89	0.10		27.30		
+3	20.13	3.93	1.855	24.10	36.61	HLAF3
+4	45.00	1.37		22.80		
+5	113.65	1.07	1.699	22.12	30.1	HZF11
+6	14.00	5.47		18.92		
+6AS	AS	5.40		18.689	
+7	-13.20	1.65	1.699	18.70	30.1	HZF11
+8	Infinity	0.00		22.60		
+9	Infinity	6.50	1.883	22.60	40.8	HZLAF68B
+10	-19.80	0.10		24.10		
+11	36.20	3.48	1.883	23.70	40.8	HZLAF68B
+12	Infinity	0.10		23.40		
+13	67.00	2.98	1.883	23.30	40.8	HZLAF68B
+14	-148.99	0.00		23.00		
+15	-148.99	1.00	1.699	21.90	30.1	HZF11
+16	21.50	1.46		22.00		
+17	36.20	3.48	1.883	21.80	40.8	HZLAF68B
+18	Infinity	0.60		21.60		
+19	50.00	5.40	1.883	21.00	40.8	HZLAF68B
+20	-31.59	0.00		20.70		
+21	-31.59	1.28	1.847	21.40	23.8	HZF52
+22	86.00	Bf		21.50		
+[figure]					
+source	Data/CN107272157_Figure01P.png
+originX	9.50
+originY	158.09
+ppmm	10.102
+[notes]
+Bill: For f/0.95 PD di5 22.1->22.12 di6 18.8->18.92 IH from figures.

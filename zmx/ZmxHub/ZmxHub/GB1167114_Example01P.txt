@@ -1,0 +1,56 @@
+[descriptive data]
+title	GB 1 167 114 Example 1 (Zeiss Vario-Sonnar 10-100mm F2.8)
+[constants]
+[variable distances]
+Focal Length	10.59	28.67	47.78	80.04	99.95
+Angle of View	undefined	undefined	undefined	undefined	undefined
+F-Number	2.8	2.8	2.8	2.8	2.8
+Image Height	43.2	43.2	43.2	43.2	43.2
+Magnification	0	0	0	0	0
+d0	Infinity	Infinity	Infinity	Infinity	Infinity
+d8	0.500	27.570	36.593	43.361	45.617
+d15	47.117	16.176	6.700	2.138	1.984
+d18	1.500	5.371	5.824	3.618	1.516
+Bf	17.2	17.2	17.2	17.2	17.2
+[lens data]
+1	480.000	2.5	1.79180	57.80	25.87
+2	64.010	5.0		55.36	
+3	72.860	8.6	1.62286	54.66	60.08
+4	-1540.000	0.1		54.66	
+5	89.123	6.8	1.62541	54.18	56.62
+6	-1540.000	0.1		54.18	
+7	61.769	5.8	1.62541	49.00	56.62
+8	205.340	d8		49.00	
+9	129.560	1.0	1.71616	24.66	53.61
+10	15.623	4.5		19.42	
+11	-175.292	2.6	1.79180	19.86	25.87
+12	-39.809	0.8	1.71616	19.86	53.61
+13	18.970	3.5		18.36	
+14	21.286	2.6	1.79180	18.46	25.87
+15	44.666	d15		18.46	
+16	-25.484	0.8	1.71616	13.15	53.61
+17	31.851	2.5	1.72311	14.35	29.29
+18	-163.146	d18		14.35
+19	91.068	3.0	1.62541	15.50	56.62
+20	-29.430	1.5		15.50
+20AS	AS	1.5		15.456
+21	19.246	9.0	1.62541	15.58	56.62
+22	-12.863	1.0	1.57088	15.58	62.85
+23	-57.460	1.2		15.58
+24	-22.224	8.0	1.72311	13.14	29.29
+25	11.060	8.0	1.52458	13.14	59.22
+26	-40.972	12.0		13.14	
+27	40.972	8.0	1.62541	14.36	56.22
+28	-105.930	Bf		14.36	
+[figure]
+source	Data/GB1167114_Figure01.png
+originX	54.30
+originY	359.11
+ppmm	10.899
+[notes]
+Bill: The patent Figure seems to be in error since the optical presciption works "perfectly".
+From US4451124A "Another example, which has been available on the market under the trademark 'Vario-Sonar,' 
+is disclosed in German Federal Republic patent No. 1,254,477 [X], issued May 9, 1968, 
+and in the corresponding British Pat. No. 1,167,114, published Oct. 15, 1969.
+The "Vario-Sonar" lens as disclosed in these mentioned patents and as available on the market 
+has a relative aperture of f:2.8, and a focal length variable within the limits of 10 mm. to 100 mm."

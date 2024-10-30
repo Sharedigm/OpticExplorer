@@ -1,0 +1,164 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dark-panels.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$color: text-colors.$light-color;
+$background-color: colors.$very-dark-grey;
+$border-color: $background-color;
+
+$title-color: colors.$very-very-very-light-grey;
+$label-color: white;
+$link-color: colors.$very-very-light-grey;
+$link-hover-color: white;
+$content-color: colors.$very-very-dark-grey;
+
+$hover-color: $content-color;
+$select-color: dark-branding.$primary-color;
+$section-border-color: lighten($color, 5%);
+$dark-nested-panel-color: colors.$very-very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.panel, ul.panels > li {
+		color: text-colors.$light-color;
+		background-color: $background-color;
+
+		//
+		// panel list items
+		//
+
+		&.panel {
+			color: $color;
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		//
+		// dark panel labels
+		//
+
+		label {
+			color: $label-color;
+		}
+
+		//
+		// panel borders
+		//
+
+		.section {
+			border-color: $border-color;
+		}
+
+		//
+		// panel links
+		//
+
+		a {
+			color: $link-color;
+
+			&:hover {
+				color: $link-hover-color;
+			}
+		}
+
+		//
+		// panel content
+		//
+
+		.content {
+			background-color: $content-color;
+			border-color: $border-color;
+			
+			.title {
+				i {
+					color: $title-color;
+				}
+			}
+		}
+
+		.selected .content {
+			color: white;
+			background-color: $select-color;
+
+			a {
+				color: white;
+			}
+		}
+	}
+
+	//
+	// dark transparent panels
+	//
+
+	&.transparent, &.translucent {
+		.modal-dialog:not(.maximized) {
+			.panel:not(.selected), ul.panels > li:not(.selected) {
+				border-color: $border-color;
+			}
+		}
+	}
+
+	/*
+	&.transparent .desktop.app {
+		.panel, ul.panels > li {
+			@include glass.plate($color);
+		}
+	}
+
+	&.translucent .desktop.app {
+		.panel, ul.panels > li {
+			.frosted-glass($color);
+		}
+	}
+	*/
+
+	//
+	// dark nested panels
+	//
+
+	.panel {
+		.panel {
+			background-color: $dark-nested-panel-color;
+		}
+	}
+
+	.mainbar .panel {
+		.card-grid .cards .item:not(.highlighted):not(.selected) > .card {
+			background-color: $dark-nested-panel-color;
+		}
+	}
+	
+	//
+	// dark panel lists
+	//
+
+	ul.panels > li {
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+}

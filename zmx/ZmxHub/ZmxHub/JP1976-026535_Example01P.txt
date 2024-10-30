@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 1976-026535 Example 1 (Konica Minolta UC Hexanon AR 28mm F1.8)
+[constants]
+Scaled	28	1
+[variable distances]
+Focal Length	28	undefined
+Angle of View	76	undefined
+F-Number	2	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.166666667
+d0	Infinity	155.34
+d2	5.0792	8.05
+d8	4.3288	3.3292
+Bf	38.36	43.07
+[lens data]
+1	69.8964	1.9796	1.58913	44.10	61.1
+2	24.0772	d2		33.14	
+3	105.5208	5.0792	1.64769	32.02	33.8
+4	-123.7656	0.2800		32.02	
+5	70.6132	1.6996	1.58913	27.26	61.1
+6	17.0072	8.4588		22.90	
+7	28.2884	9.2988	1.72000	20.52	50.3
+8	296.8308	d8		20.52	
+9	Infinity	4.3988	1.71300	20.62	53.9
+10	-32.1608	2.8492		20.62	
+10AS	AS	3.0000		18.203
+11	-20.5604	4.7992	1.80518	18.44	25.4
+12	82.9164	1.3804		20.18
+13	-68.0652	4.0012	1.69680	20.18	55.7
+14	-20.8572	0.2996		21.56	
+15	131.6672	4.0992	1.78590	26.74	44.2
+16	-46.4996	Bf		26.74	
+[figure]
+source	Data/JP1976-026535_Figure01P.png
+originX	15.55
+originY	56.55
+ppmm	2.377
+[notes]
+Bill: d0 and Bf measured.

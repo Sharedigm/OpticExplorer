@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,459,469 Example 1 (Ricoh Pentax Super-Takumar 135mm f2.5)
+[constants]
+Scaled	135	1000
+[variable distances]
+Focal Length(p)	undefined
+Focal Length	135
+Angle of View	undefined
+F-Number(p)	undefined
+F-Number	2.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	42.72
+[lens data]
+1	81	1.08	1.74077	55.00	27.7
+2	46.008	9.72	1.64000	55.00	60.2
+3	340.79994	0.27		52.20
+4	46.71	7.4304	1.61025	50.68	56.5
+5	149.999985	29.9997		50.68
+5AS	AS	0		25.290
+6	Infinity	4.7304	1.72000	27.53	43.7
+7	27	21.6		22.64	
+8	54.635985	5.4	1.72000	29.50	43.7
+9	1067.9715	Bf		29.50
+[figure]
+source	Data/US003459469_Figure01P.png
+originX	67.88
+originY	208.38
+ppmm	7.043
+[notes]

@@ -1,0 +1,39 @@
+/******************************************************************************\
+|                                                                              |
+|                            _accented-sliders.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../colors/colors";
+@use "../../../forms/colors/colored-sliders";
+
+//
+// colors
+//
+
+$thumb-color: var(--secondary-color);
+$thumb-hover-color: colors.darken($thumb-color, 10%);
+$default-thumb-color: branding.$secondary-color;
+$default-thumb-hover-color: darken($default-thumb-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	input[type="range"] {
+		@include colored-sliders.inactive-thumb-colored($thumb-color, $thumb-hover-color);
+	}
+}

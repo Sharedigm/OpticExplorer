@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-selection.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$select-color: medium-branding.$secondary-color;
+$highlight-color: colors.$very-light-grey;
+$disabled-color: colors.faded(colors.$very-light-grey, 50%);
+$edit-highlight-color: colors.faded($select-color, 50%);
+$select-box-color: $select-color;
+$select-box-border-color: lighten($select-color, 10%);
+$select-box-opacity: 25%;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	.drag-image {
+		border-color: $select-box-border-color;
+	}
+
+	.selection {
+		background-color: colors.faded($select-box-color, $select-box-opacity);
+		border-color: $select-box-border-color;
+	}
+
+	svg .selection {
+		fill: white;
+		stroke: white;
+	}
+}

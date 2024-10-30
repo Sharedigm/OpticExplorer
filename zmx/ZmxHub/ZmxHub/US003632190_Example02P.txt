@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 3,632,190 Example 2 (Nikon Reflex-Nikkor-C 500mm F/8)
+[constants]
+Type	REFLEX
+Scaled	500	100
+[variable distances]
+Focal Length	500
+Angle of View	5.0
+F-Number	7
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(f)	63.15
+Bf	54.24
+[lens data]
+1	228.650	11.0	1.51823	89.03	59.0	
+2	613.800	8.5		86.85		
+2OS	OS	80.2		30.98
+3	-184.280	8.8	1.54072	74.77	47.2
+4	-289.000	0.0		74.77
+PM	-289.000	0.0	-1	74.77		22.95
+_4'	-289.000	-8.8	1.54072	74.77	47.2
+_3'	-184.280	-4.6		74.77
+3'OS	OS	-74.6		24.99
+5	-115.830	-3.9	1.54814	30.98	45.9	
+6	-172.500	0.0		30.98
+SM	-172.500	0.0	-1	30.98
+_6'	-172.500	3.9	1.54814	30.98	45.9	
+_5'	-115.830	75.9		30.98
+7	-53.200	1.1	1.52450	24.99	59.6	
+8	Infinity	2.2	1.72825	24.99	28.3	
+_3''	-184.280	8.8	1.54072	24.99	47.2	
+_4''	-289.000	Bf		24.99
+[figure]
+source	Data/US003632190_Figure01P.png
+originX	52.55
+originY	144.55
+ppmm	2.721
+[notes]
+Bill: Does not converge where production diagram indicates.

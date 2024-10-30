@@ -1,0 +1,81 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../navs/colors/colored-btns";
+
+//
+// colors
+//
+
+$color: colors.$very-very-light-grey;
+$icon-color: colors.$dark-grey;
+$label-color: text-colors.$dark-color;
+$disabled-color: colors.$very-light-grey;
+$disabled-icon-color: white;
+$disabled-label-color: white;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// styled buttons
+	//
+
+	.btn {
+		@include colored-btns.colored($color);
+		@include colored-btns.label($label-color);
+		@include colored-btns.icon($icon-color);
+
+		//
+		// disabled buttons
+		//
+
+		&:disabled {
+			@include colored-btns.colored($disabled-color);
+			@include colored-btns.labeled($disabled-label-color);
+		}
+	}
+
+	//
+	// expander buttons
+	//
+
+	.expander .btn {
+		background: transparent !important;
+		border-color: transparent !important;
+		box-shadow: none !important;
+
+		i {
+			color: text-colors.$dark-color;
+		}
+	}
+
+	.selected, .highighted {
+		> .info {
+			.expander .btn {
+				i {
+					color: white;
+				}
+			}
+		}
+	}
+}

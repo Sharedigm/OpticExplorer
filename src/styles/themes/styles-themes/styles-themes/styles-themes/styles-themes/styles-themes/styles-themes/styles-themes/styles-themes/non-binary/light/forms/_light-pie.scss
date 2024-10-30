@@ -1,0 +1,56 @@
+/******************************************************************************\
+|                                                                              |
+|                               _light-pie.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$empty-color: colors.$very-very-light-grey;
+$full-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.pie:not(.lcd) {
+		.slice {
+
+			&.empty {
+				background: empty-color;
+			}
+
+			&.full {
+				background: full-color;
+			}
+
+			&.half-full {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					full-color 0%);
+			}
+
+			&.half-empty {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					empty-color 0%);
+			}
+		}
+	}
+}

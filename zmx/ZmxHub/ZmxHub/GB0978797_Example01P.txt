@@ -1,0 +1,37 @@
+[descriptive data]
+title	GB 978,797 Example 1 (Zeiss Flektogon 20mm F4)
+[constants]
+Scaled	20	1
+[variable distances]
+Focal Length	20
+Angle of View	93
+F-Number	4
+Total Length	50.632
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	36.130
+[lens data]
+1	64.400	5.390	1.69350	55.31	53.6
+2	144.680	0.094		55.31
+3	23.810	2.080	1.69350	34.48	53.6
+4	13.566	5.862		24.96
+5	33.520	1.892	1.69350	25.91	53.6
+6	10.402	5.200		18.23
+7	126.040	2.836	1.62000	18.53	60.3
+8	17.020	12.198	1.55000	18.53	45.4
+9	Infinity	0.472		12.26	
+10	14.534	2.174	1.72800	11.98	38.0
+11	8.520	4.444	1.61000	11.98	38.0
+12	-20.538	0.511		11.98	
+12AS	AS	1.239		8.949
+13	-15.356	0.992	1.67800	9.80	32.2
+14	8.464	2.080	1.51600	10.14	56.8
+15	29.786	3.168	1.67800	10.14	50.8
+16	-14.732	Bf		10.14
+[figure]	
+source	Data/GB0978797_Figure01P.png
+originX	105.26
+originY	228.41
+ppmm	6.823
+[notes]

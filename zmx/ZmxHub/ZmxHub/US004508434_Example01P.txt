@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,508,434 Example 1 (Ricoh smc Pentax-A 85mm F1.4)
+[constants]
+[variable distances]
+Focal Length	84.91
+Angle of View	28.6
+F-Number	1.4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	39.89
+[lens data]
+1	55.762	10.38	1.72916	61.62	54.7
+2	571.681	0.15		61.62
+3	40.623	10.15	1.72916	52.64	54.7
+4	75.873	2.93		46.76	
+5	226.050	5.93	1.75520	47.90	27.5
+6	25.294	11.66		35.33
+6AS	AS	9.76		33.996
+7	-31.300	2.76	1.59551	33.32	39.2
+8	273.800	7.81	1.77250	36.03	49.6
+9	-39.091	0.15		36.03
+10	87.610	3.26	1.77250	33.93	49.6
+11	1080.030	1.40		33.93
+12	4058.633	3.00	1.72916	38.24	54.7
+13	-334.410	Bf		38.24
+[figure]
+source	Data/US004508434_Figure01P.png
+originX	19.53
+originY	83.42
+ppmm	2.494
+[notes]

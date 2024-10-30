@@ -1,0 +1,70 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-clock.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$face-color: colors.$very-light-grey;
+$hourhand-color: colors.$dark-grey;
+$minutehand-color: colors.$light-grey;
+$secondhand-color: white;
+$center-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	.clock.app {
+	
+		.pie {
+			background: $face-color;
+		}
+
+		.analog.display {
+			svg {
+				filter: drop-shadow(4px 4px 2px fade(black, 50%));
+				overflow: visible;
+
+				#hands {
+					#hourhand {
+						stroke: $hourhand-color;
+					}
+
+					#minutehand {
+						stroke: $minutehand-color;
+					}
+
+					#secondhand {
+						stroke: $secondhand-color;
+					}
+				}
+
+				#center {
+					fill: $center-color;
+				}
+
+				line {
+					stroke: $center-color;
+				}
+			}
+		}
+	}
+}

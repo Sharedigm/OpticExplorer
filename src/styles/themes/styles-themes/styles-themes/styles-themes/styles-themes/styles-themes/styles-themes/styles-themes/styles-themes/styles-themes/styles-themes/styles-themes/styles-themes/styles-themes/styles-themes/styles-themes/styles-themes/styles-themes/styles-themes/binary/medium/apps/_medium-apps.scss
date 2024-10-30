@@ -1,0 +1,196 @@
+/******************************************************************************\
+|                                                                              |
+|                               _medium-apps.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+
+	.app {
+		@include binary-colors.grey;
+
+		//
+		// standard apps
+		//
+
+		> .header-bar {
+			@include binary-colors.white;
+
+			//
+			// app body
+			//
+
+			& + .body {
+				@include binary-colors.white;
+
+				> .contents {
+					@include binary-colors.grey;
+
+					//
+					// app sidebars
+					//
+
+					> .sidebar {
+						@include binary-colors.light-grey;
+
+						.panels {
+							.panel {
+								border-style: solid;
+								border-color: black;
+								background: white;
+								border-width: 1px;
+
+								.header {
+
+									label {
+										text-decoration: underline;
+									}
+								}
+							}
+						}
+					}
+
+					> .mainbar {
+						> form {
+							background: white;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// app footer bars
+		//
+
+		.footer-bar {
+			@include binary-colors.white;
+		}
+
+		//
+		// help messages
+		//
+
+		.help.message {
+			@include binary-text.outline;
+		}
+
+		//
+		// selection boxes
+		//
+
+		.selection {
+			color: black;
+			border-color: black;
+			@include binary-colors.darken-less;
+			background-attachment: local;
+			z-index: 2;
+		}
+	}
+
+	//
+	// modal / non-desktop apps
+	//
+
+	.modals {
+		.app {
+			> .body {				
+				> .contents {
+					.mainbar {
+						> .items, 
+						.tab-pane > .items,
+						.tab-pane .tab-pane form {
+							@include binary-colors.white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// loading spinners
+	//
+
+	.spinner {
+		border-color: transparent;
+		border-top-color: black;
+		border-bottom-color: white;
+	}
+
+	// map grids
+	//
+	.map pattern svg path {
+		stroke: black;
+	}
+}
+
+//
+// desktop modal apps
+//
+
+body[device="desktop"] {
+
+	.modals.padded {
+		.modal-dialog {
+			.app {
+				.body:not(.last) {
+					border-color: white;
+				}
+			}
+		}
+	}
+}
+
+//
+// mobile styles
+//
+
+body[device="phone"], body[device="tablet"] {
+	.app {
+		.header-bar {
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+			border-bottom-color: black;
+		}
+		.body {
+			.split-view {
+				margin-top: -1px;
+				height: calc(100% + 3px);
+			}
+		}
+		.footer-bar {
+			border-top-width: 1px;
+			border-top-style: solid;
+			border-top-color: black;
+		}
+	}
+
+	.modal-dialog {
+		.modal-content {
+			.modal-footer {
+				border-top-width: 1px;
+				border-top-style: solid;
+				border-top-color: black;
+			}
+		}
+	}
+}

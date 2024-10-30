@@ -1,0 +1,40 @@
+/******************************************************************************\
+|                                                                              |
+|                           _colored-page-dots.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+
+//
+// colors
+//
+
+$select-color: var(--primary-color);
+$default-select-color: branding.$primary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.flickity-page-dots {
+		.dot {
+			&.is-selected {
+				background-color: $select-color;
+				border-color: $select-color;
+			}
+		}
+	}
+}

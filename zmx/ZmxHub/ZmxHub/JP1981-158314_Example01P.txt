@@ -1,0 +1,43 @@
+[descriptive data]
+title	JP 1981-158314 Example 1 (Konica Minolta 24-35mm F3.5 MD Zoom)
+[constants]
+[variable distances]
+Focal Length	24	29	35
+Angle of View	84	75	63
+F-Number	3.5	3.5	3.5
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	13.02	7.59	3.00
+Bf(p)	undefined	undefined	undefined
+Bf	36.77	40.74	45.39
+Aperture Diameter	12.693	14.182	16.030
+[lens data]
+1	85.79	3.10	1.58913	42.15	61.11
+2	481.99	0.15		42.15	
+3	49.30	2.00	1.80500	34.60	40.97
+4	16.10	8.00		27.13
+5	-175.10	1.50	1.80500	24.58	40.97
+6	26.37	3.00		22.69
+7	28.33	3.20	1.80518	21.70	25.43
+8	326.83	d8		21.70	
+9	-76.18	2.00	1.69350	16.08	53.39
+10	-47.69	0.15		17.14
+11	25.42	5.00	1.67003	18.03	47.15
+12	-1389.18	1.15		15.80
+12AS	AS	1.00		12.693
+13	18.06	2.69	1.61272	18.98	58.52
+14	48.44	1.50		18.03
+15	-50.28	2.95	1.80518	15.63	25.43
+16	18.42	1.87		18.98
+17	-82.19	2.00	1.51823	12.94	58.96
+18	-23.06	0.15		14.01
+19	539.97	2.20	1.52584	14.57	52.06
+20	-25.02	Bf		14.57
+[figure]
+source	Data/JP1981-158314_Figure01P.png
+originX	22.53
+originY	119.48
+ppmm	3.386
+[notes]
+Bill: Intermediate Focal Length and Angle of View estimated.

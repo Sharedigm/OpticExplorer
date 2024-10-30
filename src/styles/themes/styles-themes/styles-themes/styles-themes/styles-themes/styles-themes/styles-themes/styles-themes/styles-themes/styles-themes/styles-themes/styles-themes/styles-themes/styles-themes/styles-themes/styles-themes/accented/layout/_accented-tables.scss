@@ -1,0 +1,129 @@
+/******************************************************************************\
+|                                                                              |
+|                            _accented-tables.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../../../layout/tables";
+
+//
+// colors
+//
+
+$head-color: white;
+$head-icon-color: white;
+$head-fill-color: var(--secondary-color);
+$head-sort-fill-color: colors.darken($head-fill-color, 10%);
+$head-outline-color: $head-fill-color;
+$side-head-color: white;
+$side-head-icon-color: white;
+$side-head-fill-color: var(--secondary-color);
+$side-head-sort-fill-color: colors.darken($side-head-fill-color, 10%);
+$side-head-outline-color: $side-head-fill-color;
+$body-fill-color: fade(white, 25%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	&:not(.dark) {
+		table {
+
+			//
+			// table headers
+			//
+			
+			thead {	
+				th {
+					color: $head-color;
+					border-color: $head-fill-color;
+					background-color: $head-fill-color;
+					outline: none;
+
+					i {
+						color: $head-icon-color;
+					}
+				}
+			}
+
+			tbody {
+				th {
+					color: $side-head-color;
+					border-color: $side-head-fill-color;
+					background-color: $side-head-fill-color;
+					outline: none;
+
+					i {
+						color: $side-head-icon-color;
+					}
+				}	
+			}
+
+			th.tablesorter-headerDesc, th.tablesorter-headerAsc {
+				background-color: $head-sort-fill-color;
+			}
+
+			//
+			// table borders
+			//
+
+			&:not(.outlined) {
+				th, td {
+					border: none;
+				}
+			}
+
+			&.outlined {
+				thead {
+					th {
+						border-color: $head-fill-color;
+					}
+				}
+
+				tbody {
+					th {
+						border-color: $side-head-fill-color;
+					}		
+				}
+			}
+			
+			//
+			// table head outlines
+			//
+
+			thead {
+
+				// middle
+				//
+				th {
+					box-shadow: 0 calc(tables.$head-border-width * -1) 0 $head-outline-color inset,
+						0 tables.$head-border-width 0 $head-outline-color inset;
+				}
+
+				// left
+				//
+				th:first-child {
+					box-shadow: 0 calc(tables.$head-border-width * -1) 0 $head-outline-color inset,
+						0 tables.$head-border-width 0 $head-outline-color inset,
+						tables.$head-border-width 0 0 $head-outline-color inset;
+				}
+
+				// right
+				//
+				th:last-child {
+					box-shadow: 0 calc(tables.$head-border-width * -1) 0 $head-outline-color inset,
+						0 tables.$head-border-width 0 $head-outline-color inset,
+						calc(tables.$head-border-width * -1) 0 0 $head-outline-color inset;
+				}
+			}
+		}
+	}
+}

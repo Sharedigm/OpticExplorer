@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-chalk-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/chalk/flat-chalk";
+@use "../../../../../materials/chalk/rounded-chalk";
+@use "../../apps/medium-desktops";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.chalk {
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+
+			//
+			// chalk desktop footer bars
+			//
+
+			.desktop.app > .footer-bar {
+				@include flat-chalk.shaded(medium-desktops.$footer-bar-color);
+
+				//
+				// chalk desktop info bars
+				//
+
+				.desktop-info-bar {
+					@include rounded-chalk.shaded(medium-desktops.$info-bar-background-color);
+				}
+			}
+		}
+	}
+}

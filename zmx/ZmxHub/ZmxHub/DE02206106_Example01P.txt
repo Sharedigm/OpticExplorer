@@ -1,0 +1,32 @@
+[descriptive data]
+title	DE 2 206 106 Example 1 (Olympus 1000mm f11 E Zuiko Auto-T)
+[constants]
+Scaled	1000	100
+[variable distances]
+Focal Length	1000
+Angle of View	2.67
+F-Number	11
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	325.8
+Bf	317.29
+[lens data]
+1	380.79	13.51	1.6180	106.96	63.38
+2	-229.75	0.14		106.96	
+3	-238.11	8.00	1.7552	106.96	27.50
+4	129.37	2.09		106.96	
+5	133.23	13.25	1.7817	106.96	25.60
+6	-1131.67	340.62		106.96	
+6AS	AS	0		30.083
+7	239.28	2.99	1.6990	44.46	30.10
+8	655.22	0.50		44.46	
+9	Infinity	3.70	1.5687	44.46	63.10
+10	117.99	Bf		44.46	
+[figure]
+source	Data/DE02206106_Figure01P.png
+originX	74.45
+originY	369.73
+ppmm	5.986
+[notes]
+Bill: Adjusted d6 from 331.62 to 340.62 to achieve 1000mm Focal Length. Also recomputed Bf.

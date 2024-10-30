@@ -1,0 +1,224 @@
+{
+	"Small Format Mounts": {
+		"Pentax Q": {
+			"aperture": 31,
+			"diameter": 45,
+			"spacing": 9.2
+		},
+		"Micro Four Thirds": {
+			"aperture": 38,
+			"diameter": 50,
+			"spacing": 19.25
+		},
+		"Nikon 1": {
+			"aperture": 40,
+			"diameter": 50,
+			"spacing": 17
+		},
+		"Four Thirds": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 38.67
+		}
+	},
+	"APS Mounts": {
+		"Minolta V": {
+			"aperture": 39.7,
+			"diameter": 52,
+			"spacing": 38
+		},
+		"Samsung NX": {
+			"aperture": 42,
+			"diameter": 55,
+			"spacing": 25.5		
+		},
+		"Fujifilm X": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 17.7
+		},
+		"Canon EF-M": {
+			"aperture": 47,
+			"diameter": 60,
+			"spacing": 18
+		}
+	},
+	"Screw Mounts": {
+		"M37": {
+			"aperture": 37,
+			"diameter": 50,
+			"spacing": 45.46
+		},
+		"M39": {
+			"aperture": 39,
+			"diameter": 50,
+			"spacing": 28.80
+		},
+		"M42": {
+			"aperture": 42,
+			"diameter": 55,
+			"spacing": 45.46
+		}
+	},
+	"Full Frame Mounts": {
+		"Leica M": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 27.8
+		},
+		"Contax G": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 29
+		},
+		"Contax RF": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 34.85
+		},
+		"Sigma SA": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 44
+		},
+		"Pentax K": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 45.5
+		},
+		"Nikon F": {
+			"aperture": 44,
+			"diameter": 57,
+			"spacing": 46.5
+		},
+		"Minolta SR": {
+			"aperture": 45,
+			"diameter": 60,
+			"spacing": 43.5
+		},
+		"Olympus OM": {
+			"aperture": 46,
+			"diameter": 60,
+			"spacing": 46
+		},
+		"Sony E": {
+			"aperture": 46.1,
+			"diameter": 60,
+			"spacing": 18
+		},
+		"Canon FD, Canon FL": {
+			"aperture": 48,
+			"diameter": 65,
+			"spacing": 42
+		},
+		"Nikon S": {
+			"aperture": 49,
+			"diameter": 65,
+			"spacing": 34.85
+		},
+		"Leica R": {
+			"aperture": 49,
+			"diameter": 65,
+			"spacing": 47
+		},
+		"Minolta A": {
+			"aperture": 49.7,
+			"diameter": 65,
+			"spacing": 44.5
+		},
+		"Leica L": {
+			"aperture": 51.6,
+			"diameter": 65,
+			"spacing": 20
+		},
+		"Canon RF, Canon RF-S": {
+			"aperture": 54,
+			"diameter": 70,
+			"spacing": 20
+		},
+		"Canon EF, Canon EF-S": {
+			"aperture": 54,
+			"diameter": 70,
+			"spacing": 44
+		},
+		"Nikon Z": {
+			"aperture": 55,
+			"diameter": 70,
+			"spacing": 16
+		},
+		"Contax N": {
+			"aperture": 55,
+			"diameter": 70,
+			"spacing": 48
+		}
+	},
+	"Cinema Mounts": {
+		"Panavision PV": {
+			"aperture": 49.5,
+			"diameter": 65,
+			"spacing": 57.15
+		},
+		"Arri PL": {
+			"aperture": 54,
+			"diameter": 70,
+			"spacing": 52
+		},
+		"Arri LPL": {
+			"aperture": 62,
+			"diameter": 77,
+			"spacing": 42
+		},
+		"Arri": {
+			"aperture": 64,
+			"diameter": 80,
+			"spacing": 52
+		}
+	},
+	"Medium Format Mounts": {
+		"Bronica SQA": {
+			"aperture": 57,
+			"diameter": 72,
+			"spacing": 101
+		},
+		"Mamiya RZ67": {
+			"aperture": 60,
+			"diameter": 75,
+			"spacing": 105
+		},
+		"Mamiya RB67": {
+			"aperture": 60,
+			"diameter": 75,
+			"spacing": 112
+		},
+		"Pentax 645": {
+			"aperture": 61.2,
+			"diameter": 75,
+			"spacing": 70.87
+		},
+		"Mamiya 645": {
+			"aperture": 62,
+			"diameter": 77,
+			"spacing": 63.3
+		},
+		"Fujifilm G": {
+			"aperture": 65,
+			"diameter": 80,
+			"spacing": 26.7
+		},
+		"Hasselblad": {
+			"aperture": 69,
+			"diameter": 85,
+			"spacing": 74.9
+		},
+		"Pentax 6x7": {
+			"aperture": 72,
+			"diameter": 90,
+			"spacing": 84.95
+		},
+		"Bronica GS1": {
+			"aperture": 80.5,
+			"diameter": 100,
+			"spacing": 85
+		}
+	}
+}

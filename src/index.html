@@ -9,17 +9,22 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 		<!-- opengraph metadata -->
-		<meta property="og:title" content="Sharedigm: Sharing Made Simple" />
-		<meta property="og:description" content="Cloud based operating system, file sharing, and social network" />
+		<meta property="og:title" content="OpticExplorer: Optics for Everyone" />
+		<meta property="og:description" content="Easy to use cloud based optical exploration, simulation and design" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="/images/previews/preview.png" />
-		<meta property="og:url" content="https://www.sharedigm.com" />
+		<meta property="og:image" content="/images/logos/preview.png" />
+		<meta property="og:url" content="https://opticexplorer.sharedigm.com" />
 
 		<!-- ios configuration-->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link rel="apple-touch-icon" href="icon.png">
 		<link rel="apple-touch-icon" sizes="128x128" href="icon.png">
 		<link rel="apple-touch-icon" sizes="256x256" href="icon2.png">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="scripts/library/html5shiv/html5shiv.js"></script>
+		<![endif]-->
 
 		<!-- fonts -->
 		<link rel="stylesheet" type="text/css" href="fonts/fontawesome-6.5.2/css/all.min.css" />
@@ -35,10 +40,18 @@
 		<link rel="stylesheet" type="text/css" href="vendor/flickity/css/fullscreen.css" />
 		<link rel="stylesheet" type="text/css" href="vendor/flags/flags.css" />
 		<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+		<link rel="stylesheet" type="text/css" href="styles/optics/styles.css" />
 	</head>
 
 	<body>
 		<!-- system scripts -->
 		<script type="module" src="scripts/main.js"></script>
+		<script>
+			window.MathJax = {
+				chtml: {
+				fontURL: 'vendor/mathjax/es5/output/chtml/fonts/woff-v2'
+				}
+			};
+		</script>
 	</body>
 </html>

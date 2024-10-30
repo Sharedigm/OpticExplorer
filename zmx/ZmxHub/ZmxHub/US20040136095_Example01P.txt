@@ -1,0 +1,48 @@
+[descriptive data]
+title	US 2004/0136095 Example 1 (Hasselblad HC 3.5 35 (Fujinon))
+[variable distances]
+Focal Length	35.76
+Angle of View(p)	88.7
+Angle of View	82
+F-Number	3.6
+Image Height	61.40
+Magnification	0
+d0	Infinity
+Bf(p)	61.0
+Bf	61.02
+P	32.17
+di17	32.364
+[lens data]
+1	60.773	8.08	1.74330	63.30	49.2
+2	145.341	0.15		58.64
+3	50.635	2.44	1.84666	47.03	23.8
+4	21.362	6.71		35.58
+5	50.584	2.04	1.83400	34.63	37.3
+6	22.224	7.08		29.35
+7	-71.429	20.95	1.48749	29.35	70.4
+8	-50.034	0.20		22.50
+9	66.905	1.33	1.71300	20.88	53.9
+10	28.050	0.18		18.53
+11	31.476	17.17	1.80518	18.53	25.4
+12	199.466	3.25		20.44
+12AS	AS	4.90		19.57
+13	-61.313	7.41	1.51742	20.28	52.2
+14	-29.147	7.82		22.76
+15	67.765	10.22	1.83400	30.34	37.3
+16	29.528	16.64	1.49700	30.34	81.5
+17	-21.250	0.07		32.364
+18	-21.658	2.13	1.84666	32.364	23.9
+19	-39.582	0.20		35.79
+20	-55.071	4.18	1.48749	36.60	70.4
+21	-41.535	Bf		38.44
+[figure]
+source	Data/US20040136095_Figure01P.png
+originX	80.35
+originY	267.33
+ppmm	6.896
+[notes]
+Bill: Maximum F-Number is f/3.64
+From specifications:
+Angle of View 82 (patent says 88.7 probably for a larger Image Height)
+Image Height 37x49mm is 61.40mm
+P is 152mm in front of Image Plane

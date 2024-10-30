@@ -1,0 +1,83 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-desktop.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../navs/dark-menus";
+
+//
+// colors
+//
+
+$background-color: colors.$dark-grey;
+$footer-bar-color: colors.$very-dark-grey;
+$info-bar-color: text-colors.$light-color;
+$info-bar-icon-color: dark-menus.$icon-color;
+$info-bar-background-color: colors.$very-very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	&.dark {
+		#desktop, .desktop.preview {
+
+			//
+			// desktop background color
+			//
+
+			background-color: $background-color;
+		}
+	}
+
+	&.dark #desktop.auto,
+	#desktop.dark {
+
+		//
+		// dark desktop footer bars
+		//
+
+		.desktop.app > .footer-bar {
+			background-color: $footer-bar-color;
+			border-color: $footer-bar-color;
+
+			//
+			// dark desktop info bars
+			//
+
+			.desktop-info-bar {
+				color: $info-bar-color;
+				background-color: $info-bar-background-color;
+				border-color: $info-bar-background-color;
+
+				.info-bar {
+					i {
+						color: $info-bar-icon-color;
+					}
+				}
+
+				.toolbar .button:not(:hover) {
+					i {
+						color: $info-bar-icon-color;
+					}
+				}
+			}
+		}
+	}
+}

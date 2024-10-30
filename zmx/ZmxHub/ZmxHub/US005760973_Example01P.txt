@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 5,760,973 Example 1 (Ricoh 28mm F2.8 (GR-1))
+[constants]
+[variable distances]
+Focal Length	28.1
+Angle of View	74.4
+F-Number	2.86
+Image Height	43.266
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	17.22
+[lens data]
+1	-24.427	1.00	1.64769	11.06	33.8
+2	48.935	0.08		12.38	
+3	12.031	3.43	1.75700	10.63	47.7
+4	-14.840	0.90	1.68893	10.63	31.2
+5	-36.502	0.80		12.36	
+6	AS	2.41		9.339
+7	-10.144	0.80	1.48749	8.78	70.4
+8	34.733	4.37	1.83500	11.70	43.0
+9	-8.514	0.80	1.74077	11.70	27.8
+10	-19.156	2.45		13.14	
+11	-9.270	1.20	1.60342	13.32	38.0
+12	-16.394	Bf		16.44	
+[aspherical data]
+1	-24.427	-0.0665	-2.7200E-05	-1.4150E-06	4.4660E-08	-6.1390E-10
+11	-9.270	0.5327	-8.3178E-05	2.8840E-06	-1.0011E-07	1.0731E-09
+[figure]
+source	Data/US005760973_Figure01P.png
+originX	15.48
+originY	86.03
+ppmm	9.319
+[notes]

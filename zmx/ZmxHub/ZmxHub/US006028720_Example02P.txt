@@ -1,0 +1,29 @@
+[descriptive data]
+title	US 6,028,720 Example 2 (Schneider APO-Symmar 5.6 / 100)
+[variable distances]
+Focal Length	101.2
+Angle of View	undefined
+F-Number	5.6
+Image Height	155
+Magnification	0
+d0	Infinity
+Bf(p)	84.3
+Bf	85.88
+[lens data]
+1	19.98	6.1	1.6052	26.31	65.1
+2	-2744	1.8	1.5498	24.40	53.3
+3	14.74	1.2		17.63
+4	23.35	1.8	1.5223	17.63	69.5
+5	34.66	6.0		15.99
+5AS	AS	5.4		14.375
+6	-46.19	1.8	1.5302	15.65	76.6
+7	-28.98	1.2		17.50
+8	-16.28	2.1	1.5498	17.50	53.3
+9	-428.18	5.2	1.6052	23.39	65.1
+10	-20.1	Bf		24.72
+[figure]
+source	Data/US006028720_Figure01P.png
+originX	151.39
+originY	356.90
+ppmm	20.026
+[notes]

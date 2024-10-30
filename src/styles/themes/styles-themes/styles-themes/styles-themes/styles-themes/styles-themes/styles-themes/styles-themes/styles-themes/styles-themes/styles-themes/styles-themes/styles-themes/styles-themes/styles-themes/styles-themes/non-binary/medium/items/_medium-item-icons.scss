@@ -1,0 +1,247 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../layout/images";
+@use "../items/medium-items";
+@use "../navs/medium-selection";
+
+//
+// variables
+//
+
+$background-opacity: 50%;
+
+//
+// colors
+//
+
+$selected-border-color: colors.$very-very-light-grey;
+$selected-background-color: colors.faded($selected-border-color, $background-opacity);
+$highlighted-border-color: colors.$very-light-grey;
+$highlighted-background-color: colors.faded($highlighted-border-color, $background-opacity);
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	.icon-grid {
+
+		//
+		// items
+		//
+
+		.item {
+			> .row:first-child {
+
+				//
+				// item icons
+				//
+
+				.icon {
+					> img, > i, > .thumbnail i {
+						filter: images.$thumbnail-shadow;
+					}
+				}
+			}
+
+			> .row:nth-child(2) {
+				.name {
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						color: text-colors.$dark-color;
+						background-color: white;
+						outline-color: medium-selection.$edit-highlight-color;
+					}
+				}
+			}
+
+			.details {
+				background-color: medium-items.$details-background-color;
+				
+				.dark &, .desktop & {
+					color: white;
+				}
+			}
+
+			//
+			// highlighted items
+			//
+
+			&.highlighted {
+				border-color: $highlighted-border-color;
+
+				> .row:first-child {
+					border-color: inherit;
+
+					.icon:not(.colored) {
+						background-color: $highlighted-background-color;
+						border-color: inherit;
+					}
+				}
+
+				> .row:nth-child(2) {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: medium-selection.$highlight-color;
+						}
+					}
+				}
+
+				> .row:nth-child(3) {
+					.details {
+						color: white;
+						background-color: medium-selection.$highlight-color;
+					}
+				}
+			}
+
+			//
+			// selected items
+			//
+
+			&.selected {
+				border-color: $selected-border-color;
+
+				> .row:first-child {
+					border-color: inherit;
+
+					.icon:not(.colored) {
+						background-color: $selected-background-color;
+						border-color: inherit;
+					}
+				}
+
+				> .row:nth-child(3) {
+					.details {
+						color: white;
+						background-color: medium-selection.$select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// colored icons
+	//
+
+	&.icon-backgrounds {
+		.icon-grid {
+
+			//
+			// items
+			//
+
+			.item {
+
+				> .row:first-child {
+					.icon {
+						&.colored {
+							i {
+								color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.icon-grid {
+
+			//
+			// unfocused selected items
+			//
+
+			.item.selected {
+				border-color: medium-selection.$highlight-color;
+
+				> .row:first-child {
+					border-color: inherit;
+
+					.icon:not(.colored) {
+						background-color: $highlighted-background-color;
+						border-color: inherit;
+					}
+				}
+
+				> .row:nth-child(2) {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							background-color: medium-selection.$highlight-color;
+						}
+					}
+				}
+
+				> .row:nth-child(3) {
+					.details {
+						background-color: medium-selection.$highlight-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// no icon backgrounds
+	//
+
+	&:not(.icon-backgrounds) {
+		.icon-grid, .app-icons {
+			.item {
+
+				//
+				// selected app icons
+				//
+
+				&.selected {
+					.icon, .icon.colored {
+						background: none !important;
+						background-color: $selected-background-color !important;
+						box-shadow: none !important;
+						border-color: $selected-border-color !important;
+					}
+				}
+			}
+		}
+	}
+}

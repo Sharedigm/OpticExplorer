@@ -1,0 +1,194 @@
+/******************************************************************************\
+|                                                                              |
+|                              _object-beams.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$colored-stroke-color: white;
+$colored-fill-color: colors.$medium-grey;
+$light-stroke-color: colors.$medium-grey;
+$light-fill-color: colors.$medium-grey;
+$dark-stroke-color: colors.$very-light-grey;
+$dark-fill-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.object.beam:not(.annotation) {
+
+		//
+		// filled paths
+		//
+
+		.filled {
+			mix-blend-mode: normal;
+		}
+	}
+
+	//
+	// object visibility
+	//
+
+	&.objects-hidden {
+		.object.beam, .object.marker, .object.annotation,
+		.object.image, .image.annotation {
+			visibility: hidden;
+		}
+	}
+
+	&.objects-unstroked {
+		.object.beam {
+			.paths path:not(.first):not(.last) {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.objects-unfilled {
+		.object.beam {
+			.filled {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.objects-untransmitted {
+		.object.beam {
+			.transmitted {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.objects-unobstructed {
+		.object.beam {
+			.obstructed {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.objects-unreflected {
+		.object.beam {
+			.reflected {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+//
+// colored object beams
+//
+
+body.colored {
+	.optics .viewport {
+
+		.object.beam:not(.annotation) {
+
+			//
+			// uncolored paths
+			//
+
+			&:not(.colored) {
+				stroke: $colored-stroke-color;
+
+				.filled {
+					fill: $colored-fill-color;
+				}
+			}
+		}
+	}
+}
+
+//
+// light viewports
+//
+
+.optics .viewport.light,
+.light .optics .viewport.auto {	
+
+	.object.beam:not(.annotation) {
+
+		//
+		// filled paths
+		//
+
+		&:not(.colored) {
+			.filled {
+				fill: $light-fill-color;
+			}
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					stroke: $light-stroke-color;
+				}
+			}
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.optics .viewport.dark,
+.dark .optics .viewport.auto {	
+
+	.object.beam:not(.annotation) {
+		mix-blend-mode: lighten;
+
+		//
+		// filled paths
+		//
+
+		&:not(.colored) {
+			.filled {
+				fill: $dark-fill-color;
+			}
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					stroke: $dark-stroke-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 4,826,301 Example 4 (Canon EF135mm f2.8 Soft Focus)
+[constants]
+[variable distances]
+Focal Length	135	135
+Angle of View	18.2	18.2
+F-Number	3.4	2.8
+Image Height	43.2	43.2
+Magnification	0	0
+d0	Infinity	Infinity
+d6	0.80	10.00
+d8	17.57	8.37
+d9	6.00	3.60
+d12	19.80	22.20
+Bf(p)	undefined	undefined
+Bf	59.58	59.58
+Aperture Diameter	23.095	27.510
+[lens data]
+1	50.67	9.00	1.62299	45.83	58.2
+2	-2495.01	0.15		45.83
+3	92.46	5.50	1.62299	45.83	60.7
+4	-376.32	1.71		45.83
+5	-195.53	2.20	1.80518	43.99	25.4
+6	133.01	d6		38.23
+7	30.44	2.60	1.58313	37.35	59.4
+8	26.23	d8		33.06
+9	AS	d9		23.095
+10	-93.04	2.70	1.75520	25.83	27.5
+11	-42.03	1.39	1.54072	25.83	47.2
+12	38.39	d12		25.83
+13	92.51	5.30	1.48749	27.72	70.2
+14	-68.92	Bf		27.72
+[aspherical data]
+7	30.44	0	-5.880E-07	-1.588E-10	-2.038E-12	2.540E-16
+[figure]
+source	Data/US004826301_Figure10AP.png
+originX	71.04
+originY	110.43
+ppmm	2.151
+[notes]

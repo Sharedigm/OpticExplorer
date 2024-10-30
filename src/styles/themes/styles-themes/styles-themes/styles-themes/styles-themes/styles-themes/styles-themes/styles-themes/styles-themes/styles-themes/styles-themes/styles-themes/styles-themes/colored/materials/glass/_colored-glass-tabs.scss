@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                           colored-glass-tabs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/glass/glass-tabs";
+@use "../../navs/colored-tabs";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.glass-tabs,
+		&.glass.auto-tabs {
+			ul.nav-tabs {
+
+				//
+				// active tabs
+				//
+
+				@include glass-tabs.active-shade(colored-tabs.$active-color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.glass-tabs,
+		&.glass.auto-tabs {
+			ul.nav-tabs {
+
+				//
+				// active tabs
+				//
+
+				@include glass-tabs.active-shaded(colored-tabs.$default-active-color);
+			}
+		}
+	}
+}

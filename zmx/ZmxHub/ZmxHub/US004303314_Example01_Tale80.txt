@@ -1,0 +1,31 @@
+[descriptive data]
+title	Nikon Series E 100mm f/2.8 (US 4,303,314 Example 1)
+[constants]
+[variable distances]
+Focal Length	100
+Angle of View	24
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	40.22
+[lens data]
+1	41.00	5.3	1.61272	35.75	58.6
+2	298.19	0.75		35.75
+3	29.92	9.8	1.62041	32.60	60.3
+4	71.72	1.8		27.67
+5	149.22	4.5	1.71736	27.02	29.5
+6	19.84	7.2		22.81
+6AS	AS	11.0		20.652
+6FS	FS	11.2		17.89
+7	71.00	2.0	1.74077	20.43	27.7
+8	227.07	Bf		20.43
+[figure]
+source	Data/US004303314_Example01_Tale80-Fig1.png
+originX	60.57
+originY	130.51
+ppmm	6.193
+[notes]
+Bill: One figure for 3 examples. Moved AS and added FS

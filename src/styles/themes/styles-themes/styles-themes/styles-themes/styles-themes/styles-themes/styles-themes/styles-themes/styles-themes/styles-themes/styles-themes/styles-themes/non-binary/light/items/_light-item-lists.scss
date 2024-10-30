@@ -1,0 +1,141 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-item-lists.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/items/medium-item-lists";
+@use "../navs/light-selection";
+
+//
+// colors
+//
+
+$odd-item-background-color: medium-item-lists.$odd-item-background-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.item-list {
+
+		//
+		// light highlighted items
+		//
+
+		.item.highlighted {
+			> .info {
+				background-color: light-selection.$highlight-color;
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+					}
+				}
+
+				.details {
+					color: white;
+					background-color: light-selection.$highlight-color;
+				}
+			}
+		}
+
+		//
+		// light selected items
+		//
+
+		.item.selected {
+			> .info {
+				background-color: light-selection.$select-color;
+
+				.icon {
+
+					i {
+						color: light-selection.$select-color;
+					}
+
+					/*
+					.thumbnail {
+						&::after {
+							background: colors.faded(light-selection.$select-color; 50%);
+						}
+					}
+					*/
+				}
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+						background-color: light-selection.$select-color;
+					}
+				}
+
+				.details {
+					background-color: light-selection.$select-color;
+				}
+			}
+
+			/*
+			&.pdf, &.svg {
+				.icon {
+					&::after {
+						background: colors.faded(light-selection.$select-color; 50%);
+					}
+				}
+			}
+			*/
+		}
+
+		//
+		// light zebra striping
+		//
+
+		&:not(.inline) {
+
+			.item:nth-child(odd):not(.selected):not(.highlighted) {
+				> div.info {
+					background-color: $odd-item-background-color;
+				}
+			}
+		}
+
+		//
+		// dragged file and directory styles
+		//
+
+		.drag-image {
+
+			//
+			// no zebra striping
+			//
+
+			.item:nth-child(odd):not(.selected):not(.highlighted) {
+				> .info {
+					background: none;
+				}
+			}
+		}
+	}
+}

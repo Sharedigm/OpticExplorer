@@ -1,0 +1,40 @@
+################################################################################
+#                                                                              #
+#                                  Test.optc                                   #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 100 mm
+        diameter: 75 mm
+      - type: spherical
+        curvature: -100 mm
+        diameter: 75 mm
+    thickness: 20 mm
+    spacing: 0
+    material:
+      n: 1.5
+      v: 10
+      name: 
+
+LIGHTS:
+
+  - type: distant
+    distance: 50 mm
+    angle: 0
+    spectrum: Visible (x10)
+    number_of_rays: 7
+
+OBJECTS: []

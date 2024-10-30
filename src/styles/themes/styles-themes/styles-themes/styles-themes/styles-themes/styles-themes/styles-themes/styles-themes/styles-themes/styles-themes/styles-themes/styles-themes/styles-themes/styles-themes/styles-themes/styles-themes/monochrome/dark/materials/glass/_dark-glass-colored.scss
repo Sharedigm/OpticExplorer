@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                           _dark-glass-colored.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/glass";
+
+//
+// colors
+//
+
+$color: $dark-grey;
+$selected-color: $very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.dark.glass {
+
+		//
+		// glass colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.glass($color);
+			}
+
+			&.raspberry {
+				.glass($color);
+			}
+
+			&.red-orange {
+				.glass($color);
+			}
+
+			&.orange {
+				.glass($color);
+			}
+
+			&.yellow {
+				.glass($color);
+			}
+
+			&.lime {
+				.glass($color);
+			}
+
+			&.green {
+				.glass($color);
+			}
+
+			&.teal {
+				.glass($color);
+			}
+
+			&.aqua {
+				.glass($color);
+			}
+
+			&.cyan {
+				.glass($color);
+			}
+
+			&.blue {
+				.glass($color);
+			}
+
+			&.indigo {
+				.glass($color);
+			}
+
+			&.violet {
+				.glass($color);
+			}
+
+			&.plum {
+				.glass($color);
+			}
+
+			&.purple {
+				.glass($color);
+			}
+
+			&.magenta {
+				.glass($color);
+			}
+
+			&.brown {
+				.glass($color);
+			}
+
+			&.grey {
+				.glass($color);
+			}
+
+			&.black {
+				.glass($color);
+			}
+
+			&.white {
+				.glass($color);
+			}
+
+			&.copper {
+				.glass($color);
+			}
+
+			&.silver {
+				.glass($color);
+			}
+
+			&.gold {
+				.glass($color);
+			}
+		}
+
+		//
+		// glass selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.glass($selected-color);
+			}
+
+			&.raspberry {
+				.glass($selected-color);
+			}
+
+			&.red-orange {
+				.glass($selected-color);
+			}
+
+			&.orange {
+				.glass($selected-color);
+			}
+
+			&.yellow {
+				.glass($selected-color);
+			}
+
+			&.lime {
+				.glass($selected-color);
+			}
+
+			&.green {
+				.glass($selected-color);
+			}
+
+			&.teal {
+				.glass($selected-color);
+			}
+
+			&.aqua {
+				.glass($selected-color);
+			}
+
+			&.cyan {
+				.glass($selected-color);
+			}
+
+			&.blue {
+				.glass($selected-color);
+			}
+
+			&.indigo {
+				.glass($selected-color);
+			}
+
+			&.violet {
+				.glass($selected-color);
+			}
+
+			&.plum {
+				.glass($selected-color);
+			}
+
+			&.purple {
+				.glass($selected-color);
+			}
+
+			&.magenta {
+				.glass($selected-color);
+			}
+
+			&.brown {
+				.glass($selected-color);
+			}
+
+			&.grey {
+				.glass($selected-color);
+			}
+
+			&.black {
+				.glass($selected-color);
+			}
+
+			&.white {
+				.glass($selected-color);
+			}
+
+			&.copper {
+				.glass($selected-color);
+			}
+
+			&.silver {
+				.glass($selected-color);
+			}
+
+			&.gold {
+				.glass($selected-color);
+			}
+		}
+	}
+}

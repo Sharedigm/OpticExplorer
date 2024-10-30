@@ -1,0 +1,55 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-dialog-handles.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$modal-handle-background: repeating-linear-gradient(to bottom, colors.faded(white, 20%) 0px, colors.faded(white, 20%) 2px, colors.faded(black, 10%) 2px, colors.faded(black, 10%) 4px);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.modals {
+
+		//
+		// focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+
+			//
+			// unmaximized dialogs
+			//
+			
+			&:not(.maximized) {
+				.modal-header {
+
+					// show handle texture
+					//
+					.handle, .buttons {
+						background: $modal-handle-background;
+					}
+				}
+			}
+		}
+	}
+}

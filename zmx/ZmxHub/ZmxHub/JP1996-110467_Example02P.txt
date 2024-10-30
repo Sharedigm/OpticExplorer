@@ -1,0 +1,42 @@
+[descriptive data]
+title	JP 1996-110467 Example 2 (Canon EF20mm f2.8 USM)
+[constants]
+[variable distances]
+Focal Length	20.49
+Angle of View	93.1
+F-Number	2.9
+Image Height	43.2
+Magnification	0
+d0	Infinity
+d6	3.97
+Bf(p)	undefined
+Bf	38.39
+[lens data]
+1	39.03	2.00	1.62299	45.64	58.2
+2	23.24	6.06		37.32	
+3	52.92	1.70	1.60311	37.32	60.7
+4	24.56	6.30		32.32	
+5	115.45	10.80	1.58313	32.44	59.4
+6	-93.19	d6		32.44	
+7	25.08	1.00	1.77250	18.10	49.6
+8	10.72	3.34		15.30	
+9	-1747.11	2.80	1.80518	15.30	25.4
+10	-45.10	1.27		15.30	
+11	149.79	11.60	1.51633	15.14	64.2
+12	-14.37	0.73		15.14	
+13	AS	3.50		13.508
+14	-23.50	1.10	1.62096	13.22	35.9
+15	13.05	6.70	1.80518	14.10	25.4
+16	83.36	0.66		14.10	
+17	-145.33	1.10	1.84666	19.76	23.9
+18	19.16	7.60	1.48749	16.74	70.2
+19	-18.23	0.15		19.76	
+20	283.36	3.40	1.77250	23.74	49.6
+21	-43.99	Bf		23.74	
+[figure]
+source	Data/JP1996-110467_Figure02P.png
+originX	56.01
+originY	424.53
+ppmm	10.424
+[notes]
+Bill: Engineering drawing from repair manual looks closer than construction from the Canon Museum.

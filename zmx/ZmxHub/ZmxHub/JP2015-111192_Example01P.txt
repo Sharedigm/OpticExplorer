@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 2015-111192 Example 1 (Canon EF-S24mm f2.8 STM)
+[constants]
+[variable distances]
+Focal Length	24.50
+Angle of View	58.28
+F-Number	2.88
+Image Height	27.32
+Total Length	64.83
+Magnification	0
+d0	Infinity
+Bf	35.68
+[lens data]
+1	23.706	2.83	1.91082	16.13	35.3
+2	63.184	0.25		14.42	
+3	22.266	0.90	1.48749	12.89	70.2
+4	7.213	4.00		10.11	
+5	FS	3.26		8.13	
+6	AS	3.24		8.78	
+7	-16.321	4.82	1.69680	9.30	55.5
+8	-8.400	0.80	1.80610	11.37	33.3
+9	-36.438	0.20		13.67	
+10	227.537	4.39	1.59522	15.23	67.7
+11	-15.547	0.90		16.72	
+12	-34.842	3.55	1.58313	17.76	59.4
+13	-15.035	Bf		18.94	
+[aspherical data]
+12	-34.842	0	-5.24174E-05	5.25723E-08	-3.53661E-09	3.36031E-11	-1.48386E-13
+[figure]
+source	Data/JP2015-111192_Figure01P.png
+originX	12.74
+originY	106.42
+ppmm	3.004
+[notes]
+Bill: Patent diameters.

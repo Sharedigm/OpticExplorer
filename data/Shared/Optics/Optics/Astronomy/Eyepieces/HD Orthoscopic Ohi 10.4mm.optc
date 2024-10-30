@@ -1,0 +1,130 @@
+################################################################################
+#                                                                              #
+#                        HD-Orthoscopic-Ohi-10.4mm.optc                        #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Myriam Philippe DERELLE                                    #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: stop
+    aperture: 8 mm
+    diameter: 24.5 mm
+    spacing: 1.8 mm
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 9 mm
+        coating: multi
+      - type: spherical
+        curvature: -12.6 mm
+        diameter: 9 mm
+        coating: multi
+    thickness: 1.2 mm
+    spacing: 0.1 mm
+    beveled: true
+    material:
+      n: 1.618
+      v: 63.339027
+      catalog: Hikari
+      name: J-PSK02
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 8.72 mm
+        diameter: 9.6 mm
+        coating: multi
+      - type: spherical
+        curvature: 122 mm
+        diameter: 9.6 mm
+        coating: none
+    thickness: 1.9 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.618
+      v: 63.339027
+      catalog: Hikari
+      name: J-PSK02
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 122 mm
+        diameter: 9.6 mm
+        coating: none
+      - type: spherical
+        curvature: 6 mm
+        diameter: 9.6 mm
+        coating: none
+    thickness: 0.4 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.6727
+      v: 32.185454
+      catalog: Hikari
+      name: J-SF5
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 6 mm
+        diameter: 9.6 mm
+        coating: none
+      - type: planar
+        diameter: 9.6 mm
+        coating: multi
+    thickness: 2.4 mm
+    spacing: 5.86 mm
+    beveled: true
+    material:
+      n: 1.618
+      v: 63.339027
+      catalog: Hikari
+      name: J-PSK02
+
+  - type: stop
+    aperture: 8 mm
+    diameter: 24.5 mm
+    spacing: 2 mm
+
+LIGHTS:
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    angle: 21.5 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    angle: -18.4 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    angle: 12.5 deg
+    spectrum: Visible (x2, FC)
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    spectrum: Visible (x3, FdC)
+    number_of_rays: 10
+
+OBJECTS: []

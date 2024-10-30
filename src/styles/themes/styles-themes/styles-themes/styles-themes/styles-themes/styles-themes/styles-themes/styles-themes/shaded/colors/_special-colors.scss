@@ -1,0 +1,29 @@
+/******************************************************************************\
+|                                                                              |
+|                             _special-colors.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$success-color:			saturate(colors.$light-green, 20%);
+$caution-color:			saturate(mix(colors.$light-gold, colors.$light-orange), 20%);
+$warning-color: 		saturate(mix(colors.$light-orange, colors.$light-red), 20%);
+$error-color: 			saturate(colors.$light-red, 20%);
+$highlight-color: 		colors.$very-light-grey;
+$disabled-color: 		fade(colors.$very-light-grey, 50%);

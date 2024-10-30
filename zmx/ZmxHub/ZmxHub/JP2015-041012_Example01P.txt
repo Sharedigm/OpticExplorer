@@ -1,0 +1,43 @@
+[descriptive data]
+title	JP 2015-041012 Example 1 (Sony Sonnar T* FE 35mm F2.8 ZA)
+[constants]
+[variable distances]
+Focal Length	36.06	undefined
+Angle of View	62.58	undefined
+F-Number	2.884	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.12376
+S	Infinity	350
+d0	Infinity	302.42
+d6	1.49	3.13
+d8	5.53	3.89
+Bf	20.03	20.03
+[lens data]
+1	-23.10	0.80	1.80	15.74	25.46
+2	-85.23	1.49	1.83	14.74	42.72
+3	-42.36	0.85		14.74	
+4	AS	1.40		13.409	
+5	18.59	2.98	1.76	16.70	49.24
+6	-45.03	d6		16.70	
+7	119.57	0.70	1.58	15.62	59.46
+8	14.18	d8		12.80	
+9	51.20	5.36	1.83	16.88	42.72
+10	-10.02	1.00	1.63	16.88	34.57
+11	86.11	4.95		17.98	
+12	-10.55	1.00	1.68	17.96	31.16
+13	-14.19	Bf		20.44	
+[aspherical data]
+5	18.59	0	-3.7579E-05	-1.0389E-08	-2.0023E-10	-4.1163E-11
+6	-45.03	0	-5.9027E-06	5.5887E-07	-1.1004E-08	3.9911E-11
+7	119.57	0	7.4881E-05	-1.1023E-06	-1.6439E-09	9.2542E-11
+8	14.18	0	1.0857E-04	-1.6255E-06	9.5546E-09	7.7733E-11
+12	-10.55	0	4.5713E-04	-4.2921E-06	2.8083E-08	-5.6441E-11
+13	-14.19	0	4.1193E-04	-3.8255E-06	2.1891E-08	-5.6738E-11
+[figure]
+source	Data/JP2015-041012_Figure02P.png
+originX	38.52
+originY	139.49
+ppmm	4.321
+[notes]
+Bill: d0 from measured Total Length and magnification measured.

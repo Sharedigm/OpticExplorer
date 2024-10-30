@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 4,412,725 Example 1 (Ricoh Pentax-110 20-40mm F2.8)
+[constants]
+[variable distances]
+Focal Length	20.6	28.0	38.6
+Angle of View	57.6	42.6	31.0
+F-Number	2.8	2.8	2.8
+Image Height	21.4	21.4	21.4
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	31.27	14.16	1.08
+d16	0.83	4.92	10.98
+Bf	22.39	22.39	22.39
+[lens data]
+1	40.700	1.53	1.80610	36.98	40.9
+2	23.370	9.10		32.63
+3	-54.490	1.36	1.61800	32.3	63.4
+4	425.000	0.10		32.3
+5	60.078	2.43	1.80518	31.34	25.4
+6	126.230	d6		31.34
+7	75.210	2.98	1.77250	25.56	49.6
+8	-122.000	0.10		25.56
+9	19.175	4.26	1.72916	23.08	54.7
+10	50.501	0.10		22.54
+11	22.534	2.53	1.61800	20.06	63.4
+12	37.050	2.53		18.82
+13	-100.246	2.56	1.80518	16.76	25.4
+14	15.600	4.19		13.2
+15	68.000	2.54	1.80610	12.5	40.9
+16	-29.300	d16		12.5
+16AS	AS	Bf		8.148
+[figure]
+source	Data/US004412725_Figure01P.png
+originX	11.49
+originY	85.83
+ppmm	4.367
+[notes]
+Bill: d16/Bf not provided chosen to match diagram at 20.6mm and to match PD otherwise.
+The figure is for the telephoto end.

@@ -1,0 +1,76 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-splitters.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../apps/common/light-apps";
+@use "../apps/common/light-modal-apps";
+
+//
+// variables
+//
+
+$grip-image: url('../../../../images/splitters/grip.png');
+$grip-horizontal-image: url('../../../../images/splitters/horizontal-grip.png');
+$grip-vertical-image: url('../../../../images/splitters/vertical-grip.png');
+
+//
+// colors
+//
+
+$gutter-background-color: light-apps.$background-color;
+$gutter-border-color: light-apps.$border-color;
+$gutter-unfocused-background-color: light-modal-apps.$unfocused-background-color;
+$gutter-unfocused-border-color: light-modal-apps.$unfocused-border-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.split-view {
+		.gutter {
+			background-color: $gutter-background-color;
+			border-color: $gutter-border-color;
+
+			.handle {
+				background-image: $grip-image;
+			}
+
+			&.gutter-horizontal {
+				.handle {
+					background-image: $grip-horizontal-image;
+				}
+			}
+
+			&.gutter-vertical {
+				.handle {
+					background-image: $grip-vertical-image;
+				}
+			}
+		}
+	}
+
+	//
+	// light unfocucused splitters
+	//
+
+	.modal:not(.focused) .modal-dialog .split-view {
+		.gutter {
+			background-color: $gutter-unfocused-background-color;
+			border-color: $gutter-unfocused-border-color;
+		}
+	}
+}

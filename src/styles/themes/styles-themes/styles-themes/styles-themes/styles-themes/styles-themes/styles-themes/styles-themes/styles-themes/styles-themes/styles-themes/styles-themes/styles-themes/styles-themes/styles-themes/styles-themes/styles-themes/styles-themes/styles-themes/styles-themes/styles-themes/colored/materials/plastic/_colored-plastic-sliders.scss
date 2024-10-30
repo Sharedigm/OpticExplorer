@@ -1,0 +1,88 @@
+/******************************************************************************\
+|                                                                              |
+|                        _colored-plastic-sliders.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../forms/materials/plastic/plastic-sliders";
+@use "../../forms/colored-sliders";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.plastic-sliders,
+	&.plastic.auto-sliders {
+
+		//
+		// slider states
+		//
+
+		&.colored {
+			input[type="range"] {
+				&.colored {
+					&.success {
+						@include plastic-sliders.active-thumb-shade(colored-forms.$success-color);
+					}
+
+					&.warning {
+						@include plastic-sliders.active-thumb-shade(colored-forms.$warning-color);
+					}
+
+					&.error {
+						@include plastic-sliders.active-thumb-shade(colored-forms.$error-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-sliders,
+		&.plastic.auto-sliders {
+
+			//
+			// active slider thumbs
+			//
+
+			input[type="range"]:not(.colored) {
+				@include plastic-sliders.active-thumb-shade(colored-sliders.$thumb-active-color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-sliders,
+		&.plastic.auto-sliders {
+
+			//
+			// active slider thumbs
+			//
+
+			input[type="range"]:not(.colored) {
+				@include plastic-sliders.active-thumb-shaded(colored-sliders.$default-thumb-active-color);
+			}
+		}
+	}
+}

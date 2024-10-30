@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,377,326 Example 1 (Olympus Zuiko Auto-Macro 38mm f2.8)
+[constants]
+Scaled	38	100
+[variable distances]
+Focal Length	38
+Angle of View	undefined
+F-Number	2.8
+Image Height	43.26
+Magnification	-1.7
+d0	52.41
+Bf(p)	undefined
+Bf	81.88
+[lens data]
+1	16.745	2.450	1.72916	16.68	54.68
+2	160.535	0.180		11.94
+3	11.867	3.510	1.61700	14.18	62.79
+4	116.030	1.150	1.74950	14.18	35.27
+5	8.883	4.063		11.80	
+5AS	AS	3.628		7.641
+6	-8.565	1.160	1.80400	11.36	46.57
+7	380.895	3.501	1.61700	14.18	62.79
+8	-12.700	0.670		14.18	
+9	-266.750	2.150	1.75500	12.30	52.33
+10	-22.043	Bf		17.30	
+[figure]
+source	Data/US004377326_Figure01P.png
+originX	111.52
+originY	152.48
+ppmm	3.390
+[notes]
+Bill: AD set at Infinity and then shown at 1.7x

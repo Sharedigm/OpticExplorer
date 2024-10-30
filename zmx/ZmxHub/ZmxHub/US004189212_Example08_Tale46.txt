@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 4,189,212 Example 8 (Nikon AI Zoom-Nikkor 25-50mm f/4)
+[constants]
+[variable distances]
+Focal Length	25.50	35.150	48.805
+Angle of View	80.6	63.2	47.8
+F-Number	4	4	4
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	35.412	15.342	0.503
+Bf	39.612	48.348	60.709
+Aperture Diameter	13.005	15.489	19.330
+[lens data]
+1	80.000	3.5	1.77279	58.18	49.4
+2	32.471	10.0		45.73
+3	-630.000	5.0	1.60342	45.73	38.0
+4	-70.300	0.1		45.73
+5	-217.401	3.3	1.80279	42.98	46.8
+6	38.907	18.9		36.29
+7	57.924	3.6	1.80518	36.03	25.5
+8	106.702	d8		36.03
+9	56.800	2.9	1.53172	23.86	48.9
+10	-86.700	1.2	1.80518	23.86	25.5
+11	-219.500	0.1		25.00	
+12	31.648	4.0	1.50137	25.00	56.5
+13	201.000	0.1		25.00	
+14	21.636	6.8	1.50137	23.79	56.5
+15	72.700	1.0		20.36
+15AS	AS	2.8		13.005
+16	-2100.000	2.4	1.79504	18.98	28.4
+17	16.739	1.9		16.06	
+18	185.000	3.8	1.46450	18.89	65.8
+19	-57.432	0.1		18.89
+20	174.500	2.3	1.50137	18.89	56.5
+21	-58.829	Bf		18.89
+[figure]
+source	Data/US004189212_Example08_Tale46-Fig1.png
+ppmm	5.548
+originX	7
+originY	176
+[notes]
+Bill: Patent r11 sign is wrong

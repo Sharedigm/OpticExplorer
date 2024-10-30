@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-metal-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/metal/flat-metal";
+@use "../../../../../materials/metal/rounded-metal";
+@use "../../apps/medium-desktops";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.metal {
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+
+			//
+			// metal desktop footer bars
+			//
+
+			.desktop.app > .footer-bar {
+				@include flat-metal.shaded(medium-desktops.$footer-bar-color);
+
+				//
+				// metal desktop info bars
+				//
+
+				.desktop-info-bar {
+					@include rounded-metal.shaded(medium-desktops.$info-bar-background-color);
+				}
+			}
+		}
+	}
+}

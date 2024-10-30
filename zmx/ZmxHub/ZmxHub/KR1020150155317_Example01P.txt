@@ -1,0 +1,42 @@
+[descriptive data]
+title	KR 10-2015-0155317 Example 1 (Samyang 135mm F2.0 ED UMC)
+[constants]
+[variable distances]
+Focal Length	130
+Angle of View	18.8
+F-Number	2.07
+Image Height	42
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	41.855
+Bf	44.04
+[lens data]
+1	88.000	8.297	1.77250	64.80	49.62	TAF1_HOYA
+2	509.786	0.100		63.42		
+3	49.582	13.695	1.49700	57.56	81.61	FCD1_HOYA
+4	-549.424	2.800	1.84666	57.56	23.78	FDS90_HOYA
+5	49.902	1.257		48.80		
+6	50.710	11.663	1.92286	48.58	20.88	NSF66_SCHOTT
+7	-176.345	2.800	1.71736	46.24	29.50	NSF1_SCHOTT
+8	34.926	35.316		38.88		
+9	AS	0.700		29.40		
+10	54.771	2.902	1.75500	28.56	52.32	TAC6_HOYA
+11	164.420	1.536		27.90		
+12	-115.390	2.051	1.71736	27.84	29.50	NSF1_SCHOTT
+13	56.801	7.421		26.78		
+14	49.916	4.294	1.84666	29.00	23.78	FDS90_HOYA
+15	-207.451	1.723	1.59270	29.16	35.45	FF5_HOYA
+16	40.487	4.823		29.62		
+17	133.059	1.600	1.71736	31.68	29.50	NSF1_SCHOTT
+18	33.906	7.667	1.75500	33.06	52.32	TAC6_HOYA
+19	-118.255	Bf		33.58		
+[figure]
+source	Data/KR1020150155317_Figure01P.png
+originX	24.03
+originY	125.47
+ppmm	2.861
+[notes]
+Bill: Patent supplied diameters: #3 missing from list; repaired.
+Angle of View from specification and implied Image Height of only 42mm rather than 43.26mm
+Patent Bf doesn't seem to account for the CG; adjusted.

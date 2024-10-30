@@ -1,0 +1,230 @@
+/******************************************************************************\
+|                                                                              |
+|                       _medium-glass-colored-icons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/glass/round-glass";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.glass-icons,
+	&.colored.glass.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// glass colored icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+
+				&.red {
+					@include round-glass.shaded(colors.$medium-red);
+				}
+
+				&.raspberry {
+					@include round-glass.shaded(colors.$medium-raspberry);
+				}
+
+				&.red-orange {
+					@include round-glass.shaded(colors.$medium-red-orange);
+				}
+
+				&.orange {
+					@include round-glass.shaded(colors.$medium-orange);
+				}
+
+				&.yellow {
+					@include round-glass.shaded(colors.$medium-yellow);
+				}
+
+				&.lime {
+					@include round-glass.shaded(colors.$medium-lime);
+				}
+
+				&.green {
+					@include round-glass.shaded(colors.$medium-green);
+				}
+
+				&.teal {
+					@include round-glass.shaded(colors.$medium-teal);
+				}
+
+				&.aqua {
+					@include round-glass.shaded(colors.$medium-aqua);
+				}
+
+				&.cyan {
+					@include round-glass.shaded(colors.$medium-cyan);
+				}
+
+				&.blue {
+					@include round-glass.shaded(colors.$medium-blue);
+				}
+
+				&.indigo {
+					@include round-glass.shaded(colors.$medium-indigo);
+				}
+
+				&.violet {
+					@include round-glass.shaded(colors.$medium-violet);
+				}
+
+				&.plum {
+					@include round-glass.shaded(colors.$medium-plum);
+				}
+
+				&.purple {
+					@include round-glass.shaded(colors.$medium-purple);
+				}
+
+				&.magenta {
+					@include round-glass.shaded(colors.$medium-magenta);
+				}
+
+				&.brown {
+					@include round-glass.shaded(colors.$medium-brown);
+				}
+
+				&.grey {
+					@include round-glass.shaded(colors.$medium-grey);
+				}
+
+				&.black {
+					@include round-glass.shaded(colors.$medium-black);
+				}
+
+				&.white {
+					@include round-glass.shaded(colors.$medium-white);
+				}
+
+				&.copper {
+					@include round-glass.shaded(colors.$medium-copper);
+				}
+
+				&.silver {
+					@include round-glass.shaded(colors.$medium-silver);
+				}
+
+				&.gold {
+					@include round-glass.shaded(colors.$medium-gold);
+				}
+			}
+
+			//
+			// selected glass colored icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				&.red {
+					@include round-glass.shaded(colors.$dark-red);
+				}
+
+				&.raspberry {
+					@include round-glass.shaded(colors.$dark-raspberry);
+				}
+
+				&.red-orange {
+					@include round-glass.shaded(colors.$dark-red-orange);
+				}
+
+				&.orange {
+					@include round-glass.shaded(colors.$dark-orange);
+				}
+
+				&.yellow {
+					@include round-glass.shaded(colors.$dark-yellow);
+				}
+
+				&.lime {
+					@include round-glass.shaded(colors.$dark-lime);
+				}
+
+				&.green {
+					@include round-glass.shaded(colors.$dark-green);
+				}
+
+				&.teal {
+					@include round-glass.shaded(colors.$dark-teal);
+				}
+
+				&.aqua {
+					@include round-glass.shaded(colors.$dark-aqua);
+				}
+
+				&.cyan {
+					@include round-glass.shaded(colors.$dark-cyan);
+				}
+
+				&.blue {
+					@include round-glass.shaded(colors.$dark-blue);
+				}
+
+				&.indigo {
+					@include round-glass.shaded(colors.$dark-indigo);
+				}
+
+				&.violet {
+					@include round-glass.shaded(colors.$dark-violet);
+				}
+
+				&.plum {
+					@include round-glass.shaded(colors.$dark-plum);
+				}
+
+				&.purple {
+					@include round-glass.shaded(colors.$dark-purple);
+				}
+
+				&.magenta {
+					@include round-glass.shaded(colors.$dark-magenta);
+				}
+
+				&.brown {
+					@include round-glass.shaded(colors.$dark-brown);
+				}
+
+				&.grey {
+					@include round-glass.shaded(colors.$dark-grey);
+				}
+
+				&.black {
+					@include round-glass.shaded(colors.$dark-black);
+				}
+
+				&.white {
+					@include round-glass.shaded(colors.$dark-white);
+				}
+
+				&.copper {
+					@include round-glass.shaded(colors.$dark-copper);
+				}
+
+				&.silver {
+					@include round-glass.shaded(colors.$dark-silver);
+				}
+
+				&.gold {
+					@include round-glass.shaded(colors.$dark-gold);
+				}
+			}
+		}
+	}
+}

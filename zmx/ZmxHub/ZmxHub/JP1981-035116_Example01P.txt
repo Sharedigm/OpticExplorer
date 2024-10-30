@@ -1,0 +1,40 @@
+[descriptive data]
+title	JP 1981-035116 Example 1 (Nikon AI Nikkor 600mm f/5.6 IF-ED)
+[constants]
+Scaled	600	100
+[variable distances]
+Focal Length	600	undefined
+Angle of View	4.12	undefined
+F-Number	5.6	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.09675
+d0	Infinity	6446.75
+d6	97.53	105.534
+d11	17.778	9.774
+d11AS	13.778	5.774
+Bf(p)	undefined	undefined
+Bf	241.24	241.24
+BfFS	138.96	138.96
+[lens data]
+1	179.268	14.502	1.50032	113.52	81.9
+2	-423.240	0.300		113.52	
+3	171.252	14.100	1.50032	106.62	81.9
+4	-475.002	3.102		106.62	
+5	-360.000	4.998	1.74950	102.96	35.0
+6	447.762	d6		102.96	
+7	-171.468	6.498	1.69895	51.36	30.0
+8	-70.890	2.298	1.51680	51.36	64.2
+9	482.268	4.002		51.36	
+10	-390.000	3.000	1.69680	49.14	55.6
+11	107.454	d11AS		49.14	
+11AS	AS	4.00		43.482
+12	-313.800	4.500	1.57000	47.58	70.1
+13	-95.766	103.284		47.58	
+13FS	FS	BfFS		36.00
+[figure]
+source	Data/JP1981-035116_Figure01P.png
+originX	170.30
+originY	642.00
+ppmm	2.396
+[notes]
+Bill: Repair r12 -67.5 -> -52.3 Added Flare Stop at the filter position.

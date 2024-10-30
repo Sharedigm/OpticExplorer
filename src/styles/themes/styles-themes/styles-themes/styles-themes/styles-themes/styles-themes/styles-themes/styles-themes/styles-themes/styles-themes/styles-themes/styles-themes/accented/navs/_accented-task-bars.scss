@@ -1,0 +1,74 @@
+/******************************************************************************\
+|                                                                              |
+|                          _accented-task-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../dialogs/accented-dialogs";
+
+//
+// colors
+//
+
+$icon-color: accented-dialogs.$title-icon-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	& {
+
+		//
+		// unminimized task bars
+		//
+
+		#desktop:not(.task-bar-minimized):not(.accented) .task-bar {
+			.task-list {
+				li {
+
+					i {
+						color: $icon-color !important;
+					}
+				}
+			}
+		}
+
+		#desktop.accented:not(.task-bar-minimized) .task-bar {
+			.task-list {
+				li:not(.colored) {
+
+					i {
+						color: $icon-color !important;
+					}
+				}
+			}
+		}
+
+		//
+		// minimized task bars
+		//
+
+		#desktop.task-bar-minimized:not(.accented) .task-bar {
+			.task-list {
+				li {
+
+					i {
+						color: white !important;
+					}
+				}
+			}
+		}
+	}
+}

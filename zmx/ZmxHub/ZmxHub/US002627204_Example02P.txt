@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 2,627,204 Example 2 (Cosina Voigtlander Ultron 50mm f2)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	2.3
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	34.860
+[lens data]
+1	31.6070	2.9980	1.62139	28.61	60.3
+2	88.0055	0.2000		28.61
+3	21.9140	3.1975	1.65953	25.28	57.0
+4	54.3400	3.5975		25.28
+5	48.5145	2.4480	1.64691	20.77	33.9
+6	13.5480	5.5465		17.49
+6.5	AS	3.8965		14.347
+7	-13.2220	1.0540	1.63652	15.76	35.5
+9	38.5015	4.8465	1.69347	20.32	53.5
+10	-18.6165	0.1500		20.32
+11	188.3115	3.8970	1.72381	22.10	38.0
+12	-39.6910	Bf		22.10
+[figure]
+source	Data/US002627204_Figure03P.png
+originX	40.58
+originY	202.42
+ppmm	7.825
+[notes]

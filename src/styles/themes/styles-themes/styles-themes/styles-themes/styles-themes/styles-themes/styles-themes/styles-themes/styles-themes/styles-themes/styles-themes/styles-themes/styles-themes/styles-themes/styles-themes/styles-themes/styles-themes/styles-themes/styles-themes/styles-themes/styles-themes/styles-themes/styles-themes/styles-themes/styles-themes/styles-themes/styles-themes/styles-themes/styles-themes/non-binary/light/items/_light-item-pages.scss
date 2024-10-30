@@ -1,0 +1,68 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-item-pages.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/light-selection";
+@use "light-item-icons";
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.pages {
+	
+		.main-carousel {
+
+			//
+			// light items
+			//
+
+			.item {
+				.name {
+
+					//
+					// light editable names
+					//
+				
+					&[contenteditable="true"] {
+						outline-color: light-selection.$edit-highlight-color;
+					}
+				}
+			}
+
+			//
+			// light selected items
+			//
+
+			.item.selected {
+
+				.icon {
+					background-color: light-item-icons.$selected-background-color;
+					border-color: light-item-icons.$selected-border-color;
+
+					> i {
+						color: light-selection.$select-color;
+					}
+				}
+
+				.details {
+					background-color: light-selection.$select-color;
+				}
+			}
+		}
+	}
+}

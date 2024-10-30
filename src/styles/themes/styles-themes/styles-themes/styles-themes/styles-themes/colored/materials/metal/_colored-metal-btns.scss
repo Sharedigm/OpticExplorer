@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-metal-buttons.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/metal/metal-btns";
+@use "../../../../navs/materials/metal/metal-buttons";
+@use "../../navs/colored-btns";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary).colored {
+	&.metal-buttons,
+	&.metal.auto-buttons {
+
+		//
+		// styled buttons
+		//
+
+		.btn:not(.btn-primary):not(.colored):not(:disabled) {
+
+			//
+			// special buttons
+			//
+
+			&.success {
+				@include metal-buttons.shade(colored-forms.$success-color);
+			}
+
+			&.caution {
+				@include metal-buttons.shade(colored-forms.$caution-color);
+			}
+
+			&.warning {
+				@include metal-buttons.shade(colored-forms.$warning-color);
+			}
+		}
+	}
+}
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.metal-buttons,
+		&.metal.auto-buttons {
+
+			//
+			// metal styled buttons
+			//
+
+			.btn {
+
+				//
+				// metal primary buttons
+				//
+
+				&.btn-primary {
+					@include metal-btns.shade(colored-btns.$primary-color);
+
+					&:disabled {
+						@include metal-btns.shade(colored-btns.$disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.metal-buttons,
+		&.metal.auto-buttons {
+
+			//
+			// metal styled buttons
+			//
+
+			.btn {
+
+				//
+				// metal primary buttons
+				//
+
+				&.btn-primary {
+					@include metal-btns.shaded(colored-btns.$default-primary-color);
+
+					&:disabled {
+						@include metal-btns.shaded(colored-btns.$default-disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}

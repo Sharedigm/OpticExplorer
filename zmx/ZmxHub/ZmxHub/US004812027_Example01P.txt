@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,812,027 Example 1 (Nikon AI-S AF Nikkor 85mm f/1.8)
+[constants]
+[variable distances]
+Focal Length	85	undefined
+Angle of View	28	undefined
+F-Number	1.8	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.10917
+d0	Infinity	747.86
+d6	27.6330	14.9713
+d6AS	19.4330	6.7713
+Bf	38.2080	50.8697
+[lens data]
+1	42.082	8.8	1.76684	49.75	46.76
+2	214.882	0.2		46.43
+3	32.583	7.8	1.72000	42.44	50.28
+4	61.173	1.6		39.74
+5	112.400	3.2	1.78470	42.34	26.07
+6	21.331	8.2		29.42
+6AS	AS	d6AS		28.171
+7	-24.800	2.4	1.62588	28.51	35.64
+8	-104.881	2.0		31.15
+9	-69.065	5.0	1.69350	32.20	53.76
+10	-30.448	0.2		32.20
+11	87.287	5.0	1.76684	34.20	46.76
+12	-125.021	Bf		34.20
+[figure]
+source	Data/US004812027_Figure01P.png
+originX	68.61
+originY	261.74
+ppmm	8.643
+[notes]
+Bill: Measured d0 and Magnification.

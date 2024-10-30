@@ -1,0 +1,42 @@
+[descriptive data]
+title	JP 2014-145954 Example 1 (Sigma 60mm F2.8 DN A)
+[variable distances]
+Focal Length	60.00	55.86
+Angle of View	26.38	25.93
+F-Number	2.92	2.97
+Image Height	28.40	28.40
+Total Length	74.02	74.02
+Magnification	0	-0.08157
+S	Infinity	800
+d0	Infinity	726.0057
+d6	10.1300	6.6783
+d10	1.9400	5.3917
+Bf(p)	1.0000	1.0001
+Bf	0	0
+[lens data]
+1	31.12	3.35	1.80420	26.92	46.50
+2	73.27	4.93		24.28	
+3	21.50	4.40	1.59282	19.92	68.62
+4	-1000.00	1.55	1.60342	19.92	38.01
+5	15.25	4.50		15.56	
+6	AS	d6		14.016
+7	-17.72	1.05	1.64769	14.56	33.84
+8	-34.67	2.70		15.46	
+9	44.26	4.05	1.59201	18.48	67.02
+10	-23.85	d10		18.48	
+11	-1000.00	0.70	1.58144	19.14	40.89
+12	20.38	2.90		18.70	
+13	61.64	0.70	1.69895	21.84	30.05
+14	17.98	4.85	2.00100	21.84	29.13
+15	100.00	23.07		21.84	
+16	CG	2.20	1.51680	30.04	64.20
+17	CG	1.00		30.04	
+[aspherical data]
+10	-23.85	0	1.6600E-05	-1.3996E-08	2.6793E-10	-1.0970E-12
+[figure]
+source	Data/JP2014-145954_Figure01P.png
+originX	21.73
+originY	66.86
+ppmm	4.173
+[notes]
+Bill: Figure 1 was unusable so the cover figure was used instead.

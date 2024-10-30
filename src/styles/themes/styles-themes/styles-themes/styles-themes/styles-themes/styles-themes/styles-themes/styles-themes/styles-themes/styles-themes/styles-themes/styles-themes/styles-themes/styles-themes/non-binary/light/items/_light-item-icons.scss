@@ -1,0 +1,155 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-item-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../medium/items/medium-item-icons";
+@use "../navs/light-selection";
+
+//
+// variables
+//
+
+$background-opacity: medium-item-icons.$background-opacity;
+
+//
+// colors
+//
+
+$selected-border-color: colors.$very-very-light-grey;
+$selected-background-color: colors.faded($selected-border-color, medium-item-icons.$background-opacity);
+$highlighted-border-color: light-selection.$highlight-color;
+$highlighted-background-color: colors.faded($highlighted-border-color, $background-opacity);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.icon-grid {
+
+		//
+		// light items
+		//
+
+		.item {
+			> .row:nth-child(2) {
+				.name {
+
+					//
+					// light editable names
+					//
+
+					&[contenteditable="true"] {
+						outline-color: light-selection.$edit-highlight-color;
+					}
+				}
+			}
+
+			//
+			// light selected items
+			//
+
+			&.selected {
+				border-color: $selected-border-color;
+
+				> .row:first-child {
+					border-color: inherit;
+					
+					.icon:not(.colored) {
+						background-color: $selected-background-color;
+						border-color: inherit;
+					}
+				}
+
+				> .row:nth-child(3) {
+					.details {
+						background-color: light-selection.$select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.icon-grid {
+
+			//
+			// unfocused selected items
+			//
+
+			.item.selected {
+				border-color: light-selection.$highlight-color;
+
+				> .row:first-child {
+					border-color: inherit;
+
+					.icon:not(.colored) {
+						background-color: $highlighted-background-color;
+						border-color: inherit;
+					}
+				}
+
+				> .row:nth-child(2) {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							background-color: light-selection.$highlight-color;
+						}
+					}
+				}
+
+				> .row:nth-child(3) {
+					.details {
+						background-color: light-selection.$highlight-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// no icon backgrounds
+	//
+
+	&:not(.icon-backgrounds) {
+		.icon-grid, .app-icons {
+			.item {
+
+				//
+				// selected app icons
+				//
+
+				&.selected {
+					.icon, .icon.colored {
+						background: none !important;
+						background-color: $selected-background-color !important;
+						border-color: $selected-border-color !important;
+					}
+				}
+			}
+		}
+	}
+}

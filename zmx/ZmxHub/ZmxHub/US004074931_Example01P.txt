@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,074,931 Example 1 (Ricoh smc Pentax-M 35-70mm F2.8-3.5)
+[constants]
+[variable distances]
+Focal Length	36.0	68.5
+Angle of View	64.6	35.0	45.6
+F-Number	2.8	2.8
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	0
+d0	Infinity	Infinity
+d6	45.989	0.782
+Bf(p)	undefined	undefined
+Bf	44.84	66.24
+Aperture Diameter	24.752	33.768
+[lens data]
+1	61.498	1.98	1.81600	48.48	46.8
+2	28.292	10.19		40.28	
+3	-115.896	1.40	1.69680	40.28	56.5
+4	77.925	3.30		42.53
+5	54.580	5.01	1.77551	41.10	37.8
+6	-1879.350	d6		41.10
+7	54.200	4.99	1.69680	34.58	56.5
+8	-159.222	1.00		34.58
+8AS	AS	1.00		24.752
+9	35.335	6.49	1.81600	32.41	46.8
+10	81.154	2.60		29.97
+11	-131.435	13.24	1.80518	29.65	25.4
+12	26.491	4.19		25.02
+13	99.329	3.80	1.75700	25.02	47.9
+14	-48.129	Bf		25.02
+[figure]
+source	Data/US004074931_Figure01P.png
+originX	3.24
+originY	100.53
+ppmm	3.992
+[notes]
+Bill: Not a great fit. Note it's the telephoto end.

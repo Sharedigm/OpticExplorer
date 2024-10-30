@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,045,128 Example 1 (Canon FD400mm f4.5 SSC)
+[constants]
+Scaled	400	100
+[variable distances]
+Focal Length	400	undefined
+Angle of View	6.18	undefined
+F-Number	4.5	undefined
+Total Length	320.04	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.19742
+d0	Infinity	2298.66
+d8	9.000	38.624
+Bf(p)	undefined	undefined
+Bf	158.58	158.58
+[lens data]
+1	275.3224	14.500	1.48749	94.72	70.1
+2	-131.0104	8.936		94.72	
+3	-112.2528	5.000	1.80610	91.60	40.9
+4	-1033.3596	0.500		91.60	
+5	163.8580	13.000	1.48749	90.56	70.1
+6	-222.4844	72.420		90.56	
+6AS	AS	27.600		55.332
+7	34.1476	5.000	1.58913	42.32	61.1
+8	30.7464	d8		39.52	
+9	145.2136	3.000	1.75520	38.48	27.5
+10	435.7940	2.500	1.71300	38.48	53.9
+11	76.2564	Bf		38.48	
+[figure]
+source	Data/US004045128_Figure01P.png
+originX	7.53
+originY	78.31
+ppmm	1.616
+[notes]

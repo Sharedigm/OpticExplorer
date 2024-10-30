@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,536,379 Example 1 (Leica Telyt-S 800mm f/6.3)
+[constants]
+Scaled	800	1
+[variable distances]
+Focal Length	800
+Angle of View	undefined
+F-Number	5.9
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	267.200
+Aperture Diameter	44.755	44.755
+[lens data]
+1	411.328	9.600	1.67245	139.36	45.8
+2	256.033	20.000	1.54408	139.36	73.0
+3	-256.033	9.600	1.57125	139.36	55.8
+4	-2699.024	516.80		139.36	
+4AS	AS	Bf		44.755
+[figure]
+source	Data/US003536379_Figure01P.png
+originX	24
+originY	86.5
+ppmm	0.9202
+[notes]
+Bill: Patent is missing a lot if the usual information.
+Patent figure shows S' but Bf is not specified and was measured by the Optical Bench.
+Patent doesn't specify an image height.
+The patent does not mention an aperture but one is shown on the lens contruction figure.
+Angle of view and image height are not supplied.
+The patent mentions an 800mm application therefore Image Height was set to 43.2 / 800 = 0.054

@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 5,528,428 Example 3 (Nikon Nikkor 28mm f/2.8 (28ti))
+[constants]
+[variable distances]
+Focal Length	28.9
+Angle of View	74.0
+F-Number	2.87
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	20.96
+[lens data]
+1	12.422	1.50	1.53172	19.41	49.1
+2	8.919	3.37		15.71
+3	12.829	3.87	1.84042	14.21	43.3
+4	-1726.972	1.00	1.64831	10.10	33.8
+5	12.785	1.75		9.07	
+5AS	AS	2.25		8.729
+6	51.931	2.50	1.81600	10.68	46.8
+7	-17.040	1.00	1.61750	10.68	30.8
+8	54.857	1.31		12.65
+9	-21.730	2.95	1.79668	12.65	45.4
+10	-10.479	0.80		14.87
+11	-8.874	1.50	1.59507	14.29	35.5
+12	-13.780	Bf		17.36
+[figure]
+source	Data/US005528428_Figure03P.png
+originX	22.76
+originY	490.24
+ppmm	48.504
+[notes]

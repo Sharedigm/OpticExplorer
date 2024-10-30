@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 2022/0026670 Example 3 (Ricoh 26.1mm F2.8 (GR3x))
+[constants]
+[variable distances]
+Focal Length	26.05
+Angle of View	56.6
+F-Number	2.87
+Image Height	28.4
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+1	9.247	2.91	1.85400	13.68	40.38	OHARA L-LAH85V
+2	24.908	0.70	1.78880	12.04	28.43	OHARA S-NBH58
+3	7.360	2.01		9.03	
+4	-22.769	0.70	1.63980	9.03	34.47	OHARA S-TIM27
+5	61.496	0.10		9.66		
+6	17.395	2.32	1.88300	9.20	40.76	OHARA S-LAH58
+7	-113.651	1.20		9.20		
+8	AS	1.20		7.348
+9	24.522	2.57	1.75500	10.04	52.32	OHARA S-LAH58
+10	-9.139	0.60	1.53172	10.04	48.84	OHARA S-TIL6
+11	33.044	1.15		10.25	
+12	-18.000	1.00	1.90270	10.25	31.00	OHARA L-LAH86
+13	-26.676	14.378		11.92		
+14	CG	1.40	1.51633	33.20	64.14	
+15	CG	0.70		33.20		
+[aspherical data]
+1	9.247	0	-2.63557E-05	-6.86204E-07	9.51319E-09	-2.99238E-10
+13	-26.676	0	1.30975E-04	-3.75252E-07	5.96446E-08	-8.12812E-10
+[figure]
+source	Data/US20220026670_Figure03P.png
+originX	79.49
+originY	148.51
+ppmm	9.155
+[notes]

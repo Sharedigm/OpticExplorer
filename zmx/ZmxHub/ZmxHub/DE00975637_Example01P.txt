@@ -1,0 +1,38 @@
+[descriptive data]
+title	DE 975 637 C Example 1 (Schneider Super-Angulon 8 / 90)
+[constants]
+Scaled	90	100
+[variable distances]
+Focal Length	90
+Angle of View	100
+F-Number	8
+Image Height	214
+Magnification	0
+d0	Infinity
+Bf	66.06
+[lens data]
+1	165.321	1.953	1.4645	46.32	65.7
+2	20.754	13.698		33.70	
+3	23.013	10.026	1.7174	25.43	29.5
+4	12.618	9.873	1.5601	14.87	47.0
+5	941.346	1.287		14.87	
+5AS	AS	1.026		12.58	
+6	Infinity	9.162	1.5827	15.25	46.5
+7	-12.672	9.756	1.7174	15.25	29.5
+8	-24.210	13.698		25.43	
+9	-20.979	1.953	1.4645	33.46	65.7
+10	-269.037	Bf		45.98	
+[figure]
+source	Data/DE00975637_Figure01P.png
+originX	215.62
+originY	409.39
+ppmm	9.063	8.157
+[notes]
+Bill: Production focal lengths and image heights:
+f	Y
+47mm	112mm
+65mm	153mm
+90mm	214mm
+121mm	286mm
+165mm	393mm
+210mm	501mm

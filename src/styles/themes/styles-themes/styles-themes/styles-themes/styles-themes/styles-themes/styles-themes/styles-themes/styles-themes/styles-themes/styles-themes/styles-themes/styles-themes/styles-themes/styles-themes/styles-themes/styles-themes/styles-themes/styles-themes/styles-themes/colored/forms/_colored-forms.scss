@@ -1,0 +1,75 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-forms.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$success-color:			colors.$medium-green;
+$caution-color:			mix(colors.$medium-gold, colors.$medium-orange);
+$warning-color: 		mix(colors.$medium-orange, colors.$medium-red);
+$error-color: 			colors.$light-red;
+
+//
+// styles
+//
+
+body.colored {
+
+	span.success {
+		color: $success-color !important;
+	}
+
+	span.caution {
+		color: $caution-color !important;
+	}
+
+	span.warning {
+		color: $warning-color !important;
+	}
+
+	span.error {
+		color: $error-color !important;
+	}
+
+	//
+	// label validation
+	//
+
+	label.error {
+		color: $error-color !important;
+	}
+
+	//
+	// input validation
+	//
+
+	.form-group.error input,
+	.form-group.error textarea {
+		border-color: $error-color !important;
+	}
+
+	//
+	// table validation
+	//
+
+	td.error {
+		outline-color: $warning-color !important;
+	}
+}

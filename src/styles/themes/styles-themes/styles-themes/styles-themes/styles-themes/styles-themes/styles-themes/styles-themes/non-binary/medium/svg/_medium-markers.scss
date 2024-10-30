@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-markers.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.viewport {
+		marker {
+			fill: black;
+
+			path {
+				stroke: black;
+			}
+
+			&.filled {
+				path {
+					fill: black;
+				}
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+		marker {
+			fill: white;
+
+			path {
+				stroke: white;
+			}
+
+			&.filled {
+				path {
+					fill: white;
+				}
+			}
+		}
+	}
+}

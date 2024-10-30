@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 4,260,223 Example 1 (Nikon Micro-Nikkor 55mm f/2.8)
+[constants]
+Scaled	55	100
+[variable distances]
+Focal Length	55	undefined
+Angle of View	42.92	undefined
+F-Number	2.8	undefined
+NA	undefined	0.0900
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.99347
+d0	Infinity	90.3067
+d6	7.316	16.375
+d6AS	4.116	14.175
+Bf(p)	undefined	undefined
+Bf	42.45	99.07
+[lens data]
+1	51.195	3.750	1.77279	23.52	49.40
+2	-600.500	0.100		23.52	
+3	19.000	3.750	1.713	21.52	53.90
+4	31.410	1.050		19.32	
+5	90.000	1.050	1.61293	19.32	36.90
+6	16.089	d6AS		16.58	
+6AS	AS	3.200		14.913	
+7	-22.305	1.050	1.69895	18.04	30.00
+8	300.000	8.050	1.74443	21.42	49.40
+9	-25.000	0.100		21.42	
+10	190.046	3.750	1.79668	24.00	45.40
+11	-123.839	Bf		24.00	
+[figure]
+source	Data/US004260223_Figure01AP.png
+originX	135
+originY	136
+ppmm	3.567
+[notes]
+

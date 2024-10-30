@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 2,721,499 Example 2 (Zeiss Biogon 2.1cm f/4.5)
+[constants]
+Scaled	21	100
+[variable distances]
+Focal Length	21
+Angle of View	undefined
+F-Number	4.5
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	10.35
+[lens data]
+1	22.9194	0.777	1.50380	23.72	66.7
+2	11.0523	2.772		17.91	
+3	23.1525	0.777	1.48697	21.18	70.3
+4	10.6512	7.350		16.80	
+5	11.8104	6.153	1.72020	12.13	50.3
+6	5.3277	2.793	1.60739	8.20	59.5
+7	-40.9332	0.274		8.20	
+8	AS	0.713		5.932	
+9	-53.0670	0.588	1.56993	8.20	57.5
+10	6.4239	4.977	1.62500	8.20	53.3
+11	-5.3571	3.822	1.71965	8.20	29.3
+12	-12.0498	8.190		12.76	
+13	-8.4315	2.058	1.64200	15.65	58.1
+14	-21.5544	Bf		22.17	
+[figure]	
+source	Data/US002721499_Example02_Tale01_Fig-2.png
+originX	10
+originY	197
+ppmm	16.703
+[notes]
+Bill: IH from approximate Angle of View

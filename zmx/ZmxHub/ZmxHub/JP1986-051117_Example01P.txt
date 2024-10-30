@@ -1,0 +1,44 @@
+[descriptive data]
+title	JP 1986-051117 Example 1 (Ricoh smc Pentax 6x7 300mm f4 ED [IF])
+[constants]
+Scaled	300	100
+[variable distances]
+Focal Length	300.15	undefined
+Angle of View	17	undefined
+F-Number	4	undefined
+Image Height	89.6	89.6
+Magnification	0	-0.17700
+S	Infinity	2100
+d0	Infinity	1805.19
+d8	12.240	34.788
+d12	39.780	17.232
+d12AS	32.160	9.602
+Bf(p)	141.180	141.180
+Bf	141.21	141.21
+[lens data]
+1	141.780	9.69	1.48749	76.26	70.1
+2	-1193.400	1.02		76.26	
+3	77.109	12.87	1.49700	76.39	81.6
+4	1621.800	1.83		76.39
+5	4074.000	5.91	1.74320	68.15	49.3
+6	57.300	2.04		65.04
+7	60.630	12.33	1.49700	61.43	81.6
+8	1459.440	d8		61.43
+9	-216.270	4.59	1.51633	56.61	64.1
+10	99.780	7.80		56.61
+11	-626.340	5.31	1.71736	54.02	29.5
+12	-181.920	d12AS		54.02
+12AS	AS	7.62		48.526
+13	1302.990	5.82	1.77250	47.56	49.7
+14	-93.720	12.24		47.56
+15	-90.570	3.30	1.56732	45.55	42.8
+16	76.299	12.24		45.55
+17	95.370	5.61	1.74320	52.48	49.3
+18	274.500	Bf		52.48
+[figure]
+source	Data/JP1986-051117_Figure01P.png
+originX	36.38
+originY	139.59
+ppmm	2.156
+[notes]
+Bill: Measured d0 and Magnification

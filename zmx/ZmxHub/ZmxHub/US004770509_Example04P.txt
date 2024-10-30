@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 4,770,509 Example 4 (Nikon AF Zoom-Nikkor 35-70mm f/3.3-4.5)
+[constants]
+[variable distances]
+Focal Length	36.0	50.0	68.0
+Angle of View	undefined	undefined	undefined
+F-Number	3.3	undefined	4.6
+Total Length	101.983	98.172	101.507
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	23.536	9.925	0.660
+Bf(p)	undefined	undefined	undefined
+Bf	45.45	55.25	67.84
+[lens data]
+1	33.177	1.7	1.72000	32.29	50.28
+2	16.693	7.4		26.55	
+3	-113.680	1.2	1.72000	26.55	50.28
+4	49.947	0.4		27.18
+5	28.363	3.6	1.75692	26.63	31.70
+6	130.697	d6		26.63
+7	60.918	2.5	1.62041	20.28	60.29
+8	-66.782	0.1		20.28	
+9	18.801	4.1	1.65160	19.60	58.54
+10	-174.777	1.1	1.65128	19.60	38.20
+11	45.733	1.55		19.60	
+11AS	AS	1.55		15.756
+12	-70.642	2.8	1.72825	16.60	28.34
+13	19.170	2.4		16.60	
+14	90.708	2.6	1.62004	16.46	36.35
+15	-26.355	Bf		16.46	
+[figure]
+source	Data/US004770509_Figure02P.png
+originX	170.69
+originY	458.40
+ppmm	12.470
+[notes]

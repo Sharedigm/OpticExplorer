@@ -1,0 +1,66 @@
+/******************************************************************************\
+|                                                                              |
+|                               _light-apps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// styles
+//
+
+body.binary.light {
+
+	.app {
+		@include binary-colors.light-grey;
+
+		//
+		// standard apps
+		//
+
+		> .header-bar {
+
+			//
+			// app body
+			//
+
+			& + .body {
+				@include binary-colors.white;
+				
+				> .contents {
+					@include binary-colors.light-grey;
+				}
+			}
+		}
+	}
+
+	//
+	// modal / non-desktop apps
+	//
+
+	.modal .app {
+		> .body {
+			> .contents {
+				.mainbar {
+					@include binary-colors.light-grey;
+
+					form, .tab-content {
+						@include binary-colors.white;
+					}
+				}
+			}
+		}
+	}
+}

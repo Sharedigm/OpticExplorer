@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2017/0090163 Example 1 TC (Fujifilm Fujinon XF1.4X TC WR)
+[metadata]
+[constants]
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.40171
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	28.40
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+40	FS	2.5000		29.32	
+
+41	138.7994	0.93	1.88300	24.73	40.76
+42	26.2480	4.94	1.67270	23.61	32.10
+43	-55.7408	3.75		23.61
+44	-57.9214	0.93	1.88300	25.23	40.76
+45	23.5950	7.37	1.59270	25.23	35.31
+46	-23.5950	0.93	1.88300	25.23	40.76
+47	109.8995	0.20		26.02
+48	27.7570	5.12	1.74320	28.22	49.34
+49	Infinity	1.66	1.92286	28.22	18.90
+50	99.9651	13.1685		28.22
+
+51	CG	2.85	1.51680	29.74	64.20
+52	CG	1.10		29.74	
+[figure]
+source	Data/US20170090163_Figure02TCP.png
+originX	12.47
+originY	131.50
+ppmm	9.098
+[notes]
+Bill: Lateral Magnification not provided.

@@ -1,0 +1,30 @@
+[descriptive data]
+title	DE 1,241,637 Example 1 (Zeiss Hologon f8 15mm)
+[constants]
+Scaled	15	1
+[variable distances]
+Focal Length	15
+Angle of View	120
+F-Number	8
+Total Length	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	4.542
+[lens data]
+1	11.6400	7.9785	1.80518	21.80	25.46
+2	3.8430	2.7030		7.63
+3	5.6685	4.1685	1.71300	7.19	53.89
+3.4	Infinity	0		1.5345
+3.5AS	AS	0		1E6
+3.6	Infinity	3.4800	1.71300	1.5345	53.89
+4	-5.5080	2.4045		6.84
+5	-3.6285	5.2365	1.80518	7.257	25.46
+6	-8.9835	Bf		17.31
+[figure]
+source	Data/DE01241637_Figure01P.png
+originX	28.60
+originY	69.47
+ppmm	4.507
+[notes]
+

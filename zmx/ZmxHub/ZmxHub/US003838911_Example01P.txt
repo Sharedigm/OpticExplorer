@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 3,838,911 Example 1 (Olympus 135mm f3.5 E Zuiko Auto-T)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	3.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	50.46
+[lens data]
+1	61.151	5.94	1.62041	42.86	60.2
+2	479.863	5.98		42.86	
+3	39.289	7.01	1.48749	37.26	69.8
+4	Infinity	2.39	1.76182	37.26	26.5
+5	101.102	16.54		30.98	
+5AS	AS	3.59		22.078
+6	106.998	2.42	1.66998	23.48	39.3
+7	23.855	19.85		20.46	
+8	45.827	3.40	1.80518	27.02	25.4
+9	84.232	Bf		27.02	
+[figure]
+source	Data/US003838911_Figure01P.png
+originX	125.09
+originY	322.87
+ppmm	12.023
+[notes]

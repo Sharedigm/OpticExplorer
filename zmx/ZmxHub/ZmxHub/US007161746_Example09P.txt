@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 7,161,746 Example 9 (Nikon AF Fisheye-Nikkor 10.5mm f/2.8G ED)
+[constants]
+[variable distances]
+Focal Length	10.56
+Angle of View	180
+Angle of View(m)	182.57
+F-Number	2.88
+Image Height	28.40
+Total Length	103.7
+Magnification	0
+d0	Infinity
+Bf	41.1
+[lens data]
+1	85.000	2.040	1.62041	53.00	60.29
+2	16.450	8.320		30.50	
+3	61.180	1.700	1.81600	30.40	46.63
+4	20.150	10.316		25.40	
+5	-204.000	3.430	1.72000	20.10	43.69
+6	-31.260	0.250		19.06	
+7	-27.000	2.780	1.77250	19.06	49.61
+8	11.480	4.930	1.72825	16.36	28.46
+9	-55.840	5.865		16.36	
+10	59.670	2.570	1.51742	10.69	52.42
+11	-14.200	1.410	1.83481	10.69	42.72
+12	-76.000	3.660		11.08	
+13	AS	6.467		12.061
+14	-1732.000	1.490	1.84666	16.50	23.78
+15	29.900	4.020	1.49700	16.50	81.61
+16	-21.550	0.190		16.50	
+17	44.740	3.210	1.65160	19.31	58.54
+18	-44.740	Bf		19.31	
+[figure]
+source	Data/US007161746_Figure17P.png
+originX	18
+originY	80
+ppmm	2.378
+[notes]
+Bill: Adjustments as per Pierre Toscani. d13 8.776 -> 6.467

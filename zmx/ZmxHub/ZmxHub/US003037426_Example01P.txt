@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 3,037,426 Example 1 (Kinoptik Tegea 5.7mm f/1.8)
+[constants]
+[variable distances]
+Focal Length	5.8
+Angle of View	103
+F-Number	1.8
+Image Height	14.8
+Magnification	0
+d0	Infinity
+Bf(p)	17.95
+Bf	18.62
+[lens data]
+1	Infinity	5.09	1.69153	76.88	54
+2	15.00	50.09		51.10	
+
+3	190.00	10.00	1.68129	57.28	32
+4	-81.53	61.15		57.28	
+
+5	12.83	2.03	1.62025	12.34	60
+6	-343.70	3.81		12.34
+7	-13.40	0.58	1.73150	10.26	28
+8	19.49	1.40		10.26	
+8.5	AS	1.29		10.486
+9	-85.48	1.58	1.62025	11.03	60
+10	-11.00	0.34		11.03
+11	44.46	1.13	1.62025	10.56	60
+12	-44.46	Bf		10.56
+[aspherical data]
+2	15.00	-1
+[figure]
+source	Data/US003037426_Figure01P.png
+originX	15.18
+originY	196.46
+ppmm	3.650
+[notes]
+Bill:

@@ -1,0 +1,48 @@
+[descriptive data]
+title	US 2008/0062534 Example 1 (Olympus Zuiko Digital ED 40-150mm F4.0-5.6)
+[constants]
+[variable distances]
+Focal Length	40.9	77.5	146.7	undefined	undefined	undefined
+Angle of View	30.5	16.4	8.7	undefined	undefined	undefined
+F-Number	4.080	4.800	5.811	undefined	undefined	undefined
+Image Height	23.20	23.20	23.20	23.20	23.20	23.20
+Total Length	undefined	undefined	undefined	undefined	undefined	undefined
+Magnification	0	0	0	-0.04827	-0.08140	-0.1430
+S	Infinity	Infinity	Infinity	900	900	900
+d0	Infinity	Infinity	Infinity	789.09	755.08	732.32
+d3	2.31	37.66	48.35	1.00	34.33	43.37
+d10	17.47	10.74	2.10	18.77	14.07	7.07
+d22	28.43	33.81	54.53	28.43	33.81	54.53
+Bf	0	0	0	0	0	0
+Aperture Diameter	15.665	14.564	16.008	15.665	14.564	16.008
+[lens data]
+1	86.481	4.99	1.6031	36.68	60.6
+2	-108.395	2.10	1.8467	36.68	23.8
+3	-259.407	d3		36.68	
+4	35.302	1.29	1.8052	23.40	25.4
+5	19.524	4.38		17.66	
+6	-56.707	1.01	1.5168	19.14	64.2
+7	20.158	2.76	1.8467	17.38	23.8
+8	226.009	1.27		15.33	
+9	-26.371	1.00	1.7725	15.33	49.6
+10	-229.620	d10		16.68	
+11	AS	1.20		15.665
+12	69.845	3.44	1.4875	19.90	70.2
+13	-34.904	0.15		19.90	
+14	24.185	4.99	1.4970	18.08	81.5
+15	-24.185	1.18	1.8010	18.08	35.0
+16	-482.892	13.90		18.08	
+17	-41.202	2.01	1.5750	19.12	41.5
+18	-22.237	0.30		19.12	
+19	97.144	1.84	1.5168	16.84	64.2
+20	-97.144	6.83		16.84	
+21	-16.722	0.94	1.7725	13.74	49.6
+22	-40.266	d22		16.70	
+23	CG	4.63	1.5163	26.82	64.1
+24	CG	2.50		26.82	
+[figure]
+source	Data/US20080062534_Figure01P.png
+originX	11.48
+originY	100.46
+ppmm	2.985
+[notes]

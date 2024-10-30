@@ -1027,6 +1027,7 @@ proto.setTranslateX = function(x) {
 	x += this.cursorPosition;
 
 	// reverse if right-to-left and using transform
+	//
 	x = this.options.rightToLeft ? -x : x;
 
 	var translateX = this.getPositionValue( x );

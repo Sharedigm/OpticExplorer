@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 4,786,152 Example 3 (Konica Minolta AF 200mm F2.8 APO)
+[constants]
+Scaled	200	100
+[variable distances]
+Focal Length	200
+Angle of View	12
+F-Number	2.8
+Image Height	43.20
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	44.09
+[lens data]
+1	97.108	9.432	1.49310	72.80	83.55
+2	-4235.850	0.298		72.80	
+3	61.996	10.310	1.49310	69.04	83.55
+4	239.500	0.340		69.04	
+5	51.138	7.846	1.72000	59.32	52.14
+6	124.080	1.958		59.32	
+7	172.000	5.526	1.72100	55.46	33.40
+8	34.994	25.922		44.82	
+8AS	AS	2.388		32.286
+9	450.586	4.124	1.75520	34.06	27.51
+10	-87.434	3.092	1.72000	33.04	50.31
+11	61.152	7.092		33.04	
+12	117.668	3.092	1.58144	29.12	40.89
+13	52.908	36.318		29.12	
+14	71.274	5.670	1.48749	38.12	70.44
+15	-174.936	Bf		38.12	
+[figure]	
+source	Data/US004786152_Figure07P.png
+originX	19.67
+originY	152.36
+ppmm	1.927
+[notes]
+Bill: Measure focal length was pretty far off so tweaked r6 111.162 -> 124.080
+Based only on a slight discrepancy with the production figure.

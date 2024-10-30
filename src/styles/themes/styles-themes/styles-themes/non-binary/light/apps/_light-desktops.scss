@@ -1,0 +1,97 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-desktop.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$background-color: colors.$very-light-grey;
+$footer-bar-color: white;
+$info-bar-color: text-colors.$dark-color;
+$info-bar-icon-color: colors.$medium-grey;
+$info-bar-background-color: colors.$very-very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	&.light {
+		#desktop, .desktop.preview {
+
+			//
+			// desktop background color
+			//
+
+			background-color: $background-color;
+		}
+	}
+
+	&.light #desktop.auto,
+	#desktop.light {
+
+		//
+		// light desktop footer bars
+		//
+
+		.desktop.app > .footer-bar {
+			background-color: $footer-bar-color;
+			border-color: $footer-bar-color;
+
+			//
+			// light desktop info bars
+			//
+
+			.desktop-info-bar {
+				color: $info-bar-color;
+				background-color: $info-bar-background-color;
+				border-color: $info-bar-background-color;
+
+				.info-bar {
+					i {
+						color: $info-bar-icon-color;
+					}
+				}
+
+				.toolbar .button:not(:hover) {
+					i {
+						color: $info-bar-icon-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light transparent desktop footer bars
+	//
+
+	/*
+	&.transparent.flat, &.translucent.flat {
+		&.light #desktop.auto,
+		#desktop.light {
+			.desktop.app > .footer-bar {
+				background-color: colors.faded($footer-bar-color, $desktop-footer-bar-opacity);
+			}
+		}
+	}
+	*/
+}

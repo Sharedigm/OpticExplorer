@@ -6,9 +6,41 @@
 </ol>
 
 <div class="content">
-	<p><%= application.name %> has a continually growing collection of apps for communicating with your contacts and managing your data. </p>
+	<p><%= application.name %> has a continually growing collection of apps for designing, sharing, and managing your optical data. </p>
 	<% let apps = config.apps; %>
 	<% let keys = Object.keys(apps); %>
+
+	<div class="section">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2><i class="fa fa-database rotated flipped"></i>Optical Apps</h2>
+				<p>The optical apps allow to to design optical systems and materials. </p>
+				<br />
+			</div>
+			<div class="col-sm-8">
+				<div class="app-icons icon-grid large" style="text-align:center">
+				<% for (let i = 0; i < keys.length; i++) { %>
+				<% let app = apps[keys[i]]; %>
+				<% if (app.category == 'optical') { %>
+				<% if (!app.disabled && !app.hidden) { %>
+				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
+					<div class="row">
+						<div class="icon colored <%= app.color %>">
+							<img src="images/icons/apps/<%= app.image || app.app + '.svg' %>" />
+							<i class="<%= app.icon %>"></i>
+						</div>
+					</div>
+					<div class="row">
+						<div class="name"><%= app.name %></div>
+					</div>
+				</a>
+				<% } %>
+				<% } %>
+				<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<div class="section">
 		<div class="row">
@@ -18,11 +50,11 @@
 				<br />
 			</div>
 			<div class="col-sm-8">
-				<div class="app-icons large icon-grid" style="text-align:center">
+				<div class="app-icons icon-grid large" style="text-align:center">
 				<% for (let i = 0; i < keys.length; i++) { %>
 				<% let app = apps[keys[i]]; %>
 				<% if (app.category == 'system') { %>
-				<% if (!app.disabled) { %>
+				<% if (!app.disabled && !app.hidden) { %>
 				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
 					<div class="row">
 						<div class="icon colored <%= app.color %>">
@@ -50,11 +82,11 @@
 				<br />
 			</div>
 			<div class="col-sm-8">
-				<div class="app-icons large icon-grid" style="text-align:center">
+				<div class="app-icons icon-grid large" style="text-align:center">
 				<% for (let i = 0; i < keys.length; i++) { %>
 				<% let app = apps[keys[i]]; %>
 				<% if (app.category == 'social') { %>
-				<% if (!app.disabled) { %>
+				<% if (!app.disabled && !app.hidden) { %>
 				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
 					<div class="row">
 						<div class="icon colored <%= app.color %>">
@@ -74,7 +106,7 @@
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section" style="display:none">
 		<div class="row">
 			<div class="col-sm-4">
 				<h2><i class="fa fa-briefcase"></i>Productivity Apps</h2>
@@ -82,11 +114,11 @@
 				<br />
 			</div>
 			<div class="col-sm-8">
-				<div class="app-icons large icon-grid" style="text-align:center">
+				<div class="app-icons icon-grid large" style="text-align:center">
 				<% for (let i = 0; i < keys.length; i++) { %>
 				<% let app = apps[keys[i]]; %>
 				<% if (app.category == 'productivity') { %>
-				<% if (!app.disabled) { %>
+				<% if (!app.disabled && !app.hidden) { %>
 				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
 					<div class="row">
 						<div class="icon colored <%= app.color %>">
@@ -106,7 +138,7 @@
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section" style="display:none">
 		<div class="row">
 			<div class="col-sm-4">
 				<h2><i class="fa fa-music"></i>Multimedia Apps</h2>
@@ -114,11 +146,11 @@
 				<br />
 			</div>
 			<div class="col-sm-8">
-				<div class="app-icons large icon-grid" style="text-align:center">
+				<div class="app-icons icon-grid large" style="text-align:center">
 				<% for (let i = 0; i < keys.length; i++) { %>
 				<% let app = apps[keys[i]]; %>
 				<% if (app.category == 'multimedia') { %>
-				<% if (!app.disabled) { %>
+				<% if (!app.disabled && !app.hidden) { %>
 				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
 					<div class="row">
 						<div class="icon colored <%= app.color %>">
@@ -146,11 +178,11 @@
 				<br />
 			</div>
 			<div class="col-sm-8">
-				<div class="app-icons large icon-grid" style="text-align:center">
+				<div class="app-icons icon-grid large" style="text-align:center">
 				<% for (let i = 0; i < keys.length; i++) { %>
 				<% let app = apps[keys[i]]; %>
 				<% if (app.category == 'utility') { %>
-				<% if (!app.disabled) { %>
+				<% if (!app.disabled && !app.hidden) { %>
 				<a class="item" href="#apps/<%= app.app %>" style="text-decoration:none">	
 					<div class="row">
 						<div class="icon colored <%= app.color %>">

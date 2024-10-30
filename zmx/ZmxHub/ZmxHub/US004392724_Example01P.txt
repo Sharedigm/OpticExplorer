@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 4,392,724 Example 1 (Nikon AI Micro-Nikkor 105mm f/2.8S)
+[variable distances]
+Focal Length	105.000	undefined
+Angle of View	23.25	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.5
+d0	Infinity	254.9907
+d6	13.9866	20.6820
+d11	8.1258	34.3666
+Bf(p)	undefined	undefined
+Bf	43.11	43.11
+[lens data]
+1	74.500	5.00	1.77279	40.86	49.4
+2	-1042.700	0.15		40.86	
+3	29.000	5.00	1.71700	37.44	48.1
+4	57.000	2.00		35.26	
+5	91.280	2.00	1.74950	34.84	35.2
+6	24.131	d6		30.34	
+7	-31.190	2.00	1.68893	29.38	31.1
+8	300.000	10.50	1.73350	31.44	51.1
+9	-41.983	1.50		33.22	
+9.5	AS	1.50		29.392
+10	310.300	5.00	1.69350	32.80	53.8
+11	-70.248	d11		32.80	
+12	-191.637	4.00	1.59507	26.94	35.5
+13	-55.637	2.00		26.94	
+14	-114.216	1.80	1.79668	24.60	45.5
+15	50.880	1.80		24.60	
+16	45.690	6.00	1.59507	26.24	35.5
+17	-175.850	4.60		26.24	
+18	-38.545	2.00	1.80454	27.88	39.6
+19	-77.213	Bf		27.88	
+[figure]
+source	Data/US004392724_Figure01P.png
+originX	125.55
+originY	457.43
+ppmm	12.282
+[notes]
+Bill: Patent specifies AS position.

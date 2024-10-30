@@ -1,0 +1,61 @@
+/******************************************************************************\
+|                                                                              |
+|                         _accented-glass-sliders.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../forms/materials/glass/glass-sliders";
+@use "../../forms/accented-sliders";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.glass-sliders,
+		&.glass.auto-sliders {
+
+			input[type="range"] {
+
+				//
+				// inactive slider thumbs
+				//
+
+				@include glass-sliders.inactive-thumb-shade(accented-sliders.$thumb-color, accented-sliders.$thumb-hover-color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.glass-sliders,
+		&.glass.auto-sliders {
+
+			input[type="range"] {
+
+				//
+				// inactive slider thumbs
+				//
+
+				@include glass-sliders.inactive-thumb-shaded(accented-sliders.$default-thumb-color, accented-sliders.$default-thumb-hover-color);
+			}
+		}
+	}
+}

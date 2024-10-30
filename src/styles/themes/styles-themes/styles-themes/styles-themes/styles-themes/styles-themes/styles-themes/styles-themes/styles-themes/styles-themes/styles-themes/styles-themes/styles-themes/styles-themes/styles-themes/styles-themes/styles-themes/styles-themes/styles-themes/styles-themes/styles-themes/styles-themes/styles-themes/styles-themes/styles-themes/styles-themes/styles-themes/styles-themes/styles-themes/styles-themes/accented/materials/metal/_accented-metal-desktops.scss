@@ -1,0 +1,79 @@
+/******************************************************************************\
+|                                                                              |
+|                       _accented-metal-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/metal/rounded-metal";
+@use "../../apps/accented-desktop";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.metal {
+			#desktop,
+			#desktop.auto,
+			#desktop.medium {
+
+				//
+				// metal desktop footer bars
+				//
+
+				.desktop.app > .footer-bar {
+
+					//
+					// metal desktop info bars
+					//
+
+					.desktop-info-bar {
+						@include rounded-metal.shade(accented-desktop.$info-bar-background-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.metal {
+			#desktop,
+			#desktop.auto,
+			#desktop.medium {
+
+				//
+				// metal desktop footer bars
+				//
+
+				.desktop.app > .footer-bar {
+
+					//
+					// metal desktop info bars
+					//
+
+					.desktop-info-bar {
+						@include rounded-metal.shaded(accented-desktop.$default-info-bar-background-color);
+					}
+				}
+			}
+		}
+	}
+}

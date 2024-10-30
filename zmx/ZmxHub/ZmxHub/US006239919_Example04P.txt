@@ -1,0 +1,51 @@
+[descriptive data]
+title	US 6,239,919 Example 4 (Nikon AF-S Nikkor 400mm f/2.8D IF-ED II)
+[constants]
+[variable distances]
+Focal Length	392.0	undefined
+Angle of View	undefined	undefined
+F-Number	2.88	undefined
+NA	undefined	0.17
+Image Height	43.20	43.20
+Total Length	undefined	undefined
+Magnification	0	-0.11789
+S	Infinity	3800
+d0	Infinity	3416.23
+d11	24.59533	35.45378
+d16	27.44354	16.58509
+Bf	83.53862	83.53862
+Aperture Diameter	40.520	40.520
+[lens data]
+1	Infinity	5.00	1.516800	136.7	64.10	
+2	Infinity	1.00		136.7
+3	187.1041	20.10	1.497820	136.2	82.52	136.2
+4	-746.4748	0.60		136.2		
+5	200.0582	20.10	1.497820	128.3	82.52	
+6	-396.5666	2.10		128.3
+7	-372.8865	7.00	1.787971	123.7	47.47	
+8	357.8219	106.40		123.7
+9	78.1740	4.60	1.796681	75.4	45.37	
+10	52.6200	17.00	1.497820	67.7	82.52	
+11	699.2100	d11		67.7
+12	-490.7080	2.50	1.803840	43.4	33.89	43.4
+13	67.8590	4.45		41.3
+14	-227.9240	6.70	1.805182	41.3	25.41	
+15	-45.1530	2.30	1.640000	41.3	60.03	
+16	155.4560	d16		41.3
+17	AS	1.30		40.520
+18	263.7550	4.60	1.696800	41.2	55.60	
+19	-128.7030	2.24		41.2
+20	-58.3970	2.90	1.803840	41.2	33.89	
+21	-172.8630	0.60		41.2
+22	46400.0000	5.50	1.640000	41.5	60.03	
+23	-66.6800	22.00		41.5
+24	FS	7.20		38.0
+25	Infinity	2.00	1.516800	38.1	64.10	
+26	Infinity	Bf		38.1
+[figure]	
+source	Data/US006239919_Figure10P.png
+originX	13.5
+originY	59
+ppmm	0.685
+[notes]
+Bill: Patent diameters for S3 and S12.

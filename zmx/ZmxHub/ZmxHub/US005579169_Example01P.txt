@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 5,579,169 Example 1 (Nikon R-UW AF Fisheye-Nikkor 13mm f/2.8)
+[constants]
+ObjectGlass	1.33306	54.0
+[variable distances]
+Focal Length	12.32
+Angle of View	170.6
+F-Number	2.87
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	39.34
+[lens data]
+1	54.988	8.0	1.51680	98.55	64.1
+2	39.999	20.0		75.97
+3	107.519	3.0	1.67025	59.00	57.5
+4	17.841	12.0		33.43
+5	62.107	2.3	1.69680	32.08	55.6
+6	17.236	2.4		23.96
+7	30.492	10.9	1.59507	26.01	35.5
+8	-16.104	13.5	1.79668	26.01	45.4
+9	-37.279	7.1		21.17
+9AS	AS	3.2		14.265
+10	77.917	1.5	1.79631	17.88	40.9
+11	20.537	4.7	1.51860	17.88	69.9
+12	-50.576	1.0		18.30
+13	76.226	5.2	1.51680	19.09	69.9
+14	-16.237	1.5	1.80518	19.09	25.3
+15	-23.312	1.5		20.65
+16	Infinity	1.2	1.51680	21.50	64.1
+17	Infinity	Bf		21.50
+[figure]
+source	Data/US005579169_Figure01P.png
+originX	81.95
+originY	350.23
+ppmm	5.010
+[notes]
+Bill: Patent figure optical axis and image plane wrongly placed.

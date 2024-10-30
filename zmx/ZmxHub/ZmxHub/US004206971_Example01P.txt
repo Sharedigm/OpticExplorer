@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,2069,71 Example 1 (Nikon TC-14)
+[constants]
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.40006
+[variable distances]
+Focal Length	-125.403
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Total Length	71.001
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	40.122
+[lens data]
+0	FS	13.590		49.20
+1	121.015	4.000	1.59507	30.92	35.6
+2	-100.184	2.008		30.92
+3	-118.420	1.800	1.79668	30.18	45.4
+4	35.500	1.800		30.18	
+5	36.800	6.000	1.59507	31.40	35.6
+6	-5196.816	4.575		31.40	
+7	-99.964	1.500	1.79668	31.68	45.4
+8	70.033	0.200		31.68	
+9	53.938	9.000	1.51009	33.53	63.4
+10	-180.939	Bf		33.53
+[figure]
+source	Data/US004206971_Figure03RCLP.png
+originX	104.74
+originY	774.44
+ppmm	7.023
+[notes]
+Bill: FS from d0. Bf from Total Length.

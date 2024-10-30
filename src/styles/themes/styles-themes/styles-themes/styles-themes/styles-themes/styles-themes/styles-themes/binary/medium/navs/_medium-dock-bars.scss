@@ -1,0 +1,120 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-dock-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/binary-colors";
+
+//
+// colors
+//
+
+$item-indicator-color: black;
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// dock bars
+	//
+
+	#dock-bar {
+		.shelf {
+			@include binary-colors.light-grey;
+		}
+
+		.dock {
+
+			// app icons
+			//
+			.apps {
+				.item {
+					.icon {
+						img {
+							display: none;
+						}
+					}
+				}
+			}
+
+			// app and task icons
+			//
+			.apps, .tasks {
+				
+				.item {
+					.icon {
+						background: white;
+
+						i {
+							color: unset;
+						}
+					}
+
+					//
+					// selected items
+					//
+				
+					&.selected {
+						.icon {
+							background: black;
+
+							i {
+								color: white;
+							}
+						}
+					}
+				}
+
+				.indicator {
+					background-color: $item-indicator-color;
+				}
+			}
+
+			.tasks {
+				svg {
+					filter: none;
+					
+					.window-content {
+						border-color: black;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// window icons for tasks
+	//
+
+	#window-icon {
+		.window-icon-body {
+			fill: white !important;
+			stroke: black;
+			stroke-width: 2;
+			vector-effect: non-scaling-stroke;
+		}
+
+		.window-icon-header {
+			fill: black !important;
+		}
+
+		.window-icon-button {
+			fill: white !important;
+		}
+	}
+}

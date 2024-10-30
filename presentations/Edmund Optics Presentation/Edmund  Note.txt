@@ -1,0 +1,47 @@
+Marissa,
+
+Hello.  I'd like to run an idea by you that I think could possibly be a transformative approach to working with Edmund Optics customers.
+
+I'm the founder of a cloud based optical simulation platform called Optic Explorer (www.opticexplorer.com) that allows people to explore and communicate optical design information.  I thought this could be an ideal platform to help with Edmund Optics's custom manufacturing business so I set up a prototype platform for you to evaluate:
+https://edmundoptics.sharedigm.com
+
+Here is a brief (3 minute) video on the capabilities:
+https://edmundoptics.sharedigm.com/services/public/api/video?path=%2FShared%2FVideos%2FWelcome%20To%20Edmund%20Optics%20Explorer.mp4
+
+The platform incorporates the ability to create and edit optical designs entirely online, to perform some basic optical analysis and to communicate this information using an integrated discussion and messaging system.   It includes the ability to read and write Zemax files (or human readable yml files) so it can easily integrate into your customers' existing workflows.
+
+This could be a way to open up an efficient channel of communication between you and your customers / collaborators.  Optical designs that have been created on this platform can be easily shared via link or web page, for example:
+
+Share by link:
+https://edmundoptics.sharedigm.com/#links/44fe20b1-b28d-edca-16f1-ecc425421c36
+Share by web page:
+https://edmundoptics.sharedigm.com/iframes/optics.html
+
+The platform also includes the ability to exchange messages and engage in discussions so it could provide a convenient and secure B2B communications channel between you and your customers.  This software could be set up on your own servers so you would have complete control over the system and all of the data.
+
+To make this easier to evaluate, I went ahead and set up an account for you so you can log in and get a feel for the system:
+
+website: 	https://edmundoptics.sharedigm.com/
+username:	jharvey
+password:	JeffHarvey123
+
+website: 	https://edmundoptics.sharedigm.com/
+username:	medmund
+password:	MarisaEdmund123
+
+website: 	https://edmundoptics.sharedigm.com/
+username:	jgovier
+password:	JeremyGovier123
+
+Let me know if you'd like to discuss this in more detail or would like to view a demo and discuss over Zoom.
+
+Thank you for your time.
+
+-abe.
+
+p.s.	I'm a longtime fan of Edmund from a young age, having spent many hours as a young person immersed in the catalog.  My first telescope was an Edmund.
+
+Abe Megahed
+Founder, OpticExplorer
+www.opticexplorer.com
+abem@tds.net 

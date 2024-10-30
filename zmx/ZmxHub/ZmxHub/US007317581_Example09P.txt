@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 7,317,581 Example 9 (Ricoh smc Pentax-DA Fish-eye 10-17mm F3.5-4.5ED[IF])
+[constants]
+[variable distances]
+Focal Length	10.36	12.00	16.50			
+Angle of View	172.4	142.0	99.8
+Angle of View(m)	171.84	141.54	99.58
+F-Number	3.6	3.8	4.6			
+Image Height	28.4	28.4	28.4
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d9	13.60	9.32	1.96			
+Bf	39.63	43.26	53.19			
+Aperture Diameter	11.152	11.223	10.756
+[lens data]
+1	80.388	1.90	1.69680	55.22	55.5
+2	21.000	10.88		36.48	
+3	64.000	1.50	1.77250	32.06	49.6
+4	15.117	7.40		24.28	
+5	-141.500	1.50	1.88300	24.02	40.8
+6	24.330	0.70		22.20	
+7	21.400	9.70	1.71736	22.10	29.5
+8	-15.898	1.50	1.88300	22.10	40.8
+9	-76.530	d9		23.06	
+10	44.435	7.00	1.66998	14.00	39.3
+11	-430.160	1.50		14.00	
+11AS	AS	1.50		11.152
+12	33.600	7.44	1.49700	13.88	81.6
+13	-11.780	2.81	1.88300	13.88	40.8
+14	-28.090	1.00		13.88	
+15	-185.512	2.98	1.76182	14.98	26.5
+16	33.660	0.45		14.98	
+17	85.000	2.97	1.69680	14.98	55.5
+18	-20.382	Bf		14.98	
+[figure]
+source	Data/US007317581_Figure33P.png
+originX	25.49
+originY	148.94
+ppmm	4.050
+[notes]
+Bill: r15 sign was wrong (see JP2007-94371)

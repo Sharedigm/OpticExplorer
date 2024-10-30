@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 4,094,588 Example 1 (Olympus Zuiko Auto-S 50mm F1.4)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50
+Angle of View	46
+F-Number	1.4
+Image Height	43.6
+Magnification	0
+d0	Infinity
+Bf	37.150
+[lens data]
+1	30.735	5.790	1.6204	36.38	60.3
+2	145.260	0.095		36.38	
+3	23.690	3.885	1.6935	32.40	50.8
+4	40.010	2.340		32.40	
+5	53.085	1.015	1.5814	30.46	40.8
+6	13.820	9.225		23.53
+6AS	AS	7.56		23.144
+7	-14.920	0.965	1.7552	23.12	27.5
+8	792.345	5.800	1.6935	29.62	53.3
+9	-25.565	0.095		29.62	
+10	-53.085	4.450	1.8061	31.32	40.9
+11	-23.380	0.115		31.32	
+12	93.920	2.850	1.6935	30.48	50.8
+13	-114.865	Bf		30.48	
+[figure]	
+source	Data/US004094588_Figure01P.png
+originX	69.40
+originY	268.56
+ppmm	8.536
+[notes]

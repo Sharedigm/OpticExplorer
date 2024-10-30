@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-metal-icons.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/metal/round-metal";
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.metal-icons,
+	&.metal.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// metal icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+				@include round-metal.shaded(colors.$light-grey);
+			}
+
+			//
+			// selected metal icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				@include round-metal.shaded(colors.$medium-grey);
+			}
+		}
+	}
+}

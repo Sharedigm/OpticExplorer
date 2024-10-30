@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 7,277,232 Example 4 (Nikon AF-S DX Zoom-Nikkor 18-55mm f/3.5-5.6G ED II)
+[constants]
+AsphericalOddCount	1
+[variable distances]
+Focal Length	18.5	35.0	53.5	undefined	undefined	undefined	undefined	undefined	undefined
+Angle of View	77.80	44.60	29.86	undefined	undefined	undefined	undefined	undefined	undefined
+F-Number	3.56	4.65	5.90	undefined	undefined	undefined	undefined	undefined	undefined
+Image Height	28.40	28.40	28.40	28.40	28.40	28.40	28.40	28.40	28.40
+Magnification	0	0	0	-0.025	-0.025	-0.025	-0.13159	-0.23049	-0.38023
+d0	Infinity	Infinity	Infinity	711.47	1371.43	2111.53	112.05	123.32	112.17
+d5	44.0936	13.1895	1.2077	45.4345	13.8983	1.6714	51.1512	19.7238	8.2597
+d14	0.00000	11.09166	23.52778	0.00000	11.09166	23.52778	0.00000	11.09166	23.52778
+d15	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285
+Bf	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285
+Aperture Diameter	15.797	15.932	16.018	15.797	15.932	16.018	15.797	15.932	16.018
+[lens data]
+1	181.0591	2.0	1.77250	40.62	49.61
+2	17.2000	0.2	1.55389	29.99	38.09
+3	12.7630	12.25		29.52
+4	33.8814	2.8	1.86074	30.46	23.06
+5	65.8125	d5		30.46	
+6	42.5378	2.6	1.49700	18.36	81.61
+7	-94.5446	1.8		18.36	
+8	AS	2.0		15.797
+9	24.2385	4.0	1.51680	18.28	64.10
+10	-35.8523	0.8	1.77250	17.66	49.61
+11	67.2430	11.2		17.66	
+12	54.1555	0.8	1.83400	17.66	37.17
+13	15.5723	4.5	1.51680	17.66	64.10
+14	-35.4635	d14		17.66	
+15	FS	Bf		16.26	
+[aspherical data]
+3	12.7630	-0.9625	7.98790E-06	3.03680E-06	-2.15160E-08	5.25940E-11	-2.58910E-13
+[figure]
+source	Data/US007277232_Figure13P.png
+originX	15.75
+originY	78.67
+ppmm	2.096
+[notes]
+Bill: d0 measured. Production looks to be intermediate near closest focus (scenario #8)

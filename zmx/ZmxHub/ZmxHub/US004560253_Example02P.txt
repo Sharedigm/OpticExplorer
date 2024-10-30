@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,560,253 Example 2 (Konica Minolta AF 35-70mm F4)
+[constants]
+[variable distances]
+Focal Length	68.2	50.0	36.0
+Angle of View	undefined	undefined	undefined
+F-Number	4.1	4.1	4.1
+Total Length	94	undefined	undefined
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d4	0.8	17.2	41.1
+Bf(p)	undefined	undefined	undefined
+Bf	59.46	49.43	41.71
+Aperture Diameter	17.399	14.689	12.710
+[lens data]
+1	197.705	2	1.74400	41.34	44.93
+2	23.754	5.7		33.66	
+3	32.800	4.3	1.71736	32.68	29.42
+3.5	86.956	0.15	1.52000	32.68	51.06
+4	70.502	d4		32.68	
+5	35.910	3	1.67000	21.58	57.07
+6	-210.680	0.15		21.58
+7	23.426	2.8	1.67000	20.98	57.07
+8	88.401	2.341		20.98
+8AS	AS	1.85		17.399
+9	-109.921	4.067	1.75000	16.44	25.14
+10	18.693	4.6		19.34
+11	892.777	2.8	1.67270	18.75	32.22
+12	-33.382	Bf		18.75
+[aspherical data]
+4	70.502	-1	-3.2454086E-06	-1.6458645E-09	-1.2334671E-11
+[figure]
+source	Data/US004560253_Figure03P.png
+originX	23.89
+originY	98.82
+ppmm	2.756
+[notes]

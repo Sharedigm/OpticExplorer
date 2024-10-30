@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,848,972 Example 1 (Olympus F.Zuiko Auto-T 85mm F2)
+[constants]
+[variable distances]
+Focal Length	84.992	85.297
+Angle of View	28	undefined
+F-Number	2	undefined
+Image Height	43.26	43.26
+Total Length	undefined	undefined
+Magnification	0	-0.05062
+d0	Infinity	1758.56
+d7AS	10.00	10.70
+Bf(p)	undefined	undefined
+Bf	42.33	46.56
+[lens data]
+1	47.415	6.24	1.65100	44.71	56.15
+2	382.376	0.15		44.71
+3	29.457	1.80	1.60311	38.69	60.70
+4	19.612	8.87	1.69100	33.86	54.84
+5	53.405	3.60		33.86
+6	119.915	1.40	1.80518	29.84	25.43
+7	18.538	7.50		25.10
+7AS	AS	d7AS		24.736
+8	125.044	7.60	1.69700	24.74	48.51
+9	-17.176	0.90	1.62299	24.74	58.14
+10	-122.866	Bf		26.67
+[figure]	
+source	Data/US003848972_Construction.png
+originX	38
+originY	105
+ppmm	2.998
+[notes]
+Bill: Patent did not supply F-Number, Angle of View, d0 or magnification.

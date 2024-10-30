@@ -1,0 +1,67 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dialog-buttons.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../navs/colors/colored-buttons";
+@use "../colors/special-colors";
+
+//
+// colors
+//
+
+$minimize-button-color: special-colors.$success-color;
+$minimize-button-label-color: white;
+$maximize-button-color: special-colors.$caution-color;
+$maximize-button-label-color: white;
+$close-button-color: special-colors.$error-color;
+$close-button-label-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.modals {
+
+		//
+		// focused dialog buttons
+		//
+	
+		.modal.focused .modal-dialog {
+			.modal-header {
+				.buttons {
+					button {
+
+						&.minimize {
+							@include colored-buttons.colored($minimize-button-color);
+							@include colored-buttons.labeled($minimize-button-label-color);
+						}
+
+						&.maximize, &.unmaximize {
+							@include colored-buttons.colored($maximize-button-color);
+							@include colored-buttons.labeled($maximize-button-label-color);
+						}
+
+						&.close-btn {
+							@include colored-buttons.colored($close-button-color);
+							@include colored-buttons.labeled($close-button-label-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

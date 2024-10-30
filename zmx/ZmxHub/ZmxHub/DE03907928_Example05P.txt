@@ -1,0 +1,47 @@
+[descriptive data]
+title	DE 3,907,928 Example 5 (Rodenstock Apo-Sironar-W 150mm f5.6)
+[constants]
+[variable distances]
+Focal Length	148.7
+Angle of View	80
+F-Number	5.6
+Total Length	undefined
+Image Height	240
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	123.51
+[lens data]
+1	32.66	5.00	1.49	51.11	70.4
+2	39.24	0.10		48.46
+3	32.90	9.20	1.60	45.60	65.4
+4	169.09	2.10	1.55	38.65	44.3
+5	19.95	2.91		29.69
+6	36.13	2.45	1.52	27.97	69.7
+7	52.52	8.60		25.34	
+7.5	AS	7.45		20.527
+8	-163.71	2.35	1.46	26.34	65.8
+9	-52.71	1.92		26.34	
+10	-26.13	2.40	1.65	26.34	39.6
+11	-136.26	9.55	1.64	34.69	55.4
+12	-28.18	Bf		40.51
+[figure]
+source	Data/DE03907928_Figure01P.png
+originX	63.93
+originY	283.91
+ppmm	7.191
+[notes]
+Bill: Focal Length was way off. Consulted other examples and changed most n/v values (!)
+1	32.66	5.00	1.52	51.11	64.2	N-BK7	schott	1.5168	64.17
+2	39.24	0.10		48.46
+3	32.90	9.20	1.62	45.60	63.5	N-PSK53	schott	1.62014	63.48
+4	169.09	2.10	1.69	38.65	49.6	N-LAF34	schott	1.7725	49.62
+5	19.95	2.91		29.69
+6	36.13	2.45	1.50	27.97	56.4	K10	schott	1.50137	56.41
+7	52.52	8.60		25.34	
+7.5	AS	7.45		19.97	
+8	-163.71	2.35	1.46	26.34	65.8	FK3	schott	1.4645	65.77
+9	-52.71	1.92		26.34	
+10	-26.13	2.40	1.65	26.34	39.6	E-ADF50	hoya	1.65412	39.62
+11	-136.26	9.55	1.62	34.69	53.2	BSM22	ohara	1.622296	53.186644
+12	-28.18	Bf		40.51

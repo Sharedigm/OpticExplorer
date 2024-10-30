@@ -1,0 +1,44 @@
+[descriptive data]
+title	JP 1989-223410 Example 5 (Konica Minolta AF 80-200mm F4.5-5.6)
+[constants]
+[variable distances]
+Focal Length	82.50	140.00	195.00
+Angle of View	undefined	undefined	undefined
+F-Number	4.50	5.50	5.80
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d4	2.050	22.970	38.616
+d8	22.122	10.080	2.550
+d8AS	21.122	9.080	1.550
+d14	17.793	8.916	0.800
+Bf(p)	undefined	undefined	undefined
+Bf	40.55	61.46	77.11
+Aperture Diameter	19.105	18.087	17.497
+[lens data]
+1	56.069	2.400	1.84666	36.14	23.83
+2	37.275	0.360		35.01
+3	40.050	5.200	1.71300	35.01	53.93
+4	-738.596	d4		35.01
+5	-53.107	1.200	1.75450	21.47	51.57
+6	38.790	0.150		20.04
+7	42.116	2.000	1.75000	20.04	25.14
+8	1536.712	d8AS		20.04
+8AS	AS	1.000		19.105
+9	99.360	2.400	1.84666	23.03	23.83
+10	30.967	1.180		20.97
+11	84.047	5.500	1.51680	22.53	64.20
+12	-50.148	0.150		22.53
+13	32.109	6.500	1.51680	24.07	64.20
+14	-40.995	d14		22.36	
+15	-184.480	3.200	1.75000	21.07	25.14
+16	-35.615	1.000		21.07
+17	-36.127	1.500	1.75450	21.07	51.57
+18	30.522	Bf		21.07
+[figure]
+source	Data/JP1989-223410_Figure10P.png
+originX	69.93
+originY	101.28
+ppmm	4.514
+[notes]

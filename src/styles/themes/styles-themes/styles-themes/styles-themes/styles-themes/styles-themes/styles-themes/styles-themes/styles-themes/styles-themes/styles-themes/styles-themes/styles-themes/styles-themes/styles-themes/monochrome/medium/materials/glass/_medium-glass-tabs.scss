@@ -1,0 +1,56 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-glass-tabs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/glass/round-glass";
+@use "../../navs/medium-tabs";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome.glass-tabs,
+	&.monochrome.glass.auto-tabs {
+		&.show-tab-close-buttons {
+			ul.nav-tabs {
+				> li {
+
+					//
+					// glass active tabs
+					//
+
+					&.active {
+
+						//
+						// glass tab close icons
+						//
+
+						i.fa-times, i.fa-xmark {
+							&:hover {
+								@include round-glass.shade(medium-tabs.$tab-button-color);
+							}
+
+							&:active {
+								@include round-glass.shade(medium-tabs.$tab-button-active-color);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

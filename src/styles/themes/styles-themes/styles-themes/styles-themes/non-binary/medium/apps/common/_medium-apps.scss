@@ -1,0 +1,204 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-apps.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../../../../materials/glass/frosted-glass";
+@use "../../colors/medium-branding";
+
+//
+// colors
+//
+
+$background-color: colors.$ultra-light-grey;
+$message-color: colors.$light-grey;
+$message-background-color: colors.faded(colors.$very-very-light-grey, 25%);
+$border-color: darken($background-color, 10%);
+
+$sidebar-color: $background-color;
+$sidebar-panel-color: white;
+$sidebar-header-background-color: transparent;
+$colored-sidebar-color: lighten(medium-branding.$primary-color, 10%);
+$sidebar-panel-blur: 10px;
+$sidebar-panel-opacity: 25%;
+$transparent-sidebar-color: colors.faded($background-color, 50%);
+
+$spinner-color: medium-branding.$secondary-color;
+$spinner-background-color: colors.faded(colors.$light-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.app {
+	 	
+		.header-bar, .footer-bar {
+			color: text-colors.$dark-color;
+
+			.app-bar, .info-bar, .address-bar, .toolbar {
+				border-color: $border-color;
+
+				i {
+					color: colors.$medium-grey;
+				}
+
+				.button.selected, .input-group-addon.btn {
+					i {
+						color: inherit;
+					}
+				}
+
+				.button:hover {
+					i {
+						color: inherit;
+					}
+				}
+
+				.btn-primary {
+					i {
+						color: white;
+					}		
+				}
+			}
+
+			//
+			// breadcrumb links
+			//
+
+			.address-bar {
+				.breadcrumb a {
+					color: text-colors.$dark-color;
+				}
+			}
+
+			//
+			// item separators
+			//
+
+			> div {
+				border-color: $border-color;
+			}
+		}
+
+		.body, .body-region {
+			border-color: $background-color;
+
+			> .contents {
+				border-color: $border-color;
+
+				> .split {
+					border-color: $border-color;
+
+					&.sidebar {
+						background-color: $sidebar-color;
+
+						.header {
+							background-color: $sidebar-header-background-color;
+						}
+					}
+				}
+			}
+
+			//
+			// app help messages
+			//
+
+			.help.message {
+				color: $message-color;
+				background: $message-background-color;
+				@include frosted-glass.frosted();
+
+				i {
+					color: $message-color;
+				}
+			}
+		}
+
+		//
+		// loading spinners
+		//
+
+		.spinner {
+			border-color: $spinner-background-color;
+			border-top-color: $spinner-color;
+		}
+
+		//
+		// panels following apps
+		//
+
+		& + .panel {
+			border-color: $border-color;
+		}
+	}
+
+	//
+	// opaque app sidebars
+	//
+
+	&.opaque {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// transparent app sidebars
+	//
+
+	&.transparent, &.translucent {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $transparent-sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// app sidebar panels
+	//
+
+	&.sidebar-panels {
+		.app {
+			.body, .body-region {
+				.contents {
+					> .sidebar {
+
+						.header {
+							background-color: transparent;
+						}
+
+						.panel {
+							background-color: $sidebar-panel-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

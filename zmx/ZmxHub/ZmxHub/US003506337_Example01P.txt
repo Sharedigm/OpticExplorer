@@ -1,0 +1,48 @@
+[descriptive data]
+title	US 3,506,337 Example 1 (Ricoh smc Pentax 85-210mm F4.5)
+[constants]
+[variable distances]
+Focal Length	85	205
+Angle of View	29.6	11.8
+F-Number	4.5	4.5
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	0
+d0	Infinity	Infinity
+d6	2.00	64.78
+d11	68.50	5.72
+d11AS	65.50	2.72
+d13(p)	0.10	7.41
+d13	0.10	0.10
+Bf(p)	undefined	undefined
+Bf	111.74	111.74
+[lens data]
+1	-3000.000	1.50	1.66680	49.10	33.10
+2	91.640	1.50		49.10	
+3	101.200	4.50	1.61405	49.10	55.10
+4	4545.063	0.10		49.10	
+5	102.000	5.00	1.62280	49.10	56.90
+6	-746.474	d6		49.10	
+7	-145.000	1.00	1.51633	32.82	64.10
+8	127.275	2.50		32.82	
+9	-350.000	1.00	1.64000	32.82	60.20
+10	43.860	3.00	1.74077	32.82	27.70
+11	104.599	d11AS		32.82	
+11AS	AS	3.00		29.597
+12	-50.000	2.00	1.66446	31.62	35.90
+13	-72.889	d13		33.14	
+14	350.000	4.00	1.51633	34.34	64.10
+15	-68.458	0.10		34.34	
+16	53.000	5.30	1.62041	34.52	60.30
+17	-152.064	15.00		34.52	
+18	-45.200	2.50	1.64769	25.98	33.90
+19	53.698	18.50		24.22
+20	1000.000	5.00	1.58913	32.80	61.20
+21	-46.238	Bf		32.80	
+[figure]
+source	Data/US003506337_Figure01aP.png
+originX	16.48
+originY	47.54
+ppmm	1.648
+[notes]
+Bill: d13 is wrong; repaired. Production figure matches telephoto.

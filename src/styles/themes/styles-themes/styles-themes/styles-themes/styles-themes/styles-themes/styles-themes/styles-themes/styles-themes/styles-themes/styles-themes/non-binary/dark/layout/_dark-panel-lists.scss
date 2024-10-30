@@ -1,0 +1,83 @@
+/******************************************************************************\
+|                                                                              |
+|                           _dark-panel-lists.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/dark-branding";
+@use "../navs/dark-selection";
+@use "dark-panels";
+
+//
+// colors
+//
+
+$panel-item-name-color: dark-branding.$primary-color;
+$selected-panel-item-color: text-colors.$light-color;
+$selected-panel-item-background-color: colors.blended(dark-panels.$background-color, dark-selection.$select-color, 25%);
+$selected-panel-item-border-color: dark-selection.$select-color;
+
+$unfocused-selected-panel-item-background-color: darken($selected-panel-item-background-color, 10%);
+$unfocused-selected-panel-item-border-color: darken($selected-panel-item-border-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.panel.item {
+
+		//
+		// dark panel item info
+		//
+
+		> .info {
+			.name {
+				color: $panel-item-name-color;
+			}
+		}
+
+		//
+		// dark selected panel items
+		//
+
+		&.selected {
+			color: $selected-panel-item-color;
+			background-color: $selected-panel-item-background-color;
+			border-color: $selected-panel-item-border-color;
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+
+		.panel.item {
+
+			//
+			// dark selected panel items
+			//
+
+			&.selected {
+				background-color: $selected-panel-item-background-color;
+				border-color: $selected-panel-item-border-color;
+			}
+		}
+	}
+}

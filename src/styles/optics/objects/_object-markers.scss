@@ -1,0 +1,209 @@
+/******************************************************************************\
+|                                                                              |
+|                             _object-markers.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$color: colors.$medium-grey;
+$distant-color: white;
+$highlight-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+$dark-color: colors.$light-grey;
+$dark-distant-color: white;
+$dark-highlight-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+$light-color: colors.$light-grey;
+$light-distant-color: black;
+
+//
+// styles
+//
+
+.optics .viewport {
+	.object.marker {
+
+		//
+		// scene object markers
+		//
+
+		&:not(.distant) {
+			svg {
+				overflow: visible;
+
+				path, polygon, circle, ellipse {
+					stroke-width: 2;
+					vector-effect: non-scaling-stroke;
+					fill-opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+//
+// binary optic markers
+//
+
+body.binary {
+	.optics .viewport {
+		.object.marker {
+			stroke: black !important;
+		}
+	}
+}
+
+//
+// colored object marker styles
+//
+
+body.colored {
+	.optics .viewport {
+
+		.object.marker {
+
+			&:not(.colored) {
+				stroke: $color;
+				fill: $color;
+
+				&.distant {
+					stroke: $distant-color;
+					fill: $distant-color;
+				}
+			}
+
+			//
+			// highlighted markers
+			//
+
+			&:hover {
+				stroke: $highlight-color;
+
+				&.distant {
+					stroke: $highlight-color;
+					fill: $highlight-color;
+				}
+			}
+
+			//
+			// selected markers
+			//
+
+			&.selected {
+				stroke: $select-color;
+
+				&.distant {
+					stroke: $select-color;
+					fill: $select-color;
+				}
+			}
+		}
+	}
+
+	//
+	// light object markers
+	//
+
+	.optics .viewport.light,
+	&.light .optics .viewport.auto {
+
+		.object.marker {
+
+			&:not(.colored) {
+				stroke: $light-color;
+				fill: $light-color;
+
+				&.distant {
+					stroke: $light-distant-color;
+					fill: $light-distant-color;
+				}
+			}
+
+			//
+			// light highlighted markers
+			//
+
+			&:hover {
+				stroke: $highlight-color;
+
+				&.distant {
+					stroke: $highlight-color;
+					fill: $highlight-color;
+				}
+			}
+
+			//
+			// light selected markers
+			//
+
+			&.selected {
+				stroke: $select-color;
+
+				&.distant {
+					stroke: $select-color;
+					fill: $select-color;
+				}
+			}
+		}
+	}
+
+	//
+	// dark object markers
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+
+		.object.marker {
+
+			&:not(.colored) {
+				stroke: $dark-color;
+				fill: $dark-color;
+
+				&.distant {
+					stroke: $dark-distant-color;
+					fill: $dark-distant-color;
+				}
+			}
+
+			//
+			// dark highlighted markers
+			//
+
+			&:hover {
+				stroke: $dark-highlight-color;
+
+				&.distant {
+					stroke: $dark-highlight-color;
+					fill: $dark-highlight-color;
+				}
+			}
+
+			//
+			// dark selected markers
+			//
+
+			&.selected {
+				stroke: $dark-select-color;
+
+				&.distant {
+					stroke: $dark-select-color;
+					fill: $dark-select-color;
+				}
+			}
+		}
+	}
+}

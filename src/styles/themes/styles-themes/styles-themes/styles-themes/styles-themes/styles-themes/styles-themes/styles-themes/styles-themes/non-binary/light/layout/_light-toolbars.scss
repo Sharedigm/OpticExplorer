@@ -1,0 +1,105 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-toolbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../apps/common/light-apps";
+
+//
+// variables
+//
+
+$grip-horizontal-image: url('../../../../images/splitters/horizontal-grip.png');
+$grip-vertical-image: url('../../../../images/splitters/vertical-grip.png');
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$background-color: light-apps.$background-color;
+$border-color: light-apps.$border-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.toolbar {
+		background-color: $background-color;
+		border-color: $border-color !important;
+
+		//
+		// toolbar handles
+		//
+
+		.handle {
+			background-color: $background-color;
+		}
+
+		//
+		// toolbar controls
+		//
+
+		.controls, .tools {
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		.controls, .tools, .button {
+			i {
+				color: $color;
+			}
+
+			svg {
+				fill: $color;
+			}
+		}
+
+		//
+		// toolbar button groups
+		//
+
+		.tool-group {
+			.tools {
+				background-color: $background-color;
+				border-color: $border-color;
+
+				> div {
+					&:first-child {
+						border-color: $border-color;
+					}
+				}
+			}
+		}
+
+		//
+		// handles
+		//
+
+		&.horizontal {
+			.handle {
+				background-image: $grip-horizontal-image;
+			}
+		}
+
+		&.vertical {
+			.handle {
+				background-image: $grip-vertical-image;
+			}
+		}
+	}
+}

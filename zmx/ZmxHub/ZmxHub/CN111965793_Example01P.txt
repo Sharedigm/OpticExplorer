@@ -1,0 +1,45 @@
+[descriptive data]
+title	CN 111965793 Example 1 (Zhong Yi SpeedMaster 50mm F0.95 M)
+[constants]
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	0.95
+Image Height	43.00
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	22.99
+[lens data]
+1	108.29	6.71	1.835	55	42.73	HZLAF55D
+2	-450.80	0.10		53		
+3	30.77	6.84	1.883	45	40.79	HZLAF68B
+4	45.50	2.82		41.03
+5	102.69	1.20	1.755	41.03	27.53	HZF6
+6	24.50	9.58		37		
+7	AS	7.76		35.50		
+8	-26.45	1.37	1.740	37	28.30	HZF5
+9	314.30	0.00		42		
+10	314.30	9.15	1.835	42	42.73	HZLAF55D
+11	-41.48	0.10		44		
+12	101.17	5.20	1.835	46	42.73	HZLAF55D
+13	-1137.00	3.43		46		
+14	599.80	5.82	1.835	45	42.73	HZLAF55D
+15	-82.10	0.10		45		
+16	55.88	5.58	1.835	41	42.73	HZLAF55D
+17	373.20	0.00		39		
+18	373.20	1.20	1.497	35	81.61	HFK61
+19	29.65	2.99		34.01
+20	62.02	8.97	1.717	34.01	47.89	HLAF2
+21	-35.78	0.00		35		
+22	-35.78	1.20	1.847	35	23.78	HZF52TT
+23	372.66	Bf		35		
+[figure]
+source	Data/CN111965793_Figure01P.png
+originX	19.75
+originY	227.19
+ppmm	7.711
+[notes]
+Bill: Patent diameters and glass. Had to reduce s4/s5 and s19/s20 because of glass overlap.
+Measures 51.99mm f/1.06

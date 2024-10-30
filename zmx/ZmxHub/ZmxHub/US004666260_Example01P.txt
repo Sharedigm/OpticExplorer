@@ -1,0 +1,43 @@
+[descriptive data]
+title	US 4,666,260 Example 1 (Ricoh smc Pentax-A 200mm F4 Macro ED)
+[constants]
+[variable distances]
+Focal Length	200	undefined	undefined
+Angle of View	12.4	undefined	undefined
+F-Number	4	4.8	5.6
+Image Height	43.20	43.20	43.20
+Total Length	undefined	undefined	undefined
+Magnification	0	-0.5	-1.0
+d0	Infinity	502.0	302.2
+d13	7.53	35.05	62.58
+d13AS	4.80	32.32	59.85
+Bf	76.9	76.9	76.9
+Aperture Diameter	28.297	23.595	20.147
+[lens data]
+1	100.70	4.50	1.48749	56.66	70.1
+2	214.83	0.50		56.66	
+3	56.08	9.96	1.49700	56.66	81.6
+4	-2002.94	0.50		56.66	
+5	42.78	7.32	1.49700	51.08	81.6
+6	100.60	2.82		48.24	
+7	181.17	2.80	1.61340	47.48	43.8
+8	31.14	12.41		41.14	
+9	-59.12	2.50	1.61293	41.14	37.0
+10	-389.82	3.68	1.69680	43.00	55.5
+11	-98.83	0.20		43.00	
+12	147.65	4.59	1.73400	42.66	51.5
+13	-226.52	d13AS		42.66	
+13AS	AS	2.73		28.297
+14	-167.92	2.50	1.80518	28.04	25.4
+15	-77.84	0.70		28.04	
+16	-95.67	5.50	1.71300	27.38	53.8
+17	54.99	39.83		24.42	
+18	95.94	4.30	1.51633	34.44	64.1
+19	-321.94	Bf		34.44	
+[figure]
+source	Data/US004666260_Figure01P.png
+originX	4.55
+originY	44.37
+ppmm	1.387
+[notes]
+Bill: Intermediate d0 was missing. Last element doesn't line up perfectly.

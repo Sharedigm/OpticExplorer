@@ -1,0 +1,33 @@
+[descriptive data]
+title	JP 1988-106715 Example 2 (Canon Extender EF2X)
+[constants]
+Lateral Magnification	-2
+Lateral Magnification(m)	-2.00001
+[variable distances]
+Focal Length	-84.813
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	54.05
+[lens data]
+11	101.227	2.30	1.69100	26.64	54.8
+12	28.186	2.20		24.52	
+13	36.841	7.93	1.59270	24.32	35.3
+14	-41.841	2.28		24.32	
+21	-52.458	4.63	1.60342	20.48	38.0
+22	-19.373	1.50	1.80610	20.48	40.9
+23	19.506	6.34	1.58144	20.78	40.7
+24	-385.882	12.19		20.78	
+31	246.435	6.00	1.51112	26.60	60.5
+32	-25.785	0.15		26.60	
+33	-88.802	1.50	1.77250	26.52	49.6
+34	91.126	Bf		26.52	
+[figure]
+source	Data/JP1988-106715_Figure03P.png
+originX	61.52
+originY	119.35
+ppmm	2.927
+[notes]

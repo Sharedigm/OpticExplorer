@@ -1,0 +1,18 @@
+################################################################################
+#                                                                              #
+#                              Excimer Laser.spct                              #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION: 
+  Light from an excimer laser.
+
+WAVELENGTHS: [157.00]

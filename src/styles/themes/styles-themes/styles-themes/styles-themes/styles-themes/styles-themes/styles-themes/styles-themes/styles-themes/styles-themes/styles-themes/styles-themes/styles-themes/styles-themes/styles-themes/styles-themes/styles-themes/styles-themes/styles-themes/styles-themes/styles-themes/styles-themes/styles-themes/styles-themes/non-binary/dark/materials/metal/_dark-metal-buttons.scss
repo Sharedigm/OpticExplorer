@@ -1,0 +1,33 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-metal-buttons.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../navs/materials/metal/metal-buttons";
+@use "../../navs/dark-buttons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.dark.metal-buttons,
+	&.dark.metal.auto-buttons {
+
+		.button {
+			@include metal-buttons.shaded(dark-buttons.$color);
+		}
+	}
+}

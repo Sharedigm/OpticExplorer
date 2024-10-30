@@ -1,0 +1,33 @@
+[descriptive data]
+title	FR 1.471.493 Example 1 (Leica Elmarit-R 35mm F2.8)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	38.213
+Bf	38.30
+[lens data]
+1	39.025	2.240	1.4892	30.44	69.9
+2	15.610	15.365		23.56	
+3	52.115	10.605	1.6713	18.64	41.6
+4	-12.880	1.855	1.6299	18.64	38.8
+5	-115.255	0.105		18.64	
+6	23.590	2.975	1.6241	17.78	60.1
+7	-609.980	1.000		17.78	
+7AS	AS	2.325		14.930
+8	-39.935	1.505	1.7046	18.64	34.6
+9	18.935	1.960		17.13
+10	400.925	1.505	1.67340	19.20	46.90
+11	12.530	6.300	1.69400	17.88	54.60
+12	-20.125	Bf		17.88	
+[figure]
+source	Data/FR1471493_Figure01P.png
+originX	35.48
+originY	106.57
+ppmm	5.805
+[notes]

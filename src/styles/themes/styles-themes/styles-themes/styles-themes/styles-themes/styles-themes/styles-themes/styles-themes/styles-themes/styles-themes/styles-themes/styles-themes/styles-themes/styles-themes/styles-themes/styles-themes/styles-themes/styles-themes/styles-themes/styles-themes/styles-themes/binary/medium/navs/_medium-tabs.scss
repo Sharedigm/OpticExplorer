@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// colors
+//
+
+$button-color: white;
+$button-icon-color: black;
+
+//
+// styles
+//
+
+body.binary {
+
+	ul.nav-tabs {
+		> li {
+
+			//
+			// inactive tabs
+			//
+
+			&:not(.active) {
+				> a {
+					@include binary-colors.light-grey;
+
+					i, label, .name {
+						@include binary-text.outline;
+					}
+				}
+			}
+
+			//
+			// active tabs
+			//
+
+			&.active {
+				> a {
+					background: black;
+
+					i, label {
+						text-shadow: none;
+					}
+				}
+			}
+		}
+	}
+
+	&.show-tab-close-buttons {
+		ul.nav-tabs {
+			> li {
+
+				//
+				// active tabs
+				//
+
+				&.active {
+
+					//
+					// tab close icons
+					//
+
+					i.fa-times, i.fa-xmark {
+						&:hover {
+							color: $button-icon-color;
+							background-color: $button-color;
+
+							svg {
+								fill: $button-icon-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// flush tabs
+	//
+
+	ul.nav-tabs.flush {
+		@include binary-colors.light-grey;
+
+		> li:not(.active) {
+			a {
+				@include binary-colors.white;
+				border-color: black;
+			}
+		}
+	}
+}

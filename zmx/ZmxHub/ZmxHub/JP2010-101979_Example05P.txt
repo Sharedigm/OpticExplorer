@@ -1,0 +1,38 @@
+[descriptive data]
+title	JP 2010-101979 Example 5 (Sigma 24.2mm F2.8 (dp2x))
+[constants]
+[variable distances]
+Focal Length	24.1472	undefined	undefined
+Angle of View	56.7586	undefined	undefined
+F-Number	2.9129	undefined	undefined
+Image Height	25.6	25.6	25.6
+Magnification	0	-0.02550	-0.05413
+S	Infinity	1000	500
+d0	Infinity	937.08	436.61
+d12	9.3255	8.1995	6.9867
+Bf	22.6350	23.7610	24.9738
+[lens data]
+1	46.7657	1.0000	1.71300	18.36	53.94
+2	13.6170	3.7677		15.06	
+3	-30.3452	0.8000	1.60342	15.06	38.01
+4	30.3452	0.9158		16.00	
+5	156.2100	2.2164	1.83481	16.00	42.72
+6	-50.8028	0.7032		16.00	
+7	22.9236	3.3836	1.88300	16.00	40.80
+8	-53.9477	5.3000		16.00	
+9	AS	5.3072		10.600
+10	-15.3911	0.8000	1.72825	11.74	28.32
+11	24.9748	4.4049	1.74180	13.40	49.23
+12	-15.1814	d12		13.40	
+13	-127.4690	2.5658	1.58763	19.34	61.09
+14	-31.1114	Bf		19.34	
+[aspherical data]
+12	-15.1814	0	3.046922E-05	1.288985E-07	-8.073659E-10	1.215549E-11
+14	-31.1114	0	9.111786E-06	-6.004492E-09	1.095870E-09	-5.418634E-12
+[figure]
+source	Data/JP2010-101979_Figure17P.png
+originX	126.69
+originY	176.59	223.53
+ppmm	10.861
+[notes]
+Bill: d0 and Magnification measured. Image Height not provided. 20.7x13.8mm sensor is 24.88mm 

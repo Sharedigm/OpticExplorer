@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 2,779,239 Example 1 (Canon 28mm f2.8)
+[constants]
+Scaled	28	1
+[variable distances]
+Focal Length	28.00
+Angle of View	72
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	19.19
+[lens data]
+1	12.1212	1.316	1.6166	14.34	36.6
+2	6.9020	2.324	1.6970	11.42	54.7
+3	23.0720	0.056		11.42
+4	8.1200	1.960	1.7400	9.98	28.2
+5	5.6588	2.330		7.46	
+5AS	AS	2.990		6.919
+6	-5.8520	0.588	1.6889	8.76	31.0
+7	-7.4788	0.028		10.00	
+8	-36.1480	3.668	1.6583	12.69	57.1
+9	-6.8880	0.812	1.5673	12.69	42.8
+10	-10.9760	Bf		15.50	
+[figure]
+source	Data/US002779239_Figure01P.png
+originX	103.50
+originY	126.46
+ppmm	13.255
+[notes]

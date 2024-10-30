@@ -1,0 +1,188 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-items.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors2";
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// item markers
+	//
+
+	.item .marker {
+		color: black;
+		background: white;
+		border-color: black;
+	}
+
+	.item {
+		> .row:first-child {
+			.icon.colored {
+				border-width: 2px;
+
+				i {
+					font-size: 40px;
+				}
+
+				> img {
+					display: none;
+				}
+			}
+		}
+	}
+
+	//
+	// files
+	//
+
+	svg {
+
+		.file-body {
+			fill: white !important;
+			stroke: black !important;
+		}
+
+		.file-corner {
+			fill: white !important;
+			stroke: black !important;
+		}
+
+		.file-icon {
+			path, polygon, circle, rect {
+				fill: black !important;
+			}
+		}
+
+		.file-type path {
+			fill: black !important;
+		}
+	}
+
+	//
+	// folders
+	//
+
+	svg {
+
+		.folder-top {
+			fill: white !important;
+			stroke: black !important;
+		}
+
+		.folder-body {
+			fill: white !important;
+			stroke: black !important;
+		}
+
+		.folder-contents {
+			display: none;
+			fill: white !important;
+			stroke: black !important;
+		}
+
+		.folder-icon {
+			fill: black !important;
+		}
+
+		//
+		// trash directory
+		//
+		
+		.trash-handle {
+			fill: white !important;
+			stroke: black !important;
+			stroke-width: 2 !important;
+		}
+
+		.trash-body,
+		.trash-top,
+		.trash-lid,
+		.trash-groove {
+			fill: white !important;
+			stroke: black !important;
+			stroke-width: 1.5 !important;
+		}
+
+		.trash-paper1, 
+		.trash-paper2,
+		.trash-paper3, {
+			fill: white !important;
+			stroke: black !important;
+			stroke-width: 10 !important;
+		}
+
+		//
+		// clipboard directory
+		//
+
+		.clipboard-body {
+			fill: black !important;
+			stroke: black !important;
+			stroke-width: 10 !important;		
+		} 
+		.clipboard-handle {
+			fill: white !important;
+			stroke: black !important;
+			stroke-width: 10 !important;
+		}
+		.clipboard-paper,
+		.clipboard-corner {
+			fill: white !important;
+			stroke: black !important;
+			stroke-width: 10 !important;
+			stroke-linecap: butt !important;
+		}
+		.clipboard-contents {
+			fill: black;
+		}
+	}
+
+	//
+	// volumes
+	//
+
+	svg {
+		.volume-icon, .volume-outlines, .volume-top {
+			fill: white !important;
+			stroke: black !important;
+		}
+		.volume-logo path,
+		.volume-type path {
+			fill: black !important;
+		}
+	}
+
+	//
+	// apps
+	//
+	
+	.app-icons {
+		.item.selected {
+			.icon {
+				@include binary-colors2.DARK-GREY;
+
+				i {
+					color: black !important;
+				}
+			}
+		}
+	}
+}

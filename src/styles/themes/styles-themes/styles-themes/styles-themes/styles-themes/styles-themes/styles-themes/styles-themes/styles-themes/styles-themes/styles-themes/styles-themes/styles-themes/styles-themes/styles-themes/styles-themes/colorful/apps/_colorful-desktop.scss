@@ -1,0 +1,65 @@
+/******************************************************************************\
+|                                                                              |
+|                           _colorful-desktop.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../materials/glass/plate-glass";
+
+//
+// colors
+//
+
+$footer-bar-color: var(--primary-color);
+$footer-bar-opacity: plate-glass.$max-opacity;
+$default-footer-bar-color: branding.$primary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colorful {
+	& {
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+			.desktop.app {
+
+				//
+				// desktop footer bars
+				//
+
+				> .footer-bar {
+					background-color: $footer-bar-color;
+					border-color: $footer-bar-color;
+				}
+			}
+		}
+
+		//
+		// transparent desktop footer bars
+		//
+
+		&.transparent, &.translucent {
+			#desktop {
+				.desktop.app {
+					> .footer-bar {
+						background-color: fade($footer-bar-color, $footer-bar-opacity);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+[descriptive data]
+title	JP 2011-248340 Example 1 (Nikon 1 Nikkor 10mm f/2.8)
+[constants]
+[variable distances]
+Focal Length	10.30	undefined
+Angle of View	78.61	undefined
+F-Number	2.92	undefined
+NA	undefined	0.17
+HO	undefined	384.94
+Image Height	16.40	16.40
+Total Length	37.96	undefined
+Magnification	0	-0.02130
+d0	Infinity	477.64
+d2	2.1334	1.9061
+d14	10.5166	10.7439
+Bf	0	0
+[lens data]
+1	160.5145	1.55	1.48749	19.58	70.23
+2	-160.5440	d2		19.58	
+3	26.1848	1.10	1.58913	12.66	61.16
+4	4.8842	3.95		9.46	
+5	9.0140	2.50	1.74950	8.08	35.28
+6	79.5499	0.30		8.08
+7	FS	1.70		7.87
+8	AS	1.55		4.561
+9	FS	0.75		6.13
+10	-8.6375	1.20	1.80810	6.60	22.76
+11	113.7348	2.50	1.75500	9.22	52.32
+12	-10.6165	0.40		9.22	
+13	21.1214	2.95	1.59201	11.78	67.02
+14	-13.9521	d14		11.78	
+15	CG	0.50	1.51633	15.84	64.14
+16	CG	1.11		15.84	
+17	CG	1.59	1.51633	16.50	64.14
+18	CG	0.30		16.50	
+19	CG	0.70	1.51633	16.80	64.14
+20	CG	0.66		16.80	
+[aspherical data]
+4	4.8842	-0.4472	7.2260E-05	-3.0492E-06	2.2154E-07	-7.9802E-10
+14	-13.9521	-12.4868	-3.0331E-04	1.1991E-05	-1.9031E-07	1.4300E-09
+[figure]
+source	Data/JP2011-248340_Figure01P.png
+originX	10.80
+originY	100.42
+ppmm	3.772
+[notes]
+Bill: Magnification from HO and Image Height; d0 computed.

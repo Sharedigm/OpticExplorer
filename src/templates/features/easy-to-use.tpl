@@ -10,7 +10,7 @@
 	<div class="attention"><i class="fa fa-smile"></i></div>
 
 	<div class="description section">
-		<p><%= application.name %> combines the power of the cloud with the familiar look and feel of your desktop or mobile OS.  It's so familiar that you'll be comfortable with it right from the start.  It's like your computer but better and in the cloud.</p>
+		<p><%= application.name %> has an easy and intuitive interface so you can focus on the optics, not the software.  The easy to use interface blends the power of the cloud with the best aspects of the user interfaces that you already know and love. </p>
 	</div>
 
 	<div class="details section">
@@ -18,35 +18,23 @@
 			<div class="col-sm-6">
 				<h2><i class="fa fa-check"></i>Features</h2>
 				<ul>
-					<li>Organize your files into folders.</li>
-					<li>Launch apps using the Run menu in desktop mode.</li>
-					<li>Launch apps using the Launcher in mobile mode.</li>
-					<li>Manage and arrange app windows.</li>
-					<li>Minimize/maximize app windows to and from the window tray.</li>
-					<li>Full screen mode.</li>
+					<li>User interface is easy to use and employs techniques such as direct manipulation where possible to make it feel as intuitive as possible. </li>
+					<li>Looks and functions like your native operating system when running from your desktop computer. </li>
 				</ul>
 			</div>
 			<div class="col-sm-6">
 				<h2><i class="fa fa-star"></i>Benefits</h2>
 				<ul>
-					<li>Manage your data and apps. </li>
-					<li>Looks and functions just like your native operating system when running from your desktop computer. </li>
-					<li>Looks and functions just like your mobile operating system when running from your phone.</li>
-					<li>There is almost no learning curve because you basically already know how to use it. </li>
+					<li>Lets you focus on the optics, not the software. </li>
 				</ul>
 			</div>
 		</div>
 	</div>
 
-	<h2><i class="fa fa-desktop"></i>Screen Shots</h2>
-	<div class="figure desktop-only">
-		<a href="images/info/desktop/desktop-windows.png" target="_blank" class="lightbox" title="<%= application.name %> Desktop"><img src="images/info/desktop/desktop-windows.png" /></a>
-		<div class="caption"><%= application.name %> Desktop</div>
-	</div>
-	<div class="figure row">
-		<div class="figure col-sm-6">
-			<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
-			<div class="caption"><%= application.name %> Mobile</div>
-		</div>
+	<h2><i class="fa fa-desktop"></i>Examples</h2>
+	<div class="figure">
+		<a href="images/info/features/easy-to-use.png" target="_blank" class="visible-xs lightbox" title="Easy To Use User Interface"><img src="images/info/features/easy-to-use.png" /></a>
+		<iframe class="hidden-xs" src="https://opticexplorer.sharedigm.com/#links/f62f875b-aede-a63a-d98c-14bce55b5c3a?show_data_editor=false"></iframe>
+		<div class="caption">Easy To Use User Interface</div>
 	</div>
 </div>

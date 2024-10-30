@@ -1,0 +1,77 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-form-controls.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/medium-branding";
+@use "../forms/medium-forms";
+
+//
+// colors
+//
+
+$border-color: medium-forms.$input-border-color;
+$focus-color: medium-forms.$input-focus-color;
+$radio-input-border-color: medium-branding.$secondary-color;
+$radio-input-checked-border-color: text-colors.$dark-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	form {
+
+		//
+		// focused form control highlighting
+		//
+
+		.controls {
+
+			//
+			// radio / checkbox inputs
+			//
+
+			input[type="radio"]:focus,
+			input[type="checkbox"]:focus,
+			select:focus {
+				outline: none;
+			}
+
+			//
+			// radio inputs
+			//
+
+			input[type="radio"] {
+				border-color: $radio-input-border-color !important;
+
+				&:checked {
+					border-color: $radio-input-checked-border-color !important;
+				}
+			}
+		}
+
+		.form-control {
+			border-color: $border-color;
+
+			&:focus {
+				border-color: colors.fade($focus-color, 75%) !important;
+				box-shadow: 1px 1px 10px 0 colors.fade($focus-color, 50%) !important;
+			}
+		}
+	}
+}

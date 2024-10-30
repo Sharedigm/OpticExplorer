@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 4,764,000 Example 8 (Konica Minolta AF 100mm F2.8 Macro)
+[constants]
+[variable distances]
+Focal Length	100	96.9	93.2
+Angle of View	undefined	undefined	undefined
+F-Number	2.83	4.21	5.72
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	-0.5	-1.0
+d0	Infinity	266.40	171.00
+d8	5.00	18.36	27.50
+d12	24.00	10.64	1.50
+Bf(p)	undefined	undefined	undefined
+Bf	43.15	76.55	113.49
+[lens data]
+1	-526.906	3.20	1.51823	35.62	58.96
+2	-112.249	0.15		35.62
+3	38.629	5.00	1.69100	34.76	54.75
+4	144.829	0.15		34.76
+5	26.209	5.50	1.69100	31.15	54.75
+6	74.864	0.33		31.15	
+7	93.593	2.50	1.74000	29.58	31.72
+8	19.714	d8		24.44
+9	212.931	2.50	1.69680	23.98	56.47
+10	51.495	3.85		23.98
+10AS	AS	4.85		21.950
+11	-25.443	3.38	1.83400	22.68	37.05
+12	-26.167	d12		22.68	
+13	-27.741	2.80	1.80741	26.16	31.59
+14	-33.723	0.15		26.16	
+15	133.487	4.00	1.58913	29.94	61.11
+16	-80.018	Bf		29.94	
+[figure]	
+source	Data/US004764000_Figure08P.png
+originX	82.47
+originY	81.43
+ppmm	2.093
+[notes]

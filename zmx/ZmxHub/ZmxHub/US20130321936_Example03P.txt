@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 2013/0321936 Example 3 (Ricoh 18.3mm F2.8 (GR II))
+[constants]
+[variable distances]
+Focal Length	18.30
+Angle of View	76.4
+F-Number	2.81
+Image Height	28.40
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+1	816.141	0.80	1.49710	12.28	81.56	HOYA M-FCD1
+2	13.666	1.79		10.13
+3	-23.543	0.80	1.68893	10.13	31.16	HOYA E-FD8
+4	200.425	0.20		10.44		
+5	15.416	0.80	1.84666	9.68	23.78	HOYA FDS90
+6	9.513	2.34	1.88300	9.48	40.80	HOYA TAFD30
+7	-34.121	1.50		9.48		
+8	AS	1.00		7.304
+9	14.691	2.59	1.88300	9.52	40.80	HOYA TAFD30
+10	-9.087	0.89	1.68893	9.52	31.16	HOYA E-FD8
+11	12.917	1.73		9.19
+12	-12.419	1.20	1.82080	9.19	42.71	HOYA M-TAFD51
+13	-13.832	12.76		10.80		
+14	CG	1.40	1.51680	30.38	64.20	FILTER
+15	CG	0.50		30.38		
+[aspherical data]
+2	13.666	3.80085	1.07069E-04	-3.38949E-06	2.19205E-07	-5.16455E-09
+13	-13.832	-2.86234	1.49055E-04	4.18583E-06	1.25343E-07	-7.88154E-10
+[figure]
+source	Data/US20130321936_Figure03.png
+originX	69.20
+originY	395.39
+ppmm	23.241
+[figure]
+source	Data/US20130321936_FigureP.png
+originX	61.55
+originY	107.48
+ppmm	10.454
+[notes]

@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 3,771,853 Example 3 (Nikon Zoom Nikkor 28-45mm f/4.5)
+[constants]
+[variable distances]
+Focal Length	28.85	44.19
+Angle of View	74	52
+F-Number	4.5	undefined
+Image Height	43.28	43.28
+Total Length	undefined	undefined
+Magnification	0	0
+d0	Infinity	Infinity
+d5	30.3905	5.8365
+d13	1.0864	4.1597
+Bf	37.768	48.895
+Aperture Diameter	8.897	8.897
+[lens data]
+1	52.201	2.0	1.52000	49.22	70.1
+2	28.743	11.5		42.54	
+3	-744.562	4.2	1.80411	40.32	46.4
+4	-70.591	1.3	1.44628	40.32	67.2
+5	29.871	d5		33.18	
+6	39.507	4.5	1.61117	16.46	55.8
+7	-32.141	1.1	1.84110	16.46	43.3
+8	-65.335	0.1		16.46	
+9	18.809	3.0	1.54072	13.04	47.2
+10	60.333	4.0		13.04	
+10AS	AS	0.8		8.897
+11	-117.506	1.7	1.69680	10.56	55.6
+12	-19.070	1.0	1.80454	10.42	39.5
+13	19.373	d13		10.42	
+14	889.704	0.7	1.72825	12.14	28.3
+15	22.348	2.4	1.84110	12.14	43.3
+16	-53.729	0.5		12.14	
+17	-55.000	4.8	1.76684	14.76	46.6
+18	-24.222	Bf		14.76	
+[figure]
+source	Data/US003771853_Example03_Tale15-Fig1.png
+ppmm	6.926231637
+originX	6
+originY	177.5
+[notes]

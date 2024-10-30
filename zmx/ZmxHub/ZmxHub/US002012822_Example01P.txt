@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 2,012,822 Example 1 (Kapella 100mm F1)
+[constants]
+Scaled	100	1
+[variable distances]
+Focal Length	100
+Angle of View	undefined
+F-Number	1.0
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	32.18
+[lens data]
+1	121.47	8.81	1.6135	104.48	59.4
+2	310.70	0.50		104.48	
+3	73.27	8.38	1.6135	99.04	59.4
+4	118.55	0.50		99.04	
+5	50.42	33.70	1.6062	85.66	59.8
+6	-105.16	3.39	1.6945	85.66	30.7
+7	29.03	16.28		49.28	
+7AS	AS	6.66		48.571
+8	59.39	13.72	1.6135	60.36	59.4
+9	-190.62	Bf		60.36	
+[figure]
+source	Data/US002012822_Figure01P.png
+originX	6.54
+originY	45.50
+ppmm	0.925
+[notes]

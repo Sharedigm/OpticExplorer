@@ -1,0 +1,41 @@
+[descriptive data]
+title	JP 2012-242690 Example 2 (Sony E 50mm F1.8 OSS)
+[constants]
+[variable distances]
+Focal Length	51.30	undefined	undefined
+Angle of View	30.86	undefined	undefined
+F-Number	1.85	undefined	undefined
+Image Height	28.40	28.40	28.40
+Magnification	0	-0.025	-0.142
+d0	Infinity	2065.75	374.92
+d12	1.7960	2.6300	6.5990
+d14	11.8290	10.9940	7.0270
+Bf	9.1500	9.1500	9.1500
+[lens data]
+1	44.8799	4.8446	1.83481	32.56	42.72
+2	-275.0160	0.4000		32.56	
+3	23.3824	3.6557	1.91082	26.14	35.25
+4	55.6626	1.0221		23.82
+5	263.1267	0.9000	1.72825	24.94	28.32
+6	15.5392	6.1331		20.26	
+7	-140.2020	0.8000	1.80610	21.66	33.27
+8	67.9694	4.5750		21.66	
+9	AS	1.5000		19.440
+10	30.4655	0.7000	1.84666	21.24	23.78
+11	18.0217	4.7707	1.83481	19.64	42.72
+12	-80.3201	d12		21.18	
+13	-142.5540	0.7000	1.62041	18.86	60.34
+14	20.3958	d14		16.80
+15	46.8341	6.2150	1.72916	26.00	54.67
+16	-33.8583	7.8104		26.00	
+17	-25.3869	2.0000	1.80518	24.42	25.46
+18	-38.0301	5.0000		26.66	
+19	Infinity	2.0000	1.51680	28.40	64.20
+20	Infinity	Bf		28.40	
+[figure]
+source	Data/JP2012-242690_Figure08P.png
+originX	22.51
+originY	85.49
+ppmm	2.650
+[notes]
+Bill: d0 measured. Sony specifications are 9 elements in 8 groups. Bump in construction diagram makes no sense.

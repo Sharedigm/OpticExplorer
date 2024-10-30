@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2019/0086645 Example 1 TC (Fujifilm Fujinon GF1.4X TC WR)
+[metadata]
+[constants]
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.40007
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	57.30
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+27	FS	16.4997		40.40
+
+28	425.3981	1.70	1.71299	39.39	53.87
+29	53.7890	6.97	1.59551	37.29	39.24
+30	-88.1371	6.85		37.29
+31	-91.6290	1.70	1.88300	41.05	39.22
+32	43.0030	11.20	1.62588	41.92	35.74
+33	-43.0030	1.70	1.75500	41.92	52.32
+34	173.8058	0.20		41.92
+35	57.9507	8.15	1.65412	44.11	39.68
+36	-151.5200	1.73	2.00272	46.12	19.32
+37	898.0469	38.9201		46.12
+	
+38	CG	3.20	1.51680	58.56	64.20
+39	CG	0.00		58.56	
+[figure]
+source	Data/US20190086645_Figure02TCP.png
+originX	9.49
+originY	138.50
+ppmm	5.8955
+[notes]
+Bill: Lateral Magnification not supplied. Note Image Height of 57.30mm based on Angle of View of ML exceeds required 54.78mm

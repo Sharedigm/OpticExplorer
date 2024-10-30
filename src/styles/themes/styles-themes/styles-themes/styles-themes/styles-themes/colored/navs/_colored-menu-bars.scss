@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                              _colored-menus.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../../../navs/colors/colored-menu-bars";
+
+//
+// colors
+//
+
+$open-color: var(--primary-color);
+$active-color: colors.darken($open-color, 10%);
+
+$open-icon-color: white;
+$active-icon-color: white;
+
+$open-text-color: white;
+$active-text-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// dropdown menu toggles
+	//
+
+	.menu-bar {
+		@include colored-menu-bars.colored($open-color, $active-color);
+		@include colored-menu-bars.marked($open-icon-color, $active-icon-color);
+		@include colored-menu-bars.labeled($open-text-color, $active-text-color);
+	}
+}

@@ -1,0 +1,29 @@
+[descriptive data]
+title	JP 1977-141223 Example 1 (Mamiya 150mm f/4 Soft)
+[constants]
+Scaled	150	1
+[variable distances]
+Focal Length	150
+Angle of View	33
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	120.48
+[lens data]
+1	51.72	13.815	1.69350	46.58	53.3
+2	-51.72	4.935	1.60311	46.58	60.7
+3	219.29	6.465		46.58	
+4	-82.20	2.760	1.67270	32.50	32.1
+5	49.17	7.935		32.50	
+5AS	AS	3.39		29.625
+6	186.92	14.265	1.73400	30.41	51.5
+7	-17.51	5.325	1.72000	30.41	50.2
+8	-85.17	Bf		38.90	
+[figure]
+source	Data/JP1977-141223_Figure03P.png
+originX	85.03
+originY	139.57
+ppmm	5.349
+[notes]

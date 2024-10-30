@@ -1,0 +1,74 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-icons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../colors/special-colors";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+
+		//
+		// icons
+		//
+
+		i.error, .btn i.error {
+			color: special-colors.$error-color;
+		}
+
+		i.warning, .btn i.warning {
+			color: special-colors.$warning-color;
+		}
+
+		i.success, .btn i.success {
+			color: special-colors.$success-color;
+		}
+
+		i.normal {
+			color: colors.$light-grey;
+		}
+
+		//
+		// special icons
+		//
+
+		i.fa-star {
+			color: orange;
+		}
+
+		i.icon {
+			&.fa-folder, &.fa-folder-open {
+				color: tan;
+			}
+		}
+
+		//
+		// icon branding
+		//
+
+		i.fa-google {
+			color: red;
+		}
+
+		i.fa-dropbox {
+			color: blue;
+		}
+	}
+}

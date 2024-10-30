@@ -12,7 +12,7 @@
 |        'LICENSE.md', which is part of this source code distribution.         |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
 export default {
@@ -160,9 +160,33 @@ export default {
 				});
 				break;
 
+			case 'material_editor':
+				import(
+					'../../../material-editor/material-editor-view.js'
+				).then((AppView) => {
+					done(AppView.default);
+				});
+				break;
+
+			case 'material_map_viewer':
+				import(
+					'../../../material-map-viewer/material-map-viewer-view.js'
+				).then((AppView) => {
+					done(AppView.default);
+				});
+				break;
+
 			case 'notification_center':
 				import(
 					'../../../notification-center/notification-center-view.js'
+				).then((AppView) => {
+					done(AppView.default);
+				});
+				break;
+
+			case 'optic_editor':
+				import(
+					'../../../optic-editor/optic-editor-view.js'
 				).then((AppView) => {
 					done(AppView.default);
 				});
@@ -235,6 +259,14 @@ export default {
 			case 'settings_manager':
 				import(
 					'../../../settings-manager/settings-manager-view.js'
+				).then((AppView) => {
+					done(AppView.default);
+				});
+				break;
+
+			case 'spectrum_editor':
+				import(
+					'../../../spectrum-editor/spectrum-editor-view.js'
 				).then((AppView) => {
 					done(AppView.default);
 				});
@@ -319,8 +351,11 @@ export default {
 					done(AppView.default);
 				});
 				break;
+
 			default:
-				done();
+				application.error({
+					message: "App " + '"' + appName + '"' +  " not found!"
+				});
 		}
 	}
 

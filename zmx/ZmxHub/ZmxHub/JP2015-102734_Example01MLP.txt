@@ -1,0 +1,45 @@
+[descriptive data]
+title	JP 2015-102734 Example 1 ML (Nikon AF-S Nikkor 300mm f/2.8D IF-ED II)
+[constants]
+[variable distances]
+Focal Length	293.79786
+Angle of View	undefined
+F-Number	2.87875
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	86.55
+[lens data]
+1	Infinity	4.0	1.516800	105.50	64.12
+2	Infinity	0.6		105.50	
+3	173.8655	12.0	1.497820	103.90	82.52
+4	-978.0647	0.2		103.90	
+5	134.2050	15.0	1.497820	99.62	82.52
+6	-460.5750	5.0	1.804000	98.30	46.57
+7	332.9139	46.3		98.30	
+8	99.3587	3.5	1.743997	74.82	44.79
+9	55.6910	15.9	1.497820	69.50	82.52
+10	-1333.1846	29.7073		69.50	
+11	-169.9686	2.7	1.516800	44.04	64.05
+12	67.2847	4.51		42.00	
+13	-192.9273	7.0	1.803840	42.00	33.89
+14	-43.0810	2.8	1.589130	42.00	61.29
+15	83.8867	20.1028		42.00	
+16	AS	1.7		38.661
+17	203.1344	5.1	1.518601	40.50	69.92
+18	-99.7742	3.057		40.50	
+19	-42.9950	2.5	1.795040	40.50	28.48
+20	-61.8480	9.1		41.72	
+21	-176.5352	4.7	1.518601	43.10	69.92
+22	-53.3740	19.1		43.10	
+23	Infinity	2.0	1.516800	49.41	64.12
+24	Infinity	Bf		49.41
+[figure]
+source	Data/JP2015-102734_FigureMLP.png
+originX	13.13
+originY	70.73
+ppmm	1.124
+[notes]
+Bill: Moved X 11.5mm away from Image Plane to match construction diagram.

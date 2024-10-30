@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-plastic-icons.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/plastic/round-plastic";
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.plastic-icons,
+	&.plastic.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// plastic icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+				@include round-plastic.shaded(colors.$light-grey);
+			}
+
+			//
+			// selected plastic icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				@include round-plastic.shaded(colors.$medium-grey);
+			}
+		}
+	}
+}

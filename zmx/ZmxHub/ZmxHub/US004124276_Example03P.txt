@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 4,124,276 Example 3 (Konica Minolta 85mm F2.8 VariSoft)
+[constants]
+Scaled	85	100
+[variable distances]
+Focal Length	85
+Angle of View	28
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	56.865
+Bf	64.45
+[lens data]
+A1	40.559	7.34	1.74950	37.16	50.1	
+A2	846.190	7.96		37.16		
+A3	-60.866	2.74	1.63980	28.88	34.7	
+A4	30.572	4.45		24.69
+A4AS	AS	1.83		24.478
+A5	553.109	2.15	1.54072	31.16	46.8	
+A6	30.354	9.09	1.72000	31.16	52.1	
+A7	-46.084	2.35		31.16		variable
+A8	-42.200	4.91	1.69680	31.61	55.5	
+A9	-29.521	2.07		31.61		variable
+B1	-26.825	2.74	1.57616	33.20	41.4	
+B2	-41.432	Bf		33.20		
+[figure]	
+source	Data/US004124276_Figure08P.png
+originX	109.98
+originY	500.49
+ppmm	20.941
+[notes]

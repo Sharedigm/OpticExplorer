@@ -1,0 +1,144 @@
+/******************************************************************************\
+|                                                                              |
+|                            _material-markers.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$colored-stroke-color: var(--primary-color);
+
+//
+// styles
+//
+
+.abbe.diagram {
+
+	.material.markers {
+		fill-opacity: 1;
+		mix-blend-mode: hard-light;
+		stroke-opacity: 1;
+		stroke-width: 1;
+		vector-effect: non-scaling-stroke;
+		filter: drop-shadow(3px 3px 5px fade(black, 35%));
+
+		.material.marker {
+			svg {
+				overflow: visible;
+
+				path, polygon, circle {
+					&.transmitted {
+						stroke: black;
+					}
+
+					&.diffuse {
+						display: none;
+					}
+
+					&.edges {
+						display: none;
+					}
+				}
+			}
+
+			&:hover {
+				svg {
+					path, polygon, circle {
+						&.edges {
+							display: block;
+						}
+					}
+				}
+			}
+
+			&:hover, &.selected {
+				svg {
+					path, polygon, circle {
+						&.transmitted {
+							stroke-width: 2;
+							display: block;
+						}
+
+						&.edges {
+							fill: black;
+							fill-opacity: 0.1;
+							stroke-opacity: 1;
+							stroke-width: 2;
+							stroke-dasharray: 2;
+							stroke-dashoffset: 1;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// colored abbe diagrams
+//
+
+body.colored {
+	.abbe.diagram {
+		.material.markers {
+			.material.marker {
+				&:hover, &.selected {
+					svg {
+						path, polygon, circle {
+							&.edges {
+								stroke: $colored-stroke-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// dark abbe diagrams
+//
+
+.abbe.diagram.dark,
+.dark .abbe.diagram.auto {
+
+	.material.markers {
+		mix-blend-mode: normal;
+
+		.material.marker {
+			svg {
+				path, polygon, circle {
+
+					&.transmitted {
+						fill-opacity: 0.5;
+					}
+
+					&.diffuse {
+						stroke: black;
+						mix-blend-mode: screen;
+						fill-opacity: 0.5;
+						display: block;
+					}
+
+					&.edges {
+						stroke: white;
+						fill-opacity: 0.5;
+						mix-blend-mode: normal;
+					}
+				}
+			}
+		}
+	}
+}

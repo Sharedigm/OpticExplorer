@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,817,603 Example 1 (Ricoh smc Pentax-M 50mm F1.7)
+[constants]
+Scaled	51.6	100
+[variable distances]
+Focal Length	51.6
+Angle of View	45.4
+F-Number	1.7
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	36.92
+[lens data]
+1	71.868	3.607	1.81600	30.76	46.8
+2	-8425.506	0.098		30.76	
+3	23.163	4.123	1.81600	28.32	46.8
+4	48.984	2.668		27.20	
+5	106.064	2.441	1.72825	25.74	28.3
+6	17.972	5.794		22.04
+6AS	AS	4.000		21.450
+7	-19.799	2.487	1.66680	21.54	33.1
+8	375.710	4.649	1.81600	24.26	46.8
+9	-27.260	0.098		24.26	
+10	237.468	2.853	1.81600	24.06	46.8
+11	-56.301	Bf		24.06	
+[figure]
+source	Data/US003817603_Figure01P.png
+originX	21.00
+originY	141.29
+ppmm	7.061
+[notes]

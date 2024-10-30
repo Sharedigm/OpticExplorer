@@ -1,0 +1,47 @@
+[descriptive data]
+title	US 2013/0235465 Example 5 (Samsung 12-24mm F4-5.6 ED)
+[constants]
+[variable distances]
+Focal Length	12.36	18.00	23.40	undefined	undefined	undefined
+Angle of View	103	79	64	undefined	undefined	undefined
+F-Number	4.10	4.73	5.80	undefined	undefined	undefined
+Image Height	28.54	28.54	28.54	28.54	28.54	28.54
+Total Length	undefined	undefined	undefined	undefined	undefined	undefined
+Magnification	0	0	0	-0.07614	-0.10731	-0.14013
+d0	Infinity	Infinity	Infinity	144.102	150.293	149.963
+d4	4.500	5.250	5.100	4.500	5.250	5.100
+d6	14.244	4.551	1.302	15.630	6.074	2.896
+d9	12.668	7.645	3.913	11.283	6.123	2.319
+Bf(p)	undefined	undefined	undefined	undefined	undefined	undefined
+Bf	21.63	29.40	36.86	21.63	29.40	36.86
+[lens data]
+1	35.537	3.0	1.83481	36.08	42.7
+2	12.683	8.11		22.76	
+3	3231.806	1.7	1.77250	24.18	49.6
+4	14.805	d4		22.20	
+5	33.642	3.21	1.84666	22.96	23.8
+6	374.122	d6		22.96	
+7	26.177	1.0	1.84666	18.28	23.8
+8	15.716	4.0	1.60342	17.28	38.0
+9	-230.085	d9		17.28	
+10	AS	2.5		9.243
+11	14.289	3.0	1.49700	11.60	81.6
+12	304.443	2.55		11.60	
+13	19.022	2.4	1.48749	10.84	70.4
+14	-33.561	1.2		10.84	
+15	-20.891	1.2	1.88300	10.82	40.8
+16	14.528	6.5	1.48749	10.82	70.4
+17	-15.186	1.0		13.44	
+18	-22.568	1.5	1.77250	13.16	49.6
+19	-38.034	Bf		14.68	
+[aspherical data]
+3	3231.806	0	2.82208E-05	-1.70632E-07	7.83184E-10	-2.30535E-12
+4	14.805	0	-3.54777E-05	-2.90803E-07	4.57762E-11	-6.09647E-12
+19	-38.034	0	6.71962E-05	3.58213E-07	-3.76745E-11	1.81612E-11
+[figure]
+source	Data/US20130235465_Figure09(1)P.png
+originX	64.26
+originY	492.52
+ppmm	12.379
+[notes]
+Bill: Magnification computed.

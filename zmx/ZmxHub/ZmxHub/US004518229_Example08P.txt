@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 4,518,229 Example 8 (Konica Minolta AF 300mm F2.8 APO)
+[constants]
+[variable distances]
+Focal Length	295.0	undefined
+Angle of View	undefined	undefined
+F-Number	2.9	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.11160
+S	Infinity	3000
+d0	Infinity	2725.78
+d10	3.00	14.760
+d15AS	20.35	8.590
+Bf(p)	undefined	undefined
+Bf	103.71	103.71
+BfFS	86.73	86.73
+[lens data]
+1	140.872	16.00	1.49520	104.18	79.74
+2	-447.513	0.42		104.18	
+3	115.956	14.50	1.49520	95.75	79.74
+4	-701.292	2.52		95.75
+5	-474.476	3.70	1.68150	94.96	36.64
+6	170.954	78.00		94.96
+7	-131.706	2.50	1.65446	51.64	33.86
+8	-216.400	1.35		51.64	
+9	111.332	4.00	1.60311	47.92	60.64
+10	508.815	d10		47.92	
+11	-1256.800	6.50	1.71736	47.19	29.42
+12	-65.525	1.85	1.60311	47.19	60.74
+13	366.046	3.15		45.52	
+14	-228.633	1.70	1.67000	43.78	57.07
+15	66.759	d15AS		38.97
+15AS	AS	1.65		37.367
+16	1084.800	7.00	1.60311	37.76	60.74
+17	-42.017	1.60	1.65446	37.76	33.86
+18	-79.965	16.98		37.76
+18FS	FS	BfFS		30.41
+[figure]
+source	Data/US004518229_Figure22P.png
+originX	24.00
+originY	101.51
+ppmm	1.505
+[notes]
+Bill: Measured d0 and Magnification. Added FS

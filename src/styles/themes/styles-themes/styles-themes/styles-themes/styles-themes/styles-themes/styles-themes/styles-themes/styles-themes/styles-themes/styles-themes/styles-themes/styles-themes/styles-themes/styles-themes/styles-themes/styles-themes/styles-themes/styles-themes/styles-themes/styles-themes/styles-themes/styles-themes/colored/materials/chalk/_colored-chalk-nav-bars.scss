@@ -1,0 +1,71 @@
+/******************************************************************************\
+|                                                                              |
+|                        _colored-chalk-nav-bars.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/chalk/long-round-chalk";
+@use "../../navs/colored-nav-bars";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk {
+
+			.navbar {
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {
+						.inner {
+							@include long-round-chalk.shade(colored-nav-bars.$indicator-color, 5px);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.chalk {
+
+			.navbar {
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {
+						.inner {
+							@include long-round-chalk.shaded(colored-nav-bars.$default-indicator-color, 5px);
+						}
+					}
+				}
+			}
+		}
+	}
+}

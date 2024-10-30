@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 1980-000560 Example 1 (Fujifilm Fujinon 85mm F4.0 SF EBC)
+[constants]
+Scaled	85	1
+[variable distances]
+Focal Length	85
+Angle of View	28
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	62.70
+[lens data]
+1	44.2110	6.5450	1.60311	34.24	60.7
+2	131.5586	4.8400		33.00	
+3	68.3884	9.0600	1.60311	31.04	60.7
+4	90.3775	3.8250		29.22	
+5	485.9920	2.8200	1.76182	26.50	26.5
+6	49.8563	2.5685		24.96	
+6AS	AS	8.6		22.352
+7	-855.1308	6.8000	1.60311	31.18	60.7
+8	-42.8860	Bf		32.72	
+[figure]
+source	Data/JP1980-000560_Figure01P.png
+originX	36.82
+originY	111.14
+ppmm	5.329
+[notes]
+Bill: Adjusted d2, d3, d5. As disclosed with Bf 64.02mm:
+1	44.2110	6.5450	1.60311	34.24	60.7
+2	131.5586	4.4200		33.00	
+3	68.3884	8.5000	1.60311	31.04	60.7
+4	90.3775	3.8250		29.22	
+5	485.9920	2.5500	1.76182	26.50	26.5
+6	49.8563	2.3785		24.96	
+6AS	AS	8		22.744
+7	-855.1308	6.8000	1.60311	31.18	60.7
+8	-42.8860	Bf		32.72	

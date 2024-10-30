@@ -1,0 +1,37 @@
+[descriptive data]
+title	JP 1999-231209 Example 1 (Konica Minolta 135mm F2.8 T4.5 STF)
+[constants]
+[variable distances]
+Focal Length	135.0	undefined
+Angle of View	undefined	undefined
+F-Number	2.83	3.94
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.25
+d0	Infinity	694.05
+d7	14.397	18.198
+Bf(p)	undefined	undefined
+Bf	46.80	80.01
+[lens data]
+1	75.063	9.00	1.60311	64.36	60.74	
+2	infinity	0.25		64.36		
+3	37.102	3.00	1.72342	53.56	37.99	
+4	26.475	16.00	1.51680	47.42	64.20	
+5	104.186	2.05		47.42		
+6	678.979	2.00	1.61293	41.00	36.96	
+7	30.584	d7		35.42		
+8	AS	1.50		28.756		Apodization Filter (AF)
+9	Infinity	0.30	1.50690	31.32	58.94	
+10	20.731	9.33	1.50137	31.32	56.46	
+11	Infinity	17.25		31.32		
+12	97.643	7.50	1.58913	38.28	61.11	
+13	-47.530	9.50		38.28		
+14	-41.707	1.80	1.62041	35.00	60.29	
+15	-923.182	Bf		35.00		
+[figure]
+source	Data/JP1999-231209_Figure01P.png
+originX	26.23
+originY	77.89
+ppmm	1.951
+[notes]
+Bill: d0 measured.

@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,005,379 Example 1 (Schneider Cine-Xenon 1.4 / 25)
+[constants]
+Scaled	25	100
+[variable distances]
+Focal Length	25
+Angle of View	undefined
+F-Number	1.4
+Image Height	20
+Magnification	0
+d0	Infinity
+Bf(p)	14.498
+Bf	14.35
+[lens data]
+1	18.498	4.560	1.6779	19.00	55.5
+2	-114.225	0.753	1.6889	19.00	31.2
+3	74.188	0.080		16.50
+4	9.595	2.735	1.6770	15.82	47.2
+5	15.130	1.123	1.6166	15.82	36.6
+6	6.333	3.453		10.74
+6AS	AS	2.35		10.462
+7	-8.673	0.903	1.6727	10.38	32.2
+8	31.553	3.858	1.6583	13.06	57.3
+9	-12.385	0.080		13.06
+10	53.605	2.375	1.7440	13.09	44.9
+11	-21.303	Bf		13.09
+[figure]
+source	Data/US003005379_Figure01P.png
+originX	63.99
+originY	219.11
+ppmm	17.996
+[notes]
+Bill: Image Height unknown.

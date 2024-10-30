@@ -1,0 +1,36 @@
+[descriptive data]
+title	JP 1978-087728 Example 1 (Mamiya-Sekor Macro C 80mm f4)
+[constants]
+[variable distances]
+Focal Length	80.12	undefined	undefined
+Angle of View	47	undefined	undefined
+F-Number	4	undefined	undefined
+Image Height	70.0	70.0	70.0
+Magnification	0	-0.5	-1.0
+d0	Infinity	210.81	129.83
+d3	1.93	3.53	4.13
+d5	9.38	7.78	7.08
+d5AS	6.22	4.62	3.92
+d7	0.50	2.10	2.80
+Bf(p)	undefined	undefined	undefined
+Bf	62.70	102.70	142.70
+[lens data]
+1	26.0	6.93	1.72000	27.40	50.2
+2	658.4	3.00	1.57501	27.40	41.5
+3	17.5	d3		16.52
+4	31.89	6.76	1.62041	20.24	60.3
+5	45.92	3.16		20.24	
+5AS	AS	d5AS		14.937
+6	-16.95	4.35	1.69895	14.50	30.1
+7	-20.355	d7		19.80	
+8	-100.6	7.55	1.72000	21.35	50.2
+9	-18.216	2.40	1.67270	27.14	32.1
+10	-40.781	Bf		27.14	
+[figure]
+source	Data/JP1978-087728_Figure01P.png
+originX	41.04
+originY	118.88
+ppmm	5.034
+[notes]
+Bill: Angle of View from specifications. Image Height is 645 and agrees with charts.
+MFD is supposed to be 375mm but does not agree with the Optical Bench measurements.

@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,749,478 Example 2 (Olympus Zuiko Auto-T 100mm F2.8)
+[constants]
+Scaled	100	1
+[variable distances]
+Focal Length	100
+Angle of View	24
+F-Number	2.8
+Image Height	43.26
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	42.87
+[lens data]
+1	40.11	4.72	1.58913	36.62	61.11
+2	232.31	0.42		36.62	
+3	32.13	3.36	1.56873	34.52	63.16
+4	50.16	0.25		34.52	
+5	34.06	6.39	1.70154	31.96	41.10
+6	41.59	2.61		27.86
+7	84.50	3.89	1.78470	26.37	26.22
+8	19.60	11.27		22.25
+8AS	AS	14.51		35.71
+9	64.86	2.55	1.78470	26.30	26.22
+10	179.95	Bf		24.01
+[figure]	
+source	Data/US003749478_Figure01P.png
+originX	65.52
+originY	282.22
+ppmm	8.133
+[notes]

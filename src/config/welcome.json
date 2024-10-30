@@ -2,7 +2,7 @@
 	"icon": "fa fa-hand-paper",
 	"title": "Welcome!",
 	"greeting": "Welcome to <%= application.name %>!",
-	"message": "We hope that you enjoy using <%= application.name %> to store, manage, and share your data. ",
+	"message": "We hope that you enjoy using <%= application.name %> to explore the world of optics. ",
 	"delay": 3000,
 
 	"options": {
@@ -10,14 +10,14 @@
 			"message": "See a video tour of the features and benefits.",
 			"icon": "fa fa-video",
 			"label": "View Video",
-			"path": "/Shared/Documents/Videos/Introduction.mp4",
+			"path": "/Shared/Videos/Welcome To OpticExplorer.mp4",
 			"enabled": false
 		},
 		"view_slide_show": {
 			"message": "See a slide show tour of the features and benefits.",
 			"icon": "fa fa-desktop",
 			"label": "View Slide Show",
-			"path": "/Shared/Documents/Presentations/Introduction/",
+			"path": "/Shared/Documents/Presentations/OpticExplorer Presentation/",
 			"enabled": false
 		},
 		"set_theme": {

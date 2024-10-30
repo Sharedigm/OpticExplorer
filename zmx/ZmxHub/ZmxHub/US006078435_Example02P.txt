@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 6,078,435 Example 2 (Ricoh smc Pentax-FA 28-80mm F3.5-4.7)
+[constants]
+[variable distances]
+Focal Length	29.0	55.0	77.2	undefined
+Angle of View	76.2	43.2	31.4	undefined
+F-Number	3.4	4.7	5.9	undefined
+Image Height	43.2	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined	undefined
+Magnification	0	0	0	0
+d0	Infinity	Infinity	Infinity	Infinity
+d8	36.06	10.80	2.70	22.97
+d8AS	34.99	9.73	1.63	21.90
+Bf	46.44	70.06	90.22	55.01
+[lens data]
+1	120.732	3.52	1.57501	44.08	41.5
+2	6072.068	0.10		44.08	
+3	74.525	1.80	1.80610	36.84	40.9
+4	19.698	7.14		29.06	
+5	-1323.476	1.60	1.51633	28.64	64.1
+6	34.825	3.31		28.64	
+7	29.618	3.44	1.78472	26.20	25.7
+8	62.443	d8AS		26.20	
+8AS	AS	1.07		18.726
+9	38.665	3.50	1.62299	19.40	58.2
+10	-84.099	0.10		19.40
+11	19.266	4.00	1.53172	18.96	48.9
+12	130.704	0.65		17.68
+13	-116.615	7.00	1.71736	17.68	29.5
+14	17.282	3.80		14.91
+15	154.509	3.50	1.51633	15.82	64.1
+16	-29.124	Bf		15.82	
+[figure]
+source	Data/US006078435_Figure05P.png
+originX	15.93
+originY	141.92
+ppmm	3.784
+[notes]
+Bill: Production figure is an intermediate focal length; constructed scenario #4.

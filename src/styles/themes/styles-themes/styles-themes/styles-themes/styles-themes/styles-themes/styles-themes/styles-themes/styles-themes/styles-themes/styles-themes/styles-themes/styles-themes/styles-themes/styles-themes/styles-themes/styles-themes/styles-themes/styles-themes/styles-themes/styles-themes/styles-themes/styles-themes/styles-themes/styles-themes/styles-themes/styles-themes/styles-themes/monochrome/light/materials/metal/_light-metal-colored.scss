@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-metal-colored.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/metal";
+
+//
+// colors
+//
+
+$color: $light-grey;
+$selected-color: $very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light.metal {
+
+		//
+		// metal colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.metal($color);
+			}
+
+			&.raspberry {
+				.metal($color);
+			}
+
+			&.red-orange {
+				.metal($color);
+			}
+
+			&.orange {
+				.metal($color);
+			}
+
+			&.yellow {
+				.metal($color);
+			}
+
+			&.lime {
+				.metal($color);
+			}
+
+			&.green {
+				.metal($color);
+			}
+
+			&.teal {
+				.metal($color);
+			}
+
+			&.aqua {
+				.metal($color);
+			}
+
+			&.cyan {
+				.metal($color);
+			}
+
+			&.blue {
+				.metal($color);
+			}
+
+			&.indigo {
+				.metal($color);
+			}
+
+			&.violet {
+				.metal($color);
+			}
+
+			&.plum {
+				.metal($color);
+			}
+
+			&.purple {
+				.metal($color);
+			}
+
+			&.magenta {
+				.metal($color);
+			}
+
+			&.brown {
+				.metal($color);
+			}
+
+			&.grey {
+				.metal($color);
+			}
+
+			&.black {
+				.metal($color);
+			}
+
+			&.white {
+				.metal($color);
+			}
+
+			&.copper {
+				.metal($color);
+			}
+
+			&.silver {
+				.metal($color);
+			}
+
+			&.gold {
+				.metal($color);
+			}
+		}
+
+		//
+		// metal selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.metal($selected-color);
+			}
+
+			&.raspberry {
+				.metal($selected-color);
+			}
+
+			&.red-orange {
+				.metal($selected-color);
+			}
+
+			&.orange {
+				.metal($selected-color);
+			}
+
+			&.yellow {
+				.metal($selected-color);
+			}
+
+			&.lime {
+				.metal($selected-color);
+			}
+
+			&.green {
+				.metal($selected-color);
+			}
+
+			&.teal {
+				.metal($selected-color);
+			}
+
+			&.aqua {
+				.metal($selected-color);
+			}
+
+			&.cyan {
+				.metal($selected-color);
+			}
+
+			&.blue {
+				.metal($selected-color);
+			}
+
+			&.indigo {
+				.metal($selected-color);
+			}
+
+			&.violet {
+				.metal($selected-color);
+			}
+
+			&.plum {
+				.metal($selected-color);
+			}
+
+			&.purple {
+				.metal($selected-color);
+			}
+
+			&.magenta {
+				.metal($selected-color);
+			}
+
+			&.brown {
+				.metal($selected-color);
+			}
+
+			&.grey {
+				.metal($selected-color);
+			}
+
+			&.black {
+				.metal($selected-color);
+			}
+
+			&.white {
+				.metal($selected-color);
+			}
+
+			&.copper {
+				.metal($selected-color);
+			}
+
+			&.silver {
+				.metal($selected-color);
+			}
+
+			&.gold {
+				.metal($selected-color);
+			}
+		}
+	}
+}

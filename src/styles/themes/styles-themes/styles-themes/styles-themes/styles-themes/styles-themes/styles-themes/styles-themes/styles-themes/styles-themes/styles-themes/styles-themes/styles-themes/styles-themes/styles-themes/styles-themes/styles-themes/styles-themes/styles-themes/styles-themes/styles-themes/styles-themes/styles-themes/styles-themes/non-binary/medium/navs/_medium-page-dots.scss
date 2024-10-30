@@ -1,0 +1,45 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-page-dots.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$color: colors.$very-very-very-light-grey;
+$selected-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+.flickity-page-dots {
+	.dot {
+		background-color: $color;
+		border-color: $color;
+
+		//
+		// selected page dots
+		//
+
+		&.is-selected {
+			background-color: $selected-color;
+			border-color: $selected-color;
+		}
+	}
+}

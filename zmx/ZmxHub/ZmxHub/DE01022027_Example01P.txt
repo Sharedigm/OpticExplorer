@@ -1,0 +1,30 @@
+[descriptive data]
+title	DE 1,022,027 Example 1 (Canon Serenar 100mm f3.5)
+[constants]
+[variable distances]
+Focal Length	100
+Angle of View	24
+F-Number	3.5
+Total Length	93.81
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	48.95
+[lens data]
+1	40.00	6.00	1.6228	28.96	56.9
+2	-40.40	1.40	1.6200	28.96	36.3
+3	143.00	6.65		27.13
+4	30.25	2.00	1.6031	24.78	60.7
+5	44.50	11.34		24.78
+5AS	AS	4.66		18.173
+6	-140.00	1.50	1.5263	18.58	51.0
+7	20.31	9.30		15.00
+8	41.25	2.00	1.6237	19.01	47.0
+9	-785.89	Bf		19.01
+[figure]
+source	Data/DE01022027_Figure01P.png
+originX	106.52
+originY	194.32
+ppmm	11.767
+[notes]

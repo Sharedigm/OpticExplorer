@@ -1,0 +1,43 @@
+[descriptive data]
+title	JP 1989-316714 Example 3 (Sigma Macro 90mm F2.8)
+[constants]
+[variable distances]
+Focal Length	88.29	undefined
+Angle of View	undefined	undefined
+F-Number	2.86	4.04
+Image Height	43.2	43.2
+Total Length	97.24	115.03
+Magnification	0	-0.5
+d0	Infinity	209.02
+d4	15.39	16.22
+d11	1.12	18.00
+Bf(p)	undefined	undefined
+Bf	39.73	39.81
+!Aperture Diameter	22.240	50
+[lens data]
+1	99.27	2.59	1.74330	31.78	49.2
+2	-1289.95	0.20		31.78	
+3	43.06	3.14	1.71300	31.64	53.9
+4	105.24	d4		31.64	
+5	-68.91	1.85	1.80518	22.42	25.5
+6	53.03	4.56		23.32	
+7	AS	4.00		18.82	
+8	642.32	2.31	1.71300	21.52	53.9
+9	-55.05	0.20		21.52	
+10	75.14	2.24	1.71300	21.90	53.9
+11	-194.83	d11		21.90	
+12	60.22	1.50	1.80518	22.28	25.5
+13	27.44	5.43		21.10	
+14	-44.02	2.10	1.84666	23.06	23.8
+15	-29.57	4.78		23.06	
+16	-26.50	1.49	1.58913	23.00	61.3
+17	147.46	0.20		27.64	
+18	56.65	4.43	1.83400	29.94	37.4
+19	-130.78	Bf		29.94	
+[figure]
+source	Data/JP1989-316714_Figure03AP.png
+originX	65.46
+originY	126.21
+ppmm	6.221
+[notes]
+Bill: Measured d0.

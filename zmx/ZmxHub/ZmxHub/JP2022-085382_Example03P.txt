@@ -1,0 +1,41 @@
+[descriptive data]
+title	JP 2022-085382 Example 3 (Canon RF16mm F2.8 STM)
+[constants]
+[variable distances]
+Focal Length	16.48	undefined
+Angle of View	105.8	undefined
+F-Number	2.90	undefined
+Image Height	36.40	36.40
+Total Length	63.19	undefined
+Magnification	0	-0.26
+d0	Infinity	62.40
+d15	6.74	12.88
+Bf	12.54	12.54
+[lens data]
+1	27.125	1.10	1.60311	22.82	60.6
+2	9.735	3.67		17.16
+3	30.493	1.00	1.48749	16.85	70.2
+4	10.586	3.21		14.00
+5	40.191	1.71	1.83400	13.32	37.2
+6	-392.360	5.43		13.32	
+7	AS	1.80		9.672
+8	38.857	6.25	1.83481	12.92	42.7
+9	-8.128	0.90	1.90366	12.02	31.3
+10	-16.045	4.69		13.04	
+11	-16.526	0.92	1.68893	15.10	31.1
+12	19.781	5.80	1.59282	18.90	68.6
+13	-26.412	0.91		18.90	
+14	-50.009	2.10	1.53110	19.86	55.9
+15	-32.615	d15		21.42	
+16	-109.118	4.42	1.62299	30.02	58.2
+17	-31.658	Bf		31.80	
+[aspherical data]
+14	-50.009	0	5.22756E-05	-1.92650E-06	3.51677E-08	-3.71946E-10	1.36387E-12
+15	-32.615	0	1.10438E-04	-1.14287E-06	2.01498E-08	-1.88642E-10	6.28660E-13
+[figure]
+source	Data/JP2022-085382_Figure05P.png
+originX	28.52
+originY	133.51
+ppmm	3.772
+[notes]
+Bill: Added close focus scenario.

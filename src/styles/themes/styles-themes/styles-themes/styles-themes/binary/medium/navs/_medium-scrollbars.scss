@@ -1,0 +1,98 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-scrollbars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../bootstrap/variables";
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$color: white;
+$active-color: black;
+
+//
+// desktop styles
+//
+
+body.binary {
+
+	//
+	// desktop scrollbars
+	//
+
+	&[device="desktop"] {
+
+		//
+		// scrollbar thumb
+		//
+
+		::-webkit-scrollbar-thumb {
+			background-color: $color;
+			border-color: transparent;
+
+			&:hover {
+				@include binary-colors.grey;
+			}
+
+			&:active {
+				background-color: $active-color;
+			}
+		}
+
+		&.thick-scrollbars {
+
+			::-webkit-scrollbar-thumb {
+				border-width: 1px;
+				border-color: black;
+			}
+		
+			//
+			// remove scrollbar border where flush with edge
+			//
+
+			.sidebar, .mainbar {
+				> ::-webkit-scrollbar-thumb {
+
+					&:vertical {
+						border-right: none;
+					}
+
+					&:horizontal {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+
+		//
+		// scrollbar track
+		//
+
+		::-webkit-scrollbar-track {
+			@include binary-colors.light-grey;
+		}
+
+		::-webkit-scrollbar-track:vertical {
+			border-left: 1px solid black;
+		}
+
+		::-webkit-scrollbar-track:horizontal {
+			border-top: 1px solid black;
+		}
+	}
+}

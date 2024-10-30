@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-task-bars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+@use "../dialogs/dark-dialogs";
+
+//
+// colors
+//
+
+$color: dark-dialogs.$header-color;
+$icon-color: dark-dialogs.$title-icon-color;
+$text-color: dark-dialogs.$title-color;
+
+//
+// styles
+//
+
+body.binary.dark  {
+	.task-bar {
+		.task-list {
+			li {
+				background-color: $color;
+				border-color: $color;
+				color: $text-color;
+				@include binary-text.unoutline;
+
+				i {
+					color: $icon-color;
+					@include binary-text.unoutline;
+				}
+
+				.title {
+					color: $text-color;
+					@include binary-text.unoutline;
+				}
+			}
+		}
+	}
+}

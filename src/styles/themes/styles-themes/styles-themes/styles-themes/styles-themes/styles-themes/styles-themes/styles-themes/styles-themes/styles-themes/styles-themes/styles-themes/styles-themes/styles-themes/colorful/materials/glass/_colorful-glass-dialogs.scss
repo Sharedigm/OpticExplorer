@@ -1,0 +1,196 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colorful-glass-dialogs.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/glass/flat-glass";
+@use "../../../../materials/glass/frosted-glass";
+@use "../../dialogs/colorful-dialogs";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		& .glass.modals,
+		&.glass .auto-material.modals {
+
+			//
+			// focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include flat-glass.shade(colorful-dialogs.$header-color);
+				}
+			}
+
+			//
+			// unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include flat-glass.shade(colorful-dialogs.$unfocused-header-color);
+				}
+			}
+		}
+
+		//
+		// transparent dialogs
+		//
+
+		&.transparent .glass.modals,
+		&.transparent.glass .auto-material.modals {
+
+			//
+			// transparent focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include flat-glass.shade(colorful-dialogs.$header-color);
+				}
+			}
+
+			//
+			// transparent unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include flat-glass.shade(colorful-dialogs.$unfocused-header-color);
+				}
+			}
+		}
+
+		//
+		// translucent dialogs
+		//
+
+		&.translucent .glass.modals,
+		&.translucent.glass .auto-material.modals {
+
+			//
+			// translucent focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include frosted-glass.shade(colorful-dialogs.$header-color);
+				}
+			}
+
+			//
+			// translucent unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include frosted-glass.shade(colorful-dialogs.$unfocused-header-color);
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		& .glass.modals,
+		&.glass .auto-material.modals {
+
+			//
+			// focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include flat-glass.shaded(colorful-dialogs.$default-header-color);
+				}
+			}
+
+			//
+			// unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include flat-glass.shaded(colorful-dialogs.$default-unfocused-header-color);
+				}
+			}
+		}
+
+		//
+		// transparent dialogs
+		//
+
+		&.transparent .glass.modals,
+		&.transparent.glass .auto-material.modals {
+
+			//
+			// transparent focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include flat-glass.shaded(colorful-dialogs.$default-header-color);
+				}
+			}
+
+			//
+			// transparent unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include flat-glass.shaded(colorful-dialogs.$default-unfocused-header-color);
+				}
+			}
+		}
+
+		//
+		// translucent dialogs
+		//
+
+		&.translucent .glass.modals,
+		&.translucent.glass .auto-material.modals {
+
+			//
+			// translucent focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+					@include frosted-glass.shaded(colorful-dialogs.$default-header-color);
+				}
+			}
+
+			//
+			// translucent unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+					@include frosted-glass.shaded(colorful-dialogs.$default-unfocused-header-color);
+				}
+			}
+		}
+	}
+}

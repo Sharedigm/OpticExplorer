@@ -1,0 +1,44 @@
+[descriptive data]				
+title	CN 110596863 Example 1 (Zhong Yi SpeedMaster 65mm F1.4)
+[constants]
+[variable distances]				
+Focal Length	65
+Angle of View	undefined
+F-Number	1.4
+Image Height	43.2
+Total Length	undefined			
+Magnification	0				
+d0	Infinity
+Bf(p)	undefined				
+Bf	16.89
+[lens data]					
+1	65.12	7	1.883	50.22	39.22	HZLAF68N
+2	282.412	0.1		47.82		
+3	32.71	6.73	1.786	42.96	44.19	HLAF52
+4	47.53	1.52		39.75		
+5	69.3	1.5	1.74	39.68	27.76	HZF50
+6	24.894	8.79		34.69		
+7	AS	12.2		33.26		
+8	-35.46	1.5	1.805	32.92	25.46	HZF7LA
+9	79.34	0		36.93		
+10	79.34	9.43	1.694	36.93	49.19	HLAF1
+11	-50	0.1		39.17		
+12	95.5	10.19	2.001	44.55	25.43	HZLAF90
+13	-119.98	1.17		45.42		
+14	165.21	11.13	1.883	46.15	39.22	HZLAF68N
+15	-43.806	0		46.14		
+16	-43.806	1.5	1.717	46.14	29.5	HZF3
+17	49.5	2.32		44.44		
+18	85.674	7.135	2.001	44.43	25.43	HZLAF90
+19	-199.67	0		44.4		
+20	-199.67	15.13	1.487	44.4	70.44	HQK3
+21	-28.42	0		43.84		
+22	-28.42	3.14	1.74	43.84	28.3	HZF5
+23	Infinity	Bf		47.31		
+[figure]				
+source	Data/CN110596863_Figure01P.png
+originX	17.53
+originY	160.53
+ppmm	5.495
+[notes]
+Bill: Patent figure shows CG and image plane but the position doesn't match.

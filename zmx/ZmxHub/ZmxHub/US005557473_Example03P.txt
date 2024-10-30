@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 5,557,473 Example 3 (Nikon AF Nikkor 28mm f/2.8D)
+[constants]
+[variable distances]
+Focal Length	28.6
+Angle of View	75.4
+F-Number	2.86
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	38.09
+[lens data]
+1	137.071	3.00	1.64831	44.10	33.8
+2	-4003.097	0.20		44.10	
+3	62.375	2.00	1.65160	35.50	58.5
+4	15.301	21.10		26.98	
+5	FS	1.10		17.14	
+6	26.626	6.30	1.79668	17.36	45.4
+7	-60.568	1.40		17.36	
+8	AS	3.60		14.795
+9	-26.792	5.60	1.78470	14.50	26.1
+10	33.729	1.15		14.50	
+11	-77.113	2.20	1.69680	14.52	55.6
+12	-22.209	0.10		15.12	
+13	84.648	3.00	1.71300	18.22	54.0
+14	-47.047	Bf		18.22	
+[figure]
+source	Data/US005557473_Figure03P.png
+ppmm	9.332
+originX	40
+originY	314.5
+[notes]

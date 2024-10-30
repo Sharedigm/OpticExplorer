@@ -1,0 +1,64 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-post-comments.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$color: black;
+$background-color: white;
+$border-color: black;
+$arrow-color: black;
+
+//
+// styles
+//
+
+body.binary {
+	.comments-list {
+
+		//
+		// unselected post comments
+		//
+
+		> .comment:not(.selected) > .info > .comment-bubble {
+
+			> .comment-inner {
+				color: $color;
+				background-color: $background-color;
+				border-color: $border-color;
+			}
+
+			//
+			// unselected post comment arrows
+			//
+
+			&.top > .comment-arrow {
+				border-top-color: $arrow-color;
+			}
+			&.right > .comment-arrow {
+				border-right-color: $arrow-color;
+			}
+			&.left > .comment-arrow {
+				border-left-color: $arrow-color;
+			}
+			&.bottom > .comment-arrow {
+				border-bottom-color: $arrow-color;
+			}
+		}
+	}
+}

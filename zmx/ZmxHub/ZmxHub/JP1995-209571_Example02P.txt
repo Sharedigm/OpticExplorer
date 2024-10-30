@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 1995-209571 Example 2 (Nikon AF Nikkor 85mm f/1.8D)
+[constants]
+[variable distances]
+Focal Length	84.8133	undefined	undefined
+F-Number	1.81	undefined	undefined
+Image Height	43.2	43.2	43.2
+Magnification	0	-0.0333	-0.1091
+S	Infinity	undefined	850
+d0	Infinity	2490.4530	747.7199
+d7	19.1869	14.9144	6.5659
+Bf	38.2935	42.5659	50.9145
+[lens data]
+1	42.400	8.8	1.76684	48.62	46.8
+2	223.201	0.2		45.58
+3	32.605	7.8	1.72000	41.03	50.2
+4	59.974	1.6		39.69
+5	111.173	3.2	1.78470	39.69	26.1
+6	21.490	8.6		30.56
+7	AS	d7		27.882
+8	-24.556	2.4	1.62588	27.43	35.7
+9	-115.021	2.0		31.66
+10	-71.248	5.0	1.69350	31.66	53.8
+11	-29.754	0.0		31.66
+12	FS	0.2		36.0		Patent Infinity 36.0mm MFD 30.4mm
+13	82.815	5.0	1.76684	32.43	46.8
+14	-140.471	Bf		32.43
+[figure]
+source	Data/JP1995-209571_Figure05P.png
+originX	10.56
+originY	79.95
+ppmm	2.106
+[notes]
+Bill: Optical Bench limitation: had to move FS 1mm toward image plane. d11/d12  were -1 and 1.2

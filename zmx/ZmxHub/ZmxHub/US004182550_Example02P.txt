@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,182,550 Example 2 (Konica Minolta 50mm F1.4 MD)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	46
+F-Number	1.4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	36.175
+Bf	36.16
+[lens data]
+1	37.500	5.00	1.7885	37.20	45.7
+2	157.275	0.15		37.20	
+3	24.250	4.20	1.7650	31.96	46.3
+4	38.230	2.10		30.48	
+5	52.805	2.00	1.7006	29.01	30.1
+6	15.190	9.17		23.74	
+6AS	AS	5.48		23.150
+7	-16.245	1.40	1.7552	23.18	27.5
+8	400.000	5.60	1.7440	28.78	45.0
+9	-28.160	0.15		28.78	
+10	-116.340	4.55	1.7810	30.49	44.5
+11	-28.725	0.15		30.49
+12	241.000	2.60	1.7200	29.08	50.2
+13	-82.125	Bf		29.08	
+[figure]
+source	Data/US004182550_Figure03P.png
+originX	24.57
+originY	121.45
+ppmm	3.668
+[notes]

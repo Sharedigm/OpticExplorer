@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 3,037,426 Example 2 (Kinoptik Tegea 9.8mm f/1.8)
+[constants]
+[variable distances]
+Focal Length	9.759
+Angle of View	110
+F-Number	2.0
+Image Height	24.8
+Magnification	0
+d0	Infinity
+Bf(p)	21.841
+Bf	22.38
+[lens data]
+1	Infinity	5.09	1.69153	81.40	54.0
+2	Infinity	59.09		61.00	
+
+3	190.00	12.00	1.68129	47.72	32.0
+4	-42.20	2.00	1.67400	47.72	56.0
+5	-83.98	43.46		47.72	
+
+6	17.98	5.29	1.46350	21.00	65.4
+7	-33.05	1.32	1.72350	21.00	37.9
+8	16.12	3.97	1.46350	21.00	65.4
+9	Infinity	2.97		21.00	
+9.5	AS	3.00		17.684
+10	60.06	5.30	1.51350	20.76	59.0
+11	-63.85	6.62		20.76	
+12	20.10	0.86	1.76200	20.56	27.0
+13	15.21	5.46		20.56	
+14	23.96	2.68	1.51350	20.48	59.0
+15	-176.94	Bf		20.48	
+[aspherical data]
+2	15.00	-1
+[figure]
+source	Data/US003037426_Figure02P.png
+originX	70.76
+originY	212.80
+ppmm	3.634
+[notes]
+Bill: Does not match patent figure that well.

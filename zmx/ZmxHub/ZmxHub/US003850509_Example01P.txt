@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 3,850,509 Example 1 (Olympus 16mm f3.5 Zuiko Auto-Fisheye)
+[constants]
+Scaled	16	1
+[variable distances]
+Focal Length	16
+Angle of View	180
+Angle of View(m)	191.52
+F-Number	3.5
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	36.37
+[lens data]
+1	88.2944	1.9792	1.58913	44.56	61.1
+2	11.7920	6.6512		22.61
+3	25.7344	2.9696	1.78590	24.94	44.2
+4	54.7744	1.4848		24.94
+5	-1385.7088	1.1872	1.58913	20.44	61.1
+6	11.1440	4.1568		14.30
+7	29.6896	0.9904	1.69680	12.12	55.6
+8	10.8336	2.4544	1.69895	12.12	30.1
+9	747.4816	1.2672		11.22	
+10	Infinity	1.1872		12.03
+11	Infinity	1.3264		12.03
+12	35.3360	1.1984	1.78472	11.49	25.7
+13	10.4272	3.2272	1.60342	11.49	38.0
+14	-106.7264	1.0000		11.49
+14AS	AS	2.3856		10.246
+15	-39.4336	1.9792	1.51728	12.00	69.6
+16	-18.0048	0.0992		12.00
+17	78.6800	0.9904	1.80518	12.82	25.4
+18	20.9392	2.9696	1.51728	12.82	69.6
+19	-17.9040	Bf		12.82
+[figure]	
+source	Data/US003850509_Figure01P.png
+originX	74.99
+originY	290.95
+ppmm	9.224
+[notes]

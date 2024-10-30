@@ -1,0 +1,38 @@
+[descriptive data]
+title	JP 1996-005914 Example 3 (Nikon AF Zoom-Nikkor 35-80mm f/4.0-5.6D II)
+[constants]
+[variable distances]
+Focal Length	36.0000	50.0000	77.6000
+Angle of View	65.04	47.68	31.26
+F-Number	4.09	4.84	5.87
+Image Height	43.20	43.20	43.20
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	26.3978	13.8897	2.4500
+d6AS	25.3978	12.8897	1.4500
+Bf	48.0732	60.2499	84.2554
+[lens data]
+1	44.440	1.60	1.79361	31.72	40.9
+2	18.116	7.00		26.85
+3	-87.699	1.50	1.80411	26.85	46.5
+4	47.209	1.05		25.04	
+5	33.197	4.20	1.79504	25.48	28.6
+6	-339.433	d6AS		25.48
+6AS	AS	1.00		16.851
+7	28.265	2.50	1.62041	17.96	60.1
+8	91.597	0.10		17.96	
+9	29.316	2.50	1.69680	17.76	55.6
+10	108.300	0.10		17.76
+11	21.553	6.35	1.46450	18.69	65.7
+12	-51.079	1.80	1.80384	16.42	33.9
+13	15.757	5.40		13.86
+14	175.974	2.10	1.72000	14.24	50.2
+15	-41.107	3.00		14.24
+16	FS	Bf		21.00	
+[figure]
+source	Data/JP1996-005914_Figure09WP.png
+originX	9.13
+originY	44.14
+ppmm	1.335
+[notes]

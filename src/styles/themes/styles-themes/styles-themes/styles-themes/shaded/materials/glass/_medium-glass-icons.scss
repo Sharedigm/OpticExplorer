@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-glass-icons.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/glass/round-glass";
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.glass-icons,
+	&.glass.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// glass icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+				@include round-glass.shaded(colors.$light-grey);
+			}
+
+			//
+			// selected glass icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				@include round-glass.shaded(colors.$medium-grey);
+			}
+		}
+	}
+}

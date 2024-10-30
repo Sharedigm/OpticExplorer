@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 3,736,049 Example 1 (Nikon Nikkor-N Auto 28mm f/2)
+[constants]
+Scaled	28.6	99.32
+[variable distances]
+Focal Length	28.6
+Angle of View	74.5
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	39.19
+Bf	38.43
+Aperture Diameter	20.421
+[lens data]
+1	65.435	3.222	1.62299	44.56	58.1
+2	21.949	6.544		33.98	
+3	68.465	4.732	1.74400	34.72	44.9
+4	1715.294	0.101		32.72	
+5	61.408	2.014	1.62299	31.56	58.1
+6	18.425	11.075		27.38	
+7	33.719	6.746	1.77250	24.22	49.5
+8	-38.663	4.533	1.51680	24.22	64.2
+9	92.504	1.510		22.54	
+10	85.582	5.034	1.51680	23.28	64.2
+11	-30.635	0.460		23.28	
+11AS	AS	5.380		20.421
+12	-19.331	5.437	1.78470	21.40	26.1
+13	72.997	1.410		19.99	
+14	-70.479	3.423	1.74443	19.99	47.9
+15	-22.151	0.101		22.96	
+16	252.114	3.524	1.71300	26.84	53.9
+17	-36.656	Bf		26.84	
+[figure]
+source	Data/US003736049_Figure01P.png
+originX	28
+originY	102.5
+ppmm	4.392
+[notes]

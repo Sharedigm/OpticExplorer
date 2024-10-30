@@ -1,0 +1,171 @@
+/******************************************************************************\
+|                                                                              |
+|                             _optic-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$highlight-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+$dark-highlight-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.marker {
+
+		//
+		// uncolored markers
+		//
+
+		&:not(.colored) {
+			fill: black;
+		}
+	}
+}
+
+//
+// light optic markers
+//
+
+.optics .viewport.light,
+body.light .optics .viewport.auto {
+
+	.marker {
+
+		//
+		// light uncolored markers
+		//
+
+		&:not(.colored) {
+			fill: black;
+		}
+	}
+}
+
+//
+// dark optic markers
+//
+
+.optics .viewport.dark,
+body.dark .optics .viewport.auto {
+
+	.marker {
+
+		//
+		// dark uncolored markers
+		//
+
+		&:not(.colored) {
+			fill: white;
+		}
+	}
+}
+
+//
+// colored optic markers
+//
+
+body.colored {
+	.optics .viewport {
+
+		.marker {
+
+			//
+			// highlighted markers
+			//
+
+			&:hover {
+				fill: $highlight-color;
+			}
+
+			//
+			// selected markers
+			//
+
+			&.selected {
+				fill: $select-color;
+			}
+		}
+	}
+
+	//
+	// light viewports
+	//
+
+	.optics .viewport.light,
+	&.light .optics .viewport.auto {
+
+		.marker {
+
+			//
+			// highlighted markers
+			//
+
+			&:hover {
+				fill: $highlight-color;
+			}
+
+			//
+			// selected markers
+			//
+
+			&.selected {
+				fill: $select-color;
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+
+		.marker {
+
+			//
+			// dark highlighted markers
+			//
+
+			&:hover {
+				fill: $dark-highlight-color;
+			}
+
+			//
+			// dark selected markers
+			//
+
+			&.selected {
+				fill: $dark-select-color;
+			}
+		}
+	}
+}
+
+//
+// binary optic markers
+//
+
+body.binary {
+	.optics .viewport {
+		.marker {
+			fill: black !important;
+		}
+	}
+}

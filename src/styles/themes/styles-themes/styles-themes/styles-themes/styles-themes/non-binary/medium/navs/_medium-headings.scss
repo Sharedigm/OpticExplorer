@@ -1,0 +1,60 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-headings.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$color: unset;
+$icon-color: medium-branding.$secondary-color;
+$border-color: medium-branding.$secondary-color;
+$sub-heading-color: unset;
+$sub-heading-icon-color: medium-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	h1 {
+		color: $color;
+		border-color: $border-color;
+
+		i {
+			color: $icon-color;
+		}
+	}
+
+	h2, h3 {
+		color: $sub-heading-color;
+
+		i {
+			color: $sub-heading-icon-color;
+		}
+	}
+
+	//
+	// rulings
+	//
+
+	hr {
+		background-color: $border-color;
+	}
+}

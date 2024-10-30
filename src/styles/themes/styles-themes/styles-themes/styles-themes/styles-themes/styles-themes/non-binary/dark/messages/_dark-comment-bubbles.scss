@@ -1,0 +1,71 @@
+/******************************************************************************\
+|                                                                              |
+|                         _dark-comment-bubbles.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../navs/dark-links";
+
+//
+// colors
+//
+
+$color: text-colors.$light-color;
+$background-color: colors.$medium-grey;
+$border-color: $background-color;
+$arrow-color: $border-color;
+$title-color: white;
+$link-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.comment-bubble {
+	
+		> .comment-inner {
+			color: $color;
+			background-color: $background-color;
+			border-color: $border-color;
+
+			.title, .title a {
+				color: $title-color;
+			}
+
+			a {
+				color: $link-color;
+			}
+		}
+
+		//
+		// dark comment arrows
+		//
+
+		&.top > .comment-arrow {
+			border-top-color: $arrow-color;
+		}
+		&.right > .comment-arrow {
+			border-right-color: $arrow-color;
+		}
+		&.left > .comment-arrow {
+			border-left-color: $arrow-color;
+		}
+		&.bottom > .comment-arrow {
+			border-bottom-color: $arrow-color;
+		}
+	}
+}

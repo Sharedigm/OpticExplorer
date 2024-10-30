@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 3,552,833 Example 1 (Leica Macro-Elmarit-R 60mm F2.8)
+[constants]
+Scaled	60	1
+[variable distances]
+Focal Length	60
+Angle of View	36
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	41.028
+[lens data]
+1	38.238	3.600	1.74795	29.24	44.5
+2	77.970	2.340		29.24	
+3	17.370	6.174	1.69282	23.90	49.6
+4	69.126	2.034	1.67764	23.90	32.0
+5	11.568	5.465		14.58
+5AS	AS	7.939		14.168	
+6	-12.120	2.154	1.74070	14.82	26.2
+7	-17.118	0.168		19.64	
+8	-68.568	2.592	1.62287	21.16	60.1
+9	-26.604	0.168		21.16	
+10	-35.826	2.640	1.61521	22.48	58.4
+11	-19.422	Bf		22.48	
+[figure]
+source	Data/US003552833_Figure01P.png
+originX	306.86
+originY	320.57
+ppmm	9.221
+[notes]

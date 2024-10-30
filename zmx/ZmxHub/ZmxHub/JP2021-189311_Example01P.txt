@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 2021-189311 Example 1 (Nikon Nikkor Z TC-1.4x)
+[constants]
+Lateral Magnification	1.41
+Lateral Magnification(m)	1.41042
+[variable distances]
+Focal Length	undefined
+F-Number	undefined
+Total Length	78.83
+Image Height	43.4
+Magnification	0
+d0	Infinity
+Bf	11.42
+[lens data]
+1	280.638	4.40	1.71736	28.80	29.50
+2	-39.216	2.94		28.80	
+3	-29.864	1.30	1.88300	28.72	40.80
+4	26.078	0.01	1.51400	30.62	42.83
+5	26.078	7.24	1.68893	30.62	31.16
+6	-111.730	3.70		30.62	
+7	-45.931	1.40	2.00100	31.54	29.13
+8	137.925	0.01	1.51400	36.70	42.83
+9	137.925	3.99	1.58313	36.70	59.50
+10	-618.383	0.30		36.70	
+11	254.263	9.90	1.51680	40.16	64.20
+12	-29.838	Bf		40.16	
+[aspherical data]
+10	-618.383	30	-4.72819E-06	4.56226E-09	-1.48932E-11	1.09243E-14
+[figure]
+source	Data/JP2021-189311_Figure03P.png
+originX	18.67
+originY	195.33
+ppmm	5.395
+[notes]

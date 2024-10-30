@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 5,899,585 Example 1 (Canon EF28-80mm f3.5-5.6 II)
+[constants]
+[variable distances]
+Focal Length	28.98	50.00	77.08
+Angle of View	73.49	46.80	31.36
+F-Number	3.46	4.51	5.88
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	32.88	11.61	1.31
+d17	3.01	17.95	37.21
+Bf(p)	undefined	undefined	undefined
+Bf	37.70	37.70	37.70
+Aperture Diameter	17.525	17.656	17.761
+[lens data]
+1	117.525	2.70	1.51633	44.72	64.1
+2	689.019	0.15		44.72	
+3	57.304	1.50	1.70154	37.06	41.2
+4	17.459	9.79		29.43
+5	-64.591	1.30	1.62299	29.43	58.2
+6	54.489	0.17		29.74	
+7	31.274	3.82	1.76182	27.78	26.5
+8	160.062	d8		27.78	
+9	32.699	2.98	1.63854	19.48	55.4
+10	-89.601	0.99		19.48	
+11	AS	0.20		17.525
+12	22.321	2.17	1.66672	18.82	48.3
+13	58.770	0.98		18.82	
+14	-122.838	10.46	1.78472	17.61	25.7
+15	17.636	0.89		15.25	
+16	34.854	2.67	1.58144	15.25	40.8
+17	-37.818	d17		15.25
+18	-64.438	1.30	1.63854	23.66	55.4
+19	83.202	1.94		23.66	
+20	-709.402	2.77	1.66672	24.84	48.3
+21	-42.415	Bf		24.84	
+[figure]
+source	Data/US005899585_Figure01AP.png
+originX	54.59
+originY	151.99
+ppmm	2.953
+[notes]
+Bill: Block diagram is intermediate focal length or retractible.

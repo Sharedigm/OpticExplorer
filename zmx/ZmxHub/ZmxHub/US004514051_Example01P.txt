@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 4,514,051 Example 1 (Nikon TC-14A)
+[constants]
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.40001
+[variable distances]
+Focal Length	-104.8292
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	38.6208
+[lens data]
+0	FS	37.64194		66.63
+1	110.088	3.4	1.59507	21.58	35.5
+2	-37.390	1.0		21.58	
+3	-40.473	1.0	1.78797	21.46	47.5
+4	31.842	1.0		21.46	
+5	35.163	3.8	1.59507	22.54	35.5
+6	-132.889	1.0		22.54	
+7	-52.000	1.0	1.90265	22.54	35.8
+8	611.943	0.2		23.72	
+9	50.800	3.0	1.49782	24.78	82.3
+10	2442.404	Bf		24.78	
+[figure]
+source	Data/US004514051_Figure02RCLP.png
+originX	186.64
+originY	483.94
+ppmm	12.801
+[notes]

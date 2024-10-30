@@ -1,0 +1,47 @@
+[descriptive data]
+title	WO 2014/061226 Example 1 (Nikon 1 Nikkor 32mm f/1.2)
+[constants]
+[variable distances]
+Focal Length	32.4	undefined	undefined
+Angle of View	26.19	undefined	undefined
+F-Number	1.24	undefined	undefined
+NA	undefined	0.36	undefined
+HO	undefined	825.2	undefined
+Image Height	16.38	16.38	16.38
+Total Length	52.6	undefined	undefined
+Magnification	0	-0.009925	-0.07
+d0	Infinity	3274.60	473.24
+d14	0.90	1.13	2.67
+d17	10.20	10.43	11.97
+Bf	0	0	0
+[lens data]
+1	33.0214	4.4	1.6968	29.04	55.52
+2	637.5014	0.1		29.04
+3	18.2318	4.0	1.6030	25.15	65.44
+4	25.6174	0.1		21.66
+5	20.9000	3.1	1.7950	23.18	45.31
+6	30.0000	0.9		19.15
+7	55.2655	1.2	1.7174	23.16	29.57
+8	10.8367	5.2		16.22	
+9	AS	4.7		14.777
+10	-12.2930	1.2	1.6727	15.02	32.19
+11	85.0000	4.0	1.8830	17.20	40.66
+12	-19.6365	0.3		17.20	
+13	-49.0000	2.1	1.7725	19.08	49.62
+14	-23.4000	d14		19.08
+15	30.8466	4.1	1.8348	17.79	42.73
+16	-38.7000	1.2	1.7552	17.79	27.57
+17	85.2086	d17		17.79
+18	CG	0.5	1.5168	17.34	63.88
+19	CG	1.11		17.34	
+20	CG	1.59	1.5168	17.40	63.88
+21	CG	0.3		17.40	
+22	CG	0.7	1.5168	17.40	63.88
+23	CG	0.7		17.40	
+[figure]
+source	Data/WO2014-061226_Figure01P.png
+originX	47.65
+originY	100.29
+ppmm	2.946
+[notes]
+Bill: Magnification from HO or measured, d0 measured.

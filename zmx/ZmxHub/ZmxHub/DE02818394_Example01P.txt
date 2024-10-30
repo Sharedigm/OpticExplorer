@@ -1,0 +1,29 @@
+[descriptive data]
+title	DE 2818394 Example 1 (Rodenstock Geronar 210mm f6.8)
+[constants]
+Scaled	210	100
+[variable distances]
+Focal Length	210
+Angle of View	53
+F-Number	6.8
+Image Height	210
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	177.95
+[lens data]
+1	33.29	5.25	1.6229	30.90	60.07
+2	-1030.28	3.40		30.36
+3	-151.41	0.80	1.5510	29.90	45.47
+4	30.53	5.55		26.95
+4FS	FS	10.70		26.83
+4.5	AS	4.81		26.676
+5	377.58	8.11	1.5187	39.20	63.96
+6	-141.39	Bf		40.80
+[figure]
+source	Data/DE02818394_Figure01P.png
+originX	85.12
+originY	395.45
+ppmm	9.929
+[notes]
+Bill: Image Height and Angle of View from specification.

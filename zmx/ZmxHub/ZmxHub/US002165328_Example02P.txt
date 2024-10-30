@@ -1,0 +1,29 @@
+[descriptive data]				
+title	US 2,165,328 Example 2 (Kodak Ektar 50mm F3.5)
+[constants]
+Scaled	50	100
+[variable distances]				
+Focal Length	50
+Angle of View	undefined
+F-Number	3.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	41.78
+[lens data]				
+1	13.75	3.315	1.620	14.38	60.4
+2	82.50	2.225		14.38
+3	-58.50	1.240	1.605	12.83	38.2
+4	12.45	2.470		11.76
+4AS	AS	0.96		11.837
+5	36.75	3.980	1.639	12.10	55.5
+6	-13.60	1.000	1.523	12.81	58.4
+7	-60.05	Bf		12.81
+[figure]
+source	Data/US002165328_Figure02P.png
+originX	71.48
+originY	165.88
+ppmm	18.034
+[notes]
+Bill: Slightly off?

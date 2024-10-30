@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                                _elements.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$element-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	.optics .viewport {
+		.elements {
+
+			// default colors
+			//
+			fill: $element-color;
+			stroke: $element-color;
+		}
+	}
+}
+
+//
+// hidden elements
+//
+
+.optics .viewport {
+
+	&.elements-unshaded {
+		.filled {
+			.specular {
+				fill: white !important;
+				fill-opacity: 0.2 !important;
+			}
+		}
+		.stroked {
+			.edges {
+				stroke-opacity: 1.0;
+			}
+		}
+	}
+
+	&.elements-unillustrated {
+		.lens .back {
+			visibility: hidden;
+		}
+	}
+
+	&.elements-hidden {
+		.lens, .shadow {
+			visibility: hidden;
+		}
+	}
+
+	&.elements-unfilled {
+		.lens .filled {
+			visibility: hidden;
+		}
+	}
+
+	&.elements-unstroked {
+		.lens .stroked {
+			visibility: hidden;
+		}
+	}
+
+	&.elements-unshadowed {
+		.shadow {
+			visibility: hidden;
+		}
+	}
+}

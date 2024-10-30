@@ -1,0 +1,37 @@
+[descriptive data]
+title	GB 1,238,668 Example 2 (Nikon Nikkor-O Auto 35mm f/2)
+[constants]
+Scaled	36	100
+[variable distances]
+Focal Length	36.0	undefined
+F-Number	2.0	undefined
+Angle of View	62	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.15
+d0	Infinity	235.05
+d7	5.300	4.400
+d7AS	2.600	1.700
+Bf	40.824	46.216
+[lens data]
+1	115.6176	3.9	1.71300	46.79
+2	Infinity	0.1		46.79
+3	50.0004	2.2	1.51680	39.15
+4	17.2008	11.2		29.08
+5	32.1984	8.2	1.66755	25.37
+6	-55.0008	10.5	1.51454	19.52
+7	33.9984	d7AS		18.41
+7AS	AS	2.7		17.988
+8	-21.5712	1.0	1.78470	18.47
+9	38.7900	7.0	1.74443	23.07
+10	-25.8192	0.1		23.07
+11	-110.0016	3.0	1.76684	22.38
+12	-38.4876	0.1		22.38
+13	129.9996	2.5	1.74400	25.60
+14	-79.0488	Bf		25.60
+[figure]
+source	Data/GB1238668_Figure05P.png
+originX	44.40
+originY	193.52
+ppmm	6.629
+[notes]
+Bill: Calculate Bf and measure d0

@@ -1,0 +1,40 @@
+[descriptive data]
+title	JP 2012-234169 Example 1 (Sigma 30mm F2.8 DN A)
+[constants]
+[variable distances]
+Focal Length	30.83	undefined
+Angle of View	50.49	50.02
+F-Number	2.89	2.93
+Image Height	28.4	28.4
+Total Length	undefined	undefined
+Magnification	0	-0.06890
+S	Infinity	500
+d0	Infinity	447.73
+d4	6.9859	5.6552
+d9	1.5000	2.8307
+Bf	20.4045	20.4045
+[lens data]
+1	17.7672	3.1821	1.88300	15.32	40.80
+2	-1000.0000	0.8000	1.58144	15.32	40.89
+3	12.9742	2.6198		10.16	
+4	AS	d4		9.195
+5	-10.0295	0.8000	1.69895	9.28	30.05
+6	58.7192	3.8254	1.80420	14.70	46.50
+7	-15.7253	0.1500		14.70	
+8	47.8215	3.6590	1.77250	17.84	49.62
+9	-27.3923	d9		17.84	
+10	-97.3976	1.0000	1.56732	19.04	42.84
+11	24.1411	4.4473		17.98	
+12	88.7361	2.8926	1.77250	22.24	49.62
+13	-67.2193	Bf		22.24	
+[aspherical data]
+9	-27.3923	0	1.68830E-05	-6.94468E-09	-2.50342E-11
+13	-67.2193	0	9.50840E-08	-5.47977E-09	2.45567E-11
+[figure]
+source	Data/JP2012-234169_Figure01P.png
+originX	5.76
+originY	67.04
+ppmm	5.464
+[notes]
+Bill: Only S provided so d0 computed and Magnification measured. Image Height assumed.
+Identical to later JP 2015-043104 Example 1 which does not show OS.

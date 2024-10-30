@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 4,063,802 Example 1 (Olympus Zuiko Auto-T 85mm F2)
+[constants]
+Scaled	85	100
+[variable distances]
+Focal Length	85
+Angle of View	28
+F-Number	2.04
+Image Height	43.28
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	44.036
+[lens data]
+1	50.587	6.24	1.72000	44.217	50.25
+2	329.142	0.15		44.217	
+3	26.794	10.42	1.62300	40.2985	58.14
+4	55.208	3.49		35.734	
+5	123.910	1.40	1.78470	30.073	25.71
+6	18.253	8.50		28.3305	
+6AS	AS	8.54		24.5242	
+7	148.116	7.60	1.70000	25.9335	48.08
+8	-18.210	0.90	1.58300	24.8625	59.36
+9	-139.292	Bf		25.857	
+[figure]	
+source	Data/US004063802_Figure01P.png
+originX	152.56
+originY	257.10
+ppmm	7.430
+[notes]

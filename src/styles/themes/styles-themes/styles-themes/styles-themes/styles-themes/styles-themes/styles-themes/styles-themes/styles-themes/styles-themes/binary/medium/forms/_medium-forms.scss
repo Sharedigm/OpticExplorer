@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                               _medium-forms.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// form controls
+	//
+
+	.form-control {
+		border-color: unset;
+	}
+
+	.form-group {
+		.controls {
+			select {
+				color: black;
+				background-color: white;
+				border-color: black;
+			}
+		}
+	}
+
+	.notes {
+		@include binary-text.outline;
+	}
+
+	//
+	// inline form alerts
+	//
+
+	.alert-warning {
+		@include binary-colors.light-grey;
+		color: black;
+		@include binary-text.outline;
+		border-color: black;
+	}
+}

@@ -46,13 +46,9 @@
 
 	<h2><i class="fa fa-info-circle"></i>Examples</h2>
 	<ul>
-		<li><a href="iframes/code.html">Code</a></li>
-		<li><a href="iframes/contact.html">Contacts</a></li>
-		<li><a href="iframes/map.html">Maps</a></li>
-		<li><a href="iframes/music.html">Music</a></li>
-		<li><a href="iframes/pdf.html">PDF</a></li>
-		<li><a href="iframes/photo.html">Photo</a></li>
-		<li><a href="iframes/text.html">Text</a></li>
-		<li><a href="iframes/video.html">Video</a></li>
+		<li><a href="iframes/optics.html">Optics</a></li>
+		<li><a href="iframes/materials.html">Materials</a></li>
+		<li><a href="iframes/material-maps.html">Material Maps</a></li>
+		<li><a href="iframes/spectra.html">Spectra</a></li>
 	</ul>
 </div>

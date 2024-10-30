@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-flat-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/flat/flat";
+@use "../../apps/medium-desktops";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.flat {
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+
+			//
+			// flat desktop footer bars
+			//
+
+			.desktop.app > .footer-bar {
+				@include flat.color(medium-desktops.$footer-bar-color);
+
+				//
+				// flat desktop info bars
+				//
+
+				.desktop-info-bar {
+					@include flat.color(medium-desktops.$info-bar-background-color);
+				}
+			}
+		}
+	}
+}

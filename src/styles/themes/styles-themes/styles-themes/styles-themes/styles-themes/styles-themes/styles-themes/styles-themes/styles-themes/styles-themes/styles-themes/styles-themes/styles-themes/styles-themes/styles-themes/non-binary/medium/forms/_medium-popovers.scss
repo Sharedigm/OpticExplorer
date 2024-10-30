@@ -1,0 +1,81 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-popovers.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$title-background-color: medium-branding.$secondary-color;
+$title-text-color: white;
+$title-icon-color: text-colors.$light-color;
+$text-color: text-colors.$dark-color;
+$title-color: medium-branding.$secondary-color;
+$border-color: medium-branding.$secondary-color;
+$shadow: drop-shadow(5px 5px 15px colors.faded(black, 33%));
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.popover {
+		border-color: $border-color;
+		filter: $shadow;
+
+		.popover-title {
+			color: $title-text-color;
+			background-color: $title-background-color;
+
+			.icon {
+				color: $title-icon-color;
+				fill: $title-icon-color;
+			}
+		}
+
+		.popover-content {
+			color: $text-color;
+
+			.title {
+				color: $title-color;
+			}
+		}
+
+		//
+		// popover arrows
+		//
+
+		&.right > .arrow {
+			border-right-color: $border-color;
+		}
+
+		&.left > .arrow {
+			border-left-color: $border-color;
+		}
+
+		&.top > .arrow {
+			border-top-color: $border-color;
+		}
+
+		&.bottom > .arrow {
+			border-bottom-color: $border-color;
+		}
+	}
+}

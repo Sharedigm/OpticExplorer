@@ -1,0 +1,35 @@
+[descriptive data]
+title	US 3,410,632 Example 2 (Leica PA-Curtagon-R 35mm F4)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	75
+F-Number	4
+Total Length	45.546
+Image Height	55
+Magnification	0
+d0	Infinity
+Bf(p)	39.690
+Bf	43.400
+[lens data]
+1	73.311	5.495	1.62287	37.90	60.06
+2	Infinity	0.123		37.90	
+3	109.862	2.198	1.51871	34.96	63.96
+4	13.675	14.165		21.96	
+5	132.626	6.104	1.70586	14.68	40.87
+6	-73.311	0.123		14.68	
+7	18.942	6.227	1.70189	12.06	38.38
+8	18.442	1.857		10.66	
+8AS	AS	1.440		10.393
+9	-33.033	0.977	1.70442	10.88	34.67
+10	15.680	4.274	1.62287	12.06	60.06
+11	-22.152	0.123		12.06	
+12	-106.001	2.443	1.69660	11.16	53.18
+13	-28.112	Bf		13.68	
+[figure]
+source	Data/US003410632_Figure02aP.png
+originX	100.51
+originY	343.70
+ppmm	8.634
+[notes]

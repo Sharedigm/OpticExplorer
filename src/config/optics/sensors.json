@@ -1,0 +1,234 @@
+{
+	"Micro Format": {
+		"1/4\"": {
+			"width": 3.60,
+			"height": 2.70
+		},
+		"1/3.6\"": {
+			"width": 4.00,
+			"height": 3.00
+		},
+		"1/3.2\"": {
+			"width": 4.54,
+			"height": 3.42
+		},
+		"1/3.09\" Sony Exmor IMX351": {
+			"width": 4.66,
+			"height": 3.50
+		},
+		"Standard 8mm": {
+			"width": 4.80,
+			"height": 3.50
+		},
+		"1/3\"": {
+			"width": 4.80,
+			"height": 3.60
+		},
+		"1/2.9\" Sony Exmor IMX322": {
+			"width": 4.98,
+			"height": 3.74
+		},
+		"1/2.7\" Fujifilm 2800": {
+			"width": 5.37,
+			"height": 4.04
+		},
+		"1/2.5\"": {
+			"width": 5.76,
+			"height": 4.29
+		},
+		"Super 8mm": {
+			"width": 5.79,
+			"height": 4.01
+		}
+	},
+
+	"Mini Format": {
+		"1/2.3\"": {
+			"width": 6.17,
+			"height": 4.55
+		},
+		"1/2.3\" Sony Exmor IMX220": {
+			"width": 6.30,
+			"height": 4.72
+		},
+		"1/2\"": {
+			"width": 6.40,
+			"height": 4.80
+		},
+		"1/1.8\"": {
+			"width": 7.18,
+			"height": 5.32
+		},
+		"1/1.7\"": {
+			"width": 7.60,
+			"height": 5.70
+		},
+		"1/1.6\"": {
+			"width": 8.08,
+			"height": 6.01
+		},
+		"2/3\"": {
+			"width": 8.80,
+			"height": 6.60
+		},
+		"1/1.33\"": {
+			"width": 9.60,
+			"height": 7.20
+		}
+	},
+
+	"Small Format": {
+		"Standard 16mm": {
+			"width": 10.26,
+			"height": 7.49
+		},
+		"1/1.2\"": {
+			"width": 10.67,
+			"height": 8.00
+		},
+		"1/1.12\"": {
+			"width": 11.43,
+			"height": 8.57
+		},
+		"Super 16mm": {
+			"width": 12.52,
+			"height": 7.41
+		},
+		"1\", Nikon CX": {
+			"width": 13.20,
+			"height": 8.80
+		},
+		"1.1\" Sony IMX253": {
+			"width": 14.10,
+			"height": 10.30
+		},
+		"Four Thirds": {
+			"width": 17.30,
+			"height": 13
+		},
+		"1.5\"": {
+			"width": 18.70,
+			"height": 14
+		},
+		"Sigma Foveon X3": {
+			"width": 20.70,
+			"height": 13.80
+		}
+	},
+
+	"APS": {
+		"Canon APS-C": {
+			"width": 22.30,
+			"height": 14.90
+		},
+		"Nikon DX": {
+			"width": 24,
+			"height": 16
+		},
+		"Super 35mm": {
+			"width": 24.89,
+			"height": 14
+		},
+		"APS-C": {
+			"width": 25.1,
+			"height": 16.7
+		},
+		"Canon APS-H": {
+			"width": 27.90,
+			"height": 18.60
+		},
+		"APS-P": {
+			"width": 30.2,
+			"height": 9.5
+		},
+		"APS-H": {
+			"width": 30.2,
+			"height": 16.7
+		}
+	},
+
+	"35mm": {
+		"Sony Exmor Full Frame": {
+			"width": 35.6,
+			"height": 23.8
+		},
+		"Full Frame, Nikon FX": {
+			"width": 36,
+			"height": 24
+		},
+		"Arri Alexa LF": {
+			"width": 36.70,
+			"height": 25.54
+		}
+	},
+
+	"Medium Format": {
+		"Pentax 645": {
+			"width": 42,
+			"height": 56
+		},
+		"Pentax 645D, Hasselblad X1D": {
+			"width": 43.8,
+			"height": 32.9
+		},
+		"Leica S": {
+			"width": 45,
+			"height": 30
+		},	
+		"Kodak KAF 39000": {
+			"width": 49,
+			"height": 36.80
+		},
+		"65/70mm Film": {
+			"width": 52.48,
+			"height": 23.01
+		},
+		"Hasselblad": {
+			"width": 53.7,
+			"height": 40.2
+		},
+		"Phase One": {
+			"width": 53.90,
+			"height": 40.40
+		},
+		"Arri Alexa 65": {
+			"width": 54.12,
+			"height": 25.58
+		},
+		"6x6": {
+			"width": 56,
+			"height": 56
+		},
+		"6x7": {
+			"width": 70,
+			"height": 56
+		},
+		"IMAX": {
+			"width": 70.41,
+			"height": 52.63
+		},
+		"6x8": {
+			"width": 76,
+			"height": 56
+		},
+		"6x9": {
+			"width": 84,
+			"height": 56
+		}
+	},
+
+	"Large Format": {
+		"4x5": {
+			"width": 121,
+			"height": 97
+		},
+		"5x7": {
+			"width": 178,
+			"height": 127
+		},
+		"8x10": {
+			"width": 254,
+			"height": 203
+		}
+	}
+}

@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 2018/0095255 Example 2 (Canon Extender EF1.4X III)
+[constants]
+Lateral Magnification	1.40
+Lateral Magnification(m)	1.40059
+[variable distances]
+Focal Length	-115.76
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.28
+Total Length	30.79
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	41.63
+H	15.68
+H'	-4.75
+[lens data]
+1	209.265	1.35	1.88300	30.91	40.76
+2	44.272	5.67	1.59270	30.91	35.31
+3	-71.835	4.54		30.91
+4	-89.518	1.45	1.74100	32.32	52.64
+5	41.920	7.93	1.61340	32.32	44.27
+6	-34.914	1.80	1.81600	32.32	46.62
+7	140.730	0.61		32.32	
+8	55.318	5.83	1.72439	33.68	32.05
+9	-258.601	1.60	1.95906	33.68	17.47
+10	231.783	Bf		33.68	
+[figure]	
+source	Data/US20180095255_Figure04P.png
+originX	14.54
+originY	130.35
+ppmm	3.200
+[notes]

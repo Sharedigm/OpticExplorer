@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                           _colored-item-maps.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$select-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.items-map {
+
+		//
+		// all map overlays
+		//
+
+		.map ~ .layer {
+			.item-list {
+
+				.item {
+					&.selected {
+						.icon i {
+							&.fa-circle,
+							&.fa-map-pin,
+							&.fa-map-marker,
+							&.fa-map-marker-alt {
+								color: $select-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

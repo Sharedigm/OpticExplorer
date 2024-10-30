@@ -1,0 +1,52 @@
+################################################################################
+#                                                                              #
+#                                 Sphere.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Balthazar Piroddi                                          #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 25 mm
+        diameter: 50 mm
+      - type: spherical
+        curvature: -25 mm
+        diameter: 50 mm
+    thickness: 50 mm
+    material:
+      catalog: Materials
+      name: water
+
+LIGHTS:
+
+  - type: ray
+    distance: 36.8502 mm
+    offset: 10.1111 mm
+    color: "#ff0000"
+
+  - type: ray
+    distance: 37.0362 mm
+    offset: 23.1672 mm
+    color: "#ff0000"
+
+  - type: ray
+    distance: 49.494 mm
+    offset: -0.0447479 mm
+    color: "#ff0000"
+
+  - type: ray
+    distance: 23.09 mm
+    offset: -5.3686 mm
+    color: "#1a5fb4"
+
+OBJECTS: []

@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 3,994,576 Example 1 (Zeiss Sonnar 40mm F2.8 Rollei)
+[constants]
+Scaled	46	1
+[variable distances]
+Focal Length	46
+Angle of View	50
+F-Number	2.9
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	29.16860
+[lens data]					
+R1	17.94000	4.14000	1.68100	18.46
+R1'	42.06838	0.06440		17.58
+R2	16.16900	3.22000	1.72000	14.92
+R2'	32.35594	1.30824		12.87
+R3	108.27756	0.94530	1.78500	12.18
+R3'	11.59982	2.45598		11.12
+AS	AS	2.219		11.045
+R4	115.00782	1.33395	1.63800	11.02
+R5	14.72000	5.33439	1.74400	12.82
+R5'	-52.21000	Bf		12.82
+[figure]					
+source	Data/US003994576_Figure01P.png
+originX	84.41
+originY	195.70
+ppmm	13.212
+[notes]
+Bill: Right Image Height? Example 7?

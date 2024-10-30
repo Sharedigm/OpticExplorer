@@ -1,0 +1,127 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-modal-apps.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../apps/common/medium-apps";
+
+//
+// colors
+//
+
+$unfocused-background-color: darken(medium-apps.$background-color, 10%);
+$unfocused-sidebar-color: darken(medium-apps.$sidebar-color, 10%);
+$unfocused-sidebar-panel-color: medium-apps.$sidebar-panel-color;
+$unfocused-border-color: darken(medium-apps.$border-color, 10%);
+$inset-shadow: inset 0px 0px 10px colors.faded(black, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.modals {
+
+		//
+		// modal apps
+		//
+
+		.modal {
+			.modal-dialog .app {
+				.body, .body-region {
+					> .contents {
+						> .mainbar {
+							background: white !important;
+						}
+					}
+
+					// inset shadows
+					//
+					/*
+					&:not(.split-view)::after {
+						content: "";
+						box-shadow: $inset-shadow;
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						pointer-events: none;
+					}
+					*/
+				}
+			}
+		}
+
+		//
+		// focused modal apps
+		//
+
+		.modal.focused {
+			.modal-dialog .app {
+
+				.header-bar, .footer-bar, & + .panel {
+					background-color: medium-apps.$background-color;
+				}
+
+				.body, .body-region {
+					border-color: medium-apps.$background-color;
+
+					> .contents {
+						border-color: medium-apps.$border-color;
+
+						> .split {
+							border-color: medium-apps.$border-color;
+						}
+					}
+				}
+
+				.header-bar, .footer-bar, & + .panel {
+					border-color: medium-apps.$border-color;
+				}
+			}
+		}
+
+		//
+		// unfocused modal apps
+		//
+
+		.modal:not(.focused) {
+			.modal-dialog .app {
+
+				.header-bar, .footer-bar, & + .panel {
+					background-color: $unfocused-background-color;
+				}
+
+				.body, .body-region {
+					border-color: $unfocused-background-color;
+
+					> .contents {
+						border-color: $unfocused-background-color;
+
+						> .split {
+							border-color: $unfocused-border-color;
+						}
+					}
+				}
+
+				.header-bar, .footer-bar, & + .panel {
+					border-color: $unfocused-border-color;
+				}
+			}
+		}
+	}
+}

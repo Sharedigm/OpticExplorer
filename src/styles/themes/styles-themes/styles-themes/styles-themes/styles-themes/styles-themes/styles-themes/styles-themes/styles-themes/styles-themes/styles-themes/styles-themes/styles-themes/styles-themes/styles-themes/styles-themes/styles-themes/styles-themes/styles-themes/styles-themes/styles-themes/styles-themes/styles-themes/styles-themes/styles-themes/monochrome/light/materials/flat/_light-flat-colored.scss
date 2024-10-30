@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-flat-colored.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/flat";
+
+//
+// colors
+//
+
+$color: $light-grey;
+$selected-color: $very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light.flat {
+
+		//
+		// flat colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.flat($color);
+			}
+
+			&.raspberry {
+				.flat($color);
+			}
+
+			&.red-orange {
+				.flat($color);
+			}
+
+			&.orange {
+				.flat($color);
+			}
+
+			&.yellow {
+				.flat($color);
+			}
+
+			&.lime {
+				.flat($color);
+			}
+
+			&.green {
+				.flat($color);
+			}
+
+			&.teal {
+				.flat($color);
+			}
+
+			&.aqua {
+				.flat($color);
+			}
+
+			&.cyan {
+				.flat($color);
+			}
+
+			&.blue {
+				.flat($color);
+			}
+
+			&.indigo {
+				.flat($color);
+			}
+
+			&.violet {
+				.flat($color);
+			}
+
+			&.plum {
+				.flat($color);
+			}
+
+			&.purple {
+				.flat($color);
+			}
+
+			&.magenta {
+				.flat($color);
+			}
+
+			&.brown {
+				.flat($color);
+			}
+
+			&.grey {
+				.flat($color);
+			}
+
+			&.black {
+				.flat($color);
+			}
+
+			&.white {
+				.flat($color);
+			}
+
+			&.copper {
+				.flat($color);
+			}
+
+			&.silver {
+				.flat($color);
+			}
+
+			&.gold {
+				.flat($color);
+			}
+		}
+
+		//
+		// flat selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.flat($selected-color);
+			}
+
+			&.raspberry {
+				.flat($selected-color);
+			}
+
+			&.red-orange {
+				.flat($selected-color);
+			}
+
+			&.orange {
+				.flat($selected-color);
+			}
+
+			&.yellow {
+				.flat($selected-color);
+			}
+
+			&.lime {
+				.flat($selected-color);
+			}
+
+			&.green {
+				.flat($selected-color);
+			}
+
+			&.teal {
+				.flat($selected-color);
+			}
+
+			&.aqua {
+				.flat($selected-color);
+			}
+
+			&.cyan {
+				.flat($selected-color);
+			}
+
+			&.blue {
+				.flat($selected-color);
+			}
+
+			&.indigo {
+				.flat($selected-color);
+			}
+
+			&.violet {
+				.flat($selected-color);
+			}
+
+			&.plum {
+				.flat($selected-color);
+			}
+
+			&.purple {
+				.flat($selected-color);
+			}
+
+			&.magenta {
+				.flat($selected-color);
+			}
+
+			&.brown {
+				.flat($selected-color);
+			}
+
+			&.grey {
+				.flat($selected-color);
+			}
+
+			&.black {
+				.flat($selected-color);
+			}
+
+			&.white {
+				.flat($selected-color);
+			}
+
+			&.copper {
+				.flat($selected-color);
+			}
+
+			&.silver {
+				.flat($selected-color);
+			}
+
+			&.gold {
+				.flat($selected-color);
+			}
+		}
+	}
+}

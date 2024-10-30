@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 2002/0191303 Example 1 (Hasselblad HC TC 1.7x (Fujinon))
+[constants]
+Scaled	150	1
+Lateral Magnification	1.6740
+Lateral Magnification(m)	1.67379
+[variable distances]
+Focal Length	-167.79
+Image Height	70
+Magnification	0
+d0	Infinity
+Bf	0
+d0(TC)	16.5255
+[lens data]
+0	FS	d0(TC)		59.07
+1	113.2575	1.9995	1.82017	37.30	46.4
+3	29.4240	11.5005	1.59667	36.76	35.3
+4	-63.5220	5.3205		36.76	
+5	-67.5555	2.2500	1.88815	41.38	40.8
+6	183.3705	5.8005		37.46
+7	-38.7165	2.2500	1.88815	37.46	40.8
+8	-127.1295	0.3000		41.56	
+9	148.6905	15.7005	1.52033	47.36	58.6
+11	-31.3590	3.0000	1.88815	47.36	40.8
+12	-40.3425	62.4225		51.38	
+[figure]
+source	Data/US20020191303_Figure02TCP.png
+originX	24.14
+originY	149.56
+ppmm	4.060
+[notes]

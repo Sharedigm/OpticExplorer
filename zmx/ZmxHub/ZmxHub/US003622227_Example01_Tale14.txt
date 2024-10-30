@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 3,622,227 Example 1 (Nikon Nikkor-N Auto 24mm f/2.8)
+[constants]
+Scaled	24	1
+[variable distances]
+Focal Length	24
+Angle of View	84
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	37.4328
+[lens data]
+1	60.00	2.7	1.62041	41.70	60.3
+2	21.50	6.3		31.86
+3	90.00	5.5	1.62041	31.19	60.3
+4	-90.00	0.1		29.51
+5	30.00	2.7	1.62041	23.74	60.3
+6	11.00	9.8		17.00
+7	25.25	4.0	1.62004	14.34	36.3
+8	-18.58	3.0	1.51823	14.34	59.0
+9	-34.90	1.0		14.34
+9AS	AS	1.5		13.236
+10	-85.00	5.3	1.78470	14.30	26.1
+11	32.40	2.35		14.30
+12	-120.00	1.0	1.78470	19.76	26.1
+13	28.496	5.4	1.62041	19.76	60.3
+14	-20.00	0.1		19.76	
+15	192.00	3.5	1.74400	22.68	44.9
+16	-46.6152	Bf		22.68
+[figure]	
+source	Data/US003622227_Example01_Tale14-Fig1.png
+originX	9
+originY	225
+ppmm	10.492
+[notes]
+Bill: Doesn't quite match the lens construction. 1.5597mm * 24 = 37.4328mm

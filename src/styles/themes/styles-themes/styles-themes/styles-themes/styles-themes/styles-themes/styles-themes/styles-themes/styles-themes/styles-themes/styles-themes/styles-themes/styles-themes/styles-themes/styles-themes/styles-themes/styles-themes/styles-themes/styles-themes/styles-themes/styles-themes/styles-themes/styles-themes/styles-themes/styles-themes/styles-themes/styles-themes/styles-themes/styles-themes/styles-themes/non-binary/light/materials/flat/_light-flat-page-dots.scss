@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-flat-page-dots.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/flat/flat";
+@use "../../navs/light-page-dots";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.light.flat {
+		.flickity-page-dots {
+			.dot {
+				@include flat.shaded(light-page-dots.$color);
+
+				//
+				// selected page dots
+				//
+
+				&.is-selected {
+					@include flat.shaded(light-page-dots.$selected-color);
+				}
+			}
+		}
+	}
+}

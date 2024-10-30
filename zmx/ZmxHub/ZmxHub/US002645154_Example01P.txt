@@ -1,0 +1,29 @@
+[descriptive data]
+title	US 2,645,154 Example 1 (Cosina Voigtlander Heliar 210mm F4.5)
+[constants]
+Scaled	210	1
+[variable distances]
+Focal Length	210
+Angle of View	undefined
+F-Number	4.5
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	181.923
+[lens data]
+1	61.3347	11.3463	1.65953	53.50	57.0
+2	-177.8679	2.9442	1.60266	53.50	38.4
+3	Infinity	6.8082		53.50
+4	-133.6251	2.9442	1.64282	47.55	47.9
+5	57.0402	8.1585		42.18
+5.5	AS	4.2924		39.504
+6	-509.0715	2.9442	1.60266	44.62	38.4
+7	49.3731	12.4509	1.66867	47.23	47.5
+8	-85.2537	Bf		47.23
+[figure]
+source	Data/US002645154_Figure01P.png
+originX	26.53
+originY	236.42
+ppmm	4.821
+[notes]

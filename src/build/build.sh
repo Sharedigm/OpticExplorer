@@ -1,7 +1,7 @@
 # define directories
 #
-src=../../sharedigm
-dest=../../sharedigm-built
+src=../../opticexplorer
+dest=../../opticexplorer-built
 
 #
 # functions
@@ -37,14 +37,14 @@ clean_styles() {
 	# remove unused less folders
 	for item in "$1"/*; do
 		if [ -d "$item" ]; then
-			if [[ $item != *themes ]]; then
+			if [[ $item != *themes && $item != *optics ]]; then
 				rm -rf "$item"
 			fi
 		fi
 	done
 
 	# remove development files
-	for file in $(find $1 -name '*.less' -or -name '*.scss' -or -name '*.map' -or -name 'makefile'); do rm $file; done
+	for file in $(find $1 -name '*.less' -or -name '*.scss' -or -name 'makefile'); do rm $file; done
 
 	# remove all empty directories
 	find $1 -name ".DS_Store" -depth -exec rm {} \;

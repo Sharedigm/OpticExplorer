@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-drag-n-drop.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$highlight-color: var(--primary-color);
+$background-color: colors.fade($highlight-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// highlighting
+	//
+
+	div.highlighted:not(.item) {
+		&::after {
+			border-color: $highlight-color;
+		}
+	}
+
+	form.highlighted {
+		&::after {
+			border-color: $highlight-color;
+			background-color: $background-color;
+		}
+	}
+
+	.app {
+		.body {
+			textarea.highlighted {
+				border-color: $highlight-color;
+			}
+		}
+	}
+}

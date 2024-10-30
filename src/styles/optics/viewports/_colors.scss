@@ -1,0 +1,39 @@
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$highlight-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+//
+// dark colors
+//
+
+$dark-highlight-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+//
+// mixins
+//
+
+@function lighten($color, $amount) {
+	@return color-mix(in srgb, white $amount, $color);
+}
+
+@function darken($color, $amount) {
+	@return color-mix(in srgb, $ambient-color $amount, $color);
+}

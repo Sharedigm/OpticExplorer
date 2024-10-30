@@ -1,0 +1,965 @@
+################################################################################
+#                                                                              #
+#                                   Hoya.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: FCD505
+    catalog: Hoya
+    n: 1.59282
+    v: 68.63
+
+  - name: PCD51
+    catalog: Hoya
+    n: 1.59349
+    v: 67.00
+
+  - name: E-CF6
+    catalog: Hoya
+    n: 1.51742
+    v: 52.15
+
+  - name: MP-LAC130
+    catalog: Hoya
+    n: 1.69350
+    v: 53.20
+
+  - name: E-F5
+    catalog: Hoya
+    n: 1.60342
+    v: 38.01
+
+  - name: FDS16-W
+    catalog: Hoya
+    n: 1.98612
+    v: 16.48
+
+  - name: M-TAF401
+    catalog: Hoya
+    n: 1.77377
+    v: 47.17
+
+  - name: NBF1
+    catalog: Hoya
+    n: 1.74330
+    v: 49.22
+
+  - name: LACL60
+    catalog: Hoya
+    n: 1.64000
+    v: 60.20
+
+  - name: E-FD10
+    catalog: Hoya
+    n: 1.72825
+    v: 28.32
+
+  - name: MP-TAFD51-50
+    catalog: Hoya
+    n: 1.82130
+    v: 42.72
+
+  - name: MC-TAFD305
+    catalog: Hoya
+    n: 1.85135
+    v: 40.10
+
+  - name: MP-TAF105
+    catalog: Hoya
+    n: 1.77250
+    v: 49.50
+
+  - name: LAF3
+    catalog: Hoya
+    n: 1.71700
+    v: 47.98
+
+  - name: M-FDS2
+    catalog: Hoya
+    n: 2.00178
+    v: 19.32
+
+  - name: E-LAF7
+    catalog: Hoya
+    n: 1.74950
+    v: 35.04
+
+  - name: MP-LAC8-30
+    catalog: Hoya
+    n: 1.71330
+    v: 53.95
+
+  - name: MP-NBFD10-20
+    catalog: Hoya
+    n: 1.83461
+    v: 37.29
+
+  - name: MC-FDS2
+    catalog: Hoya
+    n: 2.00178
+    v: 19.32
+
+  - name: M-FCD500
+    catalog: Hoya
+    n: 1.55332
+    v: 71.68
+
+  - name: NBFD3
+    catalog: Hoya
+    n: 1.80450
+    v: 39.63
+
+  - name: E-FDS1
+    catalog: Hoya
+    n: 1.92286
+    v: 20.88
+
+  - name: TAC6
+    catalog: Hoya
+    n: 1.75500
+    v: 52.33
+
+  - name: TAF1
+    catalog: Hoya
+    n: 1.77250
+    v: 49.62
+
+  - name: E-FD5
+    catalog: Hoya
+    n: 1.67270
+    v: 32.17
+
+  - name: BAF10
+    catalog: Hoya
+    n: 1.67003
+    v: 47.19
+
+  - name: TAFD25
+    catalog: Hoya
+    n: 1.90366
+    v: 31.32
+
+  - name: NBFD12
+    catalog: Hoya
+    n: 1.79950
+    v: 42.34
+
+  - name: LAC8
+    catalog: Hoya
+    n: 1.71300
+    v: 53.94
+
+  - name: TAFD33
+    catalog: Hoya
+    n: 1.88100
+    v: 40.14
+
+  - name: MP-PCD4-40
+    catalog: Hoya
+    n: 1.61921
+    v: 63.86
+
+  - name: TAFD65
+    catalog: Hoya
+    n: 2.05090
+    v: 26.94
+
+  - name: TAFD32
+    catalog: Hoya
+    n: 1.87070
+    v: 40.73
+
+  - name: FDS90-SG
+    catalog: Hoya
+    n: 1.84666
+    v: 23.78
+
+  - name: MC-TAF105
+    catalog: Hoya
+    n: 1.77250
+    v: 49.50
+
+  - name: NBFD13
+    catalog: Hoya
+    n: 1.80610
+    v: 40.73
+
+  - name: LAC9
+    catalog: Hoya
+    n: 1.69100
+    v: 54.69
+
+  - name: MC-NBFD135
+    catalog: Hoya
+    n: 1.80834
+    v: 40.92
+
+  - name: BAF11
+    catalog: Hoya
+    n: 1.66672
+    v: 48.30
+
+  - name: M-TAC80
+    catalog: Hoya
+    n: 1.72903
+    v: 54.04
+
+  - name: MP-TAF31-15
+    catalog: Hoya
+    n: 1.80154
+    v: 45.46
+
+  - name: BSC7
+    catalog: Hoya
+    n: 1.51680
+    v: 64.20
+
+  - name: E-FD4
+    catalog: Hoya
+    n: 1.75520
+    v: 27.53
+
+  - name: E-F8
+    catalog: Hoya
+    n: 1.59551
+    v: 39.22
+
+  - name: LAC10
+    catalog: Hoya
+    n: 1.72000
+    v: 50.34
+
+  - name: BACED5
+    catalog: Hoya
+    n: 1.65844
+    v: 50.86
+
+  - name: FCD1B
+    catalog: Hoya
+    n: 1.49710
+    v: 81.56
+
+  - name: MC-LAC130
+    catalog: Hoya
+    n: 1.69350
+    v: 53.20
+
+  - name: M-PCD4
+    catalog: Hoya
+    n: 1.61881
+    v: 63.85
+
+  - name: E-FL6
+    catalog: Hoya
+    n: 1.56732
+    v: 42.84
+
+  - name: FDS18
+    catalog: Hoya
+    n: 1.94595
+    v: 17.98
+
+  - name: LAF2
+    catalog: Hoya
+    n: 1.74400
+    v: 44.90
+
+  - name: MP-LAF81
+    catalog: Hoya
+    n: 1.73077
+    v: 40.50
+
+  - name: MP-FDS2
+    catalog: Hoya
+    n: 2.00178
+    v: 19.32
+
+  - name: E-FD8
+    catalog: Hoya
+    n: 1.68893
+    v: 31.16
+
+  - name: NBFD15-W
+    catalog: Hoya
+    n: 1.80610
+    v: 33.27
+
+  - name: FCD705
+    catalog: Hoya
+    n: 1.55032
+    v: 75.50
+
+  - name: FDS18-W
+    catalog: Hoya
+    n: 1.94595
+    v: 17.98
+
+  - name: MP-TAC80-60
+    catalog: Hoya
+    n: 1.72963
+    v: 54.07
+
+  - name: MC-TAF101-100
+    catalog: Hoya
+    n: 1.76902
+    v: 49.29
+
+  - name: E-C3
+    catalog: Hoya
+    n: 1.51823
+    v: 58.96
+
+  - name: MP-FDS910-50
+    catalog: Hoya
+    n: 1.82165
+    v: 24.04
+
+  - name: TAFD45
+    catalog: Hoya
+    n: 1.95375
+    v: 32.32
+
+  - name: BACD18
+    catalog: Hoya
+    n: 1.63854
+    v: 55.45
+
+  - name: M-FDS910
+    catalog: Hoya
+    n: 1.82115
+    v: 24.06
+
+  - name: MC-PCD51-70
+    catalog: Hoya
+    n: 1.59271
+    v: 66.97
+
+  - name: MP-LAC14-80
+    catalog: Hoya
+    n: 1.69760
+    v: 55.51
+
+  - name: MP-TAC60-90
+    catalog: Hoya
+    n: 1.75591
+    v: 51.18
+
+  - name: E-FEL2
+    catalog: Hoya
+    n: 1.54072
+    v: 47.20
+
+  - name: M-TAFD51
+    catalog: Hoya
+    n: 1.82080
+    v: 42.71
+
+  - name: BAFD8
+    catalog: Hoya
+    n: 1.72342
+    v: 37.99
+
+  - name: MP-TAFD305
+    catalog: Hoya
+    n: 1.85135
+    v: 40.10
+
+  - name: MC-TAF401
+    catalog: Hoya
+    n: 1.77377
+    v: 47.17
+
+  - name: E-FDS1-W
+    catalog: Hoya
+    n: 1.92286
+    v: 20.88
+
+  - name: TAFD35
+    catalog: Hoya
+    n: 1.91082
+    v: 35.25
+
+  - name: MP-FD80
+    catalog: Hoya
+    n: 1.68893
+    v: 31.16
+
+  - name: BACD14
+    catalog: Hoya
+    n: 1.60311
+    v: 60.69
+
+  - name: FCD515
+    catalog: Hoya
+    n: 1.59282
+    v: 68.63
+
+  - name: E-F3
+    catalog: Hoya
+    n: 1.61293
+    v: 36.96
+
+  - name: PCD4
+    catalog: Hoya
+    n: 1.61800
+    v: 63.40
+
+  - name: MP-NBF1
+    catalog: Hoya
+    n: 1.74330
+    v: 49.33
+
+  - name: M-TAF31
+    catalog: Hoya
+    n: 1.80139
+    v: 45.45
+
+  - name: M-NBFD10
+    catalog: Hoya
+    n: 1.83441
+    v: 37.28
+
+  - name: MP-FCD500-20
+    catalog: Hoya
+    n: 1.55352
+    v: 71.72
+
+  - name: MC-PCD4-40
+    catalog: Hoya
+    n: 1.61921
+    v: 63.86
+
+  - name: FDS90
+    catalog: Hoya
+    n: 1.84666
+    v: 23.78
+
+  - name: MP-TAF401
+    catalog: Hoya
+    n: 1.77377
+    v: 47.17
+
+  - name: M-LAC130
+    catalog: Hoya
+    n: 1.69350
+    v: 53.20
+
+  - name: PCD40
+    catalog: Hoya
+    n: 1.61997
+    v: 63.88
+
+  - name: E-F2
+    catalog: Hoya
+    n: 1.62004
+    v: 36.30
+
+  - name: TAFD55
+    catalog: Hoya
+    n: 2.00100
+    v: 29.13
+
+  - name: M-LAC8
+    catalog: Hoya
+    n: 1.71300
+    v: 53.94
+
+  - name: M-FD80
+    catalog: Hoya
+    n: 1.68893
+    v: 31.16
+
+  - name: M-TAF1
+    catalog: Hoya
+    n: 1.77250
+    v: 49.47
+
+  - name: M-TAF105
+    catalog: Hoya
+    n: 1.77250
+    v: 49.50
+
+  - name: BACD15
+    catalog: Hoya
+    n: 1.62299
+    v: 58.12
+
+  - name: MP-TAF101-100
+    catalog: Hoya
+    n: 1.76902
+    v: 49.29
+
+  - name: MC-TAF1
+    catalog: Hoya
+    n: 1.77250
+    v: 49.47
+
+  - name: M-LAC14
+    catalog: Hoya
+    n: 1.69680
+    v: 55.46
+
+  - name: E-BACED20
+    catalog: Hoya
+    n: 1.64850
+    v: 53.03
+
+  - name: M-TAFD305
+    catalog: Hoya
+    n: 1.85135
+    v: 40.10
+
+  - name: MP-FCD1-M20
+    catalog: Hoya
+    n: 1.49690
+    v: 81.53
+
+  - name: NBFD15
+    catalog: Hoya
+    n: 1.80610
+    v: 33.27
+
+  - name: FDS24
+    catalog: Hoya
+    n: 1.92119
+    v: 23.96
+
+  - name: E-FD2
+    catalog: Hoya
+    n: 1.64769
+    v: 33.84
+
+  - name: E-BAF8
+    catalog: Hoya
+    n: 1.62374
+    v: 47.05
+
+  - name: TAF3D
+    catalog: Hoya
+    n: 1.80420
+    v: 46.50
+
+  - name: MC-NBF1
+    catalog: Hoya
+    n: 1.74330
+    v: 49.33
+
+  - name: M-NBF1
+    catalog: Hoya
+    n: 1.74330
+    v: 49.33
+
+  - name: MC-FCD500-20
+    catalog: Hoya
+    n: 1.55352
+    v: 71.72
+
+  - name: TAFD37
+    catalog: Hoya
+    n: 1.90043
+    v: 37.37
+
+  - name: TAF5
+    catalog: Hoya
+    n: 1.81600
+    v: 46.57
+
+  - name: E-FD1
+    catalog: Hoya
+    n: 1.71736
+    v: 29.50
+
+  - name: MP-TAFD307
+    catalog: Hoya
+    n: 1.88202
+    v: 37.22
+
+  - name: BAC4
+    catalog: Hoya
+    n: 1.56883
+    v: 56.04
+
+  - name: MP-BACD5N
+    catalog: Hoya
+    n: 1.58913
+    v: 61.25
+
+  - name: TAC2
+    catalog: Hoya
+    n: 1.74100
+    v: 52.60
+
+  - name: MP-TAFD405
+    catalog: Hoya
+    n: 1.95150
+    v: 29.83
+
+  - name: FF8
+    catalog: Hoya
+    n: 1.75211
+    v: 25.05
+
+  - name: MP-PCD51-70
+    catalog: Hoya
+    n: 1.59271
+    v: 66.97
+
+  - name: E-ADF50
+    catalog: Hoya
+    n: 1.65412
+    v: 39.62
+
+  - name: FCD10A
+    catalog: Hoya
+    n: 1.45860
+    v: 90.20
+
+  - name: BACD5
+    catalog: Hoya
+    n: 1.58913
+    v: 61.25
+
+  - name: FDS90(P)
+    catalog: Hoya
+    n: 1.84666
+    v: 23.88
+
+  - name: E-F1
+    catalog: Hoya
+    n: 1.62588
+    v: 35.74
+
+  - name: FD225
+    catalog: Hoya
+    n: 1.80809
+    v: 22.76
+
+  - name: FCD10
+    catalog: Hoya
+    n: 1.45650
+    v: 90.27
+
+  - name: TAFD40
+    catalog: Hoya
+    n: 2.00069
+    v: 25.46
+
+  - name: BACD16
+    catalog: Hoya
+    n: 1.62041
+    v: 60.34
+
+  - name: FF5
+    catalog: Hoya
+    n: 1.59270
+    v: 35.44
+
+  - name: BAFD7
+    catalog: Hoya
+    n: 1.70154
+    v: 41.15
+
+  - name: FCD1
+    catalog: Hoya
+    n: 1.49700
+    v: 81.61
+
+  - name: E-FD15
+    catalog: Hoya
+    n: 1.69895
+    v: 30.05
+
+  - name: MC-BACD5N
+    catalog: Hoya
+    n: 1.58913
+    v: 61.25
+
+  - name: BACD4
+    catalog: Hoya
+    n: 1.61272
+    v: 58.58
+
+  - name: FD140
+    catalog: Hoya
+    n: 1.76182
+    v: 26.61
+
+  - name: M-BACD12
+    catalog: Hoya
+    n: 1.58313
+    v: 59.46
+
+  - name: M-TAFD405
+    catalog: Hoya
+    n: 1.95150
+    v: 29.83
+
+  - name: E-FEL1
+    catalog: Hoya
+    n: 1.54814
+    v: 45.82
+
+  - name: E-ADF10
+    catalog: Hoya
+    n: 1.61310
+    v: 44.36
+
+  - name: LAC14
+    catalog: Hoya
+    n: 1.69680
+    v: 55.46
+
+  - name: M-LAF81
+    catalog: Hoya
+    n: 1.73077
+    v: 40.50
+
+  - name: TAF4
+    catalog: Hoya
+    n: 1.78800
+    v: 47.49
+
+  - name: MP-BACD15
+    catalog: Hoya
+    n: 1.62263
+    v: 58.16
+
+  - name: MC-FCD1-M20
+    catalog: Hoya
+    n: 1.49690
+    v: 81.53
+
+  - name: M-TAFD307
+    catalog: Hoya
+    n: 1.88202
+    v: 37.22
+
+  - name: MC-TAFD307
+    catalog: Hoya
+    n: 1.88202
+    v: 37.22
+
+  - name: MP-FDS1
+    catalog: Hoya
+    n: 1.92286
+    v: 20.88
+
+  - name: LBC3N
+    catalog: Hoya
+    n: 1.60625
+    v: 63.71
+
+  - name: M-TAC60
+    catalog: Hoya
+    n: 1.75501
+    v: 51.16
+
+  - name: FD60-W
+    catalog: Hoya
+    n: 1.80518
+    v: 25.46
+
+  - name: TAC8
+    catalog: Hoya
+    n: 1.72916
+    v: 54.67
+
+  - name: M-PCD51
+    catalog: Hoya
+    n: 1.59201
+    v: 67.02
+
+  - name: MP-NBFD130
+    catalog: Hoya
+    n: 1.80610
+    v: 40.73
+
+  - name: FC5
+    catalog: Hoya
+    n: 1.48749
+    v: 70.45
+
+  - name: FCD100
+    catalog: Hoya
+    n: 1.43700
+    v: 95.10
+
+  - name: MP-BACD12
+    catalog: Hoya
+    n: 1.58313
+    v: 59.46
+
+  - name: NBFD10
+    catalog: Hoya
+    n: 1.83400
+    v: 37.34
+
+  - name: E-FD7
+    catalog: Hoya
+    n: 1.63980
+    v: 34.57
+
+  - name: TAF3
+    catalog: Hoya
+    n: 1.80420
+    v: 46.50
+
+  - name: E-BACD10
+    catalog: Hoya
+    n: 1.62280
+    v: 56.91
+
+  - name: TAC4
+    catalog: Hoya
+    n: 1.73400
+    v: 51.05
+
+  - name: TAFD37A
+    catalog: Hoya
+    n: 1.90043
+    v: 37.37
+
+  - name: LAC13
+    catalog: Hoya
+    n: 1.69350
+    v: 53.34
+
+  - name: E-FDS3
+    catalog: Hoya
+    n: 2.10420
+    v: 17.02
+
+  - name: E-FEL6
+    catalog: Hoya
+    n: 1.53172
+    v: 48.84
+
+  - name: TAFD5G
+    catalog: Hoya
+    n: 1.83481
+    v: 42.72
+
+  - name: FD110
+    catalog: Hoya
+    n: 1.78472
+    v: 25.72
+
+  - name: M-BACD15
+    catalog: Hoya
+    n: 1.62263
+    v: 58.16
+
+  - name: E-FL5
+    catalog: Hoya
+    n: 1.58144
+    v: 40.89
+
+  - name: MC-FDS910-50
+    catalog: Hoya
+    n: 1.82165
+    v: 24.04
+
+  - name: M-FCD1
+    catalog: Hoya
+    n: 1.49710
+    v: 81.56
+
+  - name: M-FDS1
+    catalog: Hoya
+    n: 1.92286
+    v: 20.88
+
+  - name: TAFD5F
+    catalog: Hoya
+    n: 1.83481
+    v: 42.72
+
+  - name: LAC12
+    catalog: Hoya
+    n: 1.67790
+    v: 55.52
+
+  - name: E-FDS2
+    catalog: Hoya
+    n: 2.00272
+    v: 19.32
+
+  - name: M-BACD5N
+    catalog: Hoya
+    n: 1.58913
+    v: 61.25
+
+  - name: MC-TAF31-15
+    catalog: Hoya
+    n: 1.80154
+    v: 45.46
+
+  - name: TAF2
+    catalog: Hoya
+    n: 1.79450
+    v: 45.39
+
+  - name: NBFD11
+    catalog: Hoya
+    n: 1.78590
+    v: 43.93
+
+  - name: TAFD30
+    catalog: Hoya
+    n: 1.88300
+    v: 40.80
+
+  - name: MC-TAFD51-50
+    catalog: Hoya
+    n: 1.82130
+    v: 42.72
+
+  - name: M-TAF101
+    catalog: Hoya
+    n: 1.76802
+    v: 49.24
+
+  - name: BACD11
+    catalog: Hoya
+    n: 1.56384
+    v: 60.83
+
+  - name: E-FD13
+    catalog: Hoya
+    n: 1.74077
+    v: 27.76
+
+  - name: FD60
+    catalog: Hoya
+    n: 1.80518
+    v: 25.46
+
+  - name: LAC7
+    catalog: Hoya
+    n: 1.65160
+    v: 58.40
+
+  - name: MC-BACD12
+    catalog: Hoya
+    n: 1.58313
+    v: 59.46
+
+  - name: BACD2
+    catalog: Hoya
+    n: 1.60738
+    v: 56.71
+
+  - name: M-NBFD130
+    catalog: Hoya
+    n: 1.80610
+    v: 40.73

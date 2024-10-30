@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                          _colored-chalk-badges.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/chalk/round-chalk";
+@use "../../navs/colored-badges";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.chalk.colored {
+		.badge {
+			@include round-chalk.shade(var(--primary-color));
+
+			//
+			// chalk special badges
+			//
+
+			&.success {
+				@include round-chalk.shaded(colored-forms.$success-color);
+			}
+
+			&.caution {
+				@include round-chalk.shaded(colored-forms.$caution-color);
+			}
+
+			&.warning {
+				@include round-chalk.shaded(colored-forms.$warning-color);
+			}
+		}
+	}
+}

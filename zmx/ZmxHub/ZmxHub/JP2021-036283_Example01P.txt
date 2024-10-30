@@ -1,0 +1,32 @@
+[descriptive data]
+title	JP 2021-036283 Example 1 (Nikon AF Nikkor 35mm f/2D)
+[constants]
+[variable distances]
+Focal Length	36.000	36.000	36.000
+Angle of View	63.245	undefined	undefined
+F-Number	2.006	undefined	undefined
+Image Height	43.400	43.400	43.400
+Total Length	87.738	undefined	undefined
+Magnification	0	-0.033	-0.237
+d0	Infinity	1092.41	153.41
+Bf	37.938	39.138	46.457
+[lens data]
+1	37.6614	1.5	1.51680	33.36	64.12
+2	16.4087	16.0		26.60	
+3	34.4105	9.0	1.78797	25.92	47.17
+4	-25.7916	5.5	1.53172	25.62	48.96
+5	-369.8812	2.0		25.62	
+6	AS	4.0		20.118
+7	-24.4463	1.9	1.80518	21.54	25.35
+8	61.3691	2.2		22.24	
+9	-73.8984	4.0	1.74810	22.04	52.28
+10	-21.5135	0.1		23.04	
+11	94.8086	3.6	1.68348	26.90	54.80
+12	-60.0802	Bf		26.90	
+[figure]
+source	Data/JP2021-036283_Figure01P.png
+originX	9.28
+originY	80.05
+ppmm	2.421
+[notes]
+Bill: d0 measured.

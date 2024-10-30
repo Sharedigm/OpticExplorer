@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 4,523,816 Example 4 (Vivitar Series 1 450mm F4.5 Solid Mirror)
+[constants]
+Type	REFLEX
+[variable distances]
+Focal Length	437.4
+Angle of View	undefined
+F-Number	4.65
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	29.66
+[lens data]
+1	Infinity	36.75	1.491	94.0645	57.2
+2	-1107.79	27.30		95.00	
+M1	-217.43	0	-1	95.00		41.85
+M1a	-217.43	0	1	95.00		41.85
+M1b	-217.43	-64.55		95.00		41.85
+M2	-111.37	0	-1	42.26
+M2a	-111.37	0	1	42.26
+M2b	-111.37	53.50		42.26
+3	634.30	0		36.66
+3	634.30	6.88	1.517	36.66	64.2
+4	-50.64	2.30	1.673	36.56	32.2
+5	-87.29	4.25		39.08	
+6	116.03	2.20	1.720	34.70	50.3
+7	50.04	5.17	1.728	32.62	26.1
+8	-204.60	0.72		32.62	
+9	-800.99	2.20	1.834	33.94	37.3
+10	31.89	3.50	1.517	28.80	64.2
+11	96.80	23.08		28.80	
+12	-44.48	1.92	1.720	24.98	50.3
+13	-286.84	Bf		24.98	
+[aspherical data]
+1	Infinity	0.010	-2.89E-08	3.65E-13	-5.79E-16	9.13E-20
+[figure]
+source	Data/US004523816_Figure04P.png
+originX	50.51
+originY	105.81
+ppmm	1.945
+[notes]
+Bill: Repair ? M2 -143.54 -> -111.37 for Focal Length 3 Plates are missing from the prescription.
+F-Number sets dai1 437mm/4.65 = 94.0645mm

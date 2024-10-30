@@ -1,0 +1,35 @@
+[descriptive data]
+title	DE 10 2012 014955 Example 1 (Schneider Video-Xenon T2.1 / 75)
+[metadata]
+[constants]
+[variable distances]
+Focal Length	75
+Angle of View	undefined
+F-Number	2.1
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	62.87
+[lens data]
+1	132.71	5.00	1.652	49.13	33.78
+2	43.74	10.70		44.07
+3	94.20	6.53	1.80	44.12	34.95
+4	1347.15	12.96		44.12
+5	43.60	7.25	1.88	42.58	40.75
+6	-428.18	5.80		42.58	
+7	-145.12	3.93	1.77	38.01	49.58
+8	-68.98	2.72	1.67	39.13	32.03
+9	28.98	6.29		32.00
+9.5	AS	11.70		29.446
+10	-49.43	2.58	1.73	31.18	28.52
+11	125.87	5.74	1.73	34.24	54.66
+12	-50.63	1.93		34.24
+13	174.56	5.32	1.81	35.17	40.59
+14	-85.08	Bf		35.17
+[figure]
+source	Data/DE102012014955_Figure01P.png
+originX	197.21
+originY	445.14
+ppmm	8.327
+[notes]

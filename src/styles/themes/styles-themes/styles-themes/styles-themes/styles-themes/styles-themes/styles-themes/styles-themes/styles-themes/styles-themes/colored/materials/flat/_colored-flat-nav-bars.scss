@@ -1,0 +1,71 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-flat-nav-bars.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/flat/flat";
+@use "../../navs/colored-nav-bars";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.flat {
+
+			.navbar {
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {
+						.inner {
+							@include flat.color(colored-nav-bars.$indicator-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.flat {
+
+			.navbar {
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {
+						.inner {
+							@include flat.colored(colored-nav-bars.$default-indicator-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 4,241,983 Example 1 (Canon FD500mm f4.5L)
+[constants]
+Scaled	500	100
+[variable distances]
+Focal Length	500
+Angle of View	4.96
+F-Number	4.5
+Total Length	416.05
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	228.63
+[lens data]
+1	234.680	18.50	1.43387	116.06	95.1	CaF2
+2	-193.900	15.65		116.06		
+3	-162.810	5.50	1.78590	108.32	44.2	LaSF01
+4	-1014.175	19.60		108.32		
+5	190.490	13.00	1.49700	105.12	8.2	FK01
+6	-413.240	46.65		105.12		
+6AS	AS	40.00		80.717
+7	52.775	5.00	1.58913	61.20	61.1	SK5
+8	47.545	12.70		57.90
+9	221.880	5.50	1.75520	57.28	27.5	SF4
+10	1434.290	3.00	1.71300	57.28	53.9	LaK8
+11	105.290	Bf		57.28		
+[figure]
+source	Data/US004241983_Figure01P.png
+originX	18.09
+originY	80.42
+ppmm	1.386
+[notes]

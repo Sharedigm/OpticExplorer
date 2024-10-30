@@ -1,0 +1,223 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-tables.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../layout/tables";
+@use "../colors/light-branding";
+
+//
+// colors
+//
+
+$head-color: text-colors.$dark-color;
+$head-icon-color: light-branding.$secondary-color;
+$head-fill-color: colors.$very-very-light-grey;
+$head-sort-fill-color: darken($head-fill-color, 10%);
+$head-outline-color: $head-fill-color;
+
+$side-head-color: text-colors.$dark-color;
+$side-head-icon-color: colors.$light-grey;
+$side-head-fill-color: colors.$very-very-very-light-grey;
+$side-head-sort-fill-color: darken($side-head-fill-color, 10%);
+$side-head-outline-color: $side-head-fill-color;
+
+$color: text-colors.$dark-color;
+$body-fill-color: colors.faded(white, 25%);
+
+$row-odd-fill-color: colors.faded(colors.$ultra-light-grey, 33%);
+$row-even-fill-color: colors.$ultra-light-grey;
+$row-selected-fill-color: colors.faded(light-branding.$secondary-color, 33%);
+$row-selected-stroke-color: light-branding.$secondary-color;
+
+$cell-highlighted-color: white;
+$cell-highlighted-background-color: light-branding.$secondary-color;
+$cell-selected-outline-color: light-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	table {
+		color: $color;
+		
+		//
+		// light table headers
+		//
+		
+		thead {
+			th {
+				color: $head-color;
+				border-color: $head-fill-color;
+				background-color: $head-fill-color;
+
+				i {
+					color: $head-icon-color;
+				}
+			}
+		}
+
+		tbody {
+			th {
+				color: $side-head-color;
+				border-color: $head-fill-color;
+				background-color: $side-head-fill-color;
+
+				i {
+					color: $side-head-icon-color;
+				}
+			}
+		}
+
+		th.tablesorter-headerDesc, th.tablesorter-headerAsc {
+			background-color: $head-sort-fill-color;
+		}
+
+		//
+		// light table borders
+		//
+	
+		&.outlined {
+			th {
+				border-color: $head-fill-color;
+			}
+		}
+
+		//
+		// table head outlines
+		//
+
+		thead {
+
+			// middle
+			//
+			th {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset;
+			}
+
+			// left
+			//
+			th:first-child {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset,
+					tables.$head-border-width 0 0 $head-outline-color inset;
+			}
+
+			// right
+			//
+			th:last-child {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset,
+					(-(tables.$head-border-width)) 0 0 $head-outline-color inset;
+			}
+		}
+
+		//
+		// light table rows
+		//
+
+		tbody {
+			background-color: $body-fill-color;
+
+			//
+			// light zebra striping
+			//
+
+			tr:nth-of-type(odd), tr.odd {
+				td:not(.append) {
+					background-color: $row-odd-fill-color;
+				}
+			}
+
+			tr:nth-of-type(even), tr.even {
+				td:not(.append) {
+					background-color: $row-even-fill-color;
+				}
+			}
+			
+			//
+			// light inset row selection
+			//
+			
+			tr.selected {
+				td:not(.append) {
+					background-color: $row-selected-fill-color;
+				}
+				
+				// middle
+				//
+				td:not(.append) {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset;
+				}
+
+				// left
+				//
+				td:not(.append):first-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset,
+						2px 0 0 $row-selected-stroke-color inset;
+				}
+
+				// right
+				//
+				td:not(.append):last-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset,
+						-2px 0 0 $row-selected-stroke-color inset;
+				}	
+			}
+
+			tr.selected + tr.selected {
+
+				// middle
+				//
+				td:not(.append) {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset;
+				}
+
+				// left
+				//
+				td:not(.append):first-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						2px 0 0 $row-selected-stroke-color inset;
+				}
+
+				// right
+				//
+				td:not(.append):last-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						-2px 0 0 $row-selected-stroke-color inset;
+				}
+			}
+
+			//
+			// cell shaded
+			//
+
+			tr {
+				td:not(.append) {
+					&.highlighted {
+						color: $cell-highlighted-color;
+						background-color: $cell-highlighted-background-color !important;
+					}
+
+					&.selected {
+						outline-color: $cell-selected-outline-color;
+					}
+				}
+			}
+		}
+	}
+}

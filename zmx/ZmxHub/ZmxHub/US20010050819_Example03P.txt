@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 2001/0050819 Example 3 (Hasselblad HC 2.8 80 (Fujinon))
+[constants]
+Scaled	80	100
+[variable distances]
+Focal Length	80
+Angle of View	46.7
+F-Number	2.9
+Image Height	70
+Magnification	0
+d0	Infinity
+Bf	60.872
+[lens data]
+1	38.0394	4.6647	1.78589	38.44	44.2
+2	88.6001	0.9709		36.33
+3	29.0164	5.9862	1.51680	31.75	64.1
+4	131.7382	0.0472		28.85
+5	110.6121	2.0466	1.60342	28.11	38.0
+6	19.2316	13.5418		21.28
+7	AS	7.8382		19.300
+8	-21.5195	2.5947	1.72825	20.32	28.5
+9	-202.8955	0.2002		26.40
+10	-139.6596	7.2886	1.78589	26.40	44.2
+11	-31.3888	0.1944		31.13
+12	-494.4805	6.8027	1.74330	33.56	49.3
+13	-44.7302	Bf		37.66
+[figure]
+source	Data/US20010050819_Figure01P.png
+originX	51.89
+originY	329.25
+ppmm	9.084
+[notes]
+Bill: Moved AS 1.88mm toward the image plane.

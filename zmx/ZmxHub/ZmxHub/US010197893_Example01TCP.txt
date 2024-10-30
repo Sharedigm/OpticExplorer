@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 10,197,893 Example 1 TC (Fujifilm Fujinon XF2X TC WR)
+[metadata]
+[constants]
+Lateral Magnification	2
+Lateral Magnification(m)	1.99935
+[variable distances]
+Focal Length	-41.726
+Angle of View	undefined
+F-Number	undefined
+Image Height	28.40
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+40	FS	2.50		25.23
+
+41	82.3854	0.90	1.88300	21.49	40.76
+42	19.0130	5.16	1.62004	19.42	36.26
+43	-33.9161	2.50		19.42
+44	-34.6013	0.91	1.88300	18.41	40.76
+45	17.9890	4.15	1.74077	18.92	27.79
+46	-132.7745	2.20		18.92
+47	-31.1833	0.93	1.88300	19.02	40.76
+48	53.4860	5.29	1.57501	21.42	41.5
+49	-20.9775	0.10		21.42
+50	-24.9990	0.91	1.90043	20.42	37.37
+51	-264.6340	0.20		23.38
+52	31.0672	7.34	1.67300	25.06	38.15
+53	-24.6320	1.00	2.00069	25.06	25.46
+54	-69.0128	23.596		27.13
+
+55	CG	2.850	1.51633	28.40	64.14
+56	CG	0.001		28.40
+[figure]
+source	Data/US010197893_Figure01P.png
+originX	8.25
+originY	127.59
+ppmm	9.260
+[notes]
+Bill: Lateral Magnification not stated.

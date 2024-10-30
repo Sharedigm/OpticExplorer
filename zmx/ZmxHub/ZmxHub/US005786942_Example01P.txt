@@ -1,0 +1,45 @@
+[descriptive data]
+title	US 5,786,942 Example 1 (Ricoh smc Pentax-FA 28-70mm F4 AL)
+[constants]
+[variable distances]
+Focal Length	29.00	52.00	68.00
+Angle of View	76.6	44.2	34.8
+F-Number	4	4	4
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d5	32.70	8.10	2.00
+d10.5	1.13	9.32	14.19
+d13	15.39	7.19	2.32
+Bf(p)	36.69	36.69	36.69
+Bf	36.71	50.69	59.02
+Aperture Diameter	12.293	16.405	19.840
+[lens data]					
+1	-900.000	1.70	1.60311	44.26	60.7
+2	20.698	0.50	1.52540	34.98	?
+3	17.567	5.40		34.46
+4	28.980	3.68	1.84666	34.70	23.8
+5	41.200	d5		33.34	
+6	105.520	2.92	1.72916	21.74	54.7
+7	-58.575	0.10		21.74	
+8	19.783	5.08	1.48749	21.74	70.2
+9	-128.547	1.30	1.81786	21.74	23.7
+10	64.000	1.92		21.74	
+10.5	AS	d10.5		12.293
+11	-263.618	1.58	1.80518	15.99	25.4
+12	-64.516	1.30	1.69680	15.99	55.5
+13	52.387	d13		15.99
+14	-993.485	3.78	1.72916	19.42	54.7
+15	-25.674	1.43		19.42	
+16	-16.202	1.30	1.80518	19.42	25.4
+17	-21.880	Bf		20.92	
+[aspherical data]
+3	17.567	-1	6.66032E-06	2.80034E-09	1.09723E-11	-2.43096E-14
+[figure]
+source	Data/US005786942_Figure01P.png
+originX	21.58
+originY	128.22
+ppmm	3.765
+[notes]
+Bill: Bf is *not* constant across scenarios. Construction figure is at intermediate (52mm) focal length.

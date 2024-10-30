@@ -1,0 +1,31 @@
+[descriptive data]
+title	DE 2444954 Example 3 (Rodenstock Grandagon-N 75mm f5.6)
+[variable distances]
+Focal Length	75
+Angle of View	104
+F-Number	4.5
+Image Height	192
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	51.78
+[lens data]
+1	75.80	5.50	1.4662	53.80	65.56
+2	18.97	9.85		33.90
+3	30.18	12.60	1.6776	34.00	31.97
+4	17.22	11.40	1.6251	20.25	52.86
+5	-16.73	0.85	1.5629	20.25	46.88
+6	136.75	1.75		18.20
+6.5	AS	0.50		17.941
+7	334.97	0.85	1.5855	18.00	59.19
+8	15.02	11.00	1.6113	18.30	58.65
+9	-12.59	9.30	1.6700	18.30	48.13
+10	-26.42	9.20		30.50
+11	-19.32	3.20	1.4891	32.70	70.22
+12	-96.12	Bf		47.00
+[figure]
+source	Data/DE02444954_Figure01P.png
+originX	48.27
+originY	480.20
+ppmm	12.910
+[notes]

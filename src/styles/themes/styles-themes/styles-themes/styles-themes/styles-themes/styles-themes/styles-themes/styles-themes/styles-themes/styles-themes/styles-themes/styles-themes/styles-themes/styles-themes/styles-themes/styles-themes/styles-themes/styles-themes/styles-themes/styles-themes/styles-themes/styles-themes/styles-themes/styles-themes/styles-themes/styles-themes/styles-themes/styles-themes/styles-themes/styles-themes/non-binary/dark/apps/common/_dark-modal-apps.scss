@@ -1,0 +1,147 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-modal-apps.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "dark-apps";
+
+//
+// colors
+//
+
+$unfocused-background-color: darken(dark-apps.$background-color, 10%);
+$unfocused-border-color: darken(dark-apps.$border-color, 10%);
+$unfocused-sidebar-color: dark-apps.$sidebar-color;
+$unfocused-sidebar-panel-color: dark-apps.$sidebar-panel-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.modals {
+
+		//
+		// dark modal apps
+		//
+
+		.modal {
+			.modal-dialog .app {
+				.body, .body-region {
+					> .contents {
+						> .mainbar {
+							background: black !important;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dark focused modal apps
+		//
+
+		.modal.focused .modal-dialog .app {
+
+			.header-bar, .footer-bar, & + .panel {
+				background-color: dark-apps.$background-color;
+			}
+
+			.body, .body-contents {
+				border-color: dark-apps.$background-color;
+
+				> .contents {
+					border-color: dark-apps.$border-color;
+
+					> .split {
+						border-color: dark-apps.$border-color;
+
+						&.sidebar {
+							background-color: dark-apps.$sidebar-color;
+						}
+					}
+				}
+			}
+
+			.header-bar, .footer-bar, & + .panel {
+				border-color: dark-apps.$border-color;
+			}
+		}
+
+		//
+		// dark unfocused modal apps
+		//
+
+		.modal:not(.focused) .modal-dialog .app {
+
+			.header-bar, .footer-bar, & + .panel  {
+				background-color: $unfocused-background-color;
+			}
+
+			.body, .body-contents {
+				border-color: $unfocused-background-color;
+
+				> .contents {
+					border-color: $unfocused-border-color;
+
+					> .split {
+						border-color: $unfocused-border-color;
+
+						&.sidebar {
+							background-color: $unfocused-sidebar-color;
+						}
+					}
+				}
+			}
+
+			.header-bar, .footer-bar, & + .panel  {
+				border-color: $unfocused-border-color;
+			}
+		}
+	}
+
+	//
+	// dark transparent modal apps
+	//
+
+	&.transparent, &.translucent {
+		.modals {
+			.modal.focused {
+				.modal-dialog .app {
+					.body, .body-region {
+						> .contents {
+							> .sidebar {
+								background-color: colors.faded(dark-apps.$sidebar-color, 50%);
+							}
+						}
+					}
+				}
+			}
+
+			.modal:not(.focused) {
+				.modal-dialog .app {
+					.body, .body-region {
+						> .contents {
+							> .sidebar {
+								background-color: colors.faded($unfocused-sidebar-color, 50%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

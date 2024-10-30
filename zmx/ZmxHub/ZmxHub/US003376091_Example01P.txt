@@ -1,0 +1,35 @@
+[descriptive data]
+title	US 3,376,091 Example 1 (Schneider Super-Angulon 5.6 / 75)
+[constants]
+Scaled	75	100
+[variable distances]
+Focal Length	75
+Angle of View(p)	100
+Angle of View	92
+F-Number	5.6
+Image Height	156
+Magnification	0
+d0	Infinity
+Bf(p)	51.345
+Bf	50.87
+[lens data]
+1	92.063	5.280	1.46450	51.60	65.8
+2	19.118	10.988		32.76	
+3	26.168	9.750	1.71700	28.35	47.9
+4	15.675	12.360	1.61405	16.88	55.1
+5	-16.110	1.110	1.56138	16.88	45.3
+6	270.203	1.110		14.01	
+6AS	AS	1.110		18.974
+7	-789.458	1.110	1.56883	14.43	56.0
+8	17.880	10.703	1.61375	16.58	56.3
+9	-12.218	9.668	1.70181	16.58	41.1
+10	-26.055	9.030		25.79	
+11	-19.485	3.203	1.52015	31.67	63.6
+12	-96.240	Bf		43.86	
+[figure]
+source	Data/US003376091_Figure01P.png
+originX	330.14
+originY	395.85
+ppmm	5.823
+[notes]
+Bill: Angle of View from specification.

@@ -1,0 +1,43 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-buttons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-buttons";
+@use "../../../../navs/colors/colored-btns";
+
+//
+// colors
+//
+
+$color: lighten(colors.$very-very-light-grey, 5%);
+$label-color: colors.$very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	//
+	// light buttons
+	//
+
+	.button {
+		@include colored-buttons.colored($color);
+		@include colored-buttons.labeled($label-color);
+	}
+}

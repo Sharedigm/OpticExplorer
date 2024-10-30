@@ -1,0 +1,78 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-popovers.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/light-branding";
+
+//
+// colors
+//
+
+$light-popover-title-background-color: light-branding.$secondary-color;
+$light-popover-title-text-color: white;
+$light-popover-title-icon-color: white;
+$light-popover-text-color: light-branding.$primary-color;
+$light-popover-title-color: light-branding.$secondary-color;
+$light-popover-border-color: light-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.popover {
+		color: $light-popover-text-color;
+		border-color: $light-popover-border-color;
+
+		.popover-title {
+			color: $light-popover-title-text-color;
+			background-color: $light-popover-title-background-color;
+
+			.icon {
+				color: $light-popover-title-icon-color;
+				fill: $light-popover-title-icon-color;
+			}
+		}
+
+		.popover-content {
+			color: $light-popover-text-color;
+
+			.title {
+				color: $light-popover-title-color;
+			}
+		}
+
+		//
+		// light popover arrows
+		//
+
+		&.right > .arrow {
+			border-right-color: $light-popover-border-color;
+		}
+
+		&.left > .arrow {
+			border-left-color: $light-popover-border-color;
+		}
+
+		&.top > .arrow {
+			border-top-color: $light-popover-border-color;
+		}
+
+		&.bottom > .arrow {
+			border-bottom-color: $light-popover-border-color;
+		}	
+	}
+}

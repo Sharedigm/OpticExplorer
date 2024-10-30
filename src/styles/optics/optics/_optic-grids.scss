@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                               _optic-grids.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$optics-grid-color: colors.$medium-grey;
+$dark-optics-grid-color: colors.$light-grey;
+$light-optics-grid-color: colors.$light-grey;
+$colored-optics-grid-color: white;
+$light-colored-optics-grid-color: lighten(colors.$light-blue, 10%);
+
+//
+// styles
+//
+
+body.binary {
+
+	.optics .viewport,
+	.abbe.diagram {
+		pattern svg path {
+			stroke: black;
+			stroke-opacity: 0.33;
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto,
+	.abbe.diagram.dark,
+	&.dark .abbe.diagram.auto {
+		pattern svg path {
+			stroke: white;
+		}
+	}
+}
+
+
+body:not(.binary) {
+
+	//
+	// colored viewports
+	//
+
+	&.monochrome, &.colored {
+
+		//
+		// medium viewports
+		//
+
+		.optics .viewport,
+		.abbe.diagram {
+			pattern svg path {
+				stroke: $optics-grid-color;
+				stroke-opacity: 0.33;
+			}
+
+			&.colored {
+				pattern svg path {
+					stroke: $colored-optics-grid-color;
+				}
+			}
+		}
+
+		//
+		// dark viewports
+		//
+
+		.optics .viewport.dark,
+		&.dark .optics .viewport.auto,
+		.abbe.diagram.dark,
+		&.dark .abbe.diagram.auto {
+			pattern svg path {
+				stroke: $dark-optics-grid-color;
+			}
+		}
+
+		//
+		// light viewports
+		//
+
+		.optics .viewport.light,
+		&.light .optics .viewport.auto,
+		.abbe.diagram.light,
+		&.light .abbe.diagram.auto {
+			pattern svg path {
+				stroke: $light-optics-grid-color;
+			}
+
+			&.colored {
+				pattern svg path {
+					stroke: $light-colored-optics-grid-color;
+				}
+			}
+		}
+	}
+}

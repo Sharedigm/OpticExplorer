@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,634,001 Example 1 (Miranda Auto E 50mm F1.4)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	45
+F-Number	1.4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	35.53
+Bf	35.55
+[lens data]
+1	38.975	5.775	1.72342	36.84	37.9	baSF8
+2	131.525	0.095		36.84		
+3	26.035	7.890	1.72342	32.94	37.9	BaSF8
+4	-163.565	1.730	1.71736	32.94	29.5	SF1
+5	15.565	8.485		25.48	
+5AS	AS	7.35		22.881
+6	-14.970	1.830	1.71736	23.33	29.5	SF1
+7	288.645	7.590	1.73400	29.72	51.3	LaKo9
+8	-23.265	0.175		29.72		
+9	-108.020	4.755	1.66672	30.97	48.3	BaF11
+10	-30.635	0.095		30.97
+11	78.070	3.520	1.66672	33.44	48.3	BaF11
+12	-328.775	Bf		33.44		
+[figure]
+source	Data/US003634001_Figure01P.png
+originX	13.44
+originY	97.47
+ppmm	4.262
+[notes]

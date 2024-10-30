@@ -1,0 +1,83 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-run-menus.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$color: white;
+$background-color: black;
+
+//
+// styles
+//
+
+body.binary {
+	.footer-bar .run-menu {
+	
+		//
+		// run menu toggle
+		//
+
+		.dropup {
+			.dropdown-toggle {
+				color: $color;
+				background-color: $background-color;
+				border-color: black;
+
+				> i {
+					color: $color;
+				}
+			}
+
+			&.open {
+				.dropdown-toggle {
+					color: $background-color;
+					background-color: $color;
+
+					> i {
+						color: $background-color;
+					}
+				}
+			}
+		}
+
+		//
+		// run menu
+		//
+
+		.icon-grid {
+			@include binary-colors.light-grey;
+			border-color: black;
+		}
+
+		.dropdown-menu {
+
+			li > a {
+				.icon {
+					box-shadow: none;
+				}
+			}
+
+			.divider {
+				@include binary-colors.grey;
+			}
+		}
+	}
+}

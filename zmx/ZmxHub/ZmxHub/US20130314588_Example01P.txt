@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2013/0314588 Example 1 (Samsung 45mm F1.8)
+[constants]
+[variable distances]
+Focal Length	46.33	undefined
+Angle of View	35.1	undefined
+F-Number	1.84	undefined
+Image Height	28.50	28.50
+Total Length	undefined	undefined
+Magnification	0	-0.12493
+d0	Infinity	407.10
+d5	2.99	7.01
+d7	6.81	2.78
+Bf	0	0
+[lens data]
+1	27.807	1.30	1.87387	25.72	28.7
+2	16.174	5.49	1.71390	25.72	53.2
+3	60.506	0.10		25.72	
+4	33.390	2.87	1.79824	22.92	45.1
+5	94.571	d5		22.92	
+6	-156.340	1.20	1.61799	20.96	63.4
+7	22.456	d7		20.96	
+8	AS	12.88		19.541
+9	34.750	4.41	1.83481	21.24	42.7
+10	-44.687	0.50		21.24	
+11	33.660	2.94	1.83481	20.76	42.7
+12	287.183	1.34		20.02
+13	-43.649	1.20	1.76495	20.02	24.9
+14	24.240	21.48		20.02
+15	CG	2.80	1.51679	28.48	64.2
+16	CG	0.12		28.48	
+[figure]
+source	Data/US20130314588_Figure01aP.png
+originX	47.81
+originY	503.90
+ppmm	14.900
+[notes]
+Bill: Magnification computed.

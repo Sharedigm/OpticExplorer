@@ -1,0 +1,165 @@
+/******************************************************************************\
+|                                                                              |
+|                                _surfaces.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$hover-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+$dark-hover-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+$mirror-color: colors.$dark-grey;
+$dark-mirror-color: colors.$very-very-light-grey;
+$light-mirror-color: colors.$dark-grey;
+
+//
+// styles
+//
+
+.optics .viewport {
+	.element {
+		.surface {
+			fill: none;
+			stroke-width: 3;
+			vector-effect: non-scaling-stroke;
+			visibility: hidden;
+			pointer-events: stroke;
+
+			//
+			// selected and hovered surfaces
+			//
+
+			&.selected, &:hover {
+				fill: none;
+				visibility: visible;
+				stroke-opacity: 1;
+				stroke-width: 3;
+
+				.center-of-curvature {
+					overflow: visible;
+
+					path {
+						stroke: none;
+						fill-opacity: 1.0;
+					}
+				}
+			}
+
+			//
+			// mirrors
+			//
+
+			&.silver, &.aluminum, &.dielectric, &.gold {
+				visibility: visible;
+			}
+
+			&.silver, &.aluminum, &.dielectric {
+				stroke: $mirror-color;
+			}
+
+			&.gold {
+				stroke: colors.$light-gold;
+			}
+		}
+	}
+}
+
+//
+// colored surfaces
+//
+
+.colored {
+	.optics .viewport {
+		.element {
+			.surface {
+
+				//
+				// hovered surfaces
+				//
+
+				&:hover {
+					stroke: $hover-color;
+				}
+
+				//
+				// selected surfaces
+				//
+
+				&.selected {
+					stroke: $select-color;
+				}
+			}
+		}
+	}
+
+	//
+	// light viewports
+	//
+
+	.optics .light.viewport,
+	&.light .optics .viewport.auto {
+		.element {
+			.surface {
+
+				//
+				// mirrors
+				//
+
+				&.silver, &.aluminum, &.dielectric {
+					stroke: $light-mirror-color;
+				}
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .dark.viewport,
+	&.dark .optics .viewport.auto {
+		.element {
+			.surface {
+				// mix-blend-mode: screen;
+
+				//
+				// hovered surfaces
+				//
+
+				&:hover {
+					stroke: $dark-hover-color;
+				}
+
+				//
+				// selected surfaces
+				//
+
+				&.selected {
+					stroke: $dark-select-color;
+				}
+
+				//
+				// mirrors
+				//
+
+				&.silver, &.aluminum, &.dielectric {
+					stroke: $dark-mirror-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+################################################################################
+#                                                                              #
+#                             Visible (FdC).spct                               #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION:
+  Light simulating the F, d, and C Fraunhofer lines.
+
+WAVELENGTHS: [486.134, 589.592, 656.281]
+
+WEIGHTS: [1, 1, 1]
+
+PRIMARY: 2

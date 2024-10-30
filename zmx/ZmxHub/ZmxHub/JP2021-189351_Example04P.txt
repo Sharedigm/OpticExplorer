@@ -1,0 +1,42 @@
+[descriptive data]
+title	JP 2021-189351 Example 4 (Nikon Nikkor Z 40mm f/2)
+[constants]
+[variable distances]
+Focal Length	41.194	undefined
+Angle of View	55.44	undefined
+F-Number	2.04	undefined
+NA	undefined	0.24
+Image Height	43.26	43.26
+Total Length	59.81	59.81
+Magnification(p)	0	-0.1
+Magnification	0	-0.03333
+d0	Infinity	1222.37
+d4	11.2500	10.0415
+d10	13.7904	14.9989
+Bf	0	0
+[lens data]
+1	28.7073	4.9	1.83481	22.06	42.73
+2	-105.0698	0.9	1.71736	21.70	29.57
+3	45.4688	2.45		19.66	
+4	AS	d4		17.936
+5	-16.5359	0.9	1.75520	16.96	27.57
+6	105.5966	4.55	1.80400	22.12	46.60
+7	-33.8380	0.1	1.56093	22.12	36.64
+8	-31.0626	0.15		22.12	
+9	-397.8230	6.76	1.83481	27.08	42.73
+10	-21.5121	d10		27.08	
+11	-29.5500	0.1	1.56093	32.82	36.64
+12	-36.3000	1.3	1.51742	32.82	52.20
+13	1084.4056	10.5		35.14	
+14	CG	1.6	1.51680	44.50	63.88
+15	CG	0.5596		44.50	
+[aspherical data]
+8	-31.0626	0	3.51503E-05	5.19649E-08	2.28989E-10	-1.66287E-12	
+11	-29.5500	0	7.47127E-06	2.62883E-08	-6.53514E-11	1.25069E-13	-2.28970E-17
+[figure]
+source	Data/JP2021-189351_Figure07P.png
+originX	201.88
+originY	194.13
+ppmm	5.514
+[notes]
+Bill: d0 measured. Adjusted Magnification.

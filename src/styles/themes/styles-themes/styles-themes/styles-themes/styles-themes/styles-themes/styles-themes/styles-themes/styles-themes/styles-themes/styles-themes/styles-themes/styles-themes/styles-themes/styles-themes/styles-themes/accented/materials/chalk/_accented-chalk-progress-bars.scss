@@ -1,0 +1,51 @@
+/******************************************************************************\
+|                                                                              |
+|                     _accented-chalk-progress-bars.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/chalk/long-round-chalk";
+@use "../../navs/accented-progress-bars";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&:not(.dark).chalk {
+			.progress {
+				.bar {
+					@include long-round-chalk.shade(accented-progress-bars.$color);
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&:not(.dark).chalk {
+			.progress {
+				.bar {
+					@include long-round-chalk.shaded(accented-progress-bars.$default-color);
+				}
+			}
+		}
+	}
+}

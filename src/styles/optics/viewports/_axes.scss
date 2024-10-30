@@ -1,0 +1,43 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _axes.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$color: black;
+$dark-color: white;
+
+//
+// styles
+//
+
+.optics .viewport {
+	.axis {
+		stroke: $color;
+
+		&.principal {
+			stroke-width: 2;
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.optics .viewport.dark,
+body.dark .optics .viewport.auto {
+	.axis {
+		stroke: $dark-color;
+	}
+}

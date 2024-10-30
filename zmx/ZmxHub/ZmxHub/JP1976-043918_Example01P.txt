@@ -1,0 +1,29 @@
+[descriptive data]
+title	JP 1976-043918 Example 1 (Nikon Nikkor 600mm F/5.6 ED)
+[constants]
+[variable distances]
+Focal Length	600
+Angle of View	8
+F-Number	5.6
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	248.13
+[lens data]
+1	206.0	15.0	1.50032	112.32	81.9
+2	-312.1	6.0		112.32	
+3	-299.0	6.0	1.74400	109.10	44.9
+4	334.9	1.5		109.10	
+5	213.4	10.0	1.56965	109.26	49.5
+6	Infinity	170.0		109.26	
+6AS	AS	84.0		63.196
+7	-93.0	1.5	1.52682	48.56	51.1
+8	200.0	6.0	1.62374	48.56	47.0
+9	-146.9	Bf		48.56	
+[figure]
+source	Data/JP1976-043918_Figure01P.png
+originX	116.53
+originY	96.48
+ppmm	1.653
+[notes]

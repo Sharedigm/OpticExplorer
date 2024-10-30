@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 3,108,152 Example 2 (Leica Elmarit-M 135mm F2.8)
+[constants]
+Scaled	135	1
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	64.962
+[lens data]
+1	84.5600	6.750	1.62303	48.38	60.1
+2	146.3535	0.081		48.38
+3	60.9579	5.670	1.62303	48.14	60.1
+4	90.8321	0.081		48.14	
+5	41.0630	9.960	1.55897	45.74	58.3
+6	Infinity	17.712	1.67764	45.74	32.0
+7	26.4222	5.735		28.35
+7AS	AS	16.81		27.860
+8	69.4076	3.780	1.69416	29.12	30.9
+9	191.5664	Bf		29.12	
+[figure]
+source	Data/US003108152_Figure01P.png
+originX	22.54
+originY	51.52
+ppmm	2.022
+[notes]
+Bill: Matches Elmarit-M perfectly but patent is capable of a larger image circle.

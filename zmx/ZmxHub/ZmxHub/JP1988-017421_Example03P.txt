@@ -1,0 +1,38 @@
+[descriptive data]
+title	JP 1988-017421 Example 3 (Canon EF15mm f2.8 Fisheye)
+[constants]
+[variable distances]
+Focal Length	15.3
+Angle of View	180
+Angle of View(m)	180.03
+F-Number	2.8
+Image Height	43.62
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	39.67
+[lens data]
+1	78.06	2.50	1.60311	63.45	60.7
+2	15.90	11.83		32.42	
+3	22.22	2.50	1.61700	27.78	62.8
+4	13.27	7.54		21.38	
+5	127.88	5.34	1.60311	19.91	60.7
+6	22.35	1.85		15.22	
+7	32.04	6.71	1.84666	13.46	23.9
+8	-190.22	3.84		13.46	
+9	AS	3.53		13.318
+10	-289.77	2.72	1.51112	14.42	60.5
+11	-29.10	0.15		14.42
+12	-100.42	3.99	1.84666	19.04	23.9
+13	29.39	5.14	1.48749	19.04	70.2
+14	-25.73	0.15		19.04	
+15	43.88	4.84	1.48749	23.42	70.2
+16	-43.88	Bf		23.42	
+[figure]
+source	Data/JP1988-017421_FigureP.png
+originX	47.53
+originY	106.54
+ppmm	2.172
+[notes]
+Bill: Image Height from Angle of View.

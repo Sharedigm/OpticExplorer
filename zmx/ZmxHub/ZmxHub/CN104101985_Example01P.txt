@@ -1,0 +1,50 @@
+[descriptive data]				
+title	CN 104101985 Example 1 (Zhong Yi Creator 35mm F2)
+[constants]
+[variable distances]				
+Focal Length	35
+Angle of View	undefined
+F-Number	2
+Image Height	43.2
+Total Length	undefined			
+Magnification	0				
+d0	Infinity				
+Bf(p)	undefined
+Bf	38.18
+[lens data]					
+1	97.037	2.3	1.48746	40.5	70.04	HQK3L
+2	20.6	21.79		34		
+3	35.2	7.15	1.744	26.4	44.93	HLAFM3B
+4	-30.35	0		26.4		
+5	-30.55	1.6	1.65446	26.4	33.65	HZF8
+6	-108.29	9.77		26.4		
+6AS	AS	4.6		20.028
+7	-24.5	4.65	1.76182	23	26.53	HZF12
+8	24.5	0		19.56		
+9	24.5	3.4	1.75719	19.56	47.8	HLAF6L
+10	63.01	1.51		19.78		
+11	-102.69	3.46	1.835	23	42.97	HZLAF55C
+12	-30.05	0.15		23		
+13	69.8	4.43	1.835	27.7	42.97	HZLAF55C
+14	-69.8	Bf		27.7		
+[figure]					
+source	Data/CN104101985_Figure01P.png
+originX	19.62
+originY	153.48
+ppmm	7.036
+[notes]
+Bill: Numerous repairs. Table mangled. Patent:
+1	97.037	2.3	1.48746	40.5	70.04	HQK3L
+2	20.3	21.79		34.0		
+3	35.2	7.15	1.74400	26.4	44.93	HLAFM3B
+4	30.35	0		26.4		
+5	-30.55	1.6	1.65446	26.4	33.65	HZF8
+6	-108.29	9.77		26.4		
+7	-24.1	4.65	1.76182	23.0	26.53	HZF12
+8	-24.1	0		19.0		
+9	24.5	4.6	1.75719	19.0	47.8	HLAF6L
+10	63.01	3.4		19.0		
+11	-102.69	1.51	1.83500	23.0	42.97	HZLAF55C
+12	-30.05	3.46		23.0		
+13	69.8	0.15	1.83500	27.7	42.97	HZLAF55C
+14	-69.8	4.43		27.7		

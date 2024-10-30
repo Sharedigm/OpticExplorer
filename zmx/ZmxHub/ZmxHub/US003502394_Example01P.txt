@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 3,502,394 Example 1 (Ricoh Pentax Super-Takumar 300mm f4)
+[constants]
+Scaled	300	1
+[variable distances]
+Focal Length	300
+Angle of View	9
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	74.84
+[lens data]
+1	120.750	13.200	1.50977	75.15	61.9
+2	-846.030	16.050		75.15
+3	-223.515	3.000	1.71736	68.29	29.5
+4	480.990	0.300		68.29
+5	84.666	10.500	1.48749	67.55	70.0
+6	1035.330	82.000		67.55
+6AS	AS	29.000		30.977
+7	-37.650	1.500	1.72916	22.08	54.8
+8	210.378	2.628		22.08	
+9	122.400	3.000	1.76200	22.08	40.3
+10	-87.741	Bf		22.08	
+[figure]
+source	Data/US003502394_Figure01P.png
+originX	66.63
+originY	133.25
+ppmm	2.883
+[notes]

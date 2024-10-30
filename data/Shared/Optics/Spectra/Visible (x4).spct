@@ -1,0 +1,18 @@
+################################################################################
+#                                                                              #
+#                              Visible (x4).spct                               #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION:
+  Light across the visible spectrum.
+
+WAVELENGTHS: [450, 500, 600, 650]

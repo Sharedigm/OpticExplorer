@@ -1,0 +1,301 @@
+/******************************************************************************\
+|                                                                              |
+|                          _dark-desktop-apps.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../../../../materials/glass/plate-glass";
+@use "../../../../../materials/glass/frosted-plate-glass";
+@use "../../../medium/apps/common/medium-desktop-apps";
+@use "../../layout/dark-panels";
+@use "dark-apps";
+
+//
+// colors
+//
+
+$header-bar-color: text-colors.$light-color;
+$header-bar-icon-color: colors.$light-grey;
+$header-bar-background-color: colors.$very-dark-grey;
+$header-bar-border-color: dark-apps.$border-color;
+$sidebar-panel-color: dark-panels.$background-color;
+$sidebar-panels-color: colors.faded(dark-panels.$background-color, 50%);
+$mainbar-background-color: colors.$very-very-very-dark-grey;
+
+$message-color: colors.$very-light-grey;
+$message-background-color: colors.faded(colors.$medium-grey, 25%);
+
+$transparent-sidebar-color: colors.faded(dark-apps.$sidebar-color, 50%);
+$transparent-sidebar-label-color: white;
+$transparent-sidebar-panel-color: colors.faded(colors.$dark-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.desktop.app {
+		> .body {
+
+			//
+			// dark desktop apps
+			//
+
+			> .app {
+
+				//
+				// dark desktop header bars
+				//
+
+				.header-bar {
+					color: $header-bar-color;
+					background-color: $header-bar-background-color;
+					border-color: $header-bar-border-color;
+
+					.app-bar {
+						color: white;
+
+						> i {
+							color: white;
+						}				
+					}
+
+					.menu-bar {
+						> ul.nav-menus {
+							> li:not(.open) {
+								> a {
+									color: $header-bar-color;
+
+									> i {
+										color: $header-bar-icon-color;
+									}
+								}
+							}
+						}
+					}
+
+					.toolbar {
+						.button:not(.selected):not(:hover) {
+							> i {
+								color: $header-bar-icon-color;
+							}
+						}
+					}
+
+					.clock {
+						.icon {
+							> i {
+								color: $header-bar-icon-color;
+							}		
+						}
+					}
+				}
+
+				.mainbar {
+
+					//
+					// desktop app help messages
+					//
+
+					.help.message {
+						color: $message-color;
+						background: $message-background-color;
+
+						i {
+							color: $message-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.dark #desktop {
+		.desktop.app > .body > .app {
+			.mainbar {
+				background-color: $mainbar-background-color;
+			}
+		}
+	}
+
+	//
+	// dark transparent desktop header bars
+	//
+
+	&.transparent, &.translucent {
+		&.dark #desktop,
+		#desktop.dark {
+			.desktop.app > .body > .app {
+
+				> .header-bar {
+					@include plate-glass.shaded($header-bar-background-color,
+					medium-desktop-apps.$header-bar-opacity);
+				}
+			}
+		}
+	}
+
+	//
+	// dark opaque desktop app sidebars
+	//
+
+	&.opaque #desktop.auto-sidebars,
+	#desktop.opaque-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: dark-apps.$sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark transparent desktop app sidebars
+	//
+
+	&.transparent #desktop.auto-sidebars,
+	#desktop.transparent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						color: white;
+						background-color: transparent;
+
+						.panels > .panel, label {
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark translucent desktop app sidebars
+	//
+
+	&.translucent #desktop.auto-sidebars,
+	#desktop.translucent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $transparent-sidebar-color;
+						@include frosted-plate-glass.frosted();
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark opaque desktop app sidebar panels
+	//
+
+	#desktop.opaque-sidebars.sidebar-panels,
+	&.opaque #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.opaque-sidebars,
+	&.opaque.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: dark-apps.$sidebar-color;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								background-color: dark-apps.$sidebar-panel-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark transparent desktop app sidebar panels
+	//
+
+	#desktop.transparent-sidebars.sidebar-panels,
+	&.transparent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.transparent-sidebars,
+	&.transparent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: transparent;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								@include plate-glass.shaded($sidebar-panels-color);
+								color: white !important;
+
+								.panels > .panel, label {
+									color: white !important;
+								}
+
+								.expander i {
+									color: white !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark translucent desktop app sidebar panels
+	//
+
+	#desktop.translucent-sidebars.sidebar-panels,
+	&.translucent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.translucent-sidebars,
+	&.translucent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						@include frosted-plate-glass.polished();
+
+						.panels {
+							@include frosted-plate-glass.shaded($sidebar-panels-color);
+
+							.panel {
+								@include frosted-plate-glass.shaded($sidebar-panel-color);
+
+								.expander i {
+									color: white !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

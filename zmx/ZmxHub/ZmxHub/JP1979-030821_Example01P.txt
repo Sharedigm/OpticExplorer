@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1979-030821 Example 1 (Konica Minolta Hexanon 40mm F1.8)
+[constants]
+Scaled	40	1
+[variable distances]
+Focal Length	40
+F-Number	1.8
+Angle of View	56
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	33.856
+[lens data]
+1	39.804	2.900	1.71300	24.82	53.9
+2	159.076	0.096		24.82	
+3	17.096	1.932	1.58144	20.92	40.7
+4	11.492	2.124		18.64
+5	12.208	3.864	1.67003	19.31	47.3
+6	12.504	4.335		17.26
+6AS	AS	3.781		17.074
+7	-13.364	0.868	1.75520	17.06	27.5
+8	1556.356	5.316	1.67790	20.64	55.3
+9	-15.864	0.096		20.64	
+10	449.276	2.900	1.88300	22.48	40.8
+11	-36.668	Bf		22.48	
+[figure]
+source	Data/JP1979-030821_Figure01AP.png
+originX	86.90
+originY	234.53
+ppmm	12.726
+[notes]

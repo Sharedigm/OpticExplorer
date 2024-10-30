@@ -1,0 +1,121 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-tables.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$row-border-color: darken(colors.$very-very-very-light-grey, 5%);
+$row-odd-fill-color: colors.$very-very-very-light-grey;
+$row-even-fill-color: colors.$ultra-light-grey;
+$row-selected-fill-color: colors.fade(var(--primary-color), 33%);
+$row-selected-stroke-color: var(--primary-color);
+$cell-highlighted-color: white;
+$cell-highlighted-background-color: colors.fade(var(--primary-color), 50%);
+$cell-selected-outline-color: var(--primary-color);
+$cell-border-color: $row-border-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	&.colored {
+		table {
+
+			//
+			// table rows
+			//
+
+			tbody {
+			
+				//
+				// inset row selection
+				//
+				
+				tr.selected {
+					color: unset;
+					background-color: unset;
+
+					td:not(.append) {
+						background-color: $row-selected-fill-color;
+					}
+					
+					// middle
+					//
+					td:not(.append) {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+							0 2px 0 $row-selected-stroke-color inset;
+					}
+
+					// left
+					//
+					td:not(.append):first-child {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+							0 2px 0 $row-selected-stroke-color inset,
+							2px 0 0 $row-selected-stroke-color inset;
+					}
+
+					// right
+					//
+					td:not(.append):last-child {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+							0 2px 0 $row-selected-stroke-color inset,
+							-2px 0 0 $row-selected-stroke-color inset;
+					}	
+				}
+
+				tr.selected + tr.selected {
+
+					// middle
+					//
+					td:not(.append) {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset;
+					}
+
+					// left
+					//
+					td:not(.append):first-child {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+							2px 0 0 $row-selected-stroke-color inset;
+					}
+
+					// right
+					//
+					td:not(.append):last-child {
+						box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+							-2px 0 0 $row-selected-stroke-color inset;
+					}
+				}
+
+				//
+				// cell shaded
+				//
+
+				tr {
+					td:not(.append) {
+						&.highlighted {
+							color: $cell-highlighted-color;
+							background-color: $cell-highlighted-background-color;
+						}
+
+						&.selected {
+							outline-color: $cell-selected-outline-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

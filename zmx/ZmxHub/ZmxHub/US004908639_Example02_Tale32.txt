@@ -1,0 +1,40 @@
+[descriptive data]
+title	Nikon AI AF DC Nikkor 135mm F2S (US 4,908,639 Example 2)
+[constants]
+[variable distances]
+Focal Length	135.0000	undefined	undefined	undefined
+Angle of View	18	undefined	undefined	undefined
+F-Number	2	undefined	undefined	undefined
+Image Height	43.2	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined	undefined
+Magnification	0	-0.0333	-0.0333	-0.0333
+d0	Infinity	3938.0404	3938.0404	3938.0404
+d3	10.0000	10.0000	10.2000	9.9000
+d7(p)	37.2882	30.4792	30.6648	30.3875
+d7	9.11	9.11	9.11	9.11
+d7AS	28.1782	21.3692	21.5548	21.2775
+Bf	61.1450	67.9540	67.5683	68.1457
+Aperture Diameter	38.089	38.089	38.089	38.089
+[lens data]
+1	58	14.5	1.620409	67.53	60.14
+2	-569.905	3	1.648311	67.53	33.75
+3	897.932	d3		67.53
+4	44.435	8	1.713	50.50	53.93
+5	100.005	2.6		50.50
+6	626.47	3	1.749501	50.50	35.19
+7	32.305	d7		40.16	
+7AS	AS	d7AS		38.089
+8	-40.174	3	1.68893	35.24	31.08
+9	-2506.608	7		38.06	
+10	-412.962	5	1.76684	40.48	46.8
+11	-58.526	0.2		40.48
+12	165.943	4	1.796681	40.48	45.37
+13	-136.822	Bf		40.48	
+[figure]
+source	Data/US004908639_Example02_Tale32-Fig2.png
+originX	23
+originY	249
+ppmm	6.955
+[notes]
+d7	10.0	10.0	10.0	10.0
+d7AS	27.2882	20.4792	20.6648	20.3875

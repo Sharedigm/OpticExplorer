@@ -1,0 +1,79 @@
+/******************************************************************************\
+|                                                                              |
+|               _medium-plastic-colorful-dialog-buttons.scss                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/plastic/plastic-btns";
+@use "../../dialogs/colorful-dialog-buttons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored .modals.colorful-buttons.plastic-dialog-buttons,
+	&.colored.plastic .modals.colorful-buttons.auto-dialog-buttons {
+
+		//
+		// focused dialog buttons
+		//
+		
+		.modal.focused .modal-dialog {
+			.modal-header {
+				.buttons {
+					button {
+
+						&.minimize {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$minimize-button-color);
+						}
+
+						&.maximize, &.unmaximize {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$maximize-button-color);
+						}
+
+						&.close-btn {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$close-button-color);
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// unfocused dialog buttons
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			.modal-header {
+				.buttons {
+					button {
+
+						&.minimize {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$unfocused-button-color);
+						}
+
+						&.maximize, &.unmaximize {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$unfocused-button-color);
+						}
+
+						&.close-btn {
+							@include plastic-btns.shaded(colorful-dialog-buttons.$unfocused-button-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

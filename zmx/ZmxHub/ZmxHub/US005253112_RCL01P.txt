@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 5,253,112 Example 1 (Nikon AF-I Teleconverter TC-20E)
+[constants]
+Lateral Magnification	2.0
+Lateral Magnification(m)	1.99940
+[variable distances]
+Focal Length	-97.597
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	57.75
+[lens data]
+0FS	FS	0		21.6
+1	171.6366	3.0000	1.60342	26.11	38.12
+2	-77.1275	2.0000		26.11
+3	-84.3980	2.0000	1.79668	25.96	45.42
+4	22.4963	1.5000		22.62	
+5	26.7257	5.1000	1.59507	22.76	35.51
+6	-57.4817	7.8000		22.76
+7	-39.4253	2.0000	1.84042	23.18	43.30
+8	24.9311	6.0000	1.57501	26.94	41.55
+9	-105.6051	3.9000		26.94
+10	84.0445	10.0000	1.48749	33.44	70.24
+11	-25.8484	0.2000		33.44
+12	-139.9927	2.5000	1.74810	33.50	52.28
+13	94.2001	Bf		33.50
+[figure]
+source	Data/US005253112_Figure01P.png
+originX	27.61
+originY	76.52
+ppmm	2.296
+[notes]
+Bill: No IH or Angle of View. RCL from Table 2 with FS added.
+FD = IH / Magnification (2)

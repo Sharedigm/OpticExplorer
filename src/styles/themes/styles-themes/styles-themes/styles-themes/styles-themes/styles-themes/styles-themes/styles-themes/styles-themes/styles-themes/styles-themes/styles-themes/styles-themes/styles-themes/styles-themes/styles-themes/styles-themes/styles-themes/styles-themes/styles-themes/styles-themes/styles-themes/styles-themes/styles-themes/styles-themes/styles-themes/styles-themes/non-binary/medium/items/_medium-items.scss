@@ -1,0 +1,293 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-items.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../layout/images";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$details-background-opacity: 50%;
+$details-background-color: colors.faded(colors.$very-light-grey, $details-background-opacity);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	
+	//
+	// item markers
+	//
+
+	.item .marker {
+		color: white;
+		background: medium-branding.$primary-color;
+		border-color: white;
+	}
+
+	.item .rating {
+		i:not(.active) {
+			color: colors.$very-light-grey !important;
+		}
+	}
+
+	.item .meter {
+		i {
+			color: colors.$very-light-grey !important;
+
+			&:nth-child(1).active {
+				color: cornflowerblue !important;
+			}
+			&:nth-child(2).active {
+				color: darkturquoise !important;
+			}
+			&:nth-child(3).active {
+				color: limegreen !important;
+			}
+			&:nth-child(4).active {
+				color: orange !important;
+			}
+			&:nth-child(5).active {
+				color: red !important;
+			}
+		}
+	}
+
+	.icon-grid {
+		.icon {
+			> img {
+				& + i {
+					display: none;
+				}
+			}
+		}
+
+		.icon.colored {
+			box-shadow: images.$thumbnail-box-shadow;
+		}
+	}
+
+	//
+	// shaded items
+	//
+
+	&:not(.flat) {
+
+		//
+		// files
+		//
+
+		.file-body {
+			fill: url('#file-body-gradient');
+		}
+
+		.file-corner {
+			fill: url('#file-corner-gradient');
+		}
+
+		//
+		// folders
+		//
+
+		.folder-top {
+			fill: url('#folder-top-gradient');
+		}
+
+		.folder-body {
+			fill: url('#folder-body-gradient');
+		}
+
+		//
+		// clipboard folders
+		//
+
+		.clipboard-handle {
+			fill: url('#clipboard-handle-gradient');
+		}
+
+		.clipboard-body {
+			fill: url('#clipboard-body-gradient');
+		}
+
+		.clipboard-paper {
+			fill: url('#clipboard-paper-gradient');
+		}
+
+		//
+		// trash folders
+		//
+
+		.trash-body {
+			fill: url('#trash-body-gradient');
+		}
+
+		.trash-lid {
+			fill: url('#trash-body-gradient');
+		}
+
+		//
+		// volumes
+		//
+
+		.volume-body {
+			fill: url('#volume-body-gradient');
+		}
+	}
+
+	/*
+	.folder-icon {
+		fill: $light-grey;
+	}
+
+	//
+	// flat items
+	//
+
+	&.flat {
+
+		//
+		// files
+		//
+
+		.file-body {
+			fill: white;
+		}
+
+		.file-corner {
+			fill: $very-very-light-grey;
+		}
+
+		//
+		// folders
+		//
+
+		.folder-top {
+			fill: $very-light-grey;
+		}
+
+		.folder-body {
+			fill: $very-very-light-grey;
+		}
+
+		//
+		// clipboard folders
+		//
+
+		.clipboard-handle {
+			fill: $light-grey;
+		}
+
+		.clipboard-body {
+			fill: $very-very-light-grey;
+		}
+
+		.clipboard-paper {
+			fill: white;
+		}
+
+		//
+		// trash folders
+		//
+
+		.trash-body {
+			fill: $very-very-very-light-grey;
+		}
+
+		.trash-lid {
+			fill: $very-very-very-light-grey;
+		}
+
+		//
+		// volumes
+		//
+
+		.volume-body {
+			fill: $very-very-light-grey;
+		}
+	}
+
+	//
+	// shaded items
+	//
+
+	&:not(.flat) {
+
+		//
+		// files
+		//
+
+		.file-body {
+			fill: url('#mono-file-body-gradient');
+		}
+
+		.file-corner {
+			fill: url('#mono-file-corner-gradient');
+		}
+
+		//
+		// folders
+		//
+
+		.folder-top {
+			fill: url('#mono-folder-top-gradient');
+		}
+
+		.folder-body {
+			fill: url('#mono-folder-body-gradient');
+		}
+
+		//
+		// clipboard folders
+		//
+
+		.clipboard-handle {
+			fill: url('#mono-clipboard-handle-gradient');
+		}
+
+		.clipboard-body {
+			fill: url('#mono-clipboard-body-gradient');
+		}
+
+		.clipboard-paper {
+			fill: url('#mono-clipboard-paper-gradient');
+		}
+
+		//
+		// trash folders
+		//
+
+		.trash-body {
+			fill: url('#mono-trash-body-gradient');
+		}
+
+		.trash-lid {
+			fill: url('#mono-trash-body-gradient');
+		}
+
+		//
+		// volumes
+		//
+
+		.volume-body {
+			fill: url('#mono-folder-body-gradient');
+		}
+	}
+	*/
+}

@@ -1,0 +1,31 @@
+/******************************************************************************\
+|                                                                              |
+|                        _dark-metal-progress-bars.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/metal/long-round-metal";
+@use "../../navs/dark-progress-bars";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.dark.metal {
+		.progress .bar {
+			@include long-round-metal.shaded(dark-progress-bars.$color);
+		}
+	}
+}

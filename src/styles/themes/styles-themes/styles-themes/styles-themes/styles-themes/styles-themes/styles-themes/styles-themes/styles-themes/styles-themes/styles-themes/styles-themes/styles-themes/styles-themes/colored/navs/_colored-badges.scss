@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colored-badges.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+@use "../forms/colored-forms";
+
+//
+// colors
+//
+
+$color: var(--primary-color);
+$success-color: colored-forms.$success-color;
+$caution-color: colored-forms.$caution-color;
+$warning-color: colored-forms.$warning-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+		.badge {
+			background-color: $color;
+
+			//
+			// special badges
+			//
+
+			&.success {
+				color: white;
+				background-color: $success-color;
+			}
+
+			&.caution {
+				color: white;
+				background-color: $caution-color;
+			}
+
+			&.warning {
+				color: white;
+				background-color: $warning-color;
+			}
+		}
+	}
+}

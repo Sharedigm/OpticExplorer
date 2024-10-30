@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 4,264,136 Example 2 (Konica Minolta 250mm F5.6 RF)
+[constants]
+Type	REFLEX
+Scaled	250	100
+[variable distances]
+Focal Length	250
+Angle of View	9.67
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	42.58
+[lens data]
+1	151.430	5.0	1.5176	57.82	53.5	
+2	434.543	39.0		57.82
+3	-74.563	4.0	1.5168	50.54	64.1	
+4	-127.935	0.0		52.66
+PM	-127.935	0.0	-1	52.66		29.70
+_4'	-127.935	-4.0	1.5168	52.66	64.1	
+_3'	-74.563	-34.0		50.54
+5	-48.433	-2.5	1.5168	27.69	64.1	
+6	-92.318	0.0		27.69
+SM	-92.318	0.0	-1	27.69
+_6'	-92.318	2.5	1.5168	27.69	64.1	
+_5'	-48.433	34.0		27.69
+_3"	-74.563	4.0	1.5168	24.86	64.1	
+_4'	-127.935	3.0		24.86
+7	-32.538	1.40	1.5168	24.86	64.1	
+8	666.618	1.90	1.7400	24.86	28.3	
+9	-194.948	Bf		24.86	
+[figure]
+source	Data/US004264136_Figure03P.png
+originX	89.06
+originY	149.78
+ppmm	2.751
+[notes]
+

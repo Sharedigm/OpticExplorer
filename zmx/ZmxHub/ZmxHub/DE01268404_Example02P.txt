@@ -1,0 +1,28 @@
+[descriptive data]
+title	DE 1 268 404 B Example 2 (Zeiss Olympia-Sonnar 180mm F2.8 Contarex)
+[constants]
+Scaled	180	1
+[variable distances]
+Focal Length	180
+Angle of View	14
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	74.268
+[lens data]
+1	76.0140	15.732	1.62041	69.18	60.29
+2	2658.3660	0.054		65.74	
+3	60.3810	10.872	1.62041	61.12	60.29
+4	127.6110	14.904		56.42	
+5	Infinity	5.814	1.78470	44.32	26.10
+6	40.9392	22.100		37.40	
+6AS	AS	26.23		32.381
+7	344.4480	4.932	1.75520	38.48	27.53
+8	-170.1828	Bf		38.48	
+[figure]
+source	Data/DE01268404_Figure02P.png
+originX	12.88
+originY	116.23
+ppmm	2.969
+[notes]

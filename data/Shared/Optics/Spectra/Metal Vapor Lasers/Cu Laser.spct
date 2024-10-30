@@ -1,0 +1,18 @@
+################################################################################
+#                                                                              #
+#                                Cu Laser.spct                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION: 
+  Light from a copper metal vapor laser.
+
+WAVELENGTHS: [510.60, 578.20]

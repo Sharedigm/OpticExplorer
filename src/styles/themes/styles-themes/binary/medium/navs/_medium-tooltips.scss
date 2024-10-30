@@ -1,0 +1,25 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-tooltips.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.tooltip {
+		.tooltip-inner {
+			@include binary-text.unoutline;
+		}
+	}
+}

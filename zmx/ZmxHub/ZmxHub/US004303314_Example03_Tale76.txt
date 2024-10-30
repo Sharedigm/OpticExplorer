@@ -1,0 +1,32 @@
+[descriptive data]
+title	Nikon Series E 135mm f/2.8 (US004303314 Example 3)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18.1
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	49.12
+[lens data]
+1	57.501	6.750	1.62041	49.34	58.6
+2	506.127	1.300		49.34	
+3	40.500	13.200	1.62041	44.88	58.6
+4	97.884	2.400		37.46	
+5	201.834	7.501	1.71736	38.24	29.5
+6	26.519	16.000		29.58	
+6AS	AS	17.450		25.332
+6FS	FS	8.550		21.30
+7	95.800	2.600	1.78470	27.86	26.1
+8	252.756	Bf		27.86	
+[figure]
+source	Data/US004303314_Example03_Tale76-Fig1.png
+originX	133.98
+originY	321.60
+ppmm	9.440
+[notes]
+Bill: One figure for 3 examples. Added FS from production figure.

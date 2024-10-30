@@ -1,0 +1,30 @@
+[descriptive data]
+title	DE 471 565 C Example 1 (Schneider Tele-Xenar 180mm f4.5)
+[constants]
+Scaled	180	1
+[variable distances]
+Focal Length	180
+Angle of View	undefined
+F-Number	4.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	88.32
+[lens data]
+1	37.44	9.90	1.5163	40.76	63.7
+2	-99.90	2.88	1.6202	40.76	36.0
+3	127.62	34.02		37.57
+3AS	AS	12.78		23.927
+4	-23.58	1.62	1.5163	25.45	63.7
+5	-70.38	2.88	1.6489	28.74	33.9
+6	-42.66	0.18		28.74
+7	-107.10	2.88	1.5250	31.54	62.3
+8	-73.26	Bf		31.54
+[figure]
+source	Data/DE00471565_Figure01P.png
+originX	27.79
+originY	307.19
+ppmm	8.696
+[notes]
+Bill: Patent number is mentioned in a brochure.

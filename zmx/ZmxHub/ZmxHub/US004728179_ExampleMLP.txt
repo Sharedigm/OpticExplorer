@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 4,728,179 Example ML (Olympus Zuiko Auto-S 50mm F1.8)
+[constants]
+[variable distances]
+Focal Length	51.84
+Angle of View	undefined
+F-Number	1.86
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	37.86
+[lens data]
+1	33.790	4.50	1.78472	30.82	25.68
+2	130.283	0.15		30.82	
+3	21.458	6.59	1.60311	26.08	60.70
+4	349.306	1.30	1.78472	26.08	25.71
+5	14.989	6.97		19.78	
+5AS	AS	6.03		18.847
+6	-15.134	1.65	1.72825	20.92	28.46
+7	-490.538	5.60	1.80610	24.18	40.95
+8	-20.316	0.15		25.00	
+9	246.577	3.23	1.80610	26.14	40.95
+10	-48.685	Bf		26.14	
+[figure]
+source	Data/US004728179_Figure03P.png
+originX	85.32
+originY	278.65
+ppmm	8.301
+[notes]

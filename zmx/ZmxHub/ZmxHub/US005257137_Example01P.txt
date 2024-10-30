@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 5,257,137 Example 1 (Nikon R-UW AF Micro-Nikkor 50mm f/2.8)
+[constants]
+ObjectGlass	1.33306	53.94
+[variable distances]
+Focal Length	51.6000	undefined	undefined
+Angle of View	35	undefined	undefined
+F-Number	2.8	undefined	undefined
+Image Height	43.2	43.2	43.2
+Magnification	0	-0.5000	-1.0000
+d0	Infinity	108.4613	64.7658
+d2	43.0605	24.2389	5.4172
+d15	4.4407	23.2623	42.0840
+Bf	45.0470	45.0470	45.0470
+[lens data]
+1	Infinity	10.00	1.51680	73.28	64.1
+2	Infinity	d2		73.28	
+3	35.336	3.50	1.76684	27.56	46.8
+4	17.014	9.00		23.10	
+5	31.805	3.50	1.80518	23.98	25.4
+6	71.705	0.10		23.98	
+7	36.369	5.00	1.79668	23.88	45.4
+8	-72.941	2.00	1.71736	23.28	29.5
+9	32.415	6.14		23.28	
+9AS	AS	2.70		21.110
+10	-55.010	2.50	1.86074	24.76	23.0
+11	71.364	0.70		24.76	
+12	222.194	7.30	1.79668	25.72	45.4
+13	-24.641	0.10		25.72	
+14	35.473	3.50	1.79631	24.50	40.9
+15	55.180	d15		24.50	
+16	259.906	6.00	1.60717	30.42	40.3
+17	-33.230	1.70		30.42	
+18	-31.796	2.00	1.79668	30.42	45.4
+19	664.600	Bf		30.42	
+[figure]
+source	Data/US005257137_Figure01P.png
+originX	101.39
+originY	261.64
+ppmm	4.461
+[notes]
+Bill: Specification says MFD is .17m but that looks too short.

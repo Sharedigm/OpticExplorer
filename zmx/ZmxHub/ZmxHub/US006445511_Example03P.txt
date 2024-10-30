@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 6,445,511 B1 Example 3 (Hasselblad HC 4 210 (Fujinon))
+[constants]
+Scaled	210	1
+[variable distances]
+Focal Length	210	undefined
+Angle of View	19	15.6
+F-Number	4	undefined
+Image Height	70	70
+Magnification	0	-0.13596
+d0	Infinity	1651.77
+d7	10.9452	24.5259
+d10	22.8816	9.3009
+Bf	96.474	96.474
+Aperture Diameter(m)	26.668	26.668
+[lens data]
+1	79.464	10.943	1.48749	69.70	70.2
+2	-1663.137	0.458		69.70	
+3	50.064	13.232	1.49700	60.86	81.6
+4	-923.265	3.184	1.65412	60.86	39.7
+5	97.293	0.200		55.06	
+6	41.517	7.302	1.58144	47.42	40.7
+7	28.287	d7		38.68	
+8	268.338	4.975	1.80518	35.08	25.4
+9	-172.179	2.984	1.81600	35.08	46.6
+10	66.108	d10		35.08	
+11	AS	12.774		26.67	
+12	-81.039	5.800	1.71736	32.70	29.5
+13	81.039	7.272	1.80400	32.70	46.6
+14	-156.429	6.197		32.70	
+15	190.050	5.928	1.80518	44.16	25.4
+16	69.573	9.948	1.74000	43.46	28.3
+17	-162.582	Bf		43.46	
+[figure]
+source	Data/US006445511_Figure03P.png
+originX	42.72
+originY	219.52
+ppmm	5.766
+[notes]
+Bill: Patent supplies Aperture Diameter. Measured d0 and Magnification.

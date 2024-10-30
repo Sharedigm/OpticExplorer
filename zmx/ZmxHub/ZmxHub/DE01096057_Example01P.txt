@@ -1,0 +1,28 @@
+[descriptive data]
+title	DE 1096057 Example 1 (Leica Telyt 200mm F4)
+[constants]
+Scaled	200	1
+[variable distances]
+Focal Length	200
+Angle of View	12
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	103.24
+[lens data]
+1	62.54	10.00	1.5709	54.30	63.0
+2	-281.50	5.50		54.30	
+3	-140.00	4.00	1.7343	50.46	28.1
+4	448.70	32.64		50.46	
+4AS	AS	4.16		36.489
+5	-117.00	5.00	1.7394	39.14	40.8
+6	-62.60	18.20		39.14	
+7	-37.30	4.00	1.5035	29.98	56.3
+8	-78.66	Bf		29.98	
+[figure]
+source	Data/DE01096057_Figure01P.png
+originX	43.55
+originY	179.44
+ppmm	4.509
+[notes]

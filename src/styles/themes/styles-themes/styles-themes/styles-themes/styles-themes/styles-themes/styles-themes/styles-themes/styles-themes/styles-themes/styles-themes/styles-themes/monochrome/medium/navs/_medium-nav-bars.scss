@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-nav-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$navbar-indicator-color: colors.$light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome {
+		.navbar {
+
+			//
+			// navigation
+			//
+
+			.navbar-nav {
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {
+						.inner {
+							background-color: $navbar-indicator-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

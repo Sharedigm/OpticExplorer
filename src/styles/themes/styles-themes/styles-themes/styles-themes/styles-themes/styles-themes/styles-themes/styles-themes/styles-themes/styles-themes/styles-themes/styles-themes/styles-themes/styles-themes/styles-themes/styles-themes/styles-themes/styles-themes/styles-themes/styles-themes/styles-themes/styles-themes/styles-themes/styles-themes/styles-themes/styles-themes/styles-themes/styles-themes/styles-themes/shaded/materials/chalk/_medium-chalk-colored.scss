@@ -1,0 +1,225 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-chalk-colored.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/chalk/round-chalk";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.chalk {
+
+		//
+		// chalk colored materials
+		//
+
+		.colored:not(.flat) {
+
+			&.red {
+				@include round-chalk.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include round-chalk.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include round-chalk.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include round-chalk.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include round-chalk.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include round-chalk.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include round-chalk.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include round-chalk.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include round-chalk.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include round-chalk.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include round-chalk.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include round-chalk.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include round-chalk.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include round-chalk.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include round-chalk.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include round-chalk.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include round-chalk.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include round-chalk.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include round-chalk.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include round-chalk.shaded(colors.$medium-white);
+			}
+
+			&.copper {
+				@include round-chalk.shaded(colors.$medium-copper);
+			}
+
+			&.silver {
+				@include round-chalk.shaded(colors.$medium-silver);
+			}
+
+			&.gold {
+				@include round-chalk.shaded(colors.$medium-gold);
+			}
+		}
+
+		//
+		// selected chalk colored materials
+		//
+
+		.selected .colored:not(.flat) {
+			&.red {
+				@include round-chalk.shaded(colors.$dark-red);
+			}
+
+			&.raspberry {
+				@include round-chalk.shaded(colors.$dark-raspberry);
+			}
+
+			&.red-orange {
+				@include round-chalk.shaded(colors.$dark-red-orange);
+			}
+
+			&.orange {
+				@include round-chalk.shaded(colors.$dark-orange);
+			}
+
+			&.yellow {
+				@include round-chalk.shaded(colors.$dark-yellow);
+			}
+
+			&.lime {
+				@include round-chalk.shaded(colors.$dark-lime);
+			}
+
+			&.green {
+				@include round-chalk.shaded(colors.$dark-green);
+			}
+
+			&.teal {
+				@include round-chalk.shaded(colors.$dark-teal);
+			}
+
+			&.aqua {
+				@include round-chalk.shaded(colors.$dark-aqua);
+			}
+
+			&.cyan {
+				@include round-chalk.shaded(colors.$dark-cyan);
+			}
+
+			&.blue {
+				@include round-chalk.shaded(colors.$dark-blue);
+			}
+
+			&.indigo {
+				@include round-chalk.shaded(colors.$dark-indigo);
+			}
+
+			&.violet {
+				@include round-chalk.shaded(colors.$dark-violet);
+			}
+
+			&.plum {
+				@include round-chalk.shaded(colors.$dark-plum);
+			}
+
+			&.purple {
+				@include round-chalk.shaded(colors.$dark-purple);
+			}
+
+			&.magenta {
+				@include round-chalk.shaded(colors.$dark-magenta);
+			}
+
+			&.brown {
+				@include round-chalk.shaded(colors.$dark-brown);
+			}
+
+			&.grey {
+				@include round-chalk.shaded(colors.$dark-grey);
+			}
+
+			&.black {
+				@include round-chalk.shaded(colors.$dark-black);
+			}
+
+			&.white {
+				@include round-chalk.shaded(colors.$dark-white);
+			}
+
+			&.copper {
+				@include round-chalk.shaded(colors.$dark-copper);
+			}
+
+			&.silver {
+				@include round-chalk.shaded(colors.$dark-silver);
+			}
+
+			&.gold {
+				@include round-chalk.shaded(colors.$dark-gold);
+			}
+		}
+	}
+}

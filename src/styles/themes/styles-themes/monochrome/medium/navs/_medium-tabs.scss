@@ -1,0 +1,67 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-tabs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$tab-button-color: colors.$medium-grey;
+$tab-button-icon-color: white;
+$tab-button-active-color: colors.darken($tab-button-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome {
+		&.show-tab-close-buttons {
+			ul.nav-tabs {
+				> li {
+
+					//
+					// active tabs
+					//
+
+					&.active {
+
+						//
+						// tab close icons
+						//
+
+						i.fa-times, i.fa-xmark {
+							&:hover {
+								color: $tab-button-icon-color;
+								background-color: $tab-button-color;
+
+								svg {
+									fill: $tab-button-icon-color;
+								}
+							}
+
+							&:active {
+								background-color: $tab-button-active-color;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

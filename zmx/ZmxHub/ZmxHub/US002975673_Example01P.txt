@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 2,975,673 Example 1 (Leica Summicron-M 35mm F1.4)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	1.41
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	19.1415
+Bf	18.93
+[lens data]
+1	29.4599	3.5000	1.72341	30.11	59.10
+2	89.9115	0.0210		30.11
+3	13.4470	4.5395	1.78990	22.01	48.00
+4	30.2365	1.3090	1.70444	22.01	20.84
+5	8.9320	5.3615		15.68
+5AS	AS	2.72		15.418
+6	-56.2695	1.9390	1.78990	14.78	48.00
+7	-30.2365	1.7290		14.78
+8	-12.0680	1.3090	1.76167	14.78	27.34
+9	-47.9990	4.5990	1.79990	20.84	48.00
+10	-16.0125	0.5985		20.84
+11	-700.0000	4.7985	1.72056	28.91	47.59
+12	-29.4595	Bf		28.91
+[figure]
+source	Data/US002975673_Figure01P.png
+originX	45.52
+originY	80.35
+ppmm	4.415
+[notes]	

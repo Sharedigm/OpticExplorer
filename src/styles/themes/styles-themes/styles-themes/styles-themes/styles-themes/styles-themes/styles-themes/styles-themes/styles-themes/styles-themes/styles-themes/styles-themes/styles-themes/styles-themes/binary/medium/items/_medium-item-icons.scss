@@ -1,0 +1,139 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.icon-grid {
+		.item {
+
+			> .row:first-child {
+				.icon {
+					text-shadow: none;
+				}
+			}
+
+			//
+			// unselected items
+			//
+
+			&:not(.selected):not(.highlighted) {
+
+				> .row:first-child {
+					.icon {
+						border-color: black;
+
+						> i {
+							color: black;
+							@include binary-text.outline;
+						}
+
+						//
+						// images
+						//
+
+						> svg {
+
+		 					// no shadows
+							//
+							-webkit-filter: none;
+							filter: none;
+						}
+
+						&.colored {
+							background: white;
+						}
+					}
+				}
+
+				> .row:nth-child(2) {
+					.name {
+						color: black;
+						background-color: white;
+						text-shadow: none;
+					}
+				}
+
+				> .row:nth-child(3) {			
+					.details {
+						background-color: white;
+					}
+				}
+			}
+
+			//
+			// highlighted items
+			//
+
+			&.highlighted {
+
+				> .row:first-child {
+					.icon {
+						@include binary-colors.light-grey;
+					}
+				}
+			}
+
+			//
+			// selected items
+			//
+
+			&.selected {
+
+				> .row:first-child {
+					.icon {
+						@include binary-colors.dark-grey;
+						background-position: 1px 1px;
+
+						svg {
+							filter: invert(1);
+						}
+					}
+				}
+
+				> .row:nth-child(2) {
+					.name {
+						@include binary-text.unoutline;
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							color: black;
+							background-color: white;
+							outline-color: black;
+						}
+					}
+				}
+
+				> .row:nth-child(3) {			
+					.details {
+						color: white;
+						background-color: black;
+						@include binary-text.unoutline;
+					}
+				}
+			}
+		}
+	}
+}

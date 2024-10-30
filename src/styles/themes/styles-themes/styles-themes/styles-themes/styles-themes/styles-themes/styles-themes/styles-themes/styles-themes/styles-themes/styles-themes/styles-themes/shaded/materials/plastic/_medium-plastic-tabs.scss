@@ -1,0 +1,56 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-plastic-tabs.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/plastic/round-plastic";
+@use "../../navs/colored-tabs";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.plastic-tabs,
+	&.colored.plastic.auto-tabs {
+		&.show-tab-close-buttons {
+			ul.nav-tabs {
+				> li {
+
+					//
+					// plastic active tabs
+					//
+
+					&.active {
+
+						//
+						// plastic tab close icons
+						//
+
+						i.fa-times, i.fa-xmark {
+							&:hover {
+								@include round-plastic.shaded(colored-tabs.$button-color);
+							}
+
+							&:active {
+								@include round-plastic.shaded(colored-tabs.$button-active-color);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

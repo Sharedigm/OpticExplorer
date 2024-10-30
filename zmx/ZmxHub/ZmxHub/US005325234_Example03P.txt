@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 5,325,234 Example 3 (Ricoh smc Pentax-DA 200mm F2.8 ED[IF] SDM)
+[constants]
+[variable distances]
+Focal Length	194.99	undefined
+Angle of View	12.6	undefined
+F-Number	2.8	undefined
+Image Height	43.20	43.20
+Total Length	undefined	undefined
+Magnification	0	-0.16768
+d0	Infinity	1222.67
+d10	4.68	17.60
+d10AS	1.00	13.92
+d13	25.00	12.08
+Bf	67.50	67.50
+[lens data]
+1	118.908	7.95	1.48749	71.80	70.2
+2	-2636.865	0.20		71.80	
+3	51.123	11.52	1.49700	67.42	81.6
+4	164.776	0.93		67.42	
+5	43.350	9.06	1.49700	57.60	81.6
+6	91.353	1.32		52.889
+7	136.230	2.50	1.60342	53.78	38.0
+8	30.814	22.85		45.58	
+9	85.131	3.82	1.48749	36.98	70.2
+10	221.111	3.68		36.98	
+10AS	AS	d10AS		33.207
+11	1222.499	5.08	1.74950	33.42	35.3
+12	-41.415	2.00	1.70000	33.42	48.1
+13	41.415	d13		30.84	
+14	-45.697	2.00	1.80518	26.86	25.4
+15	-60.076	5.67		26.86	
+16	92.618	4.43	1.54072	32.06	47.2
+17	-92.618	Bf		32.06	
+[figure]
+source	Data/US005325234_Figure09P.png
+originX	150.01
+originY	107.62
+ppmm	1.890
+[notes]
+Bill: d0 and Magnification measured.

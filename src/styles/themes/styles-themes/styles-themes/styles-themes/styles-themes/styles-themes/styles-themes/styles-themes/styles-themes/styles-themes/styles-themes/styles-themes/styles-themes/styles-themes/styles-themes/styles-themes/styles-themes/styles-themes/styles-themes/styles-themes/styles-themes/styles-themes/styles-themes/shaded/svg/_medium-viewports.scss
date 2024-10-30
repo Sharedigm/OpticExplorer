@@ -1,0 +1,30 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-viewports.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+		.viewport, .medium.viewport {
+
+			//
+			// viewport backgrounds
+			//
+
+			&.background {
+				background: #b7c7f7;
+			}
+		}
+	}
+}

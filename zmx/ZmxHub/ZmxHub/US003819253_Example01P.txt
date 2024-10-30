@@ -1,0 +1,29 @@
+[descriptive data]
+title	US 3,819,253 Example 1 (Olympus 300mm f4.5 F Zuiko Auto-T)
+[variable distances]
+Focal Length	300
+Angle of View	8
+F-Number	4.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	84.79
+[lens data]
+1	89.944	13.0	1.48749	71.46	70.1
+2	-240.523	4.0		71.46	
+3	-234.162	3.0	1.69350	71.90	53.3
+4	427.760	0.1		65.92	
+5	95.450	11.0	1.61800	66.78	63.4
+6	-613.827	3.0	1.73980	66.78	31.7
+7	184.817	50.0		62.08	
+7AS	AS	50.0		38.379
+8	-41.868	2.0	1.71300	27.52	54.0
+9	126.591	4.0	1.59270	29.66	35.6
+10	-57.411	Bf		29.66	
+[figure]
+source	Data/US003819253_Figure01P.png
+originX	119.18
+originY	344.35
+ppmm	8.378
+[notes]

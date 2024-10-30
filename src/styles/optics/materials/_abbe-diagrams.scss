@@ -1,0 +1,279 @@
+/******************************************************************************\
+|                                                                              |
+|                             _abbe-diagrams.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$point-color: black;
+$line-color: colors.$medium-grey;
+
+$light-point-color: black;
+$light-line-color: colors.$light-grey;
+
+$dark-point-color: white;
+$dark-line-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+.material-map-viewer .mainbar {
+	overflow: hidden;
+}
+
+.abbe.diagram {
+
+	//
+	// points
+	//
+
+	.abbe.marker {
+		fill: $point-color;
+	}
+
+	//
+	// lines
+	//
+
+	.edges {
+		.line {
+			stroke: $line-color;
+			stroke-opacity: 1;
+			vector-effect: non-scaling-stroke;
+		}
+	}
+
+	//
+	// regions
+	//
+
+	.regions {
+		.region {
+			path {
+				fill-opacity: 0.5;
+				stroke-opacity: 0.5;
+				vector-effect: non-scaling-stroke;
+				stroke-width: 2;
+
+				&.transmitted {
+					mix-blend-mode: hard-light;
+					stroke: none;
+				}
+
+				&.diffuse {
+					mix-blend-mode: overlay;
+					stroke: none;
+				}
+
+				&.specular {
+					fill: url('#abbe-highlight');
+					stroke: none;
+					pointer-events: none;
+				}
+
+				&.edges {
+					mix-blend-mode: normal;
+					fill: none;
+				}	
+			}
+		}
+	}
+
+	//
+	// unshaded region highlights
+	//
+
+	&.unshaded {
+		.regions {
+			.region {
+				.specular {
+					fill: white;
+					fill-opacity: 0.25 !important;
+				}
+			}
+		}
+	}
+
+	//
+	// hiding
+	//
+
+	&.hide-regions {
+		.regions, .shadow {
+			display: none;
+		}
+	}
+
+	&.hide-edges {
+		.regions + .edges {
+			display: none;
+		}
+	}
+
+	&.hide-vertices {
+		.vertices, .vertex {
+			display: none;
+		}
+	}
+}
+
+//
+// binary diagrams
+//
+
+.binary {
+	.abbe.diagram {
+
+		//
+		// binary regions
+		//
+
+		.regions {
+			.region {
+				fill: grey;
+				stroke: black;
+
+				path {
+					&.edges {
+						stroke: black;
+					}
+				}
+			}
+		}
+
+		//
+		// binary material markers
+		//
+
+		.material.marker {
+			fill: grey;
+			stroke: black;
+		}
+
+		//
+		// lens material markers
+		//
+
+		.lens.marker {
+			fill: grey;
+			stroke: black;
+		}		
+	}
+}
+
+//
+// non-binary diagrams
+//
+
+body:not(.binary) {
+	.abbe.diagram {
+
+		//
+		// points
+		//
+
+		.abbe.marker {
+			fill: $point-color;
+		}
+
+		//
+		// lines
+		//
+
+		.edges {
+			.line {
+				stroke: $line-color;
+			}
+		}
+	}
+
+	//
+	// light diagrams
+	//
+
+	.abbe.diagram.light,
+	&.light .abbe.diagram.auto {
+
+		//
+		// points
+		//
+
+		.abbe.marker {
+			fill: $light-point-color;
+		}
+
+		//
+		// lines
+		//
+
+		.edges {
+			.line {
+				stroke: $light-line-color;
+			}
+		}
+	}
+
+	//
+	// dark diagrams
+	//
+
+	.abbe.diagram.dark,
+	&.dark .abbe.diagram.auto {
+
+		//
+		// points
+		//
+
+		.abbe.marker {
+			fill: $dark-point-color;
+		}
+
+		//
+		// lines
+		//
+
+		.edges {
+			.line {
+				stroke: $dark-line-color;
+			}
+		}
+
+		//
+		// regions
+		//
+
+		.regions {
+			.region {
+				path {
+					stroke-opacity: 1;
+
+					&.transmitted {
+						mix-blend-mode: overlay;
+					}
+
+					&.diffuse {
+						mix-blend-mode: multiply;
+						fill-opacity: 1;
+					}
+
+					&.specular {
+						mix-blend-mode: lighten;
+						fill-opacity: 0.25;
+					}
+				}
+			}
+		}
+	}
+}

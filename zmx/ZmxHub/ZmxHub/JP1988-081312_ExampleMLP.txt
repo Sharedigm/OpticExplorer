@@ -1,0 +1,30 @@
+[descriptive data]
+title	JP 1988-081312 Example ML (Canon FD50mm f1.8 SC)
+[constants]
+[variable distances]
+Focal Length	50
+Angle of View	46.8
+F-Number	1.8
+Image Height	43.27
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	34.81
+[lens data]
+1	37.554	3.10	1.8061	29.16	40.7
+2	142.589	0.29		29.16
+3	20.991	7.66	1.60342	25.57	38.0
+4	Infinity	1.46	1.7552	25.57	27.5
+5	14.665	5.50		19.03
+6	AS	7.38		18.687
+7	-14.336	1.07	1.72825	19.10	28.3
+8	436.258	4.85	1.8061	21.45	40.7
+9	-18.860	0.10		21.45
+10	274.101	2.91	1.8061	23.96	40.7
+11	-44.781	Bf		23.96
+[figure]
+source	Data/JP1988-081312_Figure02MLP.png
+originX	191.49
+originY	338.28
+ppmm	10.113
+[notes]

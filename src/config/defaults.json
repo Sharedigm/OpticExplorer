@@ -19,13 +19,25 @@
 		"label": "Submit Question"
 	},
 
+	"contribute": {
+		"description": "Thank you for contrubuting to our optical database!  Please fill out the form below to contribute an optical design to our database.  Our database currently includes files in .ZMX or .OPTC / YAML format but we can convert from other formats as well.  You can also access the optics database through our <a href=\"https://github.com/amegahed/Optics\" target=\"_blank\">GitHub</a> repository.",
+		"subjects": [
+			"Lens",
+			"Material",
+			"Material Map",
+			"Spectrum",
+			"Other"
+		],
+		"label": "Contribute Design"
+	},
+
 	"desktop": {
 		"show_app_launcher": true,
 		"preferences": {
 			"desktop_apps": {
-				"phone": ["app_launcher"],
-				"tablet": ["app_launcher"],
-				"desktop": ["file_browser", "communicator", "search_viewer"]
+				"phone": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"],
+				"tablet": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"],
+				"desktop": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"]
 			},
 			"pinned_apps": []
 		}
@@ -45,23 +57,31 @@
 	"help": {
 		"show_app": true,
 		"show_pdf": false,
-		"show_topic": "Sharedigm",
+		"show_topic": true,
 		"show_contact": true
 	},
 
-	"releases": {
+	"search": {
+		"kind": ["files", "posts"],
+		"options": false,
+		"directory": "/Shared",
+		"placeholder": "Search for optics, glass, or light (e.g. Nikon 50mm, BK7, HeNe)",
+		"credits": {
+			"text": "Many thanks to: ",
+			"list": [
+				"Bill Claff of <a href=\"https://photonstophotos.net\" target=\"_blank\">PhotonsToPhotos.net</a> for contributing to the optical database from the <a href=\"https://www.PhotonsToPhotos.net/GeneralTopics/Lenses/OpticalBench/OpticalBenchHub.htm\" target=\"_blank\">Optical Bench Hub</a>.",
+				"Mikhail Polyanskiy from <a href=\"https://refractiveindex.info\" target=\"_blank\">refractiveindex.info</a> for contributing to the optical materials database.",
+				"Michael Hayford from <a href=\"https://github.com/mjhoptics\" target=\"_blank\">MJH Optics</a> for help with <a href=\"https://github.com/mjhoptics/ray-optics\" target=\"_blank\">RayOptics</a> integration.",
+				"Katsumoto (Kats) Ikeda from <a href=\"https://www.pencilofrays.com\" target=\"_blank\">A Pencil of Rays</a> for inspiration and advice.",
+				"Myriam Philippe Derelle for astronomical eypiece designs and discussion."
+			]
+		},
+		"hidden": false
 	},
 
-	"search": {
-		"placeholder": "Search for terms or text.",
-		"options": ["view_kind", "detail_kind", "create_date"],
-		"hidden": true,
-
-		"index": {
-			"name": "search index",
-			"icon": "<i class=\"fa fa-search\"></i>"
-		},
-		"directory": "/Shared"
+	"search_index": {
+		"name": "search index",
+		"icon": "<i class=\"fa fa-search\"></i>"
 	},
 
 	"settings": {

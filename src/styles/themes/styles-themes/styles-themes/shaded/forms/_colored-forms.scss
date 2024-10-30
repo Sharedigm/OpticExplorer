@@ -1,0 +1,35 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-forms.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/special-colors";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+
+		//
+		// required form items
+		//
+
+		:not(input).required:after {
+			color: special-colors.$warning-color;
+		}
+	}
+}

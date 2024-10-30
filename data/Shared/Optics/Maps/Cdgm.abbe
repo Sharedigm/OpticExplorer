@@ -1,0 +1,1200 @@
+################################################################################
+#                                                                              #
+#                                   Cdgm.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: H-LAF7
+    catalog: Cdgm
+    n: 1.781796
+    v: 37.094648
+
+  - name: H-ZLAF76
+    catalog: Cdgm
+    n: 1.850136
+    v: 30.060435
+
+  - name: QF5
+    catalog: Cdgm
+    n: 1.582153
+    v: 42.039634
+
+  - name: H-ZF11
+    catalog: Cdgm
+    n: 1.698948
+    v: 30.053069
+
+  - name: H-ZF50
+    catalog: Cdgm
+    n: 1.740773
+    v: 27.761693
+
+  - name: D-LAF79
+    catalog: Cdgm
+    n: 1.730774
+    v: 40.525060
+
+  - name: ZF7
+    catalog: Cdgm
+    n: 1.806277
+    v: 25.380144
+
+  - name: H-TF8
+    catalog: Cdgm
+    n: 1.720478
+    v: 34.727247
+
+  - name: H-ZLAF55D
+    catalog: Cdgm
+    n: 1.834810
+    v: 42.727483
+
+  - name: H-LAK50A
+    catalog: Cdgm
+    n: 1.651605
+    v: 58.416296
+
+  - name: H-ZF4A
+    catalog: Cdgm
+    n: 1.728254
+    v: 28.310916
+
+  - name: D-ZPK1A
+    catalog: Cdgm
+    n: 1.620867
+    v: 63.876075
+
+  - name: H-ZF5
+    catalog: Cdgm
+    n: 1.740005
+    v: 28.291496
+
+  - name: H-LAK54
+    catalog: Cdgm
+    n: 1.734000
+    v: 51.494023
+
+  - name: H-ZBAF3
+    catalog: Cdgm
+    n: 1.656914
+    v: 51.156590
+
+  - name: H-ZLAF56B
+    catalog: Cdgm
+    n: 1.806105
+    v: 33.286897
+
+  - name: H-ZLAF4LA
+    catalog: Cdgm
+    n: 1.910826
+    v: 35.255728
+
+  - name: H-F51
+    catalog: Cdgm
+    n: 1.639802
+    v: 34.486325
+
+  - name: H-BAF3
+    catalog: Cdgm
+    n: 1.579568
+    v: 53.737216
+
+  - name: BAF7
+    catalog: Cdgm
+    n: 1.614131
+    v: 40.025731
+
+  - name: D-ZLAF61
+    catalog: Cdgm
+    n: 1.822412
+    v: 42.722851
+
+  - name: H-K2
+    catalog: Cdgm
+    n: 1.500469
+    v: 66.052454
+
+  - name: H-BAK6
+    catalog: Cdgm
+    n: 1.563885
+    v: 60.791427
+
+  - name: H-KF6
+    catalog: Cdgm
+    n: 1.517419
+    v: 52.189003
+
+  - name: H-BAK7
+    catalog: Cdgm
+    n: 1.568832
+    v: 56.059608
+
+  - name: H-TF5
+    catalog: Cdgm
+    n: 1.654105
+    v: 39.548456
+
+  - name: H-ZF88
+    catalog: Cdgm
+    n: 1.945958
+    v: 17.943914
+
+  - name: H-K3
+    catalog: Cdgm
+    n: 1.504631
+    v: 64.779923
+
+  - name: D-LAK70
+    catalog: Cdgm
+    n: 1.669102
+    v: 55.402300
+
+  - name: H-ZF71
+    catalog: Cdgm
+    n: 1.808108
+    v: 22.690566
+
+  - name: H-ZK10L
+    catalog: Cdgm
+    n: 1.622802
+    v: 56.951885
+
+  - name: H-QF56
+    catalog: Cdgm
+    n: 1.567320
+    v: 42.807794
+
+  - name: H-ZK9A
+    catalog: Cdgm
+    n: 1.620412
+    v: 60.368242
+
+  - name: H-ZK1
+    catalog: Cdgm
+    n: 1.568883
+    v: 62.960665
+
+  - name: H-K9L
+    catalog: Cdgm
+    n: 1.516797
+    v: 64.212351
+
+  - name: H-BAF2
+    catalog: Cdgm
+    n: 1.569702
+    v: 49.448232
+
+  - name: H-LAF51
+    catalog: Cdgm
+    n: 1.700000
+    v: 48.109868
+
+  - name: QF8
+    catalog: Cdgm
+    n: 1.540718
+    v: 47.198243
+
+  - name: H-LAF6LA
+    catalog: Cdgm
+    n: 1.757003
+    v: 47.713789
+
+  - name: D-LAF050
+    catalog: Cdgm
+    n: 1.768419
+    v: 49.290155
+
+  - name: D-LAK5
+    catalog: Cdgm
+    n: 1.677900
+    v: 54.896588
+
+  - name: ZBAF51
+    catalog: Cdgm
+    n: 1.682726
+    v: 44.528543
+
+  - name: H-K9Lstar
+    catalog: Cdgm
+    n: 1.516797
+    v: 64.212351
+
+  - name: F1
+    catalog: Cdgm
+    n: 1.603417
+    v: 38.014870
+
+  - name: F13
+    catalog: Cdgm
+    n: 1.625884
+    v: 35.713679
+
+  - name: H-LAK3
+    catalog: Cdgm
+    n: 1.746934
+    v: 51.008591
+
+  - name: ZF6
+    catalog: Cdgm
+    n: 1.755205
+    v: 27.546239
+
+  - name: H-BAK7GT
+    catalog: Cdgm
+    n: 1.568832
+    v: 56.059608
+
+  - name: H-ZF10
+    catalog: Cdgm
+    n: 1.688930
+    v: 31.160527
+
+  - name: H-ZF52GT
+    catalog: Cdgm
+    n: 1.846666
+    v: 23.787324
+
+  - name: H-ZK14
+    catalog: Cdgm
+    n: 1.603112
+    v: 60.633158
+
+  - name: H-LAF50B
+    catalog: Cdgm
+    n: 1.772501
+    v: 49.613485
+
+  - name: H-K12
+    catalog: Cdgm
+    n: 1.533589
+    v: 55.469983
+
+  - name: H-ZF3
+    catalog: Cdgm
+    n: 1.717361
+    v: 29.509994
+
+  - name: H-LAK52
+    catalog: Cdgm
+    n: 1.729164
+    v: 54.669031
+
+  - name: D-LAF82L
+    catalog: Cdgm
+    n: 1.734852
+    v: 48.782341
+
+  - name: H-ZBAF5
+    catalog: Cdgm
+    n: 1.671028
+    v: 47.281988
+
+  - name: H-LAK51A
+    catalog: Cdgm
+    n: 1.696800
+    v: 55.534184
+
+  - name: H-F1
+    catalog: Cdgm
+    n: 1.603423
+    v: 38.009116
+
+  - name: H-ZBAF52
+    catalog: Cdgm
+    n: 1.670031
+    v: 47.197459
+
+  - name: H-BAF5
+    catalog: Cdgm
+    n: 1.605624
+    v: 43.880593
+
+  - name: H-ZK6
+    catalog: Cdgm
+    n: 1.612719
+    v: 58.604851
+
+  - name: H-QF1
+    catalog: Cdgm
+    n: 1.548141
+    v: 45.832966
+
+  - name: H-ZLAF68N
+    catalog: Cdgm
+    n: 1.883001
+    v: 39.225276
+
+  - name: D-ZLAF85L
+    catalog: Cdgm
+    n: 1.853702
+    v: 40.598749
+
+  - name: D-ZLAF67
+    catalog: Cdgm
+    n: 1.883850
+    v: 37.205485
+
+  - name: H-LAF1
+    catalog: Cdgm
+    n: 1.693631
+    v: 49.233011
+
+  - name: H-ZLAF1
+    catalog: Cdgm
+    n: 1.801663
+    v: 44.282314
+
+  - name: QF3
+    catalog: Cdgm
+    n: 1.575026
+    v: 41.296920
+
+  - name: D-LAF53
+    catalog: Cdgm
+    n: 1.743306
+    v: 49.335808
+
+  - name: H-ZLAF66
+    catalog: Cdgm
+    n: 1.800999
+    v: 34.972131
+
+  - name: ZBAF17
+    catalog: Cdgm
+    n: 1.667554
+    v: 41.957211
+
+  - name: ZF52
+    catalog: Cdgm
+    n: 1.846669
+    v: 23.827549
+
+  - name: ZF1
+    catalog: Cdgm
+    n: 1.647693
+    v: 33.836872
+
+  - name: H-ZLAF68B
+    catalog: Cdgm
+    n: 1.883004
+    v: 40.806875
+
+  - name: H-LAK53A
+    catalog: Cdgm
+    n: 1.755002
+    v: 52.329298
+
+  - name: F6
+    catalog: Cdgm
+    n: 1.624954
+    v: 35.577816
+
+  - name: ZF13
+    catalog: Cdgm
+    n: 1.784724
+    v: 25.754051
+
+  - name: H-K8
+    catalog: Cdgm
+    n: 1.516020
+    v: 56.810596
+
+  - name: D-ZF93
+    catalog: Cdgm
+    n: 2.001703
+    v: 20.705366
+
+  - name: H-ZLAF50E
+    catalog: Cdgm
+    n: 1.804009
+    v: 46.567682
+
+  - name: H-ZLAF50D
+    catalog: Cdgm
+    n: 1.804005
+    v: 46.590950
+
+  - name: H-LAK8A
+    catalog: Cdgm
+    n: 1.720000
+    v: 50.351963
+
+  - name: H-ZLAF55C
+    catalog: Cdgm
+    n: 1.834813
+    v: 42.743244
+
+  - name: D-ZK79
+    catalog: Cdgm
+    n: 1.608858
+    v: 57.965801
+
+  - name: ZF12
+    catalog: Cdgm
+    n: 1.761822
+    v: 26.555686
+
+  - name: F7
+    catalog: Cdgm
+    n: 1.636365
+    v: 35.386204
+
+  - name: H-ZLAF68C
+    catalog: Cdgm
+    n: 1.883001
+    v: 40.867939
+
+  - name: D-ZLAF50
+    catalog: Cdgm
+    n: 1.803373
+    v: 45.526021
+
+  - name: H-BAF8
+    catalog: Cdgm
+    n: 1.626044
+    v: 39.078919
+
+  - name: D-ZF10
+    catalog: Cdgm
+    n: 1.688935
+    v: 31.081030
+
+  - name: H-ZLAF75B
+    catalog: Cdgm
+    n: 1.903663
+    v: 31.419748
+
+  - name: H-ZLAF71
+    catalog: Cdgm
+    n: 1.850260
+    v: 32.307713
+
+  - name: H-ZF13GT
+    catalog: Cdgm
+    n: 1.784721
+    v: 25.719658
+
+  - name: D-K59
+    catalog: Cdgm
+    n: 1.517602
+    v: 63.502624
+
+  - name: H-BAK1
+    catalog: Cdgm
+    n: 1.530279
+    v: 60.474448
+
+  - name: H-K5
+    catalog: Cdgm
+    n: 1.510072
+    v: 63.364525
+
+  - name: H-ZLAF51
+    catalog: Cdgm
+    n: 1.804505
+    v: 39.639509
+
+  - name: K4A
+    catalog: Cdgm
+    n: 1.508021
+    v: 61.061308
+
+  - name: H-ZK7
+    catalog: Cdgm
+    n: 1.613095
+    v: 60.614383
+
+  - name: H-BAF4
+    catalog: Cdgm
+    n: 1.582672
+    v: 46.606408
+
+  - name: H-ZBAF4
+    catalog: Cdgm
+    n: 1.664264
+    v: 35.501048
+
+  - name: H-ZLAF53B
+    catalog: Cdgm
+    n: 1.833996
+    v: 37.229136
+
+  - name: H-ZLAF2A
+    catalog: Cdgm
+    n: 1.802793
+    v: 46.774142
+
+  - name: H-QF6A
+    catalog: Cdgm
+    n: 1.531722
+    v: 48.851958
+
+  - name: H-ZF2
+    catalog: Cdgm
+    n: 1.672702
+    v: 32.178880
+
+  - name: H-ZK50GT
+    catalog: Cdgm
+    n: 1.607382
+    v: 56.667022
+
+  - name: H-LAK12
+    catalog: Cdgm
+    n: 1.696801
+    v: 56.199825
+
+  - name: H-ZLAF92
+    catalog: Cdgm
+    n: 2.003307
+    v: 28.317370
+
+  - name: H-LAK59A
+    catalog: Cdgm
+    n: 1.690999
+    v: 54.859424
+
+  - name: H-LAK6A
+    catalog: Cdgm
+    n: 1.693501
+    v: 53.347668
+
+  - name: H-LAF3B
+    catalog: Cdgm
+    n: 1.744004
+    v: 44.904207
+
+  - name: H-BAK2
+    catalog: Cdgm
+    n: 1.539964
+    v: 59.730319
+
+  - name: H-ZLAF52
+    catalog: Cdgm
+    n: 1.806099
+    v: 40.945389
+
+  - name: H-K6
+    catalog: Cdgm
+    n: 1.511125
+    v: 60.478905
+
+  - name: H-ZF62
+    catalog: Cdgm
+    n: 1.922866
+    v: 20.882149
+
+  - name: H-QF3
+    catalog: Cdgm
+    n: 1.575009
+    v: 41.506694
+
+  - name: H-ZK4
+    catalog: Cdgm
+    n: 1.608813
+    v: 58.880649
+
+  - name: H-LAF54
+    catalog: Cdgm
+    n: 1.799519
+    v: 42.253294
+
+  - name: H-BAF7
+    catalog: Cdgm
+    n: 1.614133
+    v: 39.999157
+
+  - name: H-ZBAF50
+    catalog: Cdgm
+    n: 1.658439
+    v: 50.866500
+
+  - name: H-K51
+    catalog: Cdgm
+    n: 1.523074
+    v: 58.658089
+
+  - name: H-ZF4AGT
+    catalog: Cdgm
+    n: 1.728254
+    v: 28.310916
+
+  - name: H-ZF1
+    catalog: Cdgm
+    n: 1.647693
+    v: 33.842283
+
+  - name: D-ZLAF52LA
+    catalog: Cdgm
+    n: 1.809995
+    v: 41.000073
+
+  - name: H-K10
+    catalog: Cdgm
+    n: 1.518176
+    v: 58.950076
+
+  - name: H-LAK11
+    catalog: Cdgm
+    n: 1.664613
+    v: 54.657841
+
+  - name: D-K9
+    catalog: Cdgm
+    n: 1.516324
+    v: 64.048495
+
+  - name: H-LAK8B
+    catalog: Cdgm
+    n: 1.720000
+    v: 50.294444
+
+  - name: H-ZF39
+    catalog: Cdgm
+    n: 1.666805
+    v: 33.056453
+
+  - name: H-ZF72A
+    catalog: Cdgm
+    n: 1.922867
+    v: 18.895456
+
+  - name: H-LAF62
+    catalog: Cdgm
+    n: 1.719999
+    v: 43.691154
+
+  - name: ZF11
+    catalog: Cdgm
+    n: 1.698949
+    v: 30.065686
+
+  - name: F4
+    catalog: Cdgm
+    n: 1.620047
+    v: 36.356730
+
+  - name: ZF3
+    catalog: Cdgm
+    n: 1.717365
+    v: 29.510385
+
+  - name: H-ZK8
+    catalog: Cdgm
+    n: 1.614047
+    v: 55.142852
+
+  - name: ZF50
+    catalog: Cdgm
+    n: 1.740770
+    v: 27.767880
+
+  - name: H-LAFL5
+    catalog: Cdgm
+    n: 1.753671
+    v: 37.495125
+
+  - name: H-ZLAF66GT
+    catalog: Cdgm
+    n: 1.800999
+    v: 34.972131
+
+  - name: H-LAF4GT
+    catalog: Cdgm
+    n: 1.749501
+    v: 35.020925
+
+  - name: H-ZK50
+    catalog: Cdgm
+    n: 1.607382
+    v: 56.667022
+
+  - name: H-ZPK3
+    catalog: Cdgm
+    n: 1.593490
+    v: 67.326618
+
+  - name: H-ZLAF75A
+    catalog: Cdgm
+    n: 1.903664
+    v: 31.318289
+
+  - name: QF1
+    catalog: Cdgm
+    n: 1.548100
+    v: 45.886233
+
+  - name: D-ZK3
+    catalog: Cdgm
+    n: 1.589132
+    v: 61.162960
+
+  - name: H-ZLAF3
+    catalog: Cdgm
+    n: 1.855449
+    v: 36.598050
+
+  - name: H-ZK11
+    catalog: Cdgm
+    n: 1.638543
+    v: 55.471523
+
+  - name: H-ZPK1A
+    catalog: Cdgm
+    n: 1.617998
+    v: 63.405767
+
+  - name: H-LAF2
+    catalog: Cdgm
+    n: 1.716996
+    v: 47.920216
+
+  - name: H-ZK10
+    catalog: Cdgm
+    n: 1.622094
+    v: 56.726025
+
+  - name: D-ZK2
+    catalog: Cdgm
+    n: 1.583129
+    v: 59.416316
+
+  - name: H-ZLAF53BGT
+    catalog: Cdgm
+    n: 1.833996
+    v: 37.229136
+
+  - name: H-QK3L
+    catalog: Cdgm
+    n: 1.487491
+    v: 70.419640
+
+  - name: H-ZF52A
+    catalog: Cdgm
+    n: 1.846670
+    v: 23.791236
+
+  - name: D-LAF50
+    catalog: Cdgm
+    n: 1.774002
+    v: 49.604291
+
+  - name: TF3
+    catalog: Cdgm
+    n: 1.612423
+    v: 44.093486
+
+  - name: ZF51
+    catalog: Cdgm
+    n: 1.784701
+    v: 26.075871
+
+  - name: H-FK71
+    catalog: Cdgm
+    n: 1.456500
+    v: 90.269745
+
+  - name: D-FK61
+    catalog: Cdgm
+    n: 1.496999
+    v: 81.614851
+
+  - name: ZF2
+    catalog: Cdgm
+    n: 1.672707
+    v: 32.180986
+
+  - name: F5
+    catalog: Cdgm
+    n: 1.624353
+    v: 35.938411
+
+  - name: H-LAK53B
+    catalog: Cdgm
+    n: 1.754998
+    v: 52.337421
+
+  - name: ZF10
+    catalog: Cdgm
+    n: 1.688934
+    v: 31.184753
+
+  - name: H-LAK67
+    catalog: Cdgm
+    n: 1.670003
+    v: 51.758578
+
+  - name: H-QF50A
+    catalog: Cdgm
+    n: 1.581439
+    v: 40.749269
+
+  - name: H-ZLAF90
+    catalog: Cdgm
+    n: 2.000689
+    v: 25.435062
+
+  - name: H-K11
+    catalog: Cdgm
+    n: 1.526382
+    v: 60.203222
+
+  - name: H-LAK10
+    catalog: Cdgm
+    n: 1.651133
+    v: 55.903805
+
+  - name: H-LAK4L
+    catalog: Cdgm
+    n: 1.640002
+    v: 60.213997
+
+  - name: H-LAF10LA
+    catalog: Cdgm
+    n: 1.787998
+    v: 47.516598
+
+  - name: H-K50
+    catalog: Cdgm
+    n: 1.522490
+    v: 59.512324
+
+  - name: H-F2
+    catalog: Cdgm
+    n: 1.612934
+    v: 37.008185
+
+  - name: H-ZLAF69
+    catalog: Cdgm
+    n: 1.816001
+    v: 46.569210
+
+  - name: H-LAF55
+    catalog: Cdgm
+    n: 1.762004
+    v: 40.106913
+
+  - name: H-BAF6
+    catalog: Cdgm
+    n: 1.608015
+    v: 46.220006
+
+  - name: H-ZK5
+    catalog: Cdgm
+    n: 1.611173
+    v: 55.812649
+
+  - name: BAF2
+    catalog: Cdgm
+    n: 1.569703
+    v: 49.435926
+
+  - name: H-LAK2A
+    catalog: Cdgm
+    n: 1.692114
+    v: 54.570492
+
+  - name: H-K7
+    catalog: Cdgm
+    n: 1.514778
+    v: 60.607173
+
+  - name: H-BAK3
+    catalog: Cdgm
+    n: 1.546780
+    v: 62.741102
+
+  - name: D-PK3
+    catalog: Cdgm
+    n: 1.525006
+    v: 70.361017
+
+  - name: D-LAK6
+    catalog: Cdgm
+    n: 1.693847
+    v: 53.151009
+
+  - name: H-ZLAF78B
+    catalog: Cdgm
+    n: 1.900696
+    v: 37.053564
+
+  - name: H-ZF7LA
+    catalog: Cdgm
+    n: 1.805189
+    v: 25.477290
+
+  - name: ZF7LGT
+    catalog: Cdgm
+    n: 1.805190
+    v: 25.471232
+
+  - name: H-BAK8
+    catalog: Cdgm
+    n: 1.572499
+    v: 57.520834
+
+  - name: F2
+    catalog: Cdgm
+    n: 1.612929
+    v: 36.986002
+
+  - name: ZF5
+    catalog: Cdgm
+    n: 1.739999
+    v: 28.245048
+
+  - name: H-TF3L
+    catalog: Cdgm
+    n: 1.613395
+    v: 44.166804
+
+  - name: H-ZBAF21
+    catalog: Cdgm
+    n: 1.723418
+    v: 38.022035
+
+  - name: H-ZF52
+    catalog: Cdgm
+    n: 1.846666
+    v: 23.787324
+
+  - name: H-ZF7LAGT
+    catalog: Cdgm
+    n: 1.805189
+    v: 25.477290
+
+  - name: H-LAK5A
+    catalog: Cdgm
+    n: 1.677903
+    v: 55.559699
+
+  - name: H-ZPK5
+    catalog: Cdgm
+    n: 1.592807
+    v: 68.525033
+
+  - name: H-ZF13
+    catalog: Cdgm
+    n: 1.784721
+    v: 25.719658
+
+  - name: H-BAK4
+    catalog: Cdgm
+    n: 1.552479
+    v: 63.372062
+
+  - name: H-QF14
+    catalog: Cdgm
+    n: 1.595512
+    v: 39.228024
+
+  - name: H-ZK21
+    catalog: Cdgm
+    n: 1.622995
+    v: 58.154171
+
+  - name: H-ZK9B
+    catalog: Cdgm
+    n: 1.620412
+    v: 60.373876
+
+  - name: H-ZK2
+    catalog: Cdgm
+    n: 1.583132
+    v: 59.455980
+
+  - name: H-LAK7A
+    catalog: Cdgm
+    n: 1.713004
+    v: 53.868142
+
+  - name: BAF5
+    catalog: Cdgm
+    n: 1.605623
+    v: 43.890292
+
+  - name: H-LAF52
+    catalog: Cdgm
+    n: 1.785901
+    v: 44.206711
+
+  - name: ZBAF2
+    catalog: Cdgm
+    n: 1.639616
+    v: 48.230454
+
+  - name: H-ZBAF1
+    catalog: Cdgm
+    n: 1.622297
+    v: 53.199535
+
+  - name: H-ZLAF52A
+    catalog: Cdgm
+    n: 1.806105
+    v: 41.023451
+
+  - name: H-K9LGT
+    catalog: Cdgm
+    n: 1.516797
+    v: 64.212351
+
+  - name: H-QK1
+    catalog: Cdgm
+    n: 1.470466
+    v: 66.884514
+
+  - name: H-ZLAF89L
+    catalog: Cdgm
+    n: 1.953749
+    v: 32.318108
+
+  - name: H-ZF6
+    catalog: Cdgm
+    n: 1.755205
+    v: 27.547441
+
+  - name: H-ZBAF16
+    catalog: Cdgm
+    n: 1.666724
+    v: 48.431709
+
+  - name: H-F13
+    catalog: Cdgm
+    n: 1.625886
+    v: 35.713790
+
+  - name: ZF7L
+    catalog: Cdgm
+    n: 1.805190
+    v: 25.471232
+
+  - name: H-FK61B
+    catalog: Cdgm
+    n: 1.496998
+    v: 81.594687
+
+  - name: H-F4
+    catalog: Cdgm
+    n: 1.620047
+    v: 36.347920
+
+  - name: QF50
+    catalog: Cdgm
+    n: 1.581438
+    v: 40.895946
+
+  - name: H-LAF53
+    catalog: Cdgm
+    n: 1.743305
+    v: 49.238028
+
+  - name: H-ZK3
+    catalog: Cdgm
+    n: 1.589128
+    v: 61.247611
+
+  - name: BAF4
+    catalog: Cdgm
+    n: 1.582712
+    v: 46.505886
+
+  - name: H-ZK20
+    catalog: Cdgm
+    n: 1.617203
+    v: 53.928400
+
+  - name: ZF8
+    catalog: Cdgm
+    n: 1.654460
+    v: 33.651201
+
+  - name: H-ZPK2A
+    catalog: Cdgm
+    n: 1.603001
+    v: 65.459620
+
+  - name: H-K1
+    catalog: Cdgm
+    n: 1.499673
+    v: 62.090817
+
+  - name: H-BAK5
+    catalog: Cdgm
+    n: 1.560689
+    v: 58.344848
+
+  - name: H-LAF4
+    catalog: Cdgm
+    n: 1.749501
+    v: 35.020925
+
+  - name: H-ZF12
+    catalog: Cdgm
+    n: 1.761823
+    v: 26.613203
+
+  - name: QF6
+    catalog: Cdgm
+    n: 1.531719
+    v: 48.755584
+
+  - name: H-ZBAF20
+    catalog: Cdgm
+    n: 1.701545
+    v: 41.140848
+
+  - name: ZF4
+    catalog: Cdgm
+    n: 1.728251
+    v: 28.323900
+
+  - name: H-ZF52TT
+    catalog: Cdgm
+    n: 1.846666
+    v: 23.787324
+
+  - name: H-QF8
+    catalog: Cdgm
+    n: 1.540723
+    v: 47.229943
+
+  - name: H-LAK1
+    catalog: Cdgm
+    n: 1.659500
+    v: 57.385393
+
+  - name: F3
+    catalog: Cdgm
+    n: 1.616592
+    v: 36.627394
+
+  - name: H-ZK3A
+    catalog: Cdgm
+    n: 1.589129
+    v: 61.245793
+
+  - name: D-ZLAF81
+    catalog: Cdgm
+    n: 1.808800
+    v: 41.010308
+
+  - name: H-LAK61
+    catalog: Cdgm
+    n: 1.740999
+    v: 52.676196
+
+  - name: H-FK61
+    catalog: Cdgm
+    n: 1.496998
+    v: 81.594687

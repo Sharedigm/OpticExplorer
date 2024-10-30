@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1979-055424 Example 1 (Konica Minolta Hexanon 200mm F4)
+[constants]
+Scaled	200	1
+[variable distances]
+Focal Length	200
+Angle of View	12
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	52.20
+Bf	52.30
+[lens data]
+1	76.44	8.5	1.51633	50.10	64.1
+2	-266.34	16.0		50.10
+3	-144.54	3.0	1.7552	42.26	27.5
+4	350.94	2.0		42.26
+5	47.50	6.5	1.51633	40.79	64.1
+6	98.14	28.1		40.79
+6AS	AS	38.9		28.730
+7	-28.22	2.0	1.7725	23.98	49.6
+8	-83.42	1.0		23.98	
+9	462.90	3.5	1.80518	25.58	25.4
+10	-102.78	Bf		25.58	
+[figure]
+source	Data/JP1979-055424_Figure01P.png
+originX	105.93
+originY	263.47
+ppmm	6.144
+[notes]

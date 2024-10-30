@@ -1,0 +1,35 @@
+[descriptive data]
+title	DE 2 205 380 Example 3 (Olympus 28mm f3.5 G Zuiko Auto-W)
+[constants]
+Scaled	28	100
+[variable distances]
+Focal Length	28
+Angle of View	undefined
+F-Number	3.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	37.51
+[lens data]
+1	479.380	2.81	1.66672	33.14	48.3
+2	-292.132	0.20		33.14	
+3	20.824	1.65	1.62041	23.16	60.3
+4	9.937	7.61		17.37	
+5	456.851	6.33	1.66892	15.41	45.0
+6	-39.152	0.70		15.41	
+7	-19.533	8.76	1.67790	13.36	55.3
+8	-19.522	0.20		15.04	
+9	19.846	1.83	1.71300	12.61	54.0
+10	58.794	1.45		12.61	
+10AS	AS	1.45		11.582
+11	-56.333	1.94	1.74077	12.17	27.8
+12	22.232	0.85		12.17	
+13	Infinity	2.25	1.71300	12.17	54.0
+14	-17.500	Bf		12.17	
+[figure]
+source	Data/DE02205380_Figure06P.png
+originX	93.97
+originY	398.80
+ppmm	20.804
+[notes]

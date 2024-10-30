@@ -1,0 +1,47 @@
+[descriptive data]
+title	US 3,057,257 Example 1 (Schneider Variogon 2.8 / 10-40)
+[constants]
+Scaled	10	50
+[variable distances]
+Focal Length	10	20	40
+Angle of View	undefined	undefined	undefined
+F-Number	2.8	2.8	2.8
+Image Height	6	6	6
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d5	2.91	24.85	40.29
+d8	25.67	6.82	3.80
+d11	16.03	12.94	0.52
+Bf(p)	undefined	undefined	undefined
+Bf	12.31	12.31	12.31
+[lens data]
+1	68.51	4.00	1.52542	36.54	64.55
+2	-451.00	0.08		36.54	
+3	57.44	3.87	1.62041	34.38	60.29
+4	-846.50	1.17	1.76182	34.38	26.52
+5	94.15	d5		32.74
+6	-170.10	2.05	1.75520	24.63	27.53
+7	-46.39	0.62	1.50378	24.63	66.73
+8	18.63	d8		19.84	
+9	-23.63	0.59	1.50378	10.52	66.73
+10	28.25	1.56	1.75520	10.52	27.53
+11	73.23	d11		10.52
+12	61.53	1.37	1.62041	7.29	60.29
+13	-20.83	0.68	1.62001	7.29	36.34
+14	-58.19	8.40		7.29	
+14AS	AS	0.60		6.488
+15	12.99	2.04	1.62041	7.18	60.29
+16	-210.00	0.03		7.18
+17	7.79	2.02	1.62041	6.55	60.29
+18	9.91	1.36		5.71
+19	-25.98	0.57	1.69895	5.18	30.05
+20	6.64	2.75		4.54
+21	18.68	2.17	1.65830	7.00	57.29
+22	-10.63	Bf		7.00	
+[figure]
+source	Data/US003057257_Figure01P.png
+originX	54.69
+originY	323.04
+ppmm	14.295
+[notes]
+Bill: Image Height unknown. Tough repair; only the intermediate scenario distances were provided.

@@ -1,0 +1,137 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../colors/binary-colors";
+
+//
+// colors
+//
+
+$track-color: black;
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// range inputs
+	//
+
+	.input {
+		display: flex;
+
+		//
+		// grouped inputs
+		//
+
+		.input-group {
+			display: flex;
+		}
+
+		//
+		// text / number inputs
+		//
+
+		input:not([type="range"]) {
+			text-align: center;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		//
+		// selectable inputs
+		//
+
+		&.selectable {
+			input {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+
+	//
+	// sliders
+	//
+
+	input[type="range"] {
+
+		//
+		// slider thumbs
+		//
+
+		&::-webkit-slider-thumb {
+			border-style: solid;
+			border-color: unset;
+			background-color: white;
+			margin-top: -6px;
+			
+			&:hover {
+				@include binary-colors.grey;
+			}
+
+			&:active {
+				 background-color: black;
+			}
+		}
+
+		&::-moz-range-thumb {
+			border-style: solid;
+			border-color: unset;
+			background-color: white;
+			margin-top: -6px;
+
+			&:hover {
+				background-color: black;
+			}
+		}
+
+		&::-ms-thumb {
+			border-style: solid;
+			border-color: unset;
+			@include binary-colors.grey;
+
+			&:hover {
+				background-color: black;
+			}
+		}
+
+		//
+		// tracks
+		//
+
+		&::-webkit-slider-runnable-track {
+			border-style: solid;
+			border-color: unset;
+			background-color: $track-color;
+		}
+
+		&::-moz-range-track {
+			border-style: solid;
+			border-color: unset;
+			background-color: $track-color;
+		}
+
+		&:focus::-webkit-slider-runnable-track {
+			background-color: $track-color !important;
+		}
+	}
+}

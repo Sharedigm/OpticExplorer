@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1987-087922 Example 1 (Canon EF50mm f1.8)
+[constants]
+[variable distances]
+Focal Length	51.6
+Angle of View	45.5
+F-Number	1.85
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	38.81
+Bf	37.93
+[lens data]
+1	34.30	4.50	1.62280	30.99	57.0
+2	247.65	2.40		30.99
+3	21.51	4.35	1.70154	25.61	41.2
+4	40.31	0.92		24.15
+5	78.44	1.40	1.67270	25.61	32.1
+6	15.32	6.75		19.97
+6AS	AS	4.95		19.292
+7	-15.83	1.10	1.69895	19.37	30.1
+8	135.97	5.70	1.79952	23.76	42.2
+9	-21.24	0.15		23.76
+10	162.15	3.00	1.72000	23.60	50.2
+11	-49.97	Bf		23.60
+[figure]
+source	Data/JP1987-087922_Figure01P.png
+originX	257.40
+originY	507.58
+ppmm	14.908
+[notes]

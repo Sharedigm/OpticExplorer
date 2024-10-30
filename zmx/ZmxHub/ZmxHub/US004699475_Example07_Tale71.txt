@@ -1,0 +1,62 @@
+[descriptive data]
+title	US 4,699,475 Example 7 (Nikon AI Zoom-Nikkor 35-105mm f/3.5-4.5S)
+[constants]
+[variable distances]
+Focal Length	36.2	60	103
+Angle of View	undefined	undefined	undefined
+F-Number	3.5	4.0	4.5
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	0.98	10.62	19.77
+d14(p)	12.52	6.77	1.49
+d14	11.72	5.97	0.69
+d20	10.84	6.96	3.08
+Bf	52.36	65.30	78.24
+Aperture Diameter	17.389	17.409	17.719
+[lens data]
+1	150.69	1.3	1.805	42.65	25.3
+2	58.13	0.4		37.56
+3	66.23	6.2	1.603	37.56	60.6
+4	-128.09	0.1		40.30
+5	33.14	3.9	1.603	33.35	60.6
+6	67.54	d6		32.28
+7	62.79	1.0	1.796	22.65	45.5
+8	17.07	3.0		18.50
+9	-213.87	3.5	1.805	17.95	25.3
+10	-20.49	1.0	1.796	17.95	45.5
+11	-194.15	2.7		17.95
+12	-21.48	1.0	1.713	15.35	53.9
+13	17.23	3.5	1.796	17.69	40.9
+14	-696.58	d14		17.69
+14AS	AS	0.8		17.389
+15	122.05	4.0	1.713	18.54	53.9
+16	-24.80	0.4		18.82
+17	-21.54	1.0	1.805	18.82	25.3
+18	-38.91	0.1		20.37
+19	35.07	2.0	1.568	20.87	56.0
+20	72.08	d20		20.87
+21	21.96	4.0	1.563	20.90	60.8
+22	34.58	1.5	1.796	20.90	45.5
+23	20.50	2.0		19.44
+24	104.25	4.0	1.518	20.92	60.3
+25	-31.38	0.1		20.92
+26	-95.95	5.5	1.563	20.90	60.8
+27	-16.37	1.4	1.796	20.90	40.9
+28	-45.88	Bf		22.33
+[figure]
+source	Data/US004699475_Example07_Tale71-Fig1.png
+originX	18
+originY	241
+ppmm	10.766
+[!figure]
+source	Data/US004699475_Figure14.png // patent
+originX	59
+originY	450
+ppmm	10.471
+[notes]
+Bill: Patent d9 is clearly wrong. See JP1983-078114 Example 7.
+9	-213.87	1.0	1.805	13.26	25.3
+10	-20.49	1.0	1.796	13.26	45.5
+Aperture Diameter(3.0)	17.310	17.332	17.645

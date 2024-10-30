@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 5,917,663 Example 2 (Nikon AI Nikkor 28mm f/2.8S)
+[constants]
+[variable distances]
+Focal Length	28.610
+Angle of View	undefined
+F-Number	2.89
+Image Height	43.20
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	38.9793
+[lens data]
+1	60.5000	3.500	1.67003	41.07	47.07
+2	118.3000	0.100		41.07
+3	36.9000	1.500	1.51680	34.67	64.10
+4	15.4000	4.000		26.0	
+5	28.2000	1.500	1.51680	28.01	64.10
+6	15.1300	14.400		24.04
+7	28.6000	4.400	1.66755	15.5	41.96
+8	Infinity	1.350		15.5
+9	Infinity	4.000	1.62041	20.55	60.14
+10	-33.9700	1.000		20.55
+11	AS	4.300		13.83	
+12	-20.8000	2.550	1.75520	15.88	27.61
+13	53.1800	1.000		14.0
+14	-46.0010	3.100	1.67025	14.0	57.53
+15	-17.9000	0.100		18.14
+16	109.0970	3.500	1.67025	21.11	57.53
+17	-34.8000	Bf		21.11
+[figure]	
+source	Data/US005917663_Example02_Tale57-Fig1.png
+originX	29.54
+originY	222.44
+ppmm	9.920
+[notes]

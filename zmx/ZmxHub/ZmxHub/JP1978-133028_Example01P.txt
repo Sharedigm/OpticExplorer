@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1978-133028 Example 1 (Canon New FD100mm f2)
+[constants]
+Scaled	100	1
+[variable distances]
+Focal Length	100
+Angle of View	24
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	42.70
+[lens data]
+1	56.42	7.79	1.62299	50.06	58.2
+2	1414.79	0.12		50.06
+3	47.25	15.29	1.60311	46.21	60.7
+4	1386.14	6.49	1.72151	46.21	29.2
+5	87.29	4.30		33.03
+6	-456.03	3.80	1.67270	35.53	32.1
+7	27.38	8.17		26.68
+7AS	AS	13.81		25.627
+8	288.03	2.50	1.59270	30.75	35.3
+9	46.81	5.10	1.80610	30.75	40.9
+10	-99.01	Bf		30.75
+[figure]
+source	Data/JP1978-133028_Figure01P.png
+originX	19.55
+originY	95.49
+ppmm	3.504
+[notes]

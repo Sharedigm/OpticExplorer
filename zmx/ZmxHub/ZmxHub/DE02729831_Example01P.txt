@@ -1,0 +1,32 @@
+[descriptive data]
+title	DE 2729831 Example 1 (Rodenstock Sironar-N 100mm f/5.6)
+[variable distances]
+Focal Length	100
+Angle of View	68
+F-Number(p)	5.8
+F-Number	5.6
+Image Height	141
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	83.11
+[lens data]
+1	18.80	6.08	1.6055	23.79	60.45
+2	Infinity	1.23	1.5542	21.50	49.31
+3	14.15	1.09		16.40
+4	22.75	1.50	1.5187	15.00	63.96
+5	33.79	5.79		14.81
+5AS	AS	4.68		14.283
+5FS	FS	1.47		14.46	
+6	-44.42	1.42	1.5187	13.80	63.96
+7	-27.63	1.09		14.19
+8	-15.59	1.98	1.5542	16.84	49.31
+9	Infinity	4.85	1.6055	22.12	60.45
+10	-19.28	Bf		23.18
+[figure]
+source	Data/DE02729831_Figure01P.png
+originX	50.06
+originY	467.16
+ppmm	25.242
+[notes]
+Bill: Image Height and Angle of View from 100mm f/5.6 specification.

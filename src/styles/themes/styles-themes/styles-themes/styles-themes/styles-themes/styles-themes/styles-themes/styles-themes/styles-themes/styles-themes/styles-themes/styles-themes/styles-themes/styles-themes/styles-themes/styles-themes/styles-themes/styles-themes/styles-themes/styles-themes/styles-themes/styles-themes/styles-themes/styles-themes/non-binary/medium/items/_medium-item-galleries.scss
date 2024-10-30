@@ -1,0 +1,82 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-item-galleries.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../navs/medium-selection";
+
+//
+// colors
+//
+
+$background-color: colors.faded(medium-selection.$highlight-color, 25%);
+$border-color: medium-selection.$highlight-color;
+$selected-background-color: colors.faded(medium-selection.$select-color, 25%);
+$selected-border-color: medium-selection.$select-color;
+$highlighted-background-color: colors.faded(medium-selection.$highlight-color, 25%);
+$highlighted-border-color: medium-selection.$highlight-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.gallery {
+
+		//
+		// highlighted items
+		//
+
+		.item.highlighted {
+			&::after {
+				background-color: $background-color;
+				border-color: $border-color;
+			}
+		}
+
+		//
+		// selected items
+		//
+
+		.item.selected {
+			&::after {
+				background-color: $selected-background-color;
+				border-color: $selected-border-color;
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.gallery {
+
+			//
+			// unfocused selected items
+			//
+
+			.item.selected {
+				&::after {
+					background-color: $highlighted-background-color;
+					border-color: $highlighted-border-color;
+				}
+			}
+		}
+	}
+}

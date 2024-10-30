@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,223,982 Example 2 (Ricoh Pentax-110 24mm F2.8)
+[constants]
+Scaled	24	100
+[variable distances]
+Focal Length	24
+Angle of View	48
+F-Number	2.8
+Image Height	21.4
+Magnification	0
+d0	Infinity
+Bf	23.0282
+BfAS	21.9382
+[lens data]
+1	18.367	0.982	1.72825	12.45	28.5
+2	10.574	0.598		10.01
+3	11.813	2.321	1.80610	11.22	40.9
+4	-41.652	1.488		11.22
+5	-11.755	0.823	1.58913	8.86	61.1
+6	19.750	1.243		8.86	
+7	-15.478	0.804	1.76182	8.90	26.6
+8	20.198	2.410	1.77250	10.67	49.6
+9	-12.118	0.098		10.67
+10	-42.086	1.382	1.80610	10.49	40.9
+11	-15.247	1.09		10.49
+11AS	AS	BfAS		7.935
+[figure]
+source	Data/US004223982_Figure03P.png
+originX	11.54
+originY	56.52
+ppmm	6.947
+[notes]

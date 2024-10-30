@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 2003/0218799 Example 2 (Ricoh smc Pentax-FA J 28-80mm F3.5-5.6 AL)
+[constants]
+[variable distances]
+Focal Length	29.00	40.65	77.00
+Angle of View	76.4	56.8	31.4
+F-Number	3.3	4.0	5.9
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	31.97	17.83	1.20
+d16	0.50	3.20	11.70
+Bf	43.47	50.86	73.87
+Aperture Diameter(m)	16.944	16.595	16.977
+[lens data]
+1	50.964	1.20	1.72342	39.51	38.0
+2	19.092	5.48		32.32
+3	39.411	1.00	1.60311	33.47	60.7
+4	20.339	4.15		30.56
+5	32.831	4.11	1.78472	30.34	25.7
+6	100.706	0.20		30.34
+7	91.600	1.80	1.52538	33.05	56.3
+8	52.697	d8		33.05
+9	30.488	2.98	1.62299	19.06	58.2
+10	-1378.414	0.10		19.06
+11	19.895	3.33	1.56883	18.44	56.3
+12	76.761	1.50		18.44
+12.5	AS	1.32		16.944
+13	-153.487	5.58	1.71736	18.53	29.5
+14	15.603	1.15		14.70
+15	29.769	5.00	1.51742	16.49	52.4
+16	-36.095	d16		16.49
+16.5	FS	Bf		16.46	
+[aspherical data]
+8	52.697	0	-1.6147E-05	-2.6675E-08	1.3573E-11	-3.2468E-13	1.8136E-16
+[figure]
+source	Data/US20030218799_Figure05P.png
+originX	52.13
+originY	193.42
+ppmm	5.613
+[notes]
+Bill: Production Figure is at intermediate focal length.

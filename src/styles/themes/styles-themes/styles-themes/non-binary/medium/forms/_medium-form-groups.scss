@@ -1,0 +1,66 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-form-groups.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$label-color: medium-branding.$secondary-color;
+$border-color: colors.faded(colors.$light-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.form-group {
+
+		//
+		// form labels
+		//
+		
+		.form-label, .control-label {
+			color: $label-color;
+		}
+	}
+
+	.selected form {
+		.form-group {
+
+			//
+			// form labels
+			//
+			
+			.form-label, .control-label {
+				color: white;
+			}
+		}
+	}
+
+	//
+	// form panel form groups
+	//
+
+	form.panel {
+		.form-group {
+			border-color: $border-color;
+		}
+	}
+}

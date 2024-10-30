@@ -1,0 +1,225 @@
+/******************************************************************************\
+|                                                                              |
+|                                  _beams.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$color: white;
+$light-fill-color: colors.$light-grey;
+$light-stroke-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.beam:not(.annotation) {
+		pointer-events: none;
+
+		//
+		// uncolored beams
+		//
+
+		&:not(.colored) {
+			fill: $color;
+			stroke: $color;
+		}
+
+		.transmitted {
+			stroke-opacity: 0.25;
+		}
+
+		.obstructed {
+			stroke-opacity: 0.25;
+		}
+
+		.reflected {
+			stroke-opacity: 0.75;
+			stroke-dasharray: 2 2;
+		}
+
+		.untransmitted {
+			stroke-opacity: 0.5;
+		}
+
+		//
+		// filled beams
+		//
+
+		.filled {
+			mix-blend-mode: plus-lighter;
+			fill-opacity: 0.125;
+			stroke: none;
+		}
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+				fill: none;
+				stroke-width: 2;
+				vector-effect: non-scaling-stroke;
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					stroke-opacity: 0.5;
+				}
+			}
+		}
+
+		//
+		// path hover styles
+		//
+
+		.paths {
+			
+			//
+			// unobstructed paths
+			//
+
+			path:hover {
+				stroke-opacity: 0.75;
+			}
+		}
+	}
+}
+
+//
+// binary beams
+//
+
+body.binary {
+	.optics .viewport {
+		.beam:not(.annotation) {
+			.filled {
+				mix-blend-mode: normal;
+				fill: white;
+				fill-opacity: 0.5;
+			}
+			.paths {
+				path {
+					stroke: white;
+					stroke-opacity: 0.5;
+				}
+			}
+		}
+	}
+}
+
+//
+// colored beams
+//
+
+body.colored {
+
+	.optics .viewport {
+		.beam:not(.annotation) {
+			.reflected {
+				.paths path {
+					stroke: red !important;
+				}
+			}
+		}
+	}
+
+	//
+	// light viewports
+	//
+
+	.optics .viewport.light,
+	&.light .optics .viewport.auto {	
+		.beam:not(.annotation) {
+
+			//
+			// filled beams
+			//
+
+			.filled {
+				mix-blend-mode: multiply;
+				fill-opacity: 0.25;
+			}
+
+			//
+			// light uncolored beams
+			//
+
+			&:not(.colored) {
+
+				.filled {
+					fill: $light-fill-color;
+				}
+
+				.paths {
+					stroke: $light-stroke-color;
+				}
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {	
+		.beam:not(.annotation) {
+			mix-blend-mode: screen;
+
+			//
+			// filled beams
+			//
+
+			.filled {
+				mix-blend-mode: plus-lighter;
+				fill-opacity: 0.5;
+			}
+
+			//
+			// dark uncolored beams
+			//
+
+			&:not(.colored) {
+
+				.filled {
+					fill: white;
+				}
+
+				.paths {
+					stroke: white;
+				}
+			}
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+[browser="firefox"] {
+
+	.optics .viewport {
+		.beam:not(.annotation) .filled {
+			mix-blend-mode: plus-lighter;
+			fill-opacity: 0.5;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,444,473 Example 5 (Konica Minolta 50mm F2.0 MD)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	46
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	36.005
+[lens data]
+1	36.865	4.015	1.7200	30.33	50.3
+2	280.410	0.160		30.33
+3	19.660	4.295	1.7200	23.42	50.3
+4	33.335	0.950		21.32	
+5	54.965	1.530	1.6830	24.74	32.1
+6	14.240	5.685		18.54	
+6AS	AS	5.67		17.538
+7	-15.985	2.180	1.6545	17.03	33.9
+8	163.265	4.400	1.7200	20.28	52.1
+9	-21.350	0.160		20.28	
+10	Infinity	2.855	1.7440	20.90	44.9
+11	-38.300	Bf		20.90	
+[figure]
+source	Data/US004444473_Figure09P.png
+originX	50.46
+originY	124.47
+ppmm	3.670
+[notes]

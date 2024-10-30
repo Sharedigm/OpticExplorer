@@ -1,0 +1,100 @@
+/******************************************************************************\
+|                                                                              |
+|                                _dark-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-btns";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$color: colors.$medium-grey;
+$label-color: white;
+$primary-color: dark-branding.$primary-color;
+$primary-label-color: white;
+$disabled-color: colors.$medium-grey;
+$disabled-label-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	//
+	// dark buttons
+	//
+
+	button:not(:disabled) {
+
+		//
+		// glow effects
+		//
+
+		&:hover, &:active {
+			i {
+				@include colors.glow();
+			}
+			
+			svg {
+				overflow: visible;
+
+				path, polygon {
+					@include colors.glow();
+				}
+			}
+		}
+	}
+
+	//
+	// dark styled buttons
+	//
+
+	.btn {
+		@include colored-btns.dark-colored($color);
+		@include colored-btns.labeled($label-color);
+
+		//
+		// dark primary buttons
+		//
+
+		&.btn-primary {
+			@include colored-btns.dark-colored($primary-color);
+			@include colored-btns.labeled($primary-label-color);
+		}
+
+		//
+		// dark disabled buttons
+		//
+
+		&:disabled, &.btn-primary:disabled {
+			@include colored-btns.dark-colored($disabled-color);
+			@include colored-btns.labeled($disabled-label-color);
+		}
+	}
+
+	//
+	// dark expander buttons
+	//
+
+	.expander .btn {	
+		i {
+			color: white !important;
+		}
+	}
+}

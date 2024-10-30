@@ -1,0 +1,131 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-dock-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+@use "../../../../navs/dock-bars";
+@use "../../../../layout/images";
+
+//
+// colors
+//
+
+$background-color: colors.$very-very-light-grey;
+$border-color: colors.faded(lighten($background-color, 10%), 25%);
+$divider-color: colors.faded(colors.$medium-grey, 50%);
+$item-indicator-color: black;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// dock bars
+	//
+
+	#dock-bar {
+		.shelf {
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		.dock {
+
+			// app icons
+			//
+			.apps {
+				.item {
+					.icon {
+						> i {
+							display: none;
+						}
+					}
+				}
+			}
+
+			// app and task icons
+			//
+			.apps, .tasks {
+				.item {
+					.icon {
+						> i {
+							color: white;
+						}
+					}
+
+					.indicator {
+						background-color: $item-indicator-color;
+					}
+				}
+			}
+
+			.apps {
+				.item .icon {
+					box-shadow: dock-bars.$item-shadow;
+
+					> img {
+						filter: images.$thumbnail-shadow;
+					}
+				}
+			}
+
+			.tasks {
+				.item .icon {
+					filter: dock-bars.$item-shadow;
+
+					i {
+						color: white;
+						filter: dock-bars.$item-shadow;
+					}
+				}
+			}
+
+			// dividers
+			//
+			.tasks .icons:not(:empty) {
+				border-left-color: $divider-color;
+			}
+		}
+	}
+
+	//
+	// transparent dock bars
+	//
+
+	&.transparent {
+		#dock-bar {
+			.shelf {
+				@include plate-glass.shaded($background-color, 50%, 50%);
+			}
+		}
+	}
+
+	//
+	// translucent dock bars
+	//
+
+	&.translucent {
+		#dock-bar {
+			.shelf {
+				@include frosted-plate-glass.shaded($background-color, 50%, 50%);
+			}
+		}
+	}
+}

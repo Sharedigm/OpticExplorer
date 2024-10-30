@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-annotations.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body.binary {
+
+	.annotation {
+		fill: black;
+	}
+
+	//
+	// line annotations
+	//
+
+	.line, .arc, .arrow {
+		stroke: black;
+	}
+
+	//
+	// dark viewports
+	//
+
+	.viewport.dark,
+	&.dark .viewport.auto {
+		.annotation {
+			fill: white;
+		}
+	}
+}

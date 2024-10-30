@@ -1,0 +1,43 @@
+[descriptive data]
+title	US 4,126,378 Example 3 (Konica Minolta 600mm F6.3 MD Apo-Tele)
+[constants]
+Scaled	600	100
+[variable distances]
+Focal Length	600	undefined
+Angle of View	4.217	undefined
+F-Number	6.3	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.05095
+S(p)	Infinity	2000
+S	Infinity	12000
+d0	Infinity	11592.95
+d8	176.484	167.364
+d8AS	144.084	134.964
+d10	10.650	5.178
+d12	2.214	16.806
+Bf(p)	undefined	undefined
+Bf	155.28	155.28
+[lens data]
+1	172.794	5.13	1.5168	95.55	64.0
+2	151.236	2.562		95.55
+3	135.678	15.792	1.4339	94.59	95.0
+4	-221.946	8.286		94.59
+5	-206.484	4.104	1.7570	90.13	47.7
+6	750.450	10.656		90.13
+7	148.428	9.228	1.5038	88.60	66.8
+8	Infinity	d8AS		88.60
+8AS	AS	32.40		37.931
+9	-54.006	1.536	1.6890	35.40	49.4
+10	-202.284	d10		35.40	
+11	220.980	3.282	1.5168	32.88	64.0
+12	-64.854	d12		32.88
+13	-113.868	1.536	1.6583	25.78	57.3
+14	39.534	3.69	1.5955	25.78	39.4
+15	Infinity	Bf		25.78
+[figure]
+source	Data/US004126378_Figure07P.png
+originX	24.81
+originY	195.29
+ppmm	3.898
+[notes]
+Bill: Measured d0 and Magnification

@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,134,645 Example 1 (Ricoh smc Pentax-M 120mm F2.8)
+[constants]
+Scaled	120	100
+[variable distances]
+Focal Length	120
+Angle of View	20.4
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	42.624
+Bf	42.25
+[lens data]
+1	46.776	5.832	1.51821	44.78	65.0
+2	174.576	3.828		44.34	
+3	-135.264	2.016	1.80518	44.90	25.4
+4	251.676	0.096		44.90	
+5	37.128	6.972	1.55963	43.36	61.2
+6	160.968	20.608		41.79
+6AS	AS	14.00		29.506
+7	36.732	3.456	1.80518	24.01	25.4
+8	64.716	5.832		21.62	
+9	-24.648	1.512	1.80610	22.06	40.9
+10	-67.236	Bf		22.72	
+[figure]
+source	Data/US004134645_Figure01P.png
+originX	12.91
+originY	106.75
+ppmm	4.273
+[notes]

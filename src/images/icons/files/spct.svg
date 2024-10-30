@@ -1,0 +1,31 @@
+<svg 
+	id="spct-file-icon" 
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 56 56">
+
+	<style>
+		.file-body {
+			fill: #E9E9E0;
+		}
+		.file-corner {
+			fill: lightgrey;
+		}
+		.file-type text {
+			font-size: 14px;
+			font-family: Lucida Grande, sans-serif;
+			fill: white;
+		}
+	</style>
+	
+	<path class="file-body" d="M 36.985, 0 H 7.963 C 7.155, 0, 6.5, 0.655, 6.5, 1.926 V 55 c 0, 0.345, 0.655, 1, 1.463, 1 h 40.074 c 0.808, 0, 1.463 -0.655, 1.463 -1 V 12.978 c 0 -0.696 -0.093 -0.92 -0.257 -1.085 L 37.607, 0.257 C 37.442, 0.093, 37.218, 0, 36.985, 0 z" />	
+	<g class="file-icon" transform="translate(10, 6) scale(0.7)" style="fill:#F29C1F">
+		<path d="M6.245, 37c0.038 -10, 8.618 -19.129, 19.2 -19.129c10.581, 0, 19.161, 9.129, 19.2, 19.129h4.801 c -0.039 -13 -10.77 -23.93 -24 -23.93C12.213, 13.07, 1.483, 24, 1.445, 37H6.245z"></path>
+		<path d="M13.674, 37c0.032 -6, 5.29 -11.712, 11.771 -11.712c6.481, 0, 11.737, 5.712, 11.77, 11.712h3.924 c -0.033 -8 -7.045 -15.636 -15.694 -15.636C16.794, 21.364, 9.782, 29, 9.751, 37H13.674z"></path>
+	</g>
+	<g class="file-type">
+		<path d="M 48.037, 56 H 7.963 C 7.155, 56, 6.5, 55.345, 6.5, 54.537 V 39 h 43 v 15.537 C 49.5, 55.345, 48.845, 56, 48.037, 56 z" style="fill:#F29C1F;" />
+		<text x="28" y="52.5" text-anchor="middle">SPCT</text>
+	</g>
+	<polygon class="file-corner" points="37.5, 0.151 37.5, 12 49.349, 12" stroke-linejoin="round" />
+</svg>

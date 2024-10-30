@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,731,989 Example 1 (Nikon Nikkor 35mm f/2.8)
+[constants]
+Scaled	36	100
+[variable distances]
+Focal Length	36
+Angle of View	62
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	38.644
+Aperture Diameter	14.247
+[lens data]
+1	58.00	1.51	1.51680	28.84	64.2
+2	15.08	10.01		23.39	
+3	24.52	13.00	1.71300	22.01	53.9
+4	-47.99	2.88		22.01	
+4AS	AS	3.42		14.247
+5	-20.99	1.58	1.74077	15.63	27.5
+6	51.70	1.40		14.07
+7	-27.61	2.59	1.77279	14.07	49.5
+8	-16.70	0.11		15.63	
+9	110.02	2.41	1.71300	19.94	53.9
+10	-39.582	Bf		19.94	
+[figure]
+source	Data/US003731989_Figure01P.png
+originX	99
+originY	577
+ppmm	5.629
+[notes]
+Bill: Not really a good fit for the production lens.

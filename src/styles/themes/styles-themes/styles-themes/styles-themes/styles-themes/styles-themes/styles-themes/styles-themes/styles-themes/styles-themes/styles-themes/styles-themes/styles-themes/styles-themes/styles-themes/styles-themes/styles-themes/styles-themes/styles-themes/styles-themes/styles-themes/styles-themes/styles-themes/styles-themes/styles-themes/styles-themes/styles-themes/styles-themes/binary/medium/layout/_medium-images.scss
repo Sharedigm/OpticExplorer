@@ -1,0 +1,55 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-images.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../layout/images";
+
+//
+// styles
+//
+
+body.binary {
+
+	// use shadows to lift full color thumbnail photos 
+	// out of the black and white background.
+	//
+	.thumbnail.photo {
+		image-rendering: auto;
+		
+		// shadows
+		//
+		-webkit-filter: images.$thumbnail-shadow;
+		filter: images.$thumbnail-shadow;
+		overflow: visible;
+	}
+
+	.profile.photo .thumbnail.missing i {
+		color: white;
+	}
+
+	//
+	// Safari compatibility
+	//
+
+	&[device="desktop"][browser="safari"] {
+		.fancybox-image {
+
+			// disable hardware acceleration to allow pixelated rendering
+			//
+			-webkit-transform: none !important;
+		}
+	}
+}

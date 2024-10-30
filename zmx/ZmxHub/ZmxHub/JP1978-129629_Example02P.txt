@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1978-129629 Example 2 (Yashica ML 300mm F5.6)
+[constants]
+Scaled	300	1
+[variable distances]
+Focal Length	300
+Angle of View	8.5
+F-Number	5.6
+Total Length	191.4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	75.15
+Bf	74.76
+[lens data]
+1	110.412	7.74	1.48749	56.54	70.4
+2	-156.186	2.82	1.75690	56.54	31.8
+3	1110.150	0.30		56.54
+4	69.741	7.35	1.48749	55.01	70.4
+5	293.010	64.51		55.01
+5AS	AS	27.23		24.914
+6	-48.453	1.23	1.81600	17.48	46.8
+7	51.444	3.81	1.59340	17.48	34.8
+8	-25.053	1.35	1.78800	18.44	47.5
+9	-58.170	Bf		18.44
+[figure]
+source	Data/JP1978-129629_Figure01P.png
+originX	33.74
+originY	240.18
+ppmm	7.871
+[notes]

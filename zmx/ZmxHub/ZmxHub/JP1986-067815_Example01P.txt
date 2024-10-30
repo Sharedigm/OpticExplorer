@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 1986-067815 Example 1 (Kino Precision Kiron 105mm F2.8 MC Macro)
+[constants]
+[variable distances]
+Focal Length	103.98	undefined
+Angle of View	23.37	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Magnification	0	-1
+d0	Infinity	139.89
+d8	17.062	70.37
+d8AS	2.82	66.73
+Bf(p)	undefined	undefined
+Bf	38.84	41.26
+[lens data]
+1	74.300	9.04	1.77250	46.33	49.20
+2	-1126.685	22.68		45.30
+3	-42.296	9.85	1.80518	31.06	25.50
+4	112.115	3.50		29.75
+5	-45.507	3.50	1.78590	29.75	43.90
+6	-33.907	3.00		31.06
+7	83.790	7.60	1.77250	31.44	49.20
+8	-83.790	3.64		31.44
+8AS	AS	d8AS		27.358
+9	-74.300	11.30	1.69835	28.73	30.10
+10	-50.481	15.53		28.73
+11	-38.488	9.00	1.69700	28.69	48.50
+12	-100.800	Bf		30.55
+[figure]
+source	Data/JP1986-067815_Figure01P.png
+originX	52.36
+originY	242.02
+ppmm	9.442
+[notes]
+Bill: Infinity d8 was not provided. Does not line up with pateent Figure which may be at an intermediate Magnification.

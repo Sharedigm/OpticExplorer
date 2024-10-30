@@ -1,0 +1,29 @@
+[descriptive data]
+title	JP 1976-062037 Example 1 (Konica Minolta 135mm F2.8 MD Tele Rokkor)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18.2
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	56.29
+[lens data]
+1	58.590	10.132	1.65830	49.32	58.5
+2	308.840	1.575		49.32	
+3	43.587	7.171	1.65830	46.58	58.5
+4	107.062	3.173		46.58	
+5	217.620	12.353	1.71736	42.26	29.4
+6	28.023	15.468		30.78	
+6AS	AS	17.00		26.181
+7	122.055	7.860	1.73300	24.04	28.2
+8	1351.215	Bf		24.04	
+[figure]
+source	Data/JP1976-062037_Figure01P.png
+originX	43.38
+originY	430.79
+ppmm	14.928
+[notes]

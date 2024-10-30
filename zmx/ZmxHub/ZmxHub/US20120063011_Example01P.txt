@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 2012/0063011 Example 1 (Hasselblad HC 3.5 50-II)
+[constants]
+[variable distances]
+Focal Length	50.688
+Angle of View	63
+F-Number	3.6
+Image Height	61.4
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	61.835
+P	39.39
+[lens data]
+1	44.666	9.20	1.83481	52.62	42.7
+2	26.888	6.47		38.70	
+3	85.626	6.50	1.84666	38.28	23.9
+4	26.887	8.32		31.18	
+5	97.855	9.89	1.88300	30.92	40.8
+6	-45.984	10.02	1.48749	29.68	70.2
+7	33.114	9.55	1.83481	23.26	42.7
+8	73.760	1.85		20.38
+9	-47.229	4.89	1.62041	20.38	60.3
+10	-28.844	6.75		20.38
+11	AS	7.64		19.951
+12	33.067	3.04	1.84666	20.02	23.9
+13	47.032	7.21		20.02	
+14	-175.660	1.30	1.80000	24.90	29.8
+15	29.231	12.75	1.49700	24.90	81.5
+16	-19.077	1.63	1.70154	27.82	41.2
+17	-43.882	0.20		32.36	
+18	-144.900	4.35	1.83481	35.76	42.7
+19	-46.430	Bf		35.76	
+[figure]
+source	Data/US20120063011_Figure01P.png
+originX	21.68
+originY	285.58
+ppmm	7.565
+[notes]
+Bill: Image Height for 49x37mm is 61.4mm. Angle of View from Hasselblad specifications.
+P is from Hasselblad specifications of 134mm in front of the Image plane.

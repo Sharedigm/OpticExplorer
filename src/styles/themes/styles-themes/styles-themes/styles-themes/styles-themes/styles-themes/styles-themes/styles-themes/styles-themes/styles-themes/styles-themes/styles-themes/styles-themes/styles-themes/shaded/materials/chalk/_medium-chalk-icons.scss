@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-chalk-icons.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/chalk/round-chalk";
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.chalk-icons,
+	&.chalk.auto-icons {
+		&.icon-backgrounds {
+
+			//
+			// chalk icon materials
+			//
+
+			.colored.icon,
+			.icon .colored {
+				@include round-chalk.shaded(colors.$light-grey);
+			}
+
+			//
+			// selected chalk icon materials
+			//
+
+			.selected .colored.icon,
+			.selected .icon .colored {
+				@include round-chalk.shaded(colors.$medium-grey);
+			}
+		}
+	}
+}

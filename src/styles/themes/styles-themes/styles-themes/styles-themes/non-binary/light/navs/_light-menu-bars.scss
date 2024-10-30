@@ -1,0 +1,93 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-menu-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "light-menus";
+
+//
+// colors
+//
+
+$icon-color: light-menus.$icon-color;
+$text-color: light-menus.$text-color;
+$disabled-icon-color: light-menus.$disabled-icon-color;
+$disabled-text-color: light-menus.$disabled-text-color;
+$transparent-menu-bar-item-color: colors.faded(colors.$medium-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.menu-bar {
+	
+		> ul.nav-menus {
+
+			> li {
+				> a {
+					color: $text-color;
+					background: none;
+
+					> i {
+						color: $icon-color;
+					}
+				}
+			}
+
+			//
+			// disabled menu bar items
+			//
+
+			> li.disabled {
+				a {
+					color: $disabled-text-color;
+					background: none;
+
+					> i {
+						color: $disabled-icon-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light transparent desktop menu bar items
+	//
+
+	&.transparent, &.translucent {
+		&.menu-margins {
+			&.light #desktop,
+			#desktop.light {
+				.header-bar {
+					.menu-bar {
+						> ul.nav-menus {
+
+							> li.open {
+								> a, > a:focus, > a:hover, > a:active {
+									color: $text-color;
+									background: $transparent-menu-bar-item-color;
+									border-color: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

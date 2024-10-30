@@ -1,0 +1,32 @@
+[descriptive data]
+title	JP 1986-090115 Example 4 (Nikon UV-Micro-Nikkor 105mm f/4.5)
+[constants]
+[variable distances]
+Focal Length	100
+Angle of View	23.4
+F-Number	4.5
+Image Height	41.143
+Magnification	0
+d0	Infinity
+Bf	82.765
+[lens data]
+1	-32.904	1.331	1.45851	26.40	67.93	SiO2
+2	50.597	3.613		26.40		
+3	121.007	7.415	1.43388	29.64	95.57	CaF2
+4	-35.246	0.190		29.64		
+5	31.157	7.605	1.43388	30.18	95.57	CaF2
+6	-70.598	13.000		30.18		
+6AS	AS	2.924		19.602
+7	-31.157	1.426	1.45851	20.94	67.93	SiO2
+8	43.241	5.989		20.94		
+9	179.247	8.936	1.43388	23.14	95.57	CaF2
+10	-18.630	0.111		23.14		
+11	-18.224	1.901	1.45851	23.88	67.93	SiO2
+12	-33.891	Bf		23.88		
+[figure]
+source	Data/JP1986-090115_Figure04P.png
+originX	104
+originY	351
+ppmm	10.046
+[notes]
+Bill: 105mm surface 10 does not match the figure.

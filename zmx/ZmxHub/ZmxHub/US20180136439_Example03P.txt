@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2018/0136439 Example 3 (Olympus MC-20 M.Zuiko Digital 2x Teleconverter)
+[variable distances]
+Focal Length	undefined
+F-Number	undefined
+Image Height	21.64
+Beta	2.00
+Beta(m)	2.00
+Magnification	0
+d0	Infinity
+Bf	0
+Focal Length(w/ML)	293.86
+Angle of View(w/ML)	4.26
+F-Number(w/ML)	5.76
+Total Length(w/ML)	208.43
+[lens data]
+0	FS	1.2632		10.971
+1	87.2894	1.00	1.83481	19.94	42.73
+2	17.1399	6.41	1.59270	19.94	35.31
+3	-35.4760	0.76		19.94	
+4	-73.2984	3.18	1.59270	19.10	35.31
+5	-33.9580	1.00	1.59282	19.10	68.63
+6	204.4691	1.95		19.10	
+7	-46.5721	1.00	1.88300	19.06	40.76
+8	21.4391	6.68	1.59270	19.06	35.31
+9	-18.6368	1.00	1.88300	19.06	40.76
+10	-1885.0868	0.20		19.06	
+11	23.4145	6.27	1.59270	21.02	35.31
+12	-23.4145	1.30	1.92119	21.02	23.96
+13	-158.1720	22.5769		21.02	
+14	CG	4.00	1.51633	28.76	64.14
+15	CG	0.80		28.76	
+[figure]
+source	Data/US20180136439_Figure03P.png
+originX	30.23
+originY	195.92
+ppmm	5.933
+[notes]

@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-clock.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$hourhand-color: var(--primary-color);
+$minutehand-color: colors.$light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.clock.app {
+		.analog.display {
+			svg {
+				#hands {
+					#hourhand {
+						stroke: $hourhand-color;
+					}
+
+					#minutehand {
+						stroke: $minutehand-color;
+					}
+
+					#secondhand {
+						stroke: white;
+					}
+				}
+
+				#center {
+					fill: white;
+				}
+
+				line {
+					stroke: white;
+				}
+			}
+		}
+	}
+}

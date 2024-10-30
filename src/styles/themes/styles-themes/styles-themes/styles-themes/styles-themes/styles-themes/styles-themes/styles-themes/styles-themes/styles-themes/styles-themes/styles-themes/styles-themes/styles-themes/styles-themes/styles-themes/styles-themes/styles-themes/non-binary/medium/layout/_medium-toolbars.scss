@@ -1,0 +1,135 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-toolbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../apps/common/medium-apps";
+
+//
+// variables
+//
+
+$grip-horizontal-image: url('../../../../images/splitters/horizontal-grip.png');
+$grip-vertical-image: url('../../../../images/splitters/vertical-grip.png');
+$grip-opacity: 0.25;
+
+//
+// colors
+//
+
+$color: colors.$medium-grey;
+$background-color: medium-apps.$background-color;
+$border-color: medium-apps.$border-color;
+$input-color: text-colors.$dark-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.toolbar {
+		background-color: $background-color;
+		border-color: $border-color !important;
+
+		//
+		// toolbar handles
+		//
+
+		.handle {
+			border-color: transparent;
+			background-color: $background-color;
+			image-rendering: pixelated;
+			opacity: $grip-opacity;
+		}
+
+		//
+		// toolbar controls
+		//
+
+		.controls, .tools {
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		.controls, .tools, .button {
+			i {
+				color: $color;
+			}
+
+			svg {
+				fill: $color;
+			}
+		}
+
+		.btn.btn-primary {
+			color: white !important;
+
+			i {
+				color: white !important;
+			}
+		}
+
+		//
+		// toolbar tiles
+		//
+
+		.tile {
+			border-color: $border-color;
+		}
+
+		//
+		// toolbar tool groups
+		//
+
+		.tool-group {
+			.tools {
+				background-color: $background-color;
+				border-color: $border-color;
+
+				> div {
+					&:first-child {
+						border-color: $border-color;
+					}
+				}
+			}
+		}
+
+		//
+		// toolbar inputs
+		//
+
+		input {
+			color: $input-color;
+		}
+
+		//
+		// handles
+		//
+
+		&.horizontal {
+			.handle {
+				background-image: $grip-horizontal-image;
+			}
+		}
+
+		&.vertical {
+			.handle {
+				background-image: $grip-vertical-image;
+			}
+		}
+	}
+}

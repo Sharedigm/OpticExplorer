@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-glass-colored.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/glass/glass";
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$selected-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome.glass {
+
+		//
+		// glass colored materials
+		//
+
+		.colored:not(.btn) {
+
+			&.red {
+				@include glass.shade($color);
+			}
+
+			&.raspberry {
+				@include glass.shade($color);
+			}
+
+			&.red-orange {
+				@include glass.shade($color);
+			}
+
+			&.orange {
+				@include glass.shade($color);
+			}
+
+			&.yellow {
+				@include glass.shade($color);
+			}
+
+			&.lime {
+				@include glass.shade($color);
+			}
+
+			&.green {
+				@include glass.shade($color);
+			}
+
+			&.teal {
+				@include glass.shade($color);
+			}
+
+			&.aqua {
+				@include glass.shade($color);
+			}
+
+			&.cyan {
+				@include glass.shade($color);
+			}
+
+			&.blue {
+				@include glass.shade($color);
+			}
+
+			&.indigo {
+				@include glass.shade($color);
+			}
+
+			&.violet {
+				@include glass.shade($color);
+			}
+
+			&.plum {
+				@include glass.shade($color);
+			}
+
+			&.purple {
+				@include glass.shade($color);
+			}
+
+			&.magenta {
+				@include glass.shade($color);
+			}
+
+			&.brown {
+				@include glass.shade($color);
+			}
+
+			&.grey {
+				@include glass.shade($color);
+			}
+
+			&.black {
+				@include glass.shade(black);
+			}
+
+			&.white {
+				@include glass.shade(white);
+			}
+
+			&.copper {
+				@include glass.shade($color);
+			}
+
+			&.silver {
+				@include glass.shade($color);
+			}
+
+			&.gold {
+				@include glass.shade($color);
+			}
+		}
+
+		//
+		// glass selected colored materials
+		//
+
+		.selected .colored:not(.btn) {
+
+			.red {
+				@include glass.shade($selected-color);
+			}
+
+			.raspberry {
+				@include glass.shade($selected-color);
+			}
+
+			.red-orange {
+				@include glass.shade($selected-color);
+			}
+
+			.orange {
+				@include glass.shade($selected-color);
+			}
+
+			.yellow {
+				@include glass.shade($selected-color);
+			}
+
+			.lime {
+				@include glass.shade($selected-color);
+			}
+
+			.green {
+				@include glass.shade($selected-color);
+			}
+
+			.teal {
+				@include glass.shade($selected-color);
+			}
+
+			.aqua {
+				@include glass.shade($selected-color);
+			}
+
+			.cyan {
+				@include glass.shade($selected-color);
+			}
+
+			.blue {
+				@include glass.shade($selected-color);
+			}
+
+			.indigo {
+				@include glass.shade($selected-color);
+			}
+
+			.violet {
+				@include glass.shade($selected-color);
+			}
+
+			.plum {
+				@include glass.shade($selected-color);
+			}
+
+			.purple {
+				@include glass.shade($selected-color);
+			}
+
+			.magenta {
+				@include glass.shade($selected-color);
+			}
+
+			.brown {
+				@include glass.shade($selected-color);
+			}
+
+			.grey {
+				@include glass.shade($selected-color);
+			}
+
+			.black {
+				@include glass.shade(black);
+			}
+
+			.white {
+				@include glass.shade(white);
+			}
+
+			.copper {
+				@include glass.shade($selected-color);
+			}
+
+			.silver {
+				@include glass.shade($selected-color);
+			}
+
+			.gold {
+				@include glass.shade($selected-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+/******************************************************************************\
+|                                                                              |
+|                           _light-map-markers.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../navs/light-selection";
+
+//
+// styles
+//
+
+body:not(.binary):not(.colored) {
+	&.light {
+		.items-map {
+		
+			//
+			// all map overlays
+			//
+
+			.map ~ .layer {
+				.item-list {
+					.item {
+						&.selected {
+							.icon {
+								i.fa-map-pin,
+								i.fa-map-marker, 
+								i.fa-circle {
+									color: light-selection.$select-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// unfocused items
+		//
+
+		.modal:not(.focused) .modal-dialog,
+		.desktop.app:not(.focused) > .body {
+			.items-map {
+
+				//
+				// map overlays
+				//
+
+				.map ~ .layer {
+					.item-list {
+
+						//
+						// selected markers
+						//	
+							
+						.item.selected {
+							.icon {
+								i.fa-map-pin,
+								i.fa-map-marker, 
+								i.fa-circle {
+									color: light-selection.$highlight-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

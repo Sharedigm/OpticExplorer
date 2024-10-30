@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 4,289,385 Example 1 (Ricoh Pentax-110 50mm F2.8)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	24
+F-Number	2.8
+Image Height	20.40
+Total Length	26.785
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	20.01
+[lens data]
+1	22.868	5.427	1.60311	29.58	60.7
+2	105.450	0.645		27.57	
+3	16.693	7.936	1.51633	23.14	64.1
+4	38.513	1.578		16.70	
+5	1696.328	2.796	1.80518	15.22	25.4
+6	11.459	4.950		12.13	
+7	-16.696	1.677	1.74077	9.72	27.8
+8	-14.948	1.161		10.26	
+9	21.775	1.617	1.66446	9.99	35.8
+10	119.041	3.389		10.12	
+10AS	AS	Bf		7.408	
+[figure]
+source	Data/US004289385_Figure01P.png
+originX	6.53
+originY	70.46
+ppmm	4.112
+[notes]
+Bill: No Bf (Can't reconcile K=1.049) or AS in the patent. Does not agree perfectly with the figure.

@@ -1,0 +1,44 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-wells.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: text-colors.$dark-color;
+$icon-color: colors.$light-grey;
+$background-color: colors.$ultra-light-grey;
+$border-color: darken($background-color, 5%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.well {
+		color: $color;
+		background-color: $background-color;
+		border-color: $border-color;
+
+		i {
+			color: $icon-color;
+		}
+	}
+}

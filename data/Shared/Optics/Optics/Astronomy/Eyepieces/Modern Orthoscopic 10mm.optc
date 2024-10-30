@@ -1,0 +1,136 @@
+################################################################################
+#                                                                              #
+#                         Modern-Orthoscopic-10mm.optc                         #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Myriam Philippe DERELLE                                    #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: stop
+    aperture: 8 mm
+    diameter: 24.5 mm
+    spacing: 0.7 mm
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 10 mm
+        coating: multi
+      - type: spherical
+        curvature: -11.92 mm
+        diameter: 10 mm
+        coating: multi
+    thickness: 3 mm
+    spacing: 0.26 mm
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 11.29 mm
+        diameter: 10 mm
+        coating: multi
+      - type: spherical
+        curvature: -11.92 mm
+        diameter: 10 mm
+        coating: none
+    thickness: 4 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -11.92 mm
+        diameter: 10 mm
+        coating: none
+      - type: spherical
+        curvature: 11.92 mm
+        diameter: 10 mm
+        coating: none
+    thickness: 1 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.71736
+      v: 29.51
+      catalog: Schott
+      name: SF1
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 11.92 mm
+        diameter: 10 mm
+        coating: none
+      - type: spherical
+        curvature: -60.94 mm
+        diameter: 10 mm
+        coating: multi
+    thickness: 3 mm
+    spacing: 4.88 mm
+    beveled: true
+    material:
+      n: 1.62041
+      v: 60.32
+      catalog: Schott
+      name: N-SK16
+
+  - type: stop
+    aperture: 8 mm
+    diameter: 24.5 mm
+    spacing: 2 mm
+
+LIGHTS:
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    offset: 0
+    angle: 21.5 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    offset: 0
+    angle: -18.4 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    offset: 0
+    angle: 12.5 deg
+    spectrum: Visible (x2, FC)
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.25 mm
+    offset: 0
+    angle: 0
+    spectrum: Visible (x3, FdC)
+    number_of_rays: 10
+
+OBJECTS: []

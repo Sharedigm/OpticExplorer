@@ -18,7 +18,7 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_DATABASE: sharedigm
+      MYSQL_DATABASE: opticexplorer
       MYSQL_USER: webuser
       MYSQL_PASSWORD: password
       MYSQL_ALLOW_EMPTY_PASSWORD: 1

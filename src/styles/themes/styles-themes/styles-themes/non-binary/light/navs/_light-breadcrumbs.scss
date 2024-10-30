@@ -1,0 +1,84 @@
+/******************************************************************************\
+|                                                                              |
+|                           _light-breadcrumbs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: text-colors.$dark-color;
+$icon-color: colors.$light-grey;
+$slash-color: colors.$very-light-grey;
+$background-color: lighten(colors.$very-very-light-grey, 5%);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	//
+	// light page breadcrumbs
+	//
+
+	.page .breadcrumb {
+		color: $color;
+		background-color: $background-color;
+		
+		//
+		// light page breadcrumb slashes
+		//
+
+		> li + li:before {
+			color: $slash-color;
+		}
+	}
+
+	//
+	// light address breadcrumbs
+	//
+
+	.address-bar .breadcrumb {
+		color: $color;
+
+		//
+		// light address breadcrumb icons
+		//
+
+		i {
+			color: $icon-color;
+		}
+
+		//
+		// light address breadcrumb links
+		//
+
+		a {
+			color: $color;
+		}
+
+		//
+		// light address breadcrumb slashes
+		//
+
+		> li + li:before {
+			color: $slash-color;
+		}
+	}
+}

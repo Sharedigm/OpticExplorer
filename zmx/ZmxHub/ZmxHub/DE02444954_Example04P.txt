@@ -1,0 +1,31 @@
+[descriptive data]
+title	DE 2444954 Example 4 (Rodenstock Grandagon-N 65mm f5.6)
+[variable distances]
+Focal Length	65
+Angle of View	104
+F-Number	4.5
+Image Height	167
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	45.06
+[lens data]
+1	65.88	4.75	1.4662	47.00	65.56
+2	16.49	8.55		29.50
+3	26.23	10.95	1.6776	29.60	31.97
+4	14.96	9.90	1.6251	17.50	52.86
+5	-14.54	0.65	1.5629	17.50	46.88
+6	118.85	1.65		15.75
+6.5	AS	0.36		15.536
+7	292.16	0.75	1.5855	15.60	59.19
+8	13.05	9.55	1.6113	16.00	58.65
+9	-10.94	8.10	1.6700	16.00	48.13
+10	-22.96	8.00		26.50
+11	-16.79	2.75	1.4891	28.30	70.22
+12	-83.54	Bf		40.75
+[figure]
+source	Data/DE02444954_Figure01P.png
+originX	48.27
+originY	480.20
+ppmm	14.860
+[notes]

@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,235,521 Example 1 (Olympus F.Zuiko 35mm f2.8 (XA))
+[constants]
+Scaled 35	100
+[variable distances]
+Focal Length	35
+Angle of View	63
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	13.60
+[lens data]
+1	9.892	2.573	1.78800	13.02	47.43
+2	20.006	1.082		12.58	
+3	-97.100	1.029	1.78472	11.86	25.71
+4	18.980	1.565		11.86
+5	15.903	1.187	1.80440	11.44	39.62
+5'	9.558	3.780	1.72000	10.92	46.03
+6	-65.094	0.596		11.36	
+6AS	AS	5.200		8.873
+7	-6.472	1.029	1.80400	10.28	46.57
+8	-11.387	1.043		13.00	
+9	-65.972	1.750	1.74950	19.48	35.27
+10	-29.635	Bf		19.48	
+[figure]
+source	Data/US004235521_Figure02P.png
+originX	137.45
+originY	630.68
+ppmm	57.744
+[notes]

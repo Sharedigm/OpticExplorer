@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 1990-248910 Example 1 (Sigma 15mm F2.8 EX DG Diagonal Fisheye)
+[constants]
+[variable distances]
+Focal Length	15.3
+Angle of View	180
+Angle of View(m)	179.43
+F-Number	2.8
+Image Height	43.28
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	38.96
+[lens data]
+1	74.95	2.47	1.69680	58.21	55.5
+2	15.56	16.88		30.34
+3	45.96	2.47	1.78590	21.15	43.9
+4	12.20	3.01		16.63
+5	21.32	3.61	1.76182	15.86	26.6
+6	-49.73	1.05		15.86	
+7	-35.01	12.41	1.80610	13.44	33.3
+8	-249.96	1.50		16.06	
+9	AS	1.55		14.421
+10	558.53	5.20	1.48749	15.46	70.4
+11	-16.12	0.10		17.38	
+12	74.59	5.04	1.48749	16.39	70.4
+13	-13.33	0.98	1.80518	16.39	25.5
+14	-28.06	Bf		17.82	
+[figure]
+source	Data/JP1990-248910_Figure01P.png
+originX	14.47
+originY	69.01
+ppmm	1.940
+[notes]

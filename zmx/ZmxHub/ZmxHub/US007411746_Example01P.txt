@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 7,411,746 Example 1 (Ricoh HD Pentax-DA 21mm F3.2 Limited)
+[constants]
+[variable distances]
+Focal Length	21.6
+Angle of View	70.0
+F-Number	3.3
+Image Height	28.4
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	36.700
+[lens data]					
+1	32.486	3.62	1.69680	23.30	55.5
+2	113.238	0.10		23.30	
+3	20.902	1.10	1.80400	17.56	46.6
+4	8.178	6.750		13.44	
+5	36.561	1.24	1.77250	10.58	49.6
+6	8.178	5.67	1.69895	10.58	30.1
+7	6403.341	2.00		10.58	
+7AS	AS	2.00		8.928
+8	-20.013	2.59	1.72916	9.46	54.7
+9	-8.600	1.00	1.74077	11.06	27.8
+10	Infinity	2.37	1.62299	11.20	58.2
+11	-19.142	0.10		11.20	
+12	-65.119	0.10	1.52972	12.46	42.7
+13	-69.548	2.68	1.77250	12.46	49.6
+14	-14.886	Bf		12.46	
+[aspherical data]
+12	-65.119	0	-4.1055E-05	-1.2824E-08
+[figure]
+source	Data/US007411746_Figure01P.png
+originX	47.04
+originY	123.98
+ppmm	3.838
+[notes]

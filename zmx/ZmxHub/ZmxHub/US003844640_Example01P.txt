@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 3,844,640 Example 1 (Olympus 35mm f2 H Zuiko Auto-W)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	39.6830
+Bf	39.58
+[lens data]
+1	27.2335	6.7935	1.7234	39.88	37.9
+2	67.8615	0.1400		39.88	
+3	35.0140	2.2365	1.5163	32.38	64.0
+4	11.1930	11.6095		20.47
+5	2845.8640	2.9155	1.8052	18.92	25.4
+6	25.1475	0.5495		18.12	
+7	24.6225	5.0435	1.8061	20.02	40.8
+8	-47.9535	0.9975	1.6990	20.02	30.1
+9	-69.8530	1.6745		20.02	
+9AS	AS	3.04		18.876
+10	-28.0140	4.3645	1.7174	21.54	29.5
+11	159.4005	1.4000		22.11
+12	-60.9000	3.8850	1.7292	22.11	54.6
+13	-19.4145	0.1015		22.11
+14	92.3020	2.9155	1.6968	21.94	55.6
+15	-56.0350	Bf		21.94
+[figure]	
+source	Data/US003844640_Figure01P.png
+originX	74.34
+originY	266.96
+ppmm	8.252
+[notes]

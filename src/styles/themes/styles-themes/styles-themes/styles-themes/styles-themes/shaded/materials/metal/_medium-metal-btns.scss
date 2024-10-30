@@ -1,0 +1,52 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-metal-buttons.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/metal/metal-buttons";
+@use "../../colors/special-colors";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.metal-buttons,
+	&.colored.metal.auto-buttons {
+
+		//
+		// styled buttons
+		//
+
+		.btn {
+
+			//
+			// special buttons
+			//
+
+			&.success {
+				@include metal-buttons.shaded(special-colors.$success-color);
+			}
+
+			&.caution {
+				@include metal-buttons.shaded(special-colors.$caution-color);
+			}
+
+			&.warning {
+				@include metal-buttons.shaded(special-colors.$warning-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,173 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../viewports/colors";
+
+//
+// colors
+//
+
+$hover-color: colors.$highlight-color;
+$select-color: colors.$select-color;
+$dark-hover-color: var(--secondary-color);
+$dark-select-color: var(--secondary-color);
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.light.marker, .focus.marker {
+
+		//
+		// uncolored markers
+		//
+
+		&:not(.colored) {
+			fill: white;
+		}
+
+		//
+		// selected markers
+		//
+
+		&.selected {
+			cursor: grab;
+
+			&:active {
+				cursor: grabbing;
+			}
+		}
+	}
+
+	//
+	// light viewports
+	//
+
+	.optics .viewport.light,
+	&.light .optics .viewport.auto {
+
+		.light.marker, .focus.marker {
+
+			//
+			// light uncolored markers
+			//
+
+			&:not(.colored):not(:hover):not(.selected) {
+				fill: black;
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+
+		.light.marker, .focus.marker {
+
+			//
+			// light uncolored markers
+			//
+
+			&:not(.colored):not(:hover):not(.selected) {
+				fill: white;
+			}
+		}
+	}
+}
+
+//
+// colored light markers
+//
+
+body.colored {
+	.optics .viewport {
+
+		.light.marker, .focus.marker {
+
+			//
+			// highlighted markers
+			//
+
+			&:hover {
+				fill: $hover-color;
+			}
+
+			//
+			// selected markers
+			//
+
+			&.selected {
+				fill: $select-color;
+			}
+		}
+
+		.focus.marker.multispectral {
+			&:not(.selected) {
+				mix-blend-mode: screen;
+			}
+		}
+	}
+
+	//
+	// light viewports
+	//
+
+	.optics .viewport.light,
+	&.light .optics .viewport.auto {
+
+		.focus.marker {
+			&:not(.selected) {
+				mix-blend-mode: multiply;
+			}
+		}
+	}
+
+	//
+	// dark viewports
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+
+		.light.marker, .focus.marker {
+			mix-blend-mode: screen;
+			filter: url(#glowing);
+
+			//
+			// dark highlighted markers
+			//
+
+			&:hover {
+				fill: $dark-hover-color;
+			}
+
+			//
+			// dark selected markers
+			//
+
+			&.selected {
+				fill: $dark-select-color;
+			}
+		}
+
+		.focus.marker {
+			&:not(.selected) {
+				mix-blend-mode: plus-lighter;
+			}
+		}
+	}
+}

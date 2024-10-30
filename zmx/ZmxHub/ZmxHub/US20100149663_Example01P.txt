@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 2010/0149663 Example 1 (Samsung 30mm F2)
+[constants]
+[variable distances]
+Focal Length	30.76
+Angle of View	50.66
+F-Number	2.07
+Image Height	28.50
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	21.35
+[lens data]
+1	12.875	3.34	1.69680	16.42	55.5
+2	35.400	0.29		14.46	
+3	13.830	1.85	1.68384	13.40	31.6
+4	8.946	4.25		11.65	
+5	AS	5.40		10.560
+6	-8.300	0.65	1.78472	10.30	25.7
+7	-53.590	0.22		13.26	
+8	-37.470	3.62	1.80420	13.26	46.5
+9	-11.763	0.12		15.66	
+10	206.300	3.50	1.88300	20.67	40.8
+11	-26.520	Bf		20.67	
+[aspherical data]
+4	8.946	0.02	1.107210E-05	1.837000E-07
+[figure]
+source	Data/US20100149663_Figure01P.png
+originX	82.94
+originY	466.97
+ppmm	13.841
+[notes]

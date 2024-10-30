@@ -1,0 +1,115 @@
+/******************************************************************************\
+|                                                                              |
+|                      _medium-flat-colored-buttons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/materials/flat/flat-btns";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.flat.colored {
+		.colored.btn {
+			color: white;
+
+			i {
+				color: white;
+			}
+
+			&.red {
+				@include flat-btns.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include flat-btns.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include flat-btns.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include flat-btns.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include flat-btns.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include flat-btns.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include flat-btns.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include flat-btns.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include flat-btns.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include flat-btns.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include flat-btns.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include flat-btns.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include flat-btns.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include flat-btns.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include flat-btns.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include flat-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include flat-btns.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include flat-btns.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include flat-btns.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include flat-btns.shaded(colors.$medium-white);
+			}
+		}
+	}
+}

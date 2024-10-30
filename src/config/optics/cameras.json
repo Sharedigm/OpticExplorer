@@ -1,0 +1,266 @@
+{
+	"Mirrorless": {
+		"Canon": {
+			"EOS M": {
+				"mount": "Canon EF-M",
+				"sensor": "Canon APS-C"
+			},
+			"EOS R": {
+				"mount": "Canon RF",
+				"sensor": "Full Frame"
+			}
+		},
+		"Leica": {
+			"T Series": {
+				"mount": "Leica L",
+				"sensor": "APS-C"
+			}
+		},
+		"Nikon": {
+			"Nikon 1": {
+				"mount": "Nikon 1",
+				"sensor": "Nikon CX"
+			},
+			"Z30, Z50, Zfc": {
+				"mount": "Nikon Z",
+				"sensor": "Nikon DX"
+			},
+			"Z5, Z6, Z7, Z9": {
+				"mount": "Nikon Z",
+				"sensor": "Nikon FX"
+			}
+		},
+		"Sony": {
+			"aX Series": {
+				"mount": "Sony E",
+				"sensor": "Sony Exmor Full Frame"
+			},
+			"aXXXX Series": {
+				"mount": "Sony E",
+				"sensor": "APS-C"
+			},
+			"NEX Series": {
+				"mount": "Sony E",
+				"sensor": "APS-C"
+			}
+		}
+	},
+	"Rangefinder": {
+		"Canon": {
+			"P Series": {
+				"mount": "M39",
+				"sensor": "Full Frame"
+			},
+			"VT Series": {
+				"mount": "M39",
+				"sensor": "Full Frame"
+			}
+		},
+		"Hasselblad": {
+			"XPan Series": {
+				"mount": "Fujifilm X",
+				"sensor": "Full Frame"
+			}
+		},
+		"Leica": {
+			"M Series": {
+				"mount": "Leica M",
+				"sensor": "Full Frame"	
+			}
+		}
+	},
+	"35mm SLR": {
+		"Canon": {
+			"F Series": {
+				"mount": "Canon FD",
+				"sensor": "Full Frame"
+			},
+			"A Series": {
+				"mount": "Canon FD",
+				"sensor": "Full Frame"
+			},
+			"T Series": {
+				"mount": "Canon FD",
+				"sensor": "Full Frame"
+			},
+			"EOS-1": {
+				"mount": "Canon EF",
+				"sensor": "Full Frame"
+			},
+			"EOS-5D": {
+				"mount": "Canon EF",
+				"sensor": "Full Frame"
+			},
+			"EOS-6D": {
+				"mount": "Canon EF",
+				"sensor": "Full Frame"
+			},
+			"EOS-7D": {
+				"mount": "Canon EF",
+				"sensor": "Canon APS-C"
+			},
+			"EOS-X0D": {
+				"mount": "Canon EF",
+				"sensor": "Canon APS-C"
+			},
+			"EOS-XXXD": {
+				"mount": "Canon EF",
+				"sensor": "Canon APS-C"
+			},
+			"EOS-XXXXD": {
+				"mount": "Canon EF",
+				"sensor": "Canon APS-C"
+			}
+		},
+		"Fujifilm": {
+			"Finepix S Series": {
+				"mount": "Nikon F",
+				"sensor": "APS-C"
+			},
+			"X Series": {
+				"mount": "Fujifilm X",
+				"sensor": "APS-C"
+			}
+		},
+		"Leica": {
+			"Leicaflex": {
+				"mount": "Leica R",
+				"sensor": "Full Frame"
+			},
+			"R Series": {
+				"mount": "Leica R",
+				"sensor": "Full Frame"
+			},
+			"S Series": {
+				"mount": "Leica S",
+				"sensor": "Leica S"
+			}
+		},
+		"Minolta": {
+			"SR Series": {
+				"mount": "Minolta SR",
+				"sensor": "Full Frame"
+			},
+			"X Series": {
+				"mount": "Minolta SR",
+				"sensor": "Full Frame"
+			},
+			"Maxxum Series": {
+				"mount": "Minolta A",
+				"sensor": "Full Frame"
+			}
+		},
+		"Nikon": {
+			"F Series": {
+				"mount": "Nikon F",
+				"sensor": "Full Frame"
+			},
+			"D1, D2 Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon DX"
+			},
+			"D3+ Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon FX"
+			},
+			"Dx0 Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon DX"
+			},
+			"D100, D200, D300, D500 Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon DX"
+			},
+			"D600, D700, D800 Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon FX"
+			},
+			"Dx000 Series": {
+				"mount": "Nikon F",
+				"sensor": "Nikon DX"
+			}
+		},
+		"Olympus": {
+			"Micro Four Thirds": {
+				"mount": "Four Thirds",
+				"sensor": "Four Thirds"			
+			},
+			"Micro Four Thirds": {
+				"mount": "Micro Four Thirds",
+				"sensor": "Four Thirds"			
+			},
+			"OM Series": {
+				"mount": "Olympus OM",
+				"sensor": "Full Frame"	
+			},
+			"OM-D Series": {
+				"mount": "Micro Four Thirds",
+				"sensor": "Four Thirds"	
+			}
+		},
+		"Pentax": {
+			"K Series": {
+				"mount": "Pentax K",
+				"sensor": "Full Frame"
+			},
+			"M Series": {
+				"mount": "Pentax K",
+				"sensor": "Full Frame"
+			},
+			"Q Series": {
+				"mount": "Pentax Q",
+				"sensor": "1/2.3\""
+			}
+		},
+		"Sony": {
+			"a900 Series": {
+				"mount": "Minolta A",
+				"sensor": "Full Frame"
+			},
+			"aXX Series": {
+				"mount": "Minolta A",
+				"sensor": "APS-C"
+			},
+			"aX00 Series": {
+				"mount": "Minolta A",
+				"sensor": "APS-C"
+			},
+			"a700 Series": {
+				"mount": "Minolta A",
+				"sensor": "APS-C"
+			}
+		}
+	},
+	"Medium Format": {
+		"Fujifilm": {
+			"GFX Series": {
+				"mount": "Fujifilm G",
+				"sensor": "Pentax 645D"
+			}
+		},
+		"Hasselblad": {
+			"H System": {
+				"mount": "Hasselblad",
+				"sensor": "Hasselblad"
+			},
+			"V System": {
+				"mount": "Hasselblad",
+				"sensor": "6x6"
+			},
+			"X System": {
+				"mount": "Hasselblad",
+				"sensor": "Hasselblad X1D"
+			}
+		},
+		"Pentax": {
+			"645 Series": {
+				"mount": "Pentax 645",
+				"sensor": "Pentax 645"
+			},
+			"645Z Series": {
+				"mount": "Pentax 645",
+				"sensor": "Pentax 645D"
+			}
+		}
+	}
+}

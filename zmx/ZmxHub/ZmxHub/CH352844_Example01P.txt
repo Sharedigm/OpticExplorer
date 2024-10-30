@@ -1,0 +1,31 @@
+[descriptive data]
+title	CH 352844 Example 1 (Schneider Xenon 2 / 50)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	36.20
+Bf	36.22
+[lens data]
+1	27.415	3.355	1.67003	27.80	47.2
+2	78.125	0.635		27.80
+3	19.835	4.465	1.69347	22.99	53.5
+4	84.160	1.760	1.66446	22.99	35.9
+5	12.945	5.895		18.18	
+5AS	AS	4.71		17.329
+6	-15.100	1.585	1.63980	17.06	34.6
+7	45.090	5.940	1.65844	19.93	50.8
+8	-20.935	0.105		19.93
+9	1179.685	2.625	1.74472	21.17	44.7
+10	-38.620	Bf		23.05
+[figure]
+source	Data/CH352844_Figure01P.png
+originX	38.48
+originY	258.68
+ppmm	12.070
+[notes]

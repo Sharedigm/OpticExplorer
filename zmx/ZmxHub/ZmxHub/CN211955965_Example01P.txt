@@ -1,0 +1,44 @@
+[descriptive data]
+title	CN 211955965 U Example 1 (Viltrox AF 56mm F1.4 E)
+[constants]
+[variable distances]
+Focal Length	55.90	52.89
+Angle of View	undefined	undefined
+F-Number	1.8	undefined
+Image Height	28.8	28.8
+Magnification	0	-0.08767
+S	Infinity	630
+d0	Infinity	625.40
+d14	1.00	5.01
+d16	7.86	3.85
+Bf	0	0
+[lens data]
+1	45.23	1.50	1.65	40.04	33.84
+2	33.78	0.97		38.12	
+3	38.58	6.50	1.73	38.12	54.68
+4	-647.94	0.10		38.12	
+5	24.52	5.72	1.88	33.12	39.22
+6	47.88	1.56		31.12	
+7	70.55	1.00	1.72	29.98	29.51
+8	15.44	8.98		24.58	
+9	AS	6.38		19.435
+10	-23.04	1.00	1.70	24.12	30.05
+11	34.11	7.61	1.88	28.68	39.23
+12	-33.88	0.10		28.68	
+13	71.02	3.63	1.91	29.00	35.26
+14	-112.54	d14		29.00	
+15	159.39	0.70	1.73	25.82	54.67
+16	22.05	d16		24.12	
+17	29.01	10.00	1.50	25.68	81.59
+18	-29.92	3.48		25.68	
+19	-26.39	1.23	1.57	25.32	42.81
+20	-62.64	13.67		25.78	
+21	CG	2.00	1.52	29.63	64.20
+22	CG	1.00		29.63
+[figure]
+source	Data/CN211955965_Figure01P.png
+originX	24.89
+originY	112.13
+ppmm	2.819
+[notes]
+Bill: Production figure is at -0.05 Magnification. d0 and Magnificcation measured.

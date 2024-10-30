@@ -1,0 +1,18 @@
+################################################################################
+#                                                                              #
+#                                Neon Vapor.spct                               #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION:
+  Light from a neon vapor lamp.
+
+WAVELENGTHS: [585.00, 640.00]

@@ -1,0 +1,44 @@
+[descriptive data]
+title	Nikon Reflex-Nikkor 500mm f/8 (New) (US 4,666,259 Example 1)
+[constants]
+Type	REFLEX
+[variable distances]
+Focal Length	499.482	undefined
+Angle of View	5	undefined
+F-Number	6.7	undefined
+Image Height	43.2	43.2
+Total Length	142.716	undefined
+S	Infinity	1500
+Magnification	0	-0.40379
+d0	Infinity	1356.89
+d2	56.00	64.05
+d5	-48.50	-56.55
+d8	41.50	49.55
+Bf(p)	63.216	63.216
+Bf	63.10	63.10
+[lens data]
+1	587.000	10.0	1.51680	77.99	64.12	
+2	-587.300	d2		77.99
+3	-116.666	13.7	1.51680	70.95	64.12	33.30
+4	-192.743	0.0		70.95		37.96
+PM	-192.743	0.0	-1	69.189		37.96
+_4'	-192.743	-13.7	1.51680	70.95	64.12	37.96
+_5	-116.666	d5		70.95		33.30
+6	-58.093	-5.0	1.51680	31.63	64.12	
+7	-99.328	0.0		31.63
+SM	-99.328	0.0	-1	31.63
+_7'	-99.328	5.0	1.51680	31.63	64.12	
+_8	-58.093	d8		31.63
+9	10206.648	3.0	1.51680	21.68	64.12	
+10	25.338	7.5		21.68
+11	-29.450	4.5	1.51823	22.55	58.96	
+12	-41.602	0.5		25.43
+13	41.434	5.0	1.79631	27.22	40.96	
+14	66.948	Bf		27.22
+[figure]
+source	Data/US004666259_Example01_Tale13-Fig1.png
+originX	25.99
+originY	241.40
+ppmm	5.813
+[notes]
+Bill: d0 and Magnification measured. Set PM height based on F-Number which is for the marginal ray.

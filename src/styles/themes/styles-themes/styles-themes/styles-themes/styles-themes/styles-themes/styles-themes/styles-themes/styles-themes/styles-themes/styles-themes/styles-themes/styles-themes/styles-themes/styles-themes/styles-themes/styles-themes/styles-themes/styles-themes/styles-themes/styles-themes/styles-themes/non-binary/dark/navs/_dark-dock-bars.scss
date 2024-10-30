@@ -1,0 +1,90 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-dock-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+
+//
+// colors
+//
+
+$background-color: colors.$very-very-dark-grey;
+$border-color: colors.faded(lighten($background-color, 25%), 50%);
+$divider-color: colors.faded(colors.$light-grey, 50%);
+$item-indicator-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	//
+	// dark dock bars
+	//
+
+	#dock-bar {
+		.shelf {
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		.dock {
+
+			// app and task icons
+			//
+			.apps, .tasks {
+				.item {
+					.indicator {
+						background-color: $item-indicator-color;
+					}
+				}
+			}
+
+			// dividers
+			//
+			.tasks .icons:not(:empty) {
+				border-left-color: $divider-color;
+			}
+		}
+	}
+
+	//
+	// dark transparent dock bars
+	//
+
+	&.transparent {
+		#dock-bar {
+			.shelf {
+				@include plate-glass.shaded($background-color, 50%, 50%);
+			}
+		}
+	}
+
+	//
+	// dark translucent dock bars
+	//
+
+	&.translucent {
+		#dock-bar {
+			.shelf {
+				@include frosted-plate-glass.shaded($background-color, 50%, 50%);
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+[descriptive data]
+title	US 4,170,403 Example 1 (Konica Minolta Hexanon 35mm F2.8)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	39.060
+[lens data]
+1	49.5915	1.4805	1.5163	25.32	64.1
+2	14.5005	8.8900		20.88	
+3	26.6490	11.8510	1.7570	17.56	47.9
+4	-46.8650	1.7415		17.56	
+4AS	AS	3.393		14.088
+5	-20.3000	2.4675	1.7407	14.84	27.8
+6	51.4430	1.3020		13.84
+7	-29.6520	2.0720	1.6968	13.84	55.5
+8	-18.3505	0.0980		17.20	
+9	-489.5100	3.0590	1.7130	20.00	53.9
+10	-22.1340	Bf		20.00	
+[figure]
+source	Data/US004170403_Figure01P.png
+originX	70.78
+originY	202.05
+ppmm	10.365
+[notes]

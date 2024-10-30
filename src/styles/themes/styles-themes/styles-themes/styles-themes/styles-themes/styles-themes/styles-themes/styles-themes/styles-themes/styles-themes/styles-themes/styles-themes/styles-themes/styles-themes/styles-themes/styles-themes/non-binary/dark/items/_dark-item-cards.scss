@@ -1,0 +1,173 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-item-cards.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../navs/dark-selection";
+
+//
+// variables
+//
+
+$background-opacity: 25%;
+
+//
+// colors
+//
+
+$background-color: colors.faded(colors.$very-very-light-grey, $background-opacity);
+$border-color: transparent;
+$highlighted-background-color: dark-selection.$highlight-color;
+$highlighted-border-color: dark-selection.$highlight-color;
+$selected-background-color: dark-selection.$select-color;
+$selected-border-color: dark-selection.$select-color;
+$cards-background-color: transparent;
+$cards-border-color: transparent;
+$desktop-card-background-color: colors.faded(colors.$very-very-light-grey, $background-opacity);
+$desktop-card-border-color: transparent;
+$panel-card-background-color: colors.$very-very-very-dark-grey;
+$panel-card-border-color: colors.$very-very-very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.card-grid {
+	
+		.cards {
+			background-color: $cards-background-color;
+			border-color: $cards-border-color;
+
+			//
+			// dark items
+			//
+
+			.item:not(.highlighted):not(.selected) {
+				.card {
+					background-color: $background-color;
+					border-color: $border-color;
+					
+					.info {
+						.details {
+							color: white;
+						}
+					}
+				}
+			}
+
+			.empty {
+				background-color: $background-color;
+				border-color: $border-color;
+			}
+
+			//
+			// dark selected items
+			//
+
+			.item.selected {
+				.card {
+					.info {
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: white;
+							}
+						}
+
+						.details {
+							color: white;
+							background-color: dark-selection.$select-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// panel cards
+	//
+
+	.panel {
+		.card-grid {
+			.cards {
+				.item:not(.highlighted):not(.selected) {
+					.card {
+						background-color: $panel-card-background-color;
+						border-color: $panel-card-border-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// desktop cards
+	//
+
+	.desktop .card-grid .cards {
+		.item:not(.highlighted):not(.selected) {
+			> .card {
+
+				// default background
+				//
+				background-color: $desktop-card-background-color;
+				border-color: $desktop-card-border-color;
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.card-grid {
+			.cards {
+
+				//
+				// selected items
+				//
+
+				.item.selected {
+					.card {
+						background-color: $highlighted-background-color;
+						border-color: $highlighted-border-color;
+
+						.info {
+							.name {
+
+								//
+								// uneditable names
+								//
+
+								&:not([contenteditable="true"]) {
+									background-color: $highlighted-background-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

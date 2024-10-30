@@ -1,0 +1,40 @@
+[descriptive data]
+title	JP 1982-197509 Example 1 (Olympus Zuiko Auto-Zoom 35-70mm F4 AF)
+[constants]
+[variable distances]
+Focal Length	36	52.001	67.902
+Angle of View	62	45.2	undefined
+F-Number	4	4	4
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	36.549	12.937	0.496
+d14	0.56	11.355	22.083
+Bf(p)	undefined	undefined	undefined
+Bf	39.03	39.03	39.03
+Aperture Diameter	14.225	16.973	19.931
+[lens data]
+1	50.1111	2.2000	1.69350	43.76	53.2
+2	25.4129	10.7647		36.06	
+3	1593.4330	2.2100	1.69100	36.67	54.8
+4	36.6635	3.2536		36.67
+5	35.0650	4.2319	1.74950	33.68	35.3
+6	113.1003	d6		33.68
+7	63.1339	4.3721	1.69100	25.54	54.8
+8	-114.6689	0.2000		25.54
+9	23.3310	3.5200	1.65150	22.08	58.7
+10	110.2000	2.5206		22.08
+10AS	AS	2.96		14.225
+11	-82.9186	3.2739	1.80518	20.13	25.4
+12	22.2117	4.1413		20.13
+13	231.3348	4.3828	1.61290	19.71	37.0
+14	-28.5894	d14		19.71
+15	Infinity	11.5000	1.51633	25.60	64.2
+16	Infinity	Bf		25.60	
+[figure]
+source	Data/JP1982-197509_Figure02P.png
+originX	67.09
+originY	269.73
+ppmm	6.986
+[notes]
+Bill: The patent Figure lines up very poorly but the production daigram is quite good.

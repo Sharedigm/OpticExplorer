@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-displays.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+
+$led-color: lighten(red, 10%);
+$led-dot-color: lighten(red, 20%);
+$led-glow: 0 0 3px red, 0 0 5px red, 0 0 10px red, 0 0 20px red;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	&.dark,
+	.dark {
+		.led {
+			color: $led-color;
+			text-shadow: $led-glow;
+		}
+
+		.led.dot {
+			color: $led-dot-color;
+		}
+
+
+		.led.pie {	
+			.slice {
+				&.half-full {
+					background-image: linear-gradient(to right,
+						transparent 50%,
+						$led-color 0%) !important;
+				}
+			}
+		}
+	}
+}

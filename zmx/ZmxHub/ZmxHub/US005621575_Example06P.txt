@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 5,621,575 Example 6 (Fujifilm Fujinon 45mm F4 Super EBC (GA645 Wide Professional))
+[constants]
+Scaled	45	100
+[variable distances]
+Focal Length	45
+Angle of View	75.2
+F-Number	4.08
+Image Height	69.6
+Magnification	0
+d0	Infinity
+Bf(p)	27.383
+Bf	27.41
+[lens data]
+1	20.9318	1.782	1.48749	28.26	70.40
+2	13.3934	10.080		22.08
+3	21.7755	5.328	1.80500	18.90	39.60
+4	-135.4568	2.246	1.78472	17.47	25.70
+5	28.5327	1.595		11.50
+5AS	AS	2.86		10.932
+6	55.2650	9.900	1.77250	11.85	49.60
+7	-16.1231	1.197	1.58144	18.17	40.80
+8	57.3908	1.179		19.57
+9	-143.3475	3.069	1.77250	19.57	49.60
+10	-28.8747	5.931		21.61
+11	-13.3934	1.782	1.58144	21.97	40.80
+12	-24.1605	Bf		27.00
+[figure]
+source	Data/US005621575_Figure11P.png
+originX	45.83
+originY	253.42
+ppmm	15.594
+[notes]

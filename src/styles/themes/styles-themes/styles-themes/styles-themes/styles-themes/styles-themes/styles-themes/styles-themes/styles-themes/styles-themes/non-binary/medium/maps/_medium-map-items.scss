@@ -1,0 +1,148 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-map-items.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/frosted-glass";
+
+//
+// colors
+//
+
+$map-text-color: text-colors.$dark-color;
+$map-text-outline: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+$photo-map-text-color: white;
+$photo-map-text-shadow: 1px 1px 3px black, 0px 0px 2px black;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// non-photographic map overlays ( ~ means followed by)
+	//
+
+	.map.layer ~ .layer {
+
+		.icon-grid, .item-list {
+			.item {
+				&:not(.selected):not(.highlighted) {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: $map-text-color;
+							text-shadow: $map-text-outline;
+						}
+					}
+
+					.details {
+						color: $map-text-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// photographic map overlays
+	//
+
+	.map.layer.aerial ~ .layer,
+	.map.layer.satellite ~ .layer,
+	.map.layer.hybrid ~ .layer {
+		.icon-grid, .item-list {
+			.item {
+				&:not(.selected):not(.highlighted) {
+
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: $photo-map-text-color;
+						}
+
+						> i {
+							color: $photo-map-text-color;
+						}
+					}
+
+					.details {
+						color: $photo-map-text-color;
+					}
+
+					> .info .expander {
+						color: white;
+					}
+				}
+			}
+		}
+
+		.icon-grid, .item-list {
+			.item {
+				&:not(.selected):not(.highlighted) {
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							text-shadow: $photo-map-text-shadow;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// all map overlays
+	//
+
+	.map.layer ~ .layer {
+
+		.card-grid {
+			.item .card {
+				background: colors.faded(white, 50%);
+				@include frosted-glass.frosted(5px);
+			}
+		}
+
+		.tile-grid {
+			.item .icon {
+				background: colors.faded(white, 50%);
+
+				> i {
+					transform: translateZ(0);
+				}
+
+				&::before {
+					@include frosted-glass.frosted(5px);
+				}
+			}
+		}
+	}
+}

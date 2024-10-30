@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                        _medium-plastic-colored.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/plastic/plastic";
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$selected-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome.plastic {
+
+		//
+		// plastic colored materials
+		//
+
+		.colored:not(.btn) {
+
+			&.red {
+				@include plastic.shade($color);
+			}
+
+			&.raspberry {
+				@include plastic.shade($color);
+			}
+
+			&.red-orange {
+				@include plastic.shade($color);
+			}
+
+			&.orange {
+				@include plastic.shade($color);
+			}
+
+			&.yellow {
+				@include plastic.shade($color);
+			}
+
+			&.lime {
+				@include plastic.shade($color);
+			}
+
+			&.green {
+				@include plastic.shade($color);
+			}
+
+			&.teal {
+				@include plastic.shade($color);
+			}
+
+			&.aqua {
+				@include plastic.shade($color);
+			}
+
+			&.cyan {
+				@include plastic.shade($color);
+			}
+
+			&.blue {
+				@include plastic.shade($color);
+			}
+
+			&.indigo {
+				@include plastic.shade($color);
+			}
+
+			&.violet {
+				@include plastic.shade($color);
+			}
+
+			&.plum {
+				@include plastic.shade($color);
+			}
+
+			&.purple {
+				@include plastic.shade($color);
+			}
+
+			&.magenta {
+				@include plastic.shade($color);
+			}
+
+			&.brown {
+				@include plastic.shade($color);
+			}
+
+			&.grey {
+				@include plastic.shade($color);
+			}
+
+			&.black {
+				@include plastic.shade(black);
+			}
+
+			&.white {
+				@include plastic.shade(white);
+			}
+
+			&.copper {
+				@include plastic.shade($color);
+			}
+
+			&.silver {
+				@include plastic.shade($color);
+			}
+
+			&.gold {
+				@include plastic.shade($color);
+			}
+		}
+
+		//
+		// plastic selected colored materials
+		//
+
+		.selected .colored:not(.btn) {
+
+			.red {
+				@include plastic.shade($selected-color);
+			}
+
+			.raspberry {
+				@include plastic.shade($selected-color);
+			}
+
+			.red-orange {
+				@include plastic.shade($selected-color);
+			}
+
+			.orange {
+				@include plastic.shade($selected-color);
+			}
+
+			.yellow {
+				@include plastic.shade($selected-color);
+			}
+
+			.lime {
+				@include plastic.shade($selected-color);
+			}
+
+			.green {
+				@include plastic.shade($selected-color);
+			}
+
+			.teal {
+				@include plastic.shade($selected-color);
+			}
+
+			.aqua {
+				@include plastic.shade($selected-color);
+			}
+
+			.cyan {
+				@include plastic.shade($selected-color);
+			}
+
+			.blue {
+				@include plastic.shade($selected-color);
+			}
+
+			.indigo {
+				@include plastic.shade($selected-color);
+			}
+
+			.violet {
+				@include plastic.shade($selected-color);
+			}
+
+			.plum {
+				@include plastic.shade($selected-color);
+			}
+
+			.purple {
+				@include plastic.shade($selected-color);
+			}
+
+			.magenta {
+				@include plastic.shade($selected-color);
+			}
+
+			.brown {
+				@include plastic.shade($selected-color);
+			}
+
+			.grey {
+				@include plastic.shade($selected-color);
+			}
+
+			.black {
+				@include plastic.shade(black);
+			}
+
+			.white {
+				@include plastic.shade(white);
+			}
+
+			.copper {
+				@include plastic.shade($selected-color);
+			}
+
+			.silver {
+				@include plastic.shade($selected-color);
+			}
+
+			.gold {
+				@include plastic.shade($selected-color);
+			}
+		}
+	}
+}

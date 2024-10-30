@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                              _colored-menus.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../colors/colors";
+@use "../../../navs/colors/colored-menus";
+
+//
+// colors
+//
+
+$open-color: var(--primary-color);
+$hover-color: var(--primary-color);
+$active-color: colors.darken($hover-color, 10%);
+
+$open-icon-color: white;
+$hover-icon-color: white;
+$active-icon-color: white;
+
+$hover-text-color: white;
+$active-text-color: white;
+$open-text-color: white;
+
+$default-open-color: branding.$primary-color;
+$default-hover-color: branding.$primary-color;
+$default-active-color: darken($default-hover-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// dropdown menus
+	//
+
+	.menu, .dropdown-menu {
+		@include colored-menus.colored($open-color, $hover-color, $active-color);
+		@include colored-menus.marked($open-icon-color, $hover-icon-color, $active-icon-color);
+		@include colored-menus.labeled($open-text-color, $hover-text-color, $active-text-color);
+	}
+}

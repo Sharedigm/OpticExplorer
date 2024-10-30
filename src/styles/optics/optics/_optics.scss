@@ -1,0 +1,69 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _optics.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+@use "../../themes/binary/medium/colors/binary-colors2";
+
+//
+// colors
+//
+
+$monochrome-tile-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+
+.optic-editor .mainbar {
+	overflow: hidden;
+}
+
+.optics-info.info-bar:not(:empty) {
+	width: 135px;
+}
+
+.materials-info.info-bar:not(:empty) {
+	width: 125px;
+}
+
+//
+// binary toolbars
+//
+
+body.binary {
+	.optics {
+		.toolbar {
+			#current-material {
+				.tile {
+					@include binary-colors2.GREY();
+				}
+			}
+		}
+	}
+}
+
+//
+// monochrome toolbars
+//
+
+body.monochrome {
+	.optics {
+		.toolbar {
+			#current-material {
+				.tile {
+					background-color: $monochrome-tile-color !important;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 7,656,591 Example 1 (Nikon PC-E Micro-Nikkor 45mm f/2.8D ED)
+[constants]
+[variable distances]
+Focal Length	41.2	undefined
+Angle of View	72	undefined
+F-Number	2.89	undefined
+NA	undefined	0.13
+HO	Infinity	59.31
+Image Height	58.60	58.60
+Total Length	undefined	undefined
+Magnification	0	-0.50487
+d0	Infinity	72.30
+d4	1.00	5.28
+d9	6.50	2.21
+Bf(p)	undefined	undefined
+Bf	56.50	78.13
+[lens data]
+1	49.752	3.0	1.83481	48.40	42.72
+2	32.115	5.7		40.74	
+3	130.000	4.1	1.75692	40.74	31.59
+4	-492.062	d4		40.74
+5	138.964	2.4	1.49782	37.38	82.56
+6	19.308	16.0		28.86	
+7	42.141	4.6	1.78800	22.96	47.38
+8	-310.529	2.4	1.56732	22.32	42.72
+9	73.800	d9		22.32	
+10	80.318	6.0	1.61800	23.50	63.38
+11	-37.349	1.0		23.50	
+12	AS	4.5		20.235
+13	-28.492	9.2	1.71736	21.40	29.52
+14	70.877	1.9		21.40	
+15	-95.520	3.2	1.48749	23.36	70.45
+16	-25.721	0.1		23.36	
+17	270.998	3.4	1.80400	26.76	46.58
+18	-59.752	Bf		26.76	
+[figure]
+source	Data/US007656591_Figure01P.png
+originX	103
+originY	356
+ppmm	8.184
+[notes]

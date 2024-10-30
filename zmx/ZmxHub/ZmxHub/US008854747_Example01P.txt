@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 8,854,747 Example 1 (Canon EF-M22mm f2 STM)
+[constants]
+[variable distances]
+Focal Length	21.78	undefined
+Angle of View	64.18	undefined
+F-Number	2.05	undefined
+Image Height	27.32	27.32
+Total Length	undefined	undefined
+Magnification	0	-0.1
+d0	Infinity	222
+d5	3.14	2.25
+Bf	14.20	16.47
+[lens data]
+1	-30.023	0.70	1.51742	14.9	52.4
+2	12.543	0.93		13.3	
+3	14.331	3.26	1.83481	13.9	42.7
+4	-61.934	1.94		13.9	
+5	AS	d5		11.135	
+6	19.402	3.98	1.88300	11.98	40.8
+7	-10.941	0.80	1.78472	11.98	25.7
+8	19.741	3.26		11.73
+9	-8.483	0.80	1.62588	11.73	35.7
+10	-247.157	0.25		15.73
+11	59.414	5.60	1.88300	19.15	40.8
+12	-15.716	0.15		19.15
+13	-65.386	2.32	1.58313	19.80	59.4
+14	-26.414	Bf		23.00
+[aspherical data]
+13	-65.386	0	-1.06417E-04	-2.68284E-07	-5.69512E-09	-5.83577E-14	-4.69051E-14
+14	-26.414	0	6.63637E-06	-1.81488E-07	-8.38345E-10	-2.73326E-12	3.03992E-14
+[figure]	
+source	Data/US008854747_Figure03P.png
+originX	154.53
+originY	125.54
+ppmm	3.548
+[notes]

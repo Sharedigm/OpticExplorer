@@ -1,0 +1,67 @@
+/******************************************************************************\
+|                                                                              |
+|                              _colored-tabs.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+
+//
+// colors
+//
+
+$active-color: var(--primary-color);
+$active-icon-color: white;
+$active-text-color: white;
+$default-active-color: branding.$primary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	ul.nav-tabs {
+
+		//
+		// tab borders
+		//
+
+		border-bottom-color: $active-color;
+
+		//
+		// active tabs
+		//
+
+		> li.active {
+			> a,
+			> a:focus {
+				color: $active-text-color;
+				background-color: $active-color;
+				border-color: $active-color;
+
+				i {
+					color: $active-icon-color;
+				}
+
+				svg {
+					fill: $active-icon-color;
+				}
+
+				label {
+					color: $active-text-color;
+				}
+			}
+		}
+	}
+}

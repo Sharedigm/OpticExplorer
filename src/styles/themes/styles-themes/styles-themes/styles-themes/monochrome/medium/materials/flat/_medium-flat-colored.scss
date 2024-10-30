@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-flat-colored.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/flat/flat";
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$selected-color: colors.$medium-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.monochrome.flat {
+
+		//
+		// flat colored materials
+		//
+
+		.colored:not(.btn) {
+
+			&.red {
+				@include flat.color($color);
+			}
+
+			&.raspberry {
+				@include flat.color($color);
+			}
+
+			&.red-orange {
+				@include flat.color($color);
+			}
+
+			&.orange {
+				@include flat.color($color);
+			}
+
+			&.yellow {
+				@include flat.color($color);
+			}
+
+			&.lime {
+				@include flat.color($color);
+			}
+
+			&.green {
+				@include flat.color($color);
+			}
+
+			&.teal {
+				@include flat.color($color);
+			}
+
+			&.aqua {
+				@include flat.color($color);
+			}
+
+			&.cyan {
+				@include flat.color($color);
+			}
+
+			&.blue {
+				@include flat.color($color);
+			}
+
+			&.indigo {
+				@include flat.color($color);
+			}
+
+			&.violet {
+				@include flat.color($color);
+			}
+
+			&.plum {
+				@include flat.color($color);
+			}
+
+			&.purple {
+				@include flat.color($color);
+			}
+
+			&.magenta {
+				@include flat.color($color);
+			}
+
+			&.brown {
+				@include flat.color($color);
+			}
+
+			&.grey {
+				@include flat.color($color);
+			}
+
+			&.black {
+				@include flat.color(black);
+			}
+
+			&.white {
+				@include flat.color(white);
+			}
+
+			&.copper {
+				@include flat.color($color);
+			}
+
+			&.silver {
+				@include flat.color($color);
+			}
+
+			&.gold {
+				@include flat.color($color);
+			}
+		}
+
+		//
+		// flat selected colored materials
+		//
+
+		.selected .colored:not(.btn) {
+
+			.red {
+				@include flat.color($selected-color);
+			}
+
+			.raspberry {
+				@include flat.color($selected-color);
+			}
+
+			.red-orange {
+				@include flat.color($selected-color);
+			}
+
+			.orange {
+				@include flat.color($selected-color);
+			}
+
+			.yellow {
+				@include flat.color($selected-color);
+			}
+
+			.lime {
+				@include flat.color($selected-color);
+			}
+
+			.green {
+				@include flat.color($selected-color);
+			}
+
+			.teal {
+				@include flat.color($selected-color);
+			}
+
+			.aqua {
+				@include flat.color($selected-color);
+			}
+
+			.cyan {
+				@include flat.color($selected-color);
+			}
+
+			.blue {
+				@include flat.color($selected-color);
+			}
+
+			.indigo {
+				@include flat.color($selected-color);
+			}
+
+			.violet {
+				@include flat.color($selected-color);
+			}
+
+			.plum {
+				@include flat.color($selected-color);
+			}
+
+			.purple {
+				@include flat.color($selected-color);
+			}
+
+			.magenta {
+				@include flat.color($selected-color);
+			}
+
+			.brown {
+				@include flat.color($selected-color);
+			}
+
+			.grey {
+				@include flat.color($selected-color);
+			}
+
+			.black {
+				@include flat.color(black);
+			}
+
+			.white {
+				@include flat.color(white);
+			}
+
+			.copper {
+				@include flat.color($selected-color);
+			}
+
+			.silver {
+				@include flat.color($selected-color);
+			}
+
+			.gold {
+				@include flat.color($selected-color);
+			}
+		}
+	}
+}

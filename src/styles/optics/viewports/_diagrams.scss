@@ -1,0 +1,126 @@
+/******************************************************************************\
+|                                                                              |
+|                               _diagrams.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$background-color: colors.$very-very-light-grey;
+$dark-background-color: colors.$very-very-dark-grey;
+$light-background-color: white;
+
+//
+// styles
+//
+
+.diagram.viewport {
+
+	//
+	// text annotations
+	//
+
+	text.label {
+		font-size: 12px;
+		cursor: default;
+	}
+
+	//
+	// unshadowed diagrams
+	//
+
+	&.unshadowed {
+		[name="shadows"] {
+			display: none !important;
+		}
+	}
+
+	//
+	// unlabelled diagrams
+	//
+
+	&.hide-labels {
+		.label {
+			display: none;
+		}
+	}
+}
+
+//
+// colored diagrams
+//
+
+body.colored {
+
+	//
+	// light diagrams
+	//
+
+	.diagram.viewport.light,
+	&.light .diagram.viewport.auto {
+		background: $light-background-color;
+	}
+
+	//
+	// dark diagrams
+	//
+
+	.diagram.viewport.dark,
+	&.dark .diagram.viewport.auto {
+		background: $dark-background-color;
+
+		//
+		// shadows
+		//
+
+		.shadow {
+			filter: url(#softish-shadow);
+		}
+	}
+}
+
+//
+// non-binary diagrams
+//
+
+body:not(.binary) {
+
+	.diagram.viewport {
+		background: $background-color;
+
+		//
+		// shadows
+		//
+
+		.shadow {
+			filter: url(#colored-softish-shadow);
+		}
+	}
+
+	//
+	// dark diagrams
+	//
+
+	.diagram.viewport.dark,
+	&.dark .diagram.viewport.auto {
+		background: $dark-background-color;
+
+		//
+		// shadows
+		//
+
+		.shadow {
+			filter: url(#softish-shadow);
+		}
+	}
+}

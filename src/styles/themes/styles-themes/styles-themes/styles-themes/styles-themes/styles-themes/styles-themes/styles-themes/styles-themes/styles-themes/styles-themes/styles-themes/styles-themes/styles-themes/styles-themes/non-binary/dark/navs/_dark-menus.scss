@@ -1,0 +1,270 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-menus.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+@use "../apps/common/dark-apps";
+@use "../items/dark-item-lists";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$color: darken(dark-apps.$background-color, 10%);
+$icon-color: colors.$light-grey;
+$text-color: text-colors.$light-color;
+$border-color: lighten($color, 10%);
+$item-divider-color: $border-color;
+
+$disabled-color: none;
+$disabled-icon-color: colors.$medium-grey;
+$disabled-text-color: colors.$medium-grey;
+
+$inline-text-color: text-colors.$light-color;
+$inline-icon-color: colors.$light-grey;
+$inline-item-odd-color: dark-item-lists.$odd-item-background-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	//
+	// dark dropdown menus
+	//
+
+	.dropdown-menu, .menu-content {
+		background: $color;
+		border-color: $border-color;
+	}
+
+	//
+	// dropdown panels
+	//
+
+	ul.panels li {
+		border-color: $item-divider-color;
+	}
+
+	//
+	// transparent dropdowns
+	//
+
+	&.transparent .dropdown-menu {
+		@include plate-glass.shaded($color);
+
+		.panel, ul.panels > li:not(:hover) {
+			background: none;
+		}
+
+		// nested dropdown menus
+		//
+		.dropdown-menu {
+			background-color: $color;
+		}
+	}
+
+	//
+	// translucent dropdowns
+	//
+
+	&.translucent {
+		.dropdown-menu, .menu-content {
+			@include frosted-plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+		}
+	}
+
+	&.translucent {
+		.dropdown-menu, .menu-content {
+
+			// translucent nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// dark menus
+	//
+
+	.menu, .dropdown-menu {
+		color: $text-color;
+		border-color: $border-color;
+
+		//
+		// dark menu items
+		//
+
+		> li {
+
+			//
+			// dark enabled menu items
+			//
+
+			&:not(.disabled) {
+				color: $text-color;
+
+				> a {
+					color: $text-color;
+
+					> i {
+						color: $icon-color;
+						fill: $icon-color;
+					}
+
+					//
+					// menu check marks
+					//
+
+					&:not(.app-item):not(:hover) {
+						> i.fa-check {
+							color: $text-color;
+						}
+					}
+
+					&:hover, &:active {
+						> i {
+							@include colors.glow(white);
+						}
+					}
+				}
+			}
+
+			//
+			// dark disabled menu items
+			//
+
+			&.disabled {
+				color: $disabled-text-color;
+
+				> a {
+					color: $disabled-text-color;
+
+					> i {
+						color: $disabled-icon-color;
+						fill: $disabled-icon-color;
+					}
+
+					&:hover {
+						color: $disabled-text-color;
+
+						> i {
+							color: $disabled-icon-color;
+							fill: $disabled-icon-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dark dividers
+		//
+
+		.divider:not(.disabled) {
+			border-color: $item-divider-color;
+			background-color: $item-divider-color;
+		}
+	}
+
+	//
+	// dark inline menus
+	//
+
+	.menu {
+
+		//
+		// dark inline menu items
+		//
+
+		> li {
+
+			//
+			// dark zebra striping
+			//
+
+			&:nth-child(odd) {
+				background-color: $inline-item-odd-color;
+			}
+
+			//
+			// dark enabled menu items
+			//
+
+			&:not(.disabled) {
+				> a {
+					color: $inline-text-color;
+
+					> i {
+						color: $inline-icon-color;
+						fill: $inline-icon-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// transparent menus
+	//
+
+	&.transparent {
+		.dropdown-menu {
+			@include plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// translucent menus
+	//
+
+	&.translucent {
+		.dropdown-menu {
+			@include frosted-plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+}

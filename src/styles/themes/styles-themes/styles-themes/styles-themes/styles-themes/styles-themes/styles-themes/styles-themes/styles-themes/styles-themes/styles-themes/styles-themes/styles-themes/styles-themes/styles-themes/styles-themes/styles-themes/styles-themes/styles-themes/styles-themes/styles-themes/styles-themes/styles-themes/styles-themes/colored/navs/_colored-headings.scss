@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-headings.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$icon-color: var(--primary-color);
+$border-color: var(--primary-color);
+$sub-heading-icon-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	h1 {
+		border-color: $border-color;
+
+		i {
+			color: $icon-color;
+		}
+	}
+
+	h2, h3 {
+		i {
+			color: $sub-heading-icon-color;
+		}
+	}
+
+	//
+	// rulings
+	//
+
+	hr {
+		background-color: $border-color;
+	}
+}

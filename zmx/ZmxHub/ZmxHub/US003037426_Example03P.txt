@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 3,037,426 Example 3 (Kinoptik Super-Tegea 1.9mm f/1.9 Fisheye)
+[constants]
+[variable distances]
+Focal Length	1.98
+Angle of View	197
+F-Number	1.9
+Image Height	8.4
+Magnification	0
+d0	Infinity
+Bf(p)	21.841
+Bf	9.33
+[lens data]
+1	87.105	5.12	1.69112	92.74	54.0
+2	37.250	15.37		58.51
+3	Infinity	2.56	1.80000	55.11	45.0
+4	7.500	37.75		30.36
+
+5	93.826	10.25	1.68102	37.23	32.0
+6	-42.500	29.53		37.23
+
+6.5	AS	1.80		6.361
+
+7	7.936	1.79	1.69112	7.80	54.0
+8	-179.130	1.82		7.80
+9	-6.852	0.61	1.73259	7.77	28.4
+10	9.969	1.38		7.77
+11	-44.039	1.43	1.62023	7.90	60.2
+12	-5.700	0.02		7.90	
+13	22.888	1.02	1.62023	8.26	60.2
+14	-22.888	Bf		7.44
+[aspherical data]
+4	7.500	-1
+[figure]
+source	Data/US003037426_Figure03P.png
+originX	84.34
+originY	201.62
+ppmm	3.491
+[notes]
+Bill: Repaired r4 15.00 -> 7.50 Stereographic 2.489

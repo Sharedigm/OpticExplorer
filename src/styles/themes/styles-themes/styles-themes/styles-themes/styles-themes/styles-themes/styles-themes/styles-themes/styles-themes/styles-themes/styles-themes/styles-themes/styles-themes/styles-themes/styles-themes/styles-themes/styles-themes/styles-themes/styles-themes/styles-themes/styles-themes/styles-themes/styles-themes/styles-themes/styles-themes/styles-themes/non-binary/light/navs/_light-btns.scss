@@ -1,0 +1,65 @@
+/******************************************************************************\
+|                                                                              |
+|                               _light-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-btns";
+@use "../colors/light-branding";
+
+//
+// colors
+//
+
+$color: lighten(colors.$very-very-light-grey, 5%);
+$label-color: colors.$very-dark-grey;
+$primary-color: light-branding.$primary-color;
+$primary-label-color: white;
+$disabled-color: colors.$very-light-grey;
+$disabled-label-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	//
+	// light styled buttons
+	//
+
+	.btn {
+		@include colored-btns.colored($color);
+		@include colored-btns.labeled($label-color);
+
+		//
+		// light primary buttons
+		//
+
+		&.btn-primary {
+			@include colored-btns.colored($primary-color);
+			@include colored-btns.labeled($primary-label-color);
+		}
+
+		//
+		// light disabled buttons
+		//
+
+		&:disabled, &.btn-primary:disabled {
+			@include colored-btns.colored($disabled-color);
+			@include colored-btns.labeled($disabled-label-color);
+		}
+	}
+}

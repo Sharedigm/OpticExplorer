@@ -1,0 +1,99 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-desktops.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/glass/plate-glass";
+
+//
+// colors
+//
+
+$background-color: colors.$light-grey;
+$footer-bar-color: colors.$very-very-very-light-grey;
+$footer-bar-opacity: plate-glass.$max-opacity;
+$footer-bar-item-shadow: 2px 2px 10px colors.faded(black, 33%);
+$run-menu-box-shadow: 10px 10px 20px colors.faded(black, 25%);
+
+$info-bar-color: white;
+$info-bar-icon-color: white;
+$info-bar-background-color: colors.$very-light-grey;
+$info-bar-shadow: $footer-bar-item-shadow;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	#desktop, .desktop.preview {
+
+		//
+		// desktop background color
+		//
+
+		background-color: $background-color;
+	}
+
+	#desktop,
+	#desktop.auto,
+	#desktop.medium {
+		.desktop.app {
+
+			//
+			// desktop footer bars
+			//
+
+			> .footer-bar {
+				background-color: $footer-bar-color;
+				border-color: $footer-bar-color;
+
+				//
+				// desktop run menus
+				//
+
+				.run-menu .menu-bar {
+					.icon-grid {
+						box-shadow: $run-menu-box-shadow;
+					}
+				}
+
+				//
+				// desktop info bars
+				//
+
+				.desktop-info-bar {
+					color: $info-bar-color;
+					background-color: $info-bar-background-color;
+					border-color: $info-bar-background-color;
+					box-shadow: $info-bar-shadow;
+
+					.info-bar {
+						i {
+							color: $info-bar-icon-color;
+						}
+					}
+
+					.toolbar .button:not(:hover) {
+						i {
+							color: $info-bar-icon-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

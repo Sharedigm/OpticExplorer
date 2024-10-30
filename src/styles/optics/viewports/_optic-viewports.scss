@@ -1,0 +1,130 @@
+/******************************************************************************\
+|                                                                              |
+|                            _optic-viewports.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$background-color: colors.$very-very-light-grey;
+$colored-background-color: #b0c0f0;
+
+$dark-background-color: colors.$very-dark-grey;
+$dark-colored-background-color: #273060;
+
+$light-background-color: white;
+$light-colored-background-color: #b0c0f0;
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	//
+	// text annotations
+	//
+
+	.annotation, .dimensioning {
+		text {
+			font-size: 12px;
+		}
+	}
+}
+
+//
+// non-binary viewports
+//
+
+body:not(.binary) {
+
+	//
+	// colored viewports
+	//
+
+	&.monochrome, &.colored {
+
+		.optics .viewport,
+		.abbe.diagram {
+			background: $background-color;
+
+			&.colored {
+				background: $colored-background-color;
+			}
+		}
+
+		//
+		// dark viewports
+		//
+
+		.optics .viewport.dark,
+		&.dark .optics .viewport.auto,
+		.abbe.diagram.dark,
+		&.dark .abbe.diagram.auto {
+			background: $dark-background-color;
+
+			&.colored {
+				background: $dark-colored-background-color;
+			}
+
+			.jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+				background: #404060;
+				mix-blend-mode: multiply;
+			}
+
+			// overlay labels
+			//
+			.jqplot-highlighter-tooltip {
+				background-color: fade(black, 50%);
+			}
+		}
+
+		//
+		// light viewports
+		//
+
+		.optics .viewport.light,
+		&.light .optics .viewport.auto,
+		.abbe.diagram.light,
+		&.light .abbe.diagram.auto {
+			background: $light-background-color;
+
+			&.colored {
+				background: $light-colored-background-color;
+			}
+		}
+	}
+
+	//
+	// unshadowed viewports
+	//
+
+	.optics .viewport,
+	.abbe.diagram {
+		&.unshadowed {
+			.shadow {
+				display: none !important;
+			}
+		}
+	}
+}
+
+//
+// Firefox compatibility
+//
+
+[browser="firefox"] {
+	.optics .soft.shadow {
+		opacity: 0.125;
+	}
+}

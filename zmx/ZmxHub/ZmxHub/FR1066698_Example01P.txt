@@ -1,0 +1,31 @@
+[descriptive data]
+title	FR 1.066.698 Example 1 (Zeiss Tessar f2.8 50mm)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	46
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	40.27
+[lens data]
+0FS	FS	0		19.50
+1	19.655	5.150	1.67786	19.77	55.5
+2	Infinity	3.050		19.77
+3	-35.52	1.450	1.61200	17.38	37.2
+4	16.8175	2.445		14.45
+4.5	AS	1.280		14.374
+5	381.775	1.195	1.57380	16.58	42.5
+6	16.4835	5.000	1.66080	17.32	50.8
+7	-24.523	0		17.32
+7FS	FS	Bf		16.70
+[figure]
+source	Data/FR1066698_Figure01P.png
+originX	1246.17
+originY	1930.27
+ppmm	55.243
+[notes]
+Bill: Added Flare Stops to mimick lens barrel restriction.

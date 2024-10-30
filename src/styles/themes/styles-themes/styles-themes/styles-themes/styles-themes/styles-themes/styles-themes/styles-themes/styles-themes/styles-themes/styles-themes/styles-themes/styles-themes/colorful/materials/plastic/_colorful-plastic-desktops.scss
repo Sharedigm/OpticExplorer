@@ -1,0 +1,65 @@
+/******************************************************************************\
+|                                                                              |
+|                       _colorful-plastic-desktops.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/plastic/flat-plastic";
+@use "../../apps/colorful-desktop";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		&.plastic {
+			#desktop,
+			#desktop.auto,
+			#desktop.medium {
+
+				//
+				// plastic desktop footer bars
+				//
+
+				.desktop.app > .footer-bar {
+					@include flat-plastic.shade(colorful-desktop.$footer-bar-color);
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		&.plastic {
+			#desktop,
+			#desktop.auto,
+			#desktop.medium {
+
+				//
+				// plastic desktop footer bars
+				//
+
+				.desktop.app > .footer-bar {
+					@include flat-plastic.shaded(colorful-desktop.$default-footer-bar-color);
+				}
+			}
+		}
+	}
+}

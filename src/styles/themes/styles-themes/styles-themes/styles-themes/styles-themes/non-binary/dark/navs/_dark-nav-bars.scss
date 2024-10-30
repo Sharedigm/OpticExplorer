@@ -1,0 +1,173 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-nav-bars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$hover-color: white;
+$active-color: white;
+$brand-color: white;
+$background-color: colors.$ultra-dark-grey;
+$active-background-color: var(--primary-color);
+$border-color: colors.$medium-grey;
+$indicator-background-color: $background-color;
+$indicator-border-color: $border-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.navbar {
+
+		//
+		// navigation
+		//
+
+		.navbar-nav {
+			> li {
+
+				//
+				// inactive state
+				//
+
+				&:not(.active):not(.open) {
+					> a, > a:focus {
+
+						//
+						// hover state
+						//
+
+						&:hover {
+
+							i, label {
+								color: $hover-color;
+
+								// add glow effect
+								//
+								@include text-colors.glow($hover-color);
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// indicators
+			//
+
+			.indicator {
+				.bar {
+					background-color: $indicator-background-color;
+					border-color: $indicator-border-color;
+				}
+			}
+		}
+
+		//
+		// uncolored dark navbars
+		//
+
+		&:not(.colored) {
+
+			//
+			// brand
+			//
+
+			.brand {
+				color: $brand-color;
+			}
+
+			//
+			// navigation
+			//
+
+			.navbar-nav {
+
+				> li {
+
+					//
+					// inactive state
+					//
+
+					&:not(.active):not(.open) {
+						> a, > a:focus {
+							color: $color;
+
+							//
+							// hover state
+							//
+
+							&:hover {
+								color: $hover-color;
+
+								i, label {
+									color: $hover-color;
+								}
+							}
+						}
+					}
+
+					//
+					// active state
+					//
+
+					&.active {
+						background-color: $active-background-color;
+
+						> a, > a:hover, > a:focus {
+							color: $active-color;
+
+							i, label {
+								color: $active-color;
+							}
+						}
+					}
+
+					//
+					// open state
+					//
+
+					&.open {
+						background-color: $active-background-color;
+
+						> a, > a:focus {
+							color: $active-color;
+
+							i, label {
+								color: $active-color;
+							}
+						}
+					}
+				}
+
+				//
+				// dark apps bar
+				//
+
+				&.apps {
+					border-color: $border-color;
+				}
+			}
+		}
+	}
+}

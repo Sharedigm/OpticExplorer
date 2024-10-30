@@ -1,0 +1,55 @@
+################################################################################
+#                                                                              #
+#                            Low Abbe Achromat.optc                            #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Demo User                                                  #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 59.8982 mm
+        diameter: 31.9298 mm
+      - type: spherical
+        curvature: -40.5608 mm
+        diameter: 31.9298 mm
+    thickness: 8.48134 mm
+    spacing: 0
+    material:
+      n: 1.4875
+      v: 10
+      name: 
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -40.5608 mm
+        diameter: 31.9298 mm
+      - type: spherical
+        curvature: -115.217 mm
+        diameter: 31.9298 mm
+    thickness: 3.99122 mm
+    spacing: 94.1604 mm
+    material:
+      n: 1.62
+      v: 5
+      name: 
+
+LIGHTS:
+
+  - type: distant
+    distance: 25 mm
+    angle: 0
+    spectrum: Visible (x10)
+    number_of_rays: 100
+
+OBJECTS: []

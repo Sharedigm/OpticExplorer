@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 3,741,630 Example 1 (Olympus OM Zuiko 8mm f2.8 Circular Fisheye)
+[constants]
+Scaled	8	1
+[variable distances]
+Focal Length	8
+Angle of View	180
+Angle of View(m)	180.02
+F-Number	2.8
+Image Height	22.63
+Total Length	undefined
+Magnification	0.0
+d0	Infinity
+Bf	36.684
+[lens data]
+1	95.0304	2.7232	1.5891	86.81	61.0
+2	20.0848	19.0640		40.16
+3	67.3080	4.1336	1.7847	38.40	25.6
+4	147.9128	1.9456	1.5891	38.40	61.0
+5	17.2400	14.0448		26.96	
+6	-303.4224	1.5560	1.6700	19.62	57.8
+7	17.2400	4.7656	1.6668	19.62	33.0
+8	97.7904	8.0456		19.62	
+9	151.7928	1.9456	1.7865	12.12	50.1
+10	10.8672	6.7016	1.6032	12.12	42.3
+11	-44.8096	6.0840		12.12
+11AS	AS	6.0840		12.043
+12	-61.8168	4.5424	1.5173	14.26	69.3
+13	-25.4472	0.1944		14.26
+14	26.6992	1.4592	1.9229	14.34	20.9
+15	16.4376	4.9896	1.5173	14.34	69.3
+16	-29.1208	Bf		14.34	
+[figure]	
+source	Data/US003741630_Figure01P.png
+originX	19.54
+originY	231.28
+ppmm	4.296
+[notes]
+Bill: Image Height from Angle of View. Does not match patent figure.

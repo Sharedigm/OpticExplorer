@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 4,660,940 Example 3 (Ricoh smc Pentax 6x7 55mm f4)
+[constants]
+Scaled	55	100
+[variable distances]
+Focal Length	55
+Angle of View	76.8
+F-Number	4.1
+Image Height	89.6
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	75.00
+[lens data]
+1	1463.600	4.478	1.51633	64.84	64.1
+2	-319.591	0.195		62.66	
+3	76.408	2.434	1.67003	51.88	47.3
+4	24.493	12.217		38.78
+5	-72.884	1.947	1.62004	38.78	36.3
+6	40.886	7.019		38.36	
+7	541.014	5.199	1.71736	39.18	29.5
+8	-79.069	0.292		39.18	
+9	39.279	11.584	1.65844	38.36	50.9
+10	-99.819	20.647		35.90	
+10AS	AS	0		19.559
+11	79.106	5.490	1.69680	20.60	55.5
+12	-19.226	2.960	1.83400	20.60	37.2
+13	49.161	2.434		20.60	
+14	Infinity	3.203	1.69680	22.10	55.5
+15	-35.824	Bf		22.10	
+[figure]
+source	Data/US004660940_Figure05P.png
+originX	36.62
+originY	77.93
+ppmm	2.318
+[notes]

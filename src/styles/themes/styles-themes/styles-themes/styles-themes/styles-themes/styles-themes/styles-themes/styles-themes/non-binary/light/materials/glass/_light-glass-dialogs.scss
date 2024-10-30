@@ -1,0 +1,107 @@
+/******************************************************************************\
+|                                                                              |
+|                           _light-glass-dialogs.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/glass/flat-glass";
+@use "../../../../../materials/glass/opaque-glass";
+@use "../../../../../materials/glass/frosted-glass";
+@use "../../dialogs/light-dialogs";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.light.glass.modals,
+	&.light.glass .auto-material.modals {
+
+		//
+		// glass focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			.modal-header {
+				@include opaque-glass.shaded(light-dialogs.$header-color);
+			}
+		}
+
+		//
+		// glass unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			.modal-header {
+				@include opaque-glass.shaded(light-dialogs.$unfocused-header-color);
+			}
+		}
+	}
+
+	//
+	// transparent dialogs
+	//
+
+	&.transparent .light.glass.modals,
+	&.transparent.light.glass .auto-material.modals {
+
+		//
+		// transparent focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			.modal-header {
+				@include flat-glass.shaded(light-dialogs.$header-color);
+			}
+		}
+
+		//
+		// transparent unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			.modal-header {
+				@include flat-glass.shaded(light-dialogs.$unfocused-header-color);
+			}
+		}
+	}
+
+	//
+	// translucent dialogs
+	//
+
+	&.translucent .light.glass.modals,
+	&.translucent.light.glass .auto-material.modals {
+
+		//
+		// translucent focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			.modal-header {
+				@include frosted-glass.shaded(light-dialogs.$header-color);
+			}
+		}
+
+		//
+		// translucent unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			.modal-header {
+				@include frosted-glass.shaded(light-dialogs.$unfocused-header-color);
+			}
+		}
+	}
+}

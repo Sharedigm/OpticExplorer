@@ -1,20 +1,20 @@
 <p align="center">
   <div align="center">
-    <img src="../images/logos/sharedigm-icon.svg" alt="Logo" style="width:25%">
+    <img src="../images/logos/logo.svg" alt="Logo" style="width:25%">
   </div>
 </p>
 
-# Sharedigm Installation
+# OpticExplorer Installation
 
 The following are instructions for installing the software on your own web server.
 
 ## Requirements
 
-Sharedigm has been designed to be relatively easy to install on standard "vanilla" hardware and software platforms. We recommend using a standard "LAMP" stack that integrates support for Apache, SQL, and PHP. To set up your own Sharedigm instance, you will need the following items:
+OpticExplorer has been designed to be relatively easy to install on standard "vanilla" hardware and software platforms. We recommend using a standard "LAMP" stack that integrates support for Apache, SQL, and PHP. To set up your own OpticExplorer instance, you will need the following items:
 
 ### 1. PHP 8.1+
 
-Sharedigm uses Laravel10 which relies upon PHP 8.1 or later.
+OpticExplorer uses Laravel10 which relies upon PHP 8.1 or later.
 
 ### 2. Web Server
 
@@ -49,7 +49,7 @@ http://localhost
 
 # Set Up The Database
 
-Sharedigm uses a standard SQL database. To set up your database, perform the following steps:
+OpticExplorer uses a standard SQL database. To set up your database, perform the following steps:
 
 ## Locate the SQL Database Files
 

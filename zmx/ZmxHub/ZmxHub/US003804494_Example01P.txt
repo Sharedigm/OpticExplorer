@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,804,494 Example 1 (Olympus Zuiko Auto-T 200mm F5)
+[constants]
+Scaled	200	100
+[variable distances]
+Focal Length	200
+Angle of View	12.17
+F-Number	5
+Image Height	43.26
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	51.0
+Bf	50.99
+[lens data]
+1	54.74	6.0	1.4875	47.38	70.2
+2	174.18	3.0		47.38	
+3	48.94	3.0	1.7283	42.76	28.5
+4	31.86	6.0	1.5014	37.76	56.4
+5	153.34	20.0		36.72	
+6	Infinity	3.0	1.7440	28.62	44.8
+7	119.74	18.63		26.40	
+7AS	AS	31.37		19.606
+8	-24.10	2.0	1.7130	25.90	54.0
+9	-166.48	1.0		28.36	
+10	711.18	5.0	1.5927	28.54	35.5
+11	-36.54	Bf		28.54	
+[figure]	
+source	Data/US003804494_Figure01P.png
+originX	63.58
+originY	231.49
+ppmm	6.711
+[notes]

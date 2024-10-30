@@ -1,0 +1,44 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-buttons.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../navs/colors/colored-btns";
+@use "../../../../navs/colors/colored-buttons";
+
+//
+// colors
+//
+
+$color: colors.$very-very-light-grey;
+$label-color: text-colors.$dark-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// buttons
+	//
+
+	.button {
+		@include colored-buttons.colored($color);
+		@include colored-buttons.labeled($label-color);
+	}
+}

@@ -1,0 +1,32 @@
+[descriptive data]
+title	JP 1976-074627 Example 1 (Miranda Auto EC 135mm F2.8)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	2.8
+Total Length	122.1075
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	63.3366
+Bf	64.52
+[lens data]
+1	59.427	8.708	1.58913	48.28	61.0
+2	1847.610	0.270		48.28
+3	33.926	7.628	1.58913	43.22	61.0
+4	70.079	9.653		43.22
+5	146.205	2.741	1.78472	32.53	25.6
+6	26.028	13.252		30.11
+6AS	AS	10.63		26.512
+7	173.381	3.659	1.71736	24.24	29.5
+8	-71.564	2.241	1.62041	24.24	60.2
+9	-2032.290	Bf		24.24
+[figure]
+source	Data/JP1976-074627_Figure01P.png
+originX	20.53
+originY	114.52
+ppmm	4.471
+[notes]
+Bill: SLightly off?

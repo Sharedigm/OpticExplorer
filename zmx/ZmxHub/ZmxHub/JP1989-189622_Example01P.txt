@@ -1,0 +1,48 @@
+[descriptive data]
+title	JP 1989-189622 Example 1 (Canon EF28-70mm f3.5-4.5 II)
+[constants]
+[variable distances]
+Focal Length	29.09	50.00	67.89
+Angle of View	73.4	undefined	35.4
+F-Number	3.6	undefined	4.6
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	32.482	9.303	0.807
+d17	0.275	7.534	13.750
+d18	2.400	12.209	20.600
+Bf(p)	undefined	undefined	undefined
+Bf	42.34	40.09	37.13
+Aperture Diameter	16.695	18.944	21.194
+[lens data]
+1	48.61	1.90	1.83400	37.50	37.2
+2	18.94	8.20		30.25
+3	-181.44	2.00	1.58313	30.25	59.4
+4	48.33	1.90		30.25
+5	35.69	3.70	1.80518	29.88	25.4
+6	151.92	d6		29.88	
+7	37.83	3.10	1.65160	22.12	58.6
+8	312.56	1.90		22.12	
+9	AS	0.70		16.695
+10	24.59	3.85	1.48749	22.73	70.2
+11	50.97	0.28		21.51
+12	20.69	4.40	1.48749	21.41	70.2
+13	64.81	1.07		20.53
+14	-211.31	2.90	1.84666	20.53	23.9
+15	17.70	2.40		16.97
+16	140.47	2.60	1.75520	18.94	27.5
+17	-27.61	d17		18.94
+18	FS	d18		15.26
+19	-45.00	1.80	1.83400	26.56	37.2
+20	-70.97	2.30	1.60311	26.56	60.7
+21	-41.79	Bf		26.56	
+[aspherical data]
+4	48.33	0	-3.886E-06	-1.883E-09	-3.390E-11
+[figure]
+source	Data/JP1989-189622_FigureP.png
+originX	122.66
+originY	181.70
+ppmm	7.709
+[notes]
+Bill: Repaired r21 -141.79 -> -41.79 and r17 -11.61 -> -27.61 
+Intermediate Aperture Diameter is interpolated.

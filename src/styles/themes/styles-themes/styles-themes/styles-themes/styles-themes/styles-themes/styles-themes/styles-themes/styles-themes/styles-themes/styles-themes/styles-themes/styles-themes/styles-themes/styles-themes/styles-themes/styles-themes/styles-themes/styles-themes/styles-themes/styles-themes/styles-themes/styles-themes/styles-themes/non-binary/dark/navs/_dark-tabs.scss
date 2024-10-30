@@ -1,0 +1,109 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: colors.$very-very-dark-grey;
+$icon-color: colors.$light-grey;
+$text-color: text-colors.$light-color;
+$hover-color: lighten($color, 10%);
+$hover-icon-color: $text-color;
+$hover-text-color: $text-color;
+$background-color: darken(colors.$very-dark-grey, 10%);
+$border-color: colors.$very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	ul.nav-tabs {
+
+		//
+		// dark inactive tabs
+		//
+
+		> li:not(.active) {
+			> a,
+			> a:focus {
+				color: $text-color;
+				background-color: $color;
+				border-color: $color;
+
+				i {
+					color: $icon-color;
+				}
+
+				svg {
+					fill: $icon-color;
+				}
+
+				label {
+					color: $text-color;
+				}
+			}
+
+			> a:hover {
+				color: $hover-text-color;
+				background-color: $hover-color;
+				border-color: $hover-color;
+
+				i {
+					color: $hover-icon-color;
+				}
+
+				svg {
+					fill: $hover-icon-color;
+				}
+
+				label {
+					color: $hover-text-color;
+				}
+			}
+
+			> a:hover,  > a:active {
+				overflow: visible;
+				
+				i {
+					@include colors.glow();
+				}
+
+				svg {
+					overflow: visible;
+
+					path, polygon {
+						filter: url(#glowing);
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark tabbed content
+	//
+
+	.nav-tabs.flush {
+		background-color: $background-color;
+		border-color: $border-color !important;
+	}
+}

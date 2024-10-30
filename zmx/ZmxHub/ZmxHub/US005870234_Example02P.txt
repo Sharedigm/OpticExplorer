@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 5,870,234 Example 2 (Schneider Super-Symmar XL 5.6 / 110 Asph)
+[variable distances]
+Focal Length	109.9
+Angle of View	105
+F-Number	5.6
+Image Height	288
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	101.27
+[lens data]
+1	169.672	3.000	1.52583	57.66	51.25
+2	23.884	8.465		40.48
+3	27.751	12.860	1.75844	37.34	52.09
+4	44.624	7.190		27.10	
+5	28.382	2.400	1.75844	22.18	52.09
+6	35.229	3.50		21.59
+6AS	AS	1.035		21.393
+7	73.026	10.470	1.59142	21.56	61.03
+8	-17.622	3.500	1.62408	20.87	36.12
+9	-31.197	1.360		20.87
+10	-30.837	3.300	1.50349	22.16	56.13
+11	152.036	Bf		28.88
+[aspherical data]
+9Dan	-31.197	0.236438877077712	-1.05793704101148E-05	2.67452541268679E-07	-1.36975602447967E-09	2.68738286814731E-12
+9	-31.197	0.236438877077712	8.710E-06	1.215E-08	-4.896E-11	3.574E-13
+[figure]
+source	Data/US005870234_Figure01P.png
+originX	223.64
+originY	364.86
+ppmm	9.089
+[notes]
+Bill: Schneider Super-Symmar XL F5.6 110mm Asph
+Focal Length and Image Height not specified taken from Super-Symmar Aspheric 5.6/110 XL
+Aspherical Data not specified. Using values provided by Dan Reiley but they don't converge that well.
+New aspherical data from Larry works better and is acceptable.

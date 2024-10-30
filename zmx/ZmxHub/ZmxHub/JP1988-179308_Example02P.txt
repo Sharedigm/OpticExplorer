@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 1988-179308 Example 2 (Canon EF50mm f2.5 Compact Macro)
+[constants]
+[variable distances]
+Focal Length	50.5	undefined
+Angle of View	46	undefined
+F-Number	2.5	3.5
+Image Height	43.2	43.2
+Magnification	0	-0.49934
+d0	Infinity	124.76
+d14	1.70	26.90
+Bf(p)	undefined	undefined
+Bf	38.91	38.91
+[lens data]
+1	76.72	2.25	1.72000	21.98	50.2
+2	-171.59	0.15		20.24
+3	25.09	3.60	1.80610	21.10	40.9
+4	65.72	0.60		18.80	
+5	462.21	3.27	1.60717	21.10	40.3
+6	16.17	4.00		16.95
+7	AS	3.10		15.649
+8	-38.34	3.30	1.69895	17.88	30.1
+9	-25.26	1.35		23.51
+10	-14.66	1.87	1.80518	17.33	25.4
+11	156.19	4.77	1.83400	22.89	37.2
+12	-25.25	0.25		22.89
+13	-88.58	3.60	1.77250	24.49	49.6
+14	-24.78	d14		24.49
+15	85.78	1.80	1.66672	30.47	48.3
+16	40.40	1.06		29.24
+17	64.44	3.00	1.58144	30.47	40.7
+18	1441.23	Bf		30.47
+[figure]
+source	Data/JP1988-179308_Figure01P.png
+originX	371.39
+originY	372.52
+ppmm	10.218
+[notes]
+Bill: Measured d0 and Magnification.

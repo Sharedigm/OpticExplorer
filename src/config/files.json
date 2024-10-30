@@ -21,6 +21,12 @@
 				"color": "silver",
 				"app": null
 			},
+			"abbe": {
+				"icon": "abbe.svg",
+				"font": "fa fa-map",
+				"color": "royalblue",
+				"app": "material_map_viewer"
+			},
 			"abc": {
 				"icon": "abc.svg",
 				"font": "fa fa-music",
@@ -435,11 +441,23 @@
 				"color": "#FF5364",
 				"app": "video_player"
 			},
+			"mtrl": {
+				"icon": "mtrl.svg",
+				"font": "fa fa-gem",
+				"color": "#0096E6",
+				"app": "material_editor"
+			},
 			"ogg": {
 				"icon": "ogg.svg",
 				"font": "fa fa-file-video",
 				"color": "#FF5364",
 				"app": "video_player"
+			},
+			"optc": {
+				"icon": "optc.svg",
+				"font": "fa fa-database rotated flipped",
+				"color": "royalblue",
+				"app": "optic_editor"
 			},
 			"otf": {
 				"icon": "otf.svg",
@@ -531,6 +549,12 @@
 				"color": "crimson",
 				"app": "code_editor"
 			},
+			"roa": {
+				"icon": "roa.svg",
+				"font": "fa fa-database rotated flipped",
+				"color": "rgb(53, 114, 165)",
+				"app": "optic_editor"
+			},
 			"rs": {
 				"icon": "rs.svg",
 				"font": "fa fa-file-code",
@@ -573,6 +597,12 @@
 				"color": "grey",
 				"app": "code_editor"
 			},
+			"spct": {
+				"icon": "spct.svg",
+				"font": "fa fa-rainbow",
+				"color": "#F29C1F",
+				"app": "spectrum_editor"
+			},
 			"sql": {
 				"icon": "sql.svg",
 				"font": "fa fa-database",
@@ -583,7 +613,7 @@
 				"icon": "svg.svg",
 				"font": "fa fa-file-image",
 				"color": "#E57E25",
-				"app": "image_viewer"
+				"app": "image-viewer"
 			},
 			"swift": {
 				"icon": "swift.svg",
@@ -753,6 +783,12 @@
 				"color": "#f2511f",
 				"app": "code_editor"
 			},
+			"zmx": {
+				"icon": "zmx.svg",
+				"font": "fa fa-database rotated flipped",
+				"color": "rgb(247, 127, 0)",
+				"app": "optic_editor"
+			},
 			"zip": {
 				"icon": "zip.svg",
 				"font": "fa fa-file-zipper",
@@ -864,13 +900,8 @@
 				"icon": ["news-empty.svg", "news-full.svg"]
 			},
 
-			"Aerial": {
-				"font": "fa fa-helicopter",
-				"icon": ["aerial-empty.svg", "aerial-full.svg"]
-			},
-
 			"Albums": {
-				"font": "fa fa-record-vinyl",
+				"font": "fa fa-play-circle",
 				"icon": ["albums-empty.svg", "albums-full.svg"]
 			},
 
@@ -884,24 +915,9 @@
 				"icon": ["apple-empty.svg", "apple-full.svg"]
 			},
 
-			"Apps": {
-				"font": "fa fa-rocket",
-				"icon": ["apps-empty.svg", "apps-full.svg"]
-			},
-
 			"Archives": {
 				"font": "fa fa-file-zipper",
 				"icon": ["archives-empty.svg", "archives-full.svg"]
-			},
-
-			"Astro": {
-				"font": "fa fa-moon",
-				"icon": ["astro-empty.svg", "astro-full.svg"]
-			},
-
-			"Astronomy": {
-				"font": "fa fa-moon",
-				"icon": ["astro-empty.svg", "astro-full.svg"]
 			},
 
 			"Audio": {
@@ -984,34 +1000,14 @@
 				"icon": ["facebook-empty.svg", "facebook-full.svg"]
 			},
 
-			"Fashion": {
-				"font": "fa fa-person-dress",
-				"icon": ["fashion-empty.svg", "fashion-full.svg"]
-			},
-
 			"Favorites": {
 				"font": "fa fa-star",
 				"icon": ["favorites-empty.svg", "favorites-full.svg"]
 			},
 
-			"Flowers": {
-				"font": "fa fa-gear",
-				"icon": ["flowers-empty.svg", "flowers-full.svg"]
-			},
-
 			"Fonts": {
-				"font": "fa fa-font",
+				"font": "fa-font",
 				"icon": ["fonts-empty.svg", "fonts-full.svg"]
-			},
-
-			"Games": {
-				"font": "fa fa-gamepad",
-				"icon": ["games-empty.svg", "games-full.svg"]
-			},
-
-			"Genres": {
-				"font": "fa fa-headphones",
-				"icon": ["genres-empty.svg", "genres-full.svg"]
 			},
 
 			"Github": {
@@ -1069,14 +1065,19 @@
 				"icon": ["scripts-empty.svg", "scripts-full.svg"]
 			},
 
-			"Landscapes": {
-				"font": "fa fa-image",
-				"icon": ["images-empty.svg", "images-full.svg"]
-			},
-
 			"Library": {
 				"font": "fa fa-book",
 				"icon": ["books-empty.svg", "books-full.svg"]
+			},
+
+			"Lights": {
+				"font": "fa fa-lightbulb",
+				"icon": ["lights-empty.svg", "lights-full.svg"]
+			},
+
+			"Materials": {
+				"font": "fa fa-gem",
+				"icon": ["materials-empty.svg", "materials-full.svg"]
 			},
 
 			"Mac": {
@@ -1084,19 +1085,9 @@
 				"icon": ["apple-empty.svg", "apple-full.svg"]
 			},
 
-			"Macro": {
-				"font": "fa fa-microscope",
-				"icon": ["macro-empty.svg", "macro-full.svg"]
-			},
-
 			"Maps": {
 				"font": "fa fa-map",
 				"icon": ["maps-empty.svg", "maps-full.svg"]
-			},
-
-			"Messages": {
-				"font": "fa fa-comment",
-				"icon": ["messages-empty.svg", "messages-full.svg"]
 			},
 
 			"Microsoft": {
@@ -1119,19 +1110,14 @@
 				"icon": ["music-empty.svg", "music-full.svg"]
 			},
 
-			"Nature": {
-				"font": "fa fa-tree",
-				"icon": ["trees-empty.svg", "trees-full.svg"]
-			},
-
-			"News": {
-				"font": "fa fa-newspaper",
-				"icon": ["news-empty.svg", "news-full.svg"]
-			},
-
 			"Notes": {
 				"font": "fa fa-sticky-note",
 				"icon": ["notes-empty.svg", "notes-full.svg"]
+			},
+
+			"Optics": {
+				"font": "fa fa-database rotated flipped",
+				"icon": ["optics-empty.svg", "optics-full.svg"]
 			},
 
 			"Patents": {
@@ -1144,11 +1130,6 @@
 				"icon": ["people-empty.svg", "people-full.svg"]
 			},
 
-			"Pets": {
-				"font": "fa fa-dog",
-				"icon": ["pets-empty.svg", "pets-full.svg"]
-			},
-
 			"Photos": {
 				"font": "fa fa-camera",
 				"icon": ["photos-empty.svg", "photos-full.svg"]
@@ -1159,19 +1140,9 @@
 				"icon": ["pictures-empty.svg", "pictures-full.svg"]
 			},
 
-			"Playlists": {
-				"font": "fa fa-list",
-				"icon": ["playlists-empty.svg", "playlists-full.svg"]
-			},
-
 			"Podcasts": {
 				"font": "fa fa-microphone",
 				"icon": ["podcasts-empty.svg", "podcasts-full.svg"]
-			},
-
-			"Portraits": {
-				"font": "fa fa-user",
-				"icon": ["portraits-empty.svg", "portraits-full.svg"]
 			},
 
 			"Posts": {
@@ -1251,22 +1222,17 @@
 
 			"Soundtracks": {
 				"font": "fa fa-play-circle",
-				"icon": ["soundtracks-empty.svg", "soundtracks-full.svg"]
+				"icon": ["albums-empty.svg", "albums-full.svg"]
 			},
 
-			"Sports": {
-				"font": "fa fa-football",
-				"icon": ["football-empty.svg", "football-full.svg"]
+			"Spectra": {
+				"font": "fa fa-rainbow",
+				"icon": ["spectra-empty.svg", "spectra-full.svg"]
 			},
 
 			"Spreadsheets": {
 				"font": "fa fa-calculator",
 				"icon": ["calculations-empty.svg", "calculations-full.svg"]
-			},
-
-			"Travel": {
-				"font": "fa fa-suitcase",
-				"icon": ["suitcase-empty.svg", "suitcase-full.svg"]
 			},
 
 			"Styles": {
@@ -1339,14 +1305,14 @@
 				"icon": ["websites-empty.svg", "websites-full.svg"]
 			},
 
-			"Wildlife": {
-				"font": "fa fa-horse",
-				"icon": ["deer-empty.svg", "deer-full.svg"]
-			},
-
 			"Windows": {
 				"font": "fab fa-windows",
 				"icon": ["windows-empty.svg", "windows-full.svg"]
+			},
+
+			"Zemax": {
+				"font": "fa fa-database rotated flipped",
+				"icon": ["optics-empty.svg", "optics-full.svg"]
 			}
 		}
 	},
@@ -1378,6 +1344,7 @@
 
 	"languages": {
 		"extensions": {
+			"abbe": "yaml",
 			"adb": "ada",
 			"ads": "ada",
 			"c": "c_cpp",
@@ -1404,12 +1371,14 @@
 			"kml": "xml",
 			"lsp": "lisp",
 			"m": "matlab",
-			"md": "markdown",
 			"mm": "objectivec",
+			"mtrl": "yaml",
+			"optc": "yaml",
 			"p": "pascal",
 			"pas": "pascal",
 			"pl": "perl",
 			"py": "python",
+			"roa": "yaml",
 			"rb": "ruby",
 			"rs": "rust",
 			"sc": "scala",
@@ -1418,8 +1387,10 @@
 			"tex": "latex",
 			"ts": "typescript",
 			"vbs": "vbscript",
+			"wavs": "yaml",
 			"yml": "yaml",
-			"yaml": "yaml"
+			"yaml": "yaml",
+			"zmx": "fortran"
 		}
 	}
 }

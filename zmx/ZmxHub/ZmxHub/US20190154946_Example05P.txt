@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 2019/0154946 Example 5 (Ricoh 18.3mm F2.8 (GR3))
+[constants]
+[variable distances]
+Focal Length	18.28
+Angle of View	76.4
+F-Number	2.87
+Image Height	28.4
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+1	17.034	0.70	1.51633	12.07	64.06	OHARA L-BSL7
+2	10.894	2.46		12.07
+3	-18.486	0.60	1.63980	10.34	34.47	OHARA S-TIM27
+4	8.332	2.75	1.88100	9.56	40.14	HOYA TAFD33
+5	-25.206	1.10		9.56		
+6	AS	1.20		6.920
+7	13.099	2.76	1.88100	9.08	40.14	HOYA TAFD33
+8	-8.666	0.50	1.69895	9.08	30.13	OHARA S-TIM35
+9	12.744	1.52		9.46		
+10	-16.835	1.00	1.88202	10.10	37.22	HOYA M-TAFD307
+11	-17.510	12.81		10.10
+12	CG	1.400	1.51633	31.50	64.14	
+13	CG	0.70		31.50		
+[aspherical data]
+2	10.894	0	2.49546E-04	5.30767E-06	-1.77772E-07	2.52567E-08	-9.46560E-10	1.70552E-11
+10	-16.835	0	2.21965E-04	-7.84181E-07				
+11	-17.510	7.28422	6.02712E-04	8.85505E-06	-5.39399E-08	4.60086E-09		
+[figure]
+source	Data/US20190154946_Figure05P.png
+originX	107.56
+originY	152.54
+ppmm	9.1116
+[notes]
+Bill: Repaired d11-13

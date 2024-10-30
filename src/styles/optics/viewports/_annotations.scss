@@ -1,0 +1,145 @@
+/******************************************************************************\
+|                                                                              |
+|                               _annotations.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$object-color: colors.$medium-blue;
+$image-color: colors.$light-red;
+$dark-object-color: colors.$medium-cyan;
+$dark-image-color: lighten(colors.$light-red, 10%);
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.annotation {
+		pointer-events: none;
+
+		// element annotations
+		//
+		&.lens, &.stop {
+			display: none;
+
+			// show element annotations when just one is selected
+			//
+			&:first-child:last-child {
+				display: block;
+			}
+		}
+	}
+
+	//
+	// hiding styles
+	//
+
+	&.hide-annotations {
+		.annotation {
+			display: none !important;
+		}
+	}
+
+	&.hide-thickness {
+		.annotation .thickness {
+			display: none;
+		}
+	}
+
+	&.hide-spacing {
+		.annotation .spacing {
+			display: none;
+		}
+	}
+
+	&.hide-focal-points {
+		.annotation .focal.point {
+			display: none;
+		}
+	}
+
+	&.hide-principal-planes {
+		.annotation .principal.plane {
+			display: none;
+		}
+	}
+}
+
+//
+// binary optic annotations
+//
+
+body.binary {
+
+	.optics .viewport, 
+	.abbe.diagram {
+
+		//
+		// line annotations
+		//
+
+		.line, .arc, .arrow {
+			stroke: black;
+		}
+	}
+}
+
+//
+// colored optic annotations
+//
+
+body:not(.binary) {
+	&.colored {
+
+		.optics .viewport {
+			.annotation {
+				&.object {
+					.line, .arrow, .arc {
+						stroke: $object-color;
+					}
+				}
+
+				&.image {
+					.line, .arrow, .arc {
+						stroke: $image-color;
+					}
+				}
+			}
+		}
+
+		//
+		// dark viewports
+		//
+
+		.optics .viewport.dark,
+		&.dark .optics .viewport.auto {
+
+			.annotation {
+				&.object {
+					.line, .arrow, .arc {
+						stroke: $dark-object-color;
+					}
+				}
+
+				&.image {
+					.line, .arrow, .arc {
+						stroke: $dark-image-color;
+					}
+				}
+			}
+		}
+	}
+}

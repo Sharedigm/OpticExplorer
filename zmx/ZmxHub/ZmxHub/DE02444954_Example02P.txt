@@ -1,0 +1,31 @@
+[descriptive data]
+title	DE 2444954 Example 2 (Rodenstock Grandagon-N 90mm f5.6)
+[variable distances]
+Focal Length	90
+Angle of View	104
+F-Number	4.5
+Image Height	232
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	62.77
+[lens data]
+1	91.73	6.65	1.4662	65.35	65.56
+2	22.96	11.90		41.15
+3	36.52	15.25	1.6776	41.25	31.97
+4	20.82	13.80	1.6251	24.40	52.86
+5	-20.24	1.00	1.5629	24.40	46.88
+6	164.89	2.10		23.40
+6.5	AS	0.65		21.511
+7	405.33	1.00	1.5855	21.55	59.19
+8	18.17	13.30	1.6113	22.00	58.65
+9	-15.23	11.25	1.6700	22.00	48.13
+10	-31.97	11.15		37.00
+11	-23.37	3.85	1.4891	39.50	70.22
+12	-116.31	Bf		56.60
+[figure]
+source	Data/DE02444954_Figure01P.png
+originX	48.27
+originY	480.20
+ppmm	10.663
+[notes]

@@ -1,0 +1,117 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dark-menus.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$dark-menu-color: white;
+$dark-menu-background-color: black;
+$dark-menu-select-color: black;
+$dark-menu-selected-background-color: white;
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	//
+	// dropdown menus
+	//
+
+	.dropdown-menu, .menu-content {
+		background-color: black;
+	}
+
+	//
+	// dropdown menu items
+	//
+
+	.menu, .dropdown-menu {
+		color: white;
+		background-color: black;
+		text-shadow: none;
+
+		.btn {
+			color: black;
+		}
+
+		//
+		// menu items
+		//
+
+		li {
+
+			> a {
+
+				//
+				// selected / highlighted items
+				//
+
+				&.selected, &:active {
+					color: $dark-menu-select-color;
+					background-color: $dark-menu-selected-background-color;
+				}
+
+				&:hover {
+					color: $dark-menu-select-color;
+					background-color: $dark-menu-selected-background-color;
+				}
+			}
+		}
+
+		//
+		// disabled menu items
+		//
+
+		li.disabled {
+
+			// inset shadow
+			//
+			&::after {
+				@include binary-colors.darken;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		> li {
+		
+			//
+			// open items
+			//
+
+			&.open {
+				> a, a:focus, &:active {
+					color: black;
+					background-color: white;
+					border-color: white;
+					text-shadow: none;
+
+					&:hover {
+						color: black;
+						background-color: white;
+						border-color: white;		
+					}
+				}
+			}
+		}
+	}
+}

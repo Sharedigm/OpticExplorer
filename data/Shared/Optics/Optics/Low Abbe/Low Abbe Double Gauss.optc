@@ -1,0 +1,114 @@
+################################################################################
+#                                                                              #
+#                          Low Abbe Double Gauss.optc                          #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Demo User                                                  #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 48.88 mm
+        diameter: 52 mm
+      - type: spherical
+        curvature: 182.96 mm
+        diameter: 49.7583 mm
+    thickness: 8.89 mm
+    spacing: 0.38 mm
+    material:
+      n: 1.62286
+      v: 10
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 36.92 mm
+        diameter: 44.9154 mm
+      - type: planar
+        diameter: 38.344 mm
+    thickness: 15.11 mm
+    material:
+      n: 1.58565
+      v: 10
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 38.344 mm
+      - type: spherical
+        curvature: 23.06 mm
+        diameter: 31.383 mm
+    thickness: 2.31 mm
+    spacing: 9.14 mm
+    material:
+      n: 1.67764
+      v: 10
+
+  - type: stop
+    aperture: 30.6556 mm
+    diameter: 45.9834 mm
+    spacing: 13.36 mm
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -23.91 mm
+        diameter: 31.1353 mm
+      - type: planar
+        diameter: 38.213 mm
+    thickness: 1.92 mm
+    material:
+      n: 1.57046
+      v: 5
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 38.213 mm
+      - type: spherical
+        curvature: -36.92 mm
+        diameter: 39.9016 mm
+    thickness: 7.77 mm
+    spacing: 0.38 mm
+    material:
+      n: 1.64128
+      v: 10
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 1063.24 mm
+        diameter: 44 mm
+      - type: spherical
+        curvature: -48.88 mm
+        diameter: 45.0391 mm
+    thickness: 6.73 mm
+    spacing: 59.2158 mm
+    material:
+      n: 1.62286
+      v: 10
+
+  - type: sensor
+    width: 36 mm
+    height: 24 mm
+    horizontal: 6000
+    vertical: 4000
+
+LIGHTS:
+
+  - type: distant
+    distance: 15 mm
+    angle: 0
+    spectrum: Visible (x10)
+    number_of_rays: 10
+
+OBJECTS: []

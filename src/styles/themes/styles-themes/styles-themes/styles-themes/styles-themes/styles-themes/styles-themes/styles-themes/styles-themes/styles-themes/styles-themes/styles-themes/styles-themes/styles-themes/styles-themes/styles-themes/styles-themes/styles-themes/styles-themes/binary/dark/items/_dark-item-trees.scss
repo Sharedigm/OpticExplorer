@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-item-trees.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	//
+	// desktop mainbar trees
+	//
+
+	.desktop .mainbar {
+		.item-tree {
+
+			> .info {
+			
+				//
+				// expanders
+				//
+
+				/*
+				.expander {
+					button i {
+						color: white;
+						text-shadow: none !important;
+					}
+				}
+				*/
+			}
+		}
+	}
+}

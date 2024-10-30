@@ -1,12 +1,12 @@
 <p align="center">
   <div align="center">
-    <img src="../images/logos/sharedigm-icon.svg" alt="Logo" style="width:25%">
+    <img src="../images/logos/logo.svg" alt="Logo" style="width:25%">
   </div>
 </p>
 
 # CentOS Web Server Configuration
 
-The following are instructions for configuring a CentOS web server to run Sharedigm.
+The following are instructions for configuring a CentOS web server to run OpticExplorer.
 
 ## 1) Update System
 

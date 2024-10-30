@@ -1,0 +1,895 @@
+################################################################################
+#                                                                              #
+#                                 Sumita.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: K-LaSFn22
+    catalog: Sumita
+    n: 1.89800
+    v: 34.0
+
+  - name: K-VC181
+    catalog: Sumita
+    n: 1.81055
+    v: 41.1
+
+  - name: K-LaFK58
+    catalog: Sumita
+    n: 1.69560
+    v: 59.0
+
+  - name: K-GIR140
+    catalog: Sumita
+    n: 1.75106
+    v: 43.1
+
+  - name: K-LaKn14
+    catalog: Sumita
+    n: 1.74100
+    v: 52.7
+
+  - name: K-VC91
+    catalog: Sumita
+    n: 1.88660
+    v: 35.0
+
+  - name: K-PSK200(M)
+    catalog: Sumita
+    n: 1.61083
+    v: 58.9
+
+  - name: K-LaSFn1
+    catalog: Sumita
+    n: 1.80610
+    v: 40.7
+
+  - name: K-PSFn2
+    catalog: Sumita
+    n: 2.00170
+    v: 20.6
+
+  - name: K-PSFn202
+    catalog: Sumita
+    n: 2.01960
+    v: 21.5
+
+  - name: K-PSK200
+    catalog: Sumita
+    n: 1.61305
+    v: 59.0
+
+  - name: K-LaSFn14
+    catalog: Sumita
+    n: 1.83400
+    v: 37.3
+
+  - name: K-PSFn4(M)
+    catalog: Sumita
+    n: 1.83932
+    v: 24.8
+
+  - name: K-VC185(M)
+    catalog: Sumita
+    n: 1.84909
+    v: 40.5
+
+  - name: K-PSFn214
+    catalog: Sumita
+    n: 2.14355
+    v: 17.8
+
+  - name: K-PSFn215
+    catalog: Sumita
+    n: 2.15400
+    v: 17.2
+
+  - name: K-SSK1
+    catalog: Sumita
+    n: 1.61720
+    v: 54.0
+
+  - name: K-LaFK55
+    catalog: Sumita
+    n: 1.69400
+    v: 56.3
+
+  - name: K-VC82(M)
+    catalog: Sumita
+    n: 1.75028
+    v: 45.4
+
+  - name: K-PMK30
+    catalog: Sumita
+    n: 1.52500
+    v: 70.4
+
+  - name: K-PSFn203
+    catalog: Sumita
+    n: 2.01700
+    v: 20.8
+
+  - name: K-PSFn3
+    catalog: Sumita
+    n: 1.83917
+    v: 23.9
+
+  - name: K-GFK68
+    catalog: Sumita
+    n: 1.59240
+    v: 68.3
+
+  - name: K-VC90
+    catalog: Sumita
+    n: 1.85280
+    v: 39.0
+
+  - name: K-PSFn5(M)
+    catalog: Sumita
+    n: 1.91643
+    v: 22.4
+
+  - name: K-CSK120(M)
+    catalog: Sumita
+    n: 1.58445
+    v: 59.2
+
+  - name: K-BOC20
+    catalog: Sumita
+    n: 2.00540
+    v: 27.7
+
+  - name: K-SKF6(M)
+    catalog: Sumita
+    n: 1.50847
+    v: 52.6
+
+  - name: K-LaKn7
+    catalog: Sumita
+    n: 1.67000
+    v: 51.7
+
+  - name: K-VC179
+    catalog: Sumita
+    n: 1.79890
+    v: 41.8
+
+  - name: K-SK7
+    catalog: Sumita
+    n: 1.60729
+    v: 59.5
+
+  - name: K-VC179(M)
+    catalog: Sumita
+    n: 1.79441
+    v: 41.9
+
+  - name: K-LaFn3
+    catalog: Sumita
+    n: 1.70000
+    v: 48.0
+
+  - name: K-LaSFn23
+    catalog: Sumita
+    n: 1.91100
+    v: 35.2
+
+  - name: K-ZnSF8
+    catalog: Sumita
+    n: 1.71430
+    v: 38.9
+
+  - name: K-PSK400(M)
+    catalog: Sumita
+    n: 1.59179
+    v: 67.7
+
+  - name: K-BaFn1
+    catalog: Sumita
+    n: 1.68250
+    v: 44.5
+
+  - name: K-LaFK65(M)
+    catalog: Sumita
+    n: 1.65224
+    v: 62.2
+
+  - name: K-VC100(M)
+    catalog: Sumita
+    n: 1.79916
+    v: 43.5
+
+  - name: K-VC78
+    catalog: Sumita
+    n: 1.66955
+    v: 55.4
+
+  - name: K-PSK400
+    catalog: Sumita
+    n: 1.59500
+    v: 67.8
+
+  - name: K-PSFn173(M)
+    catalog: Sumita
+    n: 2.14342
+    v: 17.3
+
+  - name: K-PFK85(M)
+    catalog: Sumita
+    n: 1.48375
+    v: 85.0
+
+  - name: K-VC90(M)
+    catalog: Sumita
+    n: 1.84859
+    v: 38.9
+
+  - name: K-CaFK95
+    catalog: Sumita
+    n: 1.43425
+    v: 95.0
+
+  - name: K-VC80(M)
+    catalog: Sumita
+    n: 1.68983
+    v: 52.9
+
+  - name: K-PSFn4
+    catalog: Sumita
+    n: 1.84400
+    v: 24.8
+
+  - name: K-LaSFn7
+    catalog: Sumita
+    n: 1.77250
+    v: 49.6
+
+  - name: K-PG395(M)
+    catalog: Sumita
+    n: 1.65296
+    v: 36.8
+
+  - name: K-SK18RH
+    catalog: Sumita
+    n: 1.63854
+    v: 55.5
+
+  - name: K-BPG2
+    catalog: Sumita
+    n: 1.55920
+    v: 53.9
+
+  - name: K-LaFK58(M)
+    catalog: Sumita
+    n: 1.69097
+    v: 58.4
+
+  - name: K-VC89(M)
+    catalog: Sumita
+    n: 1.80590
+    v: 40.9
+
+  - name: K-VC99(M)
+    catalog: Sumita
+    n: 1.84604
+    v: 41.5
+
+  - name: K-PSK300(M)
+    catalog: Sumita
+    n: 1.59690
+    v: 65.3
+
+  - name: K-LCV93(M)
+    catalog: Sumita
+    n: 1.66355
+    v: 47.2
+
+  - name: K-LaK6
+    catalog: Sumita
+    n: 1.64250
+    v: 58.1
+
+  - name: K-PBK40(M)
+    catalog: Sumita
+    n: 1.51497
+    v: 63.3
+
+  - name: K-PBK50(M)
+    catalog: Sumita
+    n: 1.52025
+    v: 62.2
+
+  - name: K-FIR98UV
+    catalog: Sumita
+    n: 1.42537
+    v: 97.8
+
+  - name: K-PG325(M)
+    catalog: Sumita
+    n: 1.50506
+    v: 70.4
+
+  - name: K-PG395
+    catalog: Sumita
+    n: 1.65800
+    v: 36.9
+
+  - name: K-CD120
+    catalog: Sumita
+    n: 1.72250
+    v: 29.2
+
+  - name: K-LaK10
+    catalog: Sumita
+    n: 1.72000
+    v: 50.3
+
+  - name: K-LaK11
+    catalog: Sumita
+    n: 1.65830
+    v: 57.3
+
+  - name: K-CaFK95(M)
+    catalog: Sumita
+    n: 1.43312
+    v: 95.0
+
+  - name: K-PMK30(M)
+    catalog: Sumita
+    n: 1.52002
+    v: 70.2
+
+  - name: K-LaFn5
+    catalog: Sumita
+    n: 1.74300
+    v: 49.2
+
+  - name: K-SFLD66
+    catalog: Sumita
+    n: 1.79925
+    v: 24.6
+
+  - name: K-LaK7
+    catalog: Sumita
+    n: 1.65160
+    v: 58.3
+
+  - name: K-BOC30
+    catalog: Sumita
+    n: 2.00680
+    v: 26.2
+
+  - name: K-CD45(M)
+    catalog: Sumita
+    n: 1.68673
+    v: 34.1
+
+  - name: K-LaFK65
+    catalog: Sumita
+    n: 1.65670
+    v: 62.3
+
+  - name: K-FK5
+    catalog: Sumita
+    n: 1.48749
+    v: 70.4
+
+  - name: K-SFLD8
+    catalog: Sumita
+    n: 1.68893
+    v: 31.1
+
+  - name: K-LaF2
+    catalog: Sumita
+    n: 1.74400
+    v: 44.9
+
+  - name: K-GIR79
+    catalog: Sumita
+    n: 1.85588
+    v: 33.0
+
+  - name: K-LaFn11
+    catalog: Sumita
+    n: 1.72013
+    v: 46.0
+
+  - name: K-PSFn214(M)
+    catalog: Sumita
+    n: 2.13909
+    v: 17.7
+
+  - name: K-PSK11
+    catalog: Sumita
+    n: 1.56580
+    v: 61.0
+
+  - name: K-VC91(M)
+    catalog: Sumita
+    n: 1.88175
+    v: 34.9
+
+  - name: K-LaFK50(M)
+    catalog: Sumita
+    n: 1.76831
+    v: 49.7
+
+  - name: K-PSFn5
+    catalog: Sumita
+    n: 1.92110
+    v: 22.4
+
+  - name: K-LaSFn6
+    catalog: Sumita
+    n: 1.80400
+    v: 46.6
+
+  - name: K-PFK85
+    catalog: Sumita
+    n: 1.48563
+    v: 85.2
+
+  - name: K-SFLD11
+    catalog: Sumita
+    n: 1.78472
+    v: 25.9
+
+  - name: K-PSK500(M)
+    catalog: Sumita
+    n: 1.55000
+    v: 71.9
+
+  - name: K-VC80
+    catalog: Sumita
+    n: 1.69384
+    v: 53.1
+
+  - name: K-SFLD4
+    catalog: Sumita
+    n: 1.75520
+    v: 27.5
+
+  - name: K-VC79
+    catalog: Sumita
+    n: 1.61035
+    v: 57.9
+
+  - name: K-SK16RH
+    catalog: Sumita
+    n: 1.62041
+    v: 60.3
+
+  - name: K-PSFn3(M)
+    catalog: Sumita
+    n: 1.83352
+    v: 24.0
+
+  - name: K-SSK4
+    catalog: Sumita
+    n: 1.61765
+    v: 55.1
+
+  - name: K-LaFK50
+    catalog: Sumita
+    n: 1.77200
+    v: 50.0
+
+  - name: K-PSK300
+    catalog: Sumita
+    n: 1.59950
+    v: 65.6
+
+  - name: K-LaFK50T
+    catalog: Sumita
+    n: 1.76600
+    v: 49.8
+
+  - name: K-LaSFn10
+    catalog: Sumita
+    n: 1.81550
+    v: 44.4
+
+  - name: K-LaSKn1
+    catalog: Sumita
+    n: 1.75500
+    v: 52.4
+
+  - name: K-PSKn2
+    catalog: Sumita
+    n: 1.61800
+    v: 63.4
+
+  - name: K-LaK8
+    catalog: Sumita
+    n: 1.71300
+    v: 53.9
+
+  - name: K-PG375(M)
+    catalog: Sumita
+    n: 1.53922
+    v: 62.7
+
+  - name: K-CSK120
+    catalog: Sumita
+    n: 1.58700
+    v: 59.6
+
+  - name: K-PFK90
+    catalog: Sumita
+    n: 1.45880
+    v: 90.0
+
+  - name: K-LaFK55(M)
+    catalog: Sumita
+    n: 1.68875
+    v: 55.8
+
+  - name: K-LaK12
+    catalog: Sumita
+    n: 1.67790
+    v: 55.5
+
+  - name: K-VC185
+    catalog: Sumita
+    n: 1.85375
+    v: 40.6
+
+  - name: K-LaKn2
+    catalog: Sumita
+    n: 1.64050
+    v: 60.1
+
+  - name: K-LaSFn9
+    catalog: Sumita
+    n: 1.81600
+    v: 46.7
+
+  - name: K-VC79(M)
+    catalog: Sumita
+    n: 1.60737
+    v: 57.2
+
+  - name: K-BaF9
+    catalog: Sumita
+    n: 1.64328
+    v: 47.8
+
+  - name: K-VC99
+    catalog: Sumita
+    n: 1.85060
+    v: 41.6
+
+  - name: K-VC78(M)
+    catalog: Sumita
+    n: 1.66624
+    v: 55.1
+
+  - name: K-BaF8
+    catalog: Sumita
+    n: 1.62374
+    v: 47.1
+
+  - name: K-LaSFn8
+    catalog: Sumita
+    n: 1.83500
+    v: 42.7
+
+  - name: K-LaKn11
+    catalog: Sumita
+    n: 1.65830
+    v: 53.4
+
+  - name: K-SSK9
+    catalog: Sumita
+    n: 1.62012
+    v: 49.8
+
+  - name: K-SFLDn3
+    catalog: Sumita
+    n: 1.84666
+    v: 23.9
+
+  - name: K-PSFn2(M)
+    catalog: Sumita
+    n: 1.99670
+    v: 20.6
+
+  - name: K-VC82
+    catalog: Sumita
+    n: 1.75550
+    v: 45.6
+
+  - name: K-SFLD6
+    catalog: Sumita
+    n: 1.80518
+    v: 25.4
+
+  - name: K-PSK100
+    catalog: Sumita
+    n: 1.59170
+    v: 60.7
+
+  - name: K-LaSFn4
+    catalog: Sumita
+    n: 1.78500
+    v: 43.7
+
+  - name: K-PBK50
+    catalog: Sumita
+    n: 1.52250
+    v: 62.3
+
+  - name: K-LaK9
+    catalog: Sumita
+    n: 1.69100
+    v: 54.8
+
+  - name: K-PG375
+    catalog: Sumita
+    n: 1.54250
+    v: 62.9
+
+  - name: K-PFK80(M)
+    catalog: Sumita
+    n: 1.49533
+    v: 80.8
+
+  - name: K-PFK90(M)
+    catalog: Sumita
+    n: 1.45733
+    v: 89.8
+
+  - name: K-LaK14
+    catalog: Sumita
+    n: 1.69680
+    v: 55.6
+
+  - name: K-LaKn4
+    catalog: Sumita
+    n: 1.67100
+    v: 57.2
+
+  - name: K-SKLD120
+    catalog: Sumita
+    n: 1.58680
+    v: 59.8
+
+  - name: K-SK4
+    catalog: Sumita
+    n: 1.61272
+    v: 58.6
+
+  - name: K-LaFK60(M)
+    catalog: Sumita
+    n: 1.62848
+    v: 63.2
+
+  - name: K-LaFK60
+    catalog: Sumita
+    n: 1.63246
+    v: 63.8
+
+  - name: K-VC89
+    catalog: Sumita
+    n: 1.81000
+    v: 41.0
+
+  - name: K-BaSF4
+    catalog: Sumita
+    n: 1.65128
+    v: 38.3
+
+  - name: K-BK7
+    catalog: Sumita
+    n: 1.51633
+    v: 64.1
+
+  - name: K-LaK18
+    catalog: Sumita
+    n: 1.72916
+    v: 54.7
+
+  - name: K-LaSFn16
+    catalog: Sumita
+    n: 1.78830
+    v: 47.4
+
+  - name: K-ZnSF8(M)
+    catalog: Sumita
+    n: 1.71143
+    v: 38.9
+
+  - name: K-VC181(M)
+    catalog: Sumita
+    n: 1.80614
+    v: 41.1
+
+  - name: K-PG325
+    catalog: Sumita
+    n: 1.50670
+    v: 70.5
+
+  - name: K-LaSFn3
+    catalog: Sumita
+    n: 1.79950
+    v: 42.3
+
+  - name: K-SK15
+    catalog: Sumita
+    n: 1.62299
+    v: 58.1
+
+  - name: K-PFK80
+    catalog: Sumita
+    n: 1.49700
+    v: 81.5
+
+  - name: K-PSK500
+    catalog: Sumita
+    n: 1.55215
+    v: 72.0
+
+  - name: K-GFK70(M)
+    catalog: Sumita
+    n: 1.56627
+    v: 71.3
+
+  - name: K-SFLD14
+    catalog: Sumita
+    n: 1.76182
+    v: 26.5
+
+  - name: K-PSK100(M)
+    catalog: Sumita
+    n: 1.58792
+    v: 60.6
+
+  - name: K-SFLD1
+    catalog: Sumita
+    n: 1.71736
+    v: 29.5
+
+  - name: K-PSFn202(M)
+    catalog: Sumita
+    n: 2.01365
+    v: 21.4
+
+  - name: K-CD45
+    catalog: Sumita
+    n: 1.69320
+    v: 33.7
+
+  - name: K-PSFn1(M)
+    catalog: Sumita
+    n: 1.89945
+    v: 21.3
+
+  - name: K-SKLD120(M)
+    catalog: Sumita
+    n: 1.58401
+    v: 59.5
+
+  - name: K-LaFK50T(M)
+    catalog: Sumita
+    n: 1.76209
+    v: 49.6
+
+  - name: K-SK14
+    catalog: Sumita
+    n: 1.60311
+    v: 60.7
+
+  - name: K-PSFn1
+    catalog: Sumita
+    n: 1.90680
+    v: 21.2
+
+  - name: K-LaSFn2
+    catalog: Sumita
+    n: 1.80500
+    v: 39.6
+
+  - name: K-SKF6
+    catalog: Sumita
+    n: 1.51200
+    v: 52.1
+
+  - name: K-CD120(M)
+    catalog: Sumita
+    n: 1.71466
+    v: 29.6
+
+  - name: K-PSK11(M)
+    catalog: Sumita
+    n: 1.55985
+    v: 61.0
+
+  - name: K-PSFn203(M)
+    catalog: Sumita
+    n: 2.01105
+    v: 20.8
+
+  - name: K-LaSFn17
+    catalog: Sumita
+    n: 1.88300
+    v: 40.8
+
+  - name: K-SSK3
+    catalog: Sumita
+    n: 1.61484
+    v: 51.1
+
+  - name: K-PBK40
+    catalog: Sumita
+    n: 1.51760
+    v: 63.5
+
+  - name: K-GFK70
+    catalog: Sumita
+    n: 1.56907
+    v: 71.3
+
+  - name: K-FIR97UV
+    catalog: Sumita
+    n: 1.42580
+    v: 97.4
+
+  - name: K-BaFn3
+    catalog: Sumita
+    n: 1.66422
+    v: 49.2
+
+  - name: K-LCV93
+    catalog: Sumita
+    n: 1.66520
+    v: 47.3
+
+  - name: K-VC100
+    catalog: Sumita
+    n: 1.80400
+    v: 43.6
+
+  - name: K-BaSF5
+    catalog: Sumita
+    n: 1.60323
+    v: 42.5
+
+  - name: K-SK18
+    catalog: Sumita
+    n: 1.63854
+    v: 55.5
+
+  - name: K-LaSFn21
+    catalog: Sumita
+    n: 1.85000
+    v: 32.4
+
+  - name: K-SK5
+    catalog: Sumita
+    n: 1.58913
+    v: 61.2
+
+  - name: K-PSFn173
+    catalog: Sumita
+    n: 2.14780
+    v: 17.3
+
+  - name: K-LaKn5
+    catalog: Sumita
+    n: 1.65000
+    v: 55.8
+
+  - name: K-GFK68(M)
+    catalog: Sumita
+    n: 1.58998
+    v: 68.3

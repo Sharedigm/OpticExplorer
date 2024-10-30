@@ -1,0 +1,28 @@
+[descriptive data]
+title	DE 1 018 236 B Example 1 (Leica Telyt 400mm F5 (Wetzlar 1957))
+[constants]
+[variable distances]
+Focal Length	400
+Angle of View	undefined
+F-Number	5.0
+Image Height	43.2
+Total Length	336.8
+Magnification	0
+d0	Infinity
+Bf(p)	175.3
+Bf	175.68
+[lens data]
+1	119	11.7	1.5687	83.00	63.1
+2	-309.8	29.3		83.00
+3	-160.9	5.9	1.7283	64.34	28.3
+4	1148.7	92.2		68.97
+4AS	AS	10.2		42.492
+5	57.65	8.3	1.5827	43.79	46.5
+6	-1443	3.9	1.5148	43.79	60.6
+7	44.06	Bf		40.82
+[figure]
+source	Data/DE01018236_Figure01P.png
+originX	33.50
+originY	88.38
+ppmm	1.695
+[notes]

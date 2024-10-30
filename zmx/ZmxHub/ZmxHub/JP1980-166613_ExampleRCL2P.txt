@@ -1,0 +1,32 @@
+[descriptive data]
+title	JP 1980-166613 Example RCL2 (Nikon TC-301)
+[constants]
+Lateral Magnification	-2
+Lateral Magnification(m)	-2.00002
+[variable distances]
+Focal Length	-236.415
+Angle of View	undefined
+F-Number	undefined
+Total Length	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	63.11
+[lens data]
+1	179.709	3.7	1.59507	28.37	35.6
+2	-90.827	2		28.37
+3	-109.097	2.1	1.74443	28.37	49.4
+4	32.52	2.1		28.37
+5	40.56	4.2	1.59507	28.37	35.6
+6	99.049	66.24		28.37
+7	317.64	6.2	1.50137	41.82	56.5
+8	-55.266	0.2		41.82
+9	-195.754	1.8	1.80454	41.82	39.5
+10	267.716	Bf		41.82
+[figure]
+source	Data/JP1980-166613_Figure02RCLP.png
+originX	60.63
+originY	382.16
+ppmm	10.397
+[notes]
+Bill: Bf from Example 2

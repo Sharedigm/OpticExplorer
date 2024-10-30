@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 4,793,698 Example 1 (Ricoh smc Pentax-F 135mm F2.8 [IF])
+[constants]
+Scaled	131	100
+[variable distances]
+Focal Length	131	undefined
+Angle of View	18.8	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.24997
+d0	Infinity	581.58
+d8	9.494	33.540
+d8AS	2.620	26.666
+d11	14.086	4.467
+d13	18.438	4.010
+Bf(p)	undefined	undefined
+Bf	45.02	45.02
+[lens data]					
+1	71.732	5.663	1.48749	48.57	70.1
+2	840.573	0.170		48.57	
+3	42.379	5.862	1.58913	46.56	61.0
+4	96.944	0.170		45.72	
+5	29.623	6.093	1.71300	41.27	53.8
+6	53.111	2.721		39.40	
+7	54.875	2.000	1.76182	35.97	27.5
+8	20.391	6.874		29.83	
+8AS	AS	d8AS		28.158
+9	87.039	2.000	1.77250	27.82	49.6
+10	27.375	3.051	1.74077	27.82	27.8
+11	39.776	d11		25.26	
+12	-89.810	2.000	1.51633	21.96	64.1
+13	-240.021	d13		23.53	
+14	59.127	5.312	1.53172	35.55	48.9
+15	-315.553	Bf		35.55	
+[figure]
+source	Data/US004793698_Figure01P.png
+originX	19.92
+originY	113.64
+ppmm	3.127
+[notes]
+Bill: d0 measured.

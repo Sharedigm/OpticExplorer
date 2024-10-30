@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 4,468,100 Example 1 (Ricoh smc Pentax-F 28mm F2.8)
+[constants]
+[variable distances]
+Focal Length	28.78
+Angle of View	75.2
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	36.79
+[lens data]
+1	38.000	1.40	1.58913	31.40	61.0
+2	16.614	6.46		25.94	
+3	34.000	1.30	1.51633	24.50	64.1
+4	14.850	7.17		21.71
+5	25.674	4.50	1.70000	19.12	48.1
+6	-151.327	4.22		19.12
+6AS	AS	0.40		15.171
+7	94.860	4.75	1.65844	16.58	50.9
+8	-28.090	4.00		16.58	
+9	-17.929	3.33	1.76182	15.19	26.6
+10	48.280	1.19		13.64
+11	-33.552	2.40	1.69350	13.64	53.2
+12	-16.160	0.10		16.47
+13	-1141.732	2.50	1.69350	19.68	53.2
+14	-30.500	Bf		19.68
+[figure]
+source	Data/US004468100_Figure01P.png
+originX	5.56
+originY	64.49
+ppmm	3.751
+[notes]

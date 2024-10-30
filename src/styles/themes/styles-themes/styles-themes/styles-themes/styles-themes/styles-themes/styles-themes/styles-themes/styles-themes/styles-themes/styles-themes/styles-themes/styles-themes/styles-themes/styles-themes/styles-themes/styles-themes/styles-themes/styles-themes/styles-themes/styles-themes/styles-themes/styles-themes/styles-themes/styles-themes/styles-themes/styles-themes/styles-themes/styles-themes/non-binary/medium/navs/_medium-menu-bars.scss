@@ -1,0 +1,90 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-menu-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../navs/medium-menus";
+
+//
+// colors
+//
+
+$transparent-menu-bar-item-color: colors.faded(colors.$medium-grey, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.menu-bar {
+		> ul.nav-menus {
+			
+			> li {
+				> a, > a:focus {
+					color: medium-menus.$text-color;
+					background: none;
+
+					> i {
+						color: medium-menus.$icon-color;
+					}
+				}
+			}
+
+			//
+			// disabled menu bar items
+			//
+
+			> li.disabled {
+				a {
+					color: medium-menus.$disabled-text-color;
+					background: none;
+
+					> i {
+						color: medium-menus.$disabled-text-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// transparent desktop menu bar items
+	//
+
+	&.transparent, &.translucent {
+		&.menu-margins #desktop {
+			.header-bar {
+				.menu-bar {
+					> ul.nav-menus {
+
+						> li.open {
+							> a, > a:focus, > a:hover, > a:active {
+								color: text-colors.$dark-color;
+								background: $transparent-menu-bar-item-color;
+								border-color: transparent;
+
+								i {
+									color: colors.$dark-grey;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

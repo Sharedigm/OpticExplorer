@@ -1,0 +1,35 @@
+[descriptive data]
+title	US 7,706,085 Example 1 (Olympus Zuiko Digital 25mm F2.8)
+[constants]
+[variable distances]
+Focal Length	25.38
+Angle of View	49.8
+F-Number	2.9
+Image Height	22.300
+Total Length	57.72
+Magnification	0
+d0	Infinity
+Bf	32.034
+[lens data]
+1	17.064	2.80	1.80610	19.00	33.27
+2	36.465	0.13		16.28	
+3	16.356	0.95	1.69680	15.44	55.53
+4	7.966	5.57		12.50	
+5	AS	7.70		8.244
+6	-10.584	0.83	1.75520	11.30	27.51
+7	84.666	3.36	1.69680	14.80	55.53
+8	-16.611	0.15		14.80	
+9	670.610	4.20	1.74250	16.98	49.30
+10	-13.770	29.75		16.98	
+11	CG	4.57	1.51633	25.02	64.14
+12	CG	1.06		25.02	
+[aspherical data]
+9	670.610	-999.0134	-1.7520E-05	5.9396E-08	-1.9307E-09	1.1985E-12
+10	-13.770	-0.4098	3.1377E-06	2.1734E-08	-5.7979E-10	-1.2876E-11
+[figure]
+source	Data/US007706085_Figure01P.png
+originX	14.43
+originY	92.54
+ppmm	2.961
+[notes]
+Bill: Repaired a10 conic sign.

@@ -1,0 +1,40 @@
+[descriptive data]
+title	JP 2008-003108 Example 1 (Sigma 8mm F3.5 EX DG Circular Fisheye)
+[constants]
+[variable distances]
+Focal Length	8.1482
+Angle of View	180
+Angle of View(m)	180.01
+F-Number	3.5
+Image Height	22.71
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	40.8006
+Df	1.7826
+[lens data]
+1	102.10	2.70	1.58913	62.74	61.2
+2	17.84	11.47		34.63
+3	69.18	4.88	1.80518	32.70	25.4
+4	-69.18	1.50	1.80420	32.70	46.5
+5	14.35	14.20		21.78	
+6	91.03	1.93	1.80420	16.86	46.5
+7	11.00	6.42	1.67270	16.86	32.1
+8	-29.15	2.55		16.86	
+9	-43.87	2.80	1.80420	11.96	46.5
+10	10.53	3.00	1.53172	11.96	48.6
+11	-61.89	7.239		11.96	
+12	AS	3.011		10.841
+13	35.09	1.00	1.71700	15.20	48.1
+14	19.91	4.10	1.49700	15.20	81.6
+15	-19.91	0.15		15.20	
+16	44.05	1.00	1.80610	14.84	33.3
+17	16.44	4.00	1.48749	14.84	70.2
+18	-28.09	Bf		14.84	
+[figure]
+source	Data/JP2008-003108_Figure01P.png
+originX	5.53
+originY	67.52
+ppmm	1.696
+[notes]
+Bill: Image Height from Angle of View

@@ -1,0 +1,151 @@
+/******************************************************************************\
+|                                                                              |
+|                            _light-item-cards.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../navs/light-selection";
+
+//
+// variables
+//
+
+$background-opacity: 25%;
+
+//
+// colors
+//
+
+$background-color: colors.faded(colors.$very-very-light-grey, $background-opacity);
+$border-color: transparent;
+$highlighted-background-color: light-selection.$highlight-color;
+$highlighted-border-color: light-selection.$highlight-color;
+$selected-background-color: colors.faded(light-selection.$select-color, 50%);
+$selected-background-color: light-selection.$select-color;
+$selected-border-color: light-selection.$select-color;
+$cards-background-color: transparent;
+$cards-border-color: transparent;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.card-grid {
+	
+		.cards {
+			background-color: $cards-background-color;
+			border-color: $cards-border-color;
+
+			//
+			// light items
+			//
+			
+			.item {
+				.card {
+					background-color: $background-color;
+					border-color: $border-color;
+
+					.info {
+						.name {
+
+							//
+							// light editable names
+							//
+						
+							&[contenteditable="true"] {
+								outline-color: light-selection.$edit-highlight-color;
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// highlighted items
+			//
+
+			.item.highlighted {
+				.card {
+					color: white;
+					background-color: $highlighted-background-color;
+					border-color: $highlighted-border-color;
+				}
+			}
+
+			//
+			// light selected items
+			//
+
+			.item.selected {
+				.card {
+					.info {
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: white;
+							}
+						}
+
+						.details {
+							color: white;
+							background-color: light-selection.$select-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.card-grid {
+			.cards {
+
+				//
+				// selected items
+				//
+
+				.item.selected {
+					.card {
+						background-color: $highlighted-background-color;
+						border-color: $highlighted-border-color;
+
+						.info {
+							.name {
+
+								//
+								// uneditable names
+								//
+
+								&:not([contenteditable="true"]) {
+									background-color: $highlighted-background-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

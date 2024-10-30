@@ -1,0 +1,138 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-item-icons.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	.icon-grid {
+		.item {
+
+			//
+			// unselected items
+			//
+
+			&:not(.selected):not(.highlighted) {
+
+				> .row:first-child {
+					.icon {
+
+						//
+						// images
+						//
+
+						> svg {
+
+		 					// no shadows
+							//
+							-webkit-filter: none;
+							filter: none;
+						}
+					}
+				}
+			}
+
+			//
+			// selected items
+			//
+
+			&.selected {
+
+				> .row:first-child {
+					.icon {
+						@include binary-colors.dark-grey;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// desktop mainbar icons
+	//
+
+	.desktop.app .body .file-browser .mainbar .items > .icon-grid {
+		.item {
+
+			//
+			// unselected desktop items
+			//
+
+			&:not(.selected):not(.highlighted) {
+
+				> .row:first-child {
+					.icon {
+						i {
+							color: white;
+						}
+					}
+				}
+
+				/*
+				> .row:nth-child(2) {
+					.name {
+						color: white;
+						background-color: black;
+					}
+				}
+
+				> .row:nth-child(3) {			
+					.details {
+						color: white;
+						background-color: black;
+					}
+				}
+				*/
+			}
+
+			//
+			// selected desktop items
+			//
+
+			&.selected {
+
+				> .row:first-child {
+					.icon {
+						@include binary-colors.grey;
+						color: white;
+						border-color: black;
+					}
+				}
+
+				/*
+				> .row:nth-child(2) {
+					.name {
+						color: black;
+						background-color: white;
+					}
+				}
+
+				> .row:nth-child(3) {			
+					.details {
+						color: black;
+						background-color: white;
+					}
+				}
+				*/
+			}
+		}
+	}
+}

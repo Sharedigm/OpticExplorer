@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,467,462 Example 1 (Ricoh SMCT Pentax 6x7 300mm f4)
+[constants]
+Scaled	300	100
+[variable distances]
+Focal Length	300
+Angle of View	16
+F-Number	4
+Image Height	89.6
+Magnification	0
+d0	Infinity
+Bf(p)	120.48
+Bf	120.53
+[lens data]
+1	107.70	15.0	1.5163	75.00	64.0
+2	-2389.29	9.0		75.00	
+3	-351.00	4.5	1.7174	70.86	29.5
+4	260.31	0.6		70.86	
+5	79.80	12.0	1.5163	68.59	64.0
+6	138.96	60.0		68.59
+7	156.00	12.0	1.6034	50.94	38.0
+8	-2255.22	3.0		50.94	
+8AS	AS	30.0		44.785
+9	-54.00	3.0	1.5111	34.50	60.5
+10	-174.63	Bf		34.50	
+[figure]
+source	Data/US003467462_Figure01P.png
+originX	72.88
+originY	164.13
+ppmm	2.960
+[notes]
+Bill: Repaired sign r9

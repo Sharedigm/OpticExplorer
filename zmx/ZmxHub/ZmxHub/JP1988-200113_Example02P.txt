@@ -1,0 +1,31 @@
+[descriptive data]
+title	JP 1988-200113 Example 2 (Konica Minolta APO Tele Converter 1.4x)
+[constants]
+Lateral Magnification	1.414
+Lateral Magnification(m)	1.41423
+[variable distances]
+Focal Length	-113.1
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	37.46
+[lens data]
+0	FS	43.5		89.97
+1	70.656	2.00	1.85000	30.46	40.04
+2	23.681	8.30	1.59270	30.46	35.29
+3	-71.551	1.77		30.46
+4	-142.186	1.60	1.77250	29.29	49.77
+5	89.764	4.34		29.29
+6	-42.083	1.80	1.77250	28.97	49.77
+7	128.524	0.10		32.55
+8	56.200	6.50	1.51680	33.24	64.20
+9	-56.200	Bf		33.24
+[figure]
+source	Data/JP1988-200113_Figure02P.png
+originX	29.62
+originY	108.66
+ppmm	3.203
+[notes]

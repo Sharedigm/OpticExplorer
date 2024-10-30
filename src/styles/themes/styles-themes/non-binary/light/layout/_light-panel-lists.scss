@@ -1,0 +1,84 @@
+/******************************************************************************\
+|                                                                              |
+|                           _light-panel-lists.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/light-branding";
+@use "../navs/light-selection";
+@use "light-panels";
+
+//
+// colors
+//
+
+$panel-item-name-color: light-branding.$primary-color;
+$selected-panel-item-color: text-colors.$dark-color;
+$selected-panel-item-background-color: colors.blended(light-panels.$background-color, light-selection.$select-color, 25%);
+$selected-panel-item-border-color: light-selection.$select-color;
+
+$unfocused-selected-panel-item-background-color: darken($selected-panel-item-background-color, 10%);
+$unfocused-selected-panel-item-border-color: darken($selected-panel-item-border-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	.panel.item {
+
+		//
+		// light panel item info
+		//
+
+		> .info {
+			.name {
+				color: $panel-item-name-color;
+			}
+		}
+
+		//
+		// selected panel items
+		//
+
+		&.selected {
+			color: $selected-panel-item-color;
+			background-color: $selected-panel-item-background-color;
+			border-color: $selected-panel-item-border-color;
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+
+		.panel.item {
+
+			//
+			// light selected panel items
+			//
+
+			&.selected {
+				background-color: $unfocused-selected-panel-item-background-color;
+				border-color: $unfocused-selected-panel-item-border-color;
+			}
+		}
+	}
+}

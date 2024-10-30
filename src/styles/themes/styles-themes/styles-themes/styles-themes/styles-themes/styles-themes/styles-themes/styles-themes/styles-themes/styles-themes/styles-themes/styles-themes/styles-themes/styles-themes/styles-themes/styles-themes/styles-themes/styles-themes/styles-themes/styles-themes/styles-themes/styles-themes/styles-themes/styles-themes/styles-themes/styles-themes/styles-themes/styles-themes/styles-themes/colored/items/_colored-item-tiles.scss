@@ -1,0 +1,74 @@
+/******************************************************************************\
+|                                                                              |
+|                           _colored-item-tiles.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$select-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.tile-grid {
+		
+		//
+		// selected items
+		//
+
+		.item.selected {
+
+			.tile {
+				border-color: $select-color;
+
+				.icon {
+					&::after {
+						border-color: $select-color;
+						// background-color: color-mix(in srgb, $select-color 25%, transparent);
+					}
+				}
+
+				.name {
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+						background-color: $select-color;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						border-top-color: $select-color;
+					}
+				}
+			}
+
+			.details {
+				color: white;
+				background-color: $select-color;
+			}
+		}
+	}
+}

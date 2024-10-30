@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "5to6-codemod": "^1.8.0",
-    "jscodeshift": "^0.13.1"
-  }
-}

@@ -1,0 +1,94 @@
+/******************************************************************************\
+|                                                                              |
+|                               _medium-modals.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$background: repeating-linear-gradient(to bottom, black 0px, black 1px, white 1px, white 2px);
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// modals
+	//
+
+	.modal {
+		.modal-dialog {
+
+			//
+			// show handles
+			//
+
+			.modal-header {
+			
+				.title {
+					h1 {
+						text-shadow: none;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// focused modals
+	//
+
+	.modal.focused {
+		.modal-dialog {
+
+			//
+			// unmaximized dialogs
+			//
+			
+			&:not(.maximized) {
+				.modal-header {
+
+					// show handle texture
+					//
+					.handle, .buttons {
+						background: $background;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// unfocused modals
+	//
+
+	.modal:not(.focused) {
+		.modal-dialog {
+			.modal-header {
+
+				//
+				// hide buttons
+				//
+
+				> .buttons {
+					visibility: hidden;
+				}
+			}
+		}
+	}
+}

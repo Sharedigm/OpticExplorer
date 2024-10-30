@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,333,714 Example 1 (Vivitar MC 28mm f2.8)
+[constants]
+[variable distances]
+Focal Length	28
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	39.0
+Bf	39.04
+[lens data]
+1	61.850	3.08	1.564	31.49	60.8
+2	525.960	0.20		31.49
+3	43.704	2.00	1.658	25.96	57.3
+4	10.686	13.51		19.26
+5	27.960	5.00	1.723	16.70	38.0
+6	-88.640	1.38		16.70	
+7	-51.100	4.00	1.613	16.80	58.6
+8	-19.674	0.22		16.80	
+8AS	AS	4.00		14.549
+9	-15.412	1.50	1.785	13.39	26.1
+10	56.410	0.85		14.58
+11	-71.028	2.60	1.720	14.58	50.3
+12	-17.375	0.20		15.50	
+13	-239.300	2.46	1.697	16.84	55.5
+14	-26.573	Bf		16.84
+[figure]
+source	Data/US004333714_Figure01P.png
+originX	43.79
+originY	310.11
+ppmm	8.989
+[notes]
+Bill: Element thicknesses differ. May not be an exact match.

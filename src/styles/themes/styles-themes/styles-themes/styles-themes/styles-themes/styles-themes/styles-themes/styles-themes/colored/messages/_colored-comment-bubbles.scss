@@ -1,0 +1,114 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-comment-bubbles.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/text-colors";
+
+//
+// colors
+//
+
+$selected-color: white;
+$selected-background-color: var(--primary-color);
+$selected-border-color: var(--primary-color);
+$selected-arrow-color: var(--primary-color);
+$selected-title-color: white;
+$selected-link-color: text-colors.$light-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.comment-bubble {
+
+		//
+		// focused comment arrows
+		//
+
+		&.top > .comment-inner:focus:not([contenteditable="true"]) + .comment-arrow {
+			border-top-color: $selected-border-color;
+		}
+		&.right > .comment-inner:focus:not([contenteditable="true"]) + .comment-arrow {
+			border-right-color: $selected-border-color;
+		}
+		&.left > .comment-inner:focus:not([contenteditable="true"]) + .comment-arrow {
+			border-left-color: $selected-border-color;
+		}
+		&.bottom > .comment-inner:focus:not([contenteditable="true"]) + .comment-arrow {
+			border-bottom-color: $selected-border-color;
+		}
+
+		//
+		// focused editable comment arrows
+		//
+
+		&.top > .comment-inner[contenteditable="true"]:focus + .comment-arrow {
+			border-top-color: $selected-border-color;
+		}
+		&.right > .comment-inner[contenteditable="true"]:focus + .comment-arrow {
+			border-right-color: $selected-border-color;
+		}
+		&.left > .comment-inner[contenteditable="true"]:focus + .comment-arrow {
+			border-left-color: $selected-border-color;
+		}
+		&.bottom > .comment-inner[contenteditable="true"]:focus + .comment-arrow {
+			border-bottom-color: $selected-border-color;
+		}
+	}
+
+	//
+	// selected comments
+	//
+
+	.selected > .comment-bubble,
+	.selected > .info > .comment-bubble {
+		> .comment-inner {
+			color: $selected-color;
+			background-color: $selected-background-color;
+			border-color: $selected-border-color;
+
+			.title, .title a {
+				color: $selected-title-color;
+			}
+
+			a {
+				color: $selected-link-color;
+
+				&:hover {
+					color: $selected-color;
+				}
+			}
+		}
+
+		//
+		// selected comment arrows
+		//
+
+		&.top > .comment-arrow {
+			border-top-color: $selected-arrow-color;
+		}
+		&.right > .comment-arrow {
+			border-right-color: $selected-arrow-color;
+		}
+		&.left > .comment-arrow {
+			border-left-color: $selected-arrow-color;
+		}
+		&.bottom > .comment-arrow {
+			border-bottom-color: $selected-arrow-color;
+		}
+	}
+}

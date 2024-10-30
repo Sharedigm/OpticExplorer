@@ -1,0 +1,124 @@
+/******************************************************************************\
+|                                                                              |
+|                            _binary-patterns.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// 2x2 patterns
+//
+
+//
+// darkening patterns
+//
+
+//	---------
+//	| B |   |
+//	|-------|
+//	|   |   |
+//	---------
+
+$darken-light-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=');
+
+//	---------
+//	|   |   |
+//	|-------|
+//	|   | B |
+//	---------
+
+$darken-light-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAFklEQVQIHWNgIAQYkRT8B7GZkATATAAWcgED8+hADQAAAABJRU5ErkJggg==');
+
+//	---------
+//	| B |   |
+//	|-------|
+//	|   | B |
+//	---------
+
+$darken-medium-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=');
+
+//	---------
+//	|   | B |
+//	|-------|
+//	| B |   |
+//	---------
+
+$darken-medium-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAGklEQVQIHWNkQID/ICYTgo9ggWTAsiAhDBUAcKADAzZoyVUAAAAASUVORK5CYII=');
+
+//	---------
+//	| B | B |
+//	|-------|
+//	| B |   |
+//	---------
+
+$darken-heavy-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWNkYGD4D8RwwARnQRksSAKMIDaGCgBBbgEKSB2J0wAAAABJRU5ErkJggg==');
+
+//	---------
+//	|   | B |
+//	|-------|
+//	| B | B |
+//	---------
+
+$darken-heavy-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAG0lEQVQIHWNkQID/ICYTgg9hMQIpsAxMAkMFAFbcAgVvpP6YAAAAAElFTkSuQmCC');
+
+//
+// lightening patterns
+//
+
+//	---------
+//	| W |   |
+//	|-------|
+//	|   |   |
+//	---------
+
+$lighten-light-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAE0lEQVQIHWP4DwUMUMAEYxBPAwD6vQf7PKBWsAAAAABJRU5ErkJggg==');
+
+//	---------
+//	|   |   |
+//	|-------|
+//	|   | W |
+//	---------
+
+$lighten-light-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgIAQYYQr+AwGIzQQTgNEAXioEANQxRWMAAAAASUVORK5CYII=');
+
+//	---------
+//	| W |   |
+//	|-------|
+//	|   | W |
+//	---------
+
+$lighten-medium-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAqADAAQAAAABAAAAAgAAAADtGLyqAAAAEElEQVQIHWP4DwQMMADiAABHygf5AsusngAAAABJRU5ErkJggg==');
+
+//	---------
+//	| W |   |
+//	|-------|
+//	|   | W |
+//	---------
+
+$lighten-medium-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAG0lEQVQIHWP4DwUMUMAEY8BoRhgDpBDExlABAFiyC/o4uGkUAAAAAElFTkSuQmCC');
+
+//	---------
+//	| W | W |
+//	|-------|
+//	| W |   |
+//	---------
+
+$lighten-heavy-4x4: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWP8DwQMSIAJiQ1mssAEGIEAxMZQAQAG/wQKsVf4AQAAAABJRU5ErkJggg==');
+
+//	---------
+//	|   | W |
+//	|-------|
+//	| W | W |
+//	---------
+
+$lighten-heavy-4x4-alt: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAG0lEQVQIHWNkgIL/QABiMsEEYDQjTAYmgKECAGPdB/+JH9O7AAAAAElFTkSuQmCC');

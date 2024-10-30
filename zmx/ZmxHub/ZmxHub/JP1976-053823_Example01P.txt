@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 1976-053823 Example 1 (Miranda Auto EC 35mm F2.8)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	63
+F-Number	2.8
+Total Length	72.863
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	38.325
+Bf	38.31
+[lens data]
+1	39.785	1.488	1.51633	24.22	64.0
+2	16.538	11.393		22.44	
+3	67.484	4.557	1.75700	15.68	47.8
+4	-52.476	0.200		15.68	
+5	16.933	2.835	1.63930	14.82	44.8
+6	22.239	2.020		14.82
+6AS	AS	3.23		13.498
+7	-22.187	1.190	1.71736	14.16	29.5
+8	29.484	1.782		13.22	
+9	-51.870	2.478	1.62041	13.31	60.2
+10	-23.366	0.098		14.32	
+11	412.790	3.269	1.62041	15.32	60.2
+12	-17.658	Bf		15.32	
+[figure]
+source	Data/JP1976-053823_Figure01P.png
+originX	16.95
+originY	112.88
+ppmm	6.908
+[notes]

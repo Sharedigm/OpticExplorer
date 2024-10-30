@@ -1,0 +1,43 @@
+[descriptive data]
+title	JP 1980-166613 Example 2 (Nikon Nikkor 300mm ED f/4.5 with Nikon TC-301)
+[constants]
+[variable distances]
+Focal Length	600
+Angle of View	4.17
+F-Number	9
+Total Length	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+d10	1.5423
+Bf(p)	undefined
+Bf	63.11
+[lens data]
+1	106	11	1.48606	66.78	81.9
+2	-151	4		66.78
+3	-144	3	1.744	64.09	44.9
+4	130	12	1.6393	64.09	45
+5	650	1		64.09
+6	95	7.7	1.48606	63.50	81.9
+7	878.8	49.3		63.50
+7AS	AS	70		42.277
+8	-43	1	1.62041	28.88	60.3
+9	150	3.5	1.62004	28.88	36.3
+10	-104.82	d10		28.88
+
+1	179.709	3.7	1.59507	25.91	35.6
+2	-90.827	2		25.91
+3	-109.097	2.1	1.74443	27.32	49.4
+4	32.52	2.1		27.32
+5	40.56	4.2	1.59507	26.64	35.6
+6	99.049	66.24		26.64
+7	317.64	6.2	1.50137	36.10	56.5
+8	-55.266	0.2		36.10
+9	-195.754	1.8	1.80454	36.01	39.5
+10	267.716	Bf		36.01
+[figure]
+source	Data/JP1980-166613_Figure02P.png
+originX	10.02	90.44
+originY	89.49
+ppmm	2.359
+[notes]

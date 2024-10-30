@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 2015/0153549 Example 1 (Nikon 1 Nikkor 11-27.5mm f/3.5-5.6)
+[variable distances]
+Focal Length	11.35	17.00	26.71
+Angle of View	73.6	51.2	33.4
+F-Number	3.64	4.38	5.77
+Image Height	16.00	16.00	16.00
+Total Length	59.8037	56.6351	59.8037
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	17.4158	8.6974	2.3323
+d15	15.1378	20.6878	30.2214
+Bf	0	0	0
+[lens data]
+0.5	Infinity	1.00	1.51680	22.44	63.88
+0.6	Infinity	3.00		22.44	
+1	21.1989	1.10	1.85135	16.32	40.10
+2	7.5975	4.41		13.38	
+3	-52.6643	0.80	1.49782	12.88	82.57
+4	42.3237	0.84		12.88	
+5	15.6071	1.68	1.84666	12.48	23.78
+6	32.7790	d6		12.48	
+7	AS	0.65		7.619
+8	37.1408	1.47	1.65844	8.68	50.84
+9	-29.0801	0.10		8.68	
+10	9.6037	2.76	1.59319	8.52	67.90
+11	-14.5302	3.16	1.74400	8.32	44.81
+12	9.7023	1.83		7.72	
+13	31.5814	0.80	1.90265	9.04	35.73
+14	9.1997	2.75	1.58913	9.04	61.22
+15	-15.6188	d15		9.04	
+16	CG	2.79	1.51680	16.24	63.88
+17	CG	2.11		16.24	
+[aspherical data]
+2	7.5975	-0.2434	-3.9531E-07	-6.3327E-08	1.1732E-09	-1.3909E-10
+[figure]
+source	Data/US20150153549_Figure01AP.png
+originX	46.47
+originY	97.72
+ppmm	3.467
+[notes]
+Bill: Added filter based on Example 4. Production figure is telephoto.

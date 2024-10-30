@@ -1,0 +1,37 @@
+[descriptive data]				
+title	CN 206074892 U Example 1 (Yongnuo YN100mm F2N)
+[constants]
+[variable distances]				
+Focal Length	100
+Angle of View	24
+F-Number	2
+Image Height	43.2
+Total Length	undefined			
+Magnification	0				
+d0	Infinity				
+Bf(p)	undefined
+Bf	31.69
+[lens data]					
+1	120.505	5.52	1.617998	50.70	63.4167
+2	-1323.274	0.25		50.70
+3	60.318	6.86	1.617998	48.08	63.4167
+4	171.425	0.20		48.08
+5	34.332	8.82	1.617998	42.47	63.4167
+6	295.157	0.44		42.47
+7	348.515	2.88	1.672697	39.82	32.2191
+8	25.709	14.33		32.43
+8.5	AS	11.02		27.790
+9	-150.357	3.19	1.805190	29.87	25.4712
+10	-69.505	1.48	1.508016	29.87	61.0677
+11	38.808	10.01		29.87
+12	100.199	4.11	1.740005	33.69	28.2915
+13	52.108	8.52	1.755002	33.69	52.3293
+14	-100.987	Bf		33.69
+[figure]
+source	Data/CN206074892_Figure01P.png
+originX	46.42
+originY	149.47
+ppmm	2.570
+[notes]
+Bill: Moved group after the aperture stop 14mm to the right to match construction diagram.
+Also repositioned the aperture stop.

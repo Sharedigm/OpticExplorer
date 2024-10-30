@@ -1,0 +1,29 @@
+[descriptive data]
+title	DE 1 089 991 B Example 1 (Rodenstock Rogonar-S 50mm F2.8)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	47.2
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	39.8
+Bf	39.60
+[lens data]
+1	20.225	6.900	1.678	20.28	55.5
+2	-1965.000	0.940		20.28
+2AS	AS	1.820		15.352
+3	-34.150	1.170	1.625	16.44	35.6
+4	17.500	3.715		16.44
+5	1774.000	1.170	1.589	14.76	41.0
+6	19.100	4.675	1.717	18.08	47.9
+7	-26.200	Bf		18.08
+[figure]
+source	Data/DE01089991_Figure01P.png
+originX	277.45
+originY	412.63
+ppmm	12.971
+[notes]
+Bill: Moved AS. I think the production figure is for a wider angle of view.

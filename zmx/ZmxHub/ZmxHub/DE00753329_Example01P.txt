@@ -1,0 +1,29 @@
+[descriptive data]
+title	DE 753 329 C Example 1 (Schneider Xenar 2.8 / 50)
+[constants]
+Scaled	1	50
+[variable distances]
+Focal Length	50.00
+Angle of View	undefined
+F-Number	2.9
+Image Height	43.2	0.8652
+Magnification	0
+d0	Infinity
+Bf	40.93
+[lens data]
+1	21.6150	2.85850	1.5890	18.86	61.2
+2	-611.7000	0.20350		18.86	
+3	27.1200	2.03500	1.6375	17.84	56.1
+4	42.6050	2.44200		16.50	
+5	-36.1900	0.82350	1.6045	15.62	37.8
+6	16.4650	3.10000		14.02	
+6AS	AS	0.98900		14.062
+7	-101.9550	1.42450	1.5145	14.40	54.7
+8	19.5250	3.72100	1.6025	16.00	59.5
+9	-19.6750	Bf		16.00	
+[figure]
+source	Data/DE00753329_Figure01P.png
+originX	10.61
+originY	69.80
+ppmm	6.418
+[notes]

@@ -1,0 +1,118 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-dialog-buttons.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-btns";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$dialog-button-dark-label-color: colors.$dark-grey;
+$dialog-unfocused-button-dark-label-color: darken(medium-branding.$primary-color, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.modals {
+
+		//
+		// dialog button dark labels
+		//
+
+		&.show-buttons {
+			&.dialog-button-dark-labels {
+				.modal.focused .modal-dialog {
+					.modal-header {
+						.buttons {
+							button {
+								@include colored-btns.label($dialog-button-dark-label-color);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dialog button labels
+		//
+
+		&.dialog-button-dark-labels {
+			.modal.focused .modal-dialog {
+				.modal-header {
+					.buttons {
+						button:not(:hover) {
+							@include colored-btns.label($dialog-button-dark-label-color);
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// dialog button outlines
+		//
+
+		&.show-button-outlines {
+			.modal.focused .modal-dialog {
+				.modal-header {
+					.buttons {
+						button {
+							border-color: white !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.colorful {
+		.modals {
+			&:not(.show-buttons) {
+				.modal {
+					&.focused .modal-dialog {
+						.modal-header {
+							.buttons {
+								button {
+									i {
+										color: white !important;
+									}
+								}
+							}
+						}
+					}
+
+					&:not(.focused) .modal-dialog {
+						.modal-header {
+							.buttons {
+								button {
+									i {
+										color: white !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

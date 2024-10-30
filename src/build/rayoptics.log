@@ -1,0 +1,3 @@
+WARNING:py.warnings:/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/scipy/optimize/_zeros_py.py:349: RuntimeWarning: Tolerance of -2.0827775648601943e-07 reached.
+  warnings.warn(msg, RuntimeWarning)
+

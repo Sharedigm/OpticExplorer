@@ -1,0 +1,84 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-item-lists.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	//
+	// desktop mainbar lists
+	//
+
+	.desktop .mainbar {
+		.item-list {
+
+			//
+			// list items
+			//
+
+			/*
+			.item {
+				> .info {
+
+					.status, .icon:not(.marker) {
+						i {
+							color: black;
+						}
+					}
+
+					.specifics {
+						.details {
+							color: white;
+							background: none;
+							text-shadow: none !important;
+						}
+					}
+				}
+
+				//
+				// unselected list items
+				//
+
+				&:not(.selected):not(.highlighted) {
+					> .info {
+						.name {
+							color: white;
+							background-color: black;
+						}
+					}
+				}
+
+				//
+				// selected list items
+				//
+
+				&.selected {
+					> .info {
+						.name {
+							color: black;
+							background-color: white;
+							outline-color: black;
+						}
+					}
+				}
+			}
+			*/
+		}
+	}
+}

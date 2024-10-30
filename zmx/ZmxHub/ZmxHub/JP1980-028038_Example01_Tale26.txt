@@ -1,0 +1,37 @@
+[descriptive data]
+title	JP 1980-028038 Example 1 (Nikon AI Micro-Nikkor 55mm f/2.8)
+[constants]
+Scaled	55	100
+[variable distances]
+Focal Length	55	undefined
+Angle of View	42.92	undefined
+F-Number	2.8	undefined
+NA	undefined	0.0900
+Image Height	43.23	43.23
+Total Length	undefined	undefined
+Magnification	0	-0.98389
+d0	Infinity	90.3067
+d6(p)	7.31555	16.37515
+d6	4.301	13.773
+Bf(p)	undefined	undefined
+Bf	41.81	97.14
+[lens data]
+1	51.195	3.75	1.77279	21.94	49.4
+2	-599.950	0.10		21.94
+3	19.000	3.75	1.71300	21.03	53.9
+4	31.410	1.05		19.69
+5	90.000	1.05	1.61293	21.03	36.9
+6	16.236	d6		17.97
+6AS	AS	3.14		14.874
+7	-22.305	1.05	1.69895	15.91	30.0
+8	300.000	8.05	1.74443	19.95	49.4
+9	-25.000	0.10		19.95
+10	190.046	3.75	1.79668	21.94	45.4
+11	-123.839	Bf		21.94
+[figure]	
+source	Data/JP1980-028038_Example01_Tale26_Fig-1.png
+originX	5
+originY	220
+ppmm	19.185
+[notes]
+Bill: Y = 39.3mm * 55mm / 100mm = 21.615mm

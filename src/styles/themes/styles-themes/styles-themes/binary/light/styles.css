@@ -1,0 +1,529 @@
+/******************************************************************************\
+|                                                                              |
+|                            _binary-patterns.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _binary-colors.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _light-apps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .app {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary.light .app > .header-bar + .body {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary.light .app > .header-bar + .body > .contents {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary.light .modal .app > .body > .contents .mainbar {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary.light .modal .app > .body > .contents .mainbar form, body.binary.light .modal .app > .body > .contents .mainbar .tab-content {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _light-calculator.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .calculator.app .keyboard .scientific,
+body.binary.light .calculator.app .keyboard .programmer {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _light-desktops.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light #desktop {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary.light #desktop img {
+  image-rendering: auto;
+}
+body.binary.light .desktop.app {
+  background: none;
+}
+body.binary.light .desktop.app > .body {
+  background: none;
+}
+body.binary.light .desktop.app > .body .app {
+  background: none;
+}
+body.binary.light .desktop.app > .body .app > .body {
+  background: none;
+}
+body.binary.light .desktop.app > .body .app > .body > .contents {
+  background: none;
+}
+body.binary.light .desktop.app > .body .selection {
+  color: black;
+  border-color: black;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+body.binary.light .desktop.preview {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _light-item-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .icon-grid .item.selected > .row:first-child .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAGklEQVQIHWNkQID/ICYTgo9ggWTAsiAhDBUAcKADAzZoyVUAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _light-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .page {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary.light .page .contents {
+  background-color: white;
+}
+body.binary.light .page .footer {
+  color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _light-panels.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .panel {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary.light .panel.selected {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _light-dock-bars.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light #dock-bar .shelf {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _binary-text.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _light-nav-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/*
+body.binary {
+	&.light {
+		.navbar {
+			background-color: $background-color;
+			border-color: $background-color;
+			box-shadow: none;
+
+			.navbar-brand {
+				color: $color;
+
+				.logo {
+					filter: invert(1);
+				}
+			}
+
+			.navbar-nav {
+
+				> li {
+
+					//
+					// inactive state
+					//
+
+					> a {
+						color: $color;
+
+						label {
+							@include binary-text.unoutline;
+						}
+					}
+
+					//
+					// active state
+					//
+
+					&.active {
+						> a, > a:focus {
+							color: $active-color;
+							background-color: $active-background-color;
+
+							&:hover {
+								color: $active-color;
+								background-color: $active-background-color;
+							}
+						}
+					}
+
+					//
+					// open state
+					//
+
+					&.open { 
+						> a, > a:focus {
+							color: $active-color;
+							background-color: $active-background-color;
+
+							&:hover {
+								color: $active-color;
+								background-color: $active-background-color;
+							}
+						}
+					}
+				}
+
+				//
+				// nav bar indicators
+				//
+
+				.indicator {
+					.bar {					
+						.inner {
+							background-color: $color;
+						}
+					}
+				}
+
+				//
+				// apps bar
+				//
+
+				&.apps {
+					border-color: $color;
+
+					> li {
+						&.current {
+
+							> a {
+								background-color: $color;
+
+								i {
+									color: $background-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+*/
+/******************************************************************************\
+|                                                                              |
+|                            _light-run-menus.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary.light .footer-bar .run-menu .dropup .dropdown-toggle {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+body.binary.light .footer-bar .run-menu .dropup .dropdown-toggle > i {
+  color: black;
+}
+body.binary.light .footer-bar .run-menu .dropup.open .dropdown-toggle {
+  color: white;
+  background-color: black;
+}
+body.binary.light .footer-bar .run-menu .dropup.open .dropdown-toggle > i {
+  color: white;
+}
+body.binary.light .footer-bar .run-menu .icon-grid {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 styles.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+/*# sourceMappingURL=styles.css.map */

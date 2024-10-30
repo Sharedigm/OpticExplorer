@@ -61,7 +61,7 @@
 	},
 	"Din": {
 		"font-family": "Din, sans-serif",
-		"font-size": 15,
+		"font-size": 16,
 		"font-weight": "normal",
 		"url": "fonts/din/styles.css"
 	},
@@ -70,6 +70,12 @@
 		"font-size": 14,
 		"font-weight": "normal",
 		"url": "fonts/f1.8/styles.css"
+	},
+	"F56": {
+		"font-family": "F56, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/f5.6/styles.css"
 	},
 	"FF Meta": {
 		"font-family": "FF Meta, sans-serif",
@@ -101,6 +107,12 @@
 		"font-weight": "normal",
 		"url": "fonts/geneva/styles.css"
 	},
+	"Georgia": {
+		"font-family": "Georgia, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": null
+	},
 	"Gill Sans": {
 		"font-family": "Gill Sans",
 		"font-size": 14,
@@ -112,6 +124,12 @@
 		"font-size": 14,
 		"font-weight": "normal",
 		"url": null
+	},
+	"Hoefler Text Small Caps": {
+		"font-family": "Hoefler Text Small Caps, sans-serif",
+		"font-size": 14,
+		"font-weight": "normal",
+		"url": "fonts/hoefler-text-small-caps/styles.css"
 	},
 	"Lato": {
 		"font-family": "Lato, sans-serif",

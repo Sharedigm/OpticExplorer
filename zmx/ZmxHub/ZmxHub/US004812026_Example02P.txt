@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 4,812,026 Example 2 (Ricoh smc Pentax-F 300mm F4.5 ED [IF])
+[constants]
+Scaled	300	100
+[variable distances]
+Focal Length	300	undefined	undefined
+Angle of View	8.2	undefined	undefined
+F-Number	4.5	undefined	undefined
+Image Height	43.2	43.2	43.2
+Magnification	0	-0.1667	-0.1667
+d0	Infinity	1872.76	1860.95
+d11	5.28	18.18	16.77
+d11AS	3.58	16.48	15.07
+d14	43.11	43.11	31.62
+Bf	61.02	48.15	61.02
+[lens data]
+1	55.617	15.03	1.49700	68.17	81.6
+2	1999.143	1.02		68.17
+3	68.904	8.19	1.49700	59.71	81.6
+4	129.867	13.20		56.40
+5	-270.186	3.06	1.79952	49.01	42.2
+6	39.870	0.66		44.81
+7	35.574	11.07	1.49700	45.29	81.6
+8	-779.145	17.85		45.29
+9	52.053	10.32	1.58144	31.59	40.7
+10	-30.291	2.88	1.77250	31.59	49.6
+11	157.593	1.70		26.24
+11AS	AS	d11AS		25.230
+12	-17677.575	4.59	1.83400	25.52	37.2
+13	-37.824	1.98	1.77250	25.52	49.6
+14	42.663	d14		25.52
+15	62.958	4.68	1.56138	36.61	45.2
+16	122.079	Bf		36.61
+[figure]
+source	Data/US004812026_Figure05P.png
+originX	102.48
+originY	55.44
+ppmm	1.142
+[notes]
+Bill: Measured d0.

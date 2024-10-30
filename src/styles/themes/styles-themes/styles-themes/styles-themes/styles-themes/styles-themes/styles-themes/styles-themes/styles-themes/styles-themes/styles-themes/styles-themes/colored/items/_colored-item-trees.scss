@@ -1,0 +1,83 @@
+/******************************************************************************\
+|                                                                              |
+|                           _colored-item-trees.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$select-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// selected items
+	//
+
+	.item-tree.selected {
+		outline-color: $select-color;
+
+		> .info {
+			background-color: $select-color;
+
+			.icon {
+
+				i {
+					color: white;
+				}
+
+				&.thumbnail {
+					background-color: $select-color;
+				}
+
+				/*
+				.thumbnail {
+					&::after {
+						background-color: fade($select-color; 50%);
+					}
+				}
+				*/
+			}
+
+			.name {
+
+				//
+				// uneditable names
+				//
+
+				&:not([contenteditable="true"]) {
+					color: white;
+					background-color: $select-color;
+				}
+			}
+
+			.details {
+				color: white;
+				background-color: $select-color;
+			}
+
+			.specifics > .details {
+				i, i.fa-info-circle {
+					color: white;
+				}
+			}
+		}
+	}
+}

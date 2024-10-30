@@ -1,0 +1,40 @@
+[descriptive data]					
+title	US 2020/0271904 Example 6 (Canon Extender RF2X)
+[constants]
+Lateral Magnification	2.000
+Lateral Magnification(m)	2.03300
+[variable distances]					
+Focal Length	-133.43
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.28
+Total Length	59.42
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	17.31
+H	-33.72
+H'	-120.50
+[lens data]					
+1	102.255	3.69	1.80518	24.88	25.50
+2	-76.294	3.24		24.88	
+3	-61.063	1.20	1.90043	22.60	37.40
+4	16.888	10.64	1.60342	22.82	38.00
+5	-34.524	1.20	1.81600	23.50	46.60
+6	37.047	0.46		24.62	
+7	26.804	6.35	1.66565	27.96	35.60
+8	-95.813	3.46		27.96	
+9	-35.439	1.50	1.90043	27.56	37.40
+10	26.155	13.21	1.66565	31.14	35.60
+11	-37.965	0.25		34.64	
+12	-56.043	1.80	1.92286	35.88	20.90
+13	1008.919	12.42	1.51742	41.12	52.40
+14	-26.712	0		41.12	
+14FS	FS	Bf		30.60
+[figure]
+source	Data/US20200271904_Figure13P.png
+originX	24.66
+originY	110.15
+ppmm	3.011
+[notes]					
+Bill: Bf estimated from 20mm FFD and Lateral Magnification.

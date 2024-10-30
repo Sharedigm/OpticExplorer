@@ -1,0 +1,33 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-plastic-buttons.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../navs/materials/plastic/plastic-buttons";
+@use "../../navs/light-buttons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.light.plastic-buttons,
+	&.light.plastic.auto-buttons {
+
+		.button {
+			@include plastic-buttons.shaded(light-buttons.$color);
+		}
+	}
+}

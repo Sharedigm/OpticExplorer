@@ -1,0 +1,48 @@
+[descriptive data]
+title	US 3,442,573 Example 1 (Schneider Variogon 1.8 / 8-40)
+[constants]
+[variable distances]
+Focal Length	8	40
+Angle of View	undefined	undefined
+F-Number	1.8	1.8
+Image Height	6.6	6.6
+Magnification	0	0
+d0	Infinity	Infinity
+d5	0.47	27.28
+d10	27.74	1.78
+d12	1.69	0.84
+Bf(p)	13.1	13.1
+Bf	13.16	13.16
+[lens data]
+1	60.03	7.50	1.62299	40.70	58.12
+2	-86.80	2.00	1.80518	40.70	25.46
+3	749.50	0.10		40.70	
+4	51.43	4.30	1.62299	39.72	58.12
+5	358.50	d5		39.72	
+6	200.40	1.00	1.67790	22.46	55.52
+7	16.28	4.60		18.20
+8	-25.00	2.10	1.80518	18.20	25.46
+9	-15.61	1.00	1.46450	19.30	65.79
+10	43.09	d10		19.30	
+11	-10.84	1.00	1.62041	10.50	60.29
+12	-23.02	d12		11.76	
+13	64.68	2.20	1.62230	11.90	53.14
+14	-20.36	1.00		11.90	
+15	Infinity	9.00	1.51680	12.22	64.20
+16	Infinity	0.75		12.22	
+16AS	AS	2.75		10.613
+17	21.71	2.55	1.67790	11.94	55.62
+18	246.20	0.05		11.94	
+19	15.30	1.80	1.74400	11.94	44.90
+20	97.46	1.40		11.94	
+21	-24.50	4.90	1.78470	10.56	26.10
+22	8.82	2.25		8.60	
+23	16.77	2.45	1.71300	10.06	53.89
+24	-12.90	Bf		10.06	
+[figure]
+source	Data/US003442573_Figure01P.png
+originX	223.77
+originY	305.56
+ppmm	9.543
+[notes]
+Bill: Image Height unknown. Doesn't match patent figure; d13 too small but does match the production figure.

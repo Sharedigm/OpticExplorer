@@ -1,0 +1,34 @@
+[descriptive data]
+title	US 4,338,001 Example 2 (Nikon AI Nikkor 180mm f/2.8 ED)
+[constants]
+Scaled	180	100
+[variable distances]					
+Focal Length	180				
+Angle of View	13.6				
+F-Number	2.8				
+Image Height	43.28				
+Total Length	172.26	// 0.957 * 180				
+Magnification	0				
+d0	Infinity				
+Bf(p)	undefined
+Bf	41.26				
+[lens data]					
+1	99.022	11.5	1.50032	64.94	81.9
+2	-140.839	2.1		64.94	
+3	-138.056	3.7	1.7495	64.94	35
+4	373.000	6.3		64.94	
+5	77.774	9.2	1.65844	61.00	50.8
+6	239.999	58.1		61.00	
+6AS	AS	16.4		31.503
+6FS	FS	16.4		24.94
+7	-35.500	1.8	1.51454	31.36	54.6
+8	-550.001	0.5		31.36	
+9	220.000	5.0	1.79668	31.36	45.4
+10	-162.193	Bf		31.36	
+[figure]
+source	Data/US004338001_Example02_Tale10-Fig1.png
+ppmm	5.169541985
+originX	14
+originY	193
+[notes]
+Bill: This is the production lens.

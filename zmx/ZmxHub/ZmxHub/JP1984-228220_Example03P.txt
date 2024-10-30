@@ -1,0 +1,37 @@
+[descriptive data]
+title	JP1984-228220 Example 3 (Konica Minolta AF 50mm F2.8 Macro)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50	undefined
+Angle of View	undefined	undefined
+F-Number	2.88	5.81
+Image Height	43.2	43.2
+Magnification	0	-0.995
+d0	Infinity	78.48
+d6	5.760	14.006
+d6AS	2.630	10.876
+d11	0.486	41.952
+Bf	39.029	44.682
+[lens data]
+1	187.018	2.330	1.72000	17.36	50.31
+2	-85.616	0.146		19.40	
+3	20.740	2.461	1.77250	16.86	49.77
+4	55.032	1.015		16.86	
+5	-572.108	3.751	1.60342	15.98	38.01
+6	17.422	d6AS		14.08	
+6AS	AS	3.13		13.740
+7	-17.327	2.629	1.67339	13.56	29.25
+8	-65.678	3.449	1.71300	14.53	53.93
+9	-19.808	0.146		15.26	
+10	272.658	3.182	1.77250	16.80	49.77
+11	-58.073	d11		16.80	
+12	51.473	1.748	1.49140	24.26	57.82
+13	43.807	Bf		24.26	
+[figure]
+source	Data/JP1984-228220_Figure03P.png
+originX	106.64
+originY	98.90
+ppmm	2.912
+[notes]
+Bill: d0 measured.

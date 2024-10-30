@@ -1,0 +1,169 @@
+/******************************************************************************\
+|                                                                              |
+|                             _binary-colors.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "binary-patterns-2x.scss" as patterns;
+
+//
+// lightening mixins
+//
+
+@mixin lighten {
+	background-image: patterns.$lighten-medium-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin lighten-less {
+	background-image: patterns.$lighten-light-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin lighten-more {
+	background-image: patterns.$lighten-heavy-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+//
+// darkening mixins
+//
+
+@mixin darken {
+	background-image: patterns.$darken-medium-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin darken-less {
+	background-image: patterns.$darken-light-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin darken-more {
+	background-image: patterns.$darken-heavy-4x4;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+//
+// alternate lightening mixins
+//
+
+@mixin lighten-alt {
+	background-image: patterns.$lighten-medium-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin lighten-less-alt {
+	background-image: patterns.$lighten-light-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin lighten-more-alt {
+	background-image: patterns.$lighten-heavy-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+//
+// alternate darkening mixins
+//
+
+@mixin darken-alt {
+	background-image: patterns.$darken-medium-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin darken-less-alt {
+	background-image: patterns.$darken-light-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+@mixin darken-more-alt {
+	background-image: patterns.$darken-heavy-4x4-alt;
+	background-size: 2px 2px;
+	background-repeat: repeat;
+	image-rendering: pixelated;
+}
+
+//
+// color mixins
+//
+
+@mixin grey {
+	@include darken();
+	background-color: white;
+}
+
+@mixin light-grey {
+	@include darken-less();
+	background-color: white;	
+}
+
+@mixin dark-grey {
+	@include darken-more();
+	background-color: white;
+}
+
+@mixin grey-alt {
+	@include darken-alt();
+	background-color: white;
+}
+
+@mixin light-grey-alt {
+	@include darken-less-alt();
+	background-color: white;
+}
+
+@mixin dark-grey-alt {
+	@include darken-more-alt();
+	background-color: white;
+}
+
+@mixin white {
+	@include clear();
+	background-color: white;
+}
+
+@mixin black {
+	@include clear();
+	background-color: black;
+}
+
+@mixin clear {
+	background: none;
+	background-size: unset;
+	background-repeat: unset;
+	image-rendering: unset;	
+}

@@ -1,0 +1,215 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-menus.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+@use "../apps/common/light-apps";
+@use "../items/light-item-lists";
+@use "../colors/light-branding";
+
+//
+// colors
+//
+
+$color: light-apps.$background-color;
+$icon-color: colors.$light-grey;
+$text-color: text-colors.$dark-color;
+
+$disabled-color: none;
+$disabled-icon-color: colors.$very-very-light-grey;
+$disabled-text-color: colors.$very-very-light-grey;
+
+$border-color: darken($color, 10%);
+$item-divider-color: $border-color;
+
+$inline-text-color: text-colors.$dark-color;
+$inline-icon-color: colors.$light-grey;
+$inline-item-odd-color: light-item-lists.$odd-item-background-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	//
+	// light dropdown menus
+	//
+
+	.dropdown-menu, .menu-content {
+		background: $color;
+		border-color: $border-color;
+	}
+
+	//
+	// dropdown panels
+	//
+
+	ul.panels li {
+		border-color: $item-divider-color;
+	}
+
+	//
+	// light transparent dropdowns
+	//
+
+	&.transparent {
+		.dropdown-menu, .menu-content {
+			@include plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// light translucent dropdowns
+	//
+
+	&.translucent {
+		.dropdown-menu, .menu-content {
+			@include frosted-plate-glass.shaded($color);
+
+			.panel, ul.panels > li:not(:hover) {
+				background: none;
+			}
+
+			// nested dropdown menus
+			//
+			.dropdown-menu {
+				background-color: $color;
+			}
+		}
+	}
+
+	//
+	// light menus
+	//
+
+	.menu, .dropdown-menu {
+		color: $text-color;
+		border-color: $border-color;
+
+		//
+		// light menu items
+		//
+
+		> li {
+
+			//
+			// light enabled menu items
+			//
+
+			&:not(.disabled) {
+				color: $text-color;
+				
+				> a {
+					color: $text-color;
+
+					> i {
+						color: $icon-color;
+						fill: $icon-color;
+					}
+
+					//
+					// light menu check marks
+					//
+
+					&:not(.app-item):not(:hover) {
+						> i.fa-check {
+							color: $text-color;
+						}
+					}
+				}
+			}
+
+			//
+			// light disabled menu items
+			//
+
+			&.disabled {
+				color: $disabled-text-color;
+				background-color: $disabled-color;
+				border-color: $disabled-color;
+
+				> a, > a:hover {
+					color: $disabled-text-color;
+
+					> i {
+						color: $disabled-icon-color;
+						fill: $disabled-icon-color;
+					}
+				}
+			}
+		}
+
+		//
+		// light dividers
+		//
+
+		.divider:not(.disabled) {
+			border-color: $item-divider-color;
+			background-color: $item-divider-color;
+		}
+	}
+
+	//
+	// light inline menus
+	//
+
+	.menu {
+
+		//
+		// light inline menu items
+		//
+
+		> li {
+
+			//
+			// light zebra striping
+			//
+
+			&:nth-child(odd) {
+				background-color: $inline-item-odd-color;
+			}
+
+			//
+			// light enabled menu items
+			//
+
+			&:not(.disabled) {
+				> a {
+					color: $inline-text-color;
+
+					> i {
+						color: $inline-icon-color;
+						fill: $inline-icon-color;
+					}
+				}
+			}
+		}
+	}
+}

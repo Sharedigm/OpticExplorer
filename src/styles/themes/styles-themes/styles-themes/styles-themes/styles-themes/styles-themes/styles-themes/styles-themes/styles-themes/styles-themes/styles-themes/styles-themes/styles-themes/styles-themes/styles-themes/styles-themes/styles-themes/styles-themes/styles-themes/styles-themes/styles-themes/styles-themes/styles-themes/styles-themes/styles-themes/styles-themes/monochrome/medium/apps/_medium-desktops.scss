@@ -1,0 +1,79 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-desktops.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$desktop-background-color: colors.$dark-grey;
+$desktop-preview-background-color: colors.$dark-grey;
+$run-menu-color: colors.$light-grey;
+$run-menu-text-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+
+	//
+	// colored desktops
+	//
+
+	#desktop.colored,
+	.desktop.preview.colored {
+		background: $desktop-preview-background-color !important;
+
+		&.black {
+			background: black !important;
+		}
+		&.white {
+			background: white !important;
+		}
+	}
+	
+	#desktop,
+	#desktop.auto,
+	#desktop.medium {
+		.desktop.app {
+
+			//
+			// desktop footer bars
+			//
+
+			> .footer-bar {
+
+				//
+				// desktop run menus
+				//
+
+				.run-menu .menu-bar {
+					.dropdown-toggle {
+						color: $run-menu-text-color;
+						background-color: $run-menu-color;
+
+						i {
+							color: $run-menu-text-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+[descriptive data]
+title	CN 107255857 Example 1 (Zhong Yi SpeedMaster 135mm F1.4)
+[constants]
+[variable distances]
+Focal Length	135
+Angle of View	17.880
+F-Number	1.4
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	37.16
+[lens data]
+1	172.26	12.0	1.497	97	81.6	HFK61CDGM
+2	-424.54	0.1		97		
+3	90.20	21.0	1.497	90	81.6	HFK61CDGM
+4	-156.21	0.0		90
+5	-156.21	2.0	1.673	90	32.2	HZF2CDGM
+6	156.21	0.1		81.79
+7	61.00	10.0	1.497	78	81.6	HFK61CDGM
+8	113.65	0.0		75.62	
+9	113.65	15.0	1.847	75.62	23.8	HZF52CDGM
+10	-113.65	0.0		75.62	
+11	-113.65	2.3	1.750	75.62	35.0	HLAF4CDGM
+12	126.03	2.1		62.47
+13	260.70	12.8	1.580	63	53.7	HBAF3CDGM
+14	-57.70	0.0		63		
+15	-57.70	2.0	1.596	63	39.2	HQF14CDGM
+16	35.878	8.7		46		
+16AS	AS	30.0		45.269
+17	117.57	7.0	1.883	38.16	40.8	HZLAF68BCDGM
+18	-72.00	0.0		38.16
+19	-72.00	2.0	1.673	38.16	32.2	HZFZF2CDGM
+20	42.36	0.0		36.00
+21	42.36	5.81	1.883	36	40.8	HZLAF68BCDGM
+22	166.70	Bf		36		
+[figure]
+source	Data/CN107255857_Figure01P.png
+originX	12.25
+originY	164.98
+ppmm	3.156
+[notes]
+Bill: Patent diameters and glass but no aperture. s12/s13 overlaps; repaired d12 0.1 -> 2.1
+Reduced di16 63 -> 46 and increased di3-6 88 -> 90
+Downward cosmetic adjustments to construction diagram.

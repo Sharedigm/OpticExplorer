@@ -1,0 +1,64 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dark-buttons.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/colors/colored-buttons";
+@use "../../../../navs/colors/colored-btns";
+
+//
+// colors
+//
+
+$color: colors.$medium-grey;
+$label-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	//
+	// dark buttons
+	//
+
+	button:not(:disabled) {
+
+		//
+		// glow effects
+		//
+
+		&:hover, &:active {
+			i {
+				filter: url(#glowing);
+			}
+			
+			svg {
+				overflow: visible;
+
+				path, polygon {
+					filter: url(#glowing);
+				}
+			}
+		}
+	}
+
+	.button {
+		@include colored-buttons.colored($color);
+		@include colored-buttons.labeled($label-color);
+	}
+}

@@ -1,0 +1,43 @@
+/******************************************************************************\
+|                                                                              |
+|                 _medium-glass-colored-dialog-buttons.scss                    |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/glass/glass-btns";
+@use "../../dialogs/colored-dialog-buttons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored .modals.colored-buttons.glass-dialog-buttons,
+	&.colored.glass .modals.colored-buttons.auto-dialog-buttons {
+
+		//
+		// focused dialog buttons
+		//
+		
+		.modal.focused .modal-dialog {
+			.modal-header {
+				.buttons {
+					button.close-btn {
+						@include glass-btns.shaded(colored-dialog-buttons.$close-button-color);
+					}
+				}
+			}
+		}
+	}
+}

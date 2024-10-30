@@ -1,0 +1,33 @@
+[descriptive data]
+title	JP 1999-052234 Example ML (Mamiya RZ67 250mm f4.5 APO)
+[constants]
+Scaled	250	100
+[variable distances]
+Focal Length	250
+Angle of View	21
+F-Number	4.5
+Image Height	101
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	125.33
+[lens data]
+1	135.425	7.150	1.4875	63.01	70.21
+2	210.900	0.500		63.01
+3	86.425	10.200	1.4559	60.40	90.31
+4	1562.850	0.500		60.40	
+5	80.000	10.200	1.4559	53.61	90.31
+6	423.650	2.875		53.61
+7	-2662.950	13.175	1.6502	47.00	39.39
+8	-104.575	18.475	1.6134	47.00	43.84
+9	45.875	22.640		34.17
+9AS	AS	12.76		31.248
+10	-326.250	13.050	1.6034	31.12	38.01
+11	88.950	10.200	1.8061	36.17	40.95
+12	-300.800	Bf		36.17
+[figure]
+source	Data/JP1999-052234_Figure01MLP.png
+originX	90.59
+originY	261.22
+ppmm	6.884
+[notes]

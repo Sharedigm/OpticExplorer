@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 3,938,883 Example 1 (Ricoh smc Pentax 24mm F2.8)
+[constants]
+Scaled	24	100
+[variable distances]
+Focal Length	24
+Angle of View	84
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	39.98
+[lens data]
+1	59.232	4.608	1.71300	38.70	54.0
+2	145.128	0.096		35.64
+3	24.840	1.464	1.62041	27.20	60.3
+4	10.464	5.544		19.27
+5	43.920	0.984	1.78590	19.13	44.2
+6	11.400	3.792	1.67270	16.88	32.1
+7	41.472	0.480		15.58
+8	26.736	1.272	1.64250	14.69	58.4
+9	12.720	4.440		12.89
+10	27.240	10.368	1.74320	15.20	49.4
+11	-21.888	1.128		15.20	
+11AS	AS	1.440		13.848
+12	-30.288	3.840	1.80518	15.45	25.4
+13	41.256	1.320		15.45	
+14	-135.120	3.432	1.52307	15.45	58.4
+15	-15.672	0.096		17.20	
+16	8323.200	2.592	1.69680	20.08	55.7
+17	-35.256	Bf		20.08	
+[figure]
+source	Data/US003938883_Figure01P.png
+originX	3.45
+originY	113.99
+ppmm	5.298
+[notes]

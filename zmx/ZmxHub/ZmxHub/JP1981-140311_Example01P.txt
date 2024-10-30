@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 1981-140311 Example 1 (Fujifilm Fujinon-SW 65mm F5.6)
+[constants]
+Scaled	65	1
+[variable distances]
+Focal Length	65
+Angle of View	75
+F-Number	5.6
+Image Height	101
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	41.60
+[lens data]
+1	30.5890	1.5925	1.51823	37.12	59.0
+2	18.5640	14.3260		32.61
+3	43.1080	16.0745	1.69359	25.64	53.4
+3hack	-26.2405	0		25.64
+4	-26.2405	1.0790	1.56732	13.16	42.8
+5	82.7905	1.6705		13.16
+5AS	AS	1.6705		12.219
+6	-104.6955	1.9305	1.56732	13.16	42.8
+6hack	18.6680	0		13.16
+7	18.6680	20.4425	1.69350	24.89	53.4
+8	-36.3740	12.0705		24.89
+9	-17.8035	1.7420	1.60342	30.00	38.0
+10	-31.8110	Bf		36.26
+[figure]
+source	Data/JP1981-140311_Figure01P.png
+originX	70.76
+originY	465.58
+ppmm	9.414
+[notes]
+Bill: Hack surfaces for force desired visualization.

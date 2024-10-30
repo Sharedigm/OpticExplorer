@@ -1,0 +1,83 @@
+/******************************************************************************\
+|                                                                              |
+|                              _colored-btns.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../colors/colors";
+@use "../../../navs/colors/colored-btns";
+@use "../../../navs/colors/colored-buttons";
+@use "../forms/colored-forms";
+
+//
+// colors
+//
+
+$primary-color: var(--primary-color);
+$primary-label-color: white;
+$disabled-primary-color: colors.blend($primary-color, colors.$very-light-grey);
+$disabled-primary-label-color: white;
+$default-primary-color: branding.$primary-color;
+$default-disabled-primary-color: colors.blended($default-primary-color, colors.$very-light-grey);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// styled buttons
+	//
+
+	.btn {
+
+		//
+		// primary buttons
+		//
+
+		&.btn-primary {
+			@include colored-btns.colored($primary-color);
+			@include colored-btns.labeled($primary-label-color);
+
+			&:disabled {
+				@include colored-btns.colored($disabled-primary-color);
+				@include colored-btns.labeled($disabled-primary-label-color);
+			}
+		}
+	}
+
+	//
+	// special buttons
+	//
+
+	.btn:not(.btn-primary):not(.colored):not(:disabled) {
+
+		&.success {
+			@include colored-buttons.colored(colored-forms.$success-color);
+			@include colored-buttons.labeled(white);
+		}
+
+		&.caution {
+			@include colored-buttons.colored(colored-forms.$caution-color);
+			@include colored-buttons.labeled(white);
+		}
+
+		&.warning {
+			@include colored-buttons.colored(colored-forms.$warning-color);
+			@include colored-buttons.labeled(white);
+		}
+	}
+}

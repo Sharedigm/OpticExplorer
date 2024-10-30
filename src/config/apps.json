@@ -20,7 +20,7 @@
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "plum",
 		"preferences": {
@@ -44,7 +44,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -61,7 +61,16 @@
 		"favorites": {
 			"#1": "Music/",
 			"#2": "Audio/"
-		}
+		},
+		"extensions": [
+			"flac",
+			"m4a",
+			"m4p",
+			"mid",
+			"midi",
+			"mp3",
+			"wav"
+		]
 	},
 
 	"calculator": {
@@ -72,7 +81,7 @@
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "green",
+		"color": "cyan",
 		"preferences": {
 			"mode": "basic"
 		}
@@ -84,7 +93,7 @@
 		"platform": "all",
 		"category": "utility",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "cyan",
 		"preferences": {
@@ -116,7 +125,7 @@
 		"platform": "all",
 		"category": "social",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "blue",
 		"preferences": {
@@ -139,7 +148,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -154,7 +163,7 @@
 		"platform": "all",
 		"category": "utility",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "cyan",
 		"preferences": {
@@ -167,13 +176,13 @@
 		"name": "Code",
 		"icon": "fa fa-code",
 		"platform": "all",
-		"category": "productivity",
+		"category": "utility",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
 		"color": "teal",
 		"preferences": {
-			"home_directory": "Code/",
+			"home_directory": "",
 			"show_gutter": true,
 			"show_indent_guides": true,
 			"show_print_margin": false,
@@ -199,7 +208,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -216,9 +225,6 @@
 				"tablet": 25,
 				"desktop": 25
 			}
-		},
-		"favorites": {
-			"#1": "Code/"
 		}
 	},
 
@@ -246,13 +252,6 @@
 			"toolbars": [
 				"nav"
 			],
-			"map_mode": "hybrid",
-			"map_view_kind": {
-				"phone": "icons",
-				"tablet": "icons",
-				"desktop": "icons"
-			},
-			"show_item_names": true,
 			"show_sidebar": true,
 			"sidebar_size": {
 				"phone": 0,
@@ -261,14 +260,14 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
 				"groups"
 			],
 			"sidebar_view_kind": {
-				"phone": "lists",
+				"phone": "cards",
 				"tablet": "icons",
 				"desktop": "icons"
 			}
@@ -282,7 +281,7 @@
 		"platform": "all",
 		"category": "utility",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "raspberry",
 		"preferences": {
@@ -299,15 +298,15 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
 				"contacts"
 			],
 			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
+				"phone": "cards",
+				"tablet": "icons",
 				"desktop": "lists"
 			}
 		}
@@ -319,7 +318,7 @@
 		"platform": "all",
 		"category": "utility",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "plum",
 		"preferences": {
@@ -400,18 +399,43 @@
 		}
 	},
 
-	"post_viewer": {
+	"topic_viewer": {
 		"name": "Comments",
 		"icon": "fa fa-newspaper",
 		"platform": "all",
 		"category": "social",
-		"disabled": true,
+		"disabled": false,
 		"hidden": true,
 		"args": false,
 		"color": "blue",
+		"defaults": {
+			"topic": {
+				"name": "What's New",
+				"description": "This is the default topic.",
+				"required": true
+			}
+		},
+		"features": {
+			"emoji": true,
+			"files": true,
+			"pictures": true,
+			"audio": true,
+			"music": true,
+			"video": true,
+			"maps": true,
+			"uploads": true,
+			"locations": true
+		},
 		"preferences": {
-			"show_comments": true,
+			"default_topic": "What's New",
+			"posts_per_page": 10,
+			"posts_direction": "top_down",
+			"default_privacy": "connections",
+			"show_comments": false,
 			"show_options": true,
+			"show_elapsed_time": true,
+			"translation": false,
+			"language": "English",
 			"window_size": "medium",
 			"show_sidebar": true,
 			"sidebar_size": {
@@ -421,10 +445,11 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
-				"desktop": 175
+				"tablet": 200,
+				"desktop": 200
 			},
 			"sidebar_panels": [
+				"info",
 				"topics"
 			],
 			"sidebar_view_kind": {
@@ -433,8 +458,11 @@
 				"desktop": "lists"
 			},
 			"uploads_directory": "Uploads/",
+			"copy_attachments": true,
 			"storage_directory": ".News/"
-		}
+		},
+		"topic_icon_selector_path": "/Shared/Pictures",
+		"topic_invitation_message": "I thought you might be interested in this topic!"
 	},
 
 	"file_browser": {
@@ -486,7 +514,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -511,14 +539,13 @@
 		},
 		"favorites": {
 			"#1": "~/",
-			"#2": "Documents/",
-			"#3": "Pictures/",
-			"#4": "Profile/",
-			"#5": "Music/",
-			"#6": "Videos/",
-			"#7": "Trash/"
+			"#2": "Maps/",
+			"#3": "Materials/",
+			"#4": "Optics/",
+			"#5": "Spectra/",
+			"#6": "Trash/"
 		},
-		"shared_directory": "/Shared",
+		"shared_directory": "/Shared/Optics",
 		"max_thumbnail_file_size": 100000000,
 		"max_thumbnail_svg_file_size": 1000000,
 		"share_invitation_message": "Check this out!"
@@ -547,8 +574,8 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 0,
-				"desktop": 0
+				"tablet": 200,
+				"desktop": 200
 			},
 			"sidebar_panels": [
 				"index"
@@ -562,7 +589,7 @@
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "gold",
 		"preferences": {
@@ -576,8 +603,7 @@
 			"toolbars": [
 				"mouse_mode",
 				"zoom_mode",
-				"zoom",
-				"image"
+				"zoom"
 			],
 			"show_sidebar": true,
 			"sidebar_size": {
@@ -587,7 +613,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -609,7 +635,20 @@
 				"tablet": 25,
 				"desktop": 25
 			}
-		}
+		},
+		"extensions": [
+			"bmp",
+			"dng",
+			"gif",
+			"jpg",
+			"jpeg",
+			"png",
+			"psd",
+			"svg",
+			"tga",
+			"tif",
+			"tiff"
+		]
 	},
 
 	"mail_reader": {
@@ -632,7 +671,7 @@
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "green",
 		"preferences": {
@@ -649,7 +688,6 @@
 				"crosshairs",
 				"photos",
 				"videos",
-				"overlays",
 				"people",
 				"places",
 				"favorites"
@@ -658,28 +696,15 @@
 				"satellite",
 				"radar"
 			],
-			"toolbars": {
-				"phone": [
-					"nav",
-					"mouse_mode",
-					"nav_mode"
-				],
-				"tablet": [
-					"nav",
-					"mouse_mode",
-					"nav_mode",
-					"map"
-				],
-				"desktop": [
-					"nav",
-					"mouse_mode",
-					"nav_mode",
-					"map"
-				]		
-			},
-			"map_view_kind": {
+			"toolbars": [
+				"nav",
+				"mouse_mode",
+				"nav_mode",
+				"map"
+			],
+			"view_kind": {
 				"phone": "icons",
-				"tablet": "icons",
+				"tablet": "cards",
 				"desktop": "icons"
 			},
 			"show_grid": true,
@@ -694,17 +719,14 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
 				"maps",
 				"photos",
 				"videos",
-				"overlays",
-				"people",
-				"places",
-				"favorites"
+				"places"
 			],
 			"sidebar_view_kind": {
 				"phone": "lists",
@@ -733,12 +755,176 @@
 				"Church": "/Shared/Pictures/Twemoji/Travel/Buildings/26ea.svg"
 			}
 		},
-		"maps_directory": "/Shared/Documents/Maps/"
+		"extensions": [
+			"kml"
+		],
+		"maps_directory": "/Shared/Maps/"
 	},
-	
+
+	"material_editor": {
+		"name": "Materials",
+		"icon": "fa fa-gem",
+		"platform": "all",
+		"category": "optical",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "white",
+		"preferences": {
+			"initial_file (unused)": "/Shared/Optics/Materials/Schott/N-BK7.mtrl",
+			"home_directory": "Materials/",
+			"window_size": "large",
+			"view_kind": "data_sheet",
+			"toolbars": {
+				"phone": [
+				],
+				"tablet": [
+				],
+				"desktop": [
+					"view"
+				]		
+			},
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"materials",
+				"shared"
+			],
+			"sidebar_view_kind": {
+				"phone": "trees",
+				"tablet": "trees",
+				"desktop": "trees"
+			},
+			"show_toolbar": true,
+			"show_data_editor": {
+				"phone": false,
+				"tablet": true,
+				"desktop": true
+			},
+			"data_editor_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"wavelengths": {
+			"Fe N": 358.121,
+			"Fe L": 382.044,
+			"H h": 410.175,
+			"Fe e": 438.355,
+			"Fe d": 466.814,
+			"H F": 486.134,
+			"Fe b3": 516.891,
+			"Hg e": 546.073,
+			"Na D": 589.290,
+			"He d": 587.562,
+			"O a": 627.661,
+			"H C": 656.270,
+			"O B": 686.719,
+			"He r": 706.52
+		},
+		"materials_directory": "/Shared/Optics/Materials"
+	},
+
+	"material_map_viewer": {
+		"name": "Material Maps",
+		"icon": "fa fa-map",
+		"platform": "all",
+		"category": "optical",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "white",
+		"preferences": {
+			"initial_file (unused)": "/Shared/Optics/Maps/Schott.abbe",
+			"home_directory": "Maps/",
+			"window_size": "large",
+			"pan_duration": 500,
+			"zoom_duration": 500,
+			"zoom_to_duration": 5,
+			"show_grid": true,
+			"show_axes": true,
+			"toolbars": {
+				"phone": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom_mode",
+					"zoom"
+				],
+				"tablet": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom_mode",
+					"zoom"
+				],
+				"desktop": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom",
+					"zoom_mode",
+					"map"
+				]
+			},
+			"scheme": "standard",
+			"theme": "auto",
+			"show_grid": true,
+			"show_abbe_axis": true,
+			"show_index_axis": true,
+			"show_colored_viewport": false,
+			"show_regions": false,
+			"show_edges": true,
+			"show_vertices": true,
+			"show_labels": true,
+			"show_shading": false,
+			"show_shadows": false,
+			"show_highlights": false,
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"maps",
+				"shared"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"show_toolbar": true,
+			"show_data_editor": {
+				"phone": false,
+				"tablet": true,
+				"desktop": true
+			},
+			"data_editor_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"material_maps_directory": "/Shared/Optics/Maps"
+	},
+
 	"chat_viewer": {
 		"name": "Messages",
-		"icon": "fa fa-comment",
+		"icon": "fa fa-comments",
 		"platform": "all",
 		"category": "social",
 		"disabled": false,
@@ -793,7 +979,7 @@
 	"notification_center": {
 		"name": "Notifications",
 		"icon": "fa fa-exclamation-triangle",
-		"platform": "all",
+		"platform": "mobile",
 		"category": "system",
 		"disabled": false,
 		"hidden": false,
@@ -815,13 +1001,127 @@
 		}
 	},
 
+	"optic_editor": {
+		"name": "Optics",
+		"icon": "fa fa-database rotated flipped",
+		"platform": "all",
+		"category": "optical",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "white",
+		"preferences": {
+			"window_size": "large",
+			"toolbars": {
+				"phone": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom_mode",
+					"zoom"
+				],
+				"tablet": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom_mode",
+					"zoom"
+				],
+				"desktop": [
+					"mouse_mode",
+					"nav_mode",
+					"zoom_mode",
+					"zoom",
+					"optics"
+				]
+			},
+			"scheme": "standard",
+			"theme": "auto",
+			"show_grid": true,
+			"show_optical_axis": true,
+			"show_perpendicular_axis": true,
+			"show_colored_viewport": false,
+			"number_of_rays": 100,
+			"max_ray_depth": 50,
+
+			"show_elements": true,
+			"show_filled_elements": true,
+			"show_stroked_elements": true,
+			"show_shaded_elements": true,
+			"show_illustrated_elements": true,
+			"show_shadowed_elements": true,
+
+			"show_lights": true,
+			"show_filled_lights": true,
+			"show_stroked_lights": false,
+			"show_transmitted_lights": true,
+			"show_obstructed_lights": false,
+			"show_reflected_lights": false,
+
+			"show_objects": true,
+			"show_filled_objects": true,
+			"show_stroked_objects": false,
+			"show_transmitted_objects": true,
+			"show_obstructed_objects": false,
+			"show_reflected_objects": false,
+
+			"show_annotations": true,
+			"arrow_style": "filled",
+			"label_style": "diagonal",			
+			"show_thickness": true,
+			"show_spacing": true,
+			"show_focal_points": true,
+			"show_principal_planes": true,
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"optics",
+				"shared"
+			],
+			"sidebar_view_kind": {
+				"phone": "trees",
+				"tablet": "trees",
+				"desktop": "trees"
+			},
+			"show_toolbar": true,
+			"show_data_editor": {
+				"phone": false,
+				"tablet": true,
+				"desktop": true
+			},
+			"data_editor_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"pan_duration": 500,
+			"zoom_duration": 500,
+			"zoom_to_duration": 5,
+			"move_duration": 300,
+			"measuring_units": "metric",
+			"home_directory": "Optics/",
+			"uploads_directory": "Optics/"
+		},
+		"extensions": [
+			"lens"
+		],
+		"optics_directory": "/Shared/Optics/Optics"
+	},
+
 	"pdf_viewer": {
 		"name": "PDF",
 		"icon": "fa fa-file-pdf",
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "white",
 		"preferences": {
@@ -831,8 +1131,7 @@
 			"window_size": "medium",
 			"toolbars": [
 				"zoom_mode",
-				"zoom",
-				"page"
+				"zoom"
 			],
 			"show_sidebar": true,
 			"sidebar_size": {
@@ -842,7 +1141,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -853,6 +1152,43 @@
 				"tablet": "medium",
 				"desktop": "large"
 			}
+		}
+	},
+
+	"post_viewer": {
+		"name": "Posts",
+		"icon": "fa fa-newspaper",
+		"platform": "all",
+		"category": "social",
+		"disabled": true,
+		"hidden": true,
+		"args": false,
+		"color": "blue",
+		"preferences": {
+			"show_comments": true,
+			"show_options": true,
+			"window_size": "medium",
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"topics"
+			],
+			"sidebar_view_kind": {
+				"phone": "lists",
+				"tablet": "lists",
+				"desktop": "lists"
+			},
+			"uploads_directory": "Uploads/",
+			"storage_directory": ".News/"
 		}
 	},
 
@@ -888,7 +1224,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -918,7 +1254,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1040,9 +1376,9 @@
 		"platform": "all",
 		"category": "productivity",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
-		"color": "brown",
+		"color": "green",
 		"preferences": {
 			"view_kind": {
 				"phone": "cards",
@@ -1066,7 +1402,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1081,7 +1417,7 @@
 		"platform": "all",
 		"category": "productivity",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "green",
 		"defaults": {
@@ -1119,7 +1455,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1158,16 +1494,16 @@
 			"target": "text",
 			"min_score": 50,
 			"max_results": 100,
-			"view_kind": "cards",
+			"view_kind": "lists",
 			"items_per_page": 30,
 			"window_size": "medium",
 			"toolbars": [
 				"nav"
 			],
 			"detail_kind": {
-				"phone": "size",
-				"tablet": "size",
-				"desktop": "size"
+				"phone": null,
+				"tablet": null,
+				"desktop": null
 			},
 			"date_format": "date_only",
 			"show_sidebar": true,
@@ -1211,7 +1547,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1244,7 +1580,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1260,17 +1596,71 @@
 		"upgrade_account_url": "#contact"
 	},
 
+	"spectrum_editor": {
+		"name": "Spectra",
+		"icon": "fa fa-rainbow",
+		"platform": "all",
+		"category": "optical",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "white",
+		"preferences": {
+			"initial_file (unused)": "/Shared/Optics/Spectra/Visible (x6).spct",
+			"home_directory": "Spectra/",
+			"window_size": "large",
+			"toolbars": {
+				"phone": [
+				],
+				"tablet": [
+				],
+				"desktop": [
+				]		
+			},
+			"show_sidebar": true,
+			"sidebar_size": {
+				"phone": 0,
+				"tablet": 25,
+				"desktop": 25
+			},
+			"sidebar_min_size": {
+				"phone": 0,
+				"tablet": 0,
+				"desktop": 175
+			},
+			"sidebar_panels": [
+				"spectra",
+				"shared"
+			],
+			"sidebar_view_kind": {
+				"phone": "trees",
+				"tablet": "trees",
+				"desktop": "trees"
+			},
+			"show_data_editor": {
+				"phone": false,
+				"tablet": true,
+				"desktop": true
+			},
+			"data_editor_bar_size": {
+				"phone": 50,
+				"tablet": 25,
+				"desktop": 25
+			}
+		},
+		"spectra_directory": "/Shared/Optics/Spectra"
+	},
+
 	"terminal": {
 		"name": "Terminal",
 		"icon": "fa fa-terminal",
 		"platform": "all",
 		"category": "system",
-		"disabled": false,
+		"disabled": true,
 		"hidden": true,
 		"args": false,
 		"color": "green",
 		"preferences": {
-			"font_size": 13,
 			"window_size": "medium"
 		}
 	},
@@ -1281,7 +1671,7 @@
 		"platform": "all",
 		"category": "productivity",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "teal",
 		"preferences": {
@@ -1314,7 +1704,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1322,8 +1712,8 @@
 				"themes"
 			],
 			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
+				"phone": "cards",
+				"tablet": "icons",
 				"desktop": "lists"
 			}
 		},
@@ -1337,7 +1727,7 @@
 	"theme_picker": {
 		"name": "Theme Picker",
 		"icon": "fa fa-mouse-pointer",
-		"platform": "all",
+		"platform": "mobile",
 		"category": "system",
 		"disabled": false,
 		"hidden": true,
@@ -1349,7 +1739,7 @@
 				"/Shared/Documents/Themes/Common/Dark.thme",
 				"/Shared/Documents/Themes/Common/Light.thme",
 				"/Shared/Documents/Themes/Common/Standard.thme",
-				"/Shared/Documents/Themes/Mac/System 1X.thme",
+				"/Shared/Documents/Themes/Mac/System 1.thme",
 				"/Shared/Documents/Themes/Mac/X Monterey.thme",
 				"/Shared/Documents/Themes/Linux/Linux Penguin.thme",
 				"/Shared/Documents/Themes/Linux/Ubuntu Beaver.thme",
@@ -1368,17 +1758,13 @@
 		"platform": "all",
 		"category": "utility",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": false,
 		"color": "cyan",
 		"preferences": {
 			"display": "led",
 			"show_hours": true,
-			"show_hundredths": true,
-			"direction": "up",
-			"hours": 0,
-			"minutes": 0,
-			"seconds": 0
+			"show_hundredths": true
 		}
 	},
 
@@ -1414,7 +1800,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1423,79 +1809,13 @@
 		}
 	},
 
-	"topic_viewer": {
-		"name": "Comments",
-		"icon": "fa fa-hashtag",
-		"platform": "all",
-		"category": "social",
-		"disabled": false,
-		"hidden": true,
-		"args": false,
-		"color": "blue",
-		"defaults": {
-			"topic": {
-				"name": "What's New",
-				"description": "This is the default topic.",
-				"required": true
-			}
-		},
-		"features": {
-			"emoji": true,
-			"files": true,
-			"pictures": true,
-			"audio": true,
-			"music": true,
-			"video": true,
-			"maps": true,
-			"uploads": true,
-			"locations": true
-		},
-		"preferences": {
-			"default_topic": "What's New",
-			"posts_per_page": 10,
-			"posts_direction": "top_down",
-			"default_privacy": "connections",
-			"show_comments": false,
-			"show_options": true,
-			"show_elapsed_time": true,
-			"translation": false,
-			"language": "English",
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 200,
-				"desktop": 200
-			},
-			"sidebar_panels": [
-				"info",
-				"topics"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"copy_attachments": true,
-			"storage_directory": ".News/"
-		},
-		"topic_icon_selector_path": "/Shared/Pictures",
-		"topic_invitation_message": "I thought you might be interested in this topic!"
-	},
-
 	"tune_editor": {
 		"name": "Tunes",
 		"icon": "fa fa-music",
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "magenta",
 		"preferences": {
@@ -1516,7 +1836,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1537,7 +1857,7 @@
 		"platform": "all",
 		"category": "multimedia",
 		"disabled": false,
-		"hidden": false,
+		"hidden": true,
 		"args": true,
 		"color": "violet",
 		"preferences": {
@@ -1549,18 +1869,17 @@
 			"window_size": "medium",
 			"toolbars": [
 				"clip", 
-				"volume",
-				"video"
+				"volume"
 			],
 			"show_sidebar": true,
 			"sidebar_size": {
 				"phone": 0,
-				"tablet": 30,
-				"desktop": 30
+				"tablet": 25,
+				"desktop": 25
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1582,7 +1901,17 @@
 				"tablet": 25,
 				"desktop": 25
 			}
-		}
+		},
+		"extensions": [
+			"avi",
+			"mp4",
+			"mov",
+			"ogg",
+			"webm",
+			"mpeg",
+			"mpg",
+			"wmv"
+		]
 	},
 
 	"web_browser": {
@@ -1595,7 +1924,7 @@
 		"args": true,
 		"color": "violet",
 		"preferences": {
-			"homepage": "https://www.google.com/webhp?igu=1",
+			"homepage": "https://www.wikipedia.org",
 			"home_directory": "Favorites/",
 			"window_size": "medium",
 			"toolbars": [
@@ -1610,7 +1939,7 @@
 			},
 			"sidebar_min_size": {
 				"phone": 0,
-				"tablet": 175,
+				"tablet": 0,
 				"desktop": 175
 			},
 			"sidebar_panels": [
@@ -1618,9 +1947,8 @@
 			]
 		},
 		"favorites": {
-			"Google": "https://www.google.com/webhp?igu=1",
-			"Bing": "https://www.bing.com",
-			"Wikipedia": "https://www.wikipedia.org"
+			"Wikipedia": "https://www.wikipedia.org",
+			"BBC News": "https://www.bbc.com"
 		}
 	}
 }

@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-desktop.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$run-menu-color: colors.$dark-grey;
+$run-menu-text-color: white;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+
+	#desktop.dark {
+		.desktop.app > .footer-bar {
+			
+			//
+			// dark desktop run menus
+			//
+
+			.run-menu .menu-bar {
+				.dropdown-toggle {
+					color: $run-menu-text-color;
+					background-color: $run-menu-color;
+					border-color: $run-menu-color;
+
+					i {
+						color: $run-menu-text-color;
+					}
+				}
+			}
+		}
+	}
+}

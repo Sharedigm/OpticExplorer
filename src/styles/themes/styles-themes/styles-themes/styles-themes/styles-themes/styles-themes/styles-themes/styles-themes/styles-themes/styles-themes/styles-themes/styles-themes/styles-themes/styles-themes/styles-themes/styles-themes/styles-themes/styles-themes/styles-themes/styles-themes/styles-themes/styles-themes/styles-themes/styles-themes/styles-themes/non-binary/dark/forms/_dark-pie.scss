@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-pie.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$dark-pie-empty-color: colors.$dark-grey;
+$dark-pie-full-color: dark-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.pie:not(.lcd) {
+		.slice {
+
+			&.empty {
+				background: $dark-pie-empty-color;
+			}
+
+			&.full {
+				background: $dark-pie-full-color;
+			}
+
+			&.half-full {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					$dark-pie-full-color 0%);
+			}
+
+			&.half-empty {
+				background-image: linear-gradient(to right,
+					transparent 50%,
+					$dark-pie-empty-color 0%);
+			}
+		}
+	}
+}

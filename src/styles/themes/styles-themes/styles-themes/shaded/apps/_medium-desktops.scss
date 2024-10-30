@@ -1,0 +1,178 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-desktops.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$run-menu-color: colors.$medium-green;
+$run-menu-text-color: white;
+
+//
+// mixins
+//
+
+@mixin desktop-color ($color: colors.$medium-blue) {
+	background-color: colors.blend($color, #303030, 50%);
+}
+
+@mixin desktop-colored ($color: colors.$medium-blue) {
+	background-color: colors.blended($color, #303030, 50%);
+}
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored {
+		
+		#desktop,
+		#desktop.auto,
+		#desktop.medium {
+			.desktop.app > .footer-bar {
+
+				//
+				// dark desktop run menus
+				//
+
+				.run-menu .menu-bar {
+					.dropdown-toggle {
+						color: $run-menu-text-color;
+						background-color: $run-menu-color;
+						border-color: $run-menu-color;
+
+						i {
+							color: $run-menu-text-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// desktop backgrounds
+		//
+
+		#desktop.colored,
+		.desktop.preview.colored,
+		#desktop.auto-colored,
+		.desktop.preview.auto-colored {
+			@include desktop-color(var(--primary-color));
+		}
+
+		#desktop.colored.red,
+		.desktop.preview.colored.red,
+		&.red #desktop.auto-colored,
+		&.red .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-red);
+		}
+
+		#desktop.colored.orange,
+		.desktop.preview.colored.orange,
+		&.orange #desktop.auto-colored,
+		&.orange .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-orange);
+		}
+
+		#desktop.colored.gold,
+		.desktop.preview.colored.gold,
+		&.gold #desktop.auto-colored,
+		&.gold .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-gold);
+		}
+
+		#desktop.colored.yellow,
+		.desktop.preview.colored.yellow,
+		&.yellow #desktop.auto-colored,
+		&.yellow .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-yellow);
+		}
+
+		#desktop.colored.green,
+		.desktop.preview.colored.green,
+		&.green #desktop.auto-colored,
+		&.green .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-green);
+		}
+
+		#desktop.colored.teal,
+		.desktop.preview.colored.teal,
+		&.teal #desktop.auto-colored,
+		&.teal .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-teal);
+		}
+
+		#desktop.colored.aqua,
+		.desktop.preview.colored.aqua,
+		&.aqua #desktop.auto-colored,
+		&.aqua .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-aqua);
+		}
+
+		#desktop.colored.cyan,
+		.desktop.preview.colored.cyan,
+		&.cyan #desktop.auto-colored,
+		&.cyan .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-cyan);
+		}
+
+		#desktop.colored.blue,
+		.desktop.preview.colored.blue,
+		&.blue #desktop.auto-colored,
+		&.blue .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-blue);
+		}
+
+		#desktop.colored.violet,
+		.desktop.preview.colored.violet,
+		&.violet #desktop.auto-colored,
+		&.violet .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-violet);
+		}
+
+		#desktop.colored.magenta,
+		.desktop.preview.colored.magenta,
+		&.magenta #desktop.auto-colored,
+		&.magenta .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-magenta);
+		}
+
+		#desktop.colored.brown,
+		.desktop.preview.colored.brown,
+		&.brown #desktop.auto-colored,
+		&.brown .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-brown);
+		}
+
+		#desktop.colored.grey,
+		.desktop.preview.colored.grey,
+		&.grey #desktop.auto-colored,
+		&.grey .desktop.preview.auto-colored {
+			@include desktop-colored(colors.$dark-grey);
+		}
+
+		#desktop.colored.black,
+		.desktop.preview.colored.black,
+		&.black #desktop.auto-colored,
+		&.black .desktop.preview.auto-colored {
+			@include desktop-colored(black);
+		}
+	}
+}

@@ -1,0 +1,46 @@
+[descriptive data]
+title	JP1983-001118 Example 1 (Konica Minolta AF 70-210mm F4)
+[constants]
+[variable distances]
+Focal Length	72	121	204
+Angle of View	undefined	undefined	undefined
+F-Number	4	4	4
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d5	2.20	27.65	42.81
+d10	34.25	22.29	2.15
+d14	14.71	1.22	6.20
+d14AS	14.01	0.52	5.50
+Bf(p)	undefined	undefined	undefined
+Bf	42.97	42.97	42.97
+[lens data]
+1	132.65	2.50	1.8052	50.81	25.4
+2	70.13	6.40	1.6031	50.81	60.7
+3	-1122.30	0.15		50.81
+4	87.10	5.00	1.5168	49.36	64.1
+5	3191.80	d5		49.36
+6	-2019.70	1.50	1.6968	29.47	55.5
+7	42.98	4.00		26.63
+8	-48.06	1.40	1.6968	26.63	55.5
+9	40.39	4.00	1.8052	29.47	25.4
+10	926.88	d10		29.47
+11	130.68	5.60	1.6031	30.70	60.7
+12	-41.55	1.40		30.70
+13	-38.18	1.70	1.8052	31.50	25.4
+14	-63.83	d14AS		31.50
+14AS	AS	0.70		29.752
+15	35.07	7.07	1.5168	30.98	64.1
+16	-83.12	1.71	1.7755	30.98	37.9
+17	750.07	50.37		30.98
+18	-20.93	1.75	1.7755	29.09	37.9
+19	-41.32	0.14		29.09
+20	101.37	3.20	1.6545	30.89	33.9
+21	-122.30	Bf		30.89
+[figure]
+source	Data/JP1983-001118_Figure01P.png
+originX	49.45
+originY	98.43
+ppmm	3.044
+[notes]
+Bill: s7/s8 restricts telephoto F-Number slightly. Patent and Productions Figures are telephoto.

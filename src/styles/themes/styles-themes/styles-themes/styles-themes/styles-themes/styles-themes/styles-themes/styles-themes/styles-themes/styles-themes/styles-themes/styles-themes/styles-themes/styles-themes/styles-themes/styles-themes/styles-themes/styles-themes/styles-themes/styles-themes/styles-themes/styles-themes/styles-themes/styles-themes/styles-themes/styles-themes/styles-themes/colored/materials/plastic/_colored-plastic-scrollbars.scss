@@ -1,0 +1,55 @@
+/******************************************************************************\
+|                                                                              |
+|                      _colored-plastic-scrollbars.scss                        |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/plastic/plastic-scrollbars";
+@use "../../navs/colored-scrollbars";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-scrollbars,
+		&.plastic.auto-scrollbars {
+
+			//
+			// active scrollbar thumbs
+			//
+
+			@include plastic-scrollbars.active-thumb-shade(colored-scrollbars.$active-color);
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-scrollbars,
+		&.plastic.auto-scrollbars {
+
+			//
+			// active scrollbar thumbs
+			//
+
+			@include plastic-scrollbars.active-thumb-shaded(colored-scrollbars.$default-active-color);
+		}
+	}
+}

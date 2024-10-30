@@ -1,0 +1,53 @@
+[descriptive data]
+title	US 4,806,000 Example 1 (Nikon AF Zoom-Nikkor 28-85mm f/3.5-4.5)
+[variable distances]
+Focal Length	28.8	83.3	undefined
+Angle of View	undefined	undefined	undefined
+F-Number(p)	3.5	4.0	undefined
+F-Number	3.5	4.5	undefined
+Image Height	43.2	43.2	43.2
+Total Length	undefined	undefined	undefined
+Magnification	0	0	-0.25
+d0	Infinity	Infinity	92.23
+d9	41.311	0.835	41.311
+d15	2.945	20.744	5.258
+d15AS	1.945	19.744	4.258
+d20	19.920	2.120	17.606
+Bf	39.287	57.087	41.601
+!Aperture Diameter	16.739	18.921	18.921
+[lens data]
+1	149.991	3.0	1.48749	53.40	70.2
+2	431.194	0.1		53.40	
+3	75.043	1.7	1.71700	46.74	48.1
+4	25.703	7.9		36.58	
+5	-1130.610	1.2	1.79668	36.58	45.5
+6	29.317	3.9	1.80458	36.04	25.5
+7	56.658	0.25		36.04	
+8	34.009	2.4	1.86074	35.16	23.0
+9	47.268	d9		35.16	
+10	36.551	1.2	1.86074	25.86	23.0
+11	22.699	7.4	1.48749	25.86	70.2
+12	-29.749	1.2	1.58144	25.86	40.8
+13	-52.051	0.1		26.68	
+14	32.773	3.6	1.60311	25.44	60.7
+15	-1305.526	d15AS		25.44	
+15AS	AS	1.0		16.739	
+16	-100.418	1.9	1.78470	18.48	26.1
+17	-32.631	1.0	1.51680	18.48	64.1
+18	410.041	1.3		18.48	
+19	-51.601	1.2	1.51835	17.94	60.3
+20	36.052	d20		17.94	
+21	849.830	5.4	1.58913	32.64	61.2
+22	-29.228	0.1		32.64	
+23	94.230	3.7	1.62280	31.32	57.0
+24	-70.653	2.7		31.32	
+25	-29.860	1.2	1.79504	32.64	28.6
+26	-156.189	Bf		32.64	
+[figure]
+source	Data/US004806000_Figure15P.png
+originX	25.15
+originY	150.98
+ppmm	3.746
+[notes]
+Bill: Patent says telephoto is f/4.0 but it measures f/4.48 and the production lens is f/4.5
+It's unusual that the 0.25x close-up scenario is at the wide end of the zoom.

@@ -1,0 +1,149 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-beams.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	.light.beam {
+
+		//
+		// stroked paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					mix-blend-mode: normal;
+					stroke-opacity: 0.75;
+				}
+			}
+		}
+	}
+
+	//
+	// light visibility
+	//
+
+	&.lights-hidden {
+		.light.beam, .light.marker, .light.annotation, 
+		.focus.marker, .focus.annotation {
+			visibility: hidden;
+			display: none;
+		}
+	}
+
+	&.lights-unstroked {
+		.light.beam {
+			.transmitted {
+				.paths path:not(.first):not(.last) {
+					visibility: hidden;
+				}
+			}
+		}
+	}
+
+	&.lights-unfilled {
+		.light.beam {
+			.filled {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.lights-untransmitted {
+		.light.beam {
+			.transmitted {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.lights-unobstructed {
+		.light.beam {
+			.obstructed {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.lights-unreflected {
+		.light.beam {
+			.reflected {
+				visibility: hidden;
+			}
+		}
+	}
+}
+
+//
+// light viewports
+//
+
+.optics .viewport.light,
+.light .optics .viewport.auto {	
+
+	.light.beam {
+
+		//
+		// beam paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					mix-blend-mode: multiply;
+				}
+			}
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.optics .viewport.dark,
+.dark .optics .viewport.auto {	
+
+	.light.beam {
+
+		//
+		// beam paths
+		//
+
+		.paths {
+			path {
+
+				//
+				// first, last unobstructed paths
+				//
+
+				&.first, &.last {
+					mix-blend-mode: normal;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 4,770,516 Example 5 (Ricoh smc Pentax-F 100mm F2.8 Macro)
+[constants]
+[variable distances]
+Focal Length	100.12	undefined
+Angle of View	24.5	undefined
+F-Number	2.8	4.8
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-1.0
+d0	Infinity	145.77
+d11	2.500	48.087
+Bf	47.16	47.16
+Aperture Diameter	26.183	25.748
+[lens data]
+1	64.000	4.450	1.78590	36.92	44.2
+2	727.416	3.290		36.92	
+3	31.747	5.110	1.80610	33.42	40.9
+4	66.762	2.000		31.06	
+5	130.320	1.500	1.80518	30.38	25.4
+6	26.047	5.415		27.84	
+6AS	AS	5.415		26.183
+7	-24.940	1.800	1.68893	26.16	31.1
+8	-403.219	5.260	1.74400	28.66	44.7
+9	-34.018	0.150		29.81
+10	244.668	4.150	1.72000	30.61	42.0
+11	-57.000	d11		30.61
+12	-1351.297	3.310	1.80518	27.92	25.4
+13	-68.597	4.650		27.92	
+14	-55.555	1.500	1.80610	27.32	40.9
+15	46.035	11.410		27.32	
+16	51.387	5.520	1.51633	36.44	64.1
+17	-370.000	Bf		36.44	
+[figure]
+source	Data/US004770516_Figure17P.png
+originX	93.35
+originY	99.24
+ppmm	2.498
+[notes]
+Bill: d0 measured.

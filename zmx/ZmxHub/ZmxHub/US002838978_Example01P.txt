@@ -1,0 +1,27 @@
+[descriptive data]
+title	US 2,838,978 Example 1 (Canon 50mm f2.8)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50.00
+Angle of View	46
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	39.54
+[lens data]
+1	18.95	4.85	1.6583	19.12	57.3
+2	460.25	3.60		19.12	
+3	-37.05	1.35	1.5930	15.23	34.3
+4	15.50	2.00		14.05
+4AS	AS	1.05		14.036
+5	Infinity	1.05	1.5111	15.40	60.6
+6	17.40	6.80	1.6910	15.40	54.8
+7	-27.45	Bf		15.40	
+[figure]
+source	Data/US002838978_Figure01P.png
+originX	148.76
+originY	119.55
+ppmm	9.965
+[notes]

@@ -1,0 +1,42 @@
+################################################################################
+#                                                                              #
+#                           Achromatic Doublet.optc                            #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 59.89822 mm
+        diameter: 31.92975 mm
+      - type: spherical
+        curvature: -40.56077 mm
+        diameter: 31.92975 mm
+    thickness: 8.481341 mm
+    material:
+      n: 1.4875
+      v: 70.4
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -40.56077 mm
+        diameter: 31.92975 mm
+      - type: spherical
+        curvature: -115.2165 mm
+        diameter: 31.92975 mm
+    thickness: 3.991219 mm
+    spacing: 
+    material:
+      n: 1.603417
+      v: 38.01487

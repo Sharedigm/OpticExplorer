@@ -1,0 +1,64 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-icons.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$normal-color: medium-branding.$primary-color;
+$warning-color: colors.$medium-red;
+$error-color: colors.$medium-orange;
+$success-color: colors.$medium-green;
+$special-color: medium-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	i.normal, .btn i.normal {
+		color: $normal-color;
+	}
+
+	//
+	// status icons
+	//
+
+	i.warning, .btn i.warning {
+		color: $warning-color;
+	}
+
+	i.error, .btn i.error {
+		color: $error-color;
+	}
+
+	i.success, .btn i.success {
+		color: $success-color;
+	}
+
+	//
+	// special icons
+	//
+
+	i.fa-star, .btn i.fa-star {
+		color: $special-color;
+	}
+}

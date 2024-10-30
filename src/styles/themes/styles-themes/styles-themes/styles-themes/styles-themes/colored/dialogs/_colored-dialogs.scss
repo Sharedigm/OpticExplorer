@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                             _colored-dialogs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$title-icon-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	.modals {
+
+		//
+		// focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			.modal-header {
+				.icon {
+
+					// title icon color
+					//
+					i {
+						color: $title-icon-color;
+					}
+				}
+			}
+		}
+	}
+}

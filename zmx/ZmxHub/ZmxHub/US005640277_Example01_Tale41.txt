@@ -1,0 +1,40 @@
+[descriptive data]
+title	Nikon AF Nikkor 85mm f/1.4D IF (US 5,640,277 Example 1)
+[constants]
+[variable distances]
+Focal Length	85.0001	undefined
+Angle of View	undefined	undefined
+F-Number	1.43	1.7
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.1000
+d0	Infinity	835.82
+d6	17.7999	6.9908
+d16	1.2001	12.0092
+Bf	38.1202	38.1202
+[lens data]
+1	54.6447	10.4	1.60300	64.62	65.42
+2	386.2789	0.1		64.62	
+3	41.3841	8.1	1.80411	54.52	46.55
+4	69.6421	4.7		50.46	
+5	108.1534	2.4	1.71736	47.44	29.46
+6	28.1317	d6		40.50	
+7	46.3814	4.4	1.80454	35.52	39.61
+8	238.4203	2.4		34.51	
+9	-84.9337	2.2	1.64831	34.51	33.75
+10	44.2102	4.0		32.38	
+11	AS	3.4		30.413
+12	-53.7011	2.0	1.67270	31.98	32.17
+13	65.2634	9.5	1.86994	33.82	39.82
+14	-57.8447	0.1		33.82	
+15	93.4589	3.5	1.78797	33.28	47.47
+16	-213.8583	d16		33.28	
+17	-326.6053	2.0	1.74810	34.08	52.30
+18	-245.1387	Bf		34.08	
+[figure]
+source	Data/US005640277_Example01_Tale41-Fig1.png
+ppmm	7.245307677
+originX	7
+originY	239.5
+[notes]
+Bill: d0 measured.

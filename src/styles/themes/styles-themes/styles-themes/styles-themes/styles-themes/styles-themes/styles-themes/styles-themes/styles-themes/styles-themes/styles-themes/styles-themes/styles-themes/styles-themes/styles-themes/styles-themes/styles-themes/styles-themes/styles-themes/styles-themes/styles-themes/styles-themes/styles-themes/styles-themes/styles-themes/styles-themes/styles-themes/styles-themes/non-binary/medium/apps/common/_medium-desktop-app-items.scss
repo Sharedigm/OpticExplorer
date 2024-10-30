@@ -1,0 +1,277 @@
+/******************************************************************************\
+|                                                                              |
+|                       _medium-desktop-app-items.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+
+//
+// variables
+//
+
+$background-opacity: 25%;
+
+//
+// colors
+//
+
+$background-color: colors.faded(colors.$very-very-very-light-grey, $background-opacity);
+$text-shadow: 1px 1px 3px colors.faded(black, 50%);
+$item-name-color: white;
+$tile-name-background-color: colors.faded(colors.$dark-grey, 50%);
+$item-details-color: white;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.desktop.app > .body > .app-launcher,
+	.desktop.app > .body > .file-browser .mainbar .tab-pane {
+
+		> .items:not(.overlay), .carousel-cell {
+			
+			//
+			// desktop items
+			//
+
+			.item {
+				color: $item-name-color;
+			}
+		}
+	}
+}
+
+//
+// desktop mainbar and sidebar
+//
+
+body:not(.binary) {
+	.desktop.app > .body > .app-launcher,
+	.desktop.app > .body > .file-browser .mainbar .tab-pane,
+
+	/*
+	// transparent sidebars
+	//
+	#desktop.transparent-sidebars:not(.sidebar-panels):not(.auto-sidebar-panels) .desktop.app > .body > .app .sidebar,
+	&:not(.sidebar-panels) #desktop.transparent-sidebars.auto-sidebar-panels .desktop.app > .body > .app .sidebar,
+
+	&.transparent #desktop.auto-sidebars:not(.sidebar-panels):not(.auto-sidebar-panels) .desktop.app > .body > .app .sidebar,
+	&.transparent:not(.sidebar-panels) #desktop.auto-sidebars:not(.sidebar-panels) .desktop.app > .body > .app .sidebar,
+
+	// translucent sidebars
+	//
+	#desktop.translucent-sidebars:not(.sidebar-panels):not(.auto-sidebar-panels) .desktop.app > .body > .app .sidebar,
+	&:not(.sidebar-panels) #desktop.translucent-sidebars.auto-sidebar-panels .desktop.app > .body > .app .sidebar,
+	*/
+
+	{
+		label {
+			color: text-colors.$light-color !important;
+			text-shadow: $text-shadow;
+
+			i {
+				color: white;
+				text-shadow: $text-shadow;
+			}
+		}
+
+		//
+		// desktop items
+		//
+
+		> .items:not(.overlay), .carousel-cell {
+			color: white;
+
+			//
+			// desktop icons
+			//
+
+			> .icon-grid .item,
+			> .pager .item {
+				&:not(.selected):not(.highlighted) {
+					> .row {
+
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: $item-name-color;
+								text-shadow: $text-shadow;
+							}
+						}
+
+						.details {
+							color: $item-details-color;
+						}
+					}
+				}
+			}
+
+			//
+			// desktop lists
+			//
+
+			> .item-list .item, 
+			> .item-tree .item {
+
+				&:not(.selected):not(.highlighted) {
+					> .info {
+
+						.icon i {
+							text-shadow: $text-shadow;
+						}
+			
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: $item-name-color;
+								text-shadow: $text-shadow;
+							}
+						}
+
+						.expander {
+							color: $item-name-color;
+							text-shadow: $text-shadow;
+						}
+
+						.details {
+							color: $item-details-color;
+						}
+					}
+				}
+			}
+
+			//
+			// desktop tiles
+			//
+
+			> .tile-grid {
+				background: none;
+
+				.item:not(.selected):not(.highlighted) {
+					.tile {
+						background-color: $background-color;
+						border-color: transparent;
+
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: $item-name-color;
+								background-color: $tile-name-background-color;
+							}
+						}
+
+						.details {
+							color: $item-details-color;
+						}
+					}
+				}
+			}
+
+			//
+			// desktop cards
+			//
+
+			> .card-grid {
+				.cards {
+					.item:not(.selected):not(.highlighted) {	
+						.card {
+							background-color: $background-color;
+							border-color: transparent;
+
+							.name {
+
+								//
+								// uneditable names
+								//
+
+								&:not([contenteditable="true"]) {
+									color: $item-name-color;
+									text-shadow: $text-shadow;
+								}
+							}
+
+							.details {
+								color: $item-details-color;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// desktop item expanders
+		//
+
+		> .items:not(.overlay), .carousel-cell {
+
+			> .item-list {
+				.expander button i,
+				.details {
+					color: white !important;
+				}
+			}
+			
+			> .item-tree {
+				.item {
+					.expander button i {
+						color: white !important;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// desktop app launcher
+	//
+
+	.full-screen {
+		.app-launcher.app {
+			color: white;
+
+			.item {
+				&:not(.selected):not(.highlighted) {
+					> .row {
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								text-shadow: $text-shadow;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

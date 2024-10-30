@@ -1,0 +1,51 @@
+[descriptive data]
+title	US 2011/0149118 Example 1 (Samsung 18-55mm F3.5-5.6 OIS III)
+[constants]
+[variable distances]
+Focal Length	18.55	28.00	53.40	undefined	undefined	undefined
+Angle of View	77.62	53.24	29.06	81.68	57.08	31.92
+F-Number	undefined	undefined	undefined	undefined	undefined	undefined
+Image Height	28.50	28.50	28.50	28.50	28.50	28.50
+Total Length	undefined	undefined	undefined	undefined	undefined	undefined
+Magnification	0	0	0	-0.08330	-0.12225	-0.21989
+d0	Infinity	Infinity	Infinity	190.46	181.67	159.47
+d3	0.861	9.606	23.813	0.861	9.606	23.813
+d9	15.335	9.047	2.380	17.145	11.156	5.529
+d11	4.196	4.585	5.838	2.386	2.476	2.689
+d18	4.530	3.323	1.930	4.530	3.323	1.930
+d22	20.963	28.475	43.026	20.963	28.475	43.026
+Bf	0	0	0	0	0	0
+[lens data]
+1	52.409	2.00	1.84666	42.40	23.78
+2	35.337	6.50	1.69680	39.78	55.46
+3	312.400	d3		39.78	
+4	79.275	1.25	1.71300	28.00	53.94
+5	10.946	7.10		19.00	
+6	-61.407	2.10	1.69680	19.00	55.46
+7	23.884	0.27		19.00	
+8	18.000	3.80	1.80518	19.16	25.46
+9	63.286	d9		19.16	
+10	37.784	2.00	1.60311	12.70	60.69
+11	-45.794	d11		12.70	
+12	AS	0.10		11.30	
+13	13.511	3.35	1.48749	12.18	70.44
+14	-37.908	0.70	1.84666	12.18	23.78
+15	95.533	3.84		12.18	
+16	-306.745	1.75	1.70154	10.60	41.15
+17	-18.178	0.55	1.63854	10.60	55.45
+18	38.555	d18		10.60	
+19	30.717	3.25	1.58313	14.64	59.46
+20	-27.831	1.51		14.64	
+21	-23.230	1.80	1.80611	14.64	40.73
+22	-84.987	d22		16.04	
+23	CG	2.24	1.51633	32.26	64.14
+24	CG	0.13		32.26	
+[aspherical data]
+20	-27.831	0	7.44814E-05	4.32792E-07
+[figure]
+source	Data/US20110149118_Figure02WP.png
+originX	56.87
+originY	477.99
+ppmm	14.124
+[notes]
+Bill: Magnification and d0 measured. No F-Number. Angle of View Fig 3, 5, and 7. Tweaked d24 0.10 -> 0.13

@@ -1,0 +1,320 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-item-tiles.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/frosted-glass";
+@use "../items/medium-items";
+@use "../navs/medium-selection";
+
+//
+// variables
+//
+
+$background-opacity: 25%;
+
+//
+// colors
+//
+
+$background-color: colors.faded(colors.$very-very-light-grey, $background-opacity);
+$grid-color: white;
+$grid-background-color: colors.$ultra-dark-grey;
+$name-color: black;
+$name-background-color: colors.faded(white, 75%);
+$highlighted-border-color: colors.$very-light-grey;
+$selected-border-color: colors.$very-light-grey;
+$highlight-angle: 150deg;
+$page-thumbnail-shadow: 5px 5px 20px colors.faded(black, 25%);
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.tile-grid {
+
+		//
+		// items
+		//
+
+		.item {
+
+			> .tile {
+				background-color: $background-color;
+
+				> .icon {
+					> canvas {
+						box-shadow: $page-thumbnail-shadow;
+					}
+
+					> .thumbnail {
+						border-color: $background-color;
+					}
+				}
+
+				.name {
+					color: $name-color;
+					background-color: $name-background-color;
+					// @include frosted-glass.frosted(5px);
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						color: text-colors.$dark-color;
+						background-color: white;
+						outline-color: medium-selection.$edit-highlight-color;
+					}
+				}
+			}
+
+			> .specifics {
+				.details {
+					background-color: medium-items.$details-background-color;
+				}
+			}
+		}
+
+		//
+		// highlighted items
+		//
+
+		.item.highlighted {
+
+			.tile {
+				border-color: $highlighted-border-color;
+
+				.icon::after {
+					border-color: $highlighted-border-color;
+				}
+
+				.name {
+					@include frosted-glass.unfrosted();
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+						background-color: medium-selection.$highlight-color;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						border-top-color: medium-selection.$highlight-color;
+					}
+				}
+			}
+		}
+		
+		//
+		// selected items
+		//
+
+		.item.selected {
+
+			.tile {
+				border-color: $selected-border-color;
+
+				.icon::after {
+					border-color: $selected-border-color;
+				}
+
+				.name {
+					@include frosted-glass.unfrosted();
+
+					//
+					// uneditable names
+					//
+
+					&:not([contenteditable="true"]) {
+						color: white;
+					}
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						border-top-color: medium-selection.$select-color;
+					}
+				}
+			}
+
+			.details {
+				color: white;
+				background-color: medium-selection.$select-color;
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.tile-grid {
+
+			.item.selected {
+
+				.tile {
+					border-color: medium-selection.$highlight-color;
+
+					.icon::after {
+						border-color: medium-selection.$highlight-color;
+					}
+
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: medium-selection.$highlight-color;
+						}
+
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							color: text-colors.$dark-color;
+							background-color: white;
+							outline-color: medium-selection.$edit-highlight-color;
+						}
+					}
+				}
+
+				.details {
+					color: white;
+					background-color: medium-selection.$highlight-color;
+				}
+			}
+		}
+	}
+
+	//
+	// tile materials
+	//
+
+	/*
+	&.chalk .tile-grid {
+		.item {
+			> .tile {
+
+				// default background
+				//
+				background: 
+
+					// highlight
+					//
+					linear-gradient($highlight-angle,
+						fade(white, 33%) 0%,
+						fade(white, 0%) 50%),
+
+					// diffuse
+					//
+					$background-color;
+
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&.plastic .tile-grid {
+		.item {
+			> .tile {
+
+				// default background
+				//
+				background: 
+
+					// highlight
+					//
+					linear-gradient($highlight-angle,
+						fade(white, 75%) 0%,
+						fade(white, 25%) 25%,
+						fade(white, 0%) 50%),
+
+					// diffuse
+					//
+					$background-color;
+
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&.glass .tile-grid {
+		.item {
+			> .tile {
+			
+				// default background
+				//
+				background: 
+
+					// highlight
+					//
+					linear-gradient($highlight-angle,
+						fade(white, 100%) 0%,
+						fade(white, 25%) 12.5%,
+						fade(white, 0%) 25%),
+
+					// diffuse
+					//
+					$background-color;
+
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	&.metal .tile-grid {
+		.item {
+			> .tile {
+			
+				// default background
+				//
+				background: 
+
+					// highlight
+					//
+					linear-gradient($highlight-angle,
+						fade(white, 50%) 0%,
+						fade(black, 33%) 50%,
+						fade(white, 0%) 100%),
+
+					// diffuse
+					//
+					$background-color;
+
+				background-blend-mode: hard-light;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+	*/
+}

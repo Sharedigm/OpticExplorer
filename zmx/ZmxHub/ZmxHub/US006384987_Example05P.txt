@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 6,384,987 Example 5 (Ricoh smc Pentax-FA 35mm F2 AL)
+[variable distances]
+Focal Length	35
+Angle of View	64.4
+F-Number	2.1
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	37.39
+[lens data]
+1	150.164	1.500	1.52249	34.76	59.8
+2	18.754	15.084		28.74	
+3	28.785	8.500	1.77250	26.20	49.6
+4	-28.785	1.400	1.62004	26.20	36.3
+5	-351.552	6.436		26.20	
+5.5	AS	7.022		19.947
+6	-17.954	1.300	1.72825	18.96	28.5
+7	89.751	0.252		19.30	
+8	144.336	4.626	1.80400	19.48	46.6
+9	-26.316	0.100		20.18	
+10	-85.307	3.187	1.66910	22.10	55.4
+11	-27.790	Bf		22.10	
+[aspherical data]
+10	-85.307	0	-1.360E-05	-2.943E-09	-5.972E-11
+[figure]
+source	Data/US006384987_FigureP.png
+originX	156.07
+originY	187.43
+ppmm	4.912
+[notes]

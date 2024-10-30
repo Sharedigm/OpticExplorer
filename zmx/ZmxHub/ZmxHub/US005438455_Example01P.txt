@@ -1,0 +1,45 @@
+[descriptive data]
+title	US 5,438,455 Example 1 (Nikon AF Nikkor 400mm f/2.8D IF-ED)
+[constants]
+[variable distances]
+Focal Length	392.0	undefined
+Angle of View	undefined	undefined
+F-Number	2.88	undefined
+Image Height	43.20	43.20
+Total Length	undefined	undefined
+Magnification	0	-0.1446
+d0	Infinity	2925.7669
+d9	8.2485	26.0802
+d14	23.0326	5.2009
+Bf(p)	104.5069	104.5069
+Bf	94.3069	94.3069
+Aperture Diameter	45.453	41.886
+[lens data]
+1	198.753	19.70	1.49782	141.90	82.6
+2	-543.380	0.10		141.90
+3	165.419	16.70	1.49782	132.95	82.6
+4	-2363.700	3.30		132.95
+5	-810.410	6.50	1.74950	130.85	35.2
+6	369.129	71.30		125.4	
+7	155.231	4.50	1.69680	84.86	55.6
+8	61.012	17.50	1.59319	77.5	67.9
+9	286.104	d9		77.5	
+10	-308.425	4.50	1.51680	65.7	64.1
+11	121.973	19.80		65.7	
+12	-283.082	7.00	1.84666	61.06	23.8
+13	-84.300	4.00	1.53172	61.06	49.1
+14	97.213	d14		61.06
+15	138.856	10.20	1.49782	57.2	82.6
+16	-80.085	5.00	1.68893	57.2	31.1
+17	-130.842	23.22		57.2	
+17AS	AS	23.12		45.453
+18	Infinity	2.00	1.51680	49.16	64.1
+19	Infinity	10.2		49.16
+19FS	FS	Bf		34.00
+[figure]	
+source	Data/US005438455_Figure01P.png
+originX	144.93
+originY	258.01
+ppmm	2.441
+[notes]
+Bill: Added FS based on production figure.

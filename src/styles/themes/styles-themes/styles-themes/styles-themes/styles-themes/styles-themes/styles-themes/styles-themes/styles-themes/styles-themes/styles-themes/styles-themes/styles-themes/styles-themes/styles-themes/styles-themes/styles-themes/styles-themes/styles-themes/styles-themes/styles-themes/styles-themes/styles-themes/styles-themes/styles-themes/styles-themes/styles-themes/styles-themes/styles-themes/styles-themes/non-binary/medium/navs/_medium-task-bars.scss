@@ -1,0 +1,111 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-task-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/buttons";
+@use "../dialogs/medium-dialogs";
+
+//
+// variables
+//
+
+$handle-background: repeating-linear-gradient(to bottom, colors.faded(white, 20%) 0px, colors.faded(white, 20%) 2px, colors.faded(black, 10%) 2px, colors.faded(black, 10%) 4px);
+
+//
+// colors
+//
+
+$item-color: medium-dialogs.$header-color;
+$icon-color: medium-dialogs.$unfocused-title-icon-color;
+$text-color: medium-dialogs.$title-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+
+	//
+	// task bars
+	//
+
+	#desktop {
+		.footer-bar {
+
+			.run-menu {
+				.dropdown-toggle {
+					box-shadow: buttons.$shadow;
+				}			
+			}
+			
+			.task-bar {
+				.pinned-items {
+					.btn {
+						box-shadow: buttons.$shadow;
+					}
+				}
+			}
+		}
+
+		&.task-bar-handles {
+			.footer-bar {
+				.handle {
+					background: $handle-background;
+				}
+			}
+		}
+	}
+
+	//
+	// unminimized task bars
+	//
+
+	#desktop:not(.task-bar-minimized) {
+		.task-bar {
+			.task-list {
+				li {
+					background-color: $item-color;
+					border-color: $item-color;
+
+					i {
+						color: $icon-color;
+					}
+
+					.title {
+						color: $text-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// minimized task bars
+	//
+
+	#desktop.task-bar-minimized {
+		.task-bar {
+			.task-list {
+				li {
+					i {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}

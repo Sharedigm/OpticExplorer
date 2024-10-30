@@ -12,7 +12,7 @@
 |        'LICENSE.md', which is part of this source code distribution.         |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|        Copyright (C) 2016-2023, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
 export default {
@@ -162,6 +162,22 @@ export default {
 				});
 				break;
 
+			case 'material_editor':
+				import(
+					'../../../material-editor/forms/preferences/preferences-form-view.js'
+				).then((PrefsFormView) => {
+					done(PrefsFormView.default);
+				});
+				break;
+
+			case 'material_map_viewer':
+				import(
+					'../../../material-map-viewer/forms/preferences/preferences-form-view.js'
+				).then((PrefsFormView) => {
+					done(PrefsFormView.default);
+				});
+				break;
+
 			/*
 			case 'notification_center':
 				import(
@@ -171,6 +187,14 @@ export default {
 				});
 				break;
 			*/
+
+			case 'optic_editor':
+				import(
+					'../../../optic-editor/forms/preferences/preferences-form-view.js'
+				).then((PrefsFormView) => {
+					done(PrefsFormView.default);
+				});
+				break;
 
 			case 'pdf_viewer':
 				import(
@@ -244,6 +268,15 @@ export default {
 				});
 				break;
 
+			case 'spectrum_editor':
+				import(
+					'../../../spectrum-editor/forms/preferences/preferences-form-view.js'
+				).then((PrefsFormView) => {
+					done(PrefsFormView.default);
+				});
+				break;
+
+			/*
 			case 'terminal':
 				import(
 					'../../../terminal/forms/preferences/preferences-form-view.js'
@@ -251,6 +284,7 @@ export default {
 					done(PrefsFormView.default);
 				});
 				break;
+			*/
 
 			case 'text_editor':
 				import(
@@ -325,6 +359,11 @@ export default {
 					done(PrefsFormView.default);
 				});
 				break;
+
+			default:
+				application.error({
+					message: "Could not find app preferences for " + appName + "."
+				});
 		}
 	}
 

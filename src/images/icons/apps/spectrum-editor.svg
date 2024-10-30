@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	<g transform="translate(2, 2), scale(0.9)">
+		<path fill="none" stroke="#1DD4FF" stroke-width="6" stroke-miterlimit="10" d="M28.925,63.961 c0-19.375,15.708-35.083,35.082-35.083"/>
+		<path fill="none" stroke="#59FF22" stroke-width="6" stroke-miterlimit="10" d="M22.965,63.958 c0-22.662,18.373-41.036,41.035-41.036"/>
+		<path fill="none" stroke="#FFED12" stroke-width="6" stroke-miterlimit="10" d="M17.381,63.958c0-25.746,20.874-46.62,46.619-46.62 "/>
+		<path fill="none" stroke="#FF9F2C" stroke-width="6" stroke-miterlimit="10" d="M11.548,63.958 c0-28.969,23.484-52.453,52.452-52.453"/>
+		<path fill="none" stroke="#FF2929" stroke-width="7" stroke-miterlimit="10" d="M5.298,63.958C5.298,31.537,31.58,5.255,64,5.255" />
+		<path fill="none" stroke="#E31FFF" stroke-width="6" stroke-miterlimit="10" d="M40.134,64c0-13.244,10.737-23.982,23.981-23.982" />
+		<path fill="none" stroke="#3131FF" stroke-width="6" stroke-miterlimit="10" d="M34.322,64c0-16.455,13.339-29.794,29.793-29.794" />
+	</g>
+</g>
+</svg>

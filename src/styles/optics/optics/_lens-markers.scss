@@ -1,0 +1,62 @@
+/******************************************************************************\
+|                                                                              |
+|                              _lens-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.abbe.diagram {
+
+	.lens.markers {
+		.lens.marker {
+
+			svg {
+				stroke: black;
+				stroke-width: 1.5;
+				vector-effect: non-scaling-stroke;
+				overflow: visible;
+			}
+		}
+	}
+}
+
+//
+// light theme
+//
+
+.abbe.diagram.light,
+.light .abbe.diagram.auto {
+
+	.lens.markers {
+		.lens.marker {
+			svg {
+				stroke: black;
+			}
+		}
+	}
+}
+
+//
+// dark theme
+//
+
+.abbe.diagram.dark,
+.dark .abbe.diagram.auto {
+
+	.lens.markers {
+		.lens.marker {
+			svg {
+				stroke: white;
+			}
+		}
+	}
+}

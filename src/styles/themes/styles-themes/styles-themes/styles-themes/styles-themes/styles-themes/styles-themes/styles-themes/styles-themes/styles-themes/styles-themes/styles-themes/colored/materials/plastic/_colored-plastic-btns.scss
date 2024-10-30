@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                        _colored-plastic-buttons.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/plastic/plastic-btns";
+@use "../../../../navs/materials/plastic/plastic-buttons";
+@use "../../navs/colored-btns";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary).colored {
+	&.plastic-buttons,
+	&.plastic.auto-buttons {
+
+		//
+		// styled buttons
+		//
+
+		.btn:not(.btn-primary):not(.colored):not(:disabled) {
+
+			//
+			// special buttons
+			//
+
+			&.success {
+				@include plastic-buttons.shade(colored-forms.$success-color);
+			}
+
+			&.caution {
+				@include plastic-buttons.shade(colored-forms.$caution-color);
+			}
+
+			&.warning {
+				@include plastic-buttons.shade(colored-forms.$warning-color);
+			}
+		}
+	}
+}
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-buttons,
+		&.plastic.auto-buttons {
+
+			//
+			// plastic styled buttons
+			//
+
+			.btn {
+
+				//
+				// plastic primary buttons
+				//
+
+				&.btn-primary {
+					@include plastic-btns.shade(colored-btns.$primary-color);
+
+					&:disabled {
+						@include plastic-btns.shade(colored-btns.$disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colored {
+		&.plastic-buttons,
+		&.plastic.auto-buttons {
+
+			//
+			// plastic styled buttons
+			//
+
+			.btn {
+
+				//
+				// plastic primary buttons
+				//
+
+				&.btn-primary {
+					@include plastic-btns.shaded(colored-btns.$default-primary-color);
+
+					&:disabled {
+						@include plastic-btns.shaded(colored-btns.$default-disabled-primary-color);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 1978-066222 Example 1 (Mamiya-Sekor CS 35mm f2.8)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35.00
+Angle of View	62
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	37.5
+Bf	37.45
+[lens data]
+11	38.39462	1.66215	1.48749	28.75	70.1
+12	14.04890	13.22230		23.48
+21	23.54510	10.98370	1.69680	17.80	55.5
+22	-36.32962	0.90020		17.80
+31	-42.85715	1.46647	1.48749	16.75	70.1
+32	-141.27435	0.65425		14.72
+32AS	AS	2.97		14.109
+41	-21.00588	1.17320	1.75520	14.79	27.5
+42	43.26119	1.12420		13.337
+51	-36.92598	2.54205	1.74400	13.337	44.8
+52	-15.39804	0.09765		14.79
+61	49.41062	1.85745	1.71300	14.76	53.4
+62	-164.79680	Bf		14.76
+[figure]
+source	Data/JP1978-066222_Figure01P.png
+originX	44.52
+originY	103.99
+ppmm	5.675
+[notes]
+Bill: Repair unscaled r62 -47.0848 -> -470.848 s42/s51 limits F-Number to 2.84

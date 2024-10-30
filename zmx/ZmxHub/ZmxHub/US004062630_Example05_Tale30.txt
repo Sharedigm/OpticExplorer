@@ -1,0 +1,34 @@
+[descriptive data]
+title	Nikon AI Nikkor 135mm f/2 (US 4,062,630 Example 5)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	39.43
+Aperture Diameter	31.210
+[lens data]
+1	78.320	11.097	1.71700	69.26	48.1
+2	420.000	0.500		69.26
+3	51.500	3.699	1.62606	61.80	39.1
+4	30.501	17.901	1.58913	52.91	61.2
+5	270.000	3.497		52.91
+6	Infinity	12.002	1.74000	47.53	28.2
+7	-47.000	1.607	1.71736	47.53	29.5
+8	30.776	11.785		35.16
+8AS	AS	22.114		31.210
+9	85.942	12.002	1.71736	32.07	29.5
+10	843.337	Bf		32.07	
+[figure]
+source	Data/US004062630_Example01_Tale30-Fig1.png
+originX	10
+originY	429
+ppmm	11.826
+[notes]
+Bill: No Figure for this Example.

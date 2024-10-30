@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 2010/0073777 Example 1 (Ricoh smc Pentax-DA 55mm F1.4 SDM)
+[constants]
+[variable distances]
+Focal Length	56.36	undefined
+Angle of View	28.6	undefined
+F-Number	1.4	undefined
+Image Height	28.48	28.48
+Total Length	undefined	undefined
+Magnification	0	-0.173
+d0	Infinity	344.91
+d15	1.00	13.27
+Bf	0	0
+[lens data]
+1	50.922	5.50	1.77250	41.17	49.6
+2	328.301	0.10		41.17	
+3	29.259	5.16	1.80610	37.31	40.9
+4	50.460	2.66		35.01	
+5	63.688	1.41	1.69895	32.71	30.1
+6	19.203	7.49		28.30	
+6AS	AS	2.19		27.253
+7	-150.000	2.00	1.58144	27.55	40.7
+8	Infinity	5.49		27.55	
+9	-19.310	1.50	1.76182	26.66	26.5
+10	77.297	9.43	1.83400	34.28	37.2
+11	-28.608	0.10		34.28	
+12	-251.725	3.24	1.80610	34.35	40.9
+13	-64.000	0.10		34.35	
+14	104.000	3.42	1.59240	33.11	68.3
+15	-197.685	d15		33.11	
+16	Infinity	3.00	1.48749	33.69	70.2
+17	-174.750	37.41		33.69	
+18	CG	2.00	1.51680	30.00	64.2
+19	CG	0.00		30.00
+[figure]
+source	Data/US20100073777_Figure01P.png
+originX	212.96
+originY	133.71
+ppmm	2.851
+[notes]
+Bill: Provide standard CG n and v. Measured d0.

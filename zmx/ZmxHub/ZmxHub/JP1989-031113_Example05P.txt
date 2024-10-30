@@ -1,0 +1,33 @@
+[descriptive data]
+title	JP 1989-031113 Example 5 (Nikon R-UW AF Nikkor 28mm f/2.8)
+[constants]
+ObjectGlass	1.33306	53.98
+Scaled	28	100
+[variable distances]
+Focal Length	28	undefined
+Angle of View	59.4	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.03333
+d0	Infinity	1076.10
+d2	35.242	34.054
+Bf	39.029	40.217
+[lens data]
+1	39.160	7.832	1.51680	46.57	64.12
+2	24.466	d2		37.43
+3	32.710	7.048	1.78797	17.46	47.53
+4	-74.216	2.526		17.46	
+4AS	AS	2.662		13.775
+5	-18.689	3.818	1.74077	15.38	27.64
+6	63.573	0.880		15.06
+7	-66.063	2.937	1.74810	15.06	52.06
+8	-22.716	0.392		17.34	
+9	-195.381	3.426	1.74443	20.28	49.53
+10	-26.543	Bf		20.28	
+[figure]
+source	Data/JP1989-031113_FigureP.png
+originX	149.69
+originY	357.83
+ppmm	6.555
+[notes]
+Bill: Lens data from US4856880A. Example 5 is only in the US4856880A.

@@ -1,0 +1,105 @@
+/******************************************************************************\
+|                                                                              |
+|                       _colorful-chalk-task-bars.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/chalk/round-chalk";
+@use "../../navs/colorful-task-bars";
+
+//
+// styles
+//
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		&.chalk {
+
+			//
+			// chalk unminimized task bars
+			//
+
+			#desktop:not(.task-bar-minimized):not(.colorful) .task-bar {
+				.task-list {
+					li {
+						@include round-chalk.shade(colorful-task-bars.$item-color);
+					}
+				}
+			}
+
+			#desktop.coloful:not(.task-bar-minimized) .task-bar {
+				.task-list {
+					li:not(.colored) {
+						@include round-chalk.shade(colorful-task-bars.$item-color);
+					}
+				}
+			}
+
+			//
+			// chalk minimized task bars
+			//
+
+			#desktop.task-bar-minimized:not(.colorful) .task-bar {
+				.task-list {
+					li:not(.colored) {
+						@include round-chalk.shade(colorful-task-bars.$item-color);
+					}
+				}
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.colorful {
+		&.chalk {
+
+			//
+			// chalk unminimized task bars
+			//
+
+			#desktop:not(.task-bar-minimized):not(.colorful) .task-bar {
+				.task-list {
+					li {
+						@include round-chalk.shaded(colorful-task-bars.$default-item-color);
+					}
+				}
+			}
+
+			#desktop.coloful:not(.task-bar-minimized) .task-bar {
+				.task-list {
+					li:not(.colored) {
+						@include round-chalk.shaded(colorful-task-bars.$default-item-color);
+					}
+				}
+			}
+
+			//
+			// chalk minimized task bars
+			//
+
+			#desktop.task-bar-minimized:not(.colorful) .task-bar {
+				.task-list {
+					li:not(.colored) {
+						@include round-chalk.shaded(colorful-task-bars.$default-item-color);
+					}
+				}
+			}
+		}
+	}
+}

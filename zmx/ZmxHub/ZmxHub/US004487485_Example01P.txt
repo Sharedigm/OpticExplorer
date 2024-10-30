@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,487,485 Example 1 (Ricoh SMC Pentax 645 A 45mm f2.8)
+[constants]
+Scaled	45	100
+[variable distances]
+Focal Length	45
+Angle of View	75.8
+F-Number	2.8
+Image Height	75
+Magnification	0
+d0	Infinity
+Bf	62.01
+[lens data]
+1	176.080	3.17	1.58913	53.50	61.0
+2	2639.805	0.10		53.50	
+3	32.200	1.50	1.48749	39.72	70.1
+4	17.464	7.70		30.44
+5	65.000	1.30	1.48749	31.38	70.1
+6	21.380	10.41		26.43
+7	57.091	15.51	1.72000	25.10	43.7
+8	-13639.245	1.75		25.10	
+8AS	AS	1.75		23.828
+9	121.500	10.65	1.72000	26.06	43.7
+10	-41.340	1.95		26.06	
+11	-78.389	5.35	1.80518	25.10	25.4
+12	53.200	2.78		25.10	
+13	-76.110	2.50	1.83481	26.34	42.7
+14	-36.900	0.10		26.34	
+15	-1335.000	1.20	1.80518	29.74	25.4
+16	93.600	4.07	1.80400	31.12	46.6
+17	-68.439	Bf		31.12	
+[figure]
+source	Data/US004487485_Figure01P.png
+originX	5.49
+originY	86.86
+ppmm	3.023
+[notes]
+Bill: Angle of View implies 70mm image circle.

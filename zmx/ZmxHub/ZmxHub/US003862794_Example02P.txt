@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 3,862,794 Example 2 (Olympus 28mm f2 I Zuiko Auto-W)
+[constants]
+Scaled	28	100
+[variable distances]
+Focal Length	28
+Angle of View	74
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	37.69
+[lens data]
+1	42.785	4.41	1.64000	39.61	60.30
+2	182.477	0.15		39.61
+3	51.658	1.40	1.50378	31.82	66.80
+4	12.076	3.72		21.50	
+5	22.542	2.05	1.50378	24.16	66.80
+6	15.541	7.76		19.96	
+7	92.222	1.04	1.50378	22.36	66.80
+8	18.937	8.85	1.72000	22.36	46.00
+9	Infinity	1.00		22.36
+9AS	AS	2.85		19.587
+10	894.431	6.10	1.78800	22.63	47.50
+11	-22.969	1.28		22.63
+11'	-21.279	1.06	1.76182	20.65	26.60
+12	62.576	1.86		21.53
+13	-65.517	2.92	1.69680	22.36	55.60
+14	-20.791	0.15		22.36	
+15	125.412	2.98	1.69680	25.16	55.60
+16	-52.557	Bf		25.16	
+[figure]	
+source	Data/US003862794_Figure01P.png
+originX	57.29
+originY	273.97
+ppmm	8.094
+[notes]

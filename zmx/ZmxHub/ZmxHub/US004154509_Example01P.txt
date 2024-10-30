@@ -1,0 +1,29 @@
+[descriptive data]
+title	US 4,154,509 Example 1 (Ricoh smc Pentax-M 40mm F2.8)
+[constants]
+Scaled	40	100
+[variable distances]
+Focal Length	40
+Angle of View	56
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	36.760
+[lens data]
+1	30.628	4.064	1.88300	14.97	41.0
+2	-121.360	2.696		14.97	
+3	-21.528	1.636	1.68893	13.37	31.1
+4	35.224	1.286		13.37	
+4AS	AS	1.286		12.542
+5	-25.780	0.964	1.69895	13.57	30.1
+6	170.196	2.888	1.81600	14.37	46.8
+7	-20.276	0.096		14.37	
+8	-85.028	1.732	1.80400	16.26	46.6
+9	-27.544	Bf		16.26	
+[figure]
+source	Data/US004154509_Figure01P.png
+originX	38.47
+originY	125.57
+ppmm	11.867
+[notes]

@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                     _medium-metal-colored-buttons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/materials/metal/metal-btns";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.metal.colored {
+		.colored.btn {
+
+			&.red {
+				@include metal-btns.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include metal-btns.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include metal-btns.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include metal-btns.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include metal-btns.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include metal-btns.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include metal-btns.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include metal-btns.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include metal-btns.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include metal-btns.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include metal-btns.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include metal-btns.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include metal-btns.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include metal-btns.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include metal-btns.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include metal-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include metal-btns.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include metal-btns.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include metal-btns.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include metal-btns.shaded(colors.$medium-white);
+			}
+		}
+	}
+}

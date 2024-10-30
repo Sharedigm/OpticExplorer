@@ -1,0 +1,58 @@
+[descriptive data]
+title	US 8,994,842 Example 1 (Olympus M.Zuiko 14-42mm F3.5-5.6 II R)
+[constants]
+[variable distances]
+Focal Length	14.27	24.90	41.17	undefined	undefined	undefined	undefined	undefined	undefined
+Angle of View	undefined	undefined	undefined	undefined	undefined	undefined	undefined	undefined	undefined
+F-Number	3.7	4.6	5.8	undefined	undefined	undefined	undefined	undefined	undefined
+Image Height	20.14	22.30	22.30	20.14	22.30	22.30	20.14	22.30	22.30
+Total Length	86.92	81.45	88.54	undefined	undefined	undefined	undefined	undefined	undefined
+Magnification	0.00	0.00	0.00	-0.08488	-0.14734	-0.26262	-0.08488	-0.14353	-0.25243
+S	undefined	undefined	undefined	243.20	243.20	243.20	243.20	243.20	243.20
+d0	Infinity	Infinity	Infinity	155.13	160.58	153.42	155.13	159.66	152.57
+d6	27.79	11.65	3.20	27.79	11.65	3.20	27.79	12.57	4.05	-> +G1
+d12	1.95	6.02	10.88	3.05	8.68	17.55	3.05	7.89	15.24	-> +G3
+d14	8.59	15.21	25.96	7.49	12.55	19.29	7.49	13.34	21.60	-> -G3
+Bf	17.15	17.13	17.06	17.15	17.13	17.06	17.15	17.13	17.06
+Aperture Diameter	10.73570	11.12470	11.95308	10.73570	11.12470	11.95308	10.73570	11.12470	11.95308
+[lens data]
+1	68.660	1.80	1.78800	24.42	47.37
+2	12.332	4.02		19.60	
+3	80.000	2.01	1.52542	19.46	55.78
+4	19.284	2.79		19.46	
+5	21.150	2.88	1.84666	18.48	23.78
+6	47.921	d6		18.48	
+7	AS	1.00		10.73570
+8	14.567	3.04	1.58209	13.38	59.46
+9	-35.255	4.34		13.38	
+10	-98.206	1.78	1.80100	11.80	34.97
+11	10.111	4.23	1.48749	11.80	70.23
+12	-15.756	d12		11.80	
+13	104.244	1.78	1.53071	11.16	55.69
+14	22.112	d14		11.16	
+15	-46.801	1.76	1.80518	20.58	25.42
+16	-29.294	14.01		20.58	
+17	CG	3.50	1.51633	24.66	64.14
+18	CG	0.80		24.66	
+[aspherical data]
+3	80.000	55.206	3.61587E-05	-4.90569E-07	5.56253E-09	-2.97659E-11
+4	19.284	-0.639	2.53915E-05	-3.87220E-07	2.80346E-09	-1.81533E-11
+8	14.567	0	-2.82063E-05	-2.06359E-07	7.86736E-09	-1.77341E-10
+9	-35.255	0	4.86449E-05	-2.43220E-07	7.79158E-09	-1.74694E-10
+13	104.244	10.752	-4.89530E-05	1.95403E-06	-3.39070E-08	5.00099E-10
+14	22.112	3.686	-7.81833E-05	1.74053E-06	-3.92602E-08	5.00369E-10
+[figure] 
+source	Data/US008994842_Figure01P.png
+originX	10.03
+originY	106.74
+ppmm	3.672
+[notes]
+Bill: Patent supplies AD (actually radii) which closely match what Optical Bench computes.
+Aperture Diameter(m)	10.745	11.117	11.954
+Scenarios 4-6 are Mode 1 (video) and 7-9 are Mode 2 (still)
+
+Mode table: (* indicates value was adjusted.)
+		w	s	t
+Mode 1	G3	1.10	2.66	5.67	->	1.10	2.66	6.67*
+Mode 2	G1	0.00	0.92	0.85	->	0.00	0.92	0.85
+Mode 2	G3	1.10	3.27	5.16	->	1.10	1.87*	4.36*

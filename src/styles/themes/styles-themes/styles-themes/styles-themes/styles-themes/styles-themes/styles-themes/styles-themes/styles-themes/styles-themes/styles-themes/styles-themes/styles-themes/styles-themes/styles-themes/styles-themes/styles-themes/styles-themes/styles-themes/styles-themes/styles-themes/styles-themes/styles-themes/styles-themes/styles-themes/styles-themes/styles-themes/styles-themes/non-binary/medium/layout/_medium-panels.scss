@@ -1,0 +1,138 @@
+/******************************************************************************\
+|                                                                              |
+|                               _medium-panels.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$color: text-colors.$dark-color;
+$background-color: colors.$ultra-light-grey;
+$border-color: $background-color;
+
+$title-color: medium-branding.$secondary-color;
+$label-color: text-colors.$dark-color;
+$icon-color: medium-branding.$secondary-color;
+$content-color: white;
+
+$hover-color: $content-color;
+$select-color: medium-branding.$primary-color;
+$section-border-color: darken($color, 5%);
+$nested-panel-color: white;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.panel, ul.panels > li {
+		color: $color;
+		background-color: $background-color;
+		border-color: $border-color;
+
+		//
+		// panel list items
+		//
+
+		&.panel {
+			color: $color;
+			background-color: $background-color;
+			border-color: $border-color;
+		}
+
+		//
+		// panel labels
+		//
+
+		label {
+			color: $label-color;
+
+			i {
+				color: $icon-color;
+			}
+		}
+
+		.checkbox-inline, .radio-inline {
+			label {
+				color: inherit;
+			}
+		}
+
+		//
+		// panel borders
+		//
+
+		.section {
+			border-color: $section-border-color;
+		}
+		
+		//
+		// panel content
+		//
+
+		.content {
+			background-color: $content-color;
+			border-color: $border-color;
+			
+			.title {
+				color: $title-color;
+
+				i {
+					color: $icon-color;
+				}
+			}
+		}
+
+		.selected .content {
+			color: white;
+			background-color: $select-color;
+
+			a {
+				color: white;
+			}
+		}
+	}
+
+	//
+	// nested panels
+	//
+
+	.panel {
+		.panel {
+			background-color: $nested-panel-color;
+		}
+	}
+
+	.mainbar .panel {
+		.card-grid .cards .item:not(.highlighted):not(.selected) > .card {
+			background-color: $nested-panel-color;
+		}
+	}
+
+	//
+	// panel lists
+	//
+
+	ul.panels > li {
+		&:hover {
+			background-color: $hover-color;
+		}
+	}
+}

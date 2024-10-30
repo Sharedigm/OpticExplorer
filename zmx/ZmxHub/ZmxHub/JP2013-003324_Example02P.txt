@@ -1,0 +1,46 @@
+[descriptive data]
+title	JP 2013-003324 Example 2 (Panasonic Leica DG Summilux 25mm F1.4 II Asph)
+[constants]
+[variable distances]
+Focal Length	25.00	25.32
+Angle of View	48.61	47.17
+F-Number	1.44	1.47
+Image Height	21.63	21.63
+Total Length	undefined	undefined
+Magnification(p)	0.00	-0.03
+Magnification	0.00	-0.02499
+d0	Infinity	998.02
+d13	2.8000	3.9378
+d15	10.2190	9.0812
+Bf	21.1597	21.1597
+[lens data]
+1	21.177	5.484	2.00060	29.14	25.46
+2	63.532	2.260		24.74	
+3	58.354	0.850	1.83481	20.96	42.72
+4	10.980	8.267		15.02	
+5	-15.293	0.850	1.84666	14.68	23.78
+6	24.969	5.702	1.88300	20.82	40.80
+7	-23.599	0.150		20.82	
+8	-54.332	1.852	1.88300	20.48	40.80
+9	-35.300	0.150		22.08	
+10	37.631	0.850	1.84666	23.00	23.78
+11	21.434	5.165	1.88300	22.92	40.80
+12	-76.669	1.018		22.92	
+13	AS	d13		19.427
+14	178.946	1.000	1.73077	19.72	40.50
+15	25.250	d15		17.90	
+16	75.959	4.222	1.77250	20.00	49.62
+17	-27.095	Bf		20.00	
+[aspherical data]
+14	178.946	0	-1.45960E-05	-4.88750E-08	1.60790E-09	-1.31650E-11	3.93750E-14
+16	75.959	0	2.35710E-06	4.18840E-07	-8.84660E-09	8.62400E-11	-2.88020E-13
+17	-27.095	0	1.32510E-05	2.76170E-07	-5.50220E-09	5.28870E-11	-1.63960E-13
+[figure]
+source	Data/JP2013-003324_Figure06P.png
+originX	20.57
+originY	178.54
+ppmm	5.377
+[notes]
+Bill: Image Height assumed to be Pansonic APS-C. Magnification measured more precisely; looks like nominal 1:40.
+Not a perfect match to the production lens.
+Last elemnt adjusted from 22.08 -> 20.00 as per Dan Reiley feedback.

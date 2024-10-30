@@ -1,0 +1,32 @@
+[descriptive data]
+title	JP 1985-111215 Example ML (Konica Minolta 50mm F1.7 MD)
+[constants]
+[variable distances]
+Focal Length	51.5
+Angle of View	45.6
+F-Number	1.73
+Total Length	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	36.88
+[lens data]
+1	38.987	4.66	1.7200	31.94	50.31
+2	286.604	0.16		31.94	
+3	21.179	3.81	1.6935	27.56	53.39
+4	36.272	2.22		27.56	
+5	64.979	1.46	1.6727	25.20	32.22
+6	15.531	6.00		21.50	
+6AS	AS	5.62		20.662
+7	-17.213	0.88	1.6259	20.64	35.70
+8	66.165	6.41	1.6935	23.64	53.39
+9	-23.831	0.16		24.44	
+10	374.955	2.80	1.7810	24.10	44.55
+11	-43.293	Bf		24.10	
+[figure]
+source	Data/JP1985-111215_Figure02P.png
+originX	128.98
+originY	538.55
+ppmm	27.844
+[notes]

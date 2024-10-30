@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,214,816 Example 1 (Konica Minolta 135mm F2.8 MD)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	55.73
+[lens data]
+1	54.92	7.02	1.6073	49.90	59.5
+2	612.63	0.3105		49.90
+3	45.35	7.02	1.6700	47.97	57.1
+4	107.35	2.295		47.97
+5	254.37	5.805	1.6727	42.80	32.2
+6	139.05	3.78		42.80
+7	153.77	7.425	1.7552	35.07	27.5
+8	27.24	8.805		28.14
+8AS	AS	24		26.216
+9	87.95	2.43	1.8052	24.45	25.4
+10	286.07	Bf		23.14
+[figure]
+source	Data/US004214816_Figure01P.png
+originX	53.53
+originY	206.47
+ppmm	6.211
+[notes]

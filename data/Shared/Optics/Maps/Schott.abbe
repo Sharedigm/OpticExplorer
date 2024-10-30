@@ -1,0 +1,805 @@
+################################################################################
+#                                                                              #
+#                                 Schott.optc                                  #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+
+  - name: N-SK14
+    catalog: Schott
+    n: 1.60311
+    v: 60.6
+
+  - name: N-SF10
+    catalog: Schott
+    n: 1.72828
+    v: 28.53
+
+  - name: LITHOTEC-CAF2
+    catalog: Schott
+    n: 1.43385
+    v: 95.23
+
+  - name: KZFS12
+    catalog: Schott
+    n: 1.696
+    v: 36.29
+
+  - name: SF4
+    catalog: Schott
+    n: 1.7552
+    v: 27.58
+
+  - name: N-BALF5
+    catalog: Schott
+    n: 1.54739
+    v: 53.63
+
+  - name: N-SF6HT
+    catalog: Schott
+    n: 1.80518
+    v: 25.36
+
+  - name: N-LASF9
+    catalog: Schott
+    n: 1.85025
+    v: 32.17
+
+  - name: N-ZK7
+    catalog: Schott
+    n: 1.50847
+    v: 61.19
+
+  - name: N-SK4
+    catalog: Schott
+    n: 1.61272
+    v: 58.63
+
+  - name: N-LAF33
+    catalog: Schott
+    n: 1.78582
+    v: 44.05
+
+  - name: N-BK7
+    catalog: Schott
+    n: 1.5168
+    v: 64.17
+
+  - name: N-F2
+    catalog: Schott
+    n: 1.62005
+    v: 36.43
+
+  - name: SF15
+    catalog: Schott
+    n: 1.69895
+    v: 30.07
+
+  - name: N-LAK21
+    catalog: Schott
+    n: 1.64049
+    v: 60.1
+
+  - name: N-SF1
+    catalog: Schott
+    n: 1.71736
+    v: 29.62
+
+  - name: P-BK7
+    catalog: Schott
+    n: 1.5164
+    v: 64.06
+
+  - name: SF57HTultra
+    catalog: Schott
+    n: 1.84666
+    v: 23.83
+
+  - name: N-SF66
+    catalog: Schott
+    n: 1.92286
+    v: 20.88
+
+  - name: N-BASF64
+    catalog: Schott
+    n: 1.704
+    v: 39.38
+
+  - name: N-LASF46A
+    catalog: Schott
+    n: 1.90366
+    v: 31.32
+
+  - name: N-LAF32
+    catalog: Schott
+    n: 1.79457E+00
+    v: 45.53
+
+  - name: SF14
+    catalog: Schott
+    n: 1.76182
+    v: 26.53
+
+  - name: N-LAF7
+    catalog: Schott
+    n: 1.7495
+    v: 34.82
+
+  - name: N-SK5
+    catalog: Schott
+    n: 1.58913
+    v: 61.27
+
+  - name: N-LASF46
+    catalog: Schott
+    n: 1.90138E+00
+    v: 31.64
+
+  - name: P-SF67
+    catalog: Schott
+    n: 1.9068
+    v: 21.4
+
+  - name: N-SF57HTultra
+    catalog: Schott
+    n: 1.84666
+    v: 23.78
+
+  - name: P-SK57Q1
+    catalog: Schott
+    n: 1.586
+    v: 59.5
+
+  - name: LAK9G15
+    catalog: Schott
+    n: 1.69064
+    v: 54.76
+
+  - name: N-FK58
+    catalog: Schott
+    n: 1.456
+    v: 90.9
+
+  - name: N-BAF10
+    catalog: Schott
+    n: 1.67003
+    v: 47.11
+
+  - name: N-BALF4
+    catalog: Schott
+    n: 1.57956
+    v: 53.87
+
+  - name: P-PK53
+    catalog: Schott
+    n: 1.5269
+    v: 66.22
+
+  - name: N-LASF31
+    catalog: Schott
+    n: 1.88067E+00
+    v: 41.01
+
+  - name: N-BAF51
+    catalog: Schott
+    n: 1.65224
+    v: 44.96
+
+  - name: SF5
+    catalog: Schott
+    n: 1.6727
+    v: 32.21
+
+  - name: N-SSK2
+    catalog: Schott
+    n: 1.62229
+    v: 53.27
+
+  - name: N-KZFS11
+    catalog: Schott
+    n: 1.63775
+    v: 42.41
+
+  - name: N-SF11
+    catalog: Schott
+    n: 1.78472
+    v: 25.68
+
+  - name: N-BAF3
+    catalog: Schott
+    n: 1.58272
+    v: 46.64
+
+  - name: N-SK15
+    catalog: Schott
+    n: 1.62296
+    v: 58.02
+
+  - name: BK7G18
+    catalog: Schott
+    n: 1.51975
+    v: 63.58
+
+  - name: FK5HTi
+    catalog: Schott
+    n: 1.48748
+    v: 70.47
+
+  - name: N-LASF41
+    catalog: Schott
+    n: 1.83501
+    v: 43.13
+
+  - name: N-SK2
+    catalog: Schott
+    n: 1.60738
+    v: 56.65
+
+  - name: N-LAF35
+    catalog: Schott
+    n: 1.7433
+    v: 49.4
+
+  - name: N-BK7HTi
+    catalog: Schott
+    n: 1.5168
+    v: 64.17
+
+  - name: N-LAK33A
+    catalog: Schott
+    n: 1.75393
+    v: 52.27
+
+  - name: LF5HTi
+    catalog: Schott
+    n: 1.58144
+    v: 40.89
+
+  - name: BAFN6
+    catalog: Schott
+    n: 1.589
+    v: 48.45
+
+  - name: KZFSN4
+    catalog: Schott
+    n: 1.6134
+    v: 44.29
+
+  - name: N-BK10
+    catalog: Schott
+    n: 1.49782
+    v: 66.95
+
+  - name: N-BAF4
+    catalog: Schott
+    n: 1.60568
+    v: 43.72
+
+  - name: N-SF57
+    catalog: Schott
+    n: 1.84666
+    v: 23.78
+
+  - name: N-LASF45HT
+    catalog: Schott
+    n: 1.80107
+    v: 34.97
+
+  - name: N-BAK1
+    catalog: Schott
+    n: 1.5725
+    v: 57.55
+
+  - name: K10
+    catalog: Schott
+    n: 1.50137
+    v: 56.41
+
+  - name: N-SSK5
+    catalog: Schott
+    n: 1.65844
+    v: 50.88
+
+  - name: SF2
+    catalog: Schott
+    n: 1.64769
+    v: 33.85
+
+  - name: LLF1
+    catalog: Schott
+    n: 1.54814
+    v: 45.75
+
+  - name: N-PSK3
+    catalog: Schott
+    n: 1.55232
+    v: 63.46
+
+  - name: N-LAK9
+    catalog: Schott
+    n: 1.691
+    v: 54.71
+
+  - name: FK3
+    catalog: Schott
+    n: 1.4645
+    v: 65.77
+
+  - name: N-FK51A
+    catalog: Schott
+    n: 1.48656
+    v: 84.47
+
+  - name: N-LAK8
+    catalog: Schott
+    n: 1.713
+    v: 53.83
+
+  - name: LASF35
+    catalog: Schott
+    n: 2.02204
+    v: 29.06
+
+  - name: N-BAK4HT
+    catalog: Schott
+    n: 1.56883
+    v: 55.98
+
+  - name: N-LAK10
+    catalog: Schott
+    n: 1.72003
+    v: 50.62
+
+  - name: N-SF56
+    catalog: Schott
+    n: 1.7847
+    v: 26.1
+
+  - name: LASFN9
+    catalog: Schott
+    n: 1.85025
+    v: 32.17
+
+  - name: N-SF6
+    catalog: Schott
+    n: 1.80518
+    v: 25.36
+
+  - name: SFL57
+    catalog: Schott
+    n: 1.84666
+    v: 23.62
+
+  - name: N-LAF34
+    catalog: Schott
+    n: 1.7725
+    v: 49.62
+
+  - name: N-SSK8
+    catalog: Schott
+    n: 1.61773
+    v: 49.83
+
+  - name: N-LASF40
+    catalog: Schott
+    n: 1.83404
+    v: 37.3
+
+  - name: N-SF5
+    catalog: Schott
+    n: 1.67271
+    v: 32.25
+
+  - name: N-LAK7
+    catalog: Schott
+    n: 1.6516
+    v: 58.52
+
+  - name: N-LAF21
+    catalog: Schott
+    n: 1.788
+    v: 47.49
+
+  - name: SF11
+    catalog: Schott
+    n: 1.78472
+    v: 25.76
+
+  - name: N-SF57HT
+    catalog: Schott
+    n: 1.84666
+    v: 23.78
+
+  - name: N-LAF2
+    catalog: Schott
+    n: 1.74397
+    v: 44.85
+
+  - name: N-LASF43
+    catalog: Schott
+    n: 1.8061
+    v: 40.61
+
+  - name: P-LAF37
+    catalog: Schott
+    n: 1.7555
+    v: 45.66
+
+  - name: LAKL12
+    catalog: Schott
+    n: 1.6779
+    v: 54.92
+
+  - name: F2HT
+    catalog: Schott
+    n: 1.62004
+    v: 36.37
+
+  - name: N-LASF31A
+    catalog: Schott
+    n: 1.883
+    v: 40.76
+
+  - name: P-SF8
+    catalog: Schott
+    n: 1.68893
+    v: 31.25
+
+  - name: SF66
+    catalog: Schott
+    n: 1.92286
+    v: 20.88
+
+  - name: N-KZFS5
+    catalog: Schott
+    n: 1.65412
+    v: 39.7
+
+  - name: N-KF9
+    catalog: Schott
+    n: 1.52346
+    v: 51.54
+
+  - name: N-SF14
+    catalog: Schott
+    n: 1.76182
+    v: 26.53
+
+  - name: N-FK51
+    catalog: Schott
+    n: 1.48656
+    v: 84.47
+
+  - name: P-LASF50
+    catalog: Schott
+    n: 1.8086
+    v: 40.46
+
+  - name: N-SK10
+    catalog: Schott
+    n: 1.62278
+    v: 56.98
+
+  - name: P-LASF51
+    catalog: Schott
+    n: 1.81
+    v: 40.93
+
+  - name: N-SK11
+    catalog: Schott
+    n: 1.56384
+    v: 60.8
+
+  - name: N-SF15
+    catalog: Schott
+    n: 1.69892
+    v: 30.2
+
+  - name: N-SK2HT
+    catalog: Schott
+    n: 1.60738
+    v: 56.65
+
+  - name: N-KZFS4
+    catalog: Schott
+    n: 1.61336
+    v: 44.49
+
+  - name: P-LASF47
+    catalog: Schott
+    n: 1.8061
+    v: 40.9
+
+  - name: N-LAK12
+    catalog: Schott
+    n: 1.6779
+    v: 55.2
+
+  - name: N-BAK2
+    catalog: Schott
+    n: 1.53996
+    v: 59.71
+
+  - name: K5G20
+    catalog: Schott
+    n: 1.52344
+    v: 56.76
+
+  - name: N-BK7HT
+    catalog: Schott
+    n: 1.5168
+    v: 64.17
+
+  - name: SF6G05
+    catalog: Schott
+    n: 1.80906
+    v: 25.28
+
+  - name: SF1
+    catalog: Schott
+    n: 1.71736
+    v: 29.51
+
+  - name: F5
+    catalog: Schott
+    n: 1.60342
+    v: 38.03
+
+  - name: N-SF8
+    catalog: Schott
+    n: 1.68894
+    v: 31.31
+
+  - name: LITHOSIL-Q
+    catalog: Schott
+    n: 1.45844E+00
+    v: 67.83
+
+  - name: N-SF6HTultra
+    catalog: Schott
+    n: 1.80518
+    v: 25.36
+
+  - name: N-BASF2
+    catalog: Schott
+    n: 1.66446
+    v: 36
+
+  - name: N-PSK53
+    catalog: Schott
+    n: 1.62014
+    v: 63.48
+
+  - name: N-SF19
+    catalog: Schott
+    n: 1.66679
+    v: 33.12
+
+  - name: N-LAF3
+    catalog: Schott
+    n: 1.717
+    v: 47.96
+
+  - name: N-PK52A
+    catalog: Schott
+    n: 1.497
+    v: 81.61
+
+  - name: LAFN7
+    catalog: Schott
+    n: 1.7495
+    v: 34.95
+
+  - name: N-KZFS8
+    catalog: Schott
+    n: 1.72047
+    v: 34.7
+
+  - name: SF10
+    catalog: Schott
+    n: 1.72825
+    v: 28.41
+
+  - name: N-LAF36
+    catalog: Schott
+    n: 1.79952
+    v: 42.37
+
+  - name: N-FK5
+    catalog: Schott
+    n: 1.48749
+    v: 70.41
+
+  - name: N-LAK33B
+    catalog: Schott
+    n: 1.755
+    v: 52.3
+
+  - name: N-SF4
+    catalog: Schott
+    n: 1.75513
+    v: 27.38
+
+  - name: F2
+    catalog: Schott
+    n: 1.62004
+    v: 36.37
+
+  - name: SF6
+    catalog: Schott
+    n: 1.80518
+    v: 25.43
+
+  - name: F2G12
+    catalog: Schott
+    n: 1.62072
+    v: 36.56
+
+  - name: N-BAF52
+    catalog: Schott
+    n: 1.60863
+    v: 46.6
+
+  - name: SF56A
+    catalog: Schott
+    n: 1.7847
+    v: 26.08
+
+  - name: LF5G19
+    catalog: Schott
+    n: 1.59655
+    v: 39.89
+
+  - name: N-PK51
+    catalog: Schott
+    n: 1.52855
+    v: 76.98
+
+  - name: P-SF68
+    catalog: Schott
+    n: 2.0052
+    v: 21
+
+  - name: K7
+    catalog: Schott
+    n: 1.51112
+    v: 60.41
+
+  - name: N-SK16
+    catalog: Schott
+    n: 1.62041
+    v: 60.32
+
+  - name: P-SK58A
+    catalog: Schott
+    n: 1.58913
+    v: 61.15
+
+  - name: N-LASF46B
+    catalog: Schott
+    n: 1.90366
+    v: 31.32
+
+  - name: P-LAK35
+    catalog: Schott
+    n: 1.6935
+    v: 53.2
+
+  - name: N-LASF45
+    catalog: Schott
+    n: 1.80107
+    v: 34.97
+
+  - name: LF5G15
+    catalog: Schott
+    n: 1.58397
+    v: 40.83
+
+  - name: N-K5
+    catalog: Schott
+    n: 1.52249
+    v: 59.48
+
+  - name: P-SK60
+    catalog: Schott
+    n: 1.61035
+    v: 57.9
+
+  - name: N-LASF44
+    catalog: Schott
+    n: 1.8042
+    v: 46.5
+
+  - name: N-PSK53A
+    catalog: Schott
+    n: 1.618
+    v: 63.39
+
+  - name: N-LASF9HT
+    catalog: Schott
+    n: 1.85025
+    v: 32.17
+
+  - name: N-LAK34
+    catalog: Schott
+    n: 1.72916
+    v: 54.5
+
+  - name: SF57
+    catalog: Schott
+    n: 1.84666
+    v: 23.83
+
+  - name: N-LAK22
+    catalog: Schott
+    n: 1.65113
+    v: 55.89
+
+  - name: N-SF64
+    catalog: Schott
+    n: 1.70591
+    v: 30.23
+
+  - name: N-ZK7A
+    catalog: Schott
+    n: 1.508054
+    v: 61.04
+
+  - name: N-SF2
+    catalog: Schott
+    n: 1.64769
+    v: 33.82
+
+  - name: P-SF69
+    catalog: Schott
+    n: 1.7225
+    v: 29.23
+
+  - name: SFL6
+    catalog: Schott
+    n: 1.80518
+    v: 25.39
+
+  - name: N-KZFS2
+    catalog: Schott
+    n: 1.55836
+    v: 54.01
+
+  - name: N-LAK14
+    catalog: Schott
+    n: 1.6968
+    v: 55.41
+
+  - name: N-BAK4
+    catalog: Schott
+    n: 1.56883
+    v: 55.98
+
+  - name: LF5
+    catalog: Schott
+    n: 1.58144
+    v: 40.85
+
+  - name: N-KZFS4HT
+    catalog: Schott
+    n: 1.61336
+    v: 44.49
+
+  - name: LLF1HTi
+    catalog: Schott
+    n: 1.54815
+    v: 45.9
+
+  - name: P-SK57
+    catalog: Schott
+    n: 1.587
+    v: 59.6

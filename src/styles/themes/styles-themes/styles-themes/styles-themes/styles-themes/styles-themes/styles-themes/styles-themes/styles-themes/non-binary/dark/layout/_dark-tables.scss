@@ -1,0 +1,222 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-tables.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../layout/tables";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$head-color: white;
+$head-fill-color: colors.$medium-grey;
+$head-sort-fill-color: lighten($head-fill-color, 10%);
+$head-outline-color: $head-fill-color;
+
+$side-head-color: white;
+$side-head-fill-color: colors.$dark-grey;
+$side-head-sort-fill-color: lighten($side-head-fill-color, 10%);
+$side-head-outline-color: $side-head-fill-color;
+
+$color: text-colors.$light-color;
+$body-fill-color: colors.faded(black, 25%);
+
+$row-border-color: darken(colors.$dark-grey, 5%);
+$row-odd-fill-color: colors.$very-dark-grey;
+$row-even-fill-color: darken(colors.$very-very-dark-grey, 5%);
+$row-selected-fill-color: colors.faded(dark-branding.$primary-color, 33%);
+$row-selected-stroke-color: dark-branding.$primary-color;
+
+$cell-highlighted-color: white;
+$cell-highlighted-background-color: dark-branding.$primary-color;
+$cell-selected-outline-color: darken(dark-branding.$primary-color, 10%);
+$cell-border-color: $row-border-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	table {
+		color: $color;
+		
+		//
+		// dark table headers
+		//
+		
+		thead {
+			th {
+				color: $head-color;
+				background-color: $head-fill-color;
+			}
+
+			th.tablesorter-headerDesc, th.tablesorter-headerAsc {
+				background-color: $head-sort-fill-color;
+			}
+		}
+
+		tbody {
+			th {
+				color: $side-head-color;
+				border-color: $side-head-fill-color;
+				background-color: $side-head-fill-color;
+			}
+		}
+
+		//
+		// dark table borders
+		//
+	
+		&.outlined {
+			th {
+				border-color: $head-fill-color;
+			}
+
+			td {
+				border-color: $cell-border-color;
+			}
+		}
+
+		//
+		// table head outlines
+		//
+
+		thead {
+
+			// middle
+			//
+			th {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset;
+			}
+
+			// left
+			//
+			th:first-child {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset,
+					tables.$head-border-width 0 0 $head-outline-color inset;
+			}
+
+			// right
+			//
+			th:last-child {
+				box-shadow: 0 (-(tables.$head-border-width)) 0 $head-outline-color inset,
+					0 tables.$head-border-width 0 $head-outline-color inset,
+					(-(tables.$head-border-width)) 0 0 $head-outline-color inset;
+			}
+		}
+
+		//
+		// dark table rows
+		//
+
+		tbody {
+			background-color: $body-fill-color;
+
+			tr:not(.selected) {
+				color: $color;
+			}
+
+			//
+			// dark zebra striping
+			//
+
+			tr:nth-of-type(odd), tr.odd {
+				td:not(.append) {
+					background-color: $row-odd-fill-color;
+				}
+			}
+
+			tr:nth-of-type(even), tr.even {
+				td:not(.append) {
+					background-color: $row-even-fill-color;
+				}
+			}
+			
+			//
+			// dark inset row selection
+			//
+			
+			tr.selected {
+				td:not(.append) {
+					background-color: $row-selected-fill-color;
+				}
+				
+				// middle
+				//
+				td:not(.append) {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset;
+				}
+
+				// left
+				//
+				td:not(.append):first-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset,
+						2px 0 0 $row-selected-stroke-color inset;
+				}
+
+				// right
+				//
+				td:not(.append):last-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						0 2px 0 $row-selected-stroke-color inset,
+						-2px 0 0 $row-selected-stroke-color inset;
+				}	
+			}
+
+			tr.selected + tr.selected {
+
+				// middle
+				//
+				td:not(.append) {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset;
+				}
+
+				// left
+				//
+				td:not(.append):first-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						2px 0 0 $row-selected-stroke-color inset;
+				}
+
+				// right
+				//
+				td:not(.append):last-child {
+					box-shadow: 0 -2px 0 $row-selected-stroke-color inset,
+						-2px 0 0 $row-selected-stroke-color inset;
+				}
+			}
+
+			//
+			// cell shaded
+			//
+
+			tr {
+				td:not(.append) {
+					&.highlighted {
+						color: $cell-highlighted-color;
+						background-color: $cell-highlighted-background-color;
+					}
+
+					&.selected {
+						outline-color: $cell-selected-outline-color;
+					}
+				}
+			}
+		}
+	}
+}

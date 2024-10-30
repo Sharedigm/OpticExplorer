@@ -1,0 +1,46 @@
+/******************************************************************************\
+|                                                                              |
+|                        _medium-metal-page-dots.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../materials/metal/round-metal";
+@use "../../navs/medium-page-dots";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.metal {
+		.flickity-page-dots {
+
+			//
+			// metal page dots
+			//
+
+			.dot {
+				@include round-metal.shaded(medium-page-dots.$color);
+
+				//
+				// metal selected page dots
+				//
+
+				&.is-selected {
+					@include round-metal.shaded(medium-page-dots.$selected-color);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+[descriptive data]
+title	WO 2017/134928 Example 6 (Sony 1.4x Teleconverter Lens (SEL))
+[constants]
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.40030
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.26
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+43FS	FS	1.6082		26.30	
+43	-209.3701	3.1000	1.80809	26.30	22.76
+44	-40.4112	4.3300		26.30	
+45	-24.5634	1.5000	1.85135	25.04	40.10
+46	82.7002	0.3000		27.95
+47	60.4995	9.1000	1.60342	29.26	38.01
+48	-18.6013	1.4000	1.88100	29.26	40.14
+49	-34.2211	0.5000		32.10	
+50	-34.0899	1.5000	2.00100	32.10	29.13
+51	2331.0000	0.3000		35.92	
+52	157.3225	8.2000	1.57135	38.86	52.95
+53	-31.2399	12.9982		38.86	
+[aspherical data]
+45	-24.5634	-1.65	2.060E-06	-2.012E-09	5.132E-11	-7.890E-14
+[figure]
+source	Data/WO2017-134928_Figure07P.png
+originX	33.51
+originY	201.05
+ppmm	6.045
+[notes]

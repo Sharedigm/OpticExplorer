@@ -1,0 +1,88 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.page {
+		@include binary-colors.grey;
+
+		a {
+			text-decoration: underline;
+		}
+
+		.contents, .footer {
+			image-rendering: auto;
+		}
+
+		.attention {
+			@include binary-colors.light-grey;
+			@include binary-text.outline;
+
+			i {
+				color: black;
+				background: white;
+			}
+		}
+		
+		.contents {
+			background-color: white;
+			image-rendering: auto;
+
+			.breadcrumb {
+				@include binary-colors.light-grey;
+				@include binary-text.outline;
+
+				li > a {
+					text-decoration: underline;
+				}
+			}
+
+			&.colored {
+				@include binary-colors.grey;
+
+				color: black !important;
+				@include binary-text.outline;
+
+				h2, a, i {
+					color: black !important;
+				}
+			}
+
+			// tips
+			//
+			.tip h3 .icon i {
+				color: black;
+			}
+		}
+
+		.footer {
+			color: white;
+			background-color: black;
+
+			.info, .branding {
+				color: white !important;
+				background-color: black !important;			
+			}
+		}
+	}
+}

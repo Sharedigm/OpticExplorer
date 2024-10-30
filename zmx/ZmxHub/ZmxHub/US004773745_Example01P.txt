@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 4,773,745 Example 1 (Schneider Super-Symmar HM 5.6 / 120)
+[constants]
+Scaled	120	100
+[variable distances]
+Focal Length	120
+Angle of View	70
+F-Number	5.6
+Image Height	153.7
+Magnification	0
+d0	Infinity
+Bf(p)	98.280
+Bf	98.33
+[lens data]
+1	46.9824	3.020	1.46450	48.68	65.77
+2	24.265	4.212		39.21
+3	35.539	7.948	1.75500	40.08	52.30
+4	104.758	5.960	1.62540	35.75	35.56
+5	35.998	8.400		27.74
+6	57.860	2.384	1.77250	21.97	49.60
+7	67.093	2.214		20.68
+7AS	AS	1.76		20.583
+8	385.795	23.174	1.62040	21.66	60.33
+9	-22.811	2.384	1.66680	28.66	33.01
+10	-33.577	0.406		32.13
+11	-140.923	7.009	1.62040	35.10	60.33
+12	-53.818	3.100		42.19
+13	-34.170	3.020	1.47870	41.57	58.70
+14	157.758	Bf		46.92
+[figure]
+source	Data/US004773745_Figure01P.png
+originX	165.78
+originY	258.07
+ppmm	5.198
+[notes]
+Bill: Also 150mm and 210mm with larger image circles

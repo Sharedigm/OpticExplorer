@@ -1,0 +1,39 @@
+[descriptive data]
+title	US 2011/0176215 Example 1 (Nikon AF-S DX Micro Nikkor 40mm f/2.8G)
+[constants]
+[variable distances]
+Focal Length	40	undefined	undefined
+Angle of View	40.958	undefined	undefined
+F-Number	2.887	undefined	undefined
+NA	undefined	undefined	0.11
+Image Height	30.00	30.00	30.00
+Total Length	92.518	undefined	undefined
+Magnification	0	-0.5	-1.0
+d0	Infinity	78.087	38.206
+d7	7.200	6.688	7.253
+d13	1.200	16.234	31.200
+Bf	39.818	39.818	39.818
+[lens data]
+1	39.6938	3.5	1.743997	22.79	44.79
+2	-216.2230	1.5	1.516330	22.01	64.14
+3	13.1290	12.5		18.47	
+4	34.1159	6.1	1.699998	19.24	48.08
+5	-14.9811	1.5	1.581439	19.24	40.75
+6	265.8581	2.5		19.24	
+7	AS	d7		15.522
+8	-33.7748	1.4	1.740769	20.38	27.79
+9	41.5423	1.7		15.48
+10	-60.0662	3.3	1.651597	15.48	58.55
+11	-26.1423	0.2		20.10
+12	54.7001	3.9	1.740999	19.44	52.64
+13	-34.9008	d13		19.44	
+14	229.2568	1.6	1.772499	24.00	49.60
+15	37.7106	1.0		21.64
+16	70.8279	3.6	1.548141	24.58	45.78
+17	-91.4184	Bf		24.58
+[figure]
+source	Data/US20110176215_Figure01P.png
+originX	46.88
+originY	81.07
+ppmm	2.359
+[notes]

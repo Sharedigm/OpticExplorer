@@ -1,0 +1,134 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-nav-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+
+//
+// colors
+//
+
+$color: black;
+$background-color: white;
+$active-color: white;
+$active-background-color: black;
+
+//
+// styles
+//
+
+/*
+body.binary {
+	&.light {
+		.navbar {
+			background-color: $background-color;
+			border-color: $background-color;
+			box-shadow: none;
+
+			.navbar-brand {
+				color: $color;
+
+				.logo {
+					filter: invert(1);
+				}
+			}
+
+			.navbar-nav {
+				
+				> li {
+
+					//
+					// inactive state
+					//
+
+					> a {
+						color: $color;
+
+						label {
+							@include binary-text.unoutline;
+						}
+					}
+
+					//
+					// active state
+					//
+
+					&.active {
+						> a, > a:focus {
+							color: $active-color;
+							background-color: $active-background-color;
+
+							&:hover {
+								color: $active-color;
+								background-color: $active-background-color;
+							}
+						}
+					}
+
+					//
+					// open state
+					//
+
+					&.open { 
+						> a, > a:focus {
+							color: $active-color;
+							background-color: $active-background-color;
+
+							&:hover {
+								color: $active-color;
+								background-color: $active-background-color;
+							}
+						}
+					}
+				}
+
+				//
+				// nav bar indicators
+				//
+				
+				.indicator {
+					.bar {					
+						.inner {
+							background-color: $color;
+						}
+					}
+				}
+
+				//
+				// apps bar
+				//
+
+				&.apps {
+					border-color: $color;
+
+					> li {
+						&.current {
+
+							> a {
+								background-color: $color;
+
+								i {
+									color: $background-color;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+*/

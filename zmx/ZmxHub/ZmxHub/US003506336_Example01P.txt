@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 3,506,336 Example 1 (Ricoh Pentax Super-Takumar 35mm f2)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	64
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	36.32
+[lens data]
+1	157.500	2.5	1.58913	34.56	61.2
+2	28.048	16.5		29.76	
+3	-805.000	3.5	1.76200	23.64	40.3
+4	-102.282	0.7		23.64	
+5	33.495	6.3	1.77252	24.18	49.6
+6	-247.614	0.4		24.18	
+7	28.000	2.8	1.53172	23.42	48.9
+8	29.571	4.0		23.42	
+8AS	AS	2.3		18.638
+9	-32.025	2.3	1.74077	18.72	27.7
+10	34.309	2.8		18.72	
+11	350.000	1.4	1.83400	18.60	37.2
+12	24.850	6.7	1.77252	20.14	49.6
+13	-31.274	0.2		20.14	
+14	-210.000	3.5	1.77252	21.12	49.6
+15	-38.727	Bf		23.20	
+[figure]
+source	Data/US003506336_Figure01P.png
+originX	75.98
+originY	158.81
+ppmm	7.510
+[notes]

@@ -1,0 +1,54 @@
+/******************************************************************************\
+|                                                                              |
+|                      _medium-chalk-dialog-buttons.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/chalk/chalk-buttons";
+@use "../../dialogs/dialog-buttons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored .modals.chalk-dialog-buttons,
+	&.colored.chalk .modals.auto-dialog-buttons {
+
+		//
+		// focused dialog buttons
+		//
+		
+		.modal.focused .modal-dialog {
+			.modal-header {
+				.buttons {
+					button {
+
+						&.minimize {
+							@include chalk-buttons.shaded(dialog-buttons.$minimize-button-color);
+						}
+
+						&.maximize, &.unmaximize {
+							@include chalk-buttons.shaded(dialog-buttons.$maximize-button-color);
+						}
+
+						&.close-btn {
+							@include chalk-buttons.shaded(dialog-buttons.$close-button-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<svg 
+	id="spct-file-tile"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 30 30" 
+	style="background:#F29C1F">
+
+	<style>
+		.tile-icon {
+			fill: white;
+		}
+	</style>
+
+	<g class="tile-icon" transform="translate(15, 15), scale(0.5), translate(-15, -22.5)">
+		<g transform="translate(-14.5, -2)">
+			<g transform="translate(2, -5)">
+				<g class="file-icon" transform="translate(10, 6) scale(0.7)" style="fill:white">
+					<path d="M6.245, 37c0.038 -10, 8.618 -19.129, 19.2 -19.129c10.581, 0, 19.161, 9.129, 19.2, 19.129h4.801 c -0.039 -13 -10.77 -23.93 -24 -23.93C12.213, 13.07, 1.483, 24, 1.445, 37H6.245z"></path>
+					<path d="M13.674, 37c0.032 -6, 5.29 -11.712, 11.771 -11.712c6.481, 0, 11.737, 5.712, 11.77, 11.712h3.924 c -0.033 -8 -7.045 -15.636 -15.694 -15.636C16.794, 21.364, 9.782, 29, 9.751, 37H13.674z"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

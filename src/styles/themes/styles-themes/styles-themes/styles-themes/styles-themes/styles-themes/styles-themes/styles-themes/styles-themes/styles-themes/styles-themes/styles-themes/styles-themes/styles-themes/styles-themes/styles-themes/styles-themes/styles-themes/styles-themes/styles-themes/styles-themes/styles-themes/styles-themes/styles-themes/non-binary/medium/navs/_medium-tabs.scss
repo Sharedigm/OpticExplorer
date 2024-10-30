@@ -1,0 +1,95 @@
+/******************************************************************************\
+|                                                                              |
+|                              _medium-tabs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$color: lighten(colors.$very-very-light-grey, 5%);
+$icon-color: colors.$dark-grey;
+$text-color: text-colors.$dark-color;
+$hover-color: darken($color, 10%);
+$hover-icon-color: $icon-color;
+$hover-text-color: $text-color;
+$background-color: colors.$very-very-very-light-grey;
+$border-color: colors.$very-very-light-grey;
+$button-color: colors.$medium-grey;
+$button-icon-color: white;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	ul.nav-tabs {
+
+		//
+		// inactive tabs
+		//
+
+		> li:not(.active) {
+			> a,
+			> a:focus {
+				color: $text-color;
+				background-color: $color;
+				border-color: $color;
+
+				i {
+					color: $icon-color;
+				}
+
+				svg {
+					fill: $icon-color;
+				}
+
+				label {
+					color: $text-color;
+				}
+			}
+
+			> a:hover {
+				color: $hover-text-color;
+				background-color: $hover-color;
+				border-color: $hover-color;
+
+				i {
+					color: $hover-icon-color;
+				}
+
+				svg {
+					fill: $hover-icon-color;
+				}
+
+				label {
+					color: $hover-text-color;
+				}
+			}
+		}
+	}
+
+	//
+	// tabbed content
+	//
+
+	.nav-tabs.flush {
+		background-color: $background-color;
+		border-color: $border-color !important;
+	}
+}

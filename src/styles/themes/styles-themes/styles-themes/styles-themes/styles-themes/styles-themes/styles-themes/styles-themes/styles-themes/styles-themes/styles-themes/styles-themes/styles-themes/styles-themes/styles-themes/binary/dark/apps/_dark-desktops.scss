@@ -1,0 +1,104 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-desktops.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	//
+	// dark desktops
+	//
+
+	#desktop {
+		@include binary-colors.dark-grey;
+
+		img {
+			image-rendering: auto;
+		}
+	}
+
+	//
+	// dark desktop apps
+	//
+
+	.desktop.app {
+		background: none;
+
+		// use desktop background instead of app background
+		//
+		> .body {
+			background: none;
+
+			.app {
+				background: none;
+
+				> .header-bar {
+					@include binary-colors.light-grey;
+				}
+		
+				> .body {
+					background: none;
+
+					> .contents {
+						background: none;
+
+						.mainbar > .items {
+							background: none;
+						}
+					}
+				}
+			}
+
+			//
+			// selection boxes
+			//
+
+			.selection {
+				color: white;
+				border-color: white;
+				@include binary-colors.lighten-less-alt;
+			}
+
+			.drag-image {
+				border-color: white;
+			}
+		}
+
+		.footer-bar {
+			@include binary-colors.light-grey;
+
+			.desktop-info-bar {
+				@include binary-text.outline;
+
+				.button.btn-sm:hover {
+					i {
+						@include binary-text.unoutline;
+					}
+				}
+			}
+		}
+	}
+
+	.desktop.preview {
+		@include binary-colors.dark-grey;
+	}
+}

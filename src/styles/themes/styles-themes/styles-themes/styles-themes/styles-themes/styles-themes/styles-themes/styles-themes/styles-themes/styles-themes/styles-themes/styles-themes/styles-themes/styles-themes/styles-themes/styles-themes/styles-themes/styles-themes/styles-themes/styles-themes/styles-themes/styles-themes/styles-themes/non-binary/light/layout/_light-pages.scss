@@ -1,0 +1,68 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/light-branding";
+
+//
+// colors
+//
+
+$background-color: white;
+$footer-info-color: light-branding.$secondary-color;
+$footer-background-color: light-branding.$secondary-color;
+$footer-info-background-color: colors.$ultra-light-grey;
+$attention-color: white;
+$attention-background-color: light-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).light {
+
+	.page {
+		background-color: $background-color;
+
+		.contents {
+			.attention {
+				color: $attention-color;
+				background-color: $attention-background-color;
+
+				i {
+					color: $attention-color;
+				}
+			}
+		}
+		
+		.footer {
+
+			.info {
+				background-color: $footer-info-background-color;
+
+				.links {
+					color: $footer-info-color;
+				}
+			}
+
+			.branding {
+				color: white;
+				background-color: $footer-background-color;
+			}
+		}
+	}
+}

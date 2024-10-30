@@ -1,0 +1,29 @@
+[descriptive data]
+title	DE 2246966 Example 1 (Leica Macro-Elmar-M 90mm F4)
+[constants]
+Scaled	90	1
+[variable distances]
+Focal Length	90
+Angle of View	27
+F-Number	4
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	45.9180
+Bf	45.85
+[lens data]
+1	23.1795	4.032	1.64304	22.55	59.85
+2	94.0545	0.072		22.55
+3	20.8503	3.699	1.64304	20.64	59.85
+4	47.0448	1.863		20.64
+5	91.8495	1.485	1.75458	18.82	34.72
+6	14.2515	9.615		17.54	
+6AS	AS	13.272		14.367
+7	59.3019	2.952	1.79180	20.47	25.87
+8	112.6845	Bf		20.47
+[figure]
+source	Data/DE02246966_Figure01P.png
+originX	55.77
+originY	487.46
+ppmm	27.356
+[notes]

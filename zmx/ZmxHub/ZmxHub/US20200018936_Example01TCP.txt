@@ -1,0 +1,43 @@
+[descriptive data]
+title	US 2020/0018936 Example 1 TC (Fujifilm Fujinon XF1.4X TC F2 WR)
+[metadata]
+[constants]
+AsphericalOddCount	7
+Lateral Magnification	1.4
+Lateral Magnification(m)	1.39962
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	30.80
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+34	FS	4.2900		33.50	
+
+35	80.6062	0.93	1.88300	23.52	39.22
+36	22.9970	6.03	1.64769	22.40	33.84
+37	-42.1232	3.27		22.40
+38	-29.2310	0.93	1.88300	20.24	39.22
+39	29.2310	6.49	1.72825	23.59	28.32
+40	-29.2310	0.93	1.88300	23.59	39.22
+41	75.0001	0.10		23.59
+42	43.0957	6.63	1.51633	24.78	64.06
+43	-34.2796	1.10		24.78
+44	-48.6590	1.00	1.95906	24.78	17.47
+45	-108.7770	12.5726		26.74
+
+46	CG	2.85	1.51680	30.80	64.20
+47	CG	0.00		30.80	
+[aspherical data]
+42	43.0957	0	0	-4.0069027E-06	-4.0116511E-06	1.9322476E-06	-3.0556474E-07	1.5084145E-08	5.3417505E-10	-2.9150133E-11	-3.4316109E-12	2.7309242E-14	1.0843229E-14	3.4115327E-16	-4.2858995E-17	7.6873928E-19
+43	-34.2796	0	0	-2.9797401E-05	5.0678274E-06	-1.4104856E-06	2.5633878E-07	-2.0298979E-08	-2.9461048E-10	9.2188992E-11	3.0094687E-12	-3.1391599E-13	-2.6925527E-14	3.5621021E-16	1.7401064E-16	-6.1116557E-18
+[figure]
+source	Data/US20200018936_Figure01P.png
+originX	26.04
+originY	146.80
+ppmm	8.756
+[notes]
+Bill: Lateral Magnification not supplied.

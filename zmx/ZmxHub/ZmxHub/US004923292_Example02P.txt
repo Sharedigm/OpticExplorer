@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 4,923,292 Example 2 (Ricoh smc Pentax-D FA Macro 50mm F2.8)
+[constants]
+[variable distances]
+Focal Length	50.01	undefined
+Angle of View	46.8	undefined
+F-Number	2.8	undefined
+Image Height	43.28	43.28
+Total Length	undefined	undefined
+Magnification	0	-1.0
+d0	Infinity	50.75
+d11	0.65	12.75
+Bf	38.02	68.82
+[lens data]
+1	61.748	1.50	1.62012	33.72	49.6
+2	28.608	14.34		30.72	
+3	26.525	4.94	1.69680	25.76	55.5
+4	197.685	7.57		25.76	
+5	18.425	3.79	1.59270	17.55	35.3
+6	13.550	7.00		15.76	
+6AS	AS	5.06		14.394
+7	-12.947	1.30	1.69895	14.86	30.1
+8	129.576	5.05	1.69680	19.60	55.5
+9	-17.827	0.05		19.60	
+10	67.312	3.68	1.79952	24.36	42.2
+11	-59.770	d11		24.36	
+12	125.474	1.30	1.69350	26.38	53.2
+13	34.560	3.72		26.38	
+14	171.423	3.00	1.60323	26.88	42.3
+15	-90.000	Bf		26.88	
+[figure]
+source	Data/US004923292_Figure04P.png
+originX	209.09
+originY	152.92
+ppmm	3.220
+[notes]
+Bill: d0 measured.

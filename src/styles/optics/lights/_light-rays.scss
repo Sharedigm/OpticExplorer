@@ -1,0 +1,102 @@
+/******************************************************************************\
+|                                                                              |
+|                              _light-rays.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+//
+// styles
+//
+
+.optics .viewport {
+
+	//
+	// ray beam animation
+	//
+
+	@keyframes laserbeam {
+		0% {
+			stroke-dashoffset: 100;
+		}
+		100% {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	@keyframes lasersparkle {
+		0% {
+			stroke-dasharray: 90 10;
+			stroke-dashoffset: 1000;
+		}
+		100% {
+			stroke-dasharray: 90 10;
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.ray.beam {
+
+		//
+		// light rays
+		//
+
+		.paths {
+			path {
+				stroke-opacity: 1 !important;
+				mix-blend-mode: hard-light !important;
+				stroke-dasharray: 10 5;
+
+				/*
+				-webkit-animation: 1s lasersparkle linear forwards;
+				animation: 1s lasersparkle linear forwards;
+				animation-iteration-count: infinite;
+				*/
+			}
+
+			.obstructed {
+				path {
+					stroke-opacity: 0.5 !important;
+				}
+			}
+		}
+	}
+}
+
+//
+// light viewports
+//
+
+.optics .viewport.light,
+.light .optics .viewport.auto {	
+
+	.ray.beam {
+		.paths {
+			path {
+				stroke-opacity: 0.75 !important;
+				mix-blend-mode: darken !important;
+			}
+		}
+	}
+}
+
+//
+// dark viewports
+//
+
+.optics .viewport.dark,
+.dark .optics .viewport.auto {	
+
+	.ray.beam {
+		.paths {
+			path {
+				mix-blend-mode: plus-lighter !important;
+			}
+		}
+	}
+}

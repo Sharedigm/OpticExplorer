@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 3,318,653 Example 1 (Schneider Curtagon 2.8 / 35 gen 2)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	63
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	36.089
+[lens data]
+1	69.755	2.100	1.4645	24.58	65.79
+2	16.520	13.188		22.90	
+3	27.433	4.683	1.7018	16.38	41.14
+4	-64.278	0.336		16.38
+5	14.112	1.757	1.6172	15.15	54.04
+6	24.070	1.727		15.15
+6AS	AS	1.14		14.210
+7	-61.250	1.138	1.7847	13.88	26.10
+8	15.460	1.911		13.11
+9	139.314	2.198	1.5890	13.38	48.64
+10	-34.580	1.453		13.38
+11	-29.610	2.608	1.7200	13.68	50.31
+12	-16.587	Bf		13.68
+[figure]
+source	Data/US003318653_Figure01P.png
+originX	20.53
+originY	126.83
+ppmm	6.853
+[notes]
+Bill: Not sure about the construction diagram aspect ratio.

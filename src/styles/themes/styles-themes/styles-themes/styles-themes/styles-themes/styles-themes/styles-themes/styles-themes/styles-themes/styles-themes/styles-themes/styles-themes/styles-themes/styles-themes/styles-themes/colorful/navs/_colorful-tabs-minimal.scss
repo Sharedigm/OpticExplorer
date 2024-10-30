@@ -1,0 +1,56 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colorful-tabs-minimal.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$text-color: var(--primary-color);
+$hover-text-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colorful {
+	&:not(.dark).tabs-minimal {
+		ul.nav-tabs {
+
+			//
+			// inactive tabs
+			//
+
+			> li:not(.active) {
+				> a {
+					color: $text-color;
+
+					label {
+						color: $text-color;
+					}
+				}
+
+				> a:hover {
+					color: $hover-text-color;
+
+					label {
+						color: $hover-text-color;
+					}
+				}
+			}
+		}
+	}
+}

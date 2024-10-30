@@ -1,0 +1,33 @@
+[descriptive data]
+title	US 7,542,219 Example 1 (Ricoh HD Pentax-DA 70mm F2.4 Limited)
+[constants]
+[variable distances]
+Focal Length	67.74
+Angle of View	25.2
+F-Number	2.5
+Image Height	30.6
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	37.80
+[lens data]
+1	29.470	4.39	1.69799	29.04	55.5
+2	112.728	0.17		29.04	
+3	19.182	4.08	1.68159	26.08	57.5
+4	33.855	3.80		24.68	
+5	40.345	1.15	1.79425	21.94	25.5
+6	13.258	6.561		19.48	
+6AS	AS	2.779		15.974
+7	-25.121	1.00	1.67648	17.86	44.0
+8	-91.171	1.60	1.54354	18.64	60.1
+9	-46.171	2.30		18.64	
+9FS	FS	0.50		15.974
+10	112.557	2.40	1.80100	19.54	35.0
+11	-49.502	Bf		19.54	
+[figure]
+source	Data/US007542219_Figure01P.png
+originX	181.36
+originY	194.12
+ppmm	5.929
+[notes]
+Bill: Image Height based on Angle of View.

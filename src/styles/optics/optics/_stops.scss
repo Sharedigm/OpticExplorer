@@ -1,0 +1,145 @@
+/******************************************************************************\
+|                                                                              |
+|                                 _stops.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$color: colors.$dark-grey;
+$hover-color: var(--primary-color);
+$select-color: var(--primary-color);
+
+$dark-color: colors.$light-grey;
+$dark-hover-color: var(--primary-color);
+$dark-select-color: var(--primary-color);
+
+//
+// styles
+//
+
+.optics .viewport {
+	.elements {
+
+		.stop {
+			overflow: visible;
+
+			path {
+				stroke-width: 3;
+				vector-effect: non-scaling-stroke;
+			}
+		}
+	}
+
+	.stop.annotation {
+		.marker {
+			&:hover {
+				fill: $hover-color;
+			}
+
+			&.selected {
+				fill: $select-color;
+			}
+		}
+	}
+}
+
+//
+// binary stops
+//
+
+body.binary {
+	.optics .viewport {
+		.elements {
+			.stop {
+				path {
+					stroke: black;
+				}
+			}
+		}
+	}
+}
+
+//
+// colored stops
+//
+
+body:not(.binary) {
+
+	//
+	// medium, light stops
+	//
+
+	.optics .viewport {
+		.elements {
+
+			.stop {
+				path {
+					stroke: $color;
+				}
+
+				&:hover {
+					path {
+						stroke: $hover-color;
+					}
+				}
+
+				&.selected {
+					path {
+						stroke: $select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// dark stops
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+		.elements {
+
+			.stop {
+				path {
+					stroke: $dark-color;
+				}
+
+				&:hover {
+					path {
+						stroke: $dark-hover-color;
+					}
+				}
+
+				&.selected {
+					path {
+						stroke: $dark-select-color;
+					}
+				}
+			}
+		}
+
+		.stop.annotation {
+			.marker {
+				&:hover {
+					fill: $dark-hover-color;
+				}
+
+				&.selected {
+					fill: $dark-select-color;
+				}
+			}
+		}
+	}
+}

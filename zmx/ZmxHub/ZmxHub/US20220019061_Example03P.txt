@@ -1,0 +1,45 @@
+[descriptive data]
+title	US 2022/0019061 Example 3 (Canon RF24mm F1.8 Macro IS STM)
+[constants]
+[variable distances]
+Focal Length	24.72	undefined
+Angle of View	82.4	70.8
+F-Number	1.85	1.85
+Image Height	38.68	41.86
+Total Length	81.00	undefined
+Magnification	0	-0.51049
+d0	Infinity	42.01
+d17	2.56	15.56
+Bf	11.00	11.00
+Aperture Diameter	17.43	16.21
+[lens data]
+1	352.223	1.57	1.51633	33.00	64.1
+2	16.734	15.32		25.69	
+3	32.834	3.88	1.91082	20.54	35.3
+4	-101.361	2.45		20.39	
+5	-173.026	3.85	1.90043	19.43	37.4
+6	-20.106	1.00	1.72825	19.21	28.5
+7	92.116	2.92		18.19	
+8	AS	3.40		17.43	
+9	70.143	1.65	1.67790	16.24	55.3
+10	-252.397	3.51		15.95	
+11	-15.958	1.00	1.85478	15.03	24.8
+12	71.900	3.99	1.49700	19.50	81.5
+13	-28.609	0.15		18.99	
+14	162.276	5.15	1.91082	22.80	35.3
+15	-27.659	0.15		24.07	
+16	-83.020	2.50	1.53110	24.80	55.9
+17	-48.642	d17		25.55	
+18	-79.703	2.09	1.72916	28.60	54.7
+19	-45.710	10.30		29.00	
+20	-24.031	2.55	1.51742	30.41	52.4
+21	-44.953	Bf		33.46	
+[aspherical data]
+17	-48.642	0	1.70126E-05	-2.50325E-09	1.03885E-10	-5.41918E-13	1.15952E-15
+[figure]
+source	Data/US20220019061_Figure05P.png
+originX	18.52
+originY	114.99
+ppmm	3.039
+[notes]
+Bill: Patent diameters including AS. Measured d0 and Magnification. Adjusted close Image Height and AS

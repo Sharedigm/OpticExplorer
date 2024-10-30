@@ -1,0 +1,136 @@
+################################################################################
+#                                                                              #
+#                         Zeiss-Orthoscopic-25mm.optc                          #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Myriam Philippe DERELLE                                    #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: stop
+    aperture: 18 mm
+    diameter: 24.5 mm
+    spacing: 13.35 mm
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 22 mm
+        coating: multi
+      - type: spherical
+        curvature: -25.25 mm
+        diameter: 22 mm
+        coating: multi
+    thickness: 5.475 mm
+    spacing: 0.15 mm
+    beveled: true
+    material:
+      n: 1.72828
+      v: 28.53
+      catalog: Schott
+      name: N-SF10
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 39 mm
+        diameter: 22 mm
+        coating: multi
+      - type: spherical
+        curvature: -19.375 mm
+        diameter: 22 mm
+        coating: none
+    thickness: 8.575 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.60311
+      v: 60.6
+      catalog: Schott
+      name: N-SK14
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -19.375 mm
+        diameter: 22 mm
+        coating: none
+      - type: spherical
+        curvature: 19.375 mm
+        diameter: 22 mm
+        coating: none
+    thickness: 1.563 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.76182
+      v: 26.53
+      catalog: Schott
+      name: SF14
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 19.375 mm
+        diameter: 22 mm
+        coating: none
+      - type: spherical
+        curvature: -46 mm
+        diameter: 22 mm
+        coating: multi
+    thickness: 7.825 mm
+    spacing: 14.13 mm
+    beveled: true
+    material:
+      n: 1.61773
+      v: 49.83
+      catalog: Schott
+      name: N-SSK8
+
+  - type: stop
+    aperture: 19.58 mm
+    diameter: 24.5 mm
+    spacing: 2 mm
+
+LIGHTS:
+
+  - type: beam
+    distance: 7 mm
+    width: 1.66 mm
+    offset: 0
+    angle: 21.5 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.66 mm
+    offset: 0
+    angle: -18.4 deg
+    spectrum: Photopic
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.66 mm
+    offset: 0
+    angle: 12.5 deg
+    spectrum: Visible (x2, FC)
+    number_of_rays: 10
+
+  - type: beam
+    distance: 7 mm
+    width: 1.66 mm
+    offset: 0
+    angle: 0
+    spectrum: Visible (x3, FdC)
+    number_of_rays: 10
+
+OBJECTS: []

@@ -1,0 +1,41 @@
+/******************************************************************************\
+|                                                                              |
+|                             _light-flat-btns.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../navs/materials/flat/flat-btns";
+@use "../../navs/light-btns";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.light.flat-buttons,
+	&.light.flat.auto-buttons {
+
+		.btn {
+			@include flat-btns.shaded(light-btns.$color);
+
+			//
+			// light flat disabled buttons
+			//
+
+			&:disabled {
+				@include flat-btns.shaded(light-btns.$disabled-color);
+			}
+		}
+	}
+}

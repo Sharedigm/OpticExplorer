@@ -1,0 +1,34 @@
+[descriptive data]
+title	DE 2,635,415 Example 1 (Rodenstock Grandagon-N 75mm f6.8)
+[constants]
+Scaled	75	100
+[variable distances]
+Focal Length	75
+Angle of View	104
+F-Number	6.8
+Total Length	undefined
+Image Height	192
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	51.59
+[lens data]
+1	76.635	2.468	1.5246	42.95	59.22
+2	17.595	10.028		31.54
+3	19.673	10.943	1.7343	25.11	28.47
+4	9.825	8.813	1.6269	11.745	46.71	di specified
+5	61.530	0.960		11.745		
+5.5	AS	1.005		11.299		
+6	127.268	7.853	1.6541	11.205	38.86	di  specified
+7	-10.553	8.895	1.7273	13.89	29.02
+8	-24.405	10.028		24.18
+9	-20.610	2.003	1.5246	32.17	59.22
+10	-134.813	Bf		40.39
+[figure]
+source	Data/DE02635415_Figure01P.png
+originX	47.55
+originY	235.45
+ppmm	7.098
+[notes]
+Bill: 75mm 90mm at IH 150mm, 115mm at IH 222mm, 155mm 200mm at IH 300mm
+Specified di4 limits F-NNumber to 6.85

@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 1999-030748 Example 1 (Nikon AF Zoom-Nikkor 28-80mm f3.5-5.6D)
+[constants]
+[variable distances]
+Focal Length	28.8	50	78
+Angle of View	76.5	undefined	31
+F-Number	3.57	4.57	5.81
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	34.842	12.086	0.988
+Bf(p)	46.553	57.664	72.340
+Bf	45.76	65.25	90.99
+Aperture Diameter	17.387	18.035	18.943
+[lens data]
+1	136.538	4.5	1.51454	49.84	54.55
+2	-937.516	0.1		49.84	
+3	86.189	2.0	1.79668	46.44	45.37
+4	21.061	8.5		32.94	
+5	168.022	1.6	1.79668	34.32	45.37
+6	38.573	3.5		34.32	
+7	31.861	4.0	1.86074	31.76	23.01
+8	64.054	d8		31.76	
+9	28.074	3.7	1.61720	21.86	54.01
+10	-191.563	1.6		21.86	
+10AS	AS	0.9		17.387
+11	24.663	4.2	1.61720	19.64	54.01
+12	62.000	1.2		19.64	
+13	-76.033	8.0	1.80518	18.03	25.41
+14	18.928	1.6		18.03
+15	34.353	4.7	1.61293	18.28	36.98
+16	-35.233	Bf		18.28	
+[figure]
+source	Data/JP1999-030748_Figure01WP.png
+originX	4.01
+originY	68.14
+ppmm	1.886
+[notes]
+Bill: Patent Bf don't seem right. Not really that good a fit to the production lens.

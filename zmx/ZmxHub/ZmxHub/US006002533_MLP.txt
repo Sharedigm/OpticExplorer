@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 6,002,533 Main Lens (Ricoh smc Pentax 6x7 Macro 100mm f4.0)
+[constants]
+[variable distances]
+Focal Length	100	undefined
+Angle of View	undefined	undefined
+F-Number	4	6
+Image Height	88.2	88.2
+Total Length	undefined	undefined
+Magnification	0	-0.5
+d0	Infinity	268.06
+d11	9.3	11.58
+Bf(p)	undefined	undefined
+Bf	77.43	127.39
+[lens data]
+7	46.500	4.40	1.72000	36.37	43.7
+8	95.900	0.20		36.37
+9	25.064	4.80	1.67790	29.45	55.3
+19	48.800	2.80	1.62004	29.45	36.3
+11	17.750	d11		21.76
+11AS	AS	4.00		18.822
+12	-83.484	2.50	1.74400	18.70	44.8
+13	-43.469	3.45		20.43
+14	-28.598	9.00	1.74077	27.19	27.8
+15	-168.970	10.00	1.72000	35.60	43.7
+16	-33.124	Bf		35.60
+[figure]
+source	Data/US006002533_MLP.png
+originX	1.09
+originY	52.99
+ppmm	2.264
+[notes]

@@ -1,0 +1,32 @@
+[descriptive data]
+title	DE 2222892 Example 3 (Leica Summicron-C 40mm F2)
+[constants]
+Scaled	40	1
+[variable distances]
+Focal Length	40
+Angle of View	56.8
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	24.13
+[lens data]
+1	23.9976	2.80	1.79227	23.10	47.15
+2	54.3276	0.03		23.10
+3	12.9932	3.70	1.79227	18.88	47.15
+4	25.7724	1.31	1.76167	18.88	27.37
+5	9.1196	5.28		13.73
+5AS	AS	4.34		13.074
+6	-12.7992	1.41	1.64062	12.75	35.09
+7	-26.2424	1.90	1.69401	18.33	54.48
+8	-17.9808	0.03		18.33
+9	-7914.4800	3.80	1.64304	22.07	59.85
+10	-22.8904	Bf		22.07
+[figure]
+source	Data/DE02222892_Figure01P.png
+originX	25.80
+originY	553.95
+ppmm	43.826
+[notes]
+

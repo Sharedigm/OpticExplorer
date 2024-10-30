@@ -1,0 +1,31 @@
+[descriptive data]
+title	DE 3026282 Example 1 (Rodenstock Geronar-WA 90mm f8)
+[constants]
+Scaled	90	100
+[variable distances]
+Focal Length	90
+Angle of View(p)	85
+Angle of View	80
+F-Number	8
+Image Height	155
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	73.36
+[lens data]
+1	26.63	8.80	1.6207	34.00	49.47
+2	68.61	0.10		32.00
+3	27.41	3.60	1.7918	26.50	25.87
+4	17.87	5.50		16.55
+4.5	AS	6.56		8.530
+5	-17.36	2.33	1.7918	20.80	25.87
+6	-24.79	0.10		28.42	
+7	-86.06	9.19	1.6207	30.62	49.47
+8	-25.51	Bf		38.68	
+[figure]
+source	Data/DE03026282_Figure01P.png
+originX	64.55
+originY	372.12
+ppmm	9.423
+[notes]
+Bill: Adjusted Angle of View according to specification.

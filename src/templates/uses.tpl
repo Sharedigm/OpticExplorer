@@ -11,14 +11,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/file-sharing">
-					<h2><i class="fa fa-share"></i>File Sharing</h2>
-					<p>The easy to use file sharing capability makes it easy for you to share files, photos, and folders with your friends and colleagues. </p>
+				<a class="unstyled" href="#uses/photography">
+					<h2><i class="fa fa-camera"></i>Photography</h2>
+					<p><%= application.name %> allows you to understand your photographic optical systems so you can take better photographs. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/file-sharing"><img src="images/info/uses/file-sharing.png" style="filter:none" /></a>
+					<a href="#uses/photography"><img src="images/info/uses/photography.png" style="filter:none" /></a>
 				</div>
 			</div>
 		</div>
@@ -27,14 +27,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/photo-sharing">
-					<h2><i class="fa fa-camera"></i>Photo Sharing</h2>
-					<p>The photo viewing and managing capabilities make it easy to view, organize, search, and share your photos. </p>
+				<a class="unstyled" href="#uses/simulation">
+					<h2><i class="fa fa-lightbulb"></i>Simulation</h2>
+					<p>Simulate optical systems in order to understand their performance characteristics. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/photo-sharing"><img src="images/info/uses/photo-viewing.png" /></a>
+					<a href="#uses/simulation"><img src="images/info/uses/simulation.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -43,14 +43,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/media-management">
-					<h2><i class="fa fa-music"></i>Media Management</h2>
-					<p>The media management capabilities make it easy for you to play, organize, and share your music, podcasts, audio books, and videos. </p>
+				<a class="unstyled" href="#uses/design">
+					<h2><i class="fa fa-ruler-combined"></i>Design</h2>
+					<p>Use <%= application.name %> to help you to understand existing optical designs or even to design and build your own optical systems! </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/media-management"><img src="images/info/uses/media-management.png" /></a>
+					<a href="#uses/design"><img src="images/info/uses/design.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -59,14 +59,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/social-networking">
-					<h2><i class="fa fa-comments"></i>Social Networking</h2>
-					<p>The Social Networking capabilities allow you to connect with friends and colleagues to share news, files, and direct messages. </p>
+				<a class="unstyled" href="#uses/analysis">
+					<h2><i class="fa fa-chart-line"></i>Analysis</h2>
+					<p>Understand the performance and abberations of optical designs. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/social-networking"><img src="images/info/uses/social-networking.png" /></a>
+					<a href="#uses/analysis"><img src="images/info/uses/analysis.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -75,14 +75,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/workplace-collaboration">
-					<h2><i class="fa fa-briefcase"></i>Workplace Collaboration</h2>
-					<p>The workplace collaboration features allow you to exchange messages, files, and folders with your co-workers. </p>
+				<a class="unstyled" href="#uses/education">
+					<h2><i class="fa fa-chalkboard"></i>Education</h2>
+					<p>Whether you're a teacher or a student, use <%= application.name %> to teach and learn about the art and science of optics. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/workplace-collaboration"><img src="images/info/uses/workplace-collaboration.png" /></a>
+					<a href="#uses/education"><img src="images/info/uses/education.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -91,14 +91,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/project-management">
-					<h2><i class="fa fa-check"></i>Project Management</h2>
-					<p>The project management features help to you more effectively manage and track your projects and tasks. </p>
+				<a class="unstyled" href="#uses/astronomy">
+					<h2><i class="fa fa-moon"></i>Astronomy</h2>
+					<p>Use <%= application.name %> to understand the behavior and performance of your astronomical optics. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/project-management"><img src="images/info/uses/project-management.png" /></a>
+					<a href="#uses/astronomy"><img src="images/info/uses/astronomy.png" /></a>
 				</div>
 			</div>
 		</div>
@@ -107,14 +107,14 @@
 	<div class="section">
 		<div class="row">
 			<div class="col-sm-6">
-				<a class="unstyled" href="#uses/code-sharing">
-					<h2><i class="fa fa-code"></i>Code Sharing</h2>
-					<p>The code editing and sharing features make it easy to view, edit, and share code files and packages. </p>
+				<a class="unstyled" href="#uses/exploration">
+					<h2><i class="fa fa-microscope"></i>Exploration</h2>
+					<p><%= application.name %> is for people who are just plain curious about how things work. </p>
 				</a>
 			</div>
 			<div class="col-sm-6">
 				<div class="figure">
-					<a href="#uses/code-sharing"><img src="images/info/uses/code-sharing.png" style="filter:none" /></a>
+					<a href="#uses/exploration"><img src="images/info/uses/exploration.png" /></a>
 				</div>
 			</div>
 		</div>

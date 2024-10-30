@@ -1,0 +1,132 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-apps.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	.app {
+		@include binary-colors.dark-grey;
+
+		//
+		// standard apps
+		//
+
+		> .header-bar {
+			@include binary-colors.light-grey;
+			@include binary-text.outline;
+
+			.menu-bar li:hover,
+			.dropdown-menu, .tooltip, .button:hover {
+				@include binary-text.unoutline;
+			}
+
+			//
+			// app body
+			//
+
+			& + .body {
+				@include binary-colors.light-grey;
+
+				> .contents {
+					@include binary-colors.dark-grey;
+
+					//
+					// app sidebars
+					//
+
+					> .sidebar {
+						@include binary-colors.dark-grey;
+					}
+				}
+
+				//
+				// app footer bars
+				//
+
+				& + .footer-bar {
+					@include binary-colors.light-grey;
+					@include binary-text.outline;
+				}
+			}
+		}
+
+		//
+		// map grids
+		//
+		
+		.map pattern svg path {
+			stroke: white;
+		}
+
+		//
+		// selection boxes
+		//
+
+		.selection {
+			color: white;
+			border-color: black;
+			@include binary-colors.lighten-less;
+			background-position: 0 0;
+		}
+	}
+
+	//
+	// dark modal / non-desktop apps
+	//
+
+	//
+	// modal / non-desktop apps
+	//
+
+	.modals {
+		.app {
+			> .body {				
+				> .contents {
+					.mainbar {
+						> .items, 
+						.tab-pane > .items,
+						.tab-pane .tab-pane form {
+							@include binary-colors.grey;
+							background-position: 1px 1px;
+							background-attachment: fixed;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// desktop styles
+	//
+
+	&[device="desktop"] .modals {
+		.modal-dialog {
+			.app {
+				.body:not(.last) {
+					border-color: transparent;
+				}
+			}
+		}
+	}
+}

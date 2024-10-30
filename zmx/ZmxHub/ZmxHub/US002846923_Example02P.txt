@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2,846,923 Example 2 (Farrand Super-Farron 76mm f0.87)
+[constants]
+Scaled	76	100
+[variable distances]
+Focal Length	76
+Angle of View	30
+F-Number	0.86643
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	4.86
+[lens data]
+1	103.54772	10.85937	1.58896	95.80	61.5
+11	597.56824	0.40370		95.80	
+2	64.28832	11.15407	1.63934	86.15	55.5
+12	168.44184	0.30277		86.15
+3	41.30805	19.82543	1.63934	70.14	55.5
+4	Infinity	2.42217	1.69927	70.14	30.1
+14	22.80874	12.92885		40.71
+14AS	AS	8.800		38.167
+5	-38.58307	2.96715	1.72800	37.34	28.3
+15	-59.28251	0.98905		41.60	
+6	-310.23884	2.95504	1.63598	45.55	35.6
+7	29.13665	14.80549	1.74464	45.55	44.6
+17	-72.14019	0.98905		45.55
+8	49.29109	17.56070	1.74464	47.36	44.6
+18	-109.50232	4.52762		47.36	
+9	-56.38600	1.51385	1.51637	47.58	56.4
+19	72.14019	Bf		42.75
+[!figure]
+source	Data/US002846923_Figure02P.png
+originX	16.23
+originY	200.64
+ppmm	4.488
+[notes]
+Bill: Doesn't really match the onlt diagram I can find but I'm confident this is correct.

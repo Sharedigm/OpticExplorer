@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 2006/0007559 Example 4 (Nikon AF-S DX Zoom-Nikkor 18-55mm f/3.5-5.6G ED)
+[constants]
+AsphericalOddCount	1
+[variable distances]
+Focal Length	18.50000	35.00000	53.50000	undefined	undefined	undefined	undefined	undefined	undefined
+Angle of View	77.80	44.60	29.86	undefined	undefined	undefined	undefined	undefined	undefined
+F-Number	3.56	4.65	5.90	undefined	undefined	undefined	undefined	undefined	undefined
+Image Height	28.4	28.4	28.4	28.4	28.4	28.4	28.4	28.4	28.4
+Magnification	0	0	0	-0.025	-0.025	-0.025	-0.13159	-0.23049	-0.38023
+d0	Infinity	Infinity	Infinity	711.48	1371.47	2111.44	112.05	123.32	112.17
+d5	44.09357	13.18951	1.20774	45.4345	13.8983	1.6714	51.1512	19.7238	8.2597
+d14	0.00000	11.09166	23.52778	0.00000	11.09166	23.52778	0.00000	11.09166	23.52778
+Bf	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285	41.84285	50.91785	61.09285
+Aperture Diameter	15.797	15.932	16.018	15.797	15.932	16.018	15.797	15.932	16.018
+[lens data]
+1	181.0591	2.0000	1.77250	37.14	49.61
+2	17.2000	0.2000	1.55389	30.16	38.09
+3	12.7630	12.2500		29.82
+4	33.8814	2.8000	1.86074	27.72	23.06
+5	65.8125	d5		27.72	
+6	42.5378	2.6000	1.49700	16.54	81.61
+7	-94.5446	1.8000		16.54	
+8	AS	2.0000		15.797
+9	24.2385	4.0000	1.51680	16.80	64.10
+10	-35.8523	0.8000	1.77250	15.84	49.61
+11	67.2430	11.2000		15.84	
+12	54.1555	0.8000	1.83400	15.98	37.17
+13	15.5723	4.5000	1.51680	15.98	64.10
+14	-35.4635	d14		15.98	
+15	FS	Bf		15.58	
+[aspherical data]
+3	12.7630	-0.9625	7.9879E-06	3.0368E-06	-2.1516E-08	5.2594E-11	-2.5891E-13
+[figure]
+source	Data/US20060007559_Figure13P.png
+originX	12.55
+originY	78.01
+ppmm	2.136
+[notes]
+Bill: Image Height was not specified. d0 measured.

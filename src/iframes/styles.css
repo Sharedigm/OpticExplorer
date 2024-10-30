@@ -15,10 +15,11 @@ body {
 	height: 600;
 	border-width: 1px;
 	border-style: solid;
+	border-radius: 10px;
 }
 
 .music.figure iframe {
-	height: 240;
+	height: 200;
 }
 
 .figure .caption {

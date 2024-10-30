@@ -1,0 +1,82 @@
+/******************************************************************************\
+|                                                                              |
+|                            _accented-dialogs.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$title-icon-color: var(--secondary-color);
+$modal-unfocused-title-icon-color: $title-icon-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	& {
+		.modals {
+
+			//
+			// focused dialogs
+			//
+
+			.modal.focused .modal-dialog {
+				.modal-header {
+
+					.icon {
+
+						//
+						// title icon color
+						//
+
+						i {
+							color: $title-icon-color !important;
+						}
+
+						svg {
+							fill: $title-icon-color !important;
+						}
+					}
+				}
+			}
+
+			//
+			// unfocused dialogs
+			//
+
+			.modal:not(.focused) .modal-dialog {
+				.modal-header {
+
+					.icon {
+
+						//
+						// unfocused title icon color
+						//
+
+						i {
+							color: $modal-unfocused-title-icon-color !important;
+						}
+
+						svg {
+							fill: $modal-unfocused-title-icon-color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

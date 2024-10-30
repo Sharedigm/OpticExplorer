@@ -1,0 +1,28 @@
+[descriptive data]
+title	US 3,649,104 Example 3 (Leica Elcan 50mm F2)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	45
+F-Number	2
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	25.2537
+[lens data]
+1	18.9410	5.1888	1.6940	26.71	54.50
+2	95.1681	0.0961		26.71
+3	16.0699	2.97875	1.6734	22.34	46.80
+4	24.9725	1.6335		19.73	
+5	100.2407	0.7687	1.7471	19.98	27.40
+6	11.7132	5.5591		17.19
+6AS	AS	5.3950		15.802
+7	47.6244	5.7653	1.7546	20.58	34.70
+8	-212.1935	Bf		20.58
+[figure]
+source	Data/US003649104_Figure01P.png
+originX	29.60
+originY	225.43
+ppmm	16.326
+[notes]

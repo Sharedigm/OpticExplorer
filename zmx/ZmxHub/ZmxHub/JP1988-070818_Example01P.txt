@@ -1,0 +1,37 @@
+[descriptive data]
+title	JP 1988-070818 Example 1 (Konica Minolta AF 3x-1x 1.7-2.8 Macro)
+[constants]
+Scaled	40	100
+[variable distances]
+Focal Length	40	undefined	undefined
+Angle of View	undefined	undefined	undefined
+F-Number	4	undefined	undefined
+Image Height	33.2	33.2	33.2
+Total Length	undefined	undefined	undefined	
+Magnification	-1.0	-1.7	-3.0
+d0	49.85	34.55	26.62
+d5	14.075	10.226	7.146
+d5AS	10.580	6.731	3.651
+Bf(p)	undefined	undefined	undefined
+Bf	52.71	78.57	121.61
+[lens data]
+1	32.616	2.312	1.77250	18.09	49.77
+2	425.142	0.234		18.09	
+3	13.522	3.011	1.77250	16.50	49.77
+4	28.845	2.117	1.67339	15.69	29.25
+5	10.270	d5AS		12.35	
+5AS	AS	3.495		10.037
+6	-9.669	2.044	1.67339	11.04	29.25
+7	-40.381	5.209	1.69680	13.66	56.47
+8	-15.362	0.118		16.45	
+9	-64.694	3.005	1.69680	18.80	56.47
+10	-28.826	0.116		18.80	
+11	355.413	3.033	1.71300	19.94	53.93
+12	-68.474	Bf		19.94	
+[figure]
+source	Data/JP1988-070818_FigureP.png
+originX	78.03
+originY	145.68
+ppmm	3.468
+[notes]
+Bill: d0 measured. Patent F-Number adjusted for 1x Magnification assuming unity pupil magnification.

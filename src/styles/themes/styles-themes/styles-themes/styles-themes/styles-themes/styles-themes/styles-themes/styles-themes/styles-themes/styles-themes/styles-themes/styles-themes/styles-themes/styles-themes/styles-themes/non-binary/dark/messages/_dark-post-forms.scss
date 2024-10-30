@@ -1,0 +1,59 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-post-forms.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$dark-new-comment-background-color: colors.$very-very-very-dark-grey;
+$dark-new-comment-border-color: lighten($dark-new-comment-background-color, 5%);
+$dark-new-comment-arrow-color: colors.$dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.new-post, .new-comment, .new-reply, .new-message {
+		.comment-bubble {
+
+			.comment-inner {
+				background-color: $dark-new-comment-background-color;
+				border-color: $dark-new-comment-border-color;
+			}
+
+			//
+			// dark new comment arrows
+			//
+
+			&.top .comment-arrow {
+				border-top-color: $dark-new-comment-arrow-color;
+			}
+			&.right .comment-arrow {
+				border-right-color: $dark-new-comment-arrow-color;
+			}
+			&.left .comment-arrow {
+				border-left-color: $dark-new-comment-arrow-color;
+			}
+			&.bottom .comment-arrow {
+				border-bottom-color: $dark-new-comment-arrow-color;
+			}
+		}
+	}
+}

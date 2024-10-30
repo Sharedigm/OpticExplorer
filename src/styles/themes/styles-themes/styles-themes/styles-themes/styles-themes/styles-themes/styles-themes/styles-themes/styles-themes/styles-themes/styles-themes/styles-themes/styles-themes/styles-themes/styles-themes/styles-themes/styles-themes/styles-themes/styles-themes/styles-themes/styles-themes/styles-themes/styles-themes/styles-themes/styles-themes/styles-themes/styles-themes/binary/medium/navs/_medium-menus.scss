@@ -1,0 +1,141 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-menus.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$divider-style: dotted;
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// dropdown menus
+	//
+
+	.dropdown-menu, .menu-content {
+		background-color: white;
+	}
+
+	//
+	// dropdown menu items
+	//
+
+	.menu, .dropdown-menu {
+		li {
+
+			> a {
+
+				//
+				// selected / highlighted items
+				//
+
+				&.selected, &:active {
+					color: white;
+					background-color: black;
+					text-shadow: none;
+				}
+
+				&:hover {
+					color: white;
+					background-color: black;
+					text-shadow: none;
+				}
+			}
+
+			//
+			// dividers
+			//
+
+			&.divider {
+				border-bottom-style: $divider-style;
+
+				&:hover {
+					border-bottom-style: $divider-style;
+				}
+			}
+		}
+
+		//
+		// disabled menu items
+		//
+
+		> li.disabled {
+			color: unset;
+			position: relative;
+
+			> a {
+				color: unset;
+
+				> i {
+					color: unset;
+				}	
+			}
+
+			// inset shadow
+			//
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				@include binary-colors.lighten;
+			}
+		}
+
+		//
+		// dropdown panels
+		//
+
+		ul.panels li:not(:last-child) {
+			border-bottom-style: dotted;
+		}
+	}
+
+	.dropdown-menu {
+		> li {
+		
+			//
+			// open items
+			//
+
+			&.open {
+				> a, a:focus, &:active {
+					color: white;
+					background-color: black;
+					border-color: black;
+					text-shadow: none;
+
+					&:hover {
+						color: white;
+						background-color: black;
+						border-color: black;	
+						text-shadow: none;	
+					}
+				}
+			}
+		}
+	}
+}

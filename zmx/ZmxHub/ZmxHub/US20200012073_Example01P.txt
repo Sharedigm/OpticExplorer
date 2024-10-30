@@ -1,0 +1,53 @@
+[descriptive data]					
+title	US 2020/0012073 Example 1 (Canon RF85mm F1.2 L USM (DS))
+[constants]					
+[variable distances]					
+Focal Length	86.53	undefined
+Angle of View	28.08	undefined
+F-Number	1.24	undefined
+Image Height	43.28	43.28
+Total Length	134.49	134.49
+Magnification	0	-0.12647
+S	Infinity	850
+d0	Infinity	714.98
+d3	14.36	1.64
+d17	1.64	14.36
+Bf	14.91	14.91
+P	113.67	undefined
+P'	-38.04	undefined
+H	58.81	undefined
+H'	-71.62	undefined
+[lens data]					
+1	71.655	15.57	1.61800	70.20	63.4
+2	-149.456	3.00	1.72047	70.20	34.7
+3	112.469	d3		64.63	
+4	67.332	5.75	1.92286	61.52	20.9
+5	141.236	0.30		60.60	
+6	39.868	11.43	1.49700	55.00	81.5
+7	200.860	6.51		52.72	
+8	75.484	2.50	1.85478	41.24	24.8
+9	27.701	10.68		35.16	
+10	AS	4.51		33.10	
+11	-85.831	1.50	1.85478	31.67	24.8
+12	33.313	9.50	1.88300	31.20	40.8
+13	-68.563	2.28		30.88	
+14	-48.430	1.70	1.54072	29.85	47.2
+15	58.169	1.00	1.60401	34.00	20.8
+16	77.751	6.95	1.95375	34.22	32.3
+17	-77.751	d17		35.40	
+18	204.839	7.00	1.95375	36.85	32.3
+19	-48.060	2.20	1.62004	37.03	36.3
+20	97.164	5.40		36.40	
+21	-52.101	1.65	1.68893	36.44	31.1
+22	237.864	0.15		38.49	
+23	97.826	4.00	1.90043	39.55	37.4
+24	-370.202	Bf		39.79	
+[aspherical data]					
+8	75.484	0	-2.2875E-06	-2.1286E-10	2.6709E-13
+[figure]
+source	Data/US20200012073_Figure01p.png
+originX	20.65
+originY	147.59
+ppmm	2.699
+[notes]					
+Bill: Patent diameters. Added CLD scenario based on specifications.

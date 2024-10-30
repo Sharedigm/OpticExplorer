@@ -1,0 +1,86 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-card-grids.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.card-grid {
+		.cards {
+			.item {
+
+				//
+				// all cards
+				//
+
+				.card {
+					background: white;
+
+					.icon {
+
+						//
+						// images
+						//
+
+						> svg, .thumbnail:not(.photo) {
+
+		 					// no shadows
+							//
+							-webkit-filter: none;
+							filter: none;
+						}
+					}
+				}
+
+				//
+				// selected cards
+				//
+
+				&.selected {
+					.card {
+						color: white;
+						background-color: black;
+						border-color: black;
+						
+						.row:first-child {
+							.name {
+								@include binary-text.unoutline;
+
+								//
+								// editable names
+								//
+
+								&[contenteditable="true"] {
+									color: black;
+									background-color: white;
+									outline-color: white;
+								}
+							}
+						}
+
+						label {
+							@include binary-text.unoutline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

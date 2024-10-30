@@ -1,0 +1,41 @@
+[descriptive data]
+title	US 2014/0204265 Example 4 (Sony E 20mm F2.8)
+[constants]
+[variable distances]
+Focal Length	20.42	undefined
+Angle of View	71.96	undefined
+F-Number	2.89	2.86
+Image Height	28.40	28.40
+Total Length	undefined	undefined
+Magnification	0	-0.122
+d0	Infinity	162.38
+d12	1.20	2.41
+Bf	17.59	16.38
+[lens data]
+1	100.00	0.70	1.567	10.64	42.84
+2	12.91	0.08	1.534	9.38	41.71
+3	11.31	0.90		9.24
+4	12.47	1.62	1.804	8.62	46.50
+5	249.73	1.44		8.62	
+6	AS	4.05		7.015
+7	-6.02	0.75	1.689	8.76	31.16
+8	-15.92	0.30		11.08	
+9	-29.58	3.50	1.729	12.12	54.67
+10	-10.66	0.20		14.72	
+11	22.10	3.75	1.821	18.74	42.71
+12	-22.80	d12		18.74	
+13	-50.87	0.85	1.847	19.00	23.78
+14	35.79	Bf		17.98	
+[aspherical data]
+3	11.31	0	-3.8544E-05	-9.2082E-07	8.5792E-09	-4.6597E-11
+7	-6.02	-0.6857	-5.3036E-04	2.5638E-05	9.0164E-08	-2.5389E-08
+8	-15.92	0	-6.8401E-04	4.1185E-05	-8.6459E-07	6.1843E-09
+11	22.10	-0.9098	-2.1495E-04	1.8334E-06	2.0282E-09	-6.7158E-11
+12	-22.80	0	3.4624E-05	-1.7483E-06	3.5493E-08	-1.8422E-10
+[figure]
+source	Data/US20140204265_Figure10P.png
+originX	23.51
+originY	151.99
+ppmm	4.506
+[notes]
+Bill: d0 measured. Construction figure shows L6 at closest focus.

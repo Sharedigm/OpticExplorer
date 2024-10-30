@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                            _colorful-apps.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$spinner-color: var(--primary-color);
+$sidebar-color: colors.lighten(var(--primary-color), 50%);
+$transparent-sidebar-color: colors.fade(colors.lighten(var(--primary-color), 10%), 50%);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colorful {
+	.app {
+
+		//
+		// loading spinners
+		//
+
+		.spinner {
+			border-top-color: $spinner-color;
+		}
+	}
+
+	//
+	// app sidebar panels
+	//
+
+	&:not(.dark) {
+
+		//
+		// opaque sidebars
+		//
+
+		&.opaque.sidebar-panels .modal,
+		&.opaque #desktop.sidebar-panels.auto-sidebars,
+		#desktop.sidebar-panels.opaque-sidebars,
+		&.sidebar-panels.opaque #desktop.auto-sidebar-panels.auto-sidebars,
+		&.sidebar-panels #desktop.auto-sidebar-panels.opaque-sidebars {
+			.app {
+				.body, .body-region {
+					.contents {
+						> .sidebar {
+							background-color: $sidebar-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// transparent sidebars
+		//
+
+		&.transparent.sidebar-panels .modal,
+		/* &.transparent #desktop.sidebar-panels.auto-sidebars,
+		#desktop.sidebar-panels.transparent-sidebars,
+		&.sidebar-panels.transparent #desktop.auto-sidebar-panels.auto-sidebars,
+		&.sidebar-panels #desktop.auto-sidebar-panels.transparent-sidebars */ {
+			.app {
+				.body, .body-region {
+					.contents {
+						> .sidebar {
+							background-color: $transparent-sidebar-color;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// translucent sidebars
+		//
+
+		&.translucent.sidebar-panels .modal,
+		/* &.translucent #desktop.sidebar-panels.auto-sidebars,
+		#desktop.sidebar-panels.translucent-sidebars,
+		&.sidebar-panels.translucent #desktop.auto-sidebar-panels.auto-sidebars,
+		&.sidebar-panels #desktop.auto-sidebar-panels.translucent-sidebars */ {
+			.app {
+				.body, .body-region {
+					.contents {
+						> .sidebar {
+							background-color: $transparent-sidebar-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

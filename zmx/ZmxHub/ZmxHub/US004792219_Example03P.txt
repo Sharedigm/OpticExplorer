@@ -1,0 +1,42 @@
+[descriptive data]
+title	US 4,792,219 Example 3 (Olympus Zuiko Auto-Macro 90mm F2)
+[constants]
+Scaled	90	100
+[variable distances]
+Focal Length	90	undefined	undefined
+Angle of View	27	undefined	undefined
+F-Number	2.06	undefined	undefined
+Image Height	43.28	43.28	43.28
+Total Length	undefined	undefined	undefined
+Magnification	0	-0.1	-0.5
+d0	Infinity	961.42	239.79
+d13	0.7999	4.7547	18.2493
+Bf(p)	undefined	undefined	undefined
+Bf	39.86	44.95	68.95
+[lens data]
+1	52.9054	7.0196	1.69680	46.60	55.52
+2	937.7599	0.1050		46.60	
+3	38.4558	12.6093	1.71300	42.12	53.84
+4	68.5212	1.0899		33.58	
+5	140.9332	3.4398	1.74000	37.20	28.29
+6	24.4227	10.6994		28.88	
+7	AS	4.2998		25.328
+8	-38.1969	1.9099	1.56732	27.82	42.83
+9	-479.3534	1.8199		30.16	
+10	-101.1484	4.4997	1.74400	28.88	44.73
+11	-57.0228	0.1500		28.88	
+12	77.0067	4.3498	1.77250	32.08	49.66
+13	-137.7023	d13		32.08	
+14	-978.3947	1.8999	1.51742	28.68	52.41
+15	48.0003	3.2899		28.68	
+16	94.8587	2.9998	1.69895	29.74	30.12
+17	63.5725	3.0199		29.74	
+18	63.4745	7.6496	1.65160	32.94	58.52
+19	-106.2051	Bf		32.94	
+[figure]	
+source	Data/US004792219_Figure01P.png
+originX	47.51
+originY	97.54
+ppmm	1.855
+[notes]
+Bill: d0 measured.

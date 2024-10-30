@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 2010-164839 Example 4 (Ricoh 6.0mm F1.9 VC (GR))
+[constants]
+[variable distances]
+Focal Length	6.00
+Angle of View	undefined
+F-Number	1.99
+Image Height	9.60
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+1	25.543	1.20	1.497	15.4	81.54	S-FPL5 I(OHARA)
+2	7.500	2.24		12.0		
+3	15.058	1.20	1.51633	11.6	64.06	t-BSL7 (OHARA)
+4	4.970	9.57		9.6		
+5	17.656	1.79	1.804	7.4	46.57	S-LAH65 (OHARA)
+6	-55.283	6.35		7.4		
+7	AS	3.50		6.8		
+8	-257.216	2.19	1.497	7.6	81.54	S-FPL5 I(OHARA)
+9	-7.186	1.00	1.69895	7.8	30.13	S-TIM35(OHARA)
+10	-24.047	0.20		8.2		
+11	13.244	1.00	1.65412	9.2	39.68	S-NBH5{QHARA)
+12	8.692	2.96	1.497	9.2	81.54	S-FPL5 1(OHARA)
+13	-22.963	2.56		9.6		
+14	21.924	1.50	1.51633	9.8	64.06	L-BSL?7(OHARA)
+15	-134.256	7.08		9.8		
+16	CG	1.50	1.5	9.8	64.00	
+17	CG	0.60		9.8		
+[aspherical data]
+4	4.970	-0.4	-4.16841E-04	-9.42561E-06	-1.58154E-07	-3.26524E-09	-3.61500E-11	2.19580E-14	8.93836E-15	-1.95337E-15
+14	21.924	0	-2.85929E-04	1.93947E-06	-1.43395E-07	2.11542E-09				
+[figure]
+source	Data/JP2010-164839_Figure04P.png
+originX	18.77
+originY	122.87
+ppmm	10.568
+[notes]
+Bill: Patent diameters including AS.

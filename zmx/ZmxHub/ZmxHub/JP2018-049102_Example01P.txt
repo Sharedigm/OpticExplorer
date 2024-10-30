@@ -1,0 +1,46 @@
+[descriptive data]
+title	JP 2018-049102 Example 1 (Canon EF135mm f2L USM)
+[constants]
+[variable distances]
+Focal Length	133.50	undefined		
+Angle of View	18.42	undefined		
+F-Number	2.06	undefined		
+Image Height	43.28	43.28		
+Total Length	155.12	155.12		
+Magnification	0	-0.19		
+S	Infinity	900
+d0	Infinity	744.88		
+d11	2.28	17.81		
+d14	22.52	6.99		
+Bf	54.12	54.12		
+P	74.83	undefined
+P'	-91.49	undefined
+H	85.94	undefined
+H'	-79.38	undefined
+[lens data]				
+1	106.149	9.0	1.48749	67.59	70.2
+2	-290.997	0.5		66.92
+3	51.244	9.5	1.49700	59.33	81.5
+4	231.499	3.0		57.97
+5	-630.036	3.5	1.83400	57.44	37.2
+6	93.25	2.5		53.74
+7	60.005	8.0	1.49700	52.21	81.5
+8	-624.746	0.5		51.4
+9	29.265	3.2	1.71736	42.32	29.5
+10	24.308	12.5		37.96
+11	AS	d11		35.51
+12	-2278.322	4.5	1.84666	33.9	23.9
+13	-55.787	2.0	1.71999	33.15	50.2
+14	41.821	d14		29.87
+15	-30.566	2.5	1.74077	25.94	27.8
+16	196.247	8.5	1.77250	28.92	49.6
+17	-39.608	0.5		32.22
+18	106.631	6.0	1.83400	35.49	37.2
+19	-195.173	Bf		36.07
+[figure]	
+source	Data/JP2018-049102_Figure02aP.png
+originX	28.53
+originY	102.56
+ppmm	1.842
+[notes]
+Bill: Patent provided diameters. 900mm - 155.12mm = 744.88mm

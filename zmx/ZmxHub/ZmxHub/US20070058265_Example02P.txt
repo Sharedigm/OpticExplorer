@@ -1,0 +1,48 @@
+[descriptive data]
+title	US 2007/0058265 Example 2 (Canon EF-S18-55mm f3.5-5.6)
+[constants]
+[variable distances]
+Focal Length	18.69	32.08	53.27
+Angle of View	72.2	undefined	28.7
+F-Number	3.63	undefined	5.86
+Image Height	27.2	27.2	27.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d8	33.62	13.53	3.23
+d14	3.30	6.19	8.96
+d17	7.34	4.45	1.68
+Bf(p)	undefined	undefined	undefined
+Bf	35.27	46.88	66.28
+Aperture Diameter(m)	11.798	undefined	12.988
+Aperture Diameter	11.798	12.393	12.988
+[lens data]
+1	80.198	3.40	1.516330	40.52	64.1
+2	1485.520	0.15		40.52	
+3	74.916	1.60	1.622992	34.98	58.2
+4	14.601	7.99		25.85
+5	-141.698	1.20	1.622992	25.08	58.2
+6	25.795	0.15		25.08	
+7	21.179	3.40	1.805181	24.70	25.4
+8	46.880	d8		24.70	
+9	-302.692	1.90	1.487490	15.24	70.2
+10	-34.091	4.20		15.24
+11	16.673	0.80	1.846660	15.40	23.9
+12	12.277	4.50	1.487490	15.40	70.2
+13	-73.294	1.00		15.40
+14	AS	d14		11.798
+15	-29.161	0.75	1.639799	13.79	34.5
+16	12.672	2.60	1.784723	13.79	25.7
+17	43.512	d17		13.79
+18	-96.235	1.50	1.583060	18.92	30.2
+19	-437.245	0.03		16.57
+20	417.340	3.80	1.487490	18.92	70.2
+21	-18.474	Bf		20.69
+[aspherical data]
+19	-437.245	0	3.76648E-05	3.00374E-08	7.60709E-10	-8.99719E-12
+[figure]
+source	Data/US20070058265_Figure04P.png
+originX	32.51
+originY	107.57
+ppmm	2.630
+[notes]
+Bill: Likely but hard to prove with complex zoom motion. Also Aperture Stop is located differently.

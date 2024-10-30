@@ -1,0 +1,49 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-annotations.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colorful {
+		.viewport, .medium.viewport {
+
+			//
+			// line annotations
+			//
+
+			.line, .arc, .arrow {
+				stroke: colors.$medium-grey;
+			}
+
+			.background {
+				stroke: white;
+			}
+			
+			//
+			// selection styles
+			//
+
+			path.surface {
+				&:hover {
+					stroke: colors.$medium-blue;
+				}
+				&.selected {
+					stroke: colors.$medium-blue;
+				}
+			}
+		}
+	}
+}

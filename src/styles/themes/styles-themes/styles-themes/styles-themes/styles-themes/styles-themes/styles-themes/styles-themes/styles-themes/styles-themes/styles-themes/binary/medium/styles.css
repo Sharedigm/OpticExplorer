@@ -1,0 +1,2635 @@
+/******************************************************************************\
+|                                                                              |
+|                            _binary-branding.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _binary-patterns.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _binary-patterns.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _binary-colors.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _binary-colors2.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _binary-text.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _performance.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _images.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+.pixelated {
+  image-rendering: pixelated !important;
+}
+
+.smooth img {
+  image-rendering: auto !important;
+}
+
+.thumbnail {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.thumbnail i {
+  vertical-align: top;
+}
+
+.round .thumbnail {
+  border-radius: 10px;
+}
+
+.rounded .thumbnail {
+  border-radius: 5px;
+}
+
+.square .thumbnail {
+  border-radius: 0;
+}
+
+.round.logo {
+  border-radius: 50%;
+}
+.round.logo img {
+  border-radius: 50%;
+}
+
+.rounded.logo {
+  border-radius: 25%;
+}
+.rounded.logo img {
+  border-radius: 25%;
+}
+
+.icon .thumbnail.photo, .tile .thumbnail.photo {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
+}
+.icon svg, .icon .thumbnail:not(.photo), .tile svg, .tile .thumbnail:not(.photo) {
+  box-shadow: none;
+  text-shadow: none;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
+}
+
+.png .icon .thumbnail, .png .tile .thumbnail {
+  box-shadow: none;
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
+}
+
+.small-icons .items .item .icon > svg {
+  transform: scale(0.9);
+}
+
+.large-icons .items .item .icon > svg {
+  transform: scale(1.1);
+}
+
+.tilted.left .icon > svg, .tilted.left .icon > img, .tilted.left .icon > .thumbnail, .tilted.left .owner > svg, .tilted.left .owner > img, .tilted.left .owner > .thumbnail, .tilted .left .icon > svg, .tilted .left .icon > img, .tilted .left .icon > .thumbnail, .tilted .left .owner > svg, .tilted .left .owner > img, .tilted .left .owner > .thumbnail {
+  transform: skewX(7.5deg);
+}
+.tilted.left.small-icons .icon > svg, .tilted.left.small-icons .icon > img, .tilted.left.small-icons .icon > .thumbnail, .tilted.left.small-icons .owner > svg, .tilted.left.small-icons .owner > img, .tilted.left.small-icons .owner > .thumbnail, .tilted .left.small-icons .icon > svg, .tilted .left.small-icons .icon > img, .tilted .left.small-icons .icon > .thumbnail, .tilted .left.small-icons .owner > svg, .tilted .left.small-icons .owner > img, .tilted .left.small-icons .owner > .thumbnail {
+  transform: skewX(7.5deg) scale(0.9);
+}
+.tilted.left.large-icons .icon > svg, .tilted.left.large-icons .icon > img, .tilted.left.large-icons .icon > .thumbnail, .tilted.left.large-icons .owner > svg, .tilted.left.large-icons .owner > img, .tilted.left.large-icons .owner > .thumbnail, .tilted .left.large-icons .icon > svg, .tilted .left.large-icons .icon > img, .tilted .left.large-icons .icon > .thumbnail, .tilted .left.large-icons .owner > svg, .tilted .left.large-icons .owner > img, .tilted .left.large-icons .owner > .thumbnail {
+  transform: skewX(7.5deg) scale(1.1);
+}
+.tilted.right .icon > svg, .tilted.right .icon > img, .tilted.right .icon > .thumbnail, .tilted.right .owner > svg, .tilted.right .owner > img, .tilted.right .owner > .thumbnail, .tilted .right .icon > svg, .tilted .right .icon > img, .tilted .right .icon > .thumbnail, .tilted .right .owner > svg, .tilted .right .owner > img, .tilted .right .owner > .thumbnail {
+  transform: skewX(-7.5deg);
+}
+.tilted.right.small-icons .icon > svg, .tilted.right.small-icons .icon > img, .tilted.right.small-icons .icon > .thumbnail, .tilted.right.small-icons .owner > svg, .tilted.right.small-icons .owner > img, .tilted.right.small-icons .owner > .thumbnail, .tilted .right.small-icons .icon > svg, .tilted .right.small-icons .icon > img, .tilted .right.small-icons .icon > .thumbnail, .tilted .right.small-icons .owner > svg, .tilted .right.small-icons .owner > img, .tilted .right.small-icons .owner > .thumbnail {
+  transform: skewX(-7.5deg) scale(0.9);
+}
+.tilted.right.large-icons .icon > svg, .tilted.right.large-icons .icon > img, .tilted.right.large-icons .icon > .thumbnail, .tilted.right.large-icons .owner > svg, .tilted.right.large-icons .owner > img, .tilted.right.large-icons .owner > .thumbnail, .tilted .right.large-icons .icon > svg, .tilted .right.large-icons .icon > img, .tilted .right.large-icons .icon > .thumbnail, .tilted .right.large-icons .owner > svg, .tilted .right.large-icons .owner > img, .tilted .right.large-icons .owner > .thumbnail {
+  transform: skewX(-7.5deg) scale(1.1);
+}
+.tilted.up .icon > svg, .tilted.up .icon > img, .tilted.up .icon > .thumbnail, .tilted.up .owner > svg, .tilted.up .owner > img, .tilted.up .owner > .thumbnail, .tilted .up .icon > svg, .tilted .up .icon > img, .tilted .up .icon > .thumbnail, .tilted .up .owner > svg, .tilted .up .owner > img, .tilted .up .owner > .thumbnail {
+  transform: skewY(-7.5deg);
+}
+.tilted.up.small-icons .icon > svg, .tilted.up.small-icons .icon > img, .tilted.up.small-icons .icon > .thumbnail, .tilted.up.small-icons .owner > svg, .tilted.up.small-icons .owner > img, .tilted.up.small-icons .owner > .thumbnail, .tilted .up.small-icons .icon > svg, .tilted .up.small-icons .icon > img, .tilted .up.small-icons .icon > .thumbnail, .tilted .up.small-icons .owner > svg, .tilted .up.small-icons .owner > img, .tilted .up.small-icons .owner > .thumbnail {
+  transform: skewY(-7.5deg) scale(0.9);
+}
+.tilted.up.large-icons .icon > svg, .tilted.up.large-icons .icon > img, .tilted.up.large-icons .icon > .thumbnail, .tilted.up.large-icons .owner > svg, .tilted.up.large-icons .owner > img, .tilted.up.large-icons .owner > .thumbnail, .tilted .up.large-icons .icon > svg, .tilted .up.large-icons .icon > img, .tilted .up.large-icons .icon > .thumbnail, .tilted .up.large-icons .owner > svg, .tilted .up.large-icons .owner > img, .tilted .up.large-icons .owner > .thumbnail {
+  transform: skewY(-7.5deg) scale(1.1);
+}
+.tilted.down .icon > svg, .tilted.down .icon > img, .tilted.down .icon > .thumbnail, .tilted.down .owner > svg, .tilted.down .owner > img, .tilted.down .owner > .thumbnail, .tilted .down .icon > svg, .tilted .down .icon > img, .tilted .down .icon > .thumbnail, .tilted .down .owner > svg, .tilted .down .owner > img, .tilted .down .owner > .thumbnail {
+  transform: skewY(7.5deg);
+}
+.tilted.down.small-icons .icon > svg, .tilted.down.small-icons .icon > img, .tilted.down.small-icons .icon > .thumbnail, .tilted.down.small-icons .owner > svg, .tilted.down.small-icons .owner > img, .tilted.down.small-icons .owner > .thumbnail, .tilted .down.small-icons .icon > svg, .tilted .down.small-icons .icon > img, .tilted .down.small-icons .icon > .thumbnail, .tilted .down.small-icons .owner > svg, .tilted .down.small-icons .owner > img, .tilted .down.small-icons .owner > .thumbnail {
+  transform: skewY(7.5deg) scale(0.9);
+}
+.tilted.down.large-icons .icon > svg, .tilted.down.large-icons .icon > img, .tilted.down.large-icons .icon > .thumbnail, .tilted.down.large-icons .owner > svg, .tilted.down.large-icons .owner > img, .tilted.down.large-icons .owner > .thumbnail, .tilted .down.large-icons .icon > svg, .tilted .down.large-icons .icon > img, .tilted .down.large-icons .icon > .thumbnail, .tilted .down.large-icons .owner > svg, .tilted .down.large-icons .owner > img, .tilted .down.large-icons .owner > .thumbnail {
+  transform: skewY(7.5deg) scale(1.1);
+}
+.tilted .tile > .icon > .thumbnail {
+  transform: none !important;
+}
+
+.thumbnail.photo {
+  border-radius: 0;
+  background-size: cover;
+}
+.thumbnail.photo:after {
+  border-radius: 0;
+}
+
+.polaroid.photo {
+  border: 8px solid white;
+  border-bottom: 35px solid white;
+  box-sizing: content-box;
+}
+
+.overflow.photo {
+  transform: scale(1.1);
+}
+
+.tilted.photo {
+  transform: rotate(-7.5deg);
+}
+
+.tilted.overflow.photo {
+  transform: rotate(-7.5deg);
+}
+
+.photo.shadowed, .image.shadowed {
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+}
+.photo.shadowed.small, .image.shadowed.small {
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+outlined.photo {
+  border-width: 3px;
+  border-style: 3px;
+}
+
+.glossy.photo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(15deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.25) 10%, rgba(255, 255, 255, 0) 25%), linear-gradient(-30deg, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.15) 90%, rgba(0, 0, 0, 0.5) 100%);
+  mix-blend-mode: normal;
+}
+
+body[browser=firefox] img.pixelated {
+  image-rendering: -moz-crisp-edges;
+}
+
+[browser=safari] .icon > svg, [browser=safari] .icon .thumbnail, [browser=safari] .tile > svg, [browser=safari] .tile .thumbnail {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+}
+[browser=safari].tilted.left .icon > svg, [browser=safari].tilted.left .icon .thumbnail, [browser=safari].tilted.left .tile > svg, [browser=safari].tilted.left .tile .thumbnail, [browser=safari].tilted .left .icon > svg, [browser=safari].tilted .left .icon .thumbnail, [browser=safari].tilted .left .tile > svg, [browser=safari].tilted .left .tile .thumbnail {
+  transform: skewX(7.5deg) translateZ(0);
+}
+[browser=safari].tilted.left.small-icons .icon > svg, [browser=safari].tilted.left.small-icons .icon .thumbnail, [browser=safari].tilted.left.small-icons .tile > svg, [browser=safari].tilted.left.small-icons .tile .thumbnail, [browser=safari].tilted .left.small-icons .icon > svg, [browser=safari].tilted .left.small-icons .icon .thumbnail, [browser=safari].tilted .left.small-icons .tile > svg, [browser=safari].tilted .left.small-icons .tile .thumbnail {
+  transform: skewX(7.5deg) scale(0.9) translateZ(0);
+}
+[browser=safari].tilted.left.large-icons .icon > svg, [browser=safari].tilted.left.large-icons .icon .thumbnail, [browser=safari].tilted.left.large-icons .tile > svg, [browser=safari].tilted.left.large-icons .tile .thumbnail, [browser=safari].tilted .left.large-icons .icon > svg, [browser=safari].tilted .left.large-icons .icon .thumbnail, [browser=safari].tilted .left.large-icons .tile > svg, [browser=safari].tilted .left.large-icons .tile .thumbnail {
+  transform: skewX(7.5deg) scale(1.1) translateZ(0);
+}
+[browser=safari].tilted.right .icon > svg, [browser=safari].tilted.right .icon .thumbnail, [browser=safari].tilted.right .tile > svg, [browser=safari].tilted.right .tile .thumbnail, [browser=safari].tilted .right .icon > svg, [browser=safari].tilted .right .icon .thumbnail, [browser=safari].tilted .right .tile > svg, [browser=safari].tilted .right .tile .thumbnail {
+  transform: skewX(-7.5deg) translateZ(0);
+}
+[browser=safari].tilted.right.small-icons .icon > svg, [browser=safari].tilted.right.small-icons .icon .thumbnail, [browser=safari].tilted.right.small-icons .tile > svg, [browser=safari].tilted.right.small-icons .tile .thumbnail, [browser=safari].tilted .right.small-icons .icon > svg, [browser=safari].tilted .right.small-icons .icon .thumbnail, [browser=safari].tilted .right.small-icons .tile > svg, [browser=safari].tilted .right.small-icons .tile .thumbnail {
+  transform: skewX(-7.5deg) scale(0.9) translateZ(0);
+}
+[browser=safari].tilted.right.large-icons .icon > svg, [browser=safari].tilted.right.large-icons .icon .thumbnail, [browser=safari].tilted.right.large-icons .tile > svg, [browser=safari].tilted.right.large-icons .tile .thumbnail, [browser=safari].tilted .right.large-icons .icon > svg, [browser=safari].tilted .right.large-icons .icon .thumbnail, [browser=safari].tilted .right.large-icons .tile > svg, [browser=safari].tilted .right.large-icons .tile .thumbnail {
+  transform: skewX(-7.5deg) scale(1.1) translateZ(0);
+}
+[browser=safari].tilted.up .icon > svg, [browser=safari].tilted.up .icon .thumbnail, [browser=safari].tilted.up .tile > svg, [browser=safari].tilted.up .tile .thumbnail, [browser=safari].tilted .up .icon > svg, [browser=safari].tilted .up .icon .thumbnail, [browser=safari].tilted .up .tile > svg, [browser=safari].tilted .up .tile .thumbnail {
+  transform: skewY(-7.5deg) translateZ(0);
+}
+[browser=safari].tilted.up.small-icons .icon > svg, [browser=safari].tilted.up.small-icons .icon .thumbnail, [browser=safari].tilted.up.small-icons .tile > svg, [browser=safari].tilted.up.small-icons .tile .thumbnail, [browser=safari].tilted .up.small-icons .icon > svg, [browser=safari].tilted .up.small-icons .icon .thumbnail, [browser=safari].tilted .up.small-icons .tile > svg, [browser=safari].tilted .up.small-icons .tile .thumbnail {
+  transform: skewY(-7.5deg) scale(0.9) translateZ(0);
+}
+[browser=safari].tilted.up.large-icons .icon > svg, [browser=safari].tilted.up.large-icons .icon .thumbnail, [browser=safari].tilted.up.large-icons .tile > svg, [browser=safari].tilted.up.large-icons .tile .thumbnail, [browser=safari].tilted .up.large-icons .icon > svg, [browser=safari].tilted .up.large-icons .icon .thumbnail, [browser=safari].tilted .up.large-icons .tile > svg, [browser=safari].tilted .up.large-icons .tile .thumbnail {
+  transform: skewY(-7.5deg) scale(1.1) translateZ(0);
+}
+[browser=safari].tilted.down .icon > svg, [browser=safari].tilted.down .icon .thumbnail, [browser=safari].tilted.down .tile > svg, [browser=safari].tilted.down .tile .thumbnail, [browser=safari].tilted .down .icon > svg, [browser=safari].tilted .down .icon .thumbnail, [browser=safari].tilted .down .tile > svg, [browser=safari].tilted .down .tile .thumbnail {
+  transform: skewY(7.5deg) translateZ(0);
+}
+[browser=safari].tilted.down.small-icons .icon > svg, [browser=safari].tilted.down.small-icons .icon .thumbnail, [browser=safari].tilted.down.small-icons .tile > svg, [browser=safari].tilted.down.small-icons .tile .thumbnail, [browser=safari].tilted .down.small-icons .icon > svg, [browser=safari].tilted .down.small-icons .icon .thumbnail, [browser=safari].tilted .down.small-icons .tile > svg, [browser=safari].tilted .down.small-icons .tile .thumbnail {
+  transform: skewY(7.5deg) scale(0.9) translateZ(0);
+}
+[browser=safari].tilted.down.large-icons .icon > svg, [browser=safari].tilted.down.large-icons .icon .thumbnail, [browser=safari].tilted.down.large-icons .tile > svg, [browser=safari].tilted.down.large-icons .tile .thumbnail, [browser=safari].tilted .down.large-icons .icon > svg, [browser=safari].tilted .down.large-icons .icon .thumbnail, [browser=safari].tilted .down.large-icons .tile > svg, [browser=safari].tilted .down.large-icons .tile .thumbnail {
+  transform: skewY(7.5deg) scale(1.1) translateZ(0);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-images.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .thumbnail.photo {
+  image-rendering: auto;
+  -webkit-filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.25));
+  overflow: visible;
+}
+body.binary .profile.photo .thumbnail.missing i {
+  color: white;
+}
+body.binary[device=desktop][browser=safari] .fancybox-image {
+  -webkit-transform: none !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-layout.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary {
+  color: black;
+}
+body.binary .well {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  border-color: black;
+}
+body.binary .well:not(.gallery) {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .toolbar {
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .page {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .page a {
+  text-decoration: underline;
+}
+body.binary .page .contents, body.binary .page .footer {
+  image-rendering: auto;
+}
+body.binary .page .attention {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .page .attention i {
+  color: black;
+  background: white;
+}
+body.binary .page .contents {
+  background-color: white;
+  image-rendering: auto;
+}
+body.binary .page .contents .breadcrumb {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .page .contents .breadcrumb li > a {
+  text-decoration: underline;
+}
+body.binary .page .contents.colored {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  color: black !important;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .page .contents.colored h2, body.binary .page .contents.colored a, body.binary .page .contents.colored i {
+  color: black !important;
+}
+body.binary .page .contents .tip h3 .icon i {
+  color: black;
+}
+body.binary .page .footer {
+  color: white;
+  background-color: black;
+}
+body.binary .page .footer .info, body.binary .page .footer .branding {
+  color: white !important;
+  background-color: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-panels.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .panel {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .panel .heading .badge {
+  text-shadow: none;
+}
+body.binary .panel .content {
+  background: white;
+}
+body.binary .panel .panel {
+  background: white;
+}
+body.binary .panel.empty {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .panel.selected {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWNkYGD4D8RwwARnQRksSAKMIDaGCgBBbgEKSB2J0wAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .tab-content .panels > li > form {
+  background: white;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-splitters.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .split-view .gutter .handle {
+  background-image: url("../../../../images/splitters/black-grip.png");
+}
+body.binary .split-view .gutter.gutter-horizontal .handle {
+  background-image: url("../../../../images/splitters/horizontal-grip.png");
+}
+body.binary .split-view .gutter.gutter-vertical .handle {
+  background-image: url("../../../../images/splitters/vertical-grip.png");
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-tables.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary table thead th {
+  color: white;
+  background: black;
+  border-color: black;
+  text-shadow: none;
+}
+body.binary table thead th label {
+  text-shadow: none;
+}
+body.binary table tbody {
+  background: white;
+}
+body.binary table tbody td.selected:not(.item)::after {
+  border-color: black;
+}
+body.binary table tbody td.highlighted {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary table.tablesorter thead tr .tablesorter-header:not(.sorter-false) {
+  background-image: url(../../../../vendor/jquery/tablesorter/images/bg-light.gif);
+}
+body.binary table.tablesorter thead tr .tablesorter-headerAsc:not(.sorter-false) {
+  background-image: url(../../../../vendor/jquery/tablesorter/images/asc-light.gif);
+}
+body.binary table.tablesorter thead tr .tablesorter-headerDesc:not(.sorter-false) {
+  background-image: url(../../../../vendor/jquery/tablesorter/images/desc-light.gif);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-toolbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .toolbar .handle {
+  border-color: transparent;
+  image-rendering: pixelated;
+}
+body.binary .toolbar.horizontal .handle {
+  background-image: url("../../../../images/splitters/horizontal-grip.png");
+}
+body.binary .toolbar.vertical .handle {
+  background-image: url("../../../../images/splitters/vertical-grip.png");
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-typography.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary h1, body.binary h2, body.binary h3 {
+  color: black !important;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary h1 i, body.binary h2 i, body.binary h3 i {
+  color: black !important;
+}
+body.binary hr {
+  background: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-welcome.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .welcome.page .contents .masthead, body.binary .welcome.page .contents .splash {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  background-color: transparent;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _medium-badges.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+.badge {
+  background-color: black;
+  border-color: white;
+  text-shadow: none;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _medium-buttons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .button:active, body.binary .button.selected {
+  color: white;
+  background: black;
+  border-color: black;
+  text-shadow: none;
+}
+body.binary .button:active i, body.binary .button.selected i {
+  color: white;
+}
+body.binary .button:active svg, body.binary .button.selected svg {
+  fill: white;
+}
+body.binary .btn {
+  color: black;
+  background: white;
+  border-color: black;
+}
+body.binary .btn:active {
+  color: white;
+  background: black;
+  border-color: black;
+}
+body.binary .btn.btn-primary, body.binary .btn.btn-primary:focus {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .btn.btn-primary:disabled, body.binary .btn.btn-primary:focus:disabled {
+  border-style: dashed;
+  border-color: white;
+}
+body.binary .btn:disabled, body.binary .btn:disabled:hover {
+  opacity: 1;
+  color: black;
+  background-color: white;
+  border-color: black;
+  border-style: dashed;
+}
+body.binary #main .btn.btn-primary, body.binary .modals .btn.btn-primary {
+  position: relative;
+  color: black;
+  background-color: white;
+  border-width: 2px;
+  border-style: solid !important;
+  border-color: unset;
+}
+body.binary #main .btn.btn-primary::after, body.binary .modals .btn.btn-primary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin: 1px;
+  pointer-events: none;
+}
+body.binary #main .btn.btn-primary:active, body.binary .modals .btn.btn-primary:active {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary #main .btn.btn-primary:disabled::after, body.binary .modals .btn.btn-primary:disabled::after {
+  border-style: dashed;
+}
+body.binary.rounded-buttons .btn.btn-primary, body.binary.rounded.auto-corner-buttons .btn.btn-primary {
+  border-radius: 7px;
+}
+body.binary.rounded-buttons .btn.btn-primary::after, body.binary.rounded.auto-corner-buttons .btn.btn-primary::after {
+  border-radius: 5px;
+}
+body.binary.round-buttons .btn.btn-primary, body.binary.round.auto-corner-buttons .btn.btn-primary {
+  border-radius: 17px;
+}
+body.binary.round-buttons .btn.btn-primary::after, body.binary.round.auto-corner-buttons .btn.btn-primary::after {
+  border-radius: 15px;
+}
+body.binary[device=desktop] .btn:not(:active):not(:disabled):hover {
+  color: black;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary[device=desktop] .btn.btn-primary:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary[device=desktop] .btn:disabled:hover {
+  opacity: 1;
+  color: black;
+  background-color: white;
+  border-color: black;
+  border-style: dashed;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-dock-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary #dock-bar .shelf {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary #dock-bar .dock .apps .item .icon img {
+  display: none;
+}
+body.binary #dock-bar .dock .apps .item .icon, body.binary #dock-bar .dock .tasks .item .icon {
+  background: white;
+}
+body.binary #dock-bar .dock .apps .item .icon i, body.binary #dock-bar .dock .tasks .item .icon i {
+  color: unset;
+}
+body.binary #dock-bar .dock .apps .item.selected .icon, body.binary #dock-bar .dock .tasks .item.selected .icon {
+  background: black;
+}
+body.binary #dock-bar .dock .apps .item.selected .icon i, body.binary #dock-bar .dock .tasks .item.selected .icon i {
+  color: white;
+}
+body.binary #dock-bar .dock .apps .indicator, body.binary #dock-bar .dock .tasks .indicator {
+  background-color: black;
+}
+body.binary #dock-bar .dock .tasks svg {
+  filter: none;
+}
+body.binary #dock-bar .dock .tasks svg .window-content {
+  border-color: black;
+}
+body.binary #window-icon .window-icon-body {
+  fill: white !important;
+  stroke: black;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+body.binary #window-icon .window-icon-header {
+  fill: black !important;
+}
+body.binary #window-icon .window-icon-button {
+  fill: white !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-menus.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .dropdown-menu, body.binary .menu-content {
+  background-color: white;
+}
+body.binary .menu li > a.selected, body.binary .menu li > a:active, body.binary .dropdown-menu li > a.selected, body.binary .dropdown-menu li > a:active {
+  color: white;
+  background-color: black;
+  text-shadow: none;
+}
+body.binary .menu li > a:hover, body.binary .dropdown-menu li > a:hover {
+  color: white;
+  background-color: black;
+  text-shadow: none;
+}
+body.binary .menu li.divider, body.binary .dropdown-menu li.divider {
+  border-bottom-style: dotted;
+}
+body.binary .menu li.divider:hover, body.binary .dropdown-menu li.divider:hover {
+  border-bottom-style: dotted;
+}
+body.binary .menu > li.disabled, body.binary .dropdown-menu > li.disabled {
+  color: unset;
+  position: relative;
+}
+body.binary .menu > li.disabled > a, body.binary .dropdown-menu > li.disabled > a {
+  color: unset;
+}
+body.binary .menu > li.disabled > a > i, body.binary .dropdown-menu > li.disabled > a > i {
+  color: unset;
+}
+body.binary .menu > li.disabled::after, body.binary .dropdown-menu > li.disabled::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAqADAAQAAAABAAAAAgAAAADtGLyqAAAAEElEQVQIHWP4DwQMMADiAABHygf5AsusngAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+body.binary .menu ul.panels li:not(:last-child), body.binary .dropdown-menu ul.panels li:not(:last-child) {
+  border-bottom-style: dotted;
+}
+body.binary .dropdown-menu > li.open > a, body.binary .dropdown-menu > li.open a:focus, body.binary .dropdown-menu > li.open:active {
+  color: white;
+  background-color: black;
+  border-color: black;
+  text-shadow: none;
+}
+body.binary .dropdown-menu > li.open > a:hover, body.binary .dropdown-menu > li.open a:focus:hover, body.binary .dropdown-menu > li.open:active:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+  text-shadow: none;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-menu-bars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .menu-bar > ul.nav-menus > li > a, body.binary .menu-bar > ul.nav-menus > li > a:focus {
+  color: black;
+  background-color: none;
+}
+body.binary .menu-bar > ul.nav-menus > li > a > i, body.binary .menu-bar > ul.nav-menus > li > a:focus > i {
+  color: black;
+}
+body.binary .menu-bar > ul.nav-menus > li > a:hover, body.binary .menu-bar > ul.nav-menus > li > a:focus:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .menu-bar > ul.nav-menus > li > a:hover > i, body.binary .menu-bar > ul.nav-menus > li > a:focus:hover > i {
+  color: white;
+}
+body.binary .menu-bar > ul.nav-menus > li > a:active, body.binary .menu-bar > ul.nav-menus > li > a:focus:active {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .menu-bar > ul.nav-menus > li > a:active > i, body.binary .menu-bar > ul.nav-menus > li > a:focus:active > i {
+  color: white;
+}
+body.binary .menu-bar > ul.nav-menus > li.open > a, body.binary .menu-bar > ul.nav-menus > li.open > a:focus {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .menu-bar > ul.nav-menus > li.open > a:hover, body.binary .menu-bar > ul.nav-menus > li.open > a:focus:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .menu-bar > ul.nav-menus > li.disabled a {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-nav-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .navbar {
+  background-color: black !important;
+  border-color: black !important;
+  box-shadow: none;
+}
+body.binary .navbar .navbar-brand {
+  color: white;
+}
+body.binary .navbar .navbar-nav > li > a {
+  color: white;
+}
+body.binary .navbar .navbar-nav > li > a label {
+  text-shadow: none;
+}
+body.binary .navbar .navbar-nav > li > a i {
+  color: white;
+}
+body.binary .navbar .navbar-nav > li.active {
+  background-color: white;
+}
+body.binary .navbar .navbar-nav > li.active > a, body.binary .navbar .navbar-nav > li.active > a:focus {
+  color: black;
+}
+body.binary .navbar .navbar-nav > li.active > a:hover, body.binary .navbar .navbar-nav > li.active > a:focus:hover {
+  color: black;
+  background-color: white;
+}
+body.binary .navbar .navbar-nav > li.active > a:hover i, body.binary .navbar .navbar-nav > li.active > a:focus:hover i {
+  color: black;
+}
+body.binary .navbar .navbar-nav > li.open {
+  background-color: white;
+}
+body.binary .navbar .navbar-nav > li.open > a, body.binary .navbar .navbar-nav > li.open > a:focus {
+  color: black;
+}
+body.binary .navbar .navbar-nav > li.open > a:hover, body.binary .navbar .navbar-nav > li.open > a:focus:hover {
+  color: black;
+}
+body.binary .navbar .navbar-nav > li.open > a:hover i, body.binary .navbar .navbar-nav > li.open > a:focus:hover i {
+  color: black;
+}
+body.binary .navbar .navbar-nav .indicator .bar .inner {
+  background-color: white;
+}
+body.binary .navbar .navbar-nav.apps {
+  border-color: white !important;
+}
+body.binary .navbar .navbar-nav.apps > li.current > a {
+  color: black !important;
+  background-color: white !important;
+}
+body.binary .navbar .navbar-nav.apps > li.current > a i {
+  color: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-page-dots.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .flickity-page-dots .dot {
+  background: black;
+  border-color: black;
+}
+body.binary .flickity-page-dots .dot.is-selected {
+  background: white;
+  border-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-progress-bars.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .progress {
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+}
+body.binary .progress .bar {
+  background-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-run-menus.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .footer-bar .run-menu .dropup .dropdown-toggle {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .footer-bar .run-menu .dropup .dropdown-toggle > i {
+  color: white;
+}
+body.binary .footer-bar .run-menu .dropup.open .dropdown-toggle {
+  color: black;
+  background-color: white;
+}
+body.binary .footer-bar .run-menu .dropup.open .dropdown-toggle > i {
+  color: black;
+}
+body.binary .footer-bar .run-menu .icon-grid {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  border-color: black;
+}
+body.binary .footer-bar .run-menu .dropdown-menu li > a .icon {
+  box-shadow: none;
+}
+body.binary .footer-bar .run-menu .dropdown-menu .divider {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-scrollbars.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary[device=desktop] ::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-color: transparent;
+}
+body.binary[device=desktop] ::-webkit-scrollbar-thumb:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary[device=desktop] ::-webkit-scrollbar-thumb:active {
+  background-color: black;
+}
+body.binary[device=desktop].thick-scrollbars ::-webkit-scrollbar-thumb {
+  border-width: 1px;
+  border-color: black;
+}
+body.binary[device=desktop].thick-scrollbars .sidebar > ::-webkit-scrollbar-thumb:vertical, body.binary[device=desktop].thick-scrollbars .mainbar > ::-webkit-scrollbar-thumb:vertical {
+  border-right: none;
+}
+body.binary[device=desktop].thick-scrollbars .sidebar > ::-webkit-scrollbar-thumb:horizontal, body.binary[device=desktop].thick-scrollbars .mainbar > ::-webkit-scrollbar-thumb:horizontal {
+  border-bottom: none;
+}
+body.binary[device=desktop] ::-webkit-scrollbar-track {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary[device=desktop] ::-webkit-scrollbar-track:vertical {
+  border-left: 1px solid black;
+}
+body.binary[device=desktop] ::-webkit-scrollbar-track:horizontal {
+  border-top: 1px solid black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-tabs.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary ul.nav-tabs > li:not(.active) > a {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary ul.nav-tabs > li:not(.active) > a i, body.binary ul.nav-tabs > li:not(.active) > a label, body.binary ul.nav-tabs > li:not(.active) > a .name {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary ul.nav-tabs > li.active > a {
+  background: black;
+}
+body.binary ul.nav-tabs > li.active > a i, body.binary ul.nav-tabs > li.active > a label {
+  text-shadow: none;
+}
+body.binary.show-tab-close-buttons ul.nav-tabs > li.active i.fa-times:hover, body.binary.show-tab-close-buttons ul.nav-tabs > li.active i.fa-xmark:hover {
+  color: black;
+  background-color: white;
+}
+body.binary.show-tab-close-buttons ul.nav-tabs > li.active i.fa-times:hover svg, body.binary.show-tab-close-buttons ul.nav-tabs > li.active i.fa-xmark:hover svg {
+  fill: black;
+}
+body.binary ul.nav-tabs.flush {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary ul.nav-tabs.flush > li:not(.active) a {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+  border-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-task-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary #desktop.task-bar-handles .footer-bar .handle {
+  background: repeating-linear-gradient(to bottom, white 0px, white 1px, black 1px, black 2px);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _medium-tooltips.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .tooltip .tooltip-inner {
+  text-shadow: none;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                          _medium-drag-n-drop.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .dropzone::after {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAqADAAQAAAABAAAAAgAAAADtGLyqAAAAEElEQVQIHWP4DwQMMADiAABHygf5AsusngAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-form-elements.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary label {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary label.error {
+  color: black;
+  background: none;
+  padding-left: 0;
+}
+body.binary input:focus {
+  box-shadow: none;
+}
+body.binary input:not([type=radio]):not([type=checkbox]):not([type=range]),
+body.binary textarea {
+  border-width: 1px;
+  border-style: solid;
+  border-color: unset;
+  background: white;
+}
+body.binary textarea {
+  background: white !important;
+}
+body.binary input:not([type=range]):focus {
+  box-shadow: none !important;
+}
+body.binary ::selection {
+  color: white;
+  background: rgba(0, 0, 0, 0.99);
+  text-shadow: none;
+}
+body.binary ::-moz-selection {
+  color: white;
+  background: black;
+  text-shadow: none;
+  opacity: 1;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                               _medium-forms.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .form-control {
+  border-color: unset;
+}
+body.binary .form-group .controls select {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+body.binary .notes {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .alert-warning {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  border-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-sliders.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .input {
+  display: flex;
+}
+body.binary .input .input-group {
+  display: flex;
+}
+body.binary .input input:not([type=range]) {
+  text-align: center;
+}
+body.binary .input input:not([type=range]):focus {
+  outline: none;
+}
+body.binary .input.selectable input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+body.binary input[type=range]::-webkit-slider-thumb {
+  border-style: solid;
+  border-color: unset;
+  background-color: white;
+  margin-top: -6px;
+}
+body.binary input[type=range]::-webkit-slider-thumb:hover {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary input[type=range]::-webkit-slider-thumb:active {
+  background-color: black;
+}
+body.binary input[type=range]::-moz-range-thumb {
+  border-style: solid;
+  border-color: unset;
+  background-color: white;
+  margin-top: -6px;
+}
+body.binary input[type=range]::-moz-range-thumb:hover {
+  background-color: black;
+}
+body.binary input[type=range]::-ms-thumb {
+  border-style: solid;
+  border-color: unset;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary input[type=range]::-ms-thumb:hover {
+  background-color: black;
+}
+body.binary input[type=range]::-webkit-slider-runnable-track {
+  border-style: solid;
+  border-color: unset;
+  background-color: black;
+}
+body.binary input[type=range]::-moz-range-track {
+  border-style: solid;
+  border-color: unset;
+  background-color: black;
+}
+body.binary input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _medium-items.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .item .marker {
+  color: black;
+  background: white;
+  border-color: black;
+}
+body.binary .item > .row:first-child .icon.colored {
+  border-width: 2px;
+}
+body.binary .item > .row:first-child .icon.colored i {
+  font-size: 40px;
+}
+body.binary .item > .row:first-child .icon.colored > img {
+  display: none;
+}
+body.binary svg .file-body {
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .file-corner {
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .file-icon path, body.binary svg .file-icon polygon, body.binary svg .file-icon circle, body.binary svg .file-icon rect {
+  fill: black !important;
+}
+body.binary svg .file-type path {
+  fill: black !important;
+}
+body.binary svg .folder-top {
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .folder-body {
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .folder-contents {
+  display: none;
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .folder-icon {
+  fill: black !important;
+}
+body.binary svg .trash-handle {
+  fill: white !important;
+  stroke: black !important;
+  stroke-width: 2 !important;
+}
+body.binary svg .trash-body,
+body.binary svg .trash-top,
+body.binary svg .trash-lid,
+body.binary svg .trash-groove {
+  fill: white !important;
+  stroke: black !important;
+  stroke-width: 1.5 !important;
+}
+body.binary svg .trash-paper1,
+body.binary svg .trash-paper2,
+body.binary svg .trash-paper3 {
+  fill: white !important;
+  stroke: black !important;
+  stroke-width: 10 !important;
+}
+body.binary svg .clipboard-body {
+  fill: black !important;
+  stroke: black !important;
+  stroke-width: 10 !important;
+}
+body.binary svg .clipboard-handle {
+  fill: white !important;
+  stroke: black !important;
+  stroke-width: 10 !important;
+}
+body.binary svg .clipboard-paper,
+body.binary svg .clipboard-corner {
+  fill: white !important;
+  stroke: black !important;
+  stroke-width: 10 !important;
+  stroke-linecap: butt !important;
+}
+body.binary svg .clipboard-contents {
+  fill: black;
+}
+body.binary svg .volume-icon, body.binary svg .volume-outlines, body.binary svg .volume-top {
+  fill: white !important;
+  stroke: black !important;
+}
+body.binary svg .volume-logo path,
+body.binary svg .volume-type path {
+  fill: black !important;
+}
+body.binary .app-icons .item.selected .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWNkYGD4D8RwwARnQRksSAKMIDaGCgBBbgEKSB2J0wAAAABJRU5ErkJggg==") !important;
+  background-size: 2px 2px !important;
+  background-repeat: repeat !important;
+  image-rendering: pixelated !important;
+  background-color: white !important;
+}
+body.binary .app-icons .item.selected .icon i {
+  color: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-icons.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .icon-grid .item > .row:first-child .icon {
+  text-shadow: none;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:first-child .icon {
+  border-color: black;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:first-child .icon > i {
+  color: black;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:first-child .icon > svg {
+  -webkit-filter: none;
+  filter: none;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:first-child .icon.colored {
+  background: white;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:nth-child(2) .name {
+  color: black;
+  background-color: white;
+  text-shadow: none;
+}
+body.binary .icon-grid .item:not(.selected):not(.highlighted) > .row:nth-child(3) .details {
+  background-color: white;
+}
+body.binary .icon-grid .item.highlighted > .row:first-child .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .icon-grid .item.selected > .row:first-child .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWNkYGD4D8RwwARnQRksSAKMIDaGCgBBbgEKSB2J0wAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  background-position: 1px 1px;
+}
+body.binary .icon-grid .item.selected > .row:first-child .icon svg {
+  filter: invert(1);
+}
+body.binary .icon-grid .item.selected > .row:nth-child(2) .name {
+  text-shadow: none;
+}
+body.binary .icon-grid .item.selected > .row:nth-child(2) .name[contenteditable=true] {
+  color: black;
+  background-color: white;
+  outline-color: black;
+}
+body.binary .icon-grid .item.selected > .row:nth-child(3) .details {
+  color: white;
+  background-color: black;
+  text-shadow: none;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-lists.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .item-list:not(.dropdown-menu) .item > .info .status i, body.binary .item-list:not(.dropdown-menu) .item > .info .icon:not(.marker) i {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .item-list:not(.dropdown-menu) .item > .info .specifics .details {
+  background: none;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .item-list:not(.dropdown-menu) .item:not(.selected):not(.highlighted) > .info .name {
+  color: black;
+  background-color: white;
+}
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info {
+  background-color: black;
+}
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info .icon i,
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info .details i {
+  color: white;
+  text-shadow: none;
+}
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info .name {
+  text-shadow: none;
+}
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info .name:not([contenteditable=true]) {
+  color: white;
+  background-color: black;
+}
+body.binary .item-list:not(.dropdown-menu) .item.selected > .info .name[contenteditable=true] {
+  color: black;
+  background-color: white;
+  outline-color: black;
+}
+body.binary .item-list:not(.dropdown-menu):not(.inline) .item:nth-child(odd):not(.selected) > div.info {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-card-grids.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .card-grid .cards .item .card {
+  background: white;
+}
+body.binary .card-grid .cards .item .card .icon > svg, body.binary .card-grid .cards .item .card .icon .thumbnail:not(.photo) {
+  -webkit-filter: none;
+  filter: none;
+}
+body.binary .card-grid .cards .item.selected .card {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+body.binary .card-grid .cards .item.selected .card .row:first-child .name {
+  text-shadow: none;
+}
+body.binary .card-grid .cards .item.selected .card .row:first-child .name[contenteditable=true] {
+  color: black;
+  background-color: white;
+  outline-color: white;
+}
+body.binary .card-grid .cards .item.selected .card label {
+  text-shadow: none;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-tiles.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .tile-grid .item > .tile > .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .tile-grid .item > .tile > .icon .thumbnail.photo, body.binary .tile-grid .item > .tile > .icon svg {
+  filter: none;
+}
+body.binary .tile-grid .item > .specifics .details {
+  color: black;
+  background-color: white;
+}
+body.binary .tile-grid .item:not(.selected) > .tile > .name:not([contenteditable=true]) {
+  color: black;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .tile-grid .item.selected > .tile {
+  outline-color: black;
+}
+body.binary .tile-grid .item.selected > .tile > .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHElEQVQIHWNkYGD4D8RwwARnQRksSAKMIDaGCgBBbgEKSB2J0wAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .tile-grid .item.selected > .tile > .icon .thumbnail {
+  outline-color: 2px;
+  outline-style: solid;
+  outline-color: black;
+  outline-offset: -2px;
+}
+body.binary .tile-grid .item.selected > .tile > .icon > svg {
+  filter: invert(1);
+}
+body.binary .tile-grid .item.selected > .tile > .name:not([contenteditable=true]) {
+  color: white;
+  background-color: black;
+  outline: none;
+  text-shadow: none;
+}
+body.binary .tile-grid .item.selected > .tile > .name[contenteditable=true] {
+  color: black;
+  background: white;
+  outline-color: black;
+}
+body.binary .tile-grid .item.selected > .specifics .details {
+  color: white;
+  background-color: black;
+}
+body.binary .tile-grid svg .tile-icon path, body.binary .tile-grid svg .tile-icon polygon, body.binary .tile-grid svg .tile-icon rect, body.binary .tile-grid svg .tile-icon circle {
+  fill: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-pages.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .pager .pages .main-carousel .item .row:nth-child(2) .name {
+  background-color: white;
+}
+body.binary .pager .pages .main-carousel .item .row:nth-child(2) .specifics .details {
+  background-color: white;
+}
+body.binary .pager .pages .main-carousel .item.selected .row:first-child .icon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .pager .pages .main-carousel .item.selected .row:first-child .icon img {
+  image-rendering: auto;
+}
+body.binary .pager .pages .main-carousel .item.selected .row:nth-child(2) .name:not([contenteditable=true]) {
+  color: white;
+  background-color: black;
+}
+body.binary .pager .pages .main-carousel .item.selected .row:nth-child(2) .name[contenteditable=true] {
+  color: black;
+  background-color: white;
+  outline-color: black;
+}
+body.binary .pager .pages .main-carousel .item.selected .row:nth-child(2) .specifics .details {
+  color: white;
+  background-color: black;
+}
+body.binary .pager .nav-bar .info-bar {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                         _medium-item-galleries.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .jpictura.gallery .item.selected::after, body.binary .jpictura.gallery .item.highlighted::after {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  border-color: white;
+  border-style: dashed;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _medium-modals.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .modal .modal-dialog .modal-header .title h1 {
+  text-shadow: none;
+}
+body.binary .modal.focused .modal-dialog:not(.maximized) .modal-header .handle, body.binary .modal.focused .modal-dialog:not(.maximized) .modal-header .buttons {
+  background: repeating-linear-gradient(to bottom, black 0px, black 1px, white 1px, white 2px);
+}
+body.binary .modal:not(.focused) .modal-dialog .modal-header > .buttons {
+  visibility: hidden;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-dialog-handles.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .modal.focused .modal-dialog:not(.maximized) .modal-header .handle, body.binary .modal.focused .modal-dialog:not(.maximized) .modal-header .buttons {
+  background: repeating-linear-gradient(to bottom, black 0px, black 1px, white 1px, white 2px);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                         _medium-comment-bubbles.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .comment-bubble > .comment-inner {
+  color: back;
+  background-color: white;
+  border-color: black;
+}
+body.binary .comment-bubble.top > .comment-arrow {
+  border-top-color: black;
+}
+body.binary .comment-bubble.right > .comment-arrow {
+  border-right-color: black;
+}
+body.binary .comment-bubble.left > .comment-arrow {
+  border-left-color: black;
+}
+body.binary .comment-bubble.bottom > .comment-arrow {
+  border-bottom-color: black;
+}
+body.binary .selected > .comment-bubble > .comment-inner,
+body.binary .selected > .info > .comment-bubble > .comment-inner {
+  color: white;
+  background-color: black;
+  border-color: black;
+  text-shadow: none;
+}
+body.binary .selected > .comment-bubble > .comment-inner a,
+body.binary .selected > .info > .comment-bubble > .comment-inner a {
+  color: white;
+}
+body.binary .selected > .comment-bubble.top > .comment-arrow,
+body.binary .selected > .info > .comment-bubble.top > .comment-arrow {
+  border-top-color: black;
+}
+body.binary .selected > .comment-bubble.right > .comment-arrow,
+body.binary .selected > .info > .comment-bubble.right > .comment-arrow {
+  border-right-color: black;
+}
+body.binary .selected > .comment-bubble.left > .comment-arrow,
+body.binary .selected > .info > .comment-bubble.left > .comment-arrow {
+  border-left-color: black;
+}
+body.binary .selected > .comment-bubble.bottom > .comment-arrow,
+body.binary .selected > .info > .comment-bubble.bottom > .comment-arrow {
+  border-bottom-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                        _medium-comment-replies.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .replies-list > .reply:not(.selected) > .info > .comment-bubble > .comment-inner {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+body.binary .replies-list > .reply:not(.selected) > .info > .comment-bubble.top > .comment-arrow {
+  border-top-color: black;
+}
+body.binary .replies-list > .reply:not(.selected) > .info > .comment-bubble.right > .comment-arrow {
+  border-right-color: black;
+}
+body.binary .replies-list > .reply:not(.selected) > .info > .comment-bubble.left > .comment-arrow {
+  border-left-color: black;
+}
+body.binary .replies-list > .reply:not(.selected) > .info > .comment-bubble.bottom > .comment-arrow {
+  border-bottom-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-post-comments.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .comments-list > .comment:not(.selected) > .info > .comment-bubble > .comment-inner {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+body.binary .comments-list > .comment:not(.selected) > .info > .comment-bubble.top > .comment-arrow {
+  border-top-color: black;
+}
+body.binary .comments-list > .comment:not(.selected) > .info > .comment-bubble.right > .comment-arrow {
+  border-right-color: black;
+}
+body.binary .comments-list > .comment:not(.selected) > .info > .comment-bubble.left > .comment-arrow {
+  border-left-color: black;
+}
+body.binary .comments-list > .comment:not(.selected) > .info > .comment-bubble.bottom > .comment-arrow {
+  border-bottom-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                               _medium-posts.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .new-post .comment-bubble .comment-inner, body.binary .new-comment .comment-bubble .comment-inner, body.binary .new-reply .comment-bubble .comment-inner, body.binary .new-message .comment-bubble .comment-inner {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+body.binary .new-post .comment-bubble.top .comment-arrow, body.binary .new-comment .comment-bubble.top .comment-arrow, body.binary .new-reply .comment-bubble.top .comment-arrow, body.binary .new-message .comment-bubble.top .comment-arrow {
+  border-top-color: black;
+}
+body.binary .new-post .comment-bubble.right .comment-arrow, body.binary .new-comment .comment-bubble.right .comment-arrow, body.binary .new-reply .comment-bubble.right .comment-arrow, body.binary .new-message .comment-bubble.right .comment-arrow {
+  border-right-color: black;
+}
+body.binary .new-post .comment-bubble.left .comment-arrow, body.binary .new-comment .comment-bubble.left .comment-arrow, body.binary .new-reply .comment-bubble.left .comment-arrow, body.binary .new-message .comment-bubble.left .comment-arrow {
+  border-left-color: black;
+}
+body.binary .new-post .comment-bubble.bottom .comment-arrow, body.binary .new-comment .comment-bubble.bottom .comment-arrow, body.binary .new-reply .comment-bubble.bottom .comment-arrow, body.binary .new-message .comment-bubble.bottom .comment-arrow {
+  border-bottom-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _medium-apps.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .app {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .app > .header-bar {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary .app > .header-bar + .body {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary .app > .header-bar + .body > .contents {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .app > .header-bar + .body > .contents > .sidebar {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+body.binary .app > .header-bar + .body > .contents > .sidebar .panels .panel {
+  border-style: solid;
+  border-color: black;
+  background: white;
+  border-width: 1px;
+}
+body.binary .app > .header-bar + .body > .contents > .sidebar .panels .panel .header label {
+  text-decoration: underline;
+}
+body.binary .app > .header-bar + .body > .contents > .mainbar > form {
+  background: white;
+}
+body.binary .app .footer-bar {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary .app .help.message {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .app .selection {
+  color: black;
+  border-color: black;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-attachment: local;
+  z-index: 2;
+}
+body.binary .modals .app > .body > .contents .mainbar > .items,
+body.binary .modals .app > .body > .contents .mainbar .tab-pane > .items,
+body.binary .modals .app > .body > .contents .mainbar .tab-pane .tab-pane form {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+body.binary .spinner {
+  border-color: transparent;
+  border-top-color: black;
+  border-bottom-color: white;
+}
+body.binary .map pattern svg path {
+  stroke: black;
+}
+
+body[device=desktop] .modals.padded .modal-dialog .app .body:not(.last) {
+  border-color: white;
+}
+
+body[device=phone] .app .header-bar, body[device=tablet] .app .header-bar {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}
+body[device=phone] .app .body .split-view, body[device=tablet] .app .body .split-view {
+  margin-top: -1px;
+  height: calc(100% + 3px);
+}
+body[device=phone] .app .footer-bar, body[device=tablet] .app .footer-bar {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+}
+body[device=phone] .modal-dialog .modal-content .modal-footer, body[device=tablet] .modal-dialog .modal-content .modal-footer {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-app-launcher.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .app-launcher.app .icon-grid .item > .row:first-child .icon,
+body.binary .app-icons .item > .row:first-child .icon {
+  background: none;
+  background-size: unset;
+  background-repeat: unset;
+  image-rendering: unset;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _medium-calculator.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .calculator.app .display {
+  background-color: white;
+  border-color: black;
+}
+body.binary .calculator.app .display .digits {
+  filter: none;
+}
+body.binary .calculator.app .keyboard .scientific,
+body.binary .calculator.app .keyboard .programmer {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgYGD4D8VAioGBCUySRAAAfC4CAeyfPysAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-clock.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .clock.app .body .face {
+  background: black;
+  /*
+  .digital.display {
+  	@include light-grey();
+
+  	.digits {
+  		@include outline-text();
+  	}
+  }
+  */
+}
+body.binary .clock.app .body .face .display {
+  background: white;
+}
+body.binary .clock.app .body .face .analog.display svg line {
+  stroke: black;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _medium-desktops.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary #desktop {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+  background-position: 0 0 !important;
+}
+body.binary .desktop.app {
+  background: none;
+}
+body.binary .desktop.app > .body {
+  background: none;
+}
+body.binary .desktop.app > .body .app {
+  background: none;
+}
+body.binary .desktop.app > .body .app > .body {
+  background: none;
+}
+body.binary .desktop.app > .body .app > .body > .contents {
+  background: none;
+}
+body.binary .desktop.app > .body .selection {
+  color: white;
+  border-color: black;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAF0lEQVQIHWNgIAQYYQr+AwGIzQQTgNEAXioEANQxRWMAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+body.binary .desktop.app > .body > .app > .body > .split-view > .mainbar > .items .item-list .item:not(.selected):not(.highlighted) .info .icon {
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+body.binary .desktop.app > .body > .app > .body > .split-view > .mainbar > .items .tile-grid .item:not(.selected):not(.highlighted) .name {
+  background: white;
+}
+body.binary .desktop.preview {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+  background-color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                          _medium-image-viewer.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body.binary .image-viewer.app .image + .selection {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAAqADAAQAAAABAAAAAgAAAADtGLyqAAAAEElEQVQIHWP4DwQMMADiAABHygf5AsusngAAAABJRU5ErkJggg==");
+  background-size: 2px 2px;
+  background-repeat: repeat;
+  image-rendering: pixelated;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 styles.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+/*# sourceMappingURL=styles.css.map */

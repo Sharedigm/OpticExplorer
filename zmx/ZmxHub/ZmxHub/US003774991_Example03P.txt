@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 3,774,991 Example 3 (Nikon pre-AI 800mm f/8 ED)
+[constants]
+[variable distances]
+Focal Length	800
+Angle of View	6
+F-Number	8
+Image Height	86.9
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	241.89
+[lens data]
+1	300.0	13.0	1.48614	109.06	81.5	fluophosphoric acid glass
+2	-430.0	7.3		109.06		
+3	-382.5	7.5	1.61266	104.06	44.3	antimony flint glass
+4	310.0	1.5		104.06		
+5	292.0	10.0	1.56953	102.74	49.5	barium flint glass
+6	-1654.4	190.0		102.74		
+6AS	AS	245.0		67.315
+7	-150.0	2.0	1.51885	46.92	59.0	
+8	Infinity	5.0	1.62399	46.92	47.0	
+9	-233.27	Bf		46.92		
+[figure]
+source	Data/US003774991_Figure03AP.png
+originX	169.57
+originY	74.56
+ppmm	1.101
+[notes]
+Bill: Angle of View implies 6x7cm Image Height.

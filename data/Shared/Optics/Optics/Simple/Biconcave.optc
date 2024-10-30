@@ -1,0 +1,26 @@
+################################################################################
+#                                                                              #
+#                                Biconcave.optc                                #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -75 mm
+        diameter: 50 mm
+      - type: spherical
+        curvature: 75 mm
+        diameter: 50 mm
+    thickness: 10 mm
+    material: Common/Crown

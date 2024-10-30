@@ -1,0 +1,46 @@
+[descriptive data]
+title	JP 1981-150717 Example 1 (Konica Minolta 75-150mm F4.0 MD Zoom)
+[constants]
+[variable distances]
+Focal Length	77	101	146
+Angle of View	undefined	undefined	undefined
+F-Number	4.1	4.1	4.1
+Image Height	43.2	43.2	43.2
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d5	2.50	16.49	30.49
+d10	25.26	16.95	1.20
+d13	8.43	2.74	4.50
+Bf(p)	undefined	undefined	undefined
+Bf(m)	42.22	42.22	42.21
+Bf	42.22	42.22	42.22
+Aperture Diameter(m)	23.375	23.385	23.427
+[lens data]
+1	104.167	5.00	1.51680	43.10	64.1
+2	-236.460	0.15		43.10
+3	77.526	4.50	1.51680	39.44	64.1
+4	-740.250	1.50	1.80518	39.44	25.5
+5	163.171	d5		39.44
+6	659.800	3.30	1.80518	27.26	25.5
+7	-47.276	1.20	1.62135	27.26	61.3
+8	60.365	2.80		24.68
+9	-50.922	1.20	1.74950	24.68	50.1
+10	152.384	d10		24.68
+11	125.393	4.60	1.58913	25.00	61.1
+12	-32.959	1.20	1.74000	25.00	28.3
+13	-74.345	d13		25.00
+13AS	AS	0		23.375
+a	31.838	6.00	1.65844	25.01	50.9
+b	-75.054	1.50	1.80741	25.01	31.6
+c	86.257	22.00		25.01
+d	92.756	3.20	1.67270	26.21	32.2
+e	-129.315	12.00		26.21
+f	-22.367	1.50	1.67100	27.38	51.8
+g	-53.427	Bf		27.38
+[figure]
+source	Data/JP1981-150717_Figure01P.png
+originX	26.33
+originY	130.58
+ppmm	3.519
+[notes]
+Bill: Patent Figure is telephoto.

@@ -1,0 +1,30 @@
+[descriptive data]
+title	GB 575,076 Example 2 (Wray 50mm F2 Unilite)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	2.0
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	22.17
+[lens data]
+1	26.865	5.830	1.691	30.68	54.8
+2	77.350	0.000		30.68
+3	12.525	5.245	1.613	21.73	57.6
+4	28.965	0.760	1.700	21.73	30.3
+5	9.820	6.580		16.54
+5AS	AS	7.36		14.607
+6	-10.765	4.560	1.613	16.39	36.9
+7	-15.935	0.000		21.82
+8	149.500	7.100	1.621	30.58	60.3
+9	-28.910	Bf		30.58
+[figure]
+source	Data/GB0575076_Figure02P.png
+originX	47.97
+originY	178.85
+ppmm	9.620
+[notes]

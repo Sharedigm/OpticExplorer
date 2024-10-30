@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 3,864,027 Example 1 (Olympus 400mm f6.3 E Zuiko Auto-T)
+[constants]
+Scaled	400	1
+[variable distances]
+Focal Length	400
+Angle of View	6.17
+F-Number	6.3
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	96.63
+[lens data]
+1	88.820	11.984	1.48749	68.52	70.1
+2	-164.196	10.772		68.52	
+3	-127.756	7.456	1.74950	60.32	35.2
+4	-437.640	2.024		60.32	
+5	-689.608	8.488	1.59270	60.50	35.6
+6	Infinity	97.410		60.50	
+6AS	AS	44.994		27.783
+7	-51.620	3.668	1.65100	36.80	56.2
+8	2361.968	11.712		36.80	
+9	507.020	5.220	1.60342	36.80	38.0
+10	-96.528	Bf		36.80	
+[figure]
+source	Data/US003864027_Figure01P.png
+originX	101.23
+originY	390.38
+ppmm	10.485
+[notes]

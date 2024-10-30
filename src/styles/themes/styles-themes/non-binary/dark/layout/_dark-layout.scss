@@ -1,0 +1,65 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dark-layout.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$content-text-color: text-colors.$light-color;
+$content-background-color: colors.$very-very-very-dark-grey;
+$well-color: text-colors.$light-color;
+$well-background-color: colors.$very-dark-grey;
+$well-border-color: lighten($well-background-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	color: $content-text-color;
+	background: $content-background-color;
+
+	//
+	// dark content
+	//
+
+	.content {
+		color: $content-text-color;
+		// background-color: $content-background-color;
+	}
+
+	//
+	// dark wells
+	//
+
+	.well {
+		color: $well-color;
+		background-color: $well-background-color;
+		border-color: $well-border-color;
+	}
+
+	//
+	// dark brands
+	//
+
+	.brand {
+		color: white;
+	}
+}

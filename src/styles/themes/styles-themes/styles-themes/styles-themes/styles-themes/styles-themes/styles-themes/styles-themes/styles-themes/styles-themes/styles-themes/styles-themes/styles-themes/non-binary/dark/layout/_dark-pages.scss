@@ -1,0 +1,101 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-pages.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../colors/dark-branding";
+@use "./dark-layout";
+
+//
+// colors
+//
+
+$background-color: colors.$very-very-very-dark-grey;
+$attention-color: white;
+$attention-background-color: dark-branding.$primary-color;
+$odd-section-background-color: colors.$very-very-dark-grey;
+$iframe-border-color: colors.$dark-grey;
+$items-border-color: colors.$very-very-very-dark-grey;
+$footer-info-color: text-colors.$light-color;
+$footer-info-background-color: colors.$very-very-dark-grey;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	.page {
+		background-color: $background-color;
+
+		.contents {
+
+			//
+			// dark attention regions
+			//
+
+			.attention {
+				color: $attention-color;
+				
+				&:not(.colored) {
+					background-color: $attention-background-color;
+				}
+
+				i {
+					color: $attention-color;
+				}
+			}
+
+			//
+			// dark page sections
+			//
+
+			.section {
+				&:not(.colored):nth-child(odd) {
+					background: $odd-section-background-color;
+
+					.well {
+						color: dark-layout.$well-color;
+						background-color: dark-layout.$well-background-color;
+					}
+				}
+			}
+
+			//
+			// dark frames
+			//
+
+			iframe {
+				border-color: $iframe-border-color;
+			}
+
+			.items {
+				border-color: $items-border-color;
+			}
+		}
+
+		.footer {
+			.info {
+				background-color: $footer-info-background-color;
+
+				.links {
+					color: $footer-info-color;
+				}
+			}
+		}
+	}
+}

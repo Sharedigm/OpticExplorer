@@ -1,0 +1,61 @@
+/******************************************************************************\
+|                                                                              |
+|                               _dark-headings.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$dark-heading-color: white;
+$dark-heading-icon-color: dark-branding.$primary-color;
+$dark-heading-border-color: dark-branding.$primary-color;
+$dark-sub-heading-color: white;
+$dark-sub-heading-icon-color: dark-branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	h1 {
+		color: $dark-heading-color;
+		border-color: $dark-heading-border-color;
+
+		i {
+			color: $dark-heading-icon-color;
+		}
+	}
+
+	h2, h3 {
+		color: $dark-sub-heading-color;
+
+		i {
+			color: $dark-sub-heading-icon-color;
+		}
+	}
+
+	//
+	// dark rulings
+	//
+
+	hr {
+		background-color: $dark-heading-border-color;
+	}
+}

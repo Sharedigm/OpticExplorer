@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-toolbars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG DOM element styles for this application.         |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// variables
+//
+
+$grip-horizontal-image: url('../../../../images/splitters/horizontal-grip.png');
+$grip-vertical-image: url('../../../../images/splitters/vertical-grip.png');
+
+//
+// styles
+//
+
+body.binary {
+	.toolbar {
+
+		//
+		// toolbar handles
+		//
+
+		.handle {
+			border-color: transparent;
+			image-rendering: pixelated;
+		}
+
+		//
+		// handles
+		//
+
+		&.horizontal {
+			.handle {
+				background-image: $grip-horizontal-image;
+			}
+		}
+
+		&.vertical {
+			.handle {
+				background-image: $grip-vertical-image;
+			}
+		}
+	}
+}

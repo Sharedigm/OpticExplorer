@@ -1,0 +1,48 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-metal-badges.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../materials/metal/round-metal";
+@use "../../navs/colored-badges";
+@use "../../forms/colored-forms";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.metal.colored {
+		.badge {
+			@include round-metal.shade(colored-badges.$color);
+
+			//
+			// metal special badges
+			//
+
+			&.success {
+				@include round-metal.shaded(colored-forms.$success-color);
+			}
+
+			&.caution {
+				@include round-metal.shaded(colored-forms.$caution-color);
+			}
+
+			&.warning {
+				@include round-metal.shaded(colored-forms.$warning-color);
+			}
+		}
+	}
+}

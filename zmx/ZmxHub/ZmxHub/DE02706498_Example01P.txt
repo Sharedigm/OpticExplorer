@@ -1,0 +1,28 @@
+[descriptive data]
+title	DE 2 706 498 B1 Example 1 (Rodenstock Rogonar 50mm F2.8)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	undefined
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	39.70
+[lens data]
+1	20.605	3.690	1.6940	21.30	54.47
+2	Infinity	5.585		18.12
+3	-28.175	0.930	1.6776	14.43	31.97
+4	19.875	3.285		13.90
+4.5	AS	3.225		14.068
+5	103.270	2.625	1.6940	16.98	54.52
+6	-23.285	Bf		15.03
+[figure]
+source	Data/DE02706498_Figure01P.png
+originX	74.04
+originY	309.73
+ppmm	14.185
+[notes]
+Bill: Shifted AS

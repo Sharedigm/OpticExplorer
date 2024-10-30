@@ -1,0 +1,1708 @@
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                  _beams.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .beam:not(.annotation) {
+  pointer-events: none;
+}
+.optics .viewport .beam:not(.annotation):not(.colored) {
+  fill: white;
+  stroke: white;
+}
+.optics .viewport .beam:not(.annotation) .transmitted {
+  stroke-opacity: 0.25;
+}
+.optics .viewport .beam:not(.annotation) .obstructed {
+  stroke-opacity: 0.25;
+}
+.optics .viewport .beam:not(.annotation) .reflected {
+  stroke-opacity: 0.75;
+  stroke-dasharray: 2 2;
+}
+.optics .viewport .beam:not(.annotation) .untransmitted {
+  stroke-opacity: 0.5;
+}
+.optics .viewport .beam:not(.annotation) .filled {
+  mix-blend-mode: plus-lighter;
+  fill-opacity: 0.125;
+  stroke: none;
+}
+.optics .viewport .beam:not(.annotation) .paths path {
+  fill: none;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.optics .viewport .beam:not(.annotation) .paths path.first, .optics .viewport .beam:not(.annotation) .paths path.last {
+  stroke-opacity: 0.5;
+}
+.optics .viewport .beam:not(.annotation) .paths path:hover {
+  stroke-opacity: 0.75;
+}
+
+body.binary .optics .viewport .beam:not(.annotation) .filled {
+  mix-blend-mode: normal;
+  fill: white;
+  fill-opacity: 0.5;
+}
+body.binary .optics .viewport .beam:not(.annotation) .paths path {
+  stroke: white;
+  stroke-opacity: 0.5;
+}
+
+body.colored .optics .viewport .beam:not(.annotation) .reflected .paths path {
+  stroke: red !important;
+}
+body.colored .optics .viewport.light .beam:not(.annotation) .filled, body.colored.light .optics .viewport.auto .beam:not(.annotation) .filled {
+  mix-blend-mode: multiply;
+  fill-opacity: 0.25;
+}
+body.colored .optics .viewport.light .beam:not(.annotation):not(.colored) .filled, body.colored.light .optics .viewport.auto .beam:not(.annotation):not(.colored) .filled {
+  fill: #8080b3;
+}
+body.colored .optics .viewport.light .beam:not(.annotation):not(.colored) .paths, body.colored.light .optics .viewport.auto .beam:not(.annotation):not(.colored) .paths {
+  stroke: #6060a0;
+}
+body.colored .optics .viewport.dark .beam:not(.annotation), body.colored.dark .optics .viewport.auto .beam:not(.annotation) {
+  mix-blend-mode: screen;
+}
+body.colored .optics .viewport.dark .beam:not(.annotation) .filled, body.colored.dark .optics .viewport.auto .beam:not(.annotation) .filled {
+  mix-blend-mode: plus-lighter;
+  fill-opacity: 0.5;
+}
+body.colored .optics .viewport.dark .beam:not(.annotation):not(.colored) .filled, body.colored.dark .optics .viewport.auto .beam:not(.annotation):not(.colored) .filled {
+  fill: white;
+}
+body.colored .optics .viewport.dark .beam:not(.annotation):not(.colored) .paths, body.colored.dark .optics .viewport.auto .beam:not(.annotation):not(.colored) .paths {
+  stroke: white;
+}
+
+[browser=firefox] .optics .viewport .beam:not(.annotation) .filled {
+  mix-blend-mode: plus-lighter;
+  fill-opacity: 0.5;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _light-beams.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .light.beam .paths path.first, .optics .viewport .light.beam .paths path.last {
+  mix-blend-mode: normal;
+  stroke-opacity: 0.75;
+}
+.optics .viewport.lights-hidden .light.beam, .optics .viewport.lights-hidden .light.marker, .optics .viewport.lights-hidden .light.annotation,
+.optics .viewport.lights-hidden .focus.marker, .optics .viewport.lights-hidden .focus.annotation {
+  visibility: hidden;
+  display: none;
+}
+.optics .viewport.lights-unstroked .light.beam .transmitted .paths path:not(.first):not(.last) {
+  visibility: hidden;
+}
+.optics .viewport.lights-unfilled .light.beam .filled {
+  visibility: hidden;
+}
+.optics .viewport.lights-untransmitted .light.beam .transmitted {
+  visibility: hidden;
+}
+.optics .viewport.lights-unobstructed .light.beam .obstructed {
+  visibility: hidden;
+}
+.optics .viewport.lights-unreflected .light.beam .reflected {
+  visibility: hidden;
+}
+
+.optics .viewport.light .light.beam .paths path.first, .optics .viewport.light .light.beam .paths path.last,
+.light .optics .viewport.auto .light.beam .paths path.first,
+.light .optics .viewport.auto .light.beam .paths path.last {
+  mix-blend-mode: multiply;
+}
+
+.optics .viewport.dark .light.beam .paths path.first, .optics .viewport.dark .light.beam .paths path.last,
+.dark .optics .viewport.auto .light.beam .paths path.first,
+.dark .optics .viewport.auto .light.beam .paths path.last {
+  mix-blend-mode: normal;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _light-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .light.marker:not(.colored), .optics .viewport .focus.marker:not(.colored) {
+  fill: white;
+}
+.optics .viewport .light.marker.selected, .optics .viewport .focus.marker.selected {
+  cursor: grab;
+}
+.optics .viewport .light.marker.selected:active, .optics .viewport .focus.marker.selected:active {
+  cursor: grabbing;
+}
+.optics .viewport .optics .viewport.light .light.marker:not(.colored):not(:hover):not(.selected), .optics .viewport .optics .viewport.light .focus.marker:not(.colored):not(:hover):not(.selected), .optics .viewport.light .optics .viewport.auto .light.marker:not(.colored):not(:hover):not(.selected), .optics .viewport.light .optics .viewport.auto .focus.marker:not(.colored):not(:hover):not(.selected) {
+  fill: black;
+}
+.optics .viewport .optics .viewport.dark .light.marker:not(.colored):not(:hover):not(.selected), .optics .viewport .optics .viewport.dark .focus.marker:not(.colored):not(:hover):not(.selected), .optics .viewport.dark .optics .viewport.auto .light.marker:not(.colored):not(:hover):not(.selected), .optics .viewport.dark .optics .viewport.auto .focus.marker:not(.colored):not(:hover):not(.selected) {
+  fill: white;
+}
+
+body.colored .optics .viewport .light.marker:hover, body.colored .optics .viewport .focus.marker:hover {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport .light.marker.selected, body.colored .optics .viewport .focus.marker.selected {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport .focus.marker.multispectral:not(.selected) {
+  mix-blend-mode: screen;
+}
+body.colored .optics .viewport.light .focus.marker:not(.selected), body.colored.light .optics .viewport.auto .focus.marker:not(.selected) {
+  mix-blend-mode: multiply;
+}
+body.colored .optics .viewport.dark .light.marker, body.colored .optics .viewport.dark .focus.marker, body.colored.dark .optics .viewport.auto .light.marker, body.colored.dark .optics .viewport.auto .focus.marker {
+  mix-blend-mode: screen;
+  filter: url(#glowing);
+}
+body.colored .optics .viewport.dark .light.marker:hover, body.colored .optics .viewport.dark .focus.marker:hover, body.colored.dark .optics .viewport.auto .light.marker:hover, body.colored.dark .optics .viewport.auto .focus.marker:hover {
+  fill: var(--secondary-color);
+}
+body.colored .optics .viewport.dark .light.marker.selected, body.colored .optics .viewport.dark .focus.marker.selected, body.colored.dark .optics .viewport.auto .light.marker.selected, body.colored.dark .optics .viewport.auto .focus.marker.selected {
+  fill: var(--secondary-color);
+}
+body.colored .optics .viewport.dark .focus.marker:not(.selected), body.colored.dark .optics .viewport.auto .focus.marker:not(.selected) {
+  mix-blend-mode: plus-lighter;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _light-rays.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+@keyframes laserbeam {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes lasersparkle {
+  0% {
+    stroke-dasharray: 90 10;
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dasharray: 90 10;
+    stroke-dashoffset: 0;
+  }
+}
+.optics .viewport .ray.beam .paths path {
+  stroke-opacity: 1 !important;
+  mix-blend-mode: hard-light !important;
+  stroke-dasharray: 10 5;
+  /*
+  -webkit-animation: 1s lasersparkle linear forwards;
+  animation: 1s lasersparkle linear forwards;
+  animation-iteration-count: infinite;
+  */
+}
+.optics .viewport .ray.beam .paths .obstructed path {
+  stroke-opacity: 0.5 !important;
+}
+
+.optics .viewport.light .ray.beam .paths path,
+.light .optics .viewport.auto .ray.beam .paths path {
+  stroke-opacity: 0.75 !important;
+  mix-blend-mode: darken !important;
+}
+
+.optics .viewport.dark .ray.beam .paths path,
+.dark .optics .viewport.auto .ray.beam .paths path {
+  mix-blend-mode: plus-lighter !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                           _multispectral-beams.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .multispectral.beam .filled {
+  mix-blend-mode: screen;
+  fill-opacity: 0.5;
+}
+.optics .viewport .multispectral.beam .paths path.first, .optics .viewport .multispectral.beam .paths path.last {
+  mix-blend-mode: screen;
+  stroke-opacity: 1;
+}
+.optics .viewport .multispectral.beam .paths > .transmitted {
+  mix-blend-mode: screen;
+}
+.optics .viewport .multispectral.beam .paths > .obstructed {
+  mix-blend-mode: screen;
+}
+.optics .viewport .multispectral.beam .paths > .reflected {
+  mix-blend-mode: normal;
+}
+
+.optics .viewport.light .multispectral.beam .filled,
+.light .optics .viewport.auto .multispectral.beam .filled {
+  mix-blend-mode: multiply;
+}
+.optics .viewport.light .multispectral.beam .paths path.first, .optics .viewport.light .multispectral.beam .paths path.last,
+.light .optics .viewport.auto .multispectral.beam .paths path.first,
+.light .optics .viewport.auto .multispectral.beam .paths path.last {
+  stroke-opacity: 0.5;
+}
+.optics .viewport.light .multispectral.beam .paths > .transmitted,
+.light .optics .viewport.auto .multispectral.beam .paths > .transmitted {
+  mix-blend-mode: multiply;
+}
+.optics .viewport.light .multispectral.beam .paths > .obstructed,
+.light .optics .viewport.auto .multispectral.beam .paths > .obstructed {
+  mix-blend-mode: multiply;
+}
+.optics .viewport.light .multispectral.beam .paths > .reflected,
+.light .optics .viewport.auto .multispectral.beam .paths > .reflected {
+  mix-blend-mode: multiply;
+}
+
+.optics .viewport.dark .multispectral.beam .filled,
+.dark .optics .viewport.auto .multispectral.beam .filled {
+  mix-blend-mode: screen;
+}
+.optics .viewport.dark .multispectral.beam .paths > .transmitted,
+.dark .optics .viewport.auto .multispectral.beam .paths > .transmitted {
+  mix-blend-mode: screen;
+}
+.optics .viewport.dark .multispectral.beam .paths > .obstructed,
+.dark .optics .viewport.auto .multispectral.beam .paths > .obstructed {
+  mix-blend-mode: screen;
+}
+.optics .viewport.dark .multispectral.beam .paths > .reflected,
+.dark .optics .viewport.auto .multispectral.beam .paths > .reflected {
+  mix-blend-mode: screen;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _abbe-diagrams.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.material-map-viewer .mainbar {
+  overflow: hidden;
+}
+
+.abbe.diagram .abbe.marker {
+  fill: black;
+}
+.abbe.diagram .edges .line {
+  stroke: #6060a0;
+  stroke-opacity: 1;
+  vector-effect: non-scaling-stroke;
+}
+.abbe.diagram .regions .region path {
+  fill-opacity: 0.5;
+  stroke-opacity: 0.5;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2;
+}
+.abbe.diagram .regions .region path.transmitted {
+  mix-blend-mode: hard-light;
+  stroke: none;
+}
+.abbe.diagram .regions .region path.diffuse {
+  mix-blend-mode: overlay;
+  stroke: none;
+}
+.abbe.diagram .regions .region path.specular {
+  fill: url("#abbe-highlight");
+  stroke: none;
+  pointer-events: none;
+}
+.abbe.diagram .regions .region path.edges {
+  mix-blend-mode: normal;
+  fill: none;
+}
+.abbe.diagram.unshaded .regions .region .specular {
+  fill: white;
+  fill-opacity: 0.25 !important;
+}
+.abbe.diagram.hide-regions .regions, .abbe.diagram.hide-regions .shadow {
+  display: none;
+}
+.abbe.diagram.hide-edges .regions + .edges {
+  display: none;
+}
+.abbe.diagram.hide-vertices .vertices, .abbe.diagram.hide-vertices .vertex {
+  display: none;
+}
+
+.binary .abbe.diagram .regions .region {
+  fill: grey;
+  stroke: black;
+}
+.binary .abbe.diagram .regions .region path.edges {
+  stroke: black;
+}
+.binary .abbe.diagram .material.marker {
+  fill: grey;
+  stroke: black;
+}
+.binary .abbe.diagram .lens.marker {
+  fill: grey;
+  stroke: black;
+}
+
+body:not(.binary) .abbe.diagram .abbe.marker {
+  fill: black;
+}
+body:not(.binary) .abbe.diagram .edges .line {
+  stroke: #6060a0;
+}
+body:not(.binary) .abbe.diagram.light .abbe.marker, body:not(.binary).light .abbe.diagram.auto .abbe.marker {
+  fill: black;
+}
+body:not(.binary) .abbe.diagram.light .edges .line, body:not(.binary).light .abbe.diagram.auto .edges .line {
+  stroke: #8080b3;
+}
+body:not(.binary) .abbe.diagram.dark .abbe.marker, body:not(.binary).dark .abbe.diagram.auto .abbe.marker {
+  fill: white;
+}
+body:not(.binary) .abbe.diagram.dark .edges .line, body:not(.binary).dark .abbe.diagram.auto .edges .line {
+  stroke: #a0a0c6;
+}
+body:not(.binary) .abbe.diagram.dark .regions .region path, body:not(.binary).dark .abbe.diagram.auto .regions .region path {
+  stroke-opacity: 1;
+}
+body:not(.binary) .abbe.diagram.dark .regions .region path.transmitted, body:not(.binary).dark .abbe.diagram.auto .regions .region path.transmitted {
+  mix-blend-mode: overlay;
+}
+body:not(.binary) .abbe.diagram.dark .regions .region path.diffuse, body:not(.binary).dark .abbe.diagram.auto .regions .region path.diffuse {
+  mix-blend-mode: multiply;
+  fill-opacity: 1;
+}
+body:not(.binary) .abbe.diagram.dark .regions .region path.specular, body:not(.binary).dark .abbe.diagram.auto .regions .region path.specular {
+  mix-blend-mode: lighten;
+  fill-opacity: 0.25;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _data-sheets.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.data-sheet .title {
+  font-size: 1.25em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.data-sheet .description {
+  text-align: center;
+}
+.data-sheet .panels {
+  padding-bottom: 10px;
+}
+.data-sheet .panels .panel {
+  margin-bottom: 10px;
+  break-inside: avoid-column;
+}
+.data-sheet .panels .panel .header {
+  margin-bottom: 10px;
+}
+.data-sheet .panels .panel .control-label {
+  width: 50%;
+}
+.data-sheet .panels .panel .table {
+  column-count: 2;
+  margin-bottom: -5px;
+}
+.data-sheet .panels .panel .tile {
+  float: none;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.data-sheet-editor .form-horizontal {
+  column-width: 140px;
+}
+.data-sheet-editor .form-horizontal .form-group .control-label {
+  width: 50%;
+}
+.data-sheet-editor .form-horizontal .form-group label {
+  width: 100px;
+  white-space: nowrap;
+}
+.data-sheet-editor .form-horizontal .form-group .tile {
+  float: none;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+@media (min-width: 480px) {
+  .data-sheet .panels {
+    column-count: 2;
+    column-gap: 10px;
+  }
+  .data-sheet .panels .control-label {
+    width: 50%;
+  }
+}
+/******************************************************************************\
+|                                                                              |
+|                            _material-markers.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.abbe.diagram .material.markers {
+  fill-opacity: 1;
+  mix-blend-mode: hard-light;
+  stroke-opacity: 1;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(3px 3px 5px fade(black, 35%));
+}
+.abbe.diagram .material.markers .material.marker svg {
+  overflow: visible;
+}
+.abbe.diagram .material.markers .material.marker svg path.transmitted, .abbe.diagram .material.markers .material.marker svg polygon.transmitted, .abbe.diagram .material.markers .material.marker svg circle.transmitted {
+  stroke: black;
+}
+.abbe.diagram .material.markers .material.marker svg path.diffuse, .abbe.diagram .material.markers .material.marker svg polygon.diffuse, .abbe.diagram .material.markers .material.marker svg circle.diffuse {
+  display: none;
+}
+.abbe.diagram .material.markers .material.marker svg path.edges, .abbe.diagram .material.markers .material.marker svg polygon.edges, .abbe.diagram .material.markers .material.marker svg circle.edges {
+  display: none;
+}
+.abbe.diagram .material.markers .material.marker:hover svg path.edges, .abbe.diagram .material.markers .material.marker:hover svg polygon.edges, .abbe.diagram .material.markers .material.marker:hover svg circle.edges {
+  display: block;
+}
+.abbe.diagram .material.markers .material.marker:hover svg path.transmitted, .abbe.diagram .material.markers .material.marker:hover svg polygon.transmitted, .abbe.diagram .material.markers .material.marker:hover svg circle.transmitted, .abbe.diagram .material.markers .material.marker.selected svg path.transmitted, .abbe.diagram .material.markers .material.marker.selected svg polygon.transmitted, .abbe.diagram .material.markers .material.marker.selected svg circle.transmitted {
+  stroke-width: 2;
+  display: block;
+}
+.abbe.diagram .material.markers .material.marker:hover svg path.edges, .abbe.diagram .material.markers .material.marker:hover svg polygon.edges, .abbe.diagram .material.markers .material.marker:hover svg circle.edges, .abbe.diagram .material.markers .material.marker.selected svg path.edges, .abbe.diagram .material.markers .material.marker.selected svg polygon.edges, .abbe.diagram .material.markers .material.marker.selected svg circle.edges {
+  fill: black;
+  fill-opacity: 0.1;
+  stroke-opacity: 1;
+  stroke-width: 2;
+  stroke-dasharray: 2;
+  stroke-dashoffset: 1;
+  display: block;
+}
+
+body.colored .abbe.diagram .material.markers .material.marker:hover svg path.edges, body.colored .abbe.diagram .material.markers .material.marker:hover svg polygon.edges, body.colored .abbe.diagram .material.markers .material.marker:hover svg circle.edges, body.colored .abbe.diagram .material.markers .material.marker.selected svg path.edges, body.colored .abbe.diagram .material.markers .material.marker.selected svg polygon.edges, body.colored .abbe.diagram .material.markers .material.marker.selected svg circle.edges {
+  stroke: var(--primary-color);
+}
+
+.abbe.diagram.dark .material.markers,
+.dark .abbe.diagram.auto .material.markers {
+  mix-blend-mode: normal;
+}
+.abbe.diagram.dark .material.markers .material.marker svg path.transmitted, .abbe.diagram.dark .material.markers .material.marker svg polygon.transmitted, .abbe.diagram.dark .material.markers .material.marker svg circle.transmitted,
+.dark .abbe.diagram.auto .material.markers .material.marker svg path.transmitted,
+.dark .abbe.diagram.auto .material.markers .material.marker svg polygon.transmitted,
+.dark .abbe.diagram.auto .material.markers .material.marker svg circle.transmitted {
+  fill-opacity: 0.5;
+}
+.abbe.diagram.dark .material.markers .material.marker svg path.diffuse, .abbe.diagram.dark .material.markers .material.marker svg polygon.diffuse, .abbe.diagram.dark .material.markers .material.marker svg circle.diffuse,
+.dark .abbe.diagram.auto .material.markers .material.marker svg path.diffuse,
+.dark .abbe.diagram.auto .material.markers .material.marker svg polygon.diffuse,
+.dark .abbe.diagram.auto .material.markers .material.marker svg circle.diffuse {
+  stroke: black;
+  mix-blend-mode: screen;
+  fill-opacity: 0.5;
+  display: block;
+}
+.abbe.diagram.dark .material.markers .material.marker svg path.edges, .abbe.diagram.dark .material.markers .material.marker svg polygon.edges, .abbe.diagram.dark .material.markers .material.marker svg circle.edges,
+.dark .abbe.diagram.auto .material.markers .material.marker svg path.edges,
+.dark .abbe.diagram.auto .material.markers .material.marker svg polygon.edges,
+.dark .abbe.diagram.auto .material.markers .material.marker svg circle.edges {
+  stroke: white;
+  fill-opacity: 0.5;
+  mix-blend-mode: normal;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _object-beams.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .object.beam:not(.annotation) .filled {
+  mix-blend-mode: normal;
+}
+.optics .viewport.objects-hidden .object.beam, .optics .viewport.objects-hidden .object.marker, .optics .viewport.objects-hidden .object.annotation,
+.optics .viewport.objects-hidden .object.image, .optics .viewport.objects-hidden .image.annotation {
+  visibility: hidden;
+}
+.optics .viewport.objects-unstroked .object.beam .paths path:not(.first):not(.last) {
+  visibility: hidden;
+}
+.optics .viewport.objects-unfilled .object.beam .filled {
+  visibility: hidden;
+}
+.optics .viewport.objects-untransmitted .object.beam .transmitted {
+  visibility: hidden;
+}
+.optics .viewport.objects-unobstructed .object.beam .obstructed {
+  visibility: hidden;
+}
+.optics .viewport.objects-unreflected .object.beam .reflected {
+  visibility: hidden;
+}
+
+body.colored .optics .viewport .object.beam:not(.annotation):not(.colored) {
+  stroke: white;
+}
+body.colored .optics .viewport .object.beam:not(.annotation):not(.colored) .filled {
+  fill: #6060a0;
+}
+
+.optics .viewport.light .object.beam:not(.annotation):not(.colored) .filled,
+.light .optics .viewport.auto .object.beam:not(.annotation):not(.colored) .filled {
+  fill: #6060a0;
+}
+.optics .viewport.light .object.beam:not(.annotation) .paths path.first, .optics .viewport.light .object.beam:not(.annotation) .paths path.last,
+.light .optics .viewport.auto .object.beam:not(.annotation) .paths path.first,
+.light .optics .viewport.auto .object.beam:not(.annotation) .paths path.last {
+  stroke: #6060a0;
+}
+
+.optics .viewport.dark .object.beam:not(.annotation),
+.dark .optics .viewport.auto .object.beam:not(.annotation) {
+  mix-blend-mode: lighten;
+}
+.optics .viewport.dark .object.beam:not(.annotation):not(.colored) .filled,
+.dark .optics .viewport.auto .object.beam:not(.annotation):not(.colored) .filled {
+  fill: #6060a0;
+}
+.optics .viewport.dark .object.beam:not(.annotation) .paths path.first, .optics .viewport.dark .object.beam:not(.annotation) .paths path.last,
+.dark .optics .viewport.auto .object.beam:not(.annotation) .paths path.first,
+.dark .optics .viewport.auto .object.beam:not(.annotation) .paths path.last {
+  stroke: #a0a0c6;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _object-images.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+body.binary .optics .viewport .object.image {
+  stroke: black;
+  fill: black;
+}
+
+body.colored .optics .viewport .object.image:not(.colored) {
+  stroke: #6060a0;
+  fill: #6060a0;
+}
+body.colored .optics .viewport .object.image.selected {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport.dark .object.image:not(.colored), body.colored.dark .optics .viewport.auto .object.image:not(.colored) {
+  stroke: #8080b3;
+  fill: #8080b3;
+}
+body.colored .optics .viewport.dark .object.image.selected, body.colored.dark .optics .viewport.auto .object.image.selected {
+  stroke: var(--primary-color);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _object-markers.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .object.marker:not(.distant) svg {
+  overflow: visible;
+}
+.optics .viewport .object.marker:not(.distant) svg path, .optics .viewport .object.marker:not(.distant) svg polygon, .optics .viewport .object.marker:not(.distant) svg circle, .optics .viewport .object.marker:not(.distant) svg ellipse {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+  fill-opacity: 0.5;
+}
+
+body.binary .optics .viewport .object.marker {
+  stroke: black !important;
+}
+
+body.colored .optics .viewport .object.marker:not(.colored) {
+  stroke: #6060a0;
+  fill: #6060a0;
+}
+body.colored .optics .viewport .object.marker:not(.colored).distant {
+  stroke: white;
+  fill: white;
+}
+body.colored .optics .viewport .object.marker:hover {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport .object.marker:hover.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport .object.marker.selected {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport .object.marker.selected.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.light .object.marker:not(.colored), body.colored.light .optics .viewport.auto .object.marker:not(.colored) {
+  stroke: #8080b3;
+  fill: #8080b3;
+}
+body.colored .optics .viewport.light .object.marker:not(.colored).distant, body.colored.light .optics .viewport.auto .object.marker:not(.colored).distant {
+  stroke: black;
+  fill: black;
+}
+body.colored .optics .viewport.light .object.marker:hover, body.colored.light .optics .viewport.auto .object.marker:hover {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport.light .object.marker:hover.distant, body.colored.light .optics .viewport.auto .object.marker:hover.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.light .object.marker.selected, body.colored.light .optics .viewport.auto .object.marker.selected {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport.light .object.marker.selected.distant, body.colored.light .optics .viewport.auto .object.marker.selected.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.dark .object.marker:not(.colored), body.colored.dark .optics .viewport.auto .object.marker:not(.colored) {
+  stroke: #8080b3;
+  fill: #8080b3;
+}
+body.colored .optics .viewport.dark .object.marker:not(.colored).distant, body.colored.dark .optics .viewport.auto .object.marker:not(.colored).distant {
+  stroke: white;
+  fill: white;
+}
+body.colored .optics .viewport.dark .object.marker:hover, body.colored.dark .optics .viewport.auto .object.marker:hover {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport.dark .object.marker:hover.distant, body.colored.dark .optics .viewport.auto .object.marker:hover.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.dark .object.marker.selected, body.colored.dark .optics .viewport.auto .object.marker.selected {
+  stroke: var(--primary-color);
+}
+body.colored .optics .viewport.dark .object.marker.selected.distant, body.colored.dark .optics .viewport.auto .object.marker.selected.distant {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _binary-patterns.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                            _binary-colors2.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _data-editor.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.data-editor {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.data-editor .tab-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.data-editor .tab-content .tab-pane {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+}
+.data-editor table tr {
+  display: table-row;
+}
+.data-editor table tr .grabbable {
+  cursor: grabbing;
+}
+.data-editor table tr th, .data-editor table tr td {
+  white-space: nowrap;
+}
+.data-editor table tr th .tile, .data-editor table tr td .tile {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+.data-editor .tab-pane:not(.coeffs):not(.data) form {
+  padding: 15px;
+}
+.data-editor #coeffs-list mjx-mo {
+  display: none;
+}
+.data-editor .math.well {
+  width: 75%;
+  padding: 10px;
+  margin: auto;
+}
+.data-editor mjx-container[jax=CHTML][display=true] {
+  display: inline;
+}
+.data-editor .input-group .input-group-addon .units {
+  width: 40px;
+}
+
+body.binary .data-editor table tr th .tile, body.binary .data-editor table tr td .tile {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=") !important;
+  background-size: 2px 2px !important;
+  background-repeat: repeat !important;
+  image-rendering: pixelated !important;
+  background-color: white !important;
+}
+
+body.monochrome .data-editor table tr th .tile, body.monochrome .data-editor table tr td .tile {
+  background-color: #6060a0 !important;
+}
+
+body:not(.binary) .data-editor table tr th.material .tile, body:not(.binary) .data-editor table tr td.material .tile {
+  mix-blend-mode: hard-light;
+}
+body:not(.binary).dark .data-editor table tr th.material .tile, body:not(.binary).dark .data-editor table tr td.material .tile {
+  mix-blend-mode: normal;
+}
+
+@media (min-width: 480px) {
+  .data-editor table tr th, .data-editor table tr td {
+    width: 10%;
+  }
+  .data-editor table tr th.kind, .data-editor table tr th.material, .data-editor table tr th.name, .data-editor table tr td.kind, .data-editor table tr td.material, .data-editor table tr td.name {
+    width: 15%;
+  }
+}
+/******************************************************************************\
+|                                                                              |
+|                                _elements.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+body:not(.binary) .optics .viewport .elements {
+  fill: #6060a0;
+  stroke: #6060a0;
+}
+
+.optics .viewport.elements-unshaded .filled .specular {
+  fill: white !important;
+  fill-opacity: 0.2 !important;
+}
+.optics .viewport.elements-unshaded .stroked .edges {
+  stroke-opacity: 1;
+}
+.optics .viewport.elements-unillustrated .lens .back {
+  visibility: hidden;
+}
+.optics .viewport.elements-hidden .lens, .optics .viewport.elements-hidden .shadow {
+  visibility: hidden;
+}
+.optics .viewport.elements-unfilled .lens .filled {
+  visibility: hidden;
+}
+.optics .viewport.elements-unstroked .lens .stroked {
+  visibility: hidden;
+}
+.optics .viewport.elements-unshadowed .shadow {
+  visibility: hidden;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                              _lens-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.abbe.diagram .lens.markers .lens.marker svg {
+  stroke: black;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  overflow: visible;
+}
+
+.abbe.diagram.light .lens.markers .lens.marker svg,
+.light .abbe.diagram.auto .lens.markers .lens.marker svg {
+  stroke: black;
+}
+
+.abbe.diagram.dark .lens.markers .lens.marker svg,
+.dark .abbe.diagram.auto .lens.markers .lens.marker svg {
+  stroke: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _lenses.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .lens {
+  overflow: visible;
+}
+.optics .viewport .lens .filled .transmitted {
+  fill-opacity: 1;
+  stroke-opacity: 0;
+  mix-blend-mode: hard-light;
+}
+.optics .viewport .lens .filled .diffuse {
+  fill-opacity: 0;
+  stroke-opacity: 0;
+}
+.optics .viewport .lens .filled .specular {
+  fill: url(#highlight);
+  fill-opacity: 1;
+  mix-blend-mode: lighten;
+  stroke-opacity: 0;
+  pointer-events: none;
+}
+.optics .viewport .lens .stroked .edges {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+.optics .viewport .lens > .back {
+  pointer-events: none;
+}
+.optics .viewport .lens > .back .filled .specular {
+  fill: url(#inverse-highlight);
+  fill-opacity: 0.5;
+}
+.optics .viewport .lens > .back .stroked .edges {
+  stroke-opacity: 0.5;
+}
+
+.layer .lens {
+  overflow: visible;
+}
+.layer .lens .stroked {
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.layer[name=underlay] .lens {
+  pointer-events: none;
+}
+
+body.binary .optics .viewport .lens {
+  fill: grey;
+  stroke: black;
+}
+body.binary .optics .viewport .lens.selected {
+  fill: #4d4d4d;
+}
+
+body.monochrome .optics .viewport .lens {
+  fill: #606070;
+  stroke: #606070;
+}
+body.monochrome .optics .viewport .lens.selected {
+  fill: #484855;
+}
+
+.stroked {
+  fill-opacity: 0;
+}
+
+.optics .viewport.dark .lens .filled .transmitted,
+body.dark .optics .viewport.auto .lens .filled .transmitted {
+  mix-blend-mode: normal;
+  fill-opacity: 0.25;
+}
+.optics .viewport.dark .lens .filled .diffuse,
+body.dark .optics .viewport.auto .lens .filled .diffuse {
+  mix-blend-mode: overlay;
+  fill-opacity: 0.5;
+}
+.optics .viewport.dark .lens .filled .specular,
+body.dark .optics .viewport.auto .lens .filled .specular {
+  mix-blend-mode: plus-lighter;
+  fill-opacity: 0.5;
+}
+.optics .viewport.dark .lens:hover .filled .transmitted,
+body.dark .optics .viewport.auto .lens:hover .filled .transmitted {
+  fill-opacity: 0.5;
+}
+.optics .viewport.dark .lens.selected .filled .transmitted,
+body.dark .optics .viewport.auto .lens.selected .filled .transmitted {
+  fill-opacity: 0.5;
+}
+
+body.colored .optics .viewport .lens:hover .filled .transmitted {
+  fill: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport .lens:hover .stroked .edges {
+  stroke: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport .lens.selected .filled .transmitted {
+  fill: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport .lens.selected .stroked .edges {
+  stroke: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport.dark .lens:hover .filled .transmitted, body.colored.dark .optics .viewport.auto .lens:hover .filled .transmitted {
+  fill: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport.dark .lens:hover .stroked .edges, body.colored.dark .optics .viewport.auto .lens:hover .stroked .edges {
+  stroke: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport.dark .lens.selected .filled .transmitted, body.colored.dark .optics .viewport.auto .lens.selected .filled .transmitted {
+  fill: hsl(220, 100%, 66%);
+}
+body.colored .optics .viewport.dark .lens.selected .stroked .edges, body.colored.dark .optics .viewport.auto .lens.selected .stroked .edges {
+  stroke: hsl(220, 100%, 66%);
+}
+
+[browser=firefox] .optics .viewport .lens {
+  visibility: visible;
+}
+[browser=firefox] .optics .viewport .lens .filled .transmitted {
+  mix-blend-mode: normal !important;
+  fill-opacity: 0.25 !important;
+}
+[browser=firefox] .optics .viewport .lens .filled .diffuse {
+  mix-blend-mode: overlay !important;
+  fill-opacity: 0.125 !important;
+}
+[browser=firefox] .optics .viewport .lens .filled .specular {
+  mix-blend-mode: normal !important;
+  fill-opacity: 1 !important;
+}
+[browser=firefox] .optics .viewport .lens > .back .filled .specular {
+  fill-opacity: 0.5 !important;
+}
+[browser=firefox] .optics .viewport [name=shadows] {
+  opacity: 0.5;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                               _optic-grids.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+body.binary .optics .viewport pattern svg path,
+body.binary .abbe.diagram pattern svg path {
+  stroke: black;
+  stroke-opacity: 0.33;
+}
+body.binary .optics .viewport.dark pattern svg path, body.binary.dark .optics .viewport.auto pattern svg path,
+body.binary .abbe.diagram.dark pattern svg path, body.binary.dark .abbe.diagram.auto pattern svg path {
+  stroke: white;
+}
+
+body:not(.binary).monochrome .optics .viewport pattern svg path,
+body:not(.binary).monochrome .abbe.diagram pattern svg path, body:not(.binary).colored .optics .viewport pattern svg path,
+body:not(.binary).colored .abbe.diagram pattern svg path {
+  stroke: #6060a0;
+  stroke-opacity: 0.33;
+}
+body:not(.binary).monochrome .optics .viewport.colored pattern svg path,
+body:not(.binary).monochrome .abbe.diagram.colored pattern svg path, body:not(.binary).colored .optics .viewport.colored pattern svg path,
+body:not(.binary).colored .abbe.diagram.colored pattern svg path {
+  stroke: white;
+}
+body:not(.binary).monochrome .optics .viewport.dark pattern svg path, body:not(.binary).monochrome.dark .optics .viewport.auto pattern svg path,
+body:not(.binary).monochrome .abbe.diagram.dark pattern svg path, body:not(.binary).monochrome.dark .abbe.diagram.auto pattern svg path, body:not(.binary).colored .optics .viewport.dark pattern svg path, body:not(.binary).colored.dark .optics .viewport.auto pattern svg path,
+body:not(.binary).colored .abbe.diagram.dark pattern svg path, body:not(.binary).colored.dark .abbe.diagram.auto pattern svg path {
+  stroke: #8080b3;
+}
+body:not(.binary).monochrome .optics .viewport.light pattern svg path, body:not(.binary).monochrome.light .optics .viewport.auto pattern svg path,
+body:not(.binary).monochrome .abbe.diagram.light pattern svg path, body:not(.binary).monochrome.light .abbe.diagram.auto pattern svg path, body:not(.binary).colored .optics .viewport.light pattern svg path, body:not(.binary).colored.light .optics .viewport.auto pattern svg path,
+body:not(.binary).colored .abbe.diagram.light pattern svg path, body:not(.binary).colored.light .abbe.diagram.auto pattern svg path {
+  stroke: #8080b3;
+}
+body:not(.binary).monochrome .optics .viewport.light.colored pattern svg path, body:not(.binary).monochrome.light .optics .viewport.auto.colored pattern svg path,
+body:not(.binary).monochrome .abbe.diagram.light.colored pattern svg path, body:not(.binary).monochrome.light .abbe.diagram.auto.colored pattern svg path, body:not(.binary).colored .optics .viewport.light.colored pattern svg path, body:not(.binary).colored.light .optics .viewport.auto.colored pattern svg path,
+body:not(.binary).colored .abbe.diagram.light.colored pattern svg path, body:not(.binary).colored.light .abbe.diagram.auto.colored pattern svg path {
+  stroke: #b8cfff;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                             _optic-markers.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .marker:not(.colored) {
+  fill: black;
+}
+
+.optics .viewport.light .marker:not(.colored),
+body.light .optics .viewport.auto .marker:not(.colored) {
+  fill: black;
+}
+
+.optics .viewport.dark .marker:not(.colored),
+body.dark .optics .viewport.auto .marker:not(.colored) {
+  fill: white;
+}
+
+body.colored .optics .viewport .marker:hover {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport .marker.selected {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.light .marker:hover, body.colored.light .optics .viewport.auto .marker:hover {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.light .marker.selected, body.colored.light .optics .viewport.auto .marker.selected {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.dark .marker:hover, body.colored.dark .optics .viewport.auto .marker:hover {
+  fill: var(--primary-color);
+}
+body.colored .optics .viewport.dark .marker.selected, body.colored.dark .optics .viewport.auto .marker.selected {
+  fill: var(--primary-color);
+}
+
+body.binary .optics .viewport .marker {
+  fill: black !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _optics.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optic-editor .mainbar {
+  overflow: hidden;
+}
+
+.optics-info.info-bar:not(:empty) {
+  width: 135px;
+}
+
+.materials-info.info-bar:not(:empty) {
+  width: 125px;
+}
+
+body.binary .optics .toolbar #current-material .tile {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAABKADAAQAAAABAAAABAAAAADFbP4CAAAAHUlEQVQIHWNgYGD4D8VAioGBCUwiEYxIbJBKTBUAklwDA2Q5bmQAAAAASUVORK5CYII=") !important;
+  background-size: 2px 2px !important;
+  background-repeat: repeat !important;
+  image-rendering: pixelated !important;
+  background-color: white !important;
+}
+
+body.monochrome .optics .toolbar #current-material .tile {
+  background-color: #6060a0 !important;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _sensors.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .elements .sensor {
+  overflow: visible;
+}
+.optics .viewport .elements .sensor path {
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+body.binary .optics .viewport .elements .sensor {
+  stroke: black;
+}
+
+body:not(.binary) .optics .viewport .elements .sensor {
+  stroke: #4d4d80;
+}
+body:not(.binary) .optics .viewport .elements .sensor:hover path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport .elements .sensor.selected path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .elements .sensor, body:not(.binary).dark .optics .viewport.auto .elements .sensor {
+  stroke: #8080b3;
+}
+body:not(.binary) .optics .viewport.dark .elements .sensor:hover path, body:not(.binary).dark .optics .viewport.auto .elements .sensor:hover path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .elements .sensor.selected path, body:not(.binary).dark .optics .viewport.auto .elements .sensor.selected path {
+  stroke: var(--primary-color);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _stops.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .elements .stop {
+  overflow: visible;
+}
+.optics .viewport .elements .stop path {
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+.optics .viewport .stop.annotation .marker:hover {
+  fill: var(--primary-color);
+}
+.optics .viewport .stop.annotation .marker.selected {
+  fill: var(--primary-color);
+}
+
+body.binary .optics .viewport .elements .stop path {
+  stroke: black;
+}
+
+body:not(.binary) .optics .viewport .elements .stop path {
+  stroke: #4d4d80;
+}
+body:not(.binary) .optics .viewport .elements .stop:hover path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport .elements .stop.selected path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .elements .stop path, body:not(.binary).dark .optics .viewport.auto .elements .stop path {
+  stroke: #8080b3;
+}
+body:not(.binary) .optics .viewport.dark .elements .stop:hover path, body:not(.binary).dark .optics .viewport.auto .elements .stop:hover path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .elements .stop.selected path, body:not(.binary).dark .optics .viewport.auto .elements .stop.selected path {
+  stroke: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .stop.annotation .marker:hover, body:not(.binary).dark .optics .viewport.auto .stop.annotation .marker:hover {
+  fill: var(--primary-color);
+}
+body:not(.binary) .optics .viewport.dark .stop.annotation .marker.selected, body:not(.binary).dark .optics .viewport.auto .stop.annotation .marker.selected {
+  fill: var(--primary-color);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                _surfaces.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .element .surface {
+  fill: none;
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+  visibility: hidden;
+  pointer-events: stroke;
+}
+.optics .viewport .element .surface.selected, .optics .viewport .element .surface:hover {
+  fill: none;
+  visibility: visible;
+  stroke-opacity: 1;
+  stroke-width: 3;
+}
+.optics .viewport .element .surface.selected .center-of-curvature, .optics .viewport .element .surface:hover .center-of-curvature {
+  overflow: visible;
+}
+.optics .viewport .element .surface.selected .center-of-curvature path, .optics .viewport .element .surface:hover .center-of-curvature path {
+  stroke: none;
+  fill-opacity: 1;
+}
+.optics .viewport .element .surface.silver, .optics .viewport .element .surface.aluminum, .optics .viewport .element .surface.dielectric, .optics .viewport .element .surface.gold {
+  visibility: visible;
+}
+.optics .viewport .element .surface.silver, .optics .viewport .element .surface.aluminum, .optics .viewport .element .surface.dielectric {
+  stroke: #4d4d80;
+}
+.optics .viewport .element .surface.gold {
+  stroke: #eccf79;
+}
+
+.colored .optics .viewport .element .surface:hover {
+  stroke: var(--primary-color);
+}
+.colored .optics .viewport .element .surface.selected {
+  stroke: var(--primary-color);
+}
+.colored .optics .light.viewport .element .surface.silver, .colored .optics .light.viewport .element .surface.aluminum, .colored .optics .light.viewport .element .surface.dielectric, .colored.light .optics .viewport.auto .element .surface.silver, .colored.light .optics .viewport.auto .element .surface.aluminum, .colored.light .optics .viewport.auto .element .surface.dielectric {
+  stroke: #4d4d80;
+}
+.colored .optics .dark.viewport .element .surface:hover, .colored.dark .optics .viewport.auto .element .surface:hover {
+  stroke: var(--primary-color);
+}
+.colored .optics .dark.viewport .element .surface.selected, .colored.dark .optics .viewport.auto .element .surface.selected {
+  stroke: var(--primary-color);
+}
+.colored .optics .dark.viewport .element .surface.silver, .colored .optics .dark.viewport .element .surface.aluminum, .colored .optics .dark.viewport .element .surface.dielectric, .colored.dark .optics .viewport.auto .element .surface.silver, .colored.dark .optics .viewport.auto .element .surface.aluminum, .colored.dark .optics .viewport.auto .element .surface.dielectric {
+  stroke: #c0c0d9;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _annotations.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .annotation {
+  pointer-events: none;
+}
+.optics .viewport .annotation.lens, .optics .viewport .annotation.stop {
+  display: none;
+}
+.optics .viewport .annotation.lens:first-child:last-child, .optics .viewport .annotation.stop:first-child:last-child {
+  display: block;
+}
+.optics .viewport.hide-annotations .annotation {
+  display: none !important;
+}
+.optics .viewport.hide-thickness .annotation .thickness {
+  display: none;
+}
+.optics .viewport.hide-spacing .annotation .spacing {
+  display: none;
+}
+.optics .viewport.hide-focal-points .annotation .focal.point {
+  display: none;
+}
+.optics .viewport.hide-principal-planes .annotation .principal.plane {
+  display: none;
+}
+
+body.binary .optics .viewport .line, body.binary .optics .viewport .arc, body.binary .optics .viewport .arrow,
+body.binary .abbe.diagram .line,
+body.binary .abbe.diagram .arc,
+body.binary .abbe.diagram .arrow {
+  stroke: black;
+}
+
+body:not(.binary).colored .optics .viewport .annotation.object .line, body:not(.binary).colored .optics .viewport .annotation.object .arrow, body:not(.binary).colored .optics .viewport .annotation.object .arc {
+  stroke: hsl(220, 100%, 66%);
+}
+body:not(.binary).colored .optics .viewport .annotation.image .line, body:not(.binary).colored .optics .viewport .annotation.image .arrow, body:not(.binary).colored .optics .viewport .annotation.image .arc {
+  stroke: #f07575;
+}
+body:not(.binary).colored .optics .viewport.dark .annotation.object .line, body:not(.binary).colored .optics .viewport.dark .annotation.object .arrow, body:not(.binary).colored .optics .viewport.dark .annotation.object .arc, body:not(.binary).colored.dark .optics .viewport.auto .annotation.object .line, body:not(.binary).colored.dark .optics .viewport.auto .annotation.object .arrow, body:not(.binary).colored.dark .optics .viewport.auto .annotation.object .arc {
+  stroke: hsl(200, 100%, 66%);
+}
+body:not(.binary).colored .optics .viewport.dark .annotation.image .line, body:not(.binary).colored .optics .viewport.dark .annotation.image .arrow, body:not(.binary).colored .optics .viewport.dark .annotation.image .arc, body:not(.binary).colored.dark .optics .viewport.auto .annotation.image .line, body:not(.binary).colored.dark .optics .viewport.auto .annotation.image .arrow, body:not(.binary).colored.dark .optics .viewport.auto .annotation.image .arc {
+  stroke: #f5a3a3;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _axes.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .axis {
+  stroke: black;
+}
+.optics .viewport .axis.principal {
+  stroke-width: 2;
+}
+
+.optics .viewport.dark .axis,
+body.dark .optics .viewport.auto .axis {
+  stroke: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                               _diagrams.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.diagram.viewport text.label {
+  font-size: 12px;
+  cursor: default;
+}
+.diagram.viewport.unshadowed [name=shadows] {
+  display: none !important;
+}
+.diagram.viewport.hide-labels .label {
+  display: none;
+}
+
+body.colored .diagram.viewport.light, body.colored.light .diagram.viewport.auto {
+  background: white;
+}
+body.colored .diagram.viewport.dark, body.colored.dark .diagram.viewport.auto {
+  background: #272740;
+}
+body.colored .diagram.viewport.dark .shadow, body.colored.dark .diagram.viewport.auto .shadow {
+  filter: url(#softish-shadow);
+}
+
+body:not(.binary) .diagram.viewport {
+  background: #c0c0d9;
+}
+body:not(.binary) .diagram.viewport .shadow {
+  filter: url(#colored-softish-shadow);
+}
+body:not(.binary) .diagram.viewport.dark, body:not(.binary).dark .diagram.viewport.auto {
+  background: #272740;
+}
+body:not(.binary) .diagram.viewport.dark .shadow, body:not(.binary).dark .diagram.viewport.auto .shadow {
+  filter: url(#softish-shadow);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _optic-viewports.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+.optics .viewport .annotation text, .optics .viewport .dimensioning text {
+  font-size: 12px;
+}
+
+body:not(.binary).monochrome .optics .viewport,
+body:not(.binary).monochrome .abbe.diagram, body:not(.binary).colored .optics .viewport,
+body:not(.binary).colored .abbe.diagram {
+  background: #c0c0d9;
+}
+body:not(.binary).monochrome .optics .viewport.colored,
+body:not(.binary).monochrome .abbe.diagram.colored, body:not(.binary).colored .optics .viewport.colored,
+body:not(.binary).colored .abbe.diagram.colored {
+  background: #b0c0f0;
+}
+body:not(.binary).monochrome .optics .viewport.dark, body:not(.binary).monochrome.dark .optics .viewport.auto,
+body:not(.binary).monochrome .abbe.diagram.dark, body:not(.binary).monochrome.dark .abbe.diagram.auto, body:not(.binary).colored .optics .viewport.dark, body:not(.binary).colored.dark .optics .viewport.auto,
+body:not(.binary).colored .abbe.diagram.dark, body:not(.binary).colored.dark .abbe.diagram.auto {
+  background: #3a3a60;
+}
+body:not(.binary).monochrome .optics .viewport.dark.colored, body:not(.binary).monochrome.dark .optics .viewport.auto.colored,
+body:not(.binary).monochrome .abbe.diagram.dark.colored, body:not(.binary).monochrome.dark .abbe.diagram.auto.colored, body:not(.binary).colored .optics .viewport.dark.colored, body:not(.binary).colored.dark .optics .viewport.auto.colored,
+body:not(.binary).colored .abbe.diagram.dark.colored, body:not(.binary).colored.dark .abbe.diagram.auto.colored {
+  background: #273060;
+}
+body:not(.binary).monochrome .optics .viewport.dark .jqplot-grid-canvas + .jqplot-series-shadowCanvas, body:not(.binary).monochrome.dark .optics .viewport.auto .jqplot-grid-canvas + .jqplot-series-shadowCanvas,
+body:not(.binary).monochrome .abbe.diagram.dark .jqplot-grid-canvas + .jqplot-series-shadowCanvas, body:not(.binary).monochrome.dark .abbe.diagram.auto .jqplot-grid-canvas + .jqplot-series-shadowCanvas, body:not(.binary).colored .optics .viewport.dark .jqplot-grid-canvas + .jqplot-series-shadowCanvas, body:not(.binary).colored.dark .optics .viewport.auto .jqplot-grid-canvas + .jqplot-series-shadowCanvas,
+body:not(.binary).colored .abbe.diagram.dark .jqplot-grid-canvas + .jqplot-series-shadowCanvas, body:not(.binary).colored.dark .abbe.diagram.auto .jqplot-grid-canvas + .jqplot-series-shadowCanvas {
+  background: #404060;
+  mix-blend-mode: multiply;
+}
+body:not(.binary).monochrome .optics .viewport.dark .jqplot-highlighter-tooltip, body:not(.binary).monochrome.dark .optics .viewport.auto .jqplot-highlighter-tooltip,
+body:not(.binary).monochrome .abbe.diagram.dark .jqplot-highlighter-tooltip, body:not(.binary).monochrome.dark .abbe.diagram.auto .jqplot-highlighter-tooltip, body:not(.binary).colored .optics .viewport.dark .jqplot-highlighter-tooltip, body:not(.binary).colored.dark .optics .viewport.auto .jqplot-highlighter-tooltip,
+body:not(.binary).colored .abbe.diagram.dark .jqplot-highlighter-tooltip, body:not(.binary).colored.dark .abbe.diagram.auto .jqplot-highlighter-tooltip {
+  background-color: fade(black, 50%);
+}
+body:not(.binary).monochrome .optics .viewport.light, body:not(.binary).monochrome.light .optics .viewport.auto,
+body:not(.binary).monochrome .abbe.diagram.light, body:not(.binary).monochrome.light .abbe.diagram.auto, body:not(.binary).colored .optics .viewport.light, body:not(.binary).colored.light .optics .viewport.auto,
+body:not(.binary).colored .abbe.diagram.light, body:not(.binary).colored.light .abbe.diagram.auto {
+  background: white;
+}
+body:not(.binary).monochrome .optics .viewport.light.colored, body:not(.binary).monochrome.light .optics .viewport.auto.colored,
+body:not(.binary).monochrome .abbe.diagram.light.colored, body:not(.binary).monochrome.light .abbe.diagram.auto.colored, body:not(.binary).colored .optics .viewport.light.colored, body:not(.binary).colored.light .optics .viewport.auto.colored,
+body:not(.binary).colored .abbe.diagram.light.colored, body:not(.binary).colored.light .abbe.diagram.auto.colored {
+  background: #b0c0f0;
+}
+body:not(.binary) .optics .viewport.unshadowed .shadow,
+body:not(.binary) .abbe.diagram.unshadowed .shadow {
+  display: none !important;
+}
+
+[browser=firefox] .optics .soft.shadow {
+  opacity: 0.125;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                  _index.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                  styles.scss                                 |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2020, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+/*# sourceMappingURL=styles.css.map */

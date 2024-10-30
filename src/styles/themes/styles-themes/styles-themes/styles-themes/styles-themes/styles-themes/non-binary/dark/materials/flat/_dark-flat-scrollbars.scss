@@ -1,0 +1,35 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-flat-scrollbars.scss                       |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../navs/materials/flat/flat-scrollbars";
+@use "../../navs/dark-scrollbars";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.dark.flat-scrollbars,
+	&.dark.flat.auto-scrollbars {
+
+		//
+		// scrollbar thumbs
+		//
+
+		@include flat-scrollbars.thumb-shaded(dark-scrollbars.$color, dark-scrollbars.$hover-color, dark-scrollbars.$active-color);
+	}
+}

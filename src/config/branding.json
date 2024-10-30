@@ -1,24 +1,24 @@
 {
-	"name": "Sharedigm",
-	"title": "Sharedigm",
+	"name": "Optic Explorer",
+	"title": "Optics for Everyone",
 
 	"header": {
+		"background": "hsl(220, 75%, 25%)",
+		"color": "#ccccdd",
 
 		"brand": {
 			"logo": {
-				"src": "images/logos/logo.svg",
+				"src": "images/logos/logo-white.svg",
+				"background": "#4080ff",
 				"border": "rounded"
 			},
 
 			"logotype": {
-				"font": "Syncopate",
-
+				"font": "F18",
 				"names": {
-					"Share": {
-						"color": ""
-					},
-					"digm": {
-						"color": "hsl(220, 100%, 66%)"
+					"Optic": {},
+					"Explorer": {
+						"color": "#4080ff"
 					}
 				}
 			}
@@ -37,13 +37,9 @@
 				"icon": "fa fa-lightbulb",
 				"href": "#features"
 			},
-			"Apps": {
-				"icon": "fa fa-rocket",
-				"href": "#apps"
-			},
-			"Platform": {
-				"icon": "fa fa-laptop",
-				"href": "#platform",
+			"Contribute": {
+				"icon": "fa fa-users",
+				"href": "#contribute",
 				"platform": "desktop-only"
 			}
 		},
@@ -65,146 +61,107 @@
 	},
 
 	"welcome": {
-		"background": "linear-gradient(to bottom, hsl(220, 75%, 0%) 0%, hsla(220, 50%, 50%, 100%) 100%)",
+		"background_color": "hsl(220, 75%, 25%)",
 		"template": "templates/welcome.tpl",
 
 		"carousel": {
 			"template": "templates/welcome/carousel.tpl",
-			"color": "white"
+			"color": "rgb(204, 204, 221)",
+			"font_size": "13px"
 		},
 
 		"splash": {
+			"background (white)": "rgba(255, 255, 255, 0.5)",
+			"background2": "linear-gradient(to bottom, hsl(220, 50%, 90%) 0%, hsl(220, 50%, 70%) 100%)",
 			"background": "transparent",
-			"background2": "linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 100%)",
 
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
+					"src": "images/logos/logo-blue.svg",
 					"border": "rounded"
 				},
 
 				"logotype": {
-					"font": "Syncopate",
+					"font": "F18",
+					"long": true,
 
 					"names": {
-						"Share": {
+						"Optic": {
 							"color": "white"
-						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						}, 
+						"Explorer": {
+							"color": "#4080ff"
 						}
 					}
 				}
 			},
 
 			"tagline": {
-				"text": "Sharing Made Simple",
-				"font": "Syncopate",
-				"font_weight": "bold",
+				"text": "Optics for Everyone",
+				"font": "F18",
 				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
-				"border": "rounded"
+				"color2": "hsl(220, 75%, 25%)"
 			},
 
 			"description": {
-				"text": "Self-hostable cloud based <a href='#features/easy-to-use'>operating system</a>, <a href='#uses/file-sharing'>file sharing</a>, and <a href='#uses/social-networking'>social network</a>.",
-				"color": "white"
+				"text": "Easy to use optical exploration, simulation and design",
+				"font": "F18",
+				"color": "#4080ff",
+				"color2": "hsl(220, 75%, 25%)"
 			}
-		},
-
-		"crawler2": {
-			"scale": 1,
-			"rotation": 30,
-			"fov": 100,
-			"step": 2,
-			"time_step": 30,
-			"items_per_row": 7,
-
-			"images": {
-				"Albums": "images/icons/apps/file-browser.svg",
-				"Audio": "images/icons/apps/file-browser.svg",
-				"Audiobook.mp3": "images/icons/files/mp3.svg",
-				"Code": "images/icons/apps/file-browser.svg",
-				"Contacts": "images/icons/apps/file-browser.svg",
-				"Data": "images/icons/apps/file-browser.svg",
-				"database.sql": "images/icons/files/sql.svg",
-
-				"Documents": "images/icons/apps/file-browser.svg",
-				"Favorites": "images/icons/apps/file-browser.svg",
-				"Untitled": "images/icons/apps/file-browser.svg",
-				"Fonts": "images/icons/apps/file-browser.svg",
-				"Gallery": "images/icons/apps/file-browser.svg",
-				"Goo": "images/icons/apps/file-browser.svg",
-				"index.html": "images/icons/files/html.svg",
-
-				"main.js": "images/icons/files/js.svg",
-				"Maps": "images/icons/apps/file-browser.svg",
-				"Map.kml": "images/icons/files/kml.svg",
-				"Movies": "images/icons/apps/file-browser.svg",
-				"Music": "images/icons/apps/file-browser.svg",
-				"parser.cpp": "images/icons/files/cpp.svg",
-				"parser.h": "images/icons/files/h.svg",
-
-				"Pictures": "images/icons/apps/file-browser.svg",
-				"Picture.png": "images/icons/files/png.svg",
-				"Podcasts": "images/icons/apps/file-browser.svg",
-				"Podcast.mp3": "images/icons/files/mp3.svg",
-				"Portrait.jpg": "images/icons/files/jpg.svg",
-				"Resume.doc": "images/icons/files/doc.svg",
-				"Report.pdf": "images/icons/files/pdf.svg",
-
-				"Reminders.doc": "images/icons/files/doc.svg",
-				"script.py": "images/icons/files/py.svg",
-				"Scripts": "images/icons/apps/file-browser.svg",
-				"Song.mp3": "images/icons/files/mp3.svg",
-				"Songs": "images/icons/apps/file-browser.svg",
-				"To Do List.txt": "images/icons/files/txt.svg",
-				"Work": "images/icons/apps/file-browser.svg"
-			}
-		},
-
-		"overlay2": {
-			"far_color": "hsl(220, 75%, 25%)",
-			"near_color": "hsla(220, 100%, 80%, 25%)"
 		}
 	},
 
 	"page":{
 		"background": "",
 		"theme": "",
+		"font": "sans-serif",
+
+		"heading1": {
+			"color": "#4080ff",
+
+			"icon": {
+				"color": "hsl(200, 100%, 66%)"
+			}
+		},
+		"heading2": {
+			"color": "#4080ff",
+
+			"icon": {
+				"color": "hsl(200, 100%, 66%)"
+			}
+		},
+		"heading3": {
+			"color": "#4080ff",
+
+			"icon": {
+				"color": "hsl(200, 100%, 66%)"
+			}
+		},
 
 		"footer": {
-			"background": "#272740",
-			"color": null,
+			"background": "hsl(220, 75%, 25%)",
+			"color": "white",
 
 			"brand": {
 				"logo": {
-					"src": "images/logos/logo.svg",
-					"href": "#",
+					"src": "images/logos/logo-white.svg",
+					"background": "#4080ff",
 					"border": "rounded"
 				},
-
 				"logotype": {
-					"font": "Syncopate",
+					"font": "F18",
+					"long": true,
 
 					"names": {
-						"Share": {
+						"Optic": {
 							"color": "white"
-						},
-						"digm": {
-							"color": "hsl(220, 100%, 66%)"
+						}, 
+						"Explorer": {
+							"color": "#4080ff"
 						}
 					}
 				}
-			},
-
-			"tagline": {
-				"text": "Sharing Made Simple",
-				"font": "Syncopate",
-				"font_weight": "bold",
-				"color": "white",
-				"background": "hsl(220, 100%, 66%)",
-				"border": "rounded"
 			},
 
 			"info": {
@@ -226,10 +183,6 @@
 						"Apps": {
 							"icon": "fa fa-rocket",
 							"href": "#apps"
-						},
-						"Platform": {
-							"icon": "fa fa-laptop",
-							"href": "#platform"
 						}
 					}
 				},
@@ -252,10 +205,6 @@
 						"Code of Conduct": {
 							"icon": "fa fa-file-alt",
 							"href": "#policies/code-of-conduct"
-						},
-						"All": {
-							"icon": "fa fa-file-alt",
-							"href": "#policies"
 						}
 					}
 				},
@@ -278,13 +227,13 @@
 	},
 
 	"footer": {
-		"background": "hsl(220, 100%, 66%)",
-		"font": "",
+		"background": "hsl(220, 75%, 25%)",
 		"color": "white",
 		"copyright": {
 			"year": "2024",
-			"logo": "images/logos/logo.svg",
-			"entity": "Sharedigm"
+			"entity": "PlaneOptics",
+			"logo": null,
+			"url": "http://www.planeoptics.com"
 		}
 	}
 }

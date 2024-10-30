@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                            _dark-app-launcher.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$icon-color: colors.$dark-grey;
+$icon-hover-color: $icon-color;
+$icon-active-color: colors.darken($icon-hover-color, 10%);
+$icon-border-color: colors.darken($icon-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.dark {
+		.app-launcher.app .icon-grid,
+		.app-icons {
+			.item {
+				.icon {
+					&:not(.colored) {
+						background: $icon-color;
+						border-color: $icon-border-color;
+
+						i {
+							color: text-colors.$dark-color !important;
+						}
+
+						&:active {
+							background: $icon-active-color;
+							border-color: $icon-border-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

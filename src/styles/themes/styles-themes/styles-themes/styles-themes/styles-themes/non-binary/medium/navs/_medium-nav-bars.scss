@@ -1,0 +1,257 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-nav-bars.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/medium-branding";
+
+//
+// colors
+//
+
+$color: colors.$light-grey;
+$brand-color: black;
+$hover-color: colors.$very-dark-grey;
+$active-color: colors.$very-dark-grey;
+$inverse-brand-color: white;
+$inverse-hover-color: white;
+$inverse-active-color: white;
+$background-color: colors.$ultra-dark-grey;
+$active-background-color: medium-branding.$primary-color;
+$border-color: colors.$medium-grey;
+$indicator-background-color: colors.$very-very-very-light-grey;
+$indicator-border-color: $border-color;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.navbar {
+
+		//
+		// navigation
+		//
+
+		.navbar-nav {
+			> li {
+
+				//
+				// active state
+				//
+
+				&.active {
+					background-color: $active-background-color;
+
+					> a, > a:hover, > a:focus {
+						color: $active-color;
+						background-color: unset;
+
+						i, label {
+							color: $active-color;
+						}
+					}
+				}
+
+				//
+				// open state
+				//
+
+				&.open:not(.colored) {
+					background-color: $active-background-color;
+
+					> a, > a:focus {
+						color: $active-color;
+
+						i, label {
+							color: $active-color;
+						}
+					}
+				}
+			}
+
+			//
+			// apps bar
+			//
+
+			&.apps {
+				> li {
+					&.current {
+						> a {
+							> i {
+								color: white !important;
+							}
+
+							> svg {
+								fill: white !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body:not(.binary):not(.dark) {
+	.navbar {
+		background-color: $background-color;
+
+		//
+		// brand
+		//
+
+		.brand {
+			color: $brand-color;
+		}
+
+		//
+		// navigation
+		//
+
+		.navbar-nav {
+			color: $color;
+
+			> li {
+
+				//
+				// inactive state
+				//
+
+				&:not(.active):not(.open) {
+					> a, > a:focus {
+						color: inherit;
+
+						//
+						// hover state
+						//
+
+						&:hover:not(.colored) {
+							color: $hover-color;
+
+							i, label {
+								color: $hover-color;
+							}
+						}
+					}
+				}
+			}
+
+			//
+			// profile thumbnails
+			//
+
+			.thumbnail.missing {
+
+				// use header icon color
+				//
+				i {
+					color: inherit;
+				}
+			}
+
+			//
+			// nav bar indicators
+			//
+
+			.indicator {
+				.bar {
+					background-color: $indicator-background-color;
+					border-color: $indicator-border-color;
+				}
+			}
+
+			//
+			// apps bar
+			//
+
+			&.apps {
+				border-color: $border-color;
+			}
+		}
+	}
+
+	.navbar-inverse {
+
+		//
+		// brand
+		//
+
+		.brand {
+			color: $inverse-brand-color;
+		}
+
+		//
+		// navigation
+		//
+
+		.navbar-nav {
+			color: $color;
+
+			> li {
+
+				//
+				// inactive state
+				//
+
+				&:not(.active):not(.open) {
+					> a, > a:focus {
+
+						//
+						// hover state
+						//
+
+						&:hover:not(.colored) {
+							color: $inverse-hover-color;
+
+							i, label {
+								color: $inverse-hover-color;
+							}
+						}
+					}
+				}
+
+				//
+				// active state
+				//
+
+				&.active {
+					> a, > a:hover, > a:focus {
+						color: $inverse-active-color;
+
+						i, label {
+							color: $inverse-active-color;
+						}
+					}
+				}
+
+				//
+				// open state
+				//
+
+				&.open:not(.colored) {
+					> a, > a:focus {
+						color: $inverse-active-color;
+
+						i, label {
+							color: $inverse-active-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

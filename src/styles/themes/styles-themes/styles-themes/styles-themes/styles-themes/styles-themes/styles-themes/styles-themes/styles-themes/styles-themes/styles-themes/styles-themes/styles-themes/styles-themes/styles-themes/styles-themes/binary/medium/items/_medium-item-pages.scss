@@ -1,0 +1,104 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-pages.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.pager {
+		.pages {
+			.main-carousel {
+
+				//
+				// items
+				//
+
+				.item {
+
+					.row:nth-child(2) {
+						.name {
+							background-color: white;
+						}
+
+						.specifics {
+							.details {
+								background-color: white;
+							}
+						}
+					}
+				}
+
+				//
+				// selected pages
+				//
+
+				.item.selected {
+				
+					.row:first-child {
+						.icon {
+							@include binary-colors.light-grey;
+
+							img {
+								image-rendering: auto;
+							}
+						}
+					}
+
+					.row:nth-child(2) {
+
+						.name {
+
+							//
+							// uneditable names
+							//
+
+							&:not([contenteditable="true"]) {
+								color: white;
+								background-color: black;
+							}
+
+							//
+							// editable names
+							//
+
+							&[contenteditable="true"] {
+								color: black;
+								background-color: white;
+								outline-color: black;
+							}
+						}
+
+						.specifics {
+							.details {
+								color: white;
+								background-color: black;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.nav-bar .info-bar {
+			@include binary-text.outline;
+		}
+	}
+}

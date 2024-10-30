@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                           _light-app-launcher.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+
+//
+// colors
+//
+
+$light-app-launcher-icon-color: colors.$light-grey;
+$light-app-launcher-icon-hover-color: $light-app-launcher-icon-color;
+$light-app-launcher-icon-active-color: colors.darken($light-app-launcher-icon-hover-color, 10%);
+$light-app-launcher-icon-border-color: colors.darken($light-app-launcher-icon-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light {
+		.app-launcher.app .icon-grid, 
+		.app-icons {
+			.item {
+				.icon {
+					&:not(.colored) {
+						background: $light-app-launcher-icon-color;
+						border-color: $light-app-launcher-icon-border-color;
+
+						i {
+							color: text-colors.$dark-color !important;
+						}
+
+						&:active {
+							background: $light-app-launcher-icon-active-color;
+							border-color: $light-app-launcher-icon-border-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

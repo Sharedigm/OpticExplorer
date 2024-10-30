@@ -1,0 +1,35 @@
+[descriptive data]					
+title	US 8,879,901 Example 3 (Metabones Canon EF Lens to Sony E Mount T Speed Booster Ultra 0.71x)
+[constants]
+Lateral Magnification	0.71
+Lateral Magnification(m)	0.71457
+[variable distances]					
+Focal Length	84.6				
+Angle of View	undefined				
+F-Number	0.9				
+Image Height	28.2				
+Total Length	18.59				
+Magnification	0
+d0	Infinity				
+Bf	0
+[lens data]
+1	FS	25		78.7					
+2	-286.097	1.2	1.51742	30.8	52.43	S-NSL36
+3	82.858	0.25		32	
+4	24.687	7.3	1.83481	32	42.71	S-LAH55
+5	144.812	1.307		32	
+6	538.031	1	1.71736	31.4	29.52	S-TIH1
+7	19.712	2.855		28.175	
+8	33.861	4.681	1.7725	28.3	49.60	S-LAH66
+9	-631.959	8.93		28.3	
+10	CG	2	1.51742	30	52.43	S-NSL36
+11	CG	2		30	
+[figure]
+source	Data/US008879901_Figure10P.png
+originX	428.13
+originY	482.85
+ppmm	15.511
+[notes]
+Bill: Patent supplies diameters and glass. (60mm at 25mm f/0.9 0.71x)
+Patent did not has diameter of the FS.
+Figure is from Metabones White Paper.

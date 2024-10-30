@@ -1,8 +1,10 @@
-<div class="section">
+<div class="section colored flat blue">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><img class="icon" src="images/logos/logo.svg" />Sharing Made Simple</h2>
-			<p><%= application.name %> is a self-hostable cloud based operating system that brings together file management, file sharing, and collaboration / social networking all in one easy to use platform. </p>
+			<a class="unstyled" href="#features/easy-to-use">
+				<h2><img class="icon" src="images/logos/logo-blue.svg" />Optics for Everyone</h2>
+				<p>You no longer need to spend tens of thousands of dollars and countless hours learning optical design software.  For basic optical design applications, <%= application.name %> allows to to explore, simulate, design and share optical systems like never before. </p>
+			</a>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
@@ -16,8 +18,16 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-dollar-sign"></i>It's Free To Use!</h2>
-			<p><%= application.name %> is <a href="#policies/terms-of-use">free to use</a> for non-commmercial applications. </p>
+			<a class="unstyled" href="#uses/exploration">
+				<h2><i class="fa fa-microscope"></i>Exploration</h2>
+				<p>Are you curious about optics?  Do you like to know how things work?  <%= application.name %> is an easy and fun way for you to explore the art and science of optics. </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="images/info/uses/exploration.png" target="_blank" class="lightbox" title="Exploration"><img src="images/info/uses/exploration.png" /></a>
+				<div class="caption">Exploration</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -25,14 +35,98 @@
 <div class="section">
 	<div class="row">
 		<div class="col-sm-6">
-			<h2><i class="fa fa-smile"></i>It's Easy to Use!</h2>
-			<p><%= application.name %> has the <a href="#features/easy-to-use">familiar look and feel</a> of your desktop or mobile OS.  It's so familiar that you'll be comfortable with it right from the start.  It's like your computer but in the cloud. </p>
+			<a class="unstyled" href="#uses/simulation">
+				<h2><i class="fa fa-lightbulb"></i>Simulation</h2>
+				<p>Whether you're an optics enthusiast or professional, <%= application.name %> can help you to simulate and understand complex optical systems. </p>
+			</a>
 		</div>
 		<div class="col-sm-6">
 			<div class="figure">
-				<a href="images/info/desktop/desktop-photos.png" target="_blank" class="lightbox" title="<%= application.name %>"><img src="images/info/desktop/desktop-photos.png" /></a>
-				<div class="caption"><%= application.name %></div>
+				<a href="images/info/uses/simulation.png" target="_blank" class="lightbox" title="Simulation"><img src="images/info/uses/simulation.png" /></a>
+				<div class="caption">Simulation</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="unstyled" href="#uses/design">
+				<h2><i class="fa fa-ruler-combined"></i>Design</h2>
+				<p><%= application.name %> can help you to understand existing lens designs or to design and build your own! </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="images/info/uses/design.png" target="_blank" class="lightbox" title="Design"><img src="images/info/uses/design.png" /></a>
+				<div class="caption">Design</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="unstyled" href="#uses/education">
+				<h2><i class="fa fa-chalkboard"></i>Education</h2>
+				<p>Whether you're a teacher or a student, use <%= application.name %> to teach and learn about the art and science of optics. </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<div class="figure">
+				<a href="images/info/uses/education.png" target="_blank" class="lightbox" title="Education"><img src="images/info/uses/education.png" /></a>
+				<div class="caption">Education</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/platform-independent">
+				<h2><i class="fa fa-cloud"></i>Access It From Anywhere</h2>
+				<p>Access your digital world from anywhere on any internet connected device. </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/platform-independent">
+				<div class="figure">
+					<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
+					<div class="caption"><%= application.name %> Mobile</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/web-postable">
+				<h2><i class="fa fa-code"></i>Post Your Optical Designs Anywhere</h2>
+				<p>You can post and view optics files uploaded to <%= application.name %> on other websites easily with just a bit of HTML code. </p>
+			</a>
+		</div>
+		<div class="col-sm-6">
+			<a class="unstyled" href="#features/web-postable">
+				<div class="code well">
+	&lt;iframe src="YOUR FILE LINK HERE"&gt;&lt;/iframe&gt
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="section">
+	<div class="row">
+		<div class="col-sm-6">
+			<h2><i class="fa fa-dollar-sign"></i>It's Free To Use</h2>
+			<p>This application is free for non-commercial use.  <a href="#contact">Contact us</a> for commercial applications or if you want to set up an instance on your own server. </p>
+		</div>
+		<div class="col-sm-6">
 		</div>
 	</div>
 </div>
@@ -62,165 +156,4 @@
 	</div>
 </div>
 
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-mobile"></i>It's Accessible Anywhere</h2>
-			<p>Access your digital world from anywhere on <a href="#features/platform-independent">any internet connected device.</a> </p>
-		</div>
-		<div class="col-sm-6">
-			<a href="#features/platform-independent">
-				<div class="figure">
-					<a href="images/info/desktop/iphone-desktop.png" target="_blank" class="lightbox" title="<%= application.name %> Mobile"><img src="images/info/desktop/iphone-desktop.png" /></a>
-					<div class="caption"><%= application.name %> Mobile</div>
-				</div>
-			</a>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-rocket"></i>It's Got Apps!</h2>
-			<p><%= application.name %> has a collection of <a href="#apps">apps</a> for viewing, managing and sharing your data.</p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons carousel">
-				<% let apps = config.apps; %>
-				<% let keys = Object.keys(apps); %>
-				<% for (let i = 0; i < keys.length; i++) { %>
-				<% let app = apps[keys[i]]; %>
-
-				<% if (!app.disabled) { %>
-				<div class="carousel-cell">
-					<div class="app-icons large icon-grid items">
-						<a href="#apps/<%= app.app %>">
-						<div class="item" href="#apps/profile-browser" style="text-decoration:none">	
-							<div class="row">
-								<div class="icon colored <%= app.color %>">
-									<img src="images/icons/apps/<%= app.image || app.app + '.svg' %>" />
-									<i class="<%= app.icon %>"></i>
-								</div>
-							</div>
-							<div class="row">
-								<div class="name"><%= app.name %></div>
-							</div>
-						</div>
-						</a>
-					</div>
-				</div>
-				<% } %>
-
-				<% } %>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-tools"></i>It's Self-Hostable!</h2>
-			<p>Are you a DIY type person?  You can <a href="#features/self-hostable">run <%= application.name %> on your own server</a>! Join the host it yourself (HIY) movement to retake control over your data! </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="figure">
-				<a href="#welcome/we-can-do-it">
-					<img class="vertical" src="images/welcome/we-can-do-it.jpg" />
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="section">
-	<div class="row">
-		<div class="col-sm-6">
-			<h2><i class="fa fa-heart"></i>You Might Also Like</h2>
-			<p>You might also like these other websites built upon the Sharedigm <a href="#platform">platform</a>. </p>
-		</div>
-		<div class="col-sm-6">
-			<div class="icons large icon-grid items">
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.dreamachines.ai" target="_blank">
-							<div class="icon">
-								<img src="images/logos/dreamachines.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Dreamachines</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://www.opticexplorer.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/opticexplorer.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">OpticExplorer</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://easybucket.sharedigm.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/easybucket.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">EasyBucket</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://cloudkitty.org" target="_blank">
-							<div class="icon">
-								<img src="images/logos/cloudkitty.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">CloudKitty</div>
-					</div>
-				</div>
-
-				<div class="item">
-					<div class="row">
-						<a href="http://www.cloudintosh.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/cloudintosh.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Cloudintosh</div>
-					</div>
-				</div>
-
-				<div class="item">	
-					<div class="row">
-						<a href="http://windows3000.com" target="_blank">
-							<div class="icon">
-								<img src="images/logos/windows3000.png" />
-							</div>
-						</a>
-					</div>
-					<div class="row">
-						<div class="name">Windows3000</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<div class="section"></div>

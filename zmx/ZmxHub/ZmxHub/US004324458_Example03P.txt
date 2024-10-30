@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,324,458 Example 3 (Canon FD300mm f5.6 SSC)
+[constants]
+Scaled	300	100
+[variable distances]
+Focal Length	300
+Angle of View	8
+F-Number	5.6
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	131.32
+[lens data]
+1	98.5434	9.642	1.58913	54.84	61.1
+2	-106.6872	3.225		54.84	
+3	-96.7353	4.272	1.67270	51.88	32.1
+4	-1868.9094	53.209		54.76	
+4AS	AS	23.000		34.645
+5	28.6242	4.068	1.58913	28.67	61.1
+6	25.8570	8.247		26.08
+7	98.7132	1.626	1.71300	25.62	53.9
+8	45.9153	2.055	1.80518	25.62	25.4
+9	59.8179	Bf		25.62	
+[figure]
+source	Data/US004324458_FigureP.png
+originX	48.03
+originY	195.02
+ppmm	4.574
+[notes]
+Bill: Repaired r9 53.8179 -> 59.8179

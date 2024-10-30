@@ -1,0 +1,34 @@
+[descriptive data]
+title	JP 2005-107261 Example 5 (Nikon AF-S Teleconverter TC-17E II)
+[constants]
+Lateral Magnification	1.699
+Lateral Magnification(m)	1.70290
+[variable distances]
+Focal Length	undefined
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.28
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	41.47753
+H'	-7.8384
+[lens data]
+0	FS	6.90		25.47
+1	-236.1536	5.10	1.531720	25.47	48.87
+2	-28.2070	1.50	1.816000	28.24	46.63
+3	-43.6078	8.00		28.24	
+4	-80.0327	2.20	1.804000	27.20	46.58
+5	21.4880	9.20	1.688930	27.20	31.07
+6	-44.1840	1.50	1.883000	27.20	40.77
+7	122.2033	1.40		28.18	
+8	45.6439	8.30	1.487490	30.34	70.24
+9	-30.7756	0.40		30.24	
+10	-36.4985	1.50	1.883000	29.21	40.77
+11	-264.4991	Bf		32.96	
+[figure]
+source	Data/JP2005-107261_Figure10P.png
+originX	63.99
+originY	81.50
+ppmm	2.319
+[notes]

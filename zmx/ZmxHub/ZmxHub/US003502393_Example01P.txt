@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,502,393 Example 1 (Ricoh SMC Pentax 6x7 600mm f4)
+[constants]
+Scaled	600	100
+[variable distances]
+Focal Length	600
+Angle of View	8.2
+F-Number	4
+Image Height	89.6
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	173.80
+[lens data]
+1	225.282	21.0	1.51633	150.38	64.1
+2	-2402.454	9.0		150.38
+3	-468.168	6.0	1.76182	147.11	26.5
+4	1318.968	9.0		147.11
+5	168.546	19.2	1.51276	144.35	59.76
+6	1047.498	120.0		144.35
+7	1219.764	12.0	1.53256	88.16	46.0
+8	-481.164	60.0		88.16	
+8AS	AS	3.0		46.159
+9	-97.500	7.2	1.59270	47.04	35.8
+10	-59.100	4.8	1.67000	47.88	57.3
+11	-878.814	Bf		47.88	
+[figure]
+source	Data/US003502393_Figure01P.png
+originX	16.00
+originY	80.19
+ppmm	0.992
+[notes]

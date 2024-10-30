@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,827,781 Example 1 (Olympus 600mm f6.5 F Zuiko Auto-T)
+[constants]
+Scaled	600	100
+[variable distances]
+Focal Length	600
+Angle of View	4
+F-Number	6.5
+Magnification	0
+Image Height	43.2
+d0	Infinity
+Bf(p)	undefined
+Bf	134.22
+[lens data]
+1	184.104	15.024	1.48749	95.45	70.1
+2	-516.732	33.522		95.45
+3	-460.836	6.012	1.80452	82.45	39.6
+4	1137.990	1.200		82.45
+5	140.172	14.022	1.48749	82.12	70.1
+6	-325.746	5.010	1.61340	82.12	43.8
+7	369.402	109.835		82.12
+7AS	AS	92.023		45.225
+8	-73.644	3.504	1.71300	34.81	54.0
+9	257.472	6.012	1.69895	34.81	30.1
+10	-144.228	Bf		34.81
+[figure]
+source	Data/US003827781_Figure01P.png
+originX	108.92
+originY	472.95
+ppmm	8.360
+[notes]
+

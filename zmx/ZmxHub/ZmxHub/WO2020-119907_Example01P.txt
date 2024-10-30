@@ -1,0 +1,52 @@
+[descriptive data]
+title	WO 2020/119907 Example 1 (TH Swiss Irix 150mm f/2.8 Macro)
+[constants]
+[variable distances]
+Focal Length	154.0	undefined	undefined
+Angle of View	16.02	12.4	10.134
+F-Number	2.8	undefined	undefined
+Image Height	43.40	43.40	43.40
+Total Length	undefined	undefined	undefined
+Magnification	0	-0.5	-1
+d0	Infinity	334.61	177.96
+d13(p)	1.50	undefined	undefined
+d13	1.50	18.09	38.61
+d18(p)	41.37	undefined	undefined
+d18	41.37	24.78	4.26
+Bf	0	0	0
+P	53.10	undefined	52.13
+Aperture Diameter	35.021	33.376	32.986
+[lens data]
+1	217.164	3.82	1.6204	56.78	60.34	BACD16
+2	-3303.608	5.47		56.78
+3	104.875	2.00	1.9211	54.72	23.96	FDS24
+4	43.768	10.00	1.4970	52.93	81.61	FCD1
+5	2462.170	0.10		52.93
+6	43.130	6.90	1.9228	52.40	20.88	EFDS1
+7	107.141	3.27		49.24		
+8	40.070	6.72	1.4970	45.06	81.61	FCD1
+9	167.936	1.60	1.8051	45.06	25.46	FD60
+10	29.588	8.69		36.13
+11	AS	1.42		35.021
+12	84.731	4.00	1.8160	35.37	46.59	TAF5
+13	-352.702	d13		35.37
+14	-475.150	1.80	1.9537	32.96	32.32	TAFD45
+15	55.492	1.73		29.66
+16	373.766	4.00	1.9228	29.66	20.88	EFDS1
+17	-60.461	1.80	1.4970	31.40	81.61	FCD1
+18	39.390	d18		27.03
+19	110.255	5.46	1.7291	35.51	54.61	TAC8
+20	-60.582	1.76		35.51
+21	-80.256	3.00	1.8466	33.99	23.78	FDS90
+22	-1804.797	48.98		35.68
+23	CG	2.50	1.5168	46.26	64.20	BK7
+24	CG	1.00		46.26		
+[figure]
+source	Data/WO2020-119907_Figure02P.png
+originX	11.71
+originY	194.27
+ppmm	6.380
+[notes]
+Bill: Patent specified glass but I had to look up index of refraction and Abbe. s15/s16 restricts F-Number to f/2.83
+P off by 2.54 which is suspciously close to the 2.50 CG thickness.
+AD infinity measured and others proportional to patent figures.

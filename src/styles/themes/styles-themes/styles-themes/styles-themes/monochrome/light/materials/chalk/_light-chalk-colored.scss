@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-chalk-colored.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/chalk";
+
+//
+// colors
+//
+
+$color: $light-grey;
+$selected-color: $very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light.chalk {
+
+		//
+		// chalk colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.chalk($color);
+			}
+
+			&.raspberry {
+				.chalk($color);
+			}
+
+			&.red-orange {
+				.chalk($color);
+			}
+
+			&.orange {
+				.chalk($color);
+			}
+
+			&.yellow {
+				.chalk($color);
+			}
+
+			&.lime {
+				.chalk($color);
+			}
+
+			&.green {
+				.chalk($color);
+			}
+
+			&.teal {
+				.chalk($color);
+			}
+
+			&.aqua {
+				.chalk($color);
+			}
+
+			&.cyan {
+				.chalk($color);
+			}
+
+			&.blue {
+				.chalk($color);
+			}
+
+			&.indigo {
+				.chalk($color);
+			}
+
+			&.violet {
+				.chalk($color);
+			}
+
+			&.plum {
+				.chalk($color);
+			}
+
+			&.purple {
+				.chalk($color);
+			}
+
+			&.magenta {
+				.chalk($color);
+			}
+
+			&.brown {
+				.chalk($color);
+			}
+
+			&.grey {
+				.chalk($color);
+			}
+
+			&.black {
+				.chalk($color);
+			}
+
+			&.white {
+				.chalk($color);
+			}
+
+			&.copper {
+				.chalk($color);
+			}
+
+			&.silver {
+				.chalk($color);
+			}
+
+			&.gold {
+				.chalk($color);
+			}
+		}
+
+		//
+		// chalk selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.chalk($selected-color);
+			}
+
+			&.raspberry {
+				.chalk($selected-color);
+			}
+
+			&.red-orange {
+				.chalk($selected-color);
+			}
+
+			&.orange {
+				.chalk($selected-color);
+			}
+
+			&.yellow {
+				.chalk($selected-color);
+			}
+
+			&.lime {
+				.chalk($selected-color);
+			}
+
+			&.green {
+				.chalk($selected-color);
+			}
+
+			&.teal {
+				.chalk($selected-color);
+			}
+
+			&.aqua {
+				.chalk($selected-color);
+			}
+
+			&.cyan {
+				.chalk($selected-color);
+			}
+
+			&.blue {
+				.chalk($selected-color);
+			}
+
+			&.indigo {
+				.chalk($selected-color);
+			}
+
+			&.violet {
+				.chalk($selected-color);
+			}
+
+			&.plum {
+				.chalk($selected-color);
+			}
+
+			&.purple {
+				.chalk($selected-color);
+			}
+
+			&.magenta {
+				.chalk($selected-color);
+			}
+
+			&.brown {
+				.chalk($selected-color);
+			}
+
+			&.grey {
+				.chalk($selected-color);
+			}
+
+			&.black {
+				.chalk($selected-color);
+			}
+
+			&.white {
+				.chalk($selected-color);
+			}
+
+			&.copper {
+				.chalk($selected-color);
+			}
+
+			&.silver {
+				.chalk($selected-color);
+			}
+
+			&.gold {
+				.chalk($selected-color);
+			}
+		}
+	}
+}

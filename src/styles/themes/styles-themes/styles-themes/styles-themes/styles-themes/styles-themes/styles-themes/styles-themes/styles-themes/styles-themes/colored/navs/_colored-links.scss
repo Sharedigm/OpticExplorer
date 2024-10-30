@@ -1,0 +1,37 @@
+/******************************************************************************\
+|                                                                              |
+|                              _colored-links.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+//
+// colors
+//
+
+$color: var(--primary-color);
+$hover-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+	a {
+		color: $color;
+
+		&:hover {
+			color: $hover-color;
+		}
+	}
+}

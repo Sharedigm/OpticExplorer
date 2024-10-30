@@ -1,0 +1,44 @@
+[descriptive data]
+title	US 4,165,151 Example 1 (Canon New FD 500mm f8 Mirror)
+[constants]
+Type	REFLEX
+Scaled	500	100
+[variable distances]
+Focal Length	500
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	69.27
+[lens data]
+1	398.170	8	1.51633	81.05	64.1	
+2	3440.350	91.195		81.05
+3	-199.100	8	1.51633	67.34	64.1
+4	-295.405	0	1.51633	67.34	64.1
+PM	-295.405	0	-1	67.34		29.70
+_4'	-295.405	-8	1.51633	67.34	64.1
+_5	-199.100	-42.0		67.34
+PMOS	OS	-38.195		21.79
+6	112.035	-3	1.51633	29.80	64.1	
+7	97.945	-3		29.80		
+SM	-192.775	0	-1	30.12
+8a	-192.775	0	1.00000	30.12		hack
+8b	-192.775	3		30.12		hack
+_9	97.945	3	1.51633	29.80	64.1	
+_10	112.035	76.195		29.80		
+11	-51.090	4	1.51633	25.75	64.1	
+_12	-199.100	8	1.51633	25.75	64.1	
+13	-295.405	3	1.80610	29.70	40.9	
+14	-104.665	Bf		29.70
+[figure]
+source	Data/US004165151_Figure01P.png
+originX	41.51
+originY	103.35
+ppmm	1.836
+[notes]
+Bill: Optical Bench hack for stand-alone mirror
+_5	-199.100	-80.195		67.34
+_5	-199.100	-42.50		67.34
+PMOS	OS	-37.695		67

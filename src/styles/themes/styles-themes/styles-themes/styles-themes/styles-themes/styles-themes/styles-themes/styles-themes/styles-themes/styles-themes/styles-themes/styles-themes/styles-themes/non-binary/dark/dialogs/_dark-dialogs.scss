@@ -1,0 +1,222 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-dialogs.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../../../../materials/glass/plate-glass";
+@use "../../../../materials/glass/frosted-plate-glass";
+@use "../../medium/dialogs/medium-dialogs";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$header-color: colors.$very-dark-grey;
+$title-icon-color: var(--primary-color);
+$title-color: white;
+$background-color: colors.$ultra-dark-grey;
+$footer-color: $header-color;
+$border-color: lighten($header-color, 10%);
+
+$unfocused-header-color: darken($header-color, 10%);
+$unfocused-title-icon-color: dark-branding.$secondary-color;
+$unfocused-title-color: darken($title-color, 10%);
+$unfocused-background-color: darken($background-color, 10%);
+$unfocused-footer-color: darken($footer-color, 10%);
+$unfocused-border-color: darken($border-color, 10%);
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	.modals {
+
+		.modal-dialog {
+			.modal-content {
+				color: text-colors.$light-color;
+			}
+		}
+
+		//
+		// dark focused dialogs
+		//
+
+		.modal.focused .modal-dialog {
+			border-color: $border-color !important;
+
+			.modal-header {
+				background-color: $header-color;
+				border-color: $border-color;
+
+				.icon {
+
+					//
+					// title icon color
+					//
+
+					i {
+						color: $title-icon-color;
+					}
+
+					svg {
+						fill: $title-icon-color;
+					}
+				}
+
+				.title {
+
+					// clipped title ellipsis color
+					//
+					color: $title-color;
+
+					// title header text color
+					//
+					h1 {
+						color: $title-color;
+					}
+				}
+			}
+
+			.modal-content {
+				background-color: $background-color;
+				border-color: $border-color;
+
+				.modal-footer {
+					background-color: $footer-color;
+					border-color: $border-color;
+				}
+			}
+		}
+
+		//
+		// dark unfocused dialogs
+		//
+
+		.modal:not(.focused) .modal-dialog {
+			border-color: $unfocused-border-color;
+
+			.modal-header {
+				background-color: $unfocused-header-color;
+				border-color: $unfocused-border-color;
+
+				.icon {
+
+					//
+					// dark unfocused title icon color
+					//
+
+					i {
+						color: $unfocused-title-icon-color;
+					}
+
+					svg {
+						fill: $unfocused-title-icon-color;
+					}
+				}
+
+				.title {
+
+					// clipped title ellipsis color
+					//
+					color: $unfocused-title-color;
+
+					// title header text color
+					//
+					h1 {
+						color: $unfocused-title-color;
+					}
+				}
+			}
+
+			.modal-content {
+				background-color: $unfocused-background-color;
+				border-color: $unfocused-border-color;
+
+				.modal-footer {
+					background-color: $unfocused-footer-color;
+					border-color: $unfocused-border-color;
+				}
+			}
+		}
+	}
+
+	//
+	// transparent (non full screen) dialogs
+	//
+
+	&.transparent .modals {
+		.modal:not(.full-screen) {
+
+			.modal-dialog:not(.maximized) {
+				background: transparent !important;
+			}
+
+			&.focused .modal-dialog {
+				.modal-content {
+					@include plate-glass.shaded($background-color);
+				}
+			}
+
+			&:not(.focused) .modal-dialog {
+				.modal-content {
+					@include plate-glass.shaded($unfocused-background-color);
+				}
+			}
+		}
+	}
+
+	//
+	// translucent (non full screen) dialogs
+	//
+
+	&.translucent .modals {
+		.modal:not(.full-screen) {
+
+			.modal-dialog {
+				&.maximized {
+					background: black;
+				}
+
+				&:not(.maximized) {
+					background: transparent;
+				}
+			}
+
+			&.focused .modal-dialog {
+				.modal-content {
+					background: transparent;
+
+					> .modal-body, .app .body {
+						@include frosted-plate-glass.shaded($background-color);
+					}
+				}
+			}
+
+			&:not(.focused) .modal-dialog {
+				.modal-content {
+					background: transparent;
+
+					> .modal-body, .app .body {
+						@include frosted-plate-glass.shaded($unfocused-background-color);
+					}
+				}
+			}
+		}
+	}
+}

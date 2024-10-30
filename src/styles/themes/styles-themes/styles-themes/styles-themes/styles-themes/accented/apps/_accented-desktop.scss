@@ -1,0 +1,67 @@
+/******************************************************************************\
+|                                                                              |
+|                            _accented-desktop.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+
+//
+// colors
+//
+
+$info-bar-color: white;
+$info-bar-icon-color: white;
+$info-bar-background-color: var(--secondary-color);
+$default-info-bar-background-color: branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+	#desktop,
+	#desktop.auto,
+	#desktop.medium {
+		.desktop.app {
+
+			//
+			// desktop footer bars
+			//
+
+			> .footer-bar {
+
+				//
+				// desktop info bars
+				//
+
+				.desktop-info-bar {
+					color: $info-bar-color;
+
+					.info-bar {
+						i {
+							color: $info-bar-icon-color !important;
+						}
+					}
+
+					.toolbar .button:not(:hover) {
+						i {
+							color: $info-bar-icon-color !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

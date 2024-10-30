@@ -1,0 +1,123 @@
+{
+	"vertices": [
+		[90, 1.45],
+		[90, 1.49], [62, 1.49], [55, 1.50], [40, 1.565], [35, 1.615], [25, 1.77], [20, 1.933],
+		[80, 1.54], [55, 1.54], [50, 1.55], [45, 1.572], [40, 1.605], [35, 1.664], [26.2, 1.822], [21, 2],
+		[75, 1.626], [62, 1.626], [50, 1.665], [36, 1.74], [30.75, 1.74],
+		[68, 1.49], [55, 1.60], [50, 1.60],
+		[62, 1.626], [62, 1.45],
+		[55, 1.649], [55, 1.45],
+		[50, 2], [50, 1.522],
+		[45, 1.543], [45, 1.572],
+		[43, 1.586], [43, 1.702],
+		[40, 1.565], [40, 1.605],
+		[35, 1.615], [35, 1.664],
+		[50, 1.80], [27.5, 1.80],
+		[32.7, 1.65], [20, 1.65],
+		[62, 1.54]
+	],
+
+	"lines": [
+		[1, 2, 3, 4, 5, 6, 7], 
+		[8, 9, 10, 11, 12, 13, 14, 15], 
+		[16, 17, 18, 19, 20], 
+		[21, 22, 23], 
+		[24, 25], 
+		[26, 27], 
+		[28, 29], 
+		[30, 31], 
+		[32, 33], 
+		[34, 35], 
+		[36, 37], 
+		[38, 39], 
+		[40, 41]
+	],
+
+	"regions": {
+		"FK": {
+			"name": "flourite crown",
+			"vertices": [1, 21, 2, 25, 0]
+		},
+		"PK": {
+			"name": "phosphate crown",
+			"vertices": [8, 42, 21, 1]
+		},
+		"PSK": {
+			"name": "dense phosphate crown",
+			"vertices": [16, 24, 42, 8]
+		},
+		"BK": {
+			"name": "borosilicate crown",
+			"vertices": [42, 2, 21]
+		},
+		"BaK": {
+			"name": "barium crown",
+			"vertices": [22, 9, 42]
+		},
+		"SK": {
+			"name": "dense crown",
+			"vertices": [24, 26, 22, 42]
+		},
+		"K": {
+			"name": "crown",
+			"vertices": [42, 9, 3, 2]
+		},
+		"LaK": {
+			"name": "lanthanum crown",
+			"vertices": [28, 18, 26, 24, 16]
+		},
+		"SSK": {
+			"name": "very dense crown",
+			"vertices": [26, 18, 23, 22]
+		},
+		"BaLF": {
+			"name": "barium light flint",
+			"vertices": [22, 23, 10, 9]
+		},
+		"KF": {
+			"name": "crown  /flint",
+			"vertices": [9, 10, 29, 3]
+		},
+		"LaSF": {
+			"name": "lanthanum dense flint",
+			"vertices": [28, 15, 14, 39, 38]
+		},
+		"LaF": {
+			"name": "lanthanum flint",
+			"vertices": [38, 39, 20, 19, 33, 18]
+		},
+		"BaF": {
+			"name": "barium flint",
+			"vertices": [18, 33, 32, 31, 10]
+		},
+		"BaSF": {
+			"name": "barium dense flint",
+			"vertices": [33, 19, 20, 37, 35, 32]
+		},
+		"LLF": {
+			"name": "very light flint",
+			"vertices": [10, 31, 30, 29]
+		},
+		"LF": {
+			"name": "light flint",
+			"vertices": [31, 32, 35, 34, 30]
+		},
+		"F": {
+			"name": "flint",
+			"vertices": [35, 37, 36, 34]
+		},
+		"SF": {
+			"name": "dense flint",
+			"vertices": [37, 20, 39, 14, 15, 7, 6, 40, 36],
+			"offset": [5, 0]
+		},
+		"ZK": {
+			"name": "zinc crown",
+			"vertices": []
+		},
+		"KzSF": {
+			"name": "special short flint",
+			"vertices": []
+		}
+	}
+}

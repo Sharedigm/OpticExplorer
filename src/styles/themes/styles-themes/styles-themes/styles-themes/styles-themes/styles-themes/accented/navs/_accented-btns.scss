@@ -1,0 +1,45 @@
+/******************************************************************************\
+|                                                                              |
+|                             _accented-btns.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../branding";
+@use "../../../navs/colors/colored-btns";
+@use "../../../navs/colors/colored-buttons";
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$color: var(--secondary-color);
+$label-color: white;
+$default-color: branding.$secondary-color;
+
+//
+// styles
+//
+
+body:not(.binary).colored.accented {
+
+	//
+	// styled buttons
+	//
+
+	.btn:not(.btn-primary):not(.colored):not(:disabled) {
+		@include colored-btns.colored($color);
+		@include colored-btns.labeled($label-color);
+	}
+}

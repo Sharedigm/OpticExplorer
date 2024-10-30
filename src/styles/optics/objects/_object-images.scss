@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                             _object-images.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the SVG CSS element styles for this application.         |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2015-2018, Megahed Labs LLC, www.optipedia.org          |
+\******************************************************************************/
+
+@use "../../colors/colors";
+
+//
+// colors
+//
+
+$color: colors.$medium-grey;
+$select-color: var(--primary-color);
+
+$dark-color: colors.$light-grey;
+$dark-select-color: var(--primary-color);
+
+//
+// styles
+//
+
+//
+// binary images
+//
+
+body.binary {
+	.optics .viewport {
+
+		.object.image {
+			stroke: black;
+			fill: black;
+		}
+	}
+}
+
+//
+// colored images
+//
+
+body.colored {
+
+	//
+	// colored object markers
+	//
+
+	.optics .viewport {
+
+		.object.image {
+
+			&:not(.colored) {
+				stroke: $color;
+				fill: $color;
+			}
+
+			&.selected {
+				stroke: $select-color;
+			}
+		}
+	}
+
+	//
+	// dark object markers
+	//
+
+	.optics .viewport.dark,
+	&.dark .optics .viewport.auto {
+
+		.object.image {
+
+			&:not(.colored) {
+				stroke: $dark-color;
+				fill: $dark-color;
+			}
+
+			&.selected {
+				stroke: $dark-select-color;
+			}
+		}
+	}
+}

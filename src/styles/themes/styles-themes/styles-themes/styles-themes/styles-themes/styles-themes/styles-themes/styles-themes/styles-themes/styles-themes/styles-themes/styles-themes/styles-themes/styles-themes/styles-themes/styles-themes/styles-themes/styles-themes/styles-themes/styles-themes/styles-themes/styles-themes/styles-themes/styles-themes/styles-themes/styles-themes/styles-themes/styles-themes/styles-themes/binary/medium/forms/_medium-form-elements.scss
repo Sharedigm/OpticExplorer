@@ -1,0 +1,87 @@
+/******************************************************************************\
+|                                                                              |
+|                          _medium-form-elements.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// labels
+	//
+
+	label {
+		@include binary-text.outline;
+	}
+
+	label.error {
+		color: black;
+		background: none;
+		padding-left: 0;
+	}
+
+	//
+	// remove focus hints
+	//
+
+	input:focus {
+		box-shadow: none;
+	}
+
+	//
+	// text inputs
+	//
+
+	input:not([type="radio"]):not([type="checkbox"]):not([type="range"]),
+	textarea {
+		border-width: 1px;
+		border-style: solid;
+		border-color: unset;
+		background: white;
+	}
+
+	textarea {
+		background: white !important;
+	}
+
+	//
+	// disable focused input glow
+	//
+
+	input:not([type="range"]):focus {
+		box-shadow: none !important;
+	}
+
+	//
+	// selection
+	//
+
+	::selection {
+		color: white;
+		background: rgba(0, 0, 0, 0.99);
+		@include binary-text.unoutline;
+	}
+	::-moz-selection {
+		color: white;
+		background: black;
+		@include binary-text.unoutline;
+		opacity: 1;
+	}
+}

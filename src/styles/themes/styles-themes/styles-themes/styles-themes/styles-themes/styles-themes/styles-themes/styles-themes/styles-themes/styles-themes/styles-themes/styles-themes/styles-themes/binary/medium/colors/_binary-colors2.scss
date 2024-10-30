@@ -1,0 +1,104 @@
+/******************************************************************************\
+|                                                                              |
+|                            _binary-colors2.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "binary-patterns-2x.scss" as patterns;
+
+//
+// lightening mixins
+//
+
+@mixin LIGHTEN {
+	background-image: patterns.$lighten-medium-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+@mixin LIGHTEN-LESS {
+	background-image: patterns.$lighten-light-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+@mixin LIGHTEN-MORE {
+	background-image: patterns.$lighten-heavy-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+//
+// darkening mixins
+//
+
+@mixin DARKEN {
+	background-image: patterns.$darken-medium-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+@mixin DARKEN-LESS {
+	background-image: patterns.$darken-light-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+@mixin DARKEN-MORE {
+	background-image: patterns.$darken-heavy-4x4 !important;
+	background-size: 2px 2px !important;
+	background-repeat: repeat !important;
+	image-rendering: pixelated !important;
+}
+
+//
+// color mixins
+//
+
+@mixin GREY {
+	@include DARKEN;
+	background-color: white !important;
+}
+
+@mixin LIGHT-GREY {
+	@include DARKEN-LESS;
+	background-color: white !important;	
+}
+
+@mixin DARK-GREY {
+	@include DARKEN-MORE;
+	background-color: white !important;
+}
+
+@mixin WHITE {
+	@include CLEAR;
+	background-color: white !important;
+}
+
+@mixin BLACK {
+	@include CLEAR;
+	background-color: black !important;
+}
+
+@mixin CLEAR {
+	background: none !important;
+	background-size: unset !important;
+	background-repeat: unset !important;
+	image-rendering: unset !important;	
+}

@@ -1,0 +1,57 @@
+/******************************************************************************\
+|                                                                              |
+|                          _accented-chalk-btns.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../navs/materials/chalk/chalk-btns";
+@use "../../../../navs/materials/chalk/chalk-buttons";
+@use "../../navs/accented-btns";
+
+
+@supports (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.chalk-buttons,
+		&.chalk.auto-buttons {
+
+			//
+			// styled buttons
+			//
+
+			.btn:not(.btn-primary):not(.colored):not(:disabled) {
+				@include chalk-btns.shade(accented-btns.$color);
+			}
+		}
+	}
+}
+
+//
+// fallback styles
+//
+
+@supports not (color: color-mix(in srgb, white, black)) {
+	body:not(.binary).colored.accented {
+		&.chalk-buttons,
+		&.chalk.auto-buttons {
+
+			//
+			// styled buttons
+			//
+
+			.btn:not(.btn-primary):not(.colored):not(:disabled) {
+				@include chalk-btns.shaded(accented-btns.$default-color);
+			}
+		}
+	}
+}

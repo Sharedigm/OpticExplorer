@@ -1,0 +1,53 @@
+/******************************************************************************\
+|                                                                              |
+|                             _dark-selection.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../medium/navs/medium-selection";
+@use "../colors/dark-branding";
+
+//
+// colors
+//
+
+$select-color: colors.$medium-grey;
+$highlight-color: colors.$light-grey;
+$disabled-color: colors.faded(colors.$very-light-grey, 50%);
+$edit-highlight-color: colors.faded($select-color, 50%);
+$select-box-color: colors.$light-grey;
+$select-box-border-color: colors.$very-light-grey;
+$select-box-opacity: medium-selection.$select-box-opacity;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+
+	.drag-image {
+		border-color: $select-box-border-color;
+	}
+
+	.selection {
+		background-color: colors.faded($select-box-color, $select-box-opacity);
+		border-color: $select-box-border-color;
+	}
+
+	svg .selection {
+		fill: colors.faded($select-box-color, $select-box-opacity);
+		stroke: $select-box-border-color;
+	}
+}

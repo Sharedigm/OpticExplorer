@@ -1,0 +1,113 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-lists.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+@use "../../medium/colors/binary-text";
+
+//
+// styles
+//
+
+body.binary {
+	.item-list:not(.dropdown-menu) {
+
+		//
+		// list items
+		//
+
+		.item {
+			> .info {
+				.status, .icon:not(.marker) {
+					i {
+						@include binary-text.outline;
+					}
+				}
+
+				.specifics {
+					.details {
+						background: none;
+						@include binary-text.outline;
+					}
+				}
+			}
+
+			//
+			// unselected list items
+			//
+
+			&:not(.selected):not(.highlighted) {
+				> .info {
+					.name {
+						color: black;
+						background-color: white;
+					}
+				}
+			}
+
+			//
+			// selected list items
+			//
+
+			&.selected {
+				> .info {
+					background-color: black;
+
+					.icon i,
+					.details i {
+						color: white;
+						@include binary-text.unoutline;
+					}
+
+					.name {
+						@include binary-text.unoutline;
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: black;
+						}
+						
+						//
+						// editable names
+						//
+
+						&[contenteditable="true"] {
+							color: black;
+							background-color: white;
+							outline-color: black;
+						}
+					}
+				}
+			}
+		}
+
+		//
+		// zebra striping
+		//
+
+		&:not(.inline) {
+			.item:nth-child(odd):not(.selected) {
+				> div.info {
+					@include binary-colors.light-grey;
+				}
+			}
+		}
+	}
+}

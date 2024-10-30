@@ -1,0 +1,29 @@
+[descriptive data]
+title	JP 2013-250290 Example 1 TC (Nikon AF-S Teleconverter TC800-1.25E ED)
+[constants]
+Lateral Magnification	1.25
+Lateral Magnification(m)	1.25002
+[variable distances]
+Focal Length	-181.64441
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.266
+Magnification	0
+d0	Infinity
+Bf	42.27895
+[lens data]
+38	FS	4.0708		32.83
+39	-960.3839	3.5000	1.581439	28.08	40.96
+40	-54.1469	2.2000		28.08	
+41	-64.4170	2.0000	1.593190	27.68	67.96
+42	38.3030	7.5000	1.581439	28.50	40.96
+43	-38.3030	2.0000	1.902650	28.50	35.73
+44	108.4110	1.0000		29.44	
+45	64.8598	4.1000	1.517420	33.40	52.25
+46	-257.2027	Bf		33.40	
+[figure]
+source	Data/JP2013-250290_Figure01TCP.png
+originX	13.80
+originY	68.91
+ppmm	2.027
+[notes]

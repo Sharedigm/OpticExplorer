@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 2021/0263286 Example 1 (Canon RF50mm F1.8 STM)
+[variable distances]
+Focal Length	49.57
+Angle of View	47.16
+F-Number	1.85
+Image Height	43.28
+Total Length	59.59
+Magnification	0.00
+d0	Infinity
+Bf	25.67
+P	22.51
+P'	-21.30
+H	19.77
+H'	-23.90
+[lens data]
+1	28.621	4.20	1.83481	29.99	42.7
+2	68.136	0.18		28.48	
+3	17.772	6.70	1.79952	23.90	42.2
+4	59.525	1.10	1.80518	20.78	25.4
+5	11.427	5.27		16.78	
+6	AS	6.20		16.24	
+7	-16.726	0.90	1.67270	14.95	32.1
+8	-29.829	0.83		15.46	
+9	-25.000	2.95	1.53110	15.52	55.9
+10	-18.373	0.98		18.14	
+11	280.004	4.60	1.73400	24.43	51.5
+12	-34.002	Bf		25.71	
+[aspherical data]
+9	-25.000	0	-4.12032E-05	-2.90015E-07	-4.67119E-09	7.90646E-11	-9.28470E-13
+10	-18.373	0	-2.41619E-05	-3.29146E-07	1.91098E-10	-9.28593E-13	-2.29193E-13
+[figure]
+source	Data/US20210263286_Figure01P.png
+originX	161.70
+originY	402.50
+ppmm	9.809
+[notes]
+Bill: Patent diameters.

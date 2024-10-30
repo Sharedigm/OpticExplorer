@@ -1,0 +1,36 @@
+[descriptive data]
+title	US 3,874,770 Example 1 (Nikon Nikkor 35mm f/2.8)
+[constants]
+Scaled	35	100
+[variable distances]
+Focal Length	35
+Angle of View	62
+F-Number	2.8
+Image Height	42
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	34.91
+[lens data]
+1	46.667	1.945	1.51454	27.41	54.6
+2	14.729	7.778		22.85
+3	-90.417	9.722	1.51680	21.56	64.2
+4	-81.667	0.097		21.56
+5	24.520	13.125	1.71300	18.94	53.9
+6	-46.861	1.712		18.94
+6AS	AS	4.316		15.006
+7	-20.660	1.458	1.71736	14.73	29.5
+8	40.833	1.313		14.73
+9	-43.264	2.625	1.74443	14.73	49.4
+10	-17.208	0.097		15.40
+11	97.222	2.430	1.62041	17.47	60.3
+12	-66.034	Bf		17.47
+[figure]
+source	Data/US003874770_Example01_Tale38-Fig3.png
+ppmm	9.964786036
+originX	3
+originY	145
+[notes]
+Bill: This is the production lens. Tweaked Bf from 107.289 * 35 / 100 = 37.55115 to 34.94
+I suspect this is actually 36mm not 35mm (due to repeating decimals in the patent).

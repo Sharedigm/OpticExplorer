@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 5,267,086 Example 1 (Ricoh smc Pentax-F 85mm F2.8 Soft)
+[constants]
+[variable distances]
+Focal Length	85.36	undefined
+Angle of View	28.4	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.337
+d0	Infinity	312.94
+d7	3.52	23.75
+Bf	50.19	50.19
+[lens data]					
+1	30.415	9.89	1.65844	37.94	50.9
+2	401.518	4.01	1.78472	37.94	25.7
+3	55.766	6.87		31.46	
+3AS	AS	5.41		23.632
+4	360.363	2.12	1.72825	26.00	28.5
+5	36.678	3.69		26.00	
+6	54.506	5.46	1.80440	29.24	39.6
+7	-95.361	d7		29.24	
+8	1003.795	2.51	1.51633	30.26	64.1
+9	118.227	Bf		30.26	
+[figure]
+source	Data/US005267086_Figure01P.png
+originX	157.40
+originY	94.59
+ppmm	2.319
+[notes]
+Bill: d0 measured.

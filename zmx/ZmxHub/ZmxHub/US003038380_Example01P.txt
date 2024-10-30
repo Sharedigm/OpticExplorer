@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 3,038,380 Example 1 (Zeiss Distagon 4/35)
+[constants]
+Scaled	35	1
+[variable distances]
+Focal Length	35.00
+Angle of View	64.00
+F-Number	4.00
+Image Height	43.26
+Magnification	0
+d0	Infinity
+Bf(p)	40.6455
+Bf	41.63
+[lens data]
+1	24.81045	6.50615	1.62041	24.70	60.3
+2	-64.14030	1.30340	1.51037	24.70	56.5
+3	10.02085	3.89970		15.92	
+4	33.56395	8.05805	1.75520	12.80	27.5
+5	83.10470	1.57275		11.22	
+5AS	AS	3.70000		8.300
+6	-18.73865	2.60645	1.65160	10.34	58.4
+7	-7.46025	0.79590	1.72339	11.68	38.0
+8	33.32420	4.33755	1.66672	16.13	48.4
+9	-14.99225	0.09940		16.13	
+10	-105.38325	2.16860	1.69078	19.41
+11	-23.93300	Bf		19.41
+[figure]
+source	Data/US003038380_FigureP.png
+originX	55.67
+originY	383.97
+ppmm	28.135
+[notes]			

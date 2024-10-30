@@ -1,0 +1,43 @@
+[descriptive data]
+title	US 2003/0072085 Example 1 (Nikon Zoom-Nikkor 5.6-16.8mm f/2.7-4.8 (Coolpix SQ))
+[constants]
+[variable distances]
+Focal Length	5.97	10.00	16.88
+Angle of View	64.2	undefined	23.3
+F-Number	2.87	3.73	5.22
+Total_Length	38.84	36.19	39.64
+Image Height	7.04	7.04	7.04
+Magnification	0	0	0
+d0	Infinity	Infinity	Infinity
+d6	13.451	6.223	1.853
+d12	5.078	9.655	17.474
+d12FS	3.998	8.575	16.394
+Bf	0	0	0
+[lens data]
+1	19.1828	1.10	1.83400	12.37	37.17
+2	7.3466	1.75		9.27
+3	-143.6780	1.00	1.80400	10.88	46.58
+4	10.5443	0.80		9.36	
+5	10.4893	2.30	1.80518	9.89	25.43
+6	120.8022	d6		9.11
+7	AS	0.40		4.813
+8	9.6920	2.00	1.58313	6.86	59.62
+9	-22.1432	0.10		6.86
+10	7.4756	2.55	1.80400	6.89	46.58
+11	-9.4517	0.90	1.69895	6.89	30.13
+12	3.8988	1.08		5.33
+12FS	FS	d12FS		4
+13	25.7030	2.50	1.58313	9.83	59.62
+14	-13.6090	0.60		9.83
+15	CG	2.17	1.51633	9.42	64.14
+16	CG	2.15		9.42	
+[aspherical data]
+8	9.6920	-0.9643	-4.44320E-05	-1.03700E-05	1.33750E-06	-8.95360E-08
+13	25.7030	16.8196	-4.51730E-04	2.27170E-05	-1.52580E-06	3.30560E-08
+[figure]
+source	Data/US20030072085_Example01_Tale22-Fig2.png
+originX	143.89
+originY	157.55
+ppmm	19.620
+[notes]
+Bill: Added Flare Stop based on the production diagram.

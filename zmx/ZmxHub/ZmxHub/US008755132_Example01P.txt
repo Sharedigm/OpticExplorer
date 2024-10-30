@@ -1,0 +1,35 @@
+[descriptive data]
+title	US 8,755,132 Example 1 (Olympus M.Zuiko 17mm F2.8)
+[constants]
+[variable distances]
+Focal Length	17.3
+Angle of View	72.8
+F-Number	2.9
+Image Height	22.90
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	0
+[lens data]
+1	58.585	0.932	1.48749	17.90	70.23
+2	9.004	2.478		11.78	
+3	18.088	3.046	1.83400	10.88	37.16
+4	-18.088	0.804	1.57501	12.54	41.50
+5	47.964	1.841		11.24	
+6	AS	4.212		6.441
+7	-10.211	0.752	1.75211	8.42	25.05
+8	35.401	4.899	1.72916	12.96	54.68
+9	-10.810	0.150		12.96	
+10	44.588	3.000	1.80610	16.94	40.88
+11	-51.256	17.229		16.94	
+12	CG	4.082	1.51633	24.48	64.14
+13	CG	0.745		24.48	
+[aspherical data]
+10	44.588	-13.0866	-4.0460E-06	9.8902E-08	1.4424E-11
+11	-51.256	-8.3127	-6.2139E-06	8.9444E-08	5.6790E-10
+[figure]
+source	Data/US008755132_Figure01P.png
+originX	32.22
+originY	178.84
+ppmm	5.937
+[notes]

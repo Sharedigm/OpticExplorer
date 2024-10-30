@@ -1,0 +1,225 @@
+/******************************************************************************\
+|                                                                              |
+|                         _medium-plastic-colored.scss                         |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../materials/plastic/round-plastic";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.colored.plastic {
+
+		//
+		// plastic colored materials
+		//
+
+		.colored:not(.flat) {
+
+			&.red {
+				@include round-plastic.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include round-plastic.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include round-plastic.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include round-plastic.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include round-plastic.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include round-plastic.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include round-plastic.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include round-plastic.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include round-plastic.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include round-plastic.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include round-plastic.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include round-plastic.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include round-plastic.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include round-plastic.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include round-plastic.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include round-plastic.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include round-plastic.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include round-plastic.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include round-plastic.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include round-plastic.shaded(colors.$medium-white);
+			}
+
+			&.copper {
+				@include round-plastic.shaded(colors.$medium-copper);
+			}
+
+			&.silver {
+				@include round-plastic.shaded(colors.$medium-silver);
+			}
+
+			&.gold {
+				@include round-plastic.shaded(colors.$medium-gold);
+			}
+		}
+
+		//
+		// selected plastic colored materials
+		//
+
+		.selected .colored:not(.flat) {
+			&.red {
+				@include round-plastic.shaded(colors.$dark-red);
+			}
+
+			&.raspberry {
+				@include round-plastic.shaded(colors.$dark-raspberry);
+			}
+
+			&.red-orange {
+				@include round-plastic.shaded(colors.$dark-red-orange);
+			}
+
+			&.orange {
+				@include round-plastic.shaded(colors.$dark-orange);
+			}
+
+			&.yellow {
+				@include round-plastic.shaded(colors.$dark-yellow);
+			}
+
+			&.lime {
+				@include round-plastic.shaded(colors.$dark-lime);
+			}
+
+			&.green {
+				@include round-plastic.shaded(colors.$dark-green);
+			}
+
+			&.teal {
+				@include round-plastic.shaded(colors.$dark-teal);
+			}
+
+			&.aqua {
+				@include round-plastic.shaded(colors.$dark-aqua);
+			}
+
+			&.cyan {
+				@include round-plastic.shaded(colors.$dark-cyan);
+			}
+
+			&.blue {
+				@include round-plastic.shaded(colors.$dark-blue);
+			}
+
+			&.indigo {
+				@include round-plastic.shaded(colors.$dark-indigo);
+			}
+
+			&.violet {
+				@include round-plastic.shaded(colors.$dark-violet);
+			}
+
+			&.plum {
+				@include round-plastic.shaded(colors.$dark-plum);
+			}
+
+			&.purple {
+				@include round-plastic.shaded(colors.$dark-purple);
+			}
+
+			&.magenta {
+				@include round-plastic.shaded(colors.$dark-magenta);
+			}
+
+			&.brown {
+				@include round-plastic.shaded(colors.$dark-brown);
+			}
+
+			&.grey {
+				@include round-plastic.shaded(colors.$dark-grey);
+			}
+
+			&.black {
+				@include round-plastic.shaded(colors.$dark-black);
+			}
+
+			&.white {
+				@include round-plastic.shaded(colors.$dark-white);
+			}
+
+			&.copper {
+				@include round-plastic.shaded(colors.$dark-copper);
+			}
+
+			&.silver {
+				@include round-plastic.shaded(colors.$dark-silver);
+			}
+
+			&.gold {
+				@include round-plastic.shaded(colors.$dark-gold);
+			}
+		}
+	}
+}

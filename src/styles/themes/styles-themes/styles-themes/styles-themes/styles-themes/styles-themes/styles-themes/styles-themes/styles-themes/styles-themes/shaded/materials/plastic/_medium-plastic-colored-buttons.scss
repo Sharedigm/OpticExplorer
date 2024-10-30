@@ -1,0 +1,110 @@
+/******************************************************************************\
+|                                                                              |
+|                    _medium-plastic-colored-buttons.scss                      |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../navs/materials/plastic/plastic-btns";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	&.plastic.colored {
+		.colored.btn {
+
+			&.red {
+				@include plastic-btns.shaded(colors.$medium-red);
+			}
+
+			&.raspberry {
+				@include plastic-btns.shaded(colors.$medium-raspberry);
+			}
+
+			&.red-orange {
+				@include plastic-btns.shaded(colors.$medium-red-orange);
+			}
+
+			&.orange {
+				@include plastic-btns.shaded(colors.$medium-orange);
+			}
+
+			&.yellow {
+				@include plastic-btns.shaded(colors.$medium-yellow);
+			}
+
+			&.lime {
+				@include plastic-btns.shaded(colors.$medium-lime);
+			}
+
+			&.green {
+				@include plastic-btns.shaded(colors.$medium-green);
+			}
+
+			&.teal {
+				@include plastic-btns.shaded(colors.$medium-teal);
+			}
+
+			&.aqua {
+				@include plastic-btns.shaded(colors.$medium-aqua);
+			}
+
+			&.cyan {
+				@include plastic-btns.shaded(colors.$medium-cyan);
+			}
+
+			&.blue {
+				@include plastic-btns.shaded(colors.$medium-blue);
+			}
+
+			&.indigo {
+				@include plastic-btns.shaded(colors.$medium-indigo);
+			}
+
+			&.violet {
+				@include plastic-btns.shaded(colors.$medium-violet);
+			}
+
+			&.plum {
+				@include plastic-btns.shaded(colors.$medium-plum);
+			}
+
+			&.purple {
+				@include plastic-btns.shaded(colors.$medium-purple);
+			}
+
+			&.magenta {
+				@include plastic-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.brown {
+				@include plastic-btns.shaded(colors.$medium-brown);
+			}
+
+			&.grey {
+				@include plastic-btns.shaded(colors.$medium-grey);
+			}
+
+			&.black {
+				@include plastic-btns.shaded(colors.$medium-black);
+			}
+
+			&.white {
+				@include plastic-btns.shaded(colors.$medium-white);
+			}
+		}
+	}
+}

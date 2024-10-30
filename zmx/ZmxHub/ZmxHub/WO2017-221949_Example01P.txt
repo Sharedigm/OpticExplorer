@@ -1,0 +1,37 @@
+[descriptive data]
+title	WO 2017/221949 Example 1 (Hasselblad XCD 3.5 45)
+[variable distances]
+Focal Length	45.027
+Angle of View	63.90
+F-Number	3.5
+Image Height	56.08
+Total Length	47.48
+Magnification	0
+d0	Infinity
+Bf(p)	26.88
+Bf	27.05
+[lens data]
+1	-54.608	1.00	1.54814	24.4	45.78
+2	18.801	2.13		21.5	
+3	40.829	3.40	1.91650	21.5	31.60
+4	212.802	6.47		20.8	
+5	22.508	5.20	1.69700	17.0	48.52
+6	-26.028	1.00	1.69895	16.6	30.13
+7	-52.298	2.92		16.2	
+8	AS	5.05		14.2	
+9	-22.886	1.00	1.85026	13.9	32.27
+10	16.769	5.20	1.64850	14.9	53.02
+11	-26.740	0.93		16.2	
+12	44.608	4.40	1.85026	17.6	32.37
+13	-51.300	0.15		18.4	
+14	43.104	1.00	1.83481	19.0	42.72
+15	22.500	6.63		18.9	
+16	-13.416	1.00	1.48749	19.2	70.24
+17	-21.583	Bf		21.6	
+[figure]
+source	Data/WO2017-221949_Figure01P.png
+originX	71.13
+originY	307.28
+ppmm	10.121
+[notes]
+Bill: Patent diameters including Aperture Stop.

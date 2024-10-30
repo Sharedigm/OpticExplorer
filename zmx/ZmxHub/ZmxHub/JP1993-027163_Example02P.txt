@@ -1,0 +1,39 @@
+[descriptive data]
+title	JP 1993-027163 Example 2 (Canon EF200mm f2.8L II USM)
+[constants]
+[variable distances]
+Focal Length	195.2	undefined
+Angle of View	12.6	undefined
+F-Number	2.8	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.15548
+d0	Infinity	1334.36
+d11	3.00	17.65
+d14	29.00	14.35
+Bf(p)	undefined	undefined
+Bf	69.85	69.85
+[lens data]
+1	92.91	10.94	1.48749	71.78	70.2
+2	-325.61	0.50		71.78
+3	59.21	9.90	1.49700	63.42	81.6
+4	346.98	2.99		63.42
+5	-1971.05	4.00	1.80610	61.70	41.0
+6	71.90	1.58		55.47
+7	49.72	8.80	1.49700	55.72	81.6
+8	216.03	0.23		53.54
+9	39.59	3.00	1.58267	48.69	46.4
+10	30.03	23.40		42.98
+11	AS	d11		34.726
+12	-305.00	3.82	1.80518	34.76	25.4
+13	-56.35	1.50	1.63930	34.76	44.9
+14	48.81	d14		31.26
+15	147.56	1.50	1.68893	33.13	31.1
+16	53.44	4.90	1.78590	33.13	44.2
+17	-642.68	Bf		33.13
+[figure]
+source	Data/JP1993-027163_Figure02P.png
+originX	31.27
+originY	9.45
+ppmm	8.410
+[notes]
+Bill: Added second scenario based on the diagram.

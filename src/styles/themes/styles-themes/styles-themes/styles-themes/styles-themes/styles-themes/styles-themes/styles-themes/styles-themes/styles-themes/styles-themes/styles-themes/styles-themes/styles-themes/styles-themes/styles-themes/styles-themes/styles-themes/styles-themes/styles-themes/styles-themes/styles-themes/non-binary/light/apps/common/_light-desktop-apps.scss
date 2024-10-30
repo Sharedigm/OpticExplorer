@@ -1,0 +1,268 @@
+/******************************************************************************\
+|                                                                              |
+|                          _light-desktop-apps.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../colors/text-colors";
+@use "../../../../../materials/glass/plate-glass";
+@use "../../../../../materials/glass/frosted-glass";
+@use "../../../medium/apps/common/medium-desktop-apps";
+@use "../../layout/light-panels";
+@use "light-apps";
+
+//
+// colors
+//
+
+$header-bar-color: text-colors.$dark-color;
+$header-bar-icon-color: colors.$light-grey;
+$header-bar-background-color: white;
+$header-bar-border-color: light-apps.$border-color;
+$sidebar-panel-color: light-panels.$background-color;
+$sidebar-panels-color: colors.faded(light-panels.$background-color, 50%);
+$mainbar-background-color: white;
+$transparent-sidebar-color: colors.faded(white, 75%);
+$transparent-sidebar-label-color: white;
+$transparent-sidebar-panel-color: colors.faded(white, 25%);
+
+//
+// styles
+//
+
+body:not(.binary).light {
+	.desktop.app {
+		> .body {
+			> .app {
+
+				//
+				// light desktop header bars
+				//
+		
+				.header-bar {
+					color: $header-bar-color;
+					background-color: $header-bar-background-color;
+					border-color: $header-bar-border-color;
+
+					.app-bar {						
+						> i {
+							color: $header-bar-icon-color;
+						}				
+					}
+
+					.menu-bar {
+						> ul.nav-menus {
+							> li:not(.open) {
+								> a {
+									color: $header-bar-color;
+
+									> i {
+										color: $header-bar-icon-color;
+									}
+								}
+							}
+						}
+					}
+
+					.toolbar {
+						.button:not(.selected):not(:hover) {
+							> i {
+								color: $header-bar-icon-color;
+							}
+						}
+					}
+
+					.clock {
+						.icon {
+							> i {
+								color: $header-bar-icon-color;
+							}		
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.light #desktop {
+		.desktop.app > .body > .app {
+			.mainbar {
+				background-color: mainbar-background-color;
+			}
+		}
+	}
+
+	//
+	// light transparent desktop header bars
+	//
+
+	&.transparent, &.translucent {
+		&.light #desktop,
+		#desktop.light {
+			.desktop.app > .body > .app {
+
+				> .header-bar {
+					@include plate-glass.shaded($header-bar-background-color,
+					medium-desktop-apps.$header-bar-opacity);
+				}
+			}
+		}
+	}
+
+	//
+	// light opaque desktop app sidebars
+	//
+
+	&.opaque #desktop.auto-sidebars,
+	#desktop.opaque-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: light-apps.$sidebar-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light transparent desktop app sidebars
+	//
+
+	&.transparent #desktop.auto-sidebars,
+	#desktop.transparent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						color: white;
+						background-color: transparent;
+
+						.panels > .panel, label {
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light translucent desktop app sidebars
+	//
+
+	&.translucent #desktop.auto-sidebars,
+	#desktop.translucent-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: $transparent-sidebar-color;
+						@include frosted-glass.frosted();
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light opaque desktop app sidebar panels
+	//
+
+	#desktop.opaque-sidebars.sidebar-panels,
+	&.opaque #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.opaque-sidebars,
+	&.opaque.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: light-apps.$sidebar-color;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								background-color: white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light transparent desktop app sidebar panels
+	//
+
+	#desktop.transparent-sidebars.sidebar-panels,
+	&.transparent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.transparent-sidebars,
+	&.transparent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						background-color: transparent;
+
+						.panels {
+							background-color: $sidebar-panels-color;
+
+							.panel {
+								background-color: $sidebar-panel-color;
+								color: text-colors.$dark-color !important;
+
+								.panels > .panel, label {
+									color: text-colors.$dark-color !important;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// light translucent desktop app sidebar panels
+	//
+
+	#desktop.translucent-sidebars.sidebar-panels,
+	&.translucent #desktop.auto-sidebars.sidebar-panels,
+	&.sidebar-panels #desktop.auto-sidebar-panels.translucent-sidebars,
+	&.translucent.sidebar-panels #desktop.auto-sidebar-panels.auto-sidebars {
+		.desktop.app {
+			> .body, > .body-region {
+				.contents {
+					> .sidebar {
+						@include frosted-glass.polished();
+
+						.panels {
+							background-color: $sidebar-panels-color;
+							@include frosted-glass.frosted();
+
+							.panel {
+								background-color: $sidebar-panel-color;
+								@include frosted-glass.frosted();
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

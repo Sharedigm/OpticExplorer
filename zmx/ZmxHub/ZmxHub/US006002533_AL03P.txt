@@ -1,0 +1,27 @@
+[descriptive data]
+title	US 6,002,533 Example 3 Lens Attachment (Ricoh smc Pentax Life Size Converter 6x7 for smc 6x7 Macro 100mm f4.0)
+[constants]
+[variable distances]
+Focal Length	218.788
+Angle of View	undefined
+F-Number	6
+Image Height	88.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	210.65
+[lens data]
+0AS	AS	0		36.460
+1	81.400	8.24	1.71299	43.91	53.9
+2	-462.000	2.98		43.91
+3	-67.270	2.70	1.64769	42.16	33.8
+4	193.440	3.16		42.16
+5	-87.610	5.50	1.83400	38.81	37.2
+6	-52.754	Bf		38.81
+[figure]
+source	Data/US006002533_Figure09ALP.png
+originX	7.52
+originY	52.99
+ppmm	2.334
+[notes]

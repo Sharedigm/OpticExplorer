@@ -1,0 +1,39 @@
+/******************************************************************************\
+|                                                                              |
+|                            _medium-fieldsets.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+
+//
+// colors
+//
+
+$border-color: colors.$very-light-grey;
+$legend-color: colors.$very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary) {
+	fieldset {
+		border-color: $border-color;
+
+		legend {
+			color: $legend-color;
+		}
+	}
+}

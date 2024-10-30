@@ -1,0 +1,38 @@
+[descriptive data]
+title	US 4,812,022 Example 3 (Ricoh smc Pentax-A 35-70mm F4)
+[constants]
+[variable distances]
+Focal Length	36.0	68.5
+Angle of View	64.5	34.7
+F-Number	4.1	4.1
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	0
+d0	Infinity	Infinity
+d6	41.111	3.821
+d6AS	40.411	3.121
+Bf(p)	undefined	undefined
+Bf	42.39	62.02
+Aperture Diameter	15.724	20.989
+[lens data]
+1	93.720	1.980	1.83400	43.64	37.2
+2	28.700	4.240		38.32	
+3	69.120	1.880	1.80610	37.90	40.9
+4	33.150	2.950		35.72	
+5	31.885	5.370	1.80518	35.86	25.4
+6	89.072	d6AS		35.32	
+6AS	AS	0.700		15.724
+7	39.600	3.500	1.74400	22.88	44.7
+8	-132.321	0.100		22.88	
+9	21.200	4.040	1.65844	21.58	50.9
+10	193.485	0.640		20.70	
+11	-206.849	6.040	1.80518	20.70	25.4
+12	16.570	6.700		16.94	
+13	-92.459	2.230	1.58144	16.60	40.8
+14	-28.475	Bf		16.60	
+[figure]
+source	Data/US004812022_Figure09P.png
+originX	6.80
+originY	67.49
+ppmm	2.752
+[notes]

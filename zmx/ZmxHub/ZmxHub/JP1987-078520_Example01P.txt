@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 1987-078520 Example 1 (Canon EF28mm f2.8)
+[constants]
+Scaled	28	1
+AsphericalA2
+[variable distances]
+Focal Length	28
+Angle of View	74
+F-Number	2.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	37.14
+[lens data]
+1	48.776	1.96	1.60311	36.91	60.7
+2	Infinity	18.48		28.74
+3	32.396	5.88	1.78590	21.69	44.2
+4	-136.696	5.78		21.69
+5	AS	6.82		13.400
+6	-19.320	2.52	1.84666	15.89	23.9
+7	70.084	0.28		12.611
+8	4029.760	3.36	1.79952	15.89	42.2
+9	-20.216	0.00		15.89
+10	218.792	2.80	1.78590	19.27	44.2
+11	-39.592	Bf		19.27
+[aspherical data]
+2	Infinity	0	3.138E-02	2.602E-05	2.960E-08	6.459E-11	2.121E-13
+[figure]
+source	Data/JP1987-078520_Figure01P.png
+originX	61.54
+originY	109.49
+ppmm	2.384
+[notes]
+Bill:  s7 restricts F-Number. Shifted AS 3.18mm toward object.

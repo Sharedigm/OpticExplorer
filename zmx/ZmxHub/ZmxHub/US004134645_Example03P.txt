@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 4,134,645 Example 3 (Ricoh smc Pentax-M 150mm F3.5)
+[constants]
+Scaled	150	100
+[variable distances]
+Focal Length	150
+Angle of View	16.4
+F-Number	3.5
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(p)	60.600
+Bf	60.57
+[lens data]
+1	50.715	5.310	1.51112	42.93	60.5
+2	642.825	2.115		42.63
+3	-218.790	1.995	1.80518	42.30	25.4
+4	177.960	0.105		42.30
+5	30.855	5.805	1.51633	41.68	64.1
+6	67.785	20.455		40.80	
+6AS	AS	15.53		30.033
+7	41.115	1.815	1.72825	22.00	28.5
+8	82.830	4.080		20.70	
+9	-23.805	1.200	1.65160	19.11	58.6
+10	-100.665	Bf		20.65
+[figure]
+source	Data/US004134645_Figure05P.png
+originX	6.78
+originY	83.44
+ppmm	3.723
+[notes]

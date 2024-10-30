@@ -1,0 +1,43 @@
+[descriptive data]
+title	JP 1987-249119 Example 4 (Konica Minolta AF 20mm F2.8)
+[constants]
+Scaled	20	100
+[variable distances]
+Focal Length	20	undefined
+Angle of View	94	undefined
+F-Number	2.8	undefined
+Total Length	57.431	undefined
+Image Height	43.2	43.2
+Magnification	0	-0.1
+d0	Infinity	194.07
+d4	9.349	7.009
+Bf(p)	undefined	undefined
+Bf	35.60	37.94
+[lens data]
+1	87.667	4.879	1.51680	51.06	64.20
+2	245.951	0.117		51.06	
+3	24.990	1.952	1.61800	32.82	63.45
+4	13.094	d4		23.69
+5	30.531	1.269	1.69680	18.94	56.47
+6	11.838	3.904		15.02	
+7	Infinity	3.904	1.65300	14.26	31.52
+8	-114.811	0.322		14.26	
+9	43.077	1.171	1.78560	11.62	42.81
+10	14.360	1.630		11.62	
+11	21.124	9.759	1.83400	14.14	37.05
+12	-27.864	1.172		14.14	
+12AS	AS	1.98		13.800
+13	-142.109	3.904	1.84666	13.68	23.83
+14	39.863	1.757		13.68
+15	-126.130	2.635	1.61800	14.26	63.45
+16	-17.255	0.117		14.26	
+17	108.993	1.464	1.83400	16.98	37.05
+18	20.059	6.148	1.51728	16.98	69.68
+19	-25.300	Bf		19.06	
+[figure]
+source	Data/JP1987-249119_Figure10P.png
+originX	37.51
+originY	92.48
+ppmm	2.046
+[notes]
+Bill: d0 measured. 

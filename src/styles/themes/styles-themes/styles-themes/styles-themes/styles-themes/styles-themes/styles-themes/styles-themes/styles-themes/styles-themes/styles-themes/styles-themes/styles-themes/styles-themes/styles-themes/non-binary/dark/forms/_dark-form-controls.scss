@@ -1,0 +1,63 @@
+/******************************************************************************\
+|                                                                              |
+|                          _dark-form-controls.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../colors/dark-branding";
+@use "dark-forms";
+
+//
+// colors
+//
+
+$border-color: dark-forms.$input-border-color;
+$focus-color: dark-forms.$input-focus-color;
+
+//
+// styles
+//
+
+body:not(.binary).dark {
+	form {
+
+		//
+		// focused form control highlighting
+		//
+
+		.controls {
+
+			//
+			// checked radio inputs
+			//
+
+			input[type="radio"] {
+
+				&:checked, &.colored:checked {
+					border-color: white;
+				}
+			}
+		}
+
+		.form-control {
+			border-color: $border-color;
+
+			&:focus {
+				border-color: colors.faded($focus-color, 75%) !important;
+				box-shadow: 1px 1px 10px 0 colors.faded($focus-color, 50%) !important;
+			}
+		}
+	}
+}

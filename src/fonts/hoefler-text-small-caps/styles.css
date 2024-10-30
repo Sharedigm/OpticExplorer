@@ -1,0 +1,9 @@
+/***************************************************************\
+|                          font styles                          |
+\***************************************************************/
+
+@font-face {
+	font-family: 'Hoefler Text Small Caps';
+	src: url('Hoefler-Text-Small-Caps.otf') format('opentype');
+	font-weight: normal;
+}

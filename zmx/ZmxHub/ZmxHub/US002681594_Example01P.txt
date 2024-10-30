@@ -1,0 +1,31 @@
+[descriptive data]
+title	US 2,681,594 Example 1 (Canon Serenar 50mm f1.8)
+[constants]
+Scaled	50	1
+[variable distances]
+Focal Length	50.00
+Angle of View	46
+F-Number	1.8
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	29.97
+[lens data]
+1	29.000	4.75	1.6204	29.18	60.3
+2	90.000	0.25		29.18
+3	17.850	7.25	1.6261	24.99	39.1
+4	-105.000	2.20	1.7400	24.99	28.2
+5	12.050	4.40		17.63
+5AS	AS	2.20		17.549
+6	-28.125	1.75	1.5014	17.51	56.5
+7	21.900	8.25	1.6385	19.42	55.5
+8	-40.000	0.15		19.42
+9	85.000	3.50	1.6385	22.74	55.5
+10	-62.850	Bf		22.74
+[figure]
+source	Data/US002681594_FigureP.png
+originX	104.68
+originY	135.70
+ppmm	7.342
+[notes]
+Bill: Repaired r2 190 -> 90

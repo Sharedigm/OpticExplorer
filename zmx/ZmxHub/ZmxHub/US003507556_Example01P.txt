@@ -1,0 +1,37 @@
+[descriptive data]
+title	US 3,507,556 Example 1 (Nikon AI Reflex-Nikkor 1000mm f/11)
+[constants]
+Type	REFLEX
+[variable distances]
+Focal Length	1000.0
+Angle of View	undefined
+F-Number	undefined
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf(f)	85.67
+Bf	89.65
+[lens data]
+1	682.000	10	1.51823	107.68	59.0	L1
+2	Infinity	6.5		107.68
+2OS	OS	148.5		41.54
+3	-319.000	10	1.54072	95.50	47.2	34.98
+4	-485.185	0		95.50		34.98
+PM	-485.185	0	-1	88.69		34.98
+_4'	-485.185	-10	1.54072	95.50	47.2	34.98
+_3'	-319.000	-147		95.50		34.98
+5	-169.430	-3.3	1.54814	41.54	45.9
+6	-258.420	0		41.54
+SM	-258.420	0	-1	41.54
+_5	-258.420	3.3	1.54814	41.54	45.9
+_6'	-169.430	150		41.54
+7	-200.000	1.7	1.51680	26.66	64.2
+8	69.200	2.0		26.66
+9	600.000	2.4	1.74077	26.66	27.7
+10	-321.860	Bf		26.66
+[figure]
+source	Data/US003507556_Figure01P.png
+originX	94.96
+originY	361.49
+ppmm	4.172
+[notes]

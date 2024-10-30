@@ -1,0 +1,46 @@
+[descriptive data]
+title	US 2012/0057246 Example 6 (Samsung 20-50mm F3.5-5.6 ED II)
+[constants]
+[variable distances]
+Focal Length	20.59	34.48	48.49	undefined	undefined	undefined
+Angle of View	74.2	45.2	32.5	undefined	undefined	undefined
+F-Number	3.54	4.60	5.78	undefined	undefined	undefined
+Image Height	28.50	28.50	28.50	28.50	28.50	28.50
+Total Length	undefined	undefined	undefined	undefined	undefined	undefined
+Magnification	0	0	0	-0.08997	-0.15071	-0.21183
+d0	Infinity	Infinity	Infinity	200	200	200
+d6	20.389	6.808	1.502	23.688	10.107	4.801
+d12	2.892	5.023	7.450	2.892	5.023	7.450
+d14	6.157	4.027	1.600	6.157	4.027	1.600
+d18	21.677	31.994	41.152	21.677	31.994	41.152
+Bf	0	0	0	0	0	0
+[lens data]
+1	43.963	1.20	1.74330	26.30	49.20
+2	14.414	5.92		21.90	
+3	-113.829	1.20	1.65844	21.20	50.90
+4	44.930	0.22		21.20	
+5	25.485	2.36	1.92286	20.64	20.90
+6	52.044	d6		19.80	
+7	31.391	2.39	1.48749	12.04	70.40
+8	-29.962	0.40		12.04	
+9	16.360	3.36	1.70154	11.76	41.10
+10	-43.720	0.67	1.84666	11.76	23.80
+11	27.117	2.10		10.25
+12	AS	d12		9.614
+13	-34.062	0.90	1.49700	9.04	81.60
+14	34.062	d14		9.04	
+15	40.498	3.50	1.58913	13.98	61.10
+16	-20.646	1.75		13.98	
+17	-21.829	1.60	1.60342	15.38	38.00
+18	-50.887	d18		15.38	
+19	CG	2.00	1.51680	28.66	64.20
+20	CG	1.00		28.66	
+[aspherical data]
+16	-20.646	1.736655	7.058302E-05	2.075560E-07	1.363424E-09
+[figure]
+source	Data/US20120057246_Figure11WP.png
+originX	66.04
+originY	473.95
+ppmm	14.879
+[notes]
+Bill: Measured Magnification. 

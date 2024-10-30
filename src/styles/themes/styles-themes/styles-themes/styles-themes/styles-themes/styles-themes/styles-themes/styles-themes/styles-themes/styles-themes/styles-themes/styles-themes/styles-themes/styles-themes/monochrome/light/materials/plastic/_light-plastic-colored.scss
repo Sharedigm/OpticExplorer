@@ -1,0 +1,233 @@
+/******************************************************************************\
+|                                                                              |
+|                         _light-plastic-colored.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../../colors/colors";
+@use "../../../../../materials/plastic";
+
+//
+// colors
+//
+
+$color: $light-grey;
+$selected-color: $very-light-grey;
+
+//
+// styles
+//
+
+body:not(.binary).monochrome {
+	&.light.plastic {
+
+		//
+		// plastic colored materials
+		//
+
+		.colored {
+
+			&.red {
+				.plastic($color);
+			}
+
+			&.raspberry {
+				.plastic($color);
+			}
+
+			&.red-orange {
+				.plastic($color);
+			}
+
+			&.orange {
+				.plastic($color);
+			}
+
+			&.yellow {
+				.plastic($color);
+			}
+
+			&.lime {
+				.plastic($color);
+			}
+
+			&.green {
+				.plastic($color);
+			}
+
+			&.teal {
+				.plastic($color);
+			}
+
+			&.aqua {
+				.plastic($color);
+			}
+
+			&.cyan {
+				.plastic($color);
+			}
+
+			&.blue {
+				.plastic($color);
+			}
+
+			&.indigo {
+				.plastic($color);
+			}
+
+			&.violet {
+				.plastic($color);
+			}
+
+			&.plum {
+				.plastic($color);
+			}
+
+			&.purple {
+				.plastic($color);
+			}
+
+			&.magenta {
+				.plastic($color);
+			}
+
+			&.brown {
+				.plastic($color);
+			}
+
+			&.grey {
+				.plastic($color);
+			}
+
+			&.black {
+				.plastic($color);
+			}
+
+			&.white {
+				.plastic($color);
+			}
+
+			&.copper {
+				.plastic($color);
+			}
+
+			&.silver {
+				.plastic($color);
+			}
+
+			&.gold {
+				.plastic($color);
+			}
+		}
+
+		//
+		// plastic selected colored materials
+		//
+
+		.selected .colored {
+
+			&.red {
+				.plastic($selected-color);
+			}
+
+			&.raspberry {
+				.plastic($selected-color);
+			}
+
+			&.red-orange {
+				.plastic($selected-color);
+			}
+
+			&.orange {
+				.plastic($selected-color);
+			}
+
+			&.yellow {
+				.plastic($selected-color);
+			}
+
+			&.lime {
+				.plastic($selected-color);
+			}
+
+			&.green {
+				.plastic($selected-color);
+			}
+
+			&.teal {
+				.plastic($selected-color);
+			}
+
+			&.aqua {
+				.plastic($selected-color);
+			}
+
+			&.cyan {
+				.plastic($selected-color);
+			}
+
+			&.blue {
+				.plastic($selected-color);
+			}
+
+			&.indigo {
+				.plastic($selected-color);
+			}
+
+			&.violet {
+				.plastic($selected-color);
+			}
+
+			&.plum {
+				.plastic($selected-color);
+			}
+
+			&.purple {
+				.plastic($selected-color);
+			}
+
+			&.magenta {
+				.plastic($selected-color);
+			}
+
+			&.brown {
+				.plastic($selected-color);
+			}
+
+			&.grey {
+				.plastic($selected-color);
+			}
+
+			&.black {
+				.plastic($selected-color);
+			}
+
+			&.white {
+				.plastic($selected-color);
+			}
+
+			&.copper {
+				.plastic($selected-color);
+			}
+
+			&.silver {
+				.plastic($selected-color);
+			}
+
+			&.gold {
+				.plastic($selected-color);
+			}
+		}
+	}
+}

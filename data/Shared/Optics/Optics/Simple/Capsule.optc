@@ -1,0 +1,32 @@
+################################################################################
+#                                                                              #
+#                                 Capsule.optc                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Carlos Mendez                                              #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 25 mm
+        diameter: 50 mm
+      - type: spherical
+        curvature: -25 mm
+        diameter: 50 mm
+    thickness: 50 mm
+    material:
+      catalog: Materials
+      name: water
+
+LIGHTS: []
+
+OBJECTS: []

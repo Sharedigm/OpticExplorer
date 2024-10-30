@@ -1,0 +1,720 @@
+################################################################################
+#                                                                              #
+#                              Edmund Optics.optc                              #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer material map.               #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+MATERIALS:
+ 
+  - name: H-ZF11
+    catalog: Edmund Optics/Cdgm
+    n: 1.698948
+    v: 30.053069
+
+  - name: H-LAK50A
+    catalog: Edmund Optics/Cdgm
+    n: 1.651605
+    v: 58.416296
+
+  - name: H-ZBAF3
+    catalog: Edmund Optics/Cdgm
+    n: 1.656914
+    v: 51.156590
+
+  - name: H-ZF71
+    catalog: Edmund Optics/Cdgm
+    n: 1.808108
+    v: 22.690566
+
+  - name: H-ZK10L
+    catalog: Edmund Optics/Cdgm
+    n: 1.622802
+    v: 56.951885
+
+  - name: H-ZK9A
+    catalog: Edmund Optics/Cdgm
+    n: 1.620412
+    v: 60.368242
+
+  - name: JGS2
+    catalog: Edmund Optics/Cdgm
+    n: 1.45844E+00
+    v: 67.83
+
+  - name: H-K9L
+    catalog: Edmund Optics/Cdgm
+    n: 1.516797
+    v: 64.212351
+
+  - name: F1
+    catalog: Edmund Optics/Cdgm
+    n: 1.603417
+    v: 38.014870
+
+  - name: H-ZF10
+    catalog: Edmund Optics/Cdgm
+    n: 1.688930
+    v: 31.160527
+
+  - name: H-LAF50B
+    catalog: Edmund Optics/Cdgm
+    n: 1.772501
+    v: 49.613485
+
+  - name: H-LAK52
+    catalog: Edmund Optics/Cdgm
+    n: 1.729164
+    v: 54.669031
+
+  - name: H-LAK51A
+    catalog: Edmund Optics/Cdgm
+    n: 1.696800
+    v: 55.534184
+
+  - name: H-ZBAF52
+    catalog: Edmund Optics/Cdgm
+    n: 1.670031
+    v: 47.197459
+
+  - name: H-ZK6
+    catalog: Edmund Optics/Cdgm
+    n: 1.612719
+    v: 58.604851
+
+  - name: H-QF1
+    catalog: Edmund Optics/Cdgm
+    n: 1.548141
+    v: 45.832966
+
+  - name: ZF1
+    catalog: Edmund Optics/Cdgm
+    n: 1.647693
+    v: 33.836872
+
+  - name: H-LAK53A
+    catalog: Edmund Optics/Cdgm
+    n: 1.755002
+    v: 52.329298
+
+  - name: ZF13
+    catalog: Edmund Optics/Cdgm
+    n: 1.784724
+    v: 25.754051
+
+  - name: H-ZLAF50D
+    catalog: Edmund Optics/Cdgm
+    n: 1.804005
+    v: 46.590950
+
+  - name: H-ZLAF71
+    catalog: Edmund Optics/Cdgm
+    n: 1.850260
+    v: 32.307713
+
+  - name: H-QF6A
+    catalog: Edmund Optics/Cdgm
+    n: 1.531722
+    v: 48.851958
+
+  - name: H-ZF2
+    catalog: Edmund Optics/Cdgm
+    n: 1.672702
+    v: 32.178880
+
+  - name: H-ZLAF52
+    catalog: Edmund Optics/Cdgm
+    n: 1.806099
+    v: 40.945389
+
+  - name: H-ZF72A
+    catalog: Edmund Optics/Cdgm
+    n: 1.922867
+    v: 18.895456
+
+  - name: ZF3
+    catalog: Edmund Optics/Cdgm
+    n: 1.717365
+    v: 29.510385
+
+  - name: H-ZK50
+    catalog: Edmund Optics/Cdgm
+    n: 1.607382
+    v: 56.667022
+
+  - name: H-ZPK1A
+    catalog: Edmund Optics/Cdgm
+    n: 1.617998
+    v: 63.405767
+
+  - name: H-QK3L
+    catalog: Edmund Optics/Cdgm
+    n: 1.487491
+    v: 70.419640
+
+  - name: H-ZF52A
+    catalog: Edmund Optics/Cdgm
+    n: 1.846670
+    v: 23.791236
+
+  - name: H-LAK10
+    catalog: Edmund Optics/Cdgm
+    n: 1.651133
+    v: 55.903805
+
+  - name: H-K50
+    catalog: Edmund Optics/Cdgm
+    n: 1.522490
+    v: 59.512324
+
+  - name: H-ZF7LA
+    catalog: Edmund Optics/Cdgm
+    n: 1.805189
+    v: 25.477290
+
+  - name: H-TF3L
+    catalog: Edmund Optics/Cdgm
+    n: 1.613395
+    v: 44.166804
+
+  - name: H-LAK5A
+    catalog: Edmund Optics/Cdgm
+    n: 1.677903
+    v: 55.559699
+
+  - name: H-ZF13
+    catalog: Edmund Optics/Cdgm
+    n: 1.784721
+    v: 25.719658
+
+  - name: H-ZK2
+    catalog: Edmund Optics/Cdgm
+    n: 1.583132
+    v: 59.455980
+
+  - name: H-ZF6
+    catalog: Edmund Optics/Cdgm
+    n: 1.755205
+    v: 27.547441
+
+  - name: H-F4
+    catalog: Edmund Optics/Cdgm
+    n: 1.620047
+    v: 36.347920
+
+  - name: QF50
+    catalog: Edmund Optics/Cdgm
+    n: 1.581438
+    v: 40.895946
+
+  - name: H-ZK3
+    catalog: Edmund Optics/Cdgm
+    n: 1.589128
+    v: 61.247611
+
+  - name: H-LAF4
+    catalog: Edmund Optics/Cdgm
+    n: 1.749501
+    v: 35.020925
+
+  - name: H-ZBAF20
+    catalog: Edmund Optics/Cdgm
+    n: 1.701545
+    v: 41.140848
+
+  - name: H-FK61
+    catalog: Edmund Optics/Cdgm
+    n: 1.496998
+    v: 81.594687
+
+  - name: S-LAH66
+    catalog: Edmund Optics/Ohara
+    n: 1.772499
+    v: 49.598371
+
+  - name: S-LAL7
+    catalog: Edmund Optics/Ohara
+    n: 1.651597
+    v: 58.550655
+
+  - name: PBH11
+    catalog: Edmund Optics/Ohara
+    n: 1.784718
+    v: 25.712726
+
+  - name: S-NPH2
+    catalog: Edmund Optics/Ohara
+    n: 1.922860
+    v: 18.896912
+
+  - name: S-BAL14
+    catalog: Edmund Optics/Ohara
+    n: 1.568832
+    v: 56.363897
+
+  - name: S-TIM35
+    catalog: Edmund Optics/Ohara
+    n: 1.698947
+    v: 30.127865
+
+  - name: S-LAH51
+    catalog: Edmund Optics/Ohara
+    n: 1.785896
+    v: 44.202637
+
+  - name: S-BSM2
+    catalog: Edmund Optics/Ohara
+    n: 1.607379
+    v: 56.816076
+
+  - name: S-BAL42
+    catalog: Edmund Optics/Ohara
+    n: 1.583126
+    v: 59.374673
+
+  - name: S-NBM51
+    catalog: Edmund Optics/Ohara
+    n: 1.613397
+    v: 44.267706
+
+  - name: S-BAL35
+    catalog: Edmund Optics/Ohara
+    n: 1.589130
+    v: 61.135024
+
+  - name: S-LAH71
+    catalog: Edmund Optics/Ohara
+    n: 1.850259
+    v: 32.270120
+
+  - name: PBM22
+    catalog: Edmund Optics/Ohara
+    n: 1.647689
+    v: 33.802937
+
+  - name: S-TIM25
+    catalog: Edmund Optics/Ohara
+    n: 1.672700
+    v: 32.099206
+
+  - name: S-TIM2
+    catalog: Edmund Optics/Ohara
+    n: 1.620041
+    v: 36.263378
+
+  - name: S-TIH10
+    catalog: Edmund Optics/Ohara
+    n: 1.728250
+    v: 28.460599
+
+  - name: S-TIH11
+    catalog: Edmund Optics/Ohara
+    n: 1.784723
+    v: 25.683446
+
+  - name: S-TIM28
+    catalog: Edmund Optics/Ohara
+    n: 1.688931
+    v: 31.075450
+
+  - name: PBM5
+    catalog: Edmund Optics/Ohara
+    n: 1.603420
+    v: 38.012915
+
+  - name: S-BSM4
+    catalog: Edmund Optics/Ohara
+    n: 1.612716
+    v: 58.716945
+
+  - name: S-TIH4
+    catalog: Edmund Optics/Ohara
+    n: 1.755199
+    v: 27.512089
+
+  - name: S-TIL6
+    catalog: Edmund Optics/Ohara
+    n: 1.531717
+    v: 48.840718
+
+  - name: S-LAL12
+    catalog: Edmund Optics/Ohara
+    n: 1.677900
+    v: 55.341195
+
+  - name: S-BSM10
+    catalog: Edmund Optics/Ohara
+    n: 1.622799
+    v: 57.052723
+
+  - name: S-LAH58
+    catalog: Edmund Optics/Ohara
+    n: 1.882997
+    v: 40.765107
+
+  - name: S-TIH53
+    catalog: Edmund Optics/Ohara
+    n: 1.846660
+    v: 23.777940
+
+  - name: S-FPL51
+    catalog: Edmund Optics/Ohara
+    n: 1.496999
+    v: 81.545888
+
+  - name: S-YGH51
+    catalog: Edmund Optics/Ohara
+    n: 1.754998
+    v: 52.321434
+
+  - name: PBL25
+    catalog: Edmund Optics/Ohara
+    n: 1.581439
+    v: 40.753351
+
+  - name: S-TIH6
+    catalog: Edmund Optics/Ohara
+    n: 1.805181
+    v: 25.425363
+
+  - name: S-PHM52
+    catalog: Edmund Optics/Ohara
+    n: 1.618000
+    v: 63.333504
+
+  - name: S-LAH55
+    catalog: Edmund Optics/Ohara
+    n: 1.834807
+    v: 42.713673
+
+  - name: S-BAH27
+    catalog: Edmund Optics/Ohara
+    n: 1.701536
+    v: 41.239440
+
+  - name: S-LAL18
+    catalog: Edmund Optics/Ohara
+    n: 1.729157
+    v: 54.680013
+
+  - name: S-LAH64
+    catalog: Edmund Optics/Ohara
+    n: 1.788001
+    v: 47.368522
+
+  - name: S-FSL5
+    catalog: Edmund Optics/Ohara
+    n: 1.487490
+    v: 70.236252
+
+  - name: S-LAL9
+    catalog: Edmund Optics/Ohara
+    n: 1.691002
+    v: 54.822578
+
+  - name: S-BSL7
+    catalog: Edmund Optics/Ohara
+    n: 1.516330
+    v: 64.142022
+
+  - name: S-TIH1
+    catalog: Edmund Optics/Ohara
+    n: 1.717362
+    v: 29.518091
+
+  - name: S-LAL14
+    catalog: Edmund Optics/Ohara
+    n: 1.696797
+    v: 55.532241
+
+  - name: S-BSM16
+    catalog: Edmund Optics/Ohara
+    n: 1.620411
+    v: 60.289582
+
+  - name: S-BAH10
+    catalog: Edmund Optics/Ohara
+    n: 1.670029
+    v: 47.230916
+
+  - name: S-LAL54
+    catalog: Edmund Optics/Ohara
+    n: 1.650996
+    v: 56.163717
+
+  - name: S-LAL8
+    catalog: Edmund Optics/Ohara
+    n: 1.712995
+    v: 53.867058
+
+  - name: S-TIL1
+    catalog: Edmund Optics/Ohara
+    n: 1.548141
+    v: 45.784277
+
+  - name: S-LAH53
+    catalog: Edmund Optics/Ohara
+    n: 1.806098
+    v: 40.925996
+
+  - name: S-LAH65
+    catalog: Edmund Optics/Ohara
+    n: 1.804000
+    v: 46.570373
+
+  - name: S-NSL5
+    catalog: Edmund Optics/Ohara
+    n: 1.522494
+    v: 59.835417
+
+  - name: S-LAM2
+    catalog: Edmund Optics/Ohara
+    n: 1.743997
+    v: 44.786431
+
+  - name: S-NPH1
+    catalog: Edmund Optics/Ohara
+    n: 1.808095
+    v: 22.760817
+
+  - name: N-SF10
+    catalog: Edmund Optics/Schott
+    n: 1.72828
+    v: 28.53
+
+  - name: N-LASF9
+    catalog: Edmund Optics/Schott
+    n: 1.85025
+    v: 32.17
+
+  - name: N-SK4
+    catalog: Edmund Optics/Schott
+    n: 1.61272
+    v: 58.63
+
+  - name: N-LAF33
+    catalog: Edmund Optics/Schott
+    n: 1.78582
+    v: 44.05
+
+  - name: N-BK7
+    catalog: Edmund Optics/Schott
+    n: 1.5168
+    v: 64.17
+
+  - name: N-F2
+    catalog: Edmund Optics/Schott
+    n: 1.62005
+    v: 36.43
+
+  - name: N-SF1
+    catalog: Edmund Optics/Schott
+    n: 1.71736
+    v: 29.62
+
+  - name: N-LAF7
+    catalog: Edmund Optics/Schott
+    n: 1.7495
+    v: 34.82
+
+  - name: N-SK5
+    catalog: Edmund Optics/Schott
+    n: 1.58913
+    v: 61.27
+
+  - name: N-BAF10
+    catalog: Edmund Optics/Schott
+    n: 1.67003
+    v: 47.11
+
+  - name: Bolofloat33
+    catalog: Edmund Optics/Schott
+    n: 1.5725
+    v: 57.55
+
+  - name: N-LASF41
+    catalog: Edmund Optics/Schott
+    n: 1.83501
+    v: 43.13
+
+  - name: N-SK2
+    catalog: Edmund Optics/Schott
+    n: 1.60738
+    v: 56.65
+
+  - name: N-LAK33A
+    catalog: Edmund Optics/Schott
+    n: 1.75393
+    v: 52.27
+
+  - name: N-SF57
+    catalog: Edmund Optics/Schott
+    n: 1.84666
+    v: 23.78
+
+  - name: SF2
+    catalog: Edmund Optics/Schott
+    n: 1.64769
+    v: 33.85
+
+  - name: LLF1
+    catalog: Edmund Optics/Schott
+    n: 1.548139
+    v: 45.867807
+
+  - name: N-LAK9
+    catalog: Edmund Optics/Schott
+    n: 1.691
+    v: 54.71
+
+  - name: N-FK51A
+    catalog: Edmund Optics/Schott
+    n: 1.48656
+    v: 84.47
+
+  - name: N-LAK8
+    catalog: Edmund Optics/Schott
+    n: 1.713
+    v: 53.83
+
+  - name: N-SF6
+    catalog: Edmund Optics/Schott
+    n: 1.80518
+    v: 25.36
+
+  - name: N-LAF34
+    catalog: Edmund Optics/Schott
+    n: 1.7725
+    v: 49.62
+
+  - name: N-SF5
+    catalog: Edmund Optics/Schott
+    n: 1.67271
+    v: 32.25
+
+  - name: N-LAK7
+    catalog: Edmund Optics/Schott
+    n: 1.6516
+    v: 58.52
+
+  - name: N-LAF21
+    catalog: Edmund Optics/Schott
+    n: 1.788
+    v: 47.49
+
+  - name: SF11
+    catalog: Edmund Optics/Schott
+    n: 1.78472
+    v: 25.76
+
+  - name: N-LAF2
+    catalog: Edmund Optics/Schott
+    n: 1.74397
+    v: 44.85
+
+  - name: N-LASF43
+    catalog: Edmund Optics/Schott
+    n: 1.8061
+    v: 40.61
+
+  - name: N-LASF31A
+    catalog: Edmund Optics/Schott
+    n: 1.883
+    v: 40.76
+
+  - name: N-KF9
+    catalog: Edmund Optics/Schott
+    n: 1.52346
+    v: 51.54
+
+  - name: N-SK10
+    catalog: Edmund Optics/Schott
+    n: 1.62278
+    v: 56.98
+
+  - name: N-SF15
+    catalog: Edmund Optics/Schott
+    n: 1.69892
+    v: 30.2
+
+  - name: N-LAK12
+    catalog: Edmund Optics/Schott
+    n: 1.6779
+    v: 55.2
+
+  - name: F5
+    catalog: Edmund Optics/Schott
+    n: 1.60342
+    v: 38.03
+
+  - name: N-SF8
+    catalog: Edmund Optics/Schott
+    n: 1.68894
+    v: 31.31
+
+  - name: N-PK52A
+    catalog: Edmund Optics/Schott
+    n: 1.497
+    v: 81.61
+
+  - name: N-FK5
+    catalog: Edmund Optics/Schott
+    n: 1.48749
+    v: 70.41
+
+  - name: N-SF4
+    catalog: Edmund Optics/Schott
+    n: 1.75513
+    v: 27.38
+
+  - name: N-PK51
+    catalog: Edmund Optics/Schott
+    n: 1.52855
+    v: 76.98
+
+  - name: N-SK16
+    catalog: Edmund Optics/Schott
+    n: 1.62041
+    v: 60.32
+
+  - name: N-K5
+    catalog: Edmund Optics/Schott
+    n: 1.52249
+    v: 59.48
+
+  - name: N-LASF44
+    catalog: Edmund Optics/Schott
+    n: 1.8042
+    v: 46.5
+
+  - name: N-PSK53A
+    catalog: Edmund Optics/Schott
+    n: 1.618
+    v: 63.39
+
+  - name: N-LAK34
+    catalog: Edmund Optics/Schott
+    n: 1.72916
+    v: 54.5
+
+  - name: N-LAK22
+    catalog: Edmund Optics/Schott
+    n: 1.65113
+    v: 55.89
+
+  - name: N-LAK14
+    catalog: Edmund Optics/Schott
+    n: 1.6968
+    v: 55.41
+
+  - name: N-BAK4
+    catalog: Edmund Optics/Schott
+    n: 1.56883
+    v: 55.98

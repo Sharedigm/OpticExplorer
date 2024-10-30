@@ -1,0 +1,28 @@
+[descriptive data]
+title	US 2,518,719 Example 2 (Kodak Ektar 100mm F6.3)
+[constants]
+[variable distances]
+Focal Length	100
+Angle of View	undefined
+F-Number	6.3
+Image Height	80.8
+Magnification	0
+d0	Infinity
+Bf(p)	88.90
+Bf	89.01
+[lens data]
+1	24.6	4.89	1.620	22.10	60.3
+2	51.6	0.65		22.10	
+3	22.0	2.20	1.621	15.74	36.2
+4	15.2	4.00		14.24	
+4AS	AS	6.60		13.283
+5	-16.8	2.04	1.605	16.88	38.0
+6	-32.4	0.81		19.60	
+7	-68.4	4.07	1.620	23.71	60.3
+8	-20.9	Bf		23.71
+[figure]
+source	Data/US002518719_Figure02P.png
+originX	49.39
+originY	196.74
+ppmm	14.359
+[notes]

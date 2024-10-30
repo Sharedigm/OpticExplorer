@@ -1,0 +1,31 @@
+[descriptive data]
+title	CH 346706 Example 1 (Schneider Xenon 1.9 / 50)
+[constants]
+Scaled	50	100
+[variable distances]
+Focal Length	50
+Angle of View	45
+F-Number	2
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf	36.2
+[lens data]
+1	27.42	3.35	1.67003	27.30	47.2
+2	78.13	0.64		27.30
+3	19.84	4.47	1.69347	25.26	53.5
+4	84.16	1.76	1.66446	25.26	35.9
+5	12.95	6.07		18.76	
+5AS	AS	4.54		17.285
+6	-15.10	1.59	1.63980	17.42	34.6
+7	45.09	5.94	1.65844	21.50	50.8
+8	-20.94	0.11		21.50
+10	1179.69	2.63	1.74472	23.39	44.7
+11	-38.62	Bf		23.39
+[figure]
+source	Data/CH346706_Figure01P.png
+originX	38.87
+originY	371.73
+ppmm	25.062
+[notes]

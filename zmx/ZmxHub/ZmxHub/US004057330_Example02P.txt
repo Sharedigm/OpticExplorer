@@ -1,0 +1,32 @@
+[descriptive data]
+title	US 4,057,330 Example 2 (Nikon AI Nikkor 135mm f/2.8S)
+[constants]
+Scaled	135	100
+[variable distances]
+Focal Length	135
+Angle of View	18.1
+F-Number	2.8
+Image Height	43.2
+Total Length	undefined
+Magnification	0
+d0	Infinity
+Bf(p)	undefined
+Bf	59.51
+Aperture Diameter	28.599
+[lens data]
+1	56.201	7.299	1.62041	50.08	60.3
+2	405.400	0.599		50.08	
+3	38.850	13.001	1.62041	47.02	60.3
+4	83.151	2.800		37.54	
+5	213.133	4.699	1.78470	38.06	26.1
+6	-79.160	1.500	1.74000	38.06	28.2
+7	26.482	6.750		30.21	
+7AS	AS	27.950		28.599
+8	84.000	2.201	1.72825	27.56	28.3
+9	252.063	Bf		27.56	
+[figure]
+source	Data/US004057330_Figure01P.png
+originX	7
+originY	56
+ppmm	1.469
+[notes]

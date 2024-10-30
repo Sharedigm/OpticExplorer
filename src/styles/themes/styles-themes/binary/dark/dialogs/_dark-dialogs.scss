@@ -1,0 +1,77 @@
+/******************************************************************************\
+|                                                                              |
+|                              _dark-dialogs.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$header-color: black;
+$title-icon-color: white;
+$title-color: white;
+
+//
+// styles
+//
+
+body.binary.dark {
+
+	//
+	// dark modals
+	//
+
+	.modal {
+		.modal-dialog {
+
+			.modal-header {
+				background: $header-color;
+				border-width: 1px;
+				border-style: solid;
+				border-color: white;
+				border-bottom-width: 0;
+				padding-bottom: 1px;
+
+				.icon {
+					color: $title-icon-color;
+				}
+
+				.title {
+					color: $title-color;
+				}
+			}
+
+			.modal-footer {
+				@include binary-colors.light-grey;
+			}
+		}
+	}
+
+	.modals:not(.show-buttons) {
+		.modal-dialog {
+			.modal-header {
+				.buttons {
+					button:not(:hover) {
+						i {
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

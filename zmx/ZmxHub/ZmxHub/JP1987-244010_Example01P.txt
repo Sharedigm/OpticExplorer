@@ -1,0 +1,36 @@
+[descriptive data]
+title	JP 1987-244010 Example 1 (Konica Minolta AF 85mm F1.4)
+[constants]
+[variable distances]
+Focal Length	85	undefined
+Angle of View	undefined	undefined
+F-Number	1.4	undefined
+Image Height	43.2	43.2
+Total Length	undefined	undefined
+Magnification	0	-0.127
+d0	Infinity	730.70
+d11	0.44	15.202
+Bf(p)	undefined	undefined
+Bf	43.04	43.04
+[lens data]
+1	47.184	10.120	1.75450	60.99	51.57
+2	213.013	0.250		60.99
+3	35.840	7.000	1.67000	51.31	57.07
+4	63.648	3.460		51.31
+5	132.315	3.200	1.67339	48.40	29.25
+6	22.892	15.113		37.16
+6AS	AS	7.857		34.881
+7	-30.495	2.900	1.65446	34.19	33.66
+8	77.210	9.200	1.78100	38.28	44.55
+9	-40.788	0.730		38.28
+10	134.035	4.000	1.80700	35.88	39.71
+11	-576.774	d11		35.08
+12	155.750	3.300	1.71300	34.12	53.93
+13	463.970	Bf		32.95
+[figure]
+source	Data/JP1987-244010_Figure01P.png
+originX	24.00
+originY	125.53
+ppmm	2.922
+[notes]
+Bill: d0 measured.

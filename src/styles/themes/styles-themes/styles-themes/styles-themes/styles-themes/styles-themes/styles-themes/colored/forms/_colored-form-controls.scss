@@ -1,0 +1,55 @@
+/******************************************************************************\
+|                                                                              |
+|                         _colored-form-controls.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../colors/colors";
+
+//
+// colors
+//
+
+$form-input-highlight-color: colors.fade(var(--primary-color), 50%);
+$form-input-highlight-border-color: var(--primary-color);
+
+//
+// styles
+//
+
+body:not(.binary).colored.colored {
+
+	//
+	// focused form control highlighting
+	//
+
+	//
+	// select controls
+	//
+
+	select:focus {
+		outline: none;
+		border-color: $form-input-highlight-border-color !important;
+		box-shadow: 0 0 10px 0 $form-input-highlight-color !important;
+	}
+
+	//
+	// input controls
+	//
+
+	input:not([type="radio"]):not([type="range"]):focus, .form-control:focus {
+		border-color: $form-input-highlight-border-color !important;
+		box-shadow: 0 0 10px 0 $form-input-highlight-color !important;
+	}
+}

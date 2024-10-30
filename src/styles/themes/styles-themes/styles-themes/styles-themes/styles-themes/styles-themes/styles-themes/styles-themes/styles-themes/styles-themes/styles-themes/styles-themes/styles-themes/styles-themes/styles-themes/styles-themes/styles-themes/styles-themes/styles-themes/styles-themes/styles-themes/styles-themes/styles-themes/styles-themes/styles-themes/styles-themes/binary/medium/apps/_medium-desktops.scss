@@ -1,0 +1,112 @@
+/******************************************************************************\
+|                                                                              |
+|                             _medium-desktops.scss                             |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../medium/colors/binary-colors";
+
+//
+// colors
+//
+
+$text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+
+//
+// styles
+//
+
+body.binary {
+
+	//
+	// desktops
+	//
+
+	#desktop {
+		@include binary-colors.grey;
+		background-position: 0 0 !important;
+	}
+
+	//
+	// desktop apps
+	//
+
+	.desktop.app {
+		background: none;
+
+		// use desktop background instead of app background
+		//
+		> .body {
+			background: none;
+
+			.app {
+				background: none;
+
+				> .body {
+					background: none;
+
+					> .contents {
+						background: none;
+					}
+				}
+			}
+
+			//
+			// selection boxes
+			//
+
+			.selection {
+				color: white;
+				border-color: black;
+				@include binary-colors.lighten-less-alt;
+			}
+
+			//
+			// file browser icons
+			//
+
+			> .app {
+				> .body {
+					> .split-view {
+						> .mainbar {
+							> .items {
+								.item-list {
+									.item:not(.selected):not(.highlighted) {
+										.info {
+											.icon {
+												text-shadow: $text-shadow;
+											}
+										}
+									}
+								}
+
+								.tile-grid {
+									.item:not(.selected):not(.highlighted) {
+										.name {
+											background: white;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.desktop.preview {
+		@include binary-colors.grey;
+	}
+}

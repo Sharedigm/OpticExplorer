@@ -1,0 +1,153 @@
+/******************************************************************************\
+|                                                                              |
+|                           _medium-item-pages.scss                            |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+@use "../../../../colors/colors";
+@use "../../../../colors/text-colors";
+@use "../items/medium-items";
+@use "../navs/medium-selection";
+@use "../items/medium-item-icons";
+
+//
+// styles
+//
+
+body:not(.binary) {
+	.pages {
+		.main-carousel {
+			.item {
+
+				.name {
+
+					//
+					// editable names
+					//
+
+					&[contenteditable="true"] {
+						color: text-colors.$dark-color;
+						background-color: white;
+						outline-color: medium-selection.$edit-highlight-color;
+					}
+				}
+
+				.details {
+					background-color: medium-items.$details-background-color;
+					
+					.dark &, .desktop & {
+						color: white;
+					}
+				}
+
+				//
+				// highlighted items
+				//
+
+				&.highlighted {
+
+					.icon {
+						background-color: medium-item-icons.$highlighted-background-color;
+						border-color: medium-item-icons.$highlighted-border-color;
+					}
+
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							color: white;
+							background-color: medium-selection.$highlight-color;
+						}
+					}
+
+					.details {
+						color: white;
+						background-color: medium-selection.$highlight-color;
+					}
+				}
+
+				//
+				// selected items
+				//
+
+				&.selected {
+
+					.icon {
+						background-color: medium-item-icons.$selected-background-color;
+						border-color: medium-item-icons.$selected-border-color;
+					}
+
+					.details {
+						color: white;
+						background-color: medium-selection.$select-color;
+					}
+				}
+			}
+		}
+	}
+
+	//
+	// desktop pages
+	//
+
+	.desktop.app .pager .nav-bar {
+		.button {
+			i {
+				color: white;
+			}
+		}
+	}
+
+	//
+	// unfocused items
+	//
+
+	.modal:not(.focused) .modal-dialog,
+	.desktop.app:not(.focused) > .body {
+		.pages {
+			.main-carousel {
+
+				//
+				// unfocused selected items
+				//
+
+				.item.selected {
+
+					.icon {
+						background-color: medium-item-icons.$highlighted-background-color;
+						border-color: medium-item-icons.$highlighted-border-color;
+					}
+
+					.name {
+
+						//
+						// uneditable names
+						//
+
+						&:not([contenteditable="true"]) {
+							background-color: medium-selection.$highlight-color;
+						}
+					}
+
+					.details {
+						background-color: medium-selection.$highlight-color;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,645 @@
+/******************************************************************************\
+|                                                                              |
+|                                _colors.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _text-colors.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                           _light-app-launcher.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light .app-launcher.app .icon-grid .item .icon:not(.colored),
+body:not(.binary).monochrome.light .app-icons .item .icon:not(.colored) {
+  background: #8080b3;
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+}
+body:not(.binary).monochrome.light .app-launcher.app .icon-grid .item .icon:not(.colored) i,
+body:not(.binary).monochrome.light .app-icons .item .icon:not(.colored) i {
+  color: #272740 !important;
+}
+body:not(.binary).monochrome.light .app-launcher.app .icon-grid .item .icon:not(.colored):active,
+body:not(.binary).monochrome.light .app-icons .item .icon:not(.colored):active {
+  background: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                            _light-desktop.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome #desktop.light .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  color: white;
+  background-color: #8080b3;
+  border-color: #8080b3;
+}
+body:not(.binary).monochrome #desktop.light .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle i {
+  color: white;
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _lighting.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _flat.scss                                   |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+@supports (color: color-mix(in srgb, white, black)) {
+  .flat .shaded, .flat.flat.shaded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.round, .flat.flat.shaded.round {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.rounded, .flat.flat.shaded.rounded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.long.round, .flat.flat.shaded.long.round {
+    background-color: var(--primary-color);
+  }
+  .flat .shaded.textured, .flat.flat.shaded.textured {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.round, .flat.flat.shaded.textured.round {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.rounded, .flat.flat.shaded.textured.rounded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.long.round, .flat.flat.shaded.textured.long.round {
+    background-color: var(--primary-color);
+  }
+}
+@supports not (color: color-mix(in srgb, white, black)) {
+  .flat .shaded, .flat.flat.shaded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.round, .flat.flat.shaded.round {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.rounded, .flat.flat.shaded.rounded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.long.round, .flat.flat.shaded.long.round {
+    background-color: var(--primary-color);
+  }
+  .flat .shaded.textured, .flat.flat.shaded.textured {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.round, .flat.flat.shaded.textured.round {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.rounded, .flat.flat.shaded.textured.rounded {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .flat .shaded.textured.long.round, .flat.flat.shaded.textured.long.round {
+    background-color: var(--primary-color);
+  }
+}
+/******************************************************************************\
+|                                                                              |
+|                               _flat-btns.scss                                |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                          _light-flat-desktops.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light.flat #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.flat #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.flat #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  background-color: #8080b3;
+  border-color: #8080b3;
+}
+body:not(.binary).monochrome.light.flat #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.flat #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.flat #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover {
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+}
+body:not(.binary).monochrome.light.flat #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.flat #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.flat #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active {
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3);
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3);
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _round-chalk.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _chalk-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                         _light-chalk-desktops.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light.chalk #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.chalk #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.chalk #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.light.chalk #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.chalk #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.chalk #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+}
+body:not(.binary).monochrome.light.chalk #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.chalk #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.chalk #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                             _round-plastic.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _plastic-btns.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                        _light-plastic-desktops.scss                          |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light.plastic #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.plastic #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.plastic #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.light.plastic #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.plastic #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.plastic #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+}
+body:not(.binary).monochrome.light.plastic #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.plastic #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.plastic #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _round-glass.scss                              |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _glass-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                         _light-glass-desktops.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light.glass #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.glass #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.glass #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, #8080b3) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #8080b3 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+}
+body:not(.binary).monochrome.light.glass #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.glass #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.glass #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3)) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3)) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3) 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+}
+body:not(.binary).monochrome.light.glass #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.glass #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.glass #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3)) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3)) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3) 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                              _round-metal.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                               _metal-btns.scss                               |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines the dom and svg visual styles for this application.      |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                         _light-metal-desktops.scss                           |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+body:not(.binary).monochrome.light.metal #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.metal #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle,
+body:not(.binary).monochrome.light.metal #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #8080b3) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, #8080b3 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #8080b3 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+}
+body:not(.binary).monochrome.light.metal #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.metal #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover,
+body:not(.binary).monochrome.light.metal #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:hover {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3)) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3) 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3) 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3)) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 50%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 10%, #8080b3));
+}
+body:not(.binary).monochrome.light.metal #desktop .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.metal #desktop.auto .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active,
+body:not(.binary).monochrome.light.metal #desktop.medium .desktop.app > .footer-bar .run-menu .menu-bar .dropdown-toggle:active {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3)) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3) 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3) 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3)) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 50%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, color-mix(in srgb, rgb(0, 0, 127) 20%, #8080b3));
+}
+
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 _index.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+/******************************************************************************\
+|                                                                              |
+|                                 styles.scss                                  |
+|                                                                              |
+|******************************************************************************|
+|                                                                              |
+|        This defines various CSS styles used in this application.             |
+|                                                                              |
+|        Author(s): Abe Megahed                                                |
+|                                                                              |
+|        This file is subject to the terms and conditions defined in           |
+|        'LICENSE.txt', which is part of this source code distribution.        |
+|                                                                              |
+|******************************************************************************|
+|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+\******************************************************************************/
+
+/*# sourceMappingURL=styles.css.map */

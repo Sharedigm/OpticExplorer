@@ -1,0 +1,35 @@
+[descriptive data]
+title	JP 1999-326756 Example 3 (Cosina Super Wide-Heliar 15mm F4.5 Aspherical SL)
+[constants]
+[variable distances]
+Focal Length	15.30
+Angle of View	110.1
+F-Number	4.55
+Image Height	43.2
+Magnification	0
+d0	Infinity
+Bf	14.50
+[lens data]
+1	22.739	1.20	1.77250	25.98	49.62
+2	11.200	3.88		19.60
+3	25.576	1.00	1.77250	19.88	49.62
+4	10.899	2.75		16.58
+5	31.315	2.98	1.83400	16.94	37.34
+6	-304.509	5.05		16.94
+7	19.363	3.39	1.71300	9.19	3.94
+8	-11.246	0.70	1.54814	9.19	45.82
+9	50.000	1.30		9.19
+10	AS	2.13		5.114
+11	28.283	6.03	1.80420	11.45	46.50
+12	-6.337	1.00	1.69895	11.45	30.05
+13	298.314	2.30		12.94
+14	-15.197	1.50	1.69350	12.44	53.34
+15	-25.058	Bf		15.64
+[aspherical data]
+14	-15.197	3.993265	-1.95704E-04	1.78495E-06	-1.12758E-07	9.00773E-10
+[figure]
+source	Data/JP1999-326756_Figure05P.png
+originX	16.90
+originY	324.13
+ppmm	22.637
+[notes]

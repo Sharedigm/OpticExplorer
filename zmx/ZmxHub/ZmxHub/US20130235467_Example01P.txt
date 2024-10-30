@@ -1,0 +1,40 @@
+[descriptive data]
+title	US 2013/0235467 Example 1 (Samsung 10mm F3.5 Fisheye)
+[constants]
+[variable distances]
+Focal Length	10.33	undefined
+Angle of View	180	undefined
+Angle of View(m)	182.15	110.21
+F-Number	3.64	undefined
+Image Height	28.50	28.50
+Total Length	undefined	undefined
+Magnification	0	-0.17896
+d0	Infinity	50
+d2	4.60	3.80
+d4	2.07	2.86
+Bf	0	0
+[lens data]
+1	31.231	1.00	1.61800	26.42	63.4
+2	8.000	d2		14.26	
+3	15.601	0.60	1.72916	13.48	54.7
+4	5.896	d4		9.46	
+5	11.044	3.36	1.67270	9.12	32.2
+6	-6.559	0.70	1.80450	9.12	39.6
+7	37.781	2.00		9.12	
+8	AS	2.00		5.808
+9	54.473	3.50	1.58913	10.34	61.1
+10	-8.703	1.21		10.34	
+11	-107.312	3.50	1.59349	12.08	67.0
+12	-7.600	1.40	1.84666	12.08	23.8
+13	-15.743	21.76		14.70	
+14	CG	2.00	1.51680	29.82	64.2
+15	CG	0.50		29.82	
+[aspherical data]
+10	-8.703	0	8.556577E-05	1.478136E-06
+[figure]
+source	Data/US20130235467_Figure01P.png
+originX	77.63
+originY	411.47
+ppmm	13.701
+[notes]
+Bill: Magnification measured. Specification is 0.22x at d0 40mm
