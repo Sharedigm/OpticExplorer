@@ -41,7 +41,7 @@ You can create an account and explore the features and benefits of the platform 
 
 ## Installation
 
-Please follow the instructions in [www.chatkitty.org/#installation](https://www.opticexplorer.com/#installation) to install the software on your computer or web server.
+Please follow the instructions in [www.opticexplorer.com/#installation](https://www.opticexplorer.com/#installation) to install the software on your computer or web server.
 
 ## Instructions
 
