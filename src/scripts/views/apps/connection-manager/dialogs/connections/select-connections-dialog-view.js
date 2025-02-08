@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
-import ConnectionManagerView from '../../../../../views/apps/connection-manager/connection-manager-view.js';
 
 export default DialogView.extend({
 
@@ -58,7 +57,7 @@ export default DialogView.extend({
 	`),
 
 	regions: {
-		body: {
+		connection_manager: {
 			el: '.modal-body',
 			replaceElement: true
 		}
@@ -80,8 +79,8 @@ export default DialogView.extend({
 	//
 
 	hasSelected: function() {
-		if (this.hasChildView('body')) {
-			return this.getChildView('body').getChildView('content').hasSelected();
+		if (this.hasChildView('connection_manager')) {
+			return this.getChildView('connection_manager').getChildView('content').hasSelected();
 		}
 	},
 
@@ -90,11 +89,11 @@ export default DialogView.extend({
 	//
 
 	getSelected: function() {
-		return this.getChildView('body').getChildView('content').getSelected();
+		return this.getChildView('connection_manager').getChildView('content').getSelected();
 	},
 
 	getSelectedModels: function() {
-		return this.getChildView('body').getChildView('content').getSelectedModels();
+		return this.getChildView('connection_manager').getChildView('content').getSelectedModels();
 	},
 
 	//
@@ -125,8 +124,8 @@ export default DialogView.extend({
 
 			// update file browser view
 			//
-			this.getChildView('body').model = directory;
-			this.getChildView('body').render();
+			this.getChildView('connection_manager').model = directory;
+			this.getChildView('connection_manager').render();
 		}
 	},
 
@@ -162,16 +161,15 @@ export default DialogView.extend({
 	},
 
 	showConnectionManager: function() {
-		this.showChildView('body', new ConnectionManagerView({
+		this.showChildApp('connection_manager', {
 			model: this.model,
 
 			// options
 			//
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
 			filter: this.filter || this.options.filter,
+
+			// state
+			//
 			selected: this.options.selected,
 			
 			// callbacks
@@ -179,7 +177,7 @@ export default DialogView.extend({
 			onopen: (items) => this.onOpen(items),
 			onselect: () => this.update(),
 			ondeselect: () => this.update()
-		}));
+		});
 	},
 
 	update: function() {
@@ -222,8 +220,8 @@ export default DialogView.extend({
 
 		// check menu keyboard shortcuts
 		//
-		if (this.hasChildView('body')) {
-			this.getChildView('body').onKeyDown(event);
+		if (this.hasChildView('connection_manager')) {
+			this.getChildView('connection_manager').onKeyDown(event);
 		}
 	}
 });

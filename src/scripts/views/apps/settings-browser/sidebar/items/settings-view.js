@@ -18,6 +18,7 @@
 import ItemsView from '../../../../../views/items/items-view.js';
 import SettingsIconsView from '../../../../../views/apps/settings-browser/sidebar/items/icons/settings-icons-view.js';
 import SettingsListView from '../../../../../views/apps/settings-browser/sidebar/items/lists/settings-list-view.js';
+import SettingsCardsView from '../../../../../views/apps/settings-browser/sidebar/items/cards/settings-cards-view.js';
 
 export default ItemsView.extend({
 
@@ -49,6 +50,14 @@ export default ItemsView.extend({
 		if (this.options.emptyView) {
 			this.emptyView = this.options.emptyView;
 		}
+
+		// set default options
+		//
+		this.options.selectable = true;
+		this.options.deselectable = false;
+		this.options.editable = false;
+		this.options.draggable = false;
+		this.options.droppable = false;
 	},
 
 	//
@@ -105,6 +114,9 @@ export default ItemsView.extend({
 			case 'lists':
 				this.showLists();
 				break;
+			case 'cards':
+				this.showCards();
+				break;
 		}
 	},
 
@@ -116,6 +128,12 @@ export default ItemsView.extend({
 
 	showLists: function() {
 		this.showChildView('items', new SettingsListView(_.extend({
+			collection: this.collection
+		}, this.options)));
+	},
+
+	showCards: function() {
+		this.showChildView('items', new SettingsCardsView(_.extend({
 			collection: this.collection
 		}, this.options)));
 	}

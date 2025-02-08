@@ -123,13 +123,21 @@ export default SideBarView.extend({
 
 	showTopicInfoPanel: function() {
 		this.showChildView('info', new TopicInfoPanelView({
-			model: this.model
+			model: this.model,
+
+			// options
+			//
+			view_kind: this.options.info_kind != 'auto'? this.options.info_kind : this.options.view_kind,
 		}));		
 	},
 
 	showPostInfoPanel: function() {
 		this.showChildView('info', new PostInfoPanelView({
-			model: this.model
+			model: this.model,
+
+			// options
+			//
+			view_kind: this.options.info_kind != 'auto'? this.options.info_kind : this.options.view_kind,
 		}));		
 	},
 
@@ -141,7 +149,6 @@ export default SideBarView.extend({
 			// options
 			//
 			view_kind: this.options.view_kind,
-			// selected: [this.model],
 
 			// callbacks
 			//

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                search-bar-view.js                            |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -16,6 +16,9 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByNameView from '../../../../../views/apps/notification-center/header-bar/search-bar/searches/search-by-name-view.js';
+import SearchByKindView from '../../../../../views/apps/notification-center/header-bar/search-bar/searches/search-by-kind-view.js';
+import SearchByDateView from '../../../../../views/apps/notification-center/header-bar/search-bar/searches/search-by-date-view.js';
 
 export default SearchBarView.extend({
 
@@ -24,41 +27,33 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByName: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-name-view.js'
-		).then((SearchByNameView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByNameView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByNameView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByKind: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-kind-view.js'
-		).then((SearchByKindView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByKindView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByKindView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//
@@ -66,26 +61,22 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByDate: function(kind) {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js'
-		).then((SearchByDateView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByDateView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByDateView.default({
-				model: this.model,
+			kind: kind
+		}));
 
-				// options
-				//
-				kind: kind
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//

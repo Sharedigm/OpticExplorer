@@ -49,38 +49,43 @@ export default PostFormView.extend({
 		
 		<div class="options">
 			<div class="spacer hidden-xs"></div>
+
+			<% if (sharing) { %>
 			<div class="buttons">
 
-				<% if (features && features.emoji) { %>
+				<% if (sharing.emoji) { %>
 				<button class="add-emoji btn btn-sm" data-toggle="tooltip" title="Add Emoji">
 					<i class="fa fa-grin"></i>
 				</button>
 				<% } %>
 
-				<% if (features && features.pictures) { %>
+				<% if (sharing.files && sharing.files.Pictures) { %>
 				<button class="add-pictures btn btn-sm" data-toggle="tooltip" title="Add Pictures">
 					<i class="fa fa-image"></i>
 				</button>
 				<% } %>
 
-				<% if (features && features.files) { %>
+				<% if (sharing.files) { %>
 				<button class="add-files btn btn-sm" data-toggle="tooltip" title="Add Files">
 					<i class="fa fa-file"></i>
 				</button>
 				<% } %>
 		
-				<% if (features && features.uploads) { %>
+				<% if (sharing.uploads) { %>
 				<button class="upload-file btn btn-sm" data-toggle="tooltip" title="Upload File">
 					<i class="fa fa-upload"></i><input type="file" multiple style="display:none"/>
 				</button>
 				<% } %>
 				
-				<% if (features && (features.pictures || features.files || features.uploads)) { %>
+				<% if (sharing.files || sharing.uploads) { %>
 				<button class="remove warning btn btn-sm" data-toggle="tooltip" title="Remove Items" style="display:none">
 					<i class="active fa fa-file-circle-xmark"></i>
 				</button>
 				<% } %>
+			</div>
+			<% } %>
 		
+			<div class="buttons">
 				<button class="submit btn btn-primary" disabled>
 					<i class="active fa fa-comment"></i>Comment
 				</button>
@@ -162,9 +167,12 @@ export default PostFormView.extend({
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
 			message: HtmlUtils.textToHtml(this.model.get('message')),
-			features: this.options.features,
+			privacy: this.model.get('public')? 'public' : 'connections',
+			sharing: config.defaults.sharing,
+
+			// capabilities
+			//
 			cancelable: this.options.cancelable,
-			privacy: this.model.get('public')? 'public' : 'connections'
 		};
 	},
 

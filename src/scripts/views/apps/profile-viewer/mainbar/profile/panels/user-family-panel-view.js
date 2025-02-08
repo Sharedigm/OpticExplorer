@@ -86,7 +86,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-family-member-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-family-member-dialog-view.js'
 		).then((AddUserFamilyMemberDialogView) => {
 			
 			// show add dialog
@@ -95,7 +95,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 				// callbacks
 				//
-				onAdd: function(model) {
+				onadd: (model) => {
 					this.collection.add(model);
 
 					// update view

@@ -18,11 +18,11 @@
 import BaseView from '../../../../views/base-view.js';
 import DockAppIconsView from '../../../../views/apps/desktop/dock/dock-app-icons/dock-app-icons-view.js';
 import DockTaskIconsView from '../../../../views/apps/desktop/dock/dock-task-icons/dock-task-icons-view.js';
-import Launchable from '../../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../../views/apps/common/behaviors/opening/app-launchable.js';
 import Minimizable from '../../../../views/dialogs/behaviors/minimizable.js';
 import Browser from '../../../../utilities/web/browser.js';
 
-export default BaseView.extend(_.extend({}, Launchable, {
+export default BaseView.extend(_.extend({}, AppLaunchable, {
 
 	//
 	// attributes
@@ -107,7 +107,7 @@ export default BaseView.extend(_.extend({}, Launchable, {
 
 	showAppIcons: function() {
 		this.showChildView('apps', new DockAppIconsView({
-			collection: this.getApps()
+			collection: application.getVisibleApps()
 		}));
 	},
 

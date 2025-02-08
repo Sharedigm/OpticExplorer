@@ -17,7 +17,6 @@
 
 import VideoFile from '../../../models/storage/media/video-file.js';
 import Directory from '../../../models/storage/directories/directory.js';
-import Contacts from '../../../collections/contacts/contacts.js';
 import UserPreferences from '../../../models/preferences/user-preferences.js';
 import Items from '../../../collections/storage/items.js';
 import AboutDialogView from '../../../views/dialogs/alerts/about-dialog-view.js';
@@ -115,6 +114,16 @@ export default AboutDialogView.extend(_.extend({}, GoogleContactsImportable, {
 	// methods
 	//
 
+	showImageFile: function(file, options) {
+		application.launch('image_viewer', {
+			model: file,
+			preferences: UserPreferences.create('image_viewer', {
+				show_sidebar: false
+			}),
+			slide_show: true
+		}, options);
+	},
+
 	showSlideShow: function(path) {
 
 		// load contents of welcome directory
@@ -125,17 +134,15 @@ export default AboutDialogView.extend(_.extend({}, GoogleContactsImportable, {
 
 			// callbacks
 			//
-			success: (model) => {
-				application.launch('image_viewer', {
+			success: (directory) => {
 
-					// find first image
-					//
-					model: model.contents.filter(Items.filters.is_image)[0],
-					preferences: UserPreferences.create('image_viewer', {
-						show_sidebar: false
-					}),
-					slide_show: true
-				}, {
+				// find first image
+				//
+				let file = directory.contents.filter(Items.filters.is_image)[0];
+
+				// show image file
+				//
+				this.showImageFile(file, {
 					maximized: true,
 					full_screen: true,
 				});
@@ -152,6 +159,16 @@ export default AboutDialogView.extend(_.extend({}, GoogleContactsImportable, {
 		});
 	},
 
+	showVideoFile: function(file, options) {
+		application.launch('video_player', {
+			model: file,
+			preferences: UserPreferences.create('video_player', {
+				show_sidebar: false
+			}),
+			autoplay: true
+		}, options);
+	},
+
 	showVideo: function(path) {
 
 		// load video file
@@ -160,14 +177,8 @@ export default AboutDialogView.extend(_.extend({}, GoogleContactsImportable, {
 			path: path
 		}).fetch({
 
-			success: (model) => {
-				application.launch('video_player', {
-					model: model,
-					preferences: UserPreferences.create('video_player', {
-						show_sidebar: false
-					}),
-					autoplay: true
-				}, {
+			success: (file) => {
+				this.showVideoFile(file, {
 					maximized: true,
 					full_screen: false
 				});
@@ -230,16 +241,13 @@ export default AboutDialogView.extend(_.extend({}, GoogleContactsImportable, {
 	//
 
 	showGoogleContactsDialog: function(contacts) {
-		import(
-			'../../../views/apps/profile-browser/dialogs/invitations/invite-google-contacts-dialog-view.js'
-		).then((InviteGoogleContactsDialogView) => {
+		application.loadAppView('profile_browser', {
 
-			// show invite google contacts dialog
+			// callbacks
 			//
-			application.show(new InviteGoogleContactsDialogView.default({
-				collection: new Contacts(contacts),
-				message: config.apps.profile_browser.invitation_message
-			}));
+			success: (ProfileBrowserView) => {
+				ProfileBrowserView.inviteGoogleContacts(contacts);
+			}
 		});
 	},
 

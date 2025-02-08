@@ -166,11 +166,11 @@ export default SelectableCollectionView.extend({
 
 		let collection = options.collection || this.collection;
 		
-		// launch image viewer
+		// show image and collection
 		//
-		application.launch('image_viewer', {
+		this.showImage(image, {
 			model: image,
-			collection: new Items(collection.models), 
+			collection: new Items(collection.models),
 			defaults: {
 				show_sidebar: collection.models.length > 1
 			}
@@ -195,7 +195,7 @@ export default SelectableCollectionView.extend({
 			model: model,
 			lightbox: this.options.lightbox,
 
-			// options
+			// state
 			//
 			selected: this.options.selected && this.options.selected.length > 0 && this.options.selected.contains(model)
 		});
@@ -226,6 +226,13 @@ export default SelectableCollectionView.extend({
 			//
 			this.$el.jpictura(this.defaults);
 		}
+	},
+
+	showImage: function(image, options) {
+
+		// launch image viewer
+		//
+		application.launch('image_viewer', options);
 	},
 
 	//

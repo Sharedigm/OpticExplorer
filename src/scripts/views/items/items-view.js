@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                 items-view.js                                |
+|                                items-view.js                                 |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -26,7 +26,6 @@ import TilesView from '../../views/items/tiles/tiles-view.js';
 import CardsView from '../../views/items/cards/cards-view.js';
 import PagerView from '../../views/items/pages/pager-view.js';
 import ItemsGalleryView from '../../views/items/galleries/items-gallery-view.js';
-import ItemsMapView from '../../views/maps/items-map-view.js';
 import Browser from '../../utilities/web/browser.js';
 
 export default BaseView.extend(_.extend({}, SelectableContainable, Scrollable, {
@@ -54,7 +53,7 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Scrollable, {
 	//
 
 	initialize: function() {
-		
+
 		// set optional parameter defaults
 		//
 		if (this.options.droppable == undefined) {
@@ -414,9 +413,16 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Scrollable, {
 	},
 
 	showMap: function() {
-		this.showChildView('items', new ItemsMapView(_.extend({
-			collection: this.collection
-		}, this.options)));
+		application.loadAppView('map_viewer', {
+
+			// callbacks
+			//
+			success: (MapViewerView) => {
+				this.showChildView('items', MapViewerView.getItemsMapView(_.extend({
+					collection: this.collection
+				}, this.options)));
+			}
+		});
 	},
 
 	update: function() {

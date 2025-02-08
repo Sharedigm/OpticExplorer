@@ -29,7 +29,7 @@ export default HeaderBarView.extend({
 	// attributes
 	//
 
-	toolbars: ['menu', 'mouse_mode', 'zoom_mode', 'zoom', 'rotate', 'image'],
+	toolbars: ['menu', 'mouse_mode', 'zoom_mode', 'image', 'zoom', 'rotate'],
 
 	//
 	// rendering methods
@@ -44,6 +44,7 @@ export default HeaderBarView.extend({
 		// hide items for mobile
 		//
 		this.$el.find('.mouse-mode-bar').addClass('desktop-only');
+		this.$el.find('.image-bar').addClass('desktop-app-only');
 	},
 
 	showToolbar: function(kind) {
@@ -57,14 +58,14 @@ export default HeaderBarView.extend({
 			case 'zoom_mode':
 				this.showZoomModeBar();
 				break;
+			case 'image':
+				this.showImageBar();
+				break;
 			case 'zoom':
 				this.showZoomBar();
 				break;
 			case 'rotate':
 				this.showRotateBar();
-				break;
-			case 'image':
-				this.showImageBar();
 				break;
 		}
 	},
@@ -109,6 +110,5 @@ export default HeaderBarView.extend({
 			imageNumber: this.collection? this.collection.indexOf(this.model) + 1 : undefined,
 			numImages: 	this.collection? this.collection.length : undefined
 		}));
-		this.getChildView('image').$el.addClass('desktop-app-only');
 	}
 });

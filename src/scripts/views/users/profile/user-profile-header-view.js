@@ -328,7 +328,7 @@ export default BaseView.extend({
 
 	showOpenProfileAvatarDialog: function() {
 		import(
-			'../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 
 			// show open dialog
@@ -358,7 +358,7 @@ export default BaseView.extend({
 
 	showOpenProfilePhotoDialog: function() {
 		import(
-			'../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 
 			// show open dialog

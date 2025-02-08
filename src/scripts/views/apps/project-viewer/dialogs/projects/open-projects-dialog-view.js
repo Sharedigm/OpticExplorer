@@ -119,12 +119,15 @@ export default DialogView.extend({
 
 			// options
 			//
-			selected: this.options.selected,
 			dialog: this,
 			hidden: {
 				'footer-bar': true
 			},
-			
+
+			// state
+			//
+			selected: this.options.selected,
+
 			// callbacks
 			//
 			onopen: (items) => this.onOpen(items),

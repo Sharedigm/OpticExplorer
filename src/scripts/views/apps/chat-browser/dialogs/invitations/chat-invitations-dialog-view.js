@@ -19,7 +19,6 @@ import Chat from '../../../../../models/chats/chat.js';
 import ChatInvitations from '../../../../../collections/chats/sharing/chat-invitations.js';
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
 import ChatInvitationMessageFormView from '../../../../../views/apps/chat-browser/forms/invitations/chat-invitation-message-form-view.js';
-import ConnectionManagerView from '../../../../../views/apps/connection-manager/connection-manager-view.js';
 
 export default DialogView.extend({
 
@@ -238,20 +237,13 @@ export default DialogView.extend({
 	},
 
 	showConnectionManager: function() {
-		this.showChildView('connection_manager', new ConnectionManagerView({
-
-			// options
-			//
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
+		this.showChildApp('connection_manager', {
 
 			// callbacks
 			//
 			onselect: () => this.onChange(),
 			ondeselect: () => this.onChange()
-		}));
+		});
 	},
 
 	showMessageForm: function() {

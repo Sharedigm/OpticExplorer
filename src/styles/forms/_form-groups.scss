@@ -46,6 +46,14 @@ $controls-height: 30px;
 	}
 
 	//
+	// typeography
+	//
+
+	&.title {
+		font-weight: normal;
+	}
+
+	//
 	// form group controls
 	//
 
@@ -87,10 +95,10 @@ $controls-height: 30px;
 				}
 			}
 
-			input[type="text"], input[type="number"] {
+			input[type="text"], input[type="number"], input[type="date"] {
 				height: 25px;
 				line-height: 15px;
-				padding: 5px;
+				padding: 0;
 			}
 
 			//

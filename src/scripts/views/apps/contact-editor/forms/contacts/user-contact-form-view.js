@@ -45,8 +45,7 @@ export default FormView.extend({
 				</div>
 			</div>
 		</form>
-		<hr>
-		
+
 		<div class="user-phone-form"<% if (contact_kind != 'phone') { %> style="display:none"<% } %>></div>
 		<div class="user-email-addr-form"<% if (contact_kind != 'email-addr') { %> style="display:none"<% } %>></div>
 		<div class="user-address-form"<% if (contact_kind != 'address') { %> style="display:none"<% } %>></div>

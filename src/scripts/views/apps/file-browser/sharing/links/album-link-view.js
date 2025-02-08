@@ -73,9 +73,6 @@ export default FolderLinkView.extend({
 	//
 
 	showAudioPlayer: function(directory) {
-
-		// launch audio player
-		//
 		application.launch('audio_player', {
 			collection: directory.contents
 		}, {
@@ -84,9 +81,6 @@ export default FolderLinkView.extend({
 	},
 
 	showFileBrowser: function(directory) {
-
-		// launch file browser
-		//
 		application.launch('file_browser', {
 			model: directory,
 			defaults: {

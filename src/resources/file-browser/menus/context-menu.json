@@ -1,0 +1,135 @@
+{
+	"items": [
+		{
+			"class": "new-folder",
+			"icon": "fa fa-folder",
+			"name": "New Folder",
+			"shortcut": "command-enter"
+		},
+		{
+			"class": "open-item",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		{
+			"class": "open-with",
+			"icon": "fa fa-folder-open",
+			"name": "Open With"
+		},
+		{
+			"class": "open-selected",
+			"icon": "fa fa-folder-open",
+			"name": "Open Selected",
+			"shortcut": "enter"
+		},
+		{
+			"class": "open-in-new-window",
+			"icon": "fa fa-folder-open",
+			"name": "Open in New Window"
+		},
+		{
+			"class": "upload-item",
+			"icon": "fa fa-upload",
+			"name": "Upload",
+			"shortcut": "command-U"
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		{
+			"class": "show-on-map",
+			"icon": "fa fa-map",
+			"name": "Show on Map",
+			"shortcut": "command-M"
+		},
+		"divider",
+		{
+			"class": "share",
+			"icon": "fa fa-share",
+			"name": "Share",
+			"menu": [
+				{
+					"class": "share-by-invitation",
+					"icon": "fa fa-user-friends",
+					"name": "By Invitation"
+				},
+				"divider",
+				{
+					"class": "share-by-topic",
+					"icon": "fa fa-newspaper",
+					"name": "By Discussion Topic"
+				},
+				{
+					"class": "share-by-message",
+					"icon": "fa fa-comments",
+					"name": "By Chat Messsage"
+				},
+				"divider",
+				{
+					"class": "share-by-link",
+					"icon": "fa fa-link",
+					"name": "By Link"
+				},
+				{
+					"class": "share-by-email",
+					"icon": "fa fa-envelope",
+					"name": "By Email"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "rename-item",
+			"icon": "fa fa-font",
+			"name": "Rename",
+			"shortcut": "shift-command-R"
+		},
+		{
+			"class": "compress-item",
+			"icon": "fa fa-compress",
+			"name": "Compress",
+			"shortcut": "shift-command-Z"
+		},
+		{
+			"class": "download-item",
+			"icon": "fa fa-download",
+			"name": "Download",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "set-profile",
+			"icon": "fa fa-user",
+			"name": "Set Profile Picture"
+		},
+		{
+			"class": "set-background",
+			"icon": "fa fa-desktop",
+			"name": "Set Background Picture"
+		},
+		"divider",
+		{
+			"class": "delete-item",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete",
+			"shortcut": "delete"
+		},
+		{
+			"class": "empty-trash",
+			"icon": "fa fa-trash-alt",
+			"name": "Empty Trash",
+			"shortcut": "command-E"
+		},
+		"divider",
+		{
+			"class": "change-background",
+			"icon": "fa fa-image",
+			"name": "Change Background"
+		}
+	]
+}

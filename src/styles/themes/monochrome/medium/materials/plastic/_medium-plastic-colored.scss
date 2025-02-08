@@ -42,10 +42,6 @@ body:not(.binary) {
 				@include plastic.shade($color);
 			}
 
-			&.raspberry {
-				@include plastic.shade($color);
-			}
-
 			&.red-orange {
 				@include plastic.shade($color);
 			}
@@ -102,6 +98,10 @@ body:not(.binary) {
 				@include plastic.shade($color);
 			}
 
+			&.raspberry {
+				@include plastic.shade($color);
+			}
+
 			&.brown {
 				@include plastic.shade($color);
 			}
@@ -138,10 +138,6 @@ body:not(.binary) {
 		.selected .colored:not(.btn) {
 
 			.red {
-				@include plastic.shade($selected-color);
-			}
-
-			.raspberry {
 				@include plastic.shade($selected-color);
 			}
 
@@ -198,6 +194,10 @@ body:not(.binary) {
 			}
 
 			.magenta {
+				@include plastic.shade($selected-color);
+			}
+
+			.raspberry {
 				@include plastic.shade($selected-color);
 			}
 

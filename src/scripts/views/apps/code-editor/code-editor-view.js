@@ -23,6 +23,7 @@ import Multifile from '../../../views/apps/common/behaviors/tabbing/multifile.js
 import ContainableSelectable from '../../../views/behaviors/containers/containable-selectable.js';
 import FindReplaceable from '../../../views/apps/common/behaviors/finding/find-replaceable.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import FileDownloadable from '../../../views/apps/file-browser/mainbar/behaviors/file-downloadable.js';
 import FileUploadable from '../../../views/apps/file-browser/mainbar/behaviors/file-uploadable.js';
 import FileDisposable from '../../../views/apps/file-browser/mainbar/behaviors/file-disposable.js';
@@ -30,8 +31,9 @@ import HeaderBarView from '../../../views/apps/code-editor/header-bar/header-bar
 import SideBarView from '../../../views/apps/code-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/code-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/code-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/code-editor/forms/preferences/preferences-form-view.js'
 
-export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable, FindReplaceable, ItemShareable, FileDownloadable, FileUploadable, FileDisposable, {
+export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable, FindReplaceable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
 
 	//
 	// attributes
@@ -121,13 +123,6 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 		return this.getActiveView().hasSelected();
 	},
 
-	hasSelectedFavorites: function() {
-		let sidebarView = this.getChildView('sidebar');
-		let favoritesPanelView = sidebarView? sidebarView.getChildView('favorites') : null;
-		let favoriteItemsView = favoritesPanelView? favoritesPanelView.getChildView('items') : null;
-		return favoriteItemsView? favoriteItemsView.hasSelected() : false;
-	},
-
 	hasSelectedItems: function() {
 		if (this.hasChildView('sidebar')) {
 			return this.getChildView('sidebar').hasSelectedItems();
@@ -161,10 +156,6 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 			//
 			return application.getDirectory();
 		}
-	},
-
-	getSelectedFavorites: function() {
-		return this.getChildView('sidebar').getSelectedFavorites();
 	},
 
 	getSelectedItems: function() {
@@ -202,26 +193,6 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 		// set sidebar
 		//
 		this.getChildView('sidebar').getChildView('files').setDirectory(directory);
-	},
-
-	//
-	// favorites methods
-	//
-
-	addFavorites: function() {
-		this.getChildView('sidebar').getChildView('favorites').showOpenDialog();
-	},
-
-	removeFavorites: function(favorites) {
-		if (favorites && favorites.length > 0) {
-			this.getChildView('sidebar').getChildView('favorites').getChildView('items').removeFavorites(favorites, {
-				confirm: true,
-
-				// callbacks
-				//
-				success: () => this.onChange()
-			});
-		}
 	},
 
 	//
@@ -772,5 +743,13 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 	//
 
 	defaultName: 'Untitled.txt',
-	clipboard: undefined
+	clipboard: undefined,
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

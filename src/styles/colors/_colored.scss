@@ -30,10 +30,6 @@ body.red {
 	--primary-color: #{colors.$medium-red};
 }
 
-body.raspberry {
-	--primary-color: #{colors.$medium-raspberry};
-}
-
 body.red-orange {
 	--primary-color: #{colors.$medium-red-orange};
 }
@@ -98,6 +94,10 @@ body.magenta {
 	--primary-color: #{colors.$medium-magenta};
 }
 
+body.raspberry {
+	--primary-color: #{colors.$medium-raspberry};
+}
+
 body.grey {
 	--primary-color: #{colors.$medium-grey};
 }
@@ -112,10 +112,6 @@ body.brown {
 
 .red-accented {
 	--secondary-color: #{colors.$medium-red};
-}
-
-.raspberry-accented {
-	--secondary-color: #{colors.$medium-raspberry};
 }
 
 .red-orange-accented {
@@ -180,6 +176,10 @@ body.brown {
 
 .magenta-accented {
 	--secondary-color: #{colors.$medium-magenta};
+}
+
+.raspberry-accented {
+	--secondary-color: #{colors.$medium-raspberry};
 }
 
 .grey-accented {

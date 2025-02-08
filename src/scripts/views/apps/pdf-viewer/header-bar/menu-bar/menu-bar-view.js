@@ -25,37 +25,6 @@ import HelpMenuView from '../../../../../views/apps/pdf-viewer/header-bar/menu-b
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	template: template(`
-		<li class="file dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i><span class="dropdown-title">File</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="view dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eye"></i><span class="dropdown-title">View</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="find dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i><span class="dropdown-title">Find</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="share dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share"></i><span class="dropdown-title">Share</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="help dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><span class="dropdown-title">Help</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-	`),
-
-	//
 	// setting methods
 	//
 
@@ -70,12 +39,6 @@ export default MenuBarView.extend({
 	//
 	// rendering methods
 	//
-
-	templateContext: function() {
-		return {
-			options: this.options
-		};
-	},
 
 	onRender: function() {
 

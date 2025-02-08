@@ -25,8 +25,6 @@ export default FormView.extend({
 
 	template: template(`
 		<fieldset>
-			<legend>Profile</legend>
-		
 			<div class="name form-group">
 				<label class="required control-label"><i class="fa fa-quote-left"></i>Name</label>
 				<div class="controls">

@@ -87,10 +87,12 @@ export default FormDialogView.extend({
 
 			// options
 			//
+			preferences: this.options.preferences,
+
+			// capabilities
+			//
 			submitable: false,
 			cancelable: false,
-			features: this.options.features,
-			preferences: this.options.preferences,
 
 			// callbacks
 			//

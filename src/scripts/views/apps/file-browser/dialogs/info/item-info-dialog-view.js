@@ -169,7 +169,7 @@ export default InfoDialogView.extend({
 
 	getTab: function(event) {
 		let className = $(event.target).closest('li').attr('class');
-		return className.replace('tab', '').replace('active', '').trim();
+		return className.replace('-tab', '').replace('active', '').trim();
 	},
 
 	getItem: function() {
@@ -214,7 +214,7 @@ export default InfoDialogView.extend({
 	},
 
 	setButtonVisibility: function() {
-		
+
 		// hide / show buttons for each tab
 		//
 		switch (this.tab) {
@@ -514,7 +514,7 @@ export default InfoDialogView.extend({
 					success: () => {
 						this.deletePlace();
 
-						// trigger file browser to show maps
+						// update view
 						//
 						this.model.parent.trigger('change');
 					}
@@ -557,7 +557,7 @@ export default InfoDialogView.extend({
 
 	showCopyLinkDialog: function(link) {
 		import(
-			'../../../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// close dialog
@@ -582,6 +582,18 @@ export default InfoDialogView.extend({
 			application.show(new EditLinkDialogView.default({
 				model: link
 			}));
+		});
+	},
+
+	showDirectory: function() {
+		application.launch('file_browser', {
+			model: new Directory({
+				path: FileUtils.getDirectoryPath(this.getItem().get('path'))
+			}),
+
+			// options
+			//
+			selected: this.getItem()
 		});
 	},
 
@@ -610,15 +622,7 @@ export default InfoDialogView.extend({
 	},
 
 	onClickOpenFolder: function() {
-		application.launch('file_browser', {
-			model: new Directory({
-				path: FileUtils.getDirectoryPath(this.getItem().get('path'))
-			}),
-
-			// options
-			//
-			selected: this.getItem()
-		});
+		this.showDirectory();
 	},
 
 	onClickSave: function() {

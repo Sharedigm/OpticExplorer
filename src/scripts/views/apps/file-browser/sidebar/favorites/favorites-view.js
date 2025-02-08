@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import Directory from '../../../../../models/storage/directories/directory.js';
-import FileFavorites from '../../../../../models/favorites/file-favorites.js';
 import EditableFilesView from '../../../../../views/apps/file-browser/mainbar/files/editable-files-view.js';
 
 export default EditableFilesView.extend({
@@ -31,17 +30,12 @@ export default EditableFilesView.extend({
 		//
 		EditableFilesView.prototype.initialize.call(this, options);
 
-		// set optional parameter defaults
-		//
-		if (!this.options.favorites) {
-			this.options.favorites = new FileFavorites();
-		}
-
 		// initialize model
 		//
-		this.collection = this.model.toItems();
+		this.favorites = this.model;
+		this.collection = this.favorites.toItems();
 		this.model = new Directory({
-			contents: this.collection.toArray()
+			contents: this.collection.models
 		});
 	},
 
@@ -133,12 +127,12 @@ export default EditableFilesView.extend({
 
 		// update model
 		//
-		this.options.favorites.setPaths(this.getPaths());
+		this.favorites.setPaths(this.getPaths());
 
 		// save model
 		//
 		if (application.isSignedIn()) {
-			this.options.favorites.save(undefined, options);
+			this.favorites.save(undefined, options);
 		}
 	},
 
@@ -173,7 +167,7 @@ export default EditableFilesView.extend({
 	//
 
 	onOpen: function(item) {
-		this.getParentView('file-browser').openItem(item.model, {
+		this.getParentView('app').openItem(item.model, {
 
 			// callbacks
 			//

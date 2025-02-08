@@ -66,14 +66,6 @@ export default SideBarView.extend(_.extend({
 	// getting methods
 	//
 
-	getSelectedFavorites: function() {
-		if (this.hasChildView('favorites')) {
-			return this.getChildView('favorites').getSelected();
-		} else {
-			return [];
-		}
-	},
-
 	getSelectedItems: function() {
 		if (this.hasChildView('files')) {
 			return this.getChildView('files').getSelectedModels();
@@ -102,7 +94,10 @@ export default SideBarView.extend(_.extend({
 
 	showFavoritesPanel: function() {
 		this.showChildView('favorites', new FavoritesPanelView({
-			favorites: this.options.favorites,
+
+			// options
+			//
+			view_kind: this.options.view_kind,
 
 			// callback options
 			//

@@ -121,7 +121,7 @@ export default ListView.extend({
 		return _.extend({}, this.options, {
 			model: model,
 
-			// options
+			// state
 			//
 			selected: this.options.selected && this.contains(this.options.selected, model)
 		});

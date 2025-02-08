@@ -27,11 +27,15 @@ export default CardsView.extend({
 	//
 	
 	childView: function(item) {
-		if (item.has('isbn_number')) {
+		let attributes = Object.keys(item.attributes);
+
+		// find publication type
+		//
+		if (attributes.includes('isbn_number')) {
 			return UserBookView;
-		} else if (item.has('issn_number')) {
+		} else if (attributes.includes('issn_number')) {
 			return UserArticleView;
-		} else if (item.has('patent_number')) {
+		} else if (attributes.includes('patent_number')) {
 			return UserPatentView;
 		} else {
 

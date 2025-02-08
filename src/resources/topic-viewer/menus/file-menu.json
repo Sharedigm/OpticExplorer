@@ -1,0 +1,68 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		{
+			"class": "new-topic",
+			"icon": "fa fa-plus",
+			"name": "New Topic",
+			"shortcut": "shift-command-enter"
+		},
+		{
+			"class": "open-topics",
+			"icon": "fa fa-folder",
+			"name": "Open Topics",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "add-topics",
+			"icon": "fa fa-plus",
+			"name": "Add Topics",
+			"shortcut": "command-D"
+		},
+		{
+			"class": "remove-topics",
+			"icon": "fa fa-minus",
+			"name": "Remove Topics",
+			"shortcut": "command-delete"
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		{
+			"class": "download-item",
+			"icon": "fa fa-download",
+			"name": "Download",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "close-topic",
+			"icon": "fa fa-xmark",
+			"name": "Close Topic",
+			"shortcut": "command-L"
+		},
+		{
+			"class": "close-post",
+			"icon": "fa fa-xmark",
+			"name": "Close Post",
+			"shortcut": "command-L"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

@@ -16,9 +16,7 @@
 \******************************************************************************/
 
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import Connections from '../../../../../collections/users/connections/connections.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
-import UsersView from '../../../../../views/apps/profile-browser/mainbar/users/users-view.js';
 
 export default SideBarPanelView.extend({
 
@@ -45,43 +43,51 @@ export default SideBarPanelView.extend({
 	//
 
 	onRender: function() {
-
-		// fetch mutual connections
-		//
-		new Connections().fetchMutual(application.session.user, this.model, {
+		application.loadAppView('connection_manager', {
 
 			// callbacks
 			//
-			success: (collection) => {
+			success: (ConnectionManagerView) => {
 
-				// show mutual connections
+				// fetch mutual
 				//
-				this.showMutualConnections(collection);
+				ConnectionManagerView.fetchMutualConnections(this.model, {
+
+					// callbacks
+					//
+					success: (connections) => {
+						this.showConnections(connections);
+					}
+				})
 			}
-		});		
+		});
 	},
 
-	showMutualConnections: function(collection) {
-
-		// show list of mutual connections
-		//
-		this.showChildView('items', new UsersView({
-			collection: collection,
-
-			// options
-			//
-			preferences: new UserPreferences({
-				view_kind: this.options.view_kind
-			}),
-			empty: "No connections.",
-
-			// capabilities
-			//
-			selectable: true,
+	showConnections: function(connections) {
+		application.loadAppView('profile_browser', {
 
 			// callbacks
 			//
-			onopen: this.options.onopen
-		}));
+			success: (ProfileBrowserView) => {
+				this.showChildView('items', ProfileBrowserView.getUsersView({
+					collection: connections,
+
+					// options
+					//
+					preferences: new UserPreferences({
+						view_kind: this.options.view_kind
+					}),
+					empty: "No connections.",
+
+					// capabilities
+					//
+					selectable: true,
+
+					// callbacks
+					//
+					onopen: this.options.onopen
+				}));
+			}
+		});
 	}
 });

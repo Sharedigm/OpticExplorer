@@ -16,6 +16,7 @@
 \******************************************************************************/
 
 import SideBarView from '../../../../views/apps/common/sidebar/sidebar-view.js';
+import FavoritesPanelView from '../../../../views/apps/image-viewer/sidebar/panels/favorites-panel-view.js';
 import ImagesPanelView from '../../../../views/apps/image-viewer/sidebar/panels/images-panel-view.js';
 import FilesPanelView from '../../../../views/apps/image-viewer/sidebar/panels/files-panel-view.js';
 
@@ -25,7 +26,7 @@ export default SideBarView.extend({
 	// attributes
 	//
 
-	panels: ['images', 'files'],
+	panels: ['favorites', 'images', 'files'],
 
 	//
 	// attribute methods
@@ -35,6 +36,7 @@ export default SideBarView.extend({
 		let isSignedIn = application.isSignedIn();
 
 		return {
+			'favorites': isSignedIn,
 			'images': true,
 			'files': isSignedIn
 		};
@@ -96,7 +98,7 @@ export default SideBarView.extend({
 
 		// update panels
 		//
-		if (this.hasChildView('image_info')) {
+		if (this.hasChildView('exif_info')) {
 			this.showImageInfo();
 		}
 	},
@@ -131,6 +133,9 @@ export default SideBarView.extend({
 		// show specified panel
 		//
 		switch (panel) {
+			case 'favorites':
+				this.showFavoritesPanel();
+				break;
 			case 'images':
 				this.showImagesPanel();
 				break;
@@ -138,6 +143,21 @@ export default SideBarView.extend({
 				this.showFilesPanel();
 				break;
 		}
+	},
+
+	showFavoritesPanel: function() {
+		this.showChildView('favorites', new FavoritesPanelView({
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+
+			// callback options
+			//
+			onchange: this.options.onchange,
+			onselect: this.options.onselect,
+			ondeselect: this.options.ondeselect
+		}));
 	},
 
 	showImagesPanel: function() {

@@ -1,0 +1,480 @@
+{
+	"file_menu": {
+		"items": [
+			{
+				"class": "new-window",
+				"icon": "far fa-window-maximize",
+				"name": "New Window",
+				"shortcut": "command-enter"
+			},
+			{
+				"class": "open-profiles",
+				"icon": "fa fa-folder-open",
+				"name": "Open",
+				"shortcut": "command-O"
+			},
+			"divider",
+			{
+				"class": "show-info",
+				"icon": "fa fa-info-circle",
+				"name": "Show Info",
+				"shortcut": "command-I"
+			},
+			"divider",
+			{
+				"class": "delete-accounts",
+				"icon": "fa fa-trash-alt",
+				"name": "Delete Accounts",
+				"shortcut": "delete"
+			},
+			"divider",
+			{
+				"class": "close-window",
+				"icon": "fa fa-circle-xmark",
+				"name": "Close",
+				"shortcut": "command-L"
+			}
+		]
+	},
+	"help_menu": {
+		"items": [
+			{
+				"class": "view-about-info",
+				"icon": "fa fa-info-circle",
+				"name": "About"
+			},
+			"divider",
+			{
+				"class": "view-app",
+				"icon": "fa fa-question-circle",
+				"name": "View Help Pages"
+			},
+			{
+				"class": "view-topic",
+				"icon": "fa fa-newspaper",
+				"name": "Search Community Help"
+			},
+			"divider",
+			{
+				"class": "contact-us",
+				"icon": "fa fa-envelope",
+				"name": "Contact Us"
+			}
+		]
+	},
+	"menu_bar": {
+		"menus": [
+			{
+				"class": "file",
+				"icon": "fa fa-file",
+				"name": "File"
+			},
+			{
+				"class": "select",
+				"icon": "fa fa-mouse-pointer",
+				"name": "Select"
+			},
+			{
+				"class": "view",
+				"icon": "fa fa-eye",
+				"name": "View"
+			},
+			{
+				"class": "sort",
+				"icon": "fa fa-sort",
+				"name": "Sort"
+			},
+			{
+				"class": "help",
+				"icon": "fa fa-question-circle",
+				"name": "Help"
+			}
+		]
+	},
+	"select_menu": {
+		"items": [
+			{
+				"class": "select-all",
+				"icon": "fa fa-asterisk",
+				"name": "All",
+				"shortcut": "command-A"
+			},
+			{
+				"class": "select-none",
+				"icon": "fa fa-minus",
+				"name": "None",
+				"shortcut": "shift-command-A"
+			},
+			{
+				"class": "select-invert",
+				"icon": "fa fa-random",
+				"name": "Invert",
+				"shortcut": "shift-command-I"
+			},
+			"divider",
+			{
+				"class": "select-multiple",
+				"icon": "fa fa-ellipsis-h",
+				"name": "Multiple",
+				"shortcut": "shift-command-M",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "select-first",
+				"icon": "fa fa-fast-backward",
+				"name": "First",
+				"shortcut": "up arrow"
+			},
+			{
+				"class": "select-prev",
+				"icon": "fa fa-backward",
+				"name": "Prev",
+				"shortcut": "left arrow"
+			},
+			{
+				"class": "select-next",
+				"icon": "fa fa-forward",
+				"name": "Next",
+				"shortcut": "right arrow"
+			},
+			{
+				"class": "select-last",
+				"icon": "fa fa-fast-forward",
+				"name": "Last",
+				"shortcut": "down arrow"
+			}
+		]
+	},
+	"sort_menu": {
+		"items": [
+			{
+				"class": "sort-by-name",
+				"group": "sort-by",
+				"icon": "fa fa-font",
+				"name": "By Name",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "sort-by-location",
+				"group": "sort-by",
+				"icon": "fa fa-globe-americas",
+				"name": "By Location",
+				"select": true
+			},
+			{
+				"class": "sort-by-occupation",
+				"group": "sort-by",
+				"icon": "fa fa-briefcase",
+				"name": "By Occupation",
+				"select": true
+			},
+			{
+				"class": "sort-by-gender",
+				"group": "sort-by",
+				"icon": "fa fa-transgender",
+				"name": "By Gender",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "sort-increasing",
+				"group": "sort-order",
+				"icon": "fa fa-sort-amount-up",
+				"name": "Increasing",
+				"select": true
+			},
+			{
+				"class": "sort-decreasing",
+				"group": "sort-order",
+				"icon": "fa fa-sort-amount-down",
+				"name": "Decreasing",
+				"select": true
+			}
+		]
+	},
+	"view_menu": {
+		"items": [
+			{
+				"class": "view-icons",
+				"group": "view-kind",
+				"icon": "fa fa-th",
+				"name": "Icons",
+				"select": true
+			},
+			{
+				"class": "view-names",
+				"group": "view-kind",
+				"icon": "fa fa-align-left",
+				"name": "Names",
+				"select": true
+			},
+			{
+				"class": "view-lists",
+				"group": "view-kind",
+				"icon": "fa fa-list",
+				"name": "Lists",
+				"select": true
+			},
+			{
+				"class": "view-cards",
+				"group": "view-kind",
+				"icon": "fa fa-id-card",
+				"name": "Cards",
+				"select": true
+			},
+			{
+				"class": "view-tiles",
+				"group": "view-kind",
+				"icon": "fa fa-th-large",
+				"name": "Tiles",
+				"select": true
+			},
+			{
+				"class": "view-maps",
+				"group": "view-kind",
+				"icon": "fa fa-map",
+				"name": "Maps",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-map",
+						"group": "map-mode",
+						"icon": "fa fa-map",
+						"name": "Map",
+						"select": true
+					},
+					{
+						"class": "show-satellite",
+						"group": "map-mode",
+						"icon": "fa fa-satellite",
+						"name": "Satellite",
+						"select": true
+					},
+					{
+						"class": "show-hybrid",
+						"group": "map-mode",
+						"icon": "fa fa-map-marked-alt",
+						"name": "Hybrid",
+						"select": true
+					},
+					{
+						"class": "show-streets",
+						"group": "map-mode",
+						"icon": "fa fa-road",
+						"name": "Streets",
+						"select": true
+					},
+					{
+						"class": "show-transportation",
+						"group": "map-mode",
+						"icon": "fa fa-bus",
+						"name": "Transportation",
+						"select": true
+					},
+					{
+						"class": "show-aeronautical",
+						"group": "map-mode",
+						"icon": "fa fa-plane",
+						"name": "Aeronautical",
+						"select": true
+					},
+					"divider",
+					{
+						"class": "pan-to",
+						"icon": "fa fa-arrows-alt",
+						"name": "Pan",
+						"menu": [
+							{
+								"class": "pan-north",
+								"icon": "fa fa-arrow-up",
+								"name": "North",
+								"shortcut": "up arrow"
+							},
+							{
+								"class": "pan-south",
+								"icon": "fa fa-arrow-down",
+								"name": "South",
+								"shortcut": "down arrow"
+							},
+							{
+								"class": "pan-east",
+								"icon": "fa fa-arrow-right",
+								"name": "East",
+								"shortcut": "right arrow"
+							},
+							{
+								"class": "pan-west",
+								"icon": "fa fa-arrow-left",
+								"name": "West",
+								"shortcut": "left arrow"
+							}
+						]
+					},
+					{
+						"class": "zoom-to",
+						"icon": "fa fa-search",
+						"name": "Zoom",
+						"menu": [
+							{
+								"class": "zoom-in",
+								"icon": "fa fa-search-plus",
+								"name": "Zoom In",
+								"shortcut": "="
+							},
+							{
+								"class": "zoom-out",
+								"icon": "fa fa-search-minus",
+								"name": "Zoom Out",
+								"shortcut": "-"
+							}
+						]
+					},
+					{
+						"class": "reset-view",
+						"icon": "fa fa-undo",
+						"name": "Reset",
+						"shortcut": "shift-command-R"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "view-details",
+				"icon": "fa fa-tags",
+				"name": "Details",
+				"select": true,
+				"menu": [
+					{
+						"class": "view-location",
+						"icon": "fa fa-globe-americas",
+						"name": "Location",
+						"select": true
+					},
+					{
+						"class": "view-occupation",
+						"icon": "fa fa-briefcase",
+						"name": "Occupation",
+						"select": true
+					},
+					{
+						"class": "view-gender",
+						"icon": "fa fa-transgender",
+						"name": "Gender",
+						"select": true
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "show-toolbars",
+				"icon": "fa fa-wrench",
+				"name": "Toolbars",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-nav-bar",
+						"group": "show-toolbar",
+						"icon": "fa fa-sitemap",
+						"name": "Nav",
+						"select": true
+					}
+				]
+			},
+			{
+				"class": "show-sidebar",
+				"icon": "fa fa-pause",
+				"name": "Sidebar",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-actions-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-play-circle",
+						"name": "Actions",
+						"select": true
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "window-size",
+				"icon": "far fa-window-maximize",
+				"name": "Window Size",
+				"menu": [
+					{
+						"class": "shrink-window",
+						"icon": "fa fa-minus",
+						"name": "Shrink",
+						"shortcut": "command-["
+					},
+					{
+						"class": "grow-window",
+						"icon": "fa fa-plus",
+						"name": "Grow",
+						"shortcut": "command-]"
+					},
+					{
+						"class": "expand-window",
+						"icon": "fa fa-expand",
+						"name": "Expand",
+						"shortcut": "command-\\"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "spaces",
+				"icon": "far fa-window-maximize",
+				"name": "Spaces",
+				"select": true,
+				"menu": [
+					{
+						"class": "prev-space",
+						"icon": "fa fa-chevron-left",
+						"name": "Prev",
+						"shortcut": "command-left arrow"
+					},
+					{
+						"class": "next-space",
+						"icon": "fa fa-chevron-right",
+						"name": "Next",
+						"shortcut": "command-right arrow"
+					}
+				]
+			},
+			{
+				"class": "windows",
+				"icon": "far fa-window-restore",
+				"name": "Windows",
+				"select": true,
+				"menu": [
+					{
+						"class": "minimize-all",
+						"icon": "fa fa-window-minimize",
+						"name": "Minimize All"
+					},
+					{
+						"class": "unminimize-all",
+						"icon": "fa fa-window-restore",
+						"name": "Unminimize All"
+					}
+				]
+			},
+			{
+				"class": "view-full-screen",
+				"icon": "fa fa-desktop",
+				"name": "Full Screen",
+				"shortcut": "command-up arrow",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "view-preferences",
+				"icon": "fa fa-snowflake",
+				"name": "Preferences"
+			}
+		]
+	}
+}

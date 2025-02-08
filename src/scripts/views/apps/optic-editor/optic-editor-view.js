@@ -37,6 +37,7 @@ import HeaderBarView from '../../../views/apps/optic-editor/header-bar/header-ba
 import SideBarView from '../../../views/apps/optic-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/optic-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/optic-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/optic-editor/forms/preferences/preferences-form-view.js'
 import Units from '../../../utilities/math/units.js';
 
 export default AppSplitView.extend(_.extend({}, Multifile, FileUploadable, SelectableContainable, MultiSelectable, ItemShareable, ItemInfoShowable, {
@@ -220,20 +221,26 @@ export default AppSplitView.extend(_.extend({}, Multifile, FileUploadable, Selec
 		return this.getChildView('sidebar').getItemView(model);
 	},
 
+	getSelected: function() {
+		return this.getActiveViewport().getSelected();
+	},
+
 	getSelectedItemViews: function() {
 		return this.getChildView('sidebar').getSelected();
 	},
 
 	getSelectedItems: function() {
-		return this.getChildView('sidebar').getSelectedModels();
-	},
-
-	getSelected: function() {
-		return this.getActiveViewport().getSelected();
+		return this.getChildView('sidebar').getSelectedItems();
 	},
 
 	getSelectedModels: function() {
-		return this.getActiveViewport().getSelectedModels();
+		if (this.getChildView('sidebar').hasSelectedItems()) {
+			return this.getChildView('sidebar').getSelectedModels();
+		} else if (this.model) {
+			return [this.model];
+		} else {
+			return [];
+		}
 	},
 
 	getModelsDescription: function(models) {
@@ -1503,5 +1510,13 @@ export default AppSplitView.extend(_.extend({}, Multifile, FileUploadable, Selec
 	//
 
 	defaultName: 'Untitled.optc',
-	clipboard: []
+	clipboard: [],
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

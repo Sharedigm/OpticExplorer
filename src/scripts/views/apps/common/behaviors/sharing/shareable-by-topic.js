@@ -21,50 +21,57 @@ export default {
 	// sharing methods
 	//
 
+	showItemByTopic: function(item, topic) {
+		application.launch('topic_viewer', {
+			model: topic,
+			items: [item],
+			message: config.apps.file_browser.share_invitation_message
+		});
+	},
+
+	showItemsByTopic: function(items, topic) {
+		application.launch('topic_viewer', {
+			model: topic,
+			items: items,
+			message: config.apps.file_browser.share_invitation_message
+		});
+	},
+
+	//
+	// selection / sharing methods
+	//
+
 	shareItemByTopic: function(item) {
-		import(
-			'../../../../../views/apps/topic-viewer/topic-viewer-view.js'
-		).then((TopicViewerView) => {
 
-			// select topics
+		// select topics
+		//
+		this.showOpenTopicsDialog({
+
+			// callbacks
 			//
-			this.showOpenSubscribedTopicsDialog({
-				model: TopicViewerView.default.default_topic,
+			onopen: (topics) => {
 
-				// callbacks
+				// show selected topic and item
 				//
-				onopen: (topics) => {
-
-					// show selected topic
-					//
-					application.showTopic(topics[0], {
-						items: [item],
-						message: config.apps.file_browser.share_invitation_message
-					});
-				}
-			});
+				this.showItemByTopic(item, topics[0]);
+			}
 		});
 	},
 
 	shareItemsByTopic: function(items) {
-		import(
-			'../../../../../views/apps/topic-viewer/topic-viewer-view.js'
-		).then((TopicViewerView) => {
 
-			// select topics
+		// select topics
+		//
+		this.showOpenTopicsDialog({
+
+			// callbacks
 			//
-			this.showOpenSubscribedTopicsDialog({
-				model: TopicViewerView.default.default_topic,
+			onopen: (topics) => {
 
-				// callbacks
+				// show selected topic and items
 				//
-				onopen: (topics) => {
-					application.showTopic(topics[0], {
-						items: items,
-						message: config.apps.file_browser.share_invitation_message
-					});
-				}
-			});
+				this.showItemsByTopic(items, topics[0]);
+			}
 		});
 	},
 
@@ -92,28 +99,28 @@ export default {
 	// dialog rendering methods
 	//
 
-	showOpenSubscribedTopicsDialog: function(options) {
-		import(
-			'../../../../../views/apps/topic-viewer/dialogs/topics/open-topics-dialog-view.js'
-		).then((OpenTopicsDialogView) => {
+	showOpenTopicsDialog: function(options) {
+		application.loadAppView('topic_viewer', {
 
-			// show open dialog
+			// callbacks
 			//
-			this.show(new OpenTopicsDialogView.default({
+			success: (TopicViewerView) => {
+				TopicViewerView.showOpenTopicsDialog({
 
-				// options
-				//
-				title: "Open Topics",
-				subscribed: true,
+					// options
+					//
+					title: "Open Topics",
+					subscribed: true,
 
-				// callbacks
-				//
-				onopen: (items) => {
-					if (options && options.onopen) {
-						options.onopen(items);
+					// callbacks
+					//
+					onopen: (items) => {
+						if (options && options.onopen) {
+							options.onopen(items);
+						}
 					}
-				}
-			}));
+				});
+			}
 		});
 	}
 };

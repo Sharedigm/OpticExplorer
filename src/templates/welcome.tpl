@@ -1,4 +1,4 @@
-<div class="section colored flat blue">
+<div class="primary colored section">
 	<div class="row">
 		<div class="col-sm-6">
 			<a class="unstyled" href="#features/easy-to-use">

@@ -23,15 +23,16 @@ import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import MultiDoc from '../../../views/apps/common/behaviors/tabbing/multidoc.js';
 import ContainableSelectable from '../../../views/behaviors/containers/containable-selectable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import ProjectInfoShowable from '../../../views/apps/project-browser/dialogs/info/behaviors/project-info-showable.js';
 import HeaderBarView from '../../../views/apps/project-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/project-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/project-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/project-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/project-viewer/forms/preferences/preferences-form-view.js'
 
-export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, Openable, ItemInfoShowable, ProjectInfoShowable, {
+export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, ItemInfoShowable, ProjectInfoShowable, {
 
 	//
 	// attributes
@@ -49,10 +50,22 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		//
 		AppSplitView.prototype.initialize.call(this);
 
+		// set default topic
+		//
+		if (!this.constructor.default_project) {
+			this.constructor.default_project = new Project({
+				id: 0,
+				name: this.constructor.getDefaultProjectName()
+			});
+		}
+
 		// set attributes
 		//
+		if (this.collection) {
+			this.model = this.collection.at(this.collection.length - 1);
+		}
 		if (!this.model) {
-			this.model = this.constructor.defaultProject;
+			this.model = this.constructor.default_project;
 		}
 		if (!this.collection) {
 			this.collection = new BaseCollection([this.model]);
@@ -139,7 +152,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	//
 
 	getDefaultProject: function() {
-		return this.constructor.defaultProject;
+		return this.constructor.default_project;
 	},
 
 	getTaskProject: function(task) {
@@ -312,7 +325,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 					// reset selected project
 					//
-					this.setProject(this.constructor.defaultProject);
+					this.setProject(this.constructor.default_project);
 
 					// play remove sound
 					//
@@ -819,8 +832,30 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 }), {
 
 	//
-	// static attributes
+	// static querying methods
 	//
 
-	defaultProject: new Project(config.apps.project_viewer.defaults.project)
+	isDefaultProjectName: function(name) {
+		return name && name != '' && this.getDefaultProjectName() == name;
+	},
+
+	hasDefaultProjectName: function() {
+		return this.getTopicName() != undefined;
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferences: function() {
+		return config.preferences.project_viewer || {};
+	},
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getDefaultProjectName: function() {
+		return this.getPreferences().default_project;
+	}
 });

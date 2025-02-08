@@ -16,41 +16,13 @@
 \******************************************************************************/
 
 import UserJob from '../../../../../../models/users/profile/user-job.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="work option">
-			<a class="add-job"><i class="fa fa-plus"></i>Add Organization</a>
-		</li>
-		
-		<li role="presentation" class="work option disabled">
-			<a class="edit-job"><i class="fa fa-pencil-alt"></i>Edit Organization</a>
-		</li>
-		
-		<li role="presentation" class="work option disabled">
-			<a class="delete-job"><i class="fa fa-trash-alt"></i>Delete Organization<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="contact option">
-			<a class="add-contact"><i class="fa fa-plus"></i>Add Contact</a>
-		</li>
-		
-		<li role="presentation" class="contact option disabled">
-			<a class="edit-contact"><i class="fa fa-pencil-alt"></i>Edit Contact</a>
-		</li>
-		
-		<li role="presentation" class="contact option disabled">
-			<a class="delete-contact"><i class="fa fa-trash-alt"></i>Delete Contacts<span class="shortcut">delete</span></a>
-		</li>
-	`),
 
 	events: {
 
@@ -94,11 +66,15 @@ export default MenuView.extend({
 	//
 
 	getOrganizationView: function() {
-		return this.parent.app.getActiveView().getChildView('organization');
+		if (this.parent.app.hasActiveView()) {
+			return this.parent.app.getActiveView().getChildView('organization');
+		}
 	},
 
 	getContactsView: function() {
-		return this.parent.app.getActiveView().getChildView('info');
+		if (this.parent.app.hasActiveView()) {
+			return this.parent.app.getActiveView().getChildView('info');
+		}
 	},
 
 	getJob: function() {

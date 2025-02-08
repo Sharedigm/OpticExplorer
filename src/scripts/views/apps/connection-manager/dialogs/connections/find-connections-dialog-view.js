@@ -17,7 +17,6 @@
 
 import Users from '../../../../../collections/users/users.js';
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
-import ProfileBrowserView from '../../../../../views/apps/profile-browser/profile-browser-view.js';
 
 export default DialogView.extend({
 
@@ -61,7 +60,7 @@ export default DialogView.extend({
 	`),
 
 	regions: {
-		body: {
+		profile_browser: {
 			el: '.modal-body',
 			replaceElement: true
 		},
@@ -124,26 +123,20 @@ export default DialogView.extend({
 	},
 
 	showProfileBrowser: function() {
-		this.showChildView('body', new ProfileBrowserView({
+		this.showChildApp('profile_browser', {
 			model: this.model,
 
-			// options
+			// state
 			//
 			selected: this.options.selected,
-			dialog: this,
-			hidden: {
-				'add-connections': true,
-				'view-connections': false,
-				'footer-bar': true
-			},
-			
+
 			// callbacks
 			//
 			onopen: (items) => this.onOpen(items),
 			onchange: () => this.onChange(),
 			onselect: () => this.update(),
 			ondeselect: () => this.update()
-		}));
+		});
 	},
 
 	onShown: function() {
@@ -162,7 +155,7 @@ export default DialogView.extend({
 		// update buttons
 		//
 		this.$el.find('.modal-footer .connect').prop('disabled', 
-			!this.getChildView('body').hasSelected());
+			!this.getChildView('profile_browser').hasSelected());
 	},
 
 	//
@@ -171,7 +164,7 @@ export default DialogView.extend({
 
 	showConnectionRequestDialog: function(users) {
 		import(
-			'../../../../../views/users/connection-requests/dialogs/connection-request-dialog-view.js'
+			'../../../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js'
 		).then((ConnectionRequestDialogView) => {
 
 			// show connection request dialog
@@ -188,7 +181,7 @@ export default DialogView.extend({
 	//
 
 	onClickConnect: function() {
-		let selected = this.getChildView('body').getSelectedModels();
+		let selected = this.getChildView('profile_browser').getSelectedModels();
 
 		// open selected item
 		//
@@ -227,6 +220,6 @@ export default DialogView.extend({
 	//
 
 	onKeyDown: function(event) {
-		this.getChildView('body').onKeyDown(event);
+		this.getChildView('profile_browser').onKeyDown(event);
 	}
 });

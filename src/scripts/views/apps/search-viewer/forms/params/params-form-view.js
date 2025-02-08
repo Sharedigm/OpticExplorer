@@ -31,7 +31,7 @@ export default FormView.extend({
 			<div class="controls">
 				<% if (has_index) { %>
 				<div class="checkbox-inline">
-					<label><input type="checkbox" value="index"<% if (show_index) { %> checked<% } %>>Search Index</label>
+					<label><input type="checkbox" value="index"<% if (show_index) { %> checked<% } %>>Files</label>
 				</div>
 				<% } %>
 				<% if (has_files) { %>

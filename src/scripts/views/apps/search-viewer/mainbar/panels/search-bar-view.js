@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             search-bar-view.js                               |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -23,10 +23,10 @@ export default BaseView.extend({
 	// attributes
 	//
 
-	className: 'search-bar well',
+	className: 'search-bar',
 
 	template: template(`
-		<div class="input">
+		<div class="input well">
 			<span contenteditable="true" contentEditable="plaintext-only"><%= query %></span>
 			<div class="buttons">
 				<button class="submit success btn btn-sm" data-toggle="tooltip" title="Search" data-placement="top"><i class="fa fa-search"></i></button>

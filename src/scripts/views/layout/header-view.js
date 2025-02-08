@@ -42,7 +42,7 @@ export default BaseView.extend({
 						<div class="logotype">
 							<% if (branding.header.brand.logotype.names) { %>
 							<% let keys = Object.keys(branding.header.brand.logotype.names); %>
-							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 							<% } %>
 						</div>
 						<% } %>
@@ -193,7 +193,7 @@ export default BaseView.extend({
 
 		// set logotype styles
 		//
-		DomUtils.setTextBlockStyles(this.$el.find('.brand'), logotype);
+		DomUtils.setTextBlockStyles(this.$el.find('.logotype'), logotype);
 
 		// set logotype name styles
 		//

@@ -4,7 +4,7 @@
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching files by capture date.         |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -23,29 +23,12 @@ export default SearchByDateView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="input-group">
-			<div class="date-kind input-group-addon">
-				<i class="fa fa-calendar-alt"></i>
-			</div>
-		
-			<div class="operator input-group-addon select">
-				<select>
-					<option value="greater-than">&gt;</option>
-					<option value="equals">=</option>
-					<option value="less-than">&lt;</option>
-				</select>
-			</div>
-		
-			<input type="date" class="form-control">
-		
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
-	quantity: 'capture_date'
+	icon: 'fa fa-calendar-alt',
+	placeholder: "Search by Capture Date",
+
+	//
+	// seearch attributes
+	//
+
+	key: 'capture_date'
 });

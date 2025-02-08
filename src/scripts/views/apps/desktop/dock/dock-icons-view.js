@@ -17,9 +17,9 @@
 
 import IconsView from '../../../../views/items/icons/icons-view.js';
 import DockIconView from '../../../../views/apps/desktop/dock/dock-icon-view.js';
-import Launchable from '../../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../../views/apps/common/behaviors/opening/app-launchable.js';
 
-export default IconsView.extend(_.extend({}, Launchable, {
+export default IconsView.extend(_.extend({}, AppLaunchable, {
 
 	//
 	// attributes
@@ -39,6 +39,9 @@ export default IconsView.extend(_.extend({}, Launchable, {
 			// options
 			//
 			preferences: this.options.preferences,
+
+			// state
+			//
 			selected: this.options.selected && this.options.selected.contains(model),
 
 			// capabilities

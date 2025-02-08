@@ -30,76 +30,24 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="items">
-			<div class="icon-grid"></div>
-		</div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general tab<% if (tab == 'general') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general.tab-pane">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="members tab<% if (tab == 'members') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".members.tab-pane">
-					<i class="fa fa-user"></i>
-					<label>Members</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="invitations tab<% if (tab == 'invitations') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".invitations.tab-pane">
-					<i class="fa fa-envelope"></i>
-					<label>Invitations</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="history tab<% if (tab == 'history') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".history.tab-pane">
-					<i class="fa fa-calendar"></i>
-					<label>History</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general tab-pane<% if (tab == 'general') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="members tab-pane<% if (tab == 'members') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="invitations tab-pane<% if (tab == 'invitations') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="history tab-pane<% if (tab == 'history') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: '.icon-grid',
-		general: '.general.tab-pane',
-		members: '.members.tab-pane',
-		invitations: '.invitations.tab-pane',
-		history: '.history.tab-pane'
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			name: this.model.getName(),
-			tab: 'general'
-		};
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "Members",
+			"icon": "fa fa-user"
+		},
+		{
+			"name": "Invitations",
+			"icon": "fa fa-envelope"
+		},
+		{
+			"name": "History",
+			"icon": "fa fa-calendar"
+		}
+	],
 
 	//
 	// rendering methods

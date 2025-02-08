@@ -19,6 +19,7 @@ import ThemeSettings from '../../models/settings/theme-settings.js';
 import BaseView from '../../views/base-view.js';
 import Wallpaperable from '../../views/behaviors/effects/wallpaperable.js';
 import PageFooterView from '../../views/layout/page-footer-view.js';
+import DomUtils from '../../utilities/web/dom-utils.js';
 import Browser from '../../utilities/web/browser.js';
 
 export default BaseView.extend(_.extend({}, Wallpaperable, {
@@ -124,6 +125,16 @@ export default BaseView.extend(_.extend({}, Wallpaperable, {
 
 	setPageStyles: function(page) {
 
+		// set page font
+		//
+		if (page.font) {
+			let selector = '> .contents > .content';
+			if (config.defaults.text.content) {
+				selector = selector + ' ' + config.defaults.text.content.join(', ');
+			}
+			DomUtils.setFont(this.$el.find(selector), page.font);
+		}
+
 		// if user not logged in then set page styles
 		//
 		if (!application.session.user) {
@@ -134,19 +145,6 @@ export default BaseView.extend(_.extend({}, Wallpaperable, {
 				this.$el.addClass(page.theme);
 				ThemeSettings.loadTheme(page.theme);	
 			}
-		}
-
-		if (page.font) {
-			this.setFontStyles(page.font);
-		}
-	},
-
-	setFontStyles: function(font) {
-		application.loadFont(font);
-		if (config.fonts[font]) {
-			this.$el.find('p').css('font-family', config.fonts[font]['font-family']);	
-		} else {
-			this.$el.find('p').css('font-family', font);	
 		}
 	},
 

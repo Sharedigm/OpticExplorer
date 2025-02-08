@@ -17,8 +17,8 @@
 
 import Timestamped from '../../models/utilities/timestamped.js';
 import ImageFile from '../../models/storage/media/image-file.js';
-import Connection from '../../models/users/connections/connection.js';
-import Connections from '../../collections/users/connections/connections.js';
+import Connection from '../../models/connections/connection.js';
+import Connections from '../../collections/connections/connections.js';
 import DateUtils from '../../utilities/time/date-utils.js';
 import QueryString from '../../utilities/web/query-string.js';
 
@@ -52,7 +52,7 @@ export default Timestamped.extend({
 	},
 
 	isDefault: function() {
-		return this.get('name') == config.apps.project_viewer.defaults.project.name;
+		return this.get('id') == 0;
 	},
 
 	isPublic: function() {

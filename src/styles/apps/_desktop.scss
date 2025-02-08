@@ -125,11 +125,13 @@ $flickable-active-cursor: grabbing;
 
 #desktop.show-trash-in-corner {
 	.file-browser {
-		.items {
-			.trash {
-				position: absolute;
-				right: 10px;
-				bottom: 10px;
+		.mainbar {
+			.items {
+				.trash {
+					position: absolute;
+					right: 10px;
+					bottom: 10px;
+				}
 			}
 		}
 	}

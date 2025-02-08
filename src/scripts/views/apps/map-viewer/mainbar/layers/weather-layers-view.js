@@ -18,12 +18,12 @@
 import MetarStations from '../../../../../collections/weather/metar-stations.js';
 import WindStations from '../../../../../collections/weather/wind-stations.js';
 import MapLayersView from '../../../../../views/apps/map-viewer/mainbar/layers/map-layers-view.js';
-import MapView from '../../../../../views/maps/map-view.js';
-import MapMarkersView from '../../../../../views/maps/markers/map-markers-view.js';
+import MapView from '../../../../../views/apps/map-viewer/mainbar/maps/map-view.js';
+import MapMarkersView from '../../../../../views/apps/map-viewer/mainbar/maps/markers/map-markers-view.js';
 import StationMarkerView from '../../../../../views/apps/map-viewer/mainbar/markers/station-marker-view.js';
 import WindMarkerView from '../../../../../views/apps/map-viewer/mainbar/markers/wind-marker-view.js';
-import AviationWeatherMap from '../../../../../views/maps/providers/aviation-weather-map.js';
-import AccuWeatherMap from '../../../../../views/maps/providers/accuweather-map.js';
+import AviationWeatherMap from '../../../../../views/apps/map-viewer/mainbar/maps/providers/aviation-weather-map.js';
+import AccuWeatherMap from '../../../../../views/apps/map-viewer/mainbar/maps/providers/accuweather-map.js';
 
 export default MapLayersView.extend({
 

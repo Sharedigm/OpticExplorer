@@ -35,10 +35,6 @@ body:not(.binary) {
 				@include flat-btns.shaded(colors.$medium-red);
 			}
 
-			&.raspberry {
-				@include flat-btns.shaded(colors.$medium-raspberry);
-			}
-
 			&.red-orange {
 				@include flat-btns.shaded(colors.$medium-red-orange);
 			}
@@ -93,6 +89,10 @@ body:not(.binary) {
 
 			&.magenta {
 				@include flat-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.raspberry {
+				@include flat-btns.shaded(colors.$medium-raspberry);
 			}
 
 			&.brown {

@@ -50,7 +50,7 @@ export default TabPaneView.extend(_.extend({}, ContainableSelectable, {
 
 		// get details
 		//
-		let details =this.options.preferences.get('properties');
+		let details = this.options.preferences.get('properties');
 
 		// add detail kind
 		//

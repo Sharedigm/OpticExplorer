@@ -16,10 +16,9 @@
 \******************************************************************************/
 
 import TreeViewable from '../../../../../../views/items/trees/tree-viewable.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
-export default _.extend({}, TreeViewable, Mappable, {
+export default _.extend({}, TreeViewable, {
 
 	//
 	// attributes
@@ -43,6 +42,10 @@ export default _.extend({}, TreeViewable, Mappable, {
 		return !item || item == this.model;
 	},
 
+	hasOwner: function() {
+		return this.model? this.model.has('owner') : false;
+	},
+
 	//
 	// getting methods
 	//
@@ -50,7 +53,25 @@ export default _.extend({}, TreeViewable, Mappable, {
 	getName: function() {
 		return this.model.getName();
 	},
-	
+
+	getOwner: function() {
+		return this.model? this.model.get('owner') : undefined;
+	},
+
+	getOwnerThumbnailUrl: function() {
+		if (!this.hasOwner()) {
+			return false;
+		}
+		let owner = this.getOwner()
+		return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
+			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
+		}) : undefined;
+	},
+
+	getGeoOrientation: function() {
+		return this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined;
+	},
+
 	getDetails: function() {
 		let kind = this.options.preferences? this.options.preferences.get('detail_kind') : undefined;
 		if (!this.isTop() && kind) {

@@ -355,10 +355,6 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Timeable, {
 		this.showChildView('messages', new ChatMessageListView(_.extend({}, this.options, {
 			collection: this.collection,
 
-			// options
-			//
-			features: this.options.features,
-
 			// callbacks
 			//
 			onchange: () => this.scrollToBottom(),
@@ -377,11 +373,13 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Timeable, {
 
 			// options
 			//
-			submitable: true,
-			cancelable: false,
-			features: this.options.features,
 			preferences: this.options.preferences,
 			position: 'bottom',
+
+			// capabilities
+			//
+			submitable: true,
+			cancelable: false,
 
 			// callbacks
 			//

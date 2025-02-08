@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import CardView from '../../../../../../views/items/cards/card-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
+import Mappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/mappable.js';
 
 export default CardView.extend(_.extend({}, Mappable, {
 	

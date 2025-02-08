@@ -128,21 +128,28 @@ export default LinkView.extend({
 	onAttach: function() {
 		let appName = this.getAppName();
 
-		application.loadAppView(appName, (AppView) => {
-			let queryString = '';
-			let theme = this.getTheme();
+		// attempt to load app
+		//
+		application.loadAppView(appName, {
 
-			// set theme of iframe
+			// callbacks
 			//
-			if (theme) {
-				queryString = '?theme=' + theme;
-			}
+			success: (AppView) => {
+				let queryString = '';
+				let theme = this.getTheme();
 
-			// show app inline
-			//
-			if (AppView) {
+				// set theme of iframe
+				//
+				if (theme) {
+					queryString = '?theme=' + theme;
+				}
+
+				// show app inline
+				//
 				if (AppView) {
-					this.$el.find('.figure').append($('<iframe src="' + this.model.getUrl() + queryString + '"></iframe>'));
+					if (AppView) {
+						this.$el.find('.figure').append($('<iframe src="' + this.model.getUrl() + queryString + '"></iframe>'));
+					}
 				}
 			}
 		});

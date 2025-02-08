@@ -86,7 +86,7 @@ export default NumberInputView.extend({
 			this.options.selectable = true;
 		}
 		if (this.options.size == undefined) {
-			this.options.size = Math.max(this.numChars(this.options.max || this.max - 1) + 0.5, 2);
+			this.options.size = Math.max(this.numChars(this.options.max || this.max - 1), 2);
 		}
 
 		// set atributes

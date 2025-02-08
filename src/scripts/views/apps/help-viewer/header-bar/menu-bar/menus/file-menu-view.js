@@ -23,30 +23,20 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="fa fa-file"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .close-window': 'onClickCloseWindow'
 	},
-	
+
 	//
-	// mouse event handling methods
+	// querying methods
 	//
 
-	onClickCloseWindow: function() {
-		this.parent.app.close();
+	visible: function() {
+		let isWindowed = this.parent.app.isWindowed();
+
+		return {
+			'close-window': isWindowed
+		};
 	}
 });

@@ -165,6 +165,10 @@ export default BaseView.extend({
 		});
 	},
 
+	check: function() {
+		return this.getChildView('form').check();
+	},
+
 	//
 	// form submission methods
 	//
@@ -173,7 +177,7 @@ export default BaseView.extend({
 
 		// check for validity
 		//
-		if (this.getChildView('form').isValid()) {
+		if (this.check()) {
 
 			// get form values
 			//

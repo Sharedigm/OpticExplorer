@@ -23,5 +23,10 @@ export default HelpMenuView.extend({
 	// attributes
 	//
 
-	app_name: 'optic_editor'
+	events: {
+		'click .view-about-info': 'onClickViewAboutInfo',
+		'click .view-app': 'onClickViewApp',
+		'click .view-topic': 'onClickViewTopic',
+		'click .contact-us': 'onClickContactUs'
+	}
 });

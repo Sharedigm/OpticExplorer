@@ -32,6 +32,7 @@ import HeaderBarView from '../../../views/apps/material-map-viewer/header-bar/he
 import SideBarView from '../../../views/apps/material-map-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/material-map-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/material-map-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/material-map-viewer/forms/preferences/preferences-form-view.js'
 import Yaml from '../../../../library/js-yaml/js-yaml.js';
 
 export default AppSplitView.extend(_.extend({}, Multifile, SelectableContainable, ItemShareable, {
@@ -1246,5 +1247,13 @@ export default AppSplitView.extend(_.extend({}, Multifile, SelectableContainable
 				</svg>
 			</i>
 		`
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	}
 });

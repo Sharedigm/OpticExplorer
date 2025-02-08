@@ -129,6 +129,9 @@ export default SideBarPanelView.extend(_.extend({}, ContainableSelectable, {
 			preferences: UserPreferences.create('project_viewer', {
 				view_kind: this.app.options.sidebar_view_kind
 			}),
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities

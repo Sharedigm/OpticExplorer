@@ -18,6 +18,7 @@
 import AppView from '../../../views/apps/common/app-view.js';
 import DisplayView from '../../../views/apps/calculator/mainbar/display/display-view.js';
 import KeyboardView from '../../../views/apps/calculator/mainbar/keyboard/keyboard-view.js';
+import PreferencesFormView from '../../../views/apps/calculator/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppView.extend({
@@ -668,5 +669,13 @@ export default AppView.extend({
 	// static attributes
 	//
 
-	mode: 'basic'
+	mode: 'basic',
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

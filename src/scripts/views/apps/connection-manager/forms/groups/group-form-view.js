@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Group from '../../../../../models/users/connections/group.js';
+import Group from '../../../../../models/connections/group.js';
 import FormView from '../../../../../views/forms/form-view.js';
 
 export default FormView.extend({

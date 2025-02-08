@@ -266,9 +266,7 @@ $extra-large-tile-border-width: 4px;
 
 			.details {
 				display: inline-block;
-				line-height: 1.25em;
 				padding: 0 5px;
-				margin: 2px 0;
 				border-radius: 7px;
 
 				&:empty {
@@ -390,6 +388,8 @@ $extra-large-tile-border-width: 4px;
 
 .little.tile-grid {
 	.item {
+		width: $small-size;
+
 		> .tile {
 			width: $small-size;
 			height: $small-size;
@@ -397,6 +397,10 @@ $extra-large-tile-border-width: 4px;
 			>.icon {
 				width: $small-size;
 				height: $small-size;
+
+				> svg {
+					transform: scale(1.25);
+				}
 
 				> img, > .thumbnail {
 					width: $small-size;
@@ -424,7 +428,6 @@ $extra-large-tile-border-width: 4px;
 		}
 
 		> .specifics {
-			margin: 0 -10px;
 			padding: 1px;
 		}
 	}
@@ -432,6 +435,8 @@ $extra-large-tile-border-width: 4px;
 
 .tile-grid, .medium.tile-grid {
 	.item {
+		width: $medium-size;
+
 		> .tile {
 			width: $medium-size;
 			height: $medium-size;
@@ -473,7 +478,9 @@ $extra-large-tile-border-width: 4px;
 }
 
 .large.tile-grid {
-	.item {		
+	.item {
+		width: $large-size;
+
 		> .tile {
 			width: $large-size;
 			height: $large-size;
@@ -520,7 +527,9 @@ $extra-large-tile-border-width: 4px;
 }
 
 .extra-large.tile-grid {
-	.item {		
+	.item {
+		width: $extra-large-size;
+
 		> .tile {
 			width: $extra-large-size;
 			height: $extra-large-size;

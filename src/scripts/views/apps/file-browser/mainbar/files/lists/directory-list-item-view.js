@@ -16,11 +16,10 @@
 \******************************************************************************/
 
 import ListItemView from '../../../../../../views/items/lists/list-item-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
 import ItemBadgesView from '../../../../../../views/apps/file-browser/mainbar/files/badges/item-badges-view.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
-export default ListItemView.extend(_.extend({}, Mappable, {
+export default ListItemView.extend({
 
 	//
 	// attributes
@@ -44,6 +43,10 @@ export default ListItemView.extend(_.extend({}, Mappable, {
 		return !item || item == this.model;
 	},
 	
+	hasOwner: function() {
+		return this.model? this.model.has('owner') : false;
+	},
+
 	//
 	// getting methods
 	//
@@ -52,14 +55,22 @@ export default ListItemView.extend(_.extend({}, Mappable, {
 		return this.model.getName();
 	},
 
+	getOwner: function() {
+		return this.model? this.model.get('owner') : undefined;
+	},
+
 	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;
+		if (!this.hasOwner()) {
+			return false;
 		}
-		return false;
+		let owner = this.getOwner()
+		return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
+			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
+		}) : undefined;
+	},
+
+	getGeoOrientation: function() {
+		return this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined;
 	},
 
 	//
@@ -104,10 +115,9 @@ export default ListItemView.extend(_.extend({}, Mappable, {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
-			owner: this.get('owner'),
+			owner: this.getOwner(),
 			owner_thumbnail_url: this.getOwnerThumbnailUrl(),
-			details: this.getDetails(),
-			geo_orientation: this.model.hasGeoOrientation? this.model.getGeoOrientation() : undefined
+			details: this.getDetails()
 		};
 	},
 
@@ -129,4 +139,4 @@ export default ListItemView.extend(_.extend({}, Mappable, {
 			this.options.ondropout(this.parent.getSelectedModels());
 		}
 	}
-}));
+});

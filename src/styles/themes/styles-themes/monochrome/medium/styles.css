@@ -601,10 +601,6 @@ body:not(.binary).monochrome.flat .colored:not(.btn).red {
   background-color: #8080b3;
   border-color: #8080b3;
 }
-body:not(.binary).monochrome.flat .colored:not(.btn).raspberry {
-  background-color: #8080b3;
-  border-color: #8080b3;
-}
 body:not(.binary).monochrome.flat .colored:not(.btn).red-orange {
   background-color: #8080b3;
   border-color: #8080b3;
@@ -661,6 +657,10 @@ body:not(.binary).monochrome.flat .colored:not(.btn).magenta {
   background-color: #8080b3;
   border-color: #8080b3;
 }
+body:not(.binary).monochrome.flat .colored:not(.btn).raspberry {
+  background-color: #8080b3;
+  border-color: #8080b3;
+}
 body:not(.binary).monochrome.flat .colored:not(.btn).brown {
   background-color: #8080b3;
   border-color: #8080b3;
@@ -690,10 +690,6 @@ body:not(.binary).monochrome.flat .colored:not(.btn).gold {
   border-color: #8080b3;
 }
 body:not(.binary).monochrome.flat .selected .colored:not(.btn) .red {
-  background-color: #6060a0;
-  border-color: #6060a0;
-}
-body:not(.binary).monochrome.flat .selected .colored:not(.btn) .raspberry {
   background-color: #6060a0;
   border-color: #6060a0;
 }
@@ -750,6 +746,10 @@ body:not(.binary).monochrome.flat .selected .colored:not(.btn) .purple {
   border-color: #6060a0;
 }
 body:not(.binary).monochrome.flat .selected .colored:not(.btn) .magenta {
+  background-color: #6060a0;
+  border-color: #6060a0;
+}
+body:not(.binary).monochrome.flat .selected .colored:not(.btn) .raspberry {
   background-color: #6060a0;
   border-color: #6060a0;
 }
@@ -1170,30 +1170,6 @@ body:not(.binary).monochrome.chalk .colored:not(.btn).red.long.round.vertical {
   background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #8080b3) 0%, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
-body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.round {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.long.round.vertical {
-  background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #8080b3) 0%, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
 body:not(.binary).monochrome.chalk .colored:not(.btn).red-orange {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
   background-color: #8080b3;
@@ -1530,6 +1506,30 @@ body:not(.binary).monochrome.chalk .colored:not(.btn).magenta.long.round.vertica
   background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #8080b3) 0%, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
+body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.round {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.chalk .colored:not(.btn).raspberry.long.round.vertical {
+  background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #8080b3) 0%, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
 body:not(.binary).monochrome.chalk .colored:not(.btn).brown {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
   background-color: #8080b3;
@@ -1719,30 +1719,6 @@ body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .red.long.round 
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .red.long.round.vertical {
-  background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #6060a0) 0%, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.round {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #6060a0) 0%, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -2079,6 +2055,30 @@ body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .magenta.long.ro
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .magenta.long.round.vertical {
+  background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #6060a0) 0%, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.round {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 25%, transparent) 25%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, black 10%, transparent) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.chalk .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, white 25%, transparent) 0%, color-mix(in srgb, white 50%, transparent) calc(5% + 2px), color-mix(in srgb, white 50%, transparent) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 10%, #6060a0) 0%, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -2612,29 +2612,6 @@ body:not(.binary).monochrome.plastic .colored:not(.btn).red.long.round.vertical 
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
-body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.round {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 75%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, #8080b3 50%) no-repeat;
-  background-color: #8080b3;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
 body:not(.binary).monochrome.plastic .colored:not(.btn).red-orange {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
   background-color: #8080b3;
@@ -2957,6 +2934,29 @@ body:not(.binary).monochrome.plastic .colored:not(.btn).magenta.long.round.verti
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
+body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.round {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 75%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, #8080b3 50%) no-repeat;
+  background-color: #8080b3;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.plastic .colored:not(.btn).raspberry.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 0, #8080b3 50%, color-mix(in srgb, var(--ambient-color) 10%, #8080b3) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
 body:not(.binary).monochrome.plastic .colored:not(.btn).brown {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
   background-color: #8080b3;
@@ -3138,29 +3138,6 @@ body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .red.long.roun
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .red.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.round {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 75%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, #6060a0 50%) no-repeat;
-  background-color: #6060a0;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -3483,6 +3460,29 @@ body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .magenta.long.
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .magenta.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 75%, transparent) 0%, transparent 15%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 15%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.round {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 0%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 75%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, #6060a0 50%) no-repeat;
+  background-color: #6060a0;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 10%, transparent) 0%, transparent 50%, color-mix(in srgb, black 10%, transparent) 100%) no-repeat;
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.plastic .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 0, #6060a0 50%, color-mix(in srgb, var(--ambient-color) 10%, #6060a0) 100%) no-repeat;
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -4013,29 +4013,6 @@ body:not(.binary).monochrome.glass .colored:not(.btn).red.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
-body:not(.binary).monochrome.glass .colored:not(.btn).raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #8080b3) 80%, transparent);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.round {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, #8080b3) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #8080b3 50%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-}
-body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 30%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 30%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 100%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%, transparent) 75%, color-mix(in srgb, #8080b3 50%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-}
-body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
 body:not(.binary).monochrome.glass .colored:not(.btn).red-orange {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 100%) no-repeat;
   background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #8080b3) 80%, transparent);
@@ -4358,6 +4335,29 @@ body:not(.binary).monochrome.glass .colored:not(.btn).magenta.long.round.vertica
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
+body:not(.binary).monochrome.glass .colored:not(.btn).raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #8080b3) 80%, transparent);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.round {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, #8080b3) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #8080b3 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+}
+body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 30%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 30%, #8080b3) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 100%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%, transparent) 75%, color-mix(in srgb, #8080b3 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+}
+body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.glass .colored:not(.btn).raspberry.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #8080b3) calc(80% + 2px), #8080b3 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
 body:not(.binary).monochrome.glass .colored:not(.btn).brown {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%, transparent) 100%) no-repeat;
   background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #8080b3) 80%, transparent);
@@ -4539,29 +4539,6 @@ body:not(.binary).monochrome.glass .selected .colored:not(.btn) .red.long.round 
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.glass .selected .colored:not(.btn) .red.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #6060a0) 80%, transparent);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.round {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, #6060a0) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #6060a0 50%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-}
-body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 30%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 30%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 100%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #6060a0) 100%, transparent) 75%, color-mix(in srgb, #6060a0 50%, transparent) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-}
-body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -4884,6 +4861,29 @@ body:not(.binary).monochrome.glass .selected .colored:not(.btn) .magenta.long.ro
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.glass .selected .colored:not(.btn) .magenta.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, white 100%, transparent) 0%, transparent 10%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, white 25%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 50%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, color-mix(in srgb, var(--ambient-color) 20%, #6060a0) 80%, transparent);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.round {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, color-mix(in srgb, white 100%, transparent) 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 50%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 80%, #6060a0) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%, transparent) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, #6060a0 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+}
+body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 30%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 30%, #6060a0) 0%, transparent 10px) no-repeat, linear-gradient(var(--light-direction), transparent 0%, color-mix(in srgb, white 100%, transparent) 12.5%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #6060a0) 100%, transparent) 75%, color-mix(in srgb, #6060a0 50%, transparent) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+}
+body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.glass .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 25%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, white 100%, transparent) calc(7.5% + 2px), color-mix(in srgb, white 100%, transparent) calc(12.5% + 2px), transparent calc(33% + 2px)) no-repeat, linear-gradient(to right, transparent 33%, color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(70% + 2px), color-mix(in srgb, var(--light-color) 10%, #6060a0) calc(80% + 2px), #6060a0 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -5410,28 +5410,6 @@ body:not(.binary).monochrome.metal .colored:not(.btn).red.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
-body:not(.binary).monochrome.metal .colored:not(.btn).raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #8080b3 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #8080b3 0%, color-mix(in srgb, var(--ambient-color) 50%, #8080b3) 10%, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.round {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #8080b3) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, #8080b3 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #8080b3 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-}
-body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 60%, #8080b3) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 20%, #8080b3);
-}
-body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
-body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
-}
 body:not(.binary).monochrome.metal .colored:not(.btn).red-orange {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #8080b3 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #8080b3 0%, color-mix(in srgb, var(--ambient-color) 50%, #8080b3) 10%, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
@@ -5740,6 +5718,28 @@ body:not(.binary).monochrome.metal .colored:not(.btn).magenta.long.round.vertica
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
 }
+body:not(.binary).monochrome.metal .colored:not(.btn).raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #8080b3 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #8080b3 0%, color-mix(in srgb, var(--ambient-color) 50%, #8080b3) 10%, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.round {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #8080b3) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, #8080b3 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #8080b3 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+}
+body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 60%, #8080b3) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 20%, #8080b3);
+}
+body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
+body:not(.binary).monochrome.metal .colored:not(.btn).raspberry.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #8080b3) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #8080b3) 0%, color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #8080b3) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #8080b3 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #8080b3) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #8080b3);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
+}
 body:not(.binary).monochrome.metal .colored:not(.btn).brown {
   background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #8080b3) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #8080b3 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #8080b3 0%, color-mix(in srgb, var(--ambient-color) 50%, #8080b3) 10%, color-mix(in srgb, var(--light-color) 20%, #8080b3) 100%);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #8080b3);
@@ -5913,28 +5913,6 @@ body:not(.binary).monochrome.metal .selected .colored:not(.btn) .red.long.round 
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.metal .selected .colored:not(.btn) .red.long.round.vertical {
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry {
-  background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #6060a0 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #6060a0 0%, color-mix(in srgb, var(--ambient-color) 50%, #6060a0) 10%, color-mix(in srgb, var(--light-color) 20%, #6060a0) 100%);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.round {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #6060a0) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, #6060a0 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #6060a0 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-}
-body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.rounded {
-  background: linear-gradient(to right, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 60%, #6060a0) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat;
-  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 20%, #6060a0);
-}
-body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.long.round {
-  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
-  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
-}
-body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
@@ -6243,6 +6221,28 @@ body:not(.binary).monochrome.metal .selected .colored:not(.btn) .magenta.long.ro
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }
 body:not(.binary).monochrome.metal .selected .colored:not(.btn) .magenta.long.round.vertical {
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry {
+  background: linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 0%, transparent 3px) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 0%, transparent 20%) no-repeat, linear-gradient(to right, transparent 0%, color-mix(in srgb, #6060a0 50%, transparent) 50%, transparent 100%), linear-gradient(to bottom, #6060a0 0%, color-mix(in srgb, var(--ambient-color) 50%, #6060a0) 10%, color-mix(in srgb, var(--light-color) 20%, #6060a0) 100%);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.round {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, white 75%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 20%, #6060a0) 75%, transparent) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, color-mix(in srgb, #6060a0 100%, transparent) 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, color-mix(in srgb, #6060a0 50%, transparent) 66%, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+}
+body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.rounded {
+  background: linear-gradient(to right, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(to left, color-mix(in srgb, black 20%, transparent) 0%, transparent 25%) no-repeat, linear-gradient(var(--light-direction), color-mix(in srgb, color-mix(in srgb, var(--light-color) 60%, #6060a0) 100%, transparent) 0%, color-mix(in srgb, color-mix(in srgb, var(--light-color) 30%, #6060a0) 100%, transparent) 25%, transparent 50%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat;
+  background-color: color-mix(in srgb, var(--ambient-color) 30%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 20%, #6060a0);
+}
+body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.long.round {
+  background: linear-gradient(to right, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to left, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to bottom, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(var(--light-direction), transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(var(--light-direction), transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
+  border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
+}
+body:not(.binary).monochrome.metal .selected .colored:not(.btn) .raspberry.long.round.vertical {
   background: linear-gradient(to bottom, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to top, color-mix(in srgb, var(--ambient-color) 40%, #6060a0) 0%, transparent var(--border-radius)) no-repeat, linear-gradient(to right, color-mix(in srgb, var(--light-color) 25%, #6060a0) 0%, color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(5% + 2px), color-mix(in srgb, var(--light-color) 75%, #6060a0) calc(15% + 2px), transparent calc(50% + 2px)) no-repeat, linear-gradient(to right, transparent 0%, #6060a0 25%, transparent 75%) no-repeat, linear-gradient(to right, transparent 66%, color-mix(in srgb, var(--light-color) 10%, #6060a0) 100%) no-repeat, color-mix(in srgb, var(--ambient-color) 50%, #6060a0);
   border-color: color-mix(in srgb, var(--ambient-color) 10%, #6060a0);
 }

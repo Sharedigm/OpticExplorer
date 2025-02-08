@@ -1,0 +1,70 @@
+{
+	"items": [
+		{
+			"class": "sort-by-title",
+			"group": "sort-by",
+			"icon": "fa fa-font",
+			"name": "By Title",
+			"select": true
+		},
+		{
+			"class": "sort-by-priority",
+			"group": "sort-by",
+			"icon": "fa fa-star",
+			"name": "By Priority",
+			"select": true
+		},
+		{
+			"class": "sort-by-kind",
+			"group": "sort-by",
+			"icon": "fa fa-bug",
+			"name": "By Kind",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "sort-by-date",
+			"icon": "fa fa-calendar-alt",
+			"name": "By Date",
+			"select": true,
+			"menu": [
+				{
+					"class": "sort-by-create-date",
+					"group": "sort-by",
+					"icon": "fa fa-magic",
+					"name": "Create Date",
+					"select": true
+				},
+				{
+					"class": "sort-by-modify-date",
+					"group": "sort-by",
+					"icon": "fa fa-edit",
+					"name": "Modify Date",
+					"select": true
+				},
+				{
+					"class": "sort-by-due-date",
+					"group": "sort-by",
+					"icon": "fa fa-calendar",
+					"name": "Due Date",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "sort-increasing",
+			"group": "sort-order",
+			"icon": "fa fa-sort-amount-up",
+			"name": "Increasing",
+			"select": true
+		},
+		{
+			"class": "sort-decreasing",
+			"group": "sort-order",
+			"icon": "fa fa-sort-amount-down",
+			"name": "Decreasing",
+			"select": true
+		}
+	]
+}

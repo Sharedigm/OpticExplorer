@@ -29,14 +29,14 @@ export default SideBarPanelView.extend({
 	template: template(`
 		<div class="header">
 			<label><i class="fa fa-map-pin"></i>Favorites</label>
-		
+
 			<div class="buttons">
-				<button type="button" class="add-favorite success btn btn-sm" data-toggle="tooltip" title="Add Favorite">
+				<button type="button" class="add-favorites success btn btn-sm" data-toggle="tooltip" title="Add Favorites">
 					<i class="fa fa-plus"></i>
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="items"></div>
 	`),
 
@@ -45,7 +45,7 @@ export default SideBarPanelView.extend({
 	},
 
 	events: {
-		'click .add-favorite': 'onClickAddFavorite'
+		'click .add-favorites': 'onClickAddFavorites'
 	},
 
 	//
@@ -171,14 +171,14 @@ export default SideBarPanelView.extend({
 
 		// zoom to my place marker
 		//
-		this.app.zoomToPlace(item.model);	
+		this.app.zoomToPlace(item.model);
 	},
 
 	//
 	// mouse event handling methods
 	//
 
-	onClickAddFavorite: function() {
-		this.app.addFavorite();
+	onClickAddFavorites: function() {
+		this.app.showAddFavoritesDialog();
 	}
 });

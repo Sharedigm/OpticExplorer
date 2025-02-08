@@ -4,15 +4,15 @@
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines the top level view of the application.                   |
+|       This defines the top level view of the application.                    |
+|		                                                                       |
+|       Author(s): Abe Megahed                                                 |
 |                                                                              |
-|        Author(s): Abe Megahed                                                |
-|                                                                              |
-|        This file is subject to the terms and conditions defined in           |
-|        'LICENSE.md', which is part of this source code distribution.         |
+|       This file is subject to the terms and conditions defined in            |
+|       'LICENSE.md', which is part of this source code distribution.          |
 |                                                                              |
 |******************************************************************************|
-|        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
+|       Copyright (C) 2016 - 2025, Megahed Labs LLC, www.sharedigm.com         |
 \******************************************************************************/
 
 // library imports
@@ -50,14 +50,10 @@ import Authenticatable from './behaviors/authenticatable.js';
 import Registerable from './behaviors/registerable.js';
 import SoundPlayable from './behaviors/sound-playable.js';
 import UserShowable from './behaviors/user-showable.js';
-import ChatShowable from './behaviors/chat-showable.js';
-import TopicShowable from './behaviors/topic-showable.js';
-import PostShowable from './behaviors/post-showable.js';
-import ProjectShowable from './behaviors/project-showable.js';
 import FullScreenable from './views/behaviors/layout/full-screenable.js';
 import Loadable from './views/behaviors/effects/loadable.js';
 import AppLoadable from './views/apps/common/behaviors/loading/app-loadable.js';
-import Openable from './views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from './views/apps/common/behaviors/opening/item-openable.js';
 import Alertable from './views/dialogs/behaviors/alertable.js';
 import MainView from './views/layout/main-view.js';
 import PageView from './views/layout/page-view.js';
@@ -66,7 +62,7 @@ import Keyboard from './views/keyboard/keyboard.js';
 import Browser from './utilities/web/browser.js';
 import CssUtils from './utilities/web/css-utils.js';
 
-export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenticatable, Registerable, SoundPlayable, UserShowable, ChatShowable, TopicShowable, PostShowable, ProjectShowable, FullScreenable, Loadable, AppLoadable, Openable, Alertable, {
+export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenticatable, Registerable, SoundPlayable, UserShowable, FullScreenable, Loadable, AppLoadable, ItemOpenable, Alertable, {
 
 	//
 	// attributes
@@ -101,7 +97,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		controls: new ControlSettings(),
 		dialogs: new DialogSettings()
 	},
-	
+
 	defaults: config.defaults,
 
 	//
@@ -152,7 +148,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		//
 		$.support.cors = true;
 
-		// ensure all session information is forwarded by default 
+		// ensure all session information is forwarded by default
 		// and watch for expired or fraudluent sessions
 		//
 		$.ajaxSetup({
@@ -190,7 +186,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 				}
 			}, false);
 		}
-	
+
 		// store handle to application
 		//
 		window.application = this;
@@ -205,6 +201,12 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			this.getChildView('modals').closeNonMinimized();
 		});
 
+		// set notification defaults
+		//
+		if (this.hasApp('notification_center')) {
+			this.settings.notifications.defaults = config.apps.notification_center.channels;
+		}
+
 		// create sounds
 		//
 		this.createSounds(Object.keys(config.sounds));
@@ -215,11 +217,11 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 	//
 
 	isSignedIn: function() {
-		return this.session && this.session.user != undefined;
+		return this.session && this.session.user;
 	},
 
-	isUserSignedIn: function() {
-		return this.isSignedIn() && !this.session.user.isAdmin();
+	isAdmin: function() {
+		return this.session && this.session.user && this.session.user.isAdmin();
 	},
 
 	isEmailEnabled: function() {
@@ -228,6 +230,29 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 
 	isBinaryTheme: function() {
 		return Browser.is_firefox && !($('body').hasClass('colored'));
+	},
+
+	isEmbedded: function() {
+		return Browser.isInIFrame() && window.location.hash.startsWith('#links');
+	},
+
+	isDesktopVisible: function() {
+		if (Browser.is_mobile) {
+			return false;
+		}
+		return this.desktop && this.getChildView('modals').isEmpty();
+	},
+
+	hasApp: function(name) {
+		return config.apps[name] != undefined;
+	},
+
+	hasVisibleApp: function(name) {
+		return this.hasApp(name) && !config.apps[name].hidden;
+	},
+
+	hasEnabledApp: function(name) {
+		return this.hasApp(name) && !config.apps[name].disabled;
 	},
 
 	hasDirectory: function(name) {
@@ -256,15 +281,12 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		return this.getView().hasChildView(name);
 	},
 
-	isEmbedded: function() {
-		return Browser.isInIFrame() && window.location.hash.startsWith('#links');
+	numApps: function() {
+		return Object.keys(config.apps).length;
 	},
 
-	isDesktopVisible: function() {
-		if (Browser.is_mobile) {
-			return false;
-		}
-		return this.desktop && this.getChildView('modals').isEmpty();
+	numVisibleApps: function(filter) {
+		return this.getVisibleApps(filter).length;
 	},
 
 	//
@@ -278,7 +300,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 	getPageOrientation: function() {
 		return $(window).width() > $(window).height()? 'landscape' : 'portrait';
 	},
-	
+
 	getUrl: function() {
 		if (config.base_url) {
 			return config.base_url + '/';
@@ -315,11 +337,42 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 				collection.add(app);
 			}
 		}
+
+		// sort by app name
+		//
+		collection.comparator = function(item) {
+			return item.get('name');
+		};
+		collection.sort();
+
 		return collection;
 	},
 
+	getEnabledApps: function(filter) {
+		let platform = Browser.is_mobile? 'mobile' : 'desktop';
+		return this.getApps((app) => {
+			let accessLevel = app.get('access');
+			let noAccess = (accessLevel == 'none') || (accessLevel == 'admin' && !this.isAdmin()) || (accessLevel == 'user' && this.isAdmin());
+			let isEnabled = [platform, 'all'].contains(app.get('platform')) && !app.get('disabled');
+			let isFiltered = filter? !filter(app) : false;
+			return !noAccess && isEnabled && !isFiltered;
+		});
+	},
+
+	getVisibleApps: function(filter) {
+		let platform = Browser.is_mobile? 'mobile' : 'desktop';
+		return this.getApps((app) => {
+			let accessLevel = app.get('access');
+			let isHidden = app.get('hidden');
+			let noAccess = (accessLevel == 'none') || (accessLevel == 'admin' && !this.isAdmin()) || (accessLevel == 'user' && this.isAdmin());
+			let isEnabled = [platform, 'all'].contains(app.get('platform')) && !app.get('disabled');
+			let isFiltered = filter? !filter(app) : false;
+			return !isHidden && !noAccess && isEnabled && !isFiltered;
+		});
+	},
+
 	getDirectory: function(path) {
-		
+
 		// return home directory
 		//
 		if (!path) {
@@ -388,6 +441,10 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		}
 	},
 
+	getTheme: function() {
+		return localStorage.getItem('theme') || this.settings.theme.getCurrentTheme();
+	},
+
 	//
 	// setting methods
 	//
@@ -415,6 +472,10 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 
 	setProfilePhoto: function(imageFile) {
 		this.getChildView('header').setProfilePhoto(imageFile);
+	},
+
+	setTheme: function(theme) {
+		this.settings.theme.setCurrentTheme(theme);
 	},
 
 	//
@@ -465,7 +526,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 									error: () => {
 										this.error({
 											message: "Could not load file associations."
-										});						
+										});
 									}
 								});
 							},
@@ -473,7 +534,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 							error: () => {
 								this.error({
 									message: "Could not load sound settings."
-								});				
+								});
 							}
 						});
 					},
@@ -481,7 +542,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 					error: () => {
 						this.error({
 							message: "Could not load notification settings."
-						});				
+						});
 					}
 				});
 			},
@@ -489,9 +550,9 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			error: () => {
 				this.error({
 					message: "Could not load system settings."
-				});						
+				});
 			}
-		});	
+		});
 	},
 
 	loadUserThemeSettings: function(user, done) {
@@ -533,7 +594,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 							error: () => {
 								this.error({
 									message: "Could not load dialog settings."
-								});						
+								});
 							}
 						});
 					},
@@ -541,7 +602,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 					error: () => {
 						this.error({
 							message: "Could not load control settings."
-						});						
+						});
 					}
 				});
 			},
@@ -549,9 +610,69 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			error: () => {
 				this.error({
 					message: "Could not load theme settings."
-				});						
+				});
 			}
 		});
+	},
+
+	loadResources: function(appName, options) {
+		fetch('resources/' + appName.replace(/_/g, '-') + '/resources.json')
+		.then(response => response.json())
+		.then(resources => {
+
+			// perform callback
+			//
+			if (options && options.success) {
+				options.success(resources);
+			}
+		})
+		.catch(error => {
+
+			// perform callback
+			//
+			if (options && options.error) {
+				options.error(error);
+			}
+		});
+	},
+
+	loadApp: function(appName, options) {
+
+		// load view
+		//
+		this.loadAppView(appName, {
+
+			// load resources
+			//
+			success: (AppView) => {
+				this.loadResources(appName, {
+
+					// callbacks
+					//
+					success: (resources) => {
+
+						// set attributes
+						//
+						AppView.resources = resources;
+
+						// perform callback
+						//
+						if (options && options.success) {
+							options.success(AppView);
+						}
+					},
+
+					error: () => {
+
+						// perform callback
+						//
+						if (options && options.success) {
+							options.success(AppView);
+						}
+					}
+				});
+			}
+		})
 	},
 
 	//
@@ -662,6 +783,10 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			this.settings.theme.set('night_theme', colorScheme);
 		});
 
+		// set initial theme
+		//
+		this.setTheme(this.getTheme());
+
 		// set initial style
 		//
 		this.settings.theme.apply();
@@ -734,7 +859,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			this.getView().showUserHeader(this.session.user);
 		}
 	},
-	
+
 	showMain: function(view, options) {
 
 		// show page navigation
@@ -743,7 +868,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 			if (options && options.nav) {
 				this.getChildView('header').setNav(options.nav);
 			} else {
-				this.getChildView('header').setNav();				
+				this.getChildView('header').setNav();
 			}
 		}
 
@@ -758,7 +883,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 
 	showPage: function(view, options) {
 		application.desktop = null;
-		
+
 		// show page view
 		//
 		this.showMain(new PageView({
@@ -812,7 +937,7 @@ export default Marionette.Application.extend(_.extend({}, AppLauchable, Authenti
 		}
 
 		// reset app
-		//				
+		//
 		if (appView.initialize) {
 			appView.initialize(options);
 			appView.onRender();

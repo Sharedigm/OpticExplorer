@@ -19,12 +19,13 @@ import Place from '../../../../../../models/places/place.js';
 import MapFile from '../../../../../../models/storage/files/map-file.js';
 import Places from '../../../../../../collections/places/places.js';
 import Items from '../../../../../../collections/storage/items.js';
-import Connections from '../../../../../../collections/users/connections/connections.js';
-import MapView from '../../../../../../views/maps/map-view.js';
+import Connections from '../../../../../../collections/connections/connections.js';
+import MapView from '../../../../../../views/apps/map-viewer/mainbar/maps/map-view.js';
 import EditableTabPaneView from '../../../../../../views/apps/common/mainbar/tabbed-content/editable-tab-panes/editable-tab-pane-view.js';
-import WeatherMapView from '../../../../../../views/maps/weather-map-view.js';
+import WeatherMapView from '../../../../../../views/apps/map-viewer/mainbar/maps/weather-map-view.js';
+import FullScreenable from '../../../../../../views/behaviors/layout/full-screenable.js';
 
-export default EditableTabPaneView.extend({
+export default EditableTabPaneView.extend(_.extend({}, FullScreenable, {
 
 	//
 	// attributes
@@ -358,7 +359,9 @@ export default EditableTabPaneView.extend({
 	//
 
 	setOption: function(key, value) {
-		this.getChildView('content').setOption(key, value);
+		if (this.hasChildView('content')) {
+			this.getChildView('content').setOption(key, value);
+		}
 	},
 
 	setMapMode: function(mapMode) {
@@ -441,6 +444,30 @@ export default EditableTabPaneView.extend({
 
 	deselectAll: function(filter) {
 		this.getChildView('content').deselectAll(filter);
+	},
+
+	//
+	// full screen methods
+	//
+
+	requestFullScreen: function() {
+		let self = this;
+		window.addEventListener('fullscreenchange', function(event) {
+
+			// perform callback after a slight delay for repainting
+			//
+			window.setTimeout(() => {
+				self.onFullScreenChange(event);
+			}, 100);
+
+			window.removeEventListener('fullscreenchange', this);
+		});
+		FullScreenable.requestFullScreen.call(this);
+	},
+
+	exifFullScreen: function() {
+		FullScreenable.exitFullScreen.call(this);
+		this.onResize();
 	},
 
 	//
@@ -626,6 +653,13 @@ export default EditableTabPaneView.extend({
 		}
 	},
 
+	onFullScreenChange: function() {
+		this.onResize();
+		if (this.hasChildView('content')) {
+			this.getChildView('content map').updateTiles();
+		}
+	},
+
 	//
 	// cleanup methods
 	//
@@ -636,4 +670,4 @@ export default EditableTabPaneView.extend({
 		this.people.reset();
 		this.places.reset();
 	}
-});
+}));

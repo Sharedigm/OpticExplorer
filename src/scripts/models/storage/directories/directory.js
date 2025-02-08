@@ -259,7 +259,7 @@ export default Item.extend(_.extend({}, Containable, Countable, Nestable, Movabl
 	//
 
 	create: function(options) {
-		if (this.loaded) {
+		if (this.loaded && !options.details) {
 
 			// perform callback
 			//
@@ -271,6 +271,7 @@ export default Item.extend(_.extend({}, Containable, Countable, Nestable, Movabl
 			// load directory
 			//
 			return this.load({
+				details: options? options.details : undefined,
 
 				// callbacks
 				//

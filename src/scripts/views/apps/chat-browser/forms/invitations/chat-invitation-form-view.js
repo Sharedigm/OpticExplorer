@@ -18,7 +18,7 @@
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
 import Chat from '../../../../../models/chats/chat.js';
 import ChatInvitations from '../../../../../collections/chats/sharing/chat-invitations.js';
-import Connections from '../../../../../collections/users/connections/connections.js';
+import Connections from '../../../../../collections/connections/connections.js';
 import FormView from '../../../../../views/forms/form-view.js';
 import UsersView from '../../../../../views/apps/profile-browser/mainbar/users/users-view.js';
 

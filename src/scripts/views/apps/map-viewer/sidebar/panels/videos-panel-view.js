@@ -142,6 +142,12 @@ export default SideBarPanelView.extend({
 		}));
 	},
 
+	showVideo: function(file) {
+		application.launch('video_player', {
+			model: file
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -181,12 +187,7 @@ export default SideBarPanelView.extend({
 	//
 
 	onOpen: function(item) {
-
-		// show image
-		//
-		application.launch('video_player', {
-			model: item.model
-		});
+		this.showVideo(item.model);
 	},
 
 	//

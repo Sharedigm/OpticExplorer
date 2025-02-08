@@ -31,7 +31,7 @@ export default ItemView.extend(_.extend({}, MultiDraggable, {
 			</div>
 		
 			<div class="info">
-				<div class="name"><%= name %></div>
+				<div class="name" spellcheck="false"><%= name %></div>
 		
 				<% if (typeof details != 'undefined') { %>
 				<div class="row">

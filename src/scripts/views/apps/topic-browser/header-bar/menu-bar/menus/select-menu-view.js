@@ -23,54 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="select-all"><i class="fa fa-asterisk"></i>All<span class="command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-none"><i class="fa fa-minus"></i>None<span class="shift command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-invert"><i class="fa fa-random"></i>Invert<span class="shift command shortcut">I</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-multiple"><i class="fa fa-check"></i><i class="fa fa-ellipsis-h"></i>Multiple<span class="shift command shortcut">M</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-first"><i class="fa fa-fast-backward"></i>First<span class="shortcut">up arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-prev"><i class="fa fa-backward"></i>Prev<span class="shortcut">left arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-next"><i class="fa fa-forward"></i>Next<span class="shortcut">right arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-last"><i class="fa fa-fast-forward"></i>Last<span class="shortcut">down arrow</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-subscribed"><i class="fa fa-newspaper"></i>Subscribed</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-unsubscribed"><i class="fa fa-xmark"></i>Unsubscribed</a>
-		</li>
-	`),
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-none': 'onClickSelectNone',

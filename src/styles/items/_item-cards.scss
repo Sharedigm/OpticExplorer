@@ -311,6 +311,10 @@ $rounded-icon-text-border-radius: item-icons.$rounded-icon-text-border-radius;
 			.card {
 				border-radius: $round-border-radius;
 
+				.icon {
+					border-radius: $round-border-radius;
+				}
+
 				.info {
 					.name {
 
@@ -345,6 +349,10 @@ $rounded-icon-text-border-radius: item-icons.$rounded-icon-text-border-radius;
 			.card {
 				border-radius: $rounded-border-radius;
 
+				.icon {
+					border-radius: $rounded-border-radius;
+				}
+
 				.info {
 					.name {
 
@@ -378,6 +386,10 @@ $rounded-icon-text-border-radius: item-icons.$rounded-icon-text-border-radius;
 		.item {
 			.card {
 				border-radius: 0;
+
+				.icon {
+					border-radius: 0;
+				}
 
 				.info {
 					.name {

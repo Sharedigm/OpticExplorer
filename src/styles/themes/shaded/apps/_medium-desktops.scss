@@ -29,11 +29,11 @@ $run-menu-text-color: white;
 //
 
 @mixin desktop-color ($color: colors.$medium-blue) {
-	background-color: colors.blend($color, #303030, 50%);
+	background-color: colors.blend($color, #404040, 66%);
 }
 
 @mixin desktop-colored ($color: colors.$medium-blue) {
-	background-color: colors.blended($color, #303030, 50%);
+	background-color: colors.blended($color, #404040, 66%);
 }
 
 //

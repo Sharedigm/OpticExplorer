@@ -34,7 +34,6 @@ $grid-color: white;
 $grid-background-color: colors.$ultra-dark-grey;
 $name-color: text-colors.$light-color;
 $name-background-color: colors.faded(black, 50%);
-$details-background-color: colors.faded(colors.$very-light-grey, 75%);
 $highlighted-border-color: colors.$very-light-grey;
 $selected-border-color: colors.$very-light-grey;
 
@@ -74,12 +73,6 @@ body:not(.binary).dark {
 						background-color: white;
 						outline-color: dark-selection.$edit-highlight-color;
 					}
-				}
-			}
-
-			> .specifics {
-				.details {
-					background-color: $details-background-color;
 				}
 			}
 		}

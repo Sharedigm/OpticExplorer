@@ -109,7 +109,9 @@
 				"color": "#4080ff",
 				"color2": "hsl(220, 75%, 25%)"
 			}
-		}
+		},
+
+		"video": "/Shared/Videos/Welcome To OpticExplorer.mp4"
 	},
 
 	"page":{

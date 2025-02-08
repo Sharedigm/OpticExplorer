@@ -156,9 +156,8 @@ export default ToolbarView.extend({
 	//
 
 	onLoad: function() {
-		let numPages = this.app.getChildView('content').numPages();
 		this.setPageNumber(1);
-		this.setNumPages(numPages);
+		this.setNumPages(this.app.numPages());
 		this.setItemsEnabled(true);
 		this.update();
 	}

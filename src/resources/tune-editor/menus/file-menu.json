@@ -1,0 +1,56 @@
+{
+	"items": [
+		{
+			"class": "new-file",
+			"icon": "fa fa-file-alt",
+			"name": "New File",
+			"shortcut": "command-F"
+		},
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		{
+			"class": "open-file",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		"divider",
+		{
+			"class": "save-file",
+			"icon": "fa fa-save",
+			"name": "Save",
+			"shortcut": "command-S"
+		},
+		{
+			"class": "save-as",
+			"icon": "fa fa-save",
+			"name": "Save As",
+			"shortcut": "shift-command-S"
+		},
+		"divider",
+		{
+			"class": "close-tab",
+			"icon": "fa fa-xmark",
+			"name": "Close Tab",
+			"shortcut": "command-L"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

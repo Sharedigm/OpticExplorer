@@ -41,17 +41,17 @@ body:not(.binary) {
 			//
 
 			&.success {
-				color: white;
+				color: white !important;
 				background-color: $success-color;
 			}
 
 			&.caution {
-				color: white;
+				color: white !important;
 				background-color: $caution-color;
 			}
 
 			&.warning {
-				color: white;
+				color: white !important;
 				background-color: $warning-color;
 			}
 		}

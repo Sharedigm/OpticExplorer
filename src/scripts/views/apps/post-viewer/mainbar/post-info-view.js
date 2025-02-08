@@ -20,10 +20,10 @@ import File from '../../../../models/storage/files/file.js';
 import UserPreferences from '../../../../models/preferences/user-preferences.js';
 import Posts from '../../../../collections/topics/posts.js';
 import BaseView from '../../../../views/base-view.js';
-import Openable from '../../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../../views/apps/common/behaviors/opening/item-openable.js';
 import PostsListView from '../../../../views/apps/topic-viewer/mainbar/topics/posts/posts-list-view.js';
 
-export default BaseView.extend(_.extend({}, Openable, {
+export default BaseView.extend(_.extend({}, ItemOpenable, {
 
 
 	//

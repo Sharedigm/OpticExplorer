@@ -314,22 +314,6 @@ hr {
 	}
 }
 
-body.icon-spinning {
-	.profile.photo {
-		.buttons {
-			display: none;
-		}
-	}
-}
-
-body:not(.icon-spinning) {
-	.user-profile-header {
-		.alternate.buttons {
-			display: none;
-		}
-	}	
-}
-
 //
 // scrolling
 //

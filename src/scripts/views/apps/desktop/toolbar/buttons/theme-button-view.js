@@ -33,26 +33,29 @@ export default ButtonView.extend({
 	setThemeIndex: function(index) {
 		this.constructor.index = index;
 
-		import(
-			'../../../../../views/apps/theme-manager/theme-manager-view.js'
-		).then((ThemeManagerView) => {
+		application.loadApp('theme_manager', {
 
-			// load theme
+			// callbacks
 			//
-			ThemeManagerView.default.loadTheme(new File({
-				path: config.defaults.themes[index].path
-			}), {
+			success: (ThemeManagerView) => {
 
-				// callbacks
+				// load theme
 				//
-				success: () => {
-					ThemeManagerView.default.saveSettings({
-						theme: application.settings.theme,
-						desktop: application.settings.desktop,
-						dialogs: application.settings.dialogs	
-					});
-				}
-			});
+				ThemeManagerView.loadTheme(new File({
+					path: config.defaults.themes[index].path
+				}), {
+
+					// callbacks
+					//
+					success: () => {
+						ThemeManagerView.saveSettings({
+							theme: application.settings.theme,
+							desktop: application.settings.desktop,
+							dialogs: application.settings.dialogs
+						});
+					}
+				});
+			}
 		});
 	},
 
@@ -70,19 +73,24 @@ export default ButtonView.extend({
 		});
 	},
 
-	//
-	// mouse event methods
-	//
-
-	onClick: function() {
-		/*
+	showTheme: function() {
 		if (this.constructor.index < config.defaults.themes.length - 1) {
 			this.setThemeIndex(this.constructor.index + 1);
 		} else {
 			this.setThemeIndex(0);
 		}
-		*/
+	},
+
+	showThemePicker: function() {
 		application.launch('theme_picker');
+	},
+
+	//
+	// mouse event methods
+	//
+
+	onClick: function() {
+		this.showThemePicker();
 	}
 }, {
 

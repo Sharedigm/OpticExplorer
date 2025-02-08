@@ -322,33 +322,31 @@ export default _.extend({}, FileMovable, {
 			// callbacks
 			//
 			success: (model) => {
-				if (!model.isEmpty()) {
-					model.clear({
+				model.clear({
 
-						// callbacks
+					// callbacks
+					//
+					success: () => {
+
+						// perform callback
 						//
-						success: () => {
-		
-							// perform callback
-							//
-							if (options && options.success) {
-								options.success();
-							}
-						},
-
-						error: (model, response) => {
-
-							// show error message
-							//
-							application.error({
-								icon: '<i class="fa fa-trash-alt"></i>',
-								title: 'Delete Error',
-								message: "Could not clear trash directory.",
-								response: response
-							});
+						if (options && options.success) {
+							options.success();
 						}
-					});
-				}
+					},
+
+					error: (model, response) => {
+
+						// show error message
+						//
+						application.error({
+							icon: '<i class="fa fa-trash-alt"></i>',
+							title: 'Delete Error',
+							message: "Could not clear trash directory.",
+							response: response
+						});
+					}
+				});
 			},
 
 			error: () => {

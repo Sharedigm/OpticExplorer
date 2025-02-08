@@ -1,0 +1,72 @@
+{
+	"items": [
+		{
+			"class": "open-item",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "share",
+			"icon": "fa fa-share",
+			"name": "Share",
+			"menu": [
+				{
+					"class": "share-files",
+					"icon": "fa fa-file",
+					"name": "Files"
+				},
+				{
+					"class": "share-audio",
+					"icon": "fa fa-volume-up",
+					"name": "Audio"
+				},
+				{
+					"class": "share-music",
+					"icon": "fa fa-music",
+					"name": "Music"
+				},
+				{
+					"class": "share-pictures",
+					"icon": "fa fa-image",
+					"name": "Pictures"
+				},
+				{
+					"class": "share-videos",
+					"icon": "fa fa-video",
+					"name": "Videos"
+				},
+				{
+					"class": "share-maps",
+					"icon": "fa fa-map",
+					"name": "Maps"
+				},
+				"divider",
+				{
+					"class": "share-message",
+					"icon": "fa fa-comments",
+					"name": "Message"
+				},
+				{
+					"class": "share-gesture",
+					"icon": "fa fa-hand-pointer",
+					"name": "Gesture"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		{
+			"class": "show-on-map",
+			"icon": "fa fa-map",
+			"name": "Show on Map",
+			"shortcut": "command-M"
+		}
+	]
+}

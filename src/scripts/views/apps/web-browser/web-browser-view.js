@@ -22,6 +22,7 @@ import LinkShareable from '../../../views/apps/common/behaviors/sharing/link-sha
 import HeaderBarView from '../../../views/apps/web-browser/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/web-browser/sidebar/sidebar-view.js';
 import WebView from '../../../views/apps/web-browser/mainbar/web-view.js';
+import PreferencesFormView from '../../../views/apps/web-browser/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/address-bar.js';
 import Url from '../../../utilities/web/browser.js';
 import '../../../utilities/web/url.js';
@@ -333,7 +334,7 @@ export default AppSplitView.extend(_.extend({}, LinkShareable, {
 				// callbacks
 				//
 				onsave: (item) => {	
-					this.getChildView('sidebar').addFavorites([item]);
+					this.getChildView('sidebar favorites').addFavorites([item]);
 				}
 			}));
 		});
@@ -341,7 +342,7 @@ export default AppSplitView.extend(_.extend({}, LinkShareable, {
 	
 	deleteFavorites: function(items) {
 		if (items && items.length > 0) {
-			this.getChildView('sidebar').getChildView('favorites').deleteFavorites(items, {
+			this.getChildView('sidebar favorites').deleteFavorites(items, {
 				confirm: true
 			});
 		}
@@ -485,14 +486,12 @@ export default AppSplitView.extend(_.extend({}, LinkShareable, {
 		this.$el.find('.address-bar input').focus();
 	},
 
-	//
-	// header bar rendering methods
-	//
-
-	getHeaderBarView: function() {
-		return new HeaderBarView();
+	showCode: function(file) {
+		application.launch('code_editor', {
+			model: file
+		});
 	},
-	
+
 	showSource: function() {
 		$.ajax({
 			url: config.servers.api + '/proxy/source?url=' + this.url,
@@ -501,14 +500,20 @@ export default AppSplitView.extend(_.extend({}, LinkShareable, {
 			// callbacks
 			//
 			success: (data) => {
-				application.launch('code_editor', {
-					model: new File({
-						name: 'index.html',
-						contents: data
-					})
-				});
+				this.showCode(new File({
+					name: 'index.html',
+					contents: data
+				}));
 			}
 		});
+	},
+
+	//
+	// header bar rendering methods
+	//
+
+	getHeaderBarView: function() {
+		return new HeaderBarView();
 	},
 
 	//
@@ -590,5 +595,13 @@ export default AppSplitView.extend(_.extend({}, LinkShareable, {
 	// static attributes
 	//
 
-	searchUrl: 'http://www.google.com/search?q='
+	searchUrl: 'http://www.google.com/search?q=',
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

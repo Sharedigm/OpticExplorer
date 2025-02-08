@@ -23,40 +23,8 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .close-window': 'onClickCloseWindow'
-	},
-
-	//
-	// querying methods
-	//
-
-	visible: function() {
-		return {
-			'new-window': true,
-			'close-window': true
-		};
-	},
-
-	enabled: function() {
-		return {
-			'new-window': true,
-			'close-window': true
-		};
 	}
 });

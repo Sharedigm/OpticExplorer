@@ -25,22 +25,6 @@ export default PreferencesFormView.extend({
 	//
 
 	template: template(`
-		<div class="display form-group">
-			<label class="control-label"><i class="fa fa-display"></i>Display</label>
-			<div class="controls">
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="display" value="led">LED</label>
-				</div>
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="display" value="lcd">LCD</label>
-				</div>
-		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Display" data-content="This is the type of display to use."></i>
-			</div>
-		</div>
-
 		<div class="sensitivity form-group">
 			<label class="control-label"><i class="fa fa-volume-up"></i>Sensitivity (%)</label>
 			<div class="controls">
@@ -57,18 +41,12 @@ export default PreferencesFormView.extend({
 		sensitivity: '.sensitivity .range-input'
 	},
 
-	events: {
-		'click .display input': 'onClickDisplay'
-	},
-
 	//
 	// querying methods
 	//
 
 	getValue: function(key) {
 		switch (key) {
-			case 'display':
-				return this.$el.find('.display input:checked').val();
 			case 'sensitivity':
 				return this.getChildView('sensitivity').getValue();
 		}
@@ -76,7 +54,6 @@ export default PreferencesFormView.extend({
 
 	getValues: function() {
 		return {
-			display: this.getValue('display'),
 			sensitivity: this.getValue('sensitivity')
 		};
 	},
@@ -87,9 +64,6 @@ export default PreferencesFormView.extend({
 
 	setValue: function(key, value) {
 		switch (key) {
-			case 'display':
-				this.$el.find('.display input[value="' + value + '"]').prop('checked', true);
-				break;
 			case 'sensitivity':
 				this.getChildView('sensitivity').setValue(value);
 				break;
@@ -130,13 +104,5 @@ export default PreferencesFormView.extend({
 
 	onChangeSensitivity: function() {
 		this.onChangeValue('sensitivity', this.getValue('sensitivity'));
-	},
-
-	//
-	// mouse event handling methods
-	//
-
-	onClickDisplay: function() {
-		this.onChangeValue('display', this.getValue('display'));
 	}
 });

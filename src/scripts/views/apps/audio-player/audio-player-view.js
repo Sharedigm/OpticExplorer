@@ -20,6 +20,7 @@ import Directory from '../../../models/storage/directories/directory.js';
 import Items from '../../../collections/storage/items.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import FileDownloadable from '../../../views/apps/file-browser/mainbar/behaviors/file-downloadable.js';
 import FileUploadable from '../../../views/apps/file-browser/mainbar/behaviors/file-uploadable.js';
 import FileDisposable from '../../../views/apps/file-browser/mainbar/behaviors/file-disposable.js';
@@ -27,10 +28,11 @@ import HeaderBarView from '../../../views/apps/audio-player/header-bar/header-ba
 import SideBarView from '../../../views/apps/audio-player/sidebar/sidebar-view.js';
 import AudioSplitView from '../../../views/apps/audio-player/mainbar/audio-split-view.js';
 import FooterBarView from '../../../views/apps/audio-player/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/audio-player/forms/preferences/preferences-form-view.js'
 import Audio from '../../../utilities/multimedia/audio.js';
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable, FileUploadable, FileDisposable, {
+export default AppSplitView.extend(_.extend({}, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
 
 	//
 	// attributes
@@ -119,13 +121,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 		}
 	},
 
-	hasSelectedFavorites: function() {
-		let sidebarView = this.getChildView('sidebar');
-		let favoritesPanelView = sidebarView? sidebarView.getChildView('favorites') : null;
-		let favoriteItemsView = favoritesPanelView? favoritesPanelView.getChildView('items') : null;
-		return favoriteItemsView? favoriteItemsView.hasSelected() : false;
-	},
-
 	hasSelectedItems: function() {
 		if (this.hasChildView('sidebar')) {
 			return this.getChildView('sidebar').hasSelectedItems();
@@ -169,10 +164,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 
 	getSelectedModels: function() {
 		return this.getChildView('content').getSelectedModels();
-	},
-	
-	getSelectedFavorites: function() {
-		return this.getChildView('sidebar').getSelectedFavorites();
 	},
 
 	getSelectedItems: function() {
@@ -439,7 +430,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 		// stop sounds
 		//
 		this.stop();
-		
+
 		// set attributes
 		//
 		this.collection.reset(files);
@@ -463,19 +454,31 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 
 	openDirectory: function(directory) {
 
+		// set attributes
+		//
+		this.directory = directory;
+
 		// deselect play button
 		//
 		this.getChildView('header play').pause();
 
+		// check if directory is loaded
+		//
 		if (directory.loaded) {
+
+			// check if audio album
+			//
 			if (directory.isAudioAlbum()) {
+
+				// open contents
+				//
 				this.openItems(directory.contents.models);
 			} else {
 				application.openItem(directory);
 			}
 		} else {
 			directory.load({
-				details: this.preferences.get('sort_kind'),
+				details: [this.preferences.get('sort_kind')],
 
 				// callbacks
 				//
@@ -527,7 +530,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 	//
 
 	loadFile: function(model, options) {
-		
+
 		// pause currently playing track
 		//
 		this.pause();
@@ -549,7 +552,7 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 		// update sidebar
 		//
 		this.getChildView('sidebar').setModel(model);
-		
+
 		// start loading model
 		//
 		if (this.model) {
@@ -654,26 +657,6 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 
 	volumeUp: function() {
 		this.setVolume(this.getVolume() + 1);
-	},
-
-	//
-	// favorites methods
-	//
-
-	addFavorites: function() {
-		this.getChildView('sidebar').getChildView('favorites').showOpenDialog();
-	},
-
-	removeFavorites: function(favorites) {
-		if (favorites && favorites.length > 0) {
-			this.getChildView('sidebar').getChildView('favorites').getChildView('items').removeFavorites(favorites, {
-				confirm: true,
-
-				// callbacks
-				//
-				success: () => this.onChange()
-			});
-		}
 	},
 
 	//
@@ -1102,4 +1085,13 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, FileDownloadable,
 	onBeforeDestroy: function() {
 		this.pause();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

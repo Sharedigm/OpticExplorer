@@ -46,21 +46,6 @@ export default SideBarPanelView.extend({
 	},
 
 	//
-	// constructor
-	//
-
-	initialize: function() {
-
-		// set attributes
-		//
-		if (!this.collection) {
-			this.collection = application.getApps((app) => {
-				return app.has('preferences') && !app.get('hidden');
-			});
-		}
-	},
-
-	//
 	// getting methods
 	//
 
@@ -120,6 +105,9 @@ export default SideBarPanelView.extend({
 			// options
 			//
 			view_kind: this.options.view_kind,
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities

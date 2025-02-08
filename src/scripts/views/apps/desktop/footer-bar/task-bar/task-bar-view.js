@@ -89,9 +89,13 @@ export default BaseView.extend({
 			// callbacks
 			//
 			onclick: (app) => {
-				application.launch(app);
+				this.showApp(app);
 			}
 		}));
+	},
+
+	showApp: function(app) {
+		application.launch(app);
 	},
 
 	showTaskList: function() {

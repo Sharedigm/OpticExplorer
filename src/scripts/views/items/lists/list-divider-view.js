@@ -18,7 +18,6 @@ export default ListItemView.extend({
 	// attributes
 	//
 
-	tagName: 'li',
 	className: 'divider',
 
 	template: template(`

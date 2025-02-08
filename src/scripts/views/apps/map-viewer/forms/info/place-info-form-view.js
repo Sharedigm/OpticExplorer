@@ -26,7 +26,22 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	template: template(`
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "Location",
+			"icon": "fa fa-globe"
+		},
+		{
+			"name": "History",
+			"icon": "fa fa-calendar-alt"
+		}
+	],
+
+	item: `
 		<div class="items">
 			<div class="icon-grid">
 				<div class="directory item">
@@ -52,53 +67,7 @@ export default InfoFormView.extend({
 				</div>
 			</div>
 		</div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general tab<% if (tab == 'general') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general.tab-pane">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-
-			<li role="presentation" class="location tab<% if (tab == 'location') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".location.tab-pane">
-					<i class="fa fa-globe"></i>
-					<label>Location</label>
-				</a>
-			</li>
-
-			<li role="presentation" class="history tab<% if (tab == 'history') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".history.tab-pane">
-					<i class="fa fa-calendar-alt"></i>
-					<label>History</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general tab-pane<% if (tab == 'general') { %> active<% } %>">
-			</div>
-
-			<div role="tabpanel" class="location tab-pane<% if (tab == 'location') { %> active<% } %>">
-			</div>
-
-			<div role="tabpanel" class="history tab-pane<% if (tab == 'history') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		general: '.general.tab-pane',
-		location: '.location.tab-pane',
-		history: '.history.tab-pane'
-	},
-
-	events: {
-		'mousedown': 'onMouseDown'
-	},
+	`,
 
 	//
 	// getting methods
@@ -114,9 +83,13 @@ export default InfoFormView.extend({
 
 	templateContext: function() {
 		return {
-			url: this.getIconUrl(),
-			index: this.options.index,
-			tab: this.options.tab || 'general'
+			item: template(this.item)({
+				url: this.getIconUrl(),
+				name: this.model.get('name'),
+				description: this.model.get('description')
+			}),
+			tabs: this.tabs,
+			active: this.options.tab
 		};
 	},
 

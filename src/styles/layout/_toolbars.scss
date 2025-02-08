@@ -85,16 +85,16 @@ $box-shadow: 5px 5px 20px rgba(black, 10%);
 		}
 	}
 
+	//
+	// slider inputs
+	//
+
+	input[type="range"] {
+		width: 100px;
+		padding: 0;
+	}
+
 	.input {
-
-		//
-		// slider inputs
-		//
-
-		input[type="range"] {
-			width: 150px;
-			padding: 0;
-		}
 
 		//
 		// text / number inputs
@@ -325,6 +325,18 @@ $box-shadow: 5px 5px 20px rgba(black, 10%);
 	.disabled {
 		opacity: 0.5;
 		pointer-events: none;
+	}
+}
+
+//
+// hidden toolbars
+//
+
+.hidden-toolbars {
+	&.header-bar {
+		.toolbar {
+			display: none !important;
+		}
 	}
 }
 

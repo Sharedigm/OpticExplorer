@@ -19,7 +19,7 @@
 // variables
 //
 
-$owner-profile-size: 100px;
+$owner-profile-size: 25%;
 
 //
 // styles
@@ -44,11 +44,11 @@ $owner-profile-size: 100px;
 					height: $owner-profile-size;
 					left: 50%;
 					top: 50%;
+					margin-left: calc(-1 * $owner-profile-size / 2);
+					margin-top: calc(-1 * $owner-profile-size / 2);
 					pointer-events: auto;
 
 					.thumbnail {
-						margin-left: -50px;
-						margin-top: -50px;
 						border-radius: 10px;
 					}
 				}
@@ -60,8 +60,6 @@ $owner-profile-size: 100px;
 		.row:first-child {
 			> .icon {
 				.owner.tile {
-					margin-top: -5px;
-
 					.thumbnail {
 						left: 50%;
 						top: -100px;
@@ -100,7 +98,7 @@ $owner-profile-size: 100px;
 		.row:first-child {
 			> .icon {
 				.owner.tile {
-					margin-top: 10px;
+					margin-top: -7%;
 				}
 			}
 		}

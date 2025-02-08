@@ -57,7 +57,7 @@
 	//
 
 	&.hide-image-names {
-		.png.file, .jpg.file {
+		.image.file {
 			.name {
 				display: none !important;
 			}

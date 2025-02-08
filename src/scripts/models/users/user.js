@@ -510,6 +510,18 @@ export default Timestamped.extend({
 	},
 
 	//
+	// destroying methods
+	//
+
+	delete: function(options) {
+		return $.ajax(_.extend({
+			url: config.servers.authentication + '/users/' + this.get('id') + '/delete',
+			type: 'DELETE',
+			dataType: 'json'
+		}, options));
+	},
+
+	//
 	// parsing (Backbone) methods
 	//
 

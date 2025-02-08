@@ -1,0 +1,86 @@
+{
+	"items": [
+		{
+			"class":"new",
+			"icon":"fa fa-magic",
+			"name":"New",
+			"menu": [
+				{
+					"class":"new-optic",
+					"icon":"fa fa-database rotated flipped",
+					"name":"New Optic",
+					"shortcut":"command-enter"
+				},
+				{
+					"class":"new-folder",
+					"icon":"fa fa-folder",
+					"name":"New Folder"
+				},
+				{
+					"class":"new-window",
+					"icon":"far fa-window-maximize",
+					"name":"New Window",
+					"shortcut":"shift-command-enter"
+				}
+			]
+		},
+		{
+			"class":"open-optics",
+			"icon":"fa fa-folder-open",
+			"name":"Open",
+			"shortcut":"command-O"
+		},
+		{
+			"class":"revert-optic",
+			"icon":"fa fa-repeat",
+			"name":"Revert",
+			"shortcut":"shift-command-R"
+		},
+		"divider",
+		{
+			"class":"show-info",
+			"icon":"fa fa-info-circle",
+			"name":"Show Info",
+			"shortcut":"command-I"
+		},
+		{
+			"class":"show-material-map",
+			"icon":"fa fa-map",
+			"name":"Show Material Map",
+			"shortcut":"command-M"
+		},
+		"divider",
+		{
+			"class":"save-optic",
+			"icon":"fa fa-save",
+			"name":"Save",
+			"shortcut":"command-S"
+		},
+		{
+			"class":"save-as",
+			"icon":"fa fa-save",
+			"name":"Save As",
+			"shortcut":"shift-command-S"
+		},
+		"divider",
+		{
+			"class":"delete-items",
+			"icon":"fa fa-trash-alt",
+			"name":"Delete Items",
+			"shortcut":"command-delete"
+		},
+		"divider",
+		{
+			"class":"close-tab",
+			"icon":"fa fa-xmark",
+			"name":"Close Tab",
+			"shortcut":"command-L"
+		},
+		{
+			"class":"close-window",
+			"icon":"fa fa-circle-xmark",
+			"name":"Close",
+			"shortcut":"command-L"
+		}
+	]
+}

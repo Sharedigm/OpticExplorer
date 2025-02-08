@@ -1,0 +1,160 @@
+{
+	"items": [
+		{
+			"class": "new",
+			"icon": "fa fa-magic",
+			"name": "New",
+			"menu": [
+				{
+					"class": "new-folder",
+					"icon": "fa fa-folder",
+					"name": "New Folder",
+					"shortcut": "command-enter"
+				},
+				{
+					"class": "new-volume",
+					"icon": "fa fa-database",
+					"name": "New Volume",
+					"shortcut": "shift-command-L"
+				},
+				{
+					"class": "new-text-file",
+					"icon": "fa fa-file-alt",
+					"name": "New Text File",
+					"shortcut": "command-T"
+				},
+				{
+					"class": "new-window",
+					"icon": "far fa-window-maximize",
+					"name": "New Window",
+					"shortcut": "shift-command-enter"
+				}
+			]
+		},
+		{
+			"class": "open-item",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O",
+			"menu": [
+				{
+					"class": "open-in-new-window",
+					"icon": "fa fa-folder-open",
+					"name": "In New Window"
+				},
+				{
+					"class": "open-in-new-tab",
+					"icon": "fa fa-folder-open",
+					"name": "In New Tab"
+				}
+			]
+		},
+		{
+			"class": "open-with",
+			"icon": "fa fa-folder-open",
+			"name": "Open With"
+		},
+		{
+			"class": "import",
+			"icon": "fa fa-cloud-upload-alt",
+			"name": "Import",
+			"menu": [
+				{
+					"class": "upload-item",
+					"icon": "fa fa-upload",
+					"name": "Upload",
+					"shortcut": "command-U"
+				},
+				{
+					"class": "upload-dropbox",
+					"icon": "fab fa-dropbox",
+					"name": "Dropbox"
+				},
+				{
+					"class": "upload-google",
+					"icon": "fab fa-google",
+					"name": "Google Drive"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "favorites",
+			"icon": "fa fa-star",
+			"name": "Favorites",
+			"menu": [
+				{
+					"class": "add-favorites",
+					"icon": "fa fa-star",
+					"name": "Add Favorites",
+					"shortcut": "shift-command-F"
+				},
+				{
+					"class": "remove-favorites",
+					"icon": "fa fa-trash-alt",
+					"name": "Remove Favorites",
+					"shortcut": "delete"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		{
+			"class": "set-place",
+			"icon": "fa fa-map",
+			"name": "Set Place",
+			"shortcut": "command-shift-P"
+		},
+		"divider",
+		{
+			"class": "rename-item",
+			"icon": "fa fa-font",
+			"name": "Rename",
+			"shortcut": "shift-command-R"
+		},
+		{
+			"class": "compress-items",
+			"icon": "fa fa-compress",
+			"name": "Compress",
+			"shortcut": "shift-command-Z"
+		},
+		{
+			"class": "expand-item",
+			"icon": "fa fa-expand",
+			"name": "Expand",
+			"shortcut": "shift-command-X"
+		},
+		{
+			"class": "download-items",
+			"icon": "fa fa-download",
+			"name": "Download",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "empty-trash",
+			"icon": "fa fa-trash-alt",
+			"name": "Empty Trash",
+			"shortcut": "command-E"
+		},
+		"divider",
+		{
+			"class": "close-tab",
+			"icon": "fa fa-xmark",
+			"name": "Close Tab",
+			"shortcut": "command-L"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

@@ -23,55 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-event"><i class="fa fa-file"></i>New Event<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="open-date dropdown-toggle"><i class="fa fa-folder-open"></i>Open<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="open-prev"><i class="fa fa-arrow-left"></i>Prev<span class="shortcut">left arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-next"><i class="fa fa-arrow-right"></i>Next<span class="shortcut">right arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-up"><i class="fa fa-arrow-up"></i>Up<span class="shortcut">up arrow</span></a>
-				</li>
-		
-				<li role="presentation" style="display:none">
-					<a class="open-current"><i class="fa fa-redo"></i>Current<span class="shortcut">down arrow</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="delete-event"><i class="fa fa-trash-alt"></i>Delete Event<span class="shortcut">delete</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-event': 'onClickNewEvent',
@@ -86,13 +37,6 @@ export default FileMenuView.extend({
 	//
 	// querying methods
 	//
-
-	visible: function() {
-		return {
-			'new-event': true,
-			'close-window': true
-		};
-	},
 
 	enabled: function() {
 		let preferences = this.parent.app.preferences;

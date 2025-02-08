@@ -98,7 +98,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-school-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-school-dialog-view.js'
 		).then((AddUserSchoolDialogView) => {
 			
 			// show add dialog

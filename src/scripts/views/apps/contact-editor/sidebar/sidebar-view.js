@@ -32,10 +32,8 @@ export default SideBarView.extend(_.extend({}, ContainableSelectable, {
 	//
 
 	enabled: function() {
-		let isUserSignedIn = application.isUserSignedIn();
-
 		return {
-			'contacts': isUserSignedIn
+			'contacts': !application.isAdmin()
 		};
 	},
 

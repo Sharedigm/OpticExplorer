@@ -18,10 +18,9 @@
 import UserPreferences from '../../../../../../models/preferences/user-preferences.js';
 import ShareRequests from '../../../../../../collections/storage/sharing/share-requests.js';
 import Items from '../../../../../../collections/storage/items.js';
-import Connections from '../../../../../../collections/users/connections/connections.js';
+import Connections from '../../../../../../collections/connections/connections.js';
 import FormView from '../../../../../../views/forms/form-view.js';
 import FilesView from '../../../../../../views/apps/file-browser/mainbar/files/files-view.js';
-import UsersView from '../../../../../../views/apps/profile-browser/mainbar/users/users-view.js';
 
 export default FormView.extend({
 
@@ -41,7 +40,7 @@ export default FormView.extend({
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="with-connections form-group">
 			<label class="control-label"><i class="fa fa-user"></i>With</label>
 			<div class="controls">
@@ -51,32 +50,32 @@ export default FormView.extend({
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="message form-group">
 			<label class="required control-label"><i class="fa fa-quote-left"></i>Message</label>
 			<div class="controls">
 				<div class="input-group">
 					<textarea class="required form-control" rows="1" maxlength="1000"><%= message %></textarea>
-					
+
 					<div class="input-group-addon">
 						<i class="active fa fa-question-circle" data-toggle="popover" title="Message" data-content="This is an optional message to the recipient(s) of the share invitation."></i>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="share-as form-group">
 			<label class="control-label"><i class="fa fa-file"></i>Share as</label>
 			<div class="controls">
-		
+
 				<div class="radio-inline">
 					<label><input type="radio" name="share-as" value="copy"<% if (sharing == 'copy') { %> checked="checked"<% } %>>Copy</label>
 				</div>
-		
+
 				<div class="radio-inline">
 					<label><input type="radio" name="share-as" value="reference"<% if (sharing == 'reference') { %> checked="checked"<% } %>>Reference</label>
 				</div>
-		
+
 				<i class="active fa fa-question-circle" data-toggle="popover" title="Share as" data-content="When you share an item as a copy, then you and the receipient will each get an independent copy and will not see changes made by the other.  When you share an item as a reference, then you and the recipient will both share access to the same item and will therefore see any changes made by the other. "></i>
 			</div>
 		</div>
@@ -194,31 +193,31 @@ export default FormView.extend({
 	},
 
 	selectConnections: function() {
-		import(
-			'../../../../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js'
-		).then((SelectConnectionsDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show open dialog
+			// callbacks
 			//
-			application.show(new SelectConnectionsDialogView.default({
-				collection: this.collection,
+			success: (ConnectionManager) => {
+				ConnectionManager.showSelectConnectionsDialog({
+					collection: this.collection,
 
-				// options
-				//
-				selected: this.connections,
-
-				// callbacks
-				//
-				select: (connections) => {
-					this.setConnections(connections);
-
-					// perform callback
+					// options
 					//
-					if (this.options.onselect) {
-						this.options.onselect(connections);
+					selected: this.connections,
+
+					// callbacks
+					//
+					select: (connections) => {
+						this.setConnections(connections);
+
+						// perform callback
+						//
+						if (this.options.onselect) {
+							this.options.onselect(connections);
+						}
 					}
-				}
-			}));
+				});
+			}
 		});
 	},
 
@@ -300,22 +299,32 @@ export default FormView.extend({
 	},
 
 	showConnections: function(connections) {
-		this.showChildView('connections', new UsersView({
-			collection: new Connections(connections, {
-				parse: false
-			}),
+		application.loadAppView('connection_manager', {
 
-			// options
+			// callbacks
 			//
-			preferences: UserPreferences.create('connection_manager', {
-				view_kind: 'icons',
-				detail_kind: null
-			}),
+			success: (ConnectionManager) => {
 
-			// capabilities
-			//
-			selectable: false
-		}));
+				// show users view
+				//
+				this.showChildView('connections', ConnectionManager.getUsersView({
+					collection: new Connections(connections, {
+						parse: false
+					}),
+
+					// options
+					//
+					preferences: UserPreferences.create('connection_manager', {
+						view_kind: 'icons',
+						detail_kind: null
+					}),
+
+					// capabilities
+					//
+					selectable: false
+				}));
+			}
+		});
 	},
 
 	//

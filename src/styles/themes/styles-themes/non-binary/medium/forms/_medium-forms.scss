@@ -100,8 +100,8 @@ body:not(.binary) {
 
 	.search-bar .input {
 		&:focus-within {
-			border-color: colors.fade($input-focus-color, 75%) !important;
-				box-shadow: 1px 1px 10px 0 colors.fade($input-focus-color, 50%) !important;
+			border-color: colors.fade($input-focus-color, 100%) !important;
+				box-shadow: 0 0 20px 0 colors.fade($input-focus-color, 50%) !important;
 		}
 	}
 }

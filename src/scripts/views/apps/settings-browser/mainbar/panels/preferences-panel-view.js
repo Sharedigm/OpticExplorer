@@ -17,7 +17,6 @@
 
 import BaseView from '../../../../../views/base-view.js';
 import AppsView from '../../../../../views/apps/common/items/apps-view.js';
-import Browser from '../../../../../utilities/web/browser.js';
 
 export default BaseView.extend({
 
@@ -47,23 +46,6 @@ export default BaseView.extend({
 	},
 
 	//
-	// constructor
-	//
-
-	initialize: function() {
-		let platform = Browser.is_mobile? 'mobile' : 'desktop';
-
-		// set attributes
-		//
-		if (!this.collection) {
-			this.collection = application.getApps((app) => {
-				return app.has('preferences') && !app.get('hidden') &&
-					[platform, 'all'].contains(app.get('platform'));
-			});
-		}
-	},
-
-	//
 	// getting methods
 	//
 
@@ -86,6 +68,16 @@ export default BaseView.extend({
 	getSelectedModels: function() {
 		if (this.hasChildView('items')) {
 			return this.getChildView('items').getSelectedModels();
+		}
+	},
+
+	//
+	// setting methods
+	//
+
+	setOption: function(key, value) {
+		if (this.hasChildView('items')) {
+			this.getChildView('items').setOption(key, value);
 		}
 	},
 
@@ -119,6 +111,9 @@ export default BaseView.extend({
 			// options
 			//
 			view_kind: this.options.view_kind,
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities
@@ -149,7 +144,7 @@ export default BaseView.extend({
 		let defaults = [];
 
 		function filter(app) {
-			return app.app && app.preferences &&
+			return app.app && config.preferences[app.id] &&
 				app.hidden != true && 
 				app.name != 'Settings Manager';
 		}

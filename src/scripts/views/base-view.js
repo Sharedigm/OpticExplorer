@@ -113,6 +113,10 @@ export default Marionette.View.extend(_.extend({}, Boundable, Hideable, Hierarch
 		//
 		view.parent = this;
 
+		// set region name
+		//
+		view.region_name = name;
+
 		// call superclass method
 		//
 		Marionette.View.prototype.showChildView.call(this, name, view, options);

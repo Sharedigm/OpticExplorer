@@ -58,11 +58,12 @@ export default ToolbarView.extend({
 	//
 
 	onRender: function() {
-		let launcherStyle = application.desktop.settings.get('launcher_style');
+		let settings = application.desktop? application.desktop.settings : undefined;
+		let launcherStyle = settings? settings.get('launcher_style') : undefined;
 
 		// show child views
 		//
-		if (config.apps.theme_picker && !config.apps.theme_picker.disabled) {
+		if (application.hasEnabledApp('theme_picker')) {
 			this.showChildView('theme', new ThemeButtonView());
 		}
 		this.showChildView('brightness', new BrightnessButtonView());

@@ -164,6 +164,7 @@ export default SideBarView.extend({
 	
 	showPreferencesPanel: function() {
 		this.showChildView('preferences', new PreferencesPanelView({
+			collection: this.collection,
 
 			// options
 			//

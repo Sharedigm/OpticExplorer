@@ -63,7 +63,7 @@ export default BaseView.extend({
 							<% if (branding.welcome.splash.brand.logotype.names) { %>
 							<% let names = branding.welcome.splash.brand.logotype.names; %>
 							<% let keys = Object.keys(names); %>
-							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 							<% } %>
 						</div>
 						<% if (branding.welcome.splash.brand.logotype.href) { %></a><% } %>
@@ -352,7 +352,7 @@ export default BaseView.extend({
 			defaults: config.defaults,
 			branding: config.branding,
 			filters: this.options.filters,
-			show_video: config.welcome && config.welcome.options.view_video && config.welcome.options.view_video.enabled,
+			show_video: config.branding.welcome.video != undefined,
 			show_sign_in: application.session.has('config'),
 			show_sign_up: application.session.has('config')? application.session.get('config').sign_up_enabled : false
 		};
@@ -516,6 +516,10 @@ export default BaseView.extend({
 	showCarouselCells: function(carousel, done) {
 		fetch(carousel.template).then((response) => response.text()).then((text) => {
 
+			// apply template
+			//
+			text = template(text)(config.defaults);
+
 			// show carousel content
 			//
 			this.$el.find('.carousel-cells').replaceWith($(text));
@@ -585,6 +589,16 @@ export default BaseView.extend({
 		}
 	},
 
+	showVideoFile: function(file, options) {
+		application.launch('video_player', {
+			model: file,
+			preferences: UserPreferences.create('video_player', {
+				show_sidebar: false
+			}),
+			autoplay: true
+		}, options);
+	},
+
 	showVideo: function(path) {
 
 		// load video file
@@ -593,14 +607,10 @@ export default BaseView.extend({
 			path: path
 		}).fetch({
 
-			success: (model) => {
-				application.launch('video_player', {
-					model: model,
-					preferences: UserPreferences.create('video_player', {
-						show_sidebar: false
-					}),
-					autoplay: true
-				}, {
+			// callbacks
+			//
+			success: (file) => {
+				this.showVideoFile(file, {
 					maximized: true,
 					full_screen: false
 				});

@@ -1,0 +1,61 @@
+{
+	"items": [
+		{
+			"class": "edit-topic",
+			"group": "topic-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Topic",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "edit-post",
+			"group": "post-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Post",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "edit-comment",
+			"group": "comment-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Comment",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "edit-reply",
+			"group": "reply-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Reply",
+			"shortcut": "command-E"
+		},
+		"divider",
+		{
+			"class": "delete-topic",
+			"group": "topic-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Topic",
+			"shortcut": "delete"
+		},
+		{
+			"class": "delete-post",
+			"group": "post-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Post",
+			"shortcut": "delete"
+		},
+		{
+			"class": "delete-comment",
+			"group": "comment-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Comment",
+			"shortcut": "delete"
+		},
+		{
+			"class": "delete-reply",
+			"group": "reply-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Reply",
+			"shortcut": "delete"
+		}
+	]
+}

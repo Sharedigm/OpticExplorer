@@ -24,48 +24,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-chat"><i class="fa fa-plus"></i>New Chat<span class="shift command shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-chats"><i class="fa fa-folder"></i>Open Chats<span class=" command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-item"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="end-chat"><i class="fa fa-minus"></i>End Chat<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class=" command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-chat': 'onClickNewChat',
@@ -89,7 +47,6 @@ export default FileMenuView.extend({
 		let hasSelectedChat = this.parent.app.hasSelectedChat();
 		let hasSelectedMessage = this.parent.app.hasSelectedMessage();
 		let hasSelectedItem = hasSelected && this.parent.app.selected.model instanceof Item;
-		let isDesktop = this.parent.app.isDesktop();
 
 		return {
 			'new-window': true,
@@ -99,17 +56,7 @@ export default FileMenuView.extend({
 			'download-item': hasSelectedItem,
 			'end-chat': isSignedIn && hasSelectedChat && !hasSelectedMessage,
 			'close-tab': hasTabs,
-			'close-window': !isDesktop
-		};
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.app.isDesktop()
+			'close-window': true
 		};
 	},
 

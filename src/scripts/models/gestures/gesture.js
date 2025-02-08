@@ -36,7 +36,7 @@ export default Timestamped.extend({
 	urlRoot: config.servers.api + '/gestures',
 
 	//
-	// play gesture sound
+	// getting methods
 	//
 
 	getSound: function() {
@@ -57,6 +57,10 @@ export default Timestamped.extend({
 				return application.sounds.kiss;
 		}
 	},
+
+	//
+	// gesture methods
+	//
 
 	play: function() {
 		let sound = this.getSound();

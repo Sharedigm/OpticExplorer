@@ -16,14 +16,15 @@
 \******************************************************************************/
 
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import HeaderBarView from '../../../views/apps/search-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/search-viewer/sidebar/sidebar-view.js';
 import SearchView from '../../../views/apps/search-viewer/mainbar/search-view.js';
 import FooterBarView from '../../../views/apps/search-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/search-viewer/forms/preferences/preferences-form-view.js'
 
-export default AppSplitView.extend(_.extend({}, Openable, ItemInfoShowable, {
+export default AppSplitView.extend(_.extend({}, ItemOpenable, ItemInfoShowable, {
 
 	//
 	// attributes
@@ -89,12 +90,6 @@ export default AppSplitView.extend(_.extend({}, Openable, ItemInfoShowable, {
 		this.onLoad();
 	},
 
-	updateStatus: function() {
-		if (this.hasChildView('footer status')) {
-			this.getChildView('footer status').update();
-		}
-	},
-	
 	//
 	// header bar rendering methods
 	//
@@ -146,9 +141,11 @@ export default AppSplitView.extend(_.extend({}, Openable, ItemInfoShowable, {
 	//
 
 	getFooterBarView: function() {
-		return new FooterBarView({
-			collection: this.collection
-		});
+		return new FooterBarView();
+	},
+
+	updateStatusBar: function() {
+		this.getStatusBar().update();
 	},
 
 	//
@@ -195,10 +192,36 @@ export default AppSplitView.extend(_.extend({}, Openable, ItemInfoShowable, {
 
 	onSearch: function() {
 		this.getChildView('content').render();
-		this.getParentView('app').updateStatus();
+		this.onChange();
 	},
 
 	onChange: function() {
-		this.updateStatus();
+		this.updateStatusBar();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	//
+	// static rendering methods
+	//
+
+	showSearch: function() {
+		import(
+			'../../../views/apps/search-viewer/mainbar/results/search-page-view.js'
+		).then((SearchPageView) => {
+
+			// show search page
+			//
+			application.showPage(new SearchPageView.default(), {
+				nav: 'search'
+			});
+		});
+	}
+});

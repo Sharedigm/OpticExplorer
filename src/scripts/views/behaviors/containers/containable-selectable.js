@@ -291,19 +291,25 @@ export default _.extend({}, Containable, {
 
 	selectAll: function(filter, options) {
 		this.each((child) => {
-			child.select(options);
+			if (child.select) {
+				child.select(options);
+			}
 		}, filter);
 	},
 
 	deselectAll: function(filter, options) {
 		this.each((child) => {
-			child.deselect(options);
+			if (child.deselect) {
+				child.deselect(options);
+			}
 		}, filter);
 	},
 
 	selectInvert: function(filter, options) {
 		this.each((child) => {
-			child.toggleSelect(options);
+			if (child.toggleSelect) {
+				child.toggleSelect(options);
+			}
 		}, filter);
 	},
 
@@ -362,5 +368,15 @@ export default _.extend({}, Containable, {
 		if (!selected && bidirectional) {
 			this.selectRange(to, from, false);
 		}
+	},
+
+	//
+	// rendering methods
+	//
+
+	showSelectedGeolocatedModels: function() {
+		application.launch('map_viewer', {
+			items: this.getSelectedGeolocatedModels()
+		});
 	}
 });

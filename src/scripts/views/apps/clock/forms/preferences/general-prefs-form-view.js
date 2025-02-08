@@ -24,22 +24,6 @@ export default PreferencesFormView.extend({
 	//
 
 	template: template(`
-		<div class="mode form-group">
-			<label class="control-label"><i class="fa fa-clock"></i>Mode</label>
-			<div class="controls">
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="mode" value="analog">Analog</label>
-				</div>
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="mode" value="digital">Digital</label>
-				</div>
-		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Mode" data-content="This is the mode that the clock is in."></i>
-			</div>
-		</div>
-		
 		<div class="show-items form-group">
 			<label class="control-label"><i class="fa fa-eye"></i>Show</label>
 			<div class="controls">
@@ -54,7 +38,6 @@ export default PreferencesFormView.extend({
 	`),
 
 	events: {
-		'click .mode input': 'onClickMode',
 		'click .show-mode input': 'onClickShowMode',
 	},
 
@@ -64,8 +47,6 @@ export default PreferencesFormView.extend({
 
 	getValue: function(key) {
 		switch (key) {
-			case 'mode':
-				return this.$el.find('.mode input:checked').val();
 			case 'show_mode':
 				return this.$el.find('.show-mode input').is(':checked');
 		}
@@ -73,7 +54,6 @@ export default PreferencesFormView.extend({
 
 	getValues: function() {
 		return {
-			mode: this.getValue('mode'),
 			show_mode: this.getValue('show_mode')
 		};
 	},
@@ -84,9 +64,6 @@ export default PreferencesFormView.extend({
 
 	setValue: function(key, value) {
 		switch (key) {
-			case 'mode':
-				this.$el.find('.mode input[value="' + value + '"]').prop('checked', true);
-				break;
 			case 'show_mode':
 				this.$el.find('.show-mode input[value="' + value + '"]').prop('checked', true);
 				break;
@@ -96,10 +73,6 @@ export default PreferencesFormView.extend({
 	//
 	// mouse event handling methods
 	//
-
-	onClickMode: function() {
-		this.onChangeValue('mode', this.getValue('mode'));
-	},
 
 	onClickShowMode: function() {
 		this.onChangeValue('show_mode', this.getValue('show_mode'));

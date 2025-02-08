@@ -16,6 +16,8 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByMessageView from '../../../../../views/apps/chat-viewer/header-bar/search-bar/searches/search-by-message-view.js';
+import SearchByDateView from '../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js';
 
 export default SearchBarView.extend({
 
@@ -40,44 +42,35 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByMessage: function() {
-		import(
-			'../../../../../views/apps/chat-viewer/header-bar/search-bar/searches/search-by-message-view.js'
-		).then((SearchByMessageView) => {
-			this.showChildView('searches', new SearchByMessageView.default({
-				model: this.model,
+		this.showChildView('searches', new SearchByMessageView({
+			model: this.model,
 
-				// options
-				//
-				value: this.options.value
-			}));
-
-			// perform callback
+			// options
 			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+			value: this.options.value
+		}));
+
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByDate: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js'
-		).then((SearchByDateView) => {
-			this.showChildView('searches', new SearchByDateView.default({
-				model: this.model,
+		this.showChildView('searches', new SearchByDateView({
+			model: this.model,
 
-				// options
-				//
-				kind: 'create_date',
-				value: this.options.value
-			}));
-
-			// perform callback
+			// options
 			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+			value: this.options.value
+		}));
+
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	onRender: function() {
@@ -94,7 +87,9 @@ export default SearchBarView.extend({
 				this.showSearchByMessage();
 				break;
 
+			case 'before':
 			case 'date':
+			case 'after':
 				this.showSearchByDate(this.options.kind);
 				break;
 

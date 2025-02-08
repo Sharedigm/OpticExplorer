@@ -33,6 +33,7 @@ $footer-logo-size: 60px;
 $footer-text-shadow: 1px 1px 5px rgba(black, 50%);
 $round-border-radius: 30px;
 $rounded-border-radius: 10px;
+$page-icon-size: 200px;
 
 //
 // styles
@@ -73,8 +74,8 @@ $rounded-border-radius: 10px;
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		width: 200px;
-		height: 200px;
+		width: $page-icon-size;
+		height: $page-icon-size;
 		padding: 10px;
 		margin: 25px auto;
 		word-break: break-word;
@@ -273,7 +274,21 @@ $rounded-border-radius: 10px;
 			//
 
 			.caption {
-				margin: 10px;
+				margin-top: 10px;
+			}
+
+			.attribution {
+				margin-top: 10px;
+				text-align: right;
+
+				.author {
+					font-weight: bold;
+
+					&:before {
+						content: "-";
+						margin-right: 0.5em;
+					}
+				}
 			}
 
 			a + .caption,
@@ -297,6 +312,14 @@ $rounded-border-radius: 10px;
 
 			&.wide {
 				max-width: 100%;
+			}
+
+			//
+			// text figures
+			//
+
+			&.text {
+				text-align: left;
 			}
 
 			//
@@ -430,7 +453,16 @@ $rounded-border-radius: 10px;
 
 					.logotype {
 						font-size: 200%;
+						margin: auto;
 						margin-top: 10px;
+
+						&.round {
+							border-radius: $round-border-radius;
+						}
+
+						&.rounded {
+							border-radius: $rounded-border-radius;
+						}
 					}
 				}
 
@@ -456,7 +488,6 @@ $rounded-border-radius: 10px;
 							}
 
 							.heading {
-								font-weight: bold;
 								font-size: 1.25em;
 								white-space: nowrap;
 								margin-bottom: 10px;
@@ -545,7 +576,7 @@ $rounded-border-radius: 10px;
 .round.auto-icons {
 	.page {
 		.attention.icon {
-			border-radius: 100px;
+			border-radius: calc($page-icon-size / 2);
 		}
 	}
 }
@@ -554,7 +585,7 @@ $rounded-border-radius: 10px;
 .rounded.auto-icons {
 	.page {
 		.attention.icon {
-			border-radius: 50px;
+			border-radius: calc($page-icon-size / 4);
 		}
 	}
 }

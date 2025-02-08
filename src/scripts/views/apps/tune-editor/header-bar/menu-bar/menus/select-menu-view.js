@@ -23,20 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="select-all"><i class="fa fa-asterisk"></i>All<span class="command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-none"><i class="fa fa-minus"></i>None<span class="shift command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-invert"><i class="fa fa-random"></i>Invert<span class="shift command shortcut">I</span></a>
-		</li>
-	`),
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-none': 'onClickSelectNone',

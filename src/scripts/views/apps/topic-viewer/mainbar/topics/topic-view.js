@@ -424,10 +424,12 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Timeable, {
 
 			// options
 			//
+			preferences: this.options.preferences,
+
+			// capabilities
+			//
 			submitable: true,
 			cancelable: false,
-			features: this.options.features,
-			preferences: this.options.preferences,
 
 			// callbacks
 			//
@@ -496,12 +498,14 @@ export default BaseView.extend(_.extend({}, SelectableContainable, Timeable, {
 
 			// options
 			//
+			multicolumn: false,
+			show_elapsed_time: this.options.show_elapsed_time,
+			preferences: this.options.preferences,
+
+			// state
+			//
 			collapsed: this.options.collapsed,
 			condensed: this.options.condensed,
-			multicolumn: false,
-			features: this.options.features,
-			preferences: this.options.preferences,
-			show_elapsed_time: this.options.show_elapsed_time,
 
 			// capabilities
 			//

@@ -120,10 +120,6 @@ export default ItemView.extend(_.extend({}, MultiDraggable, {
 		};
 	},
 
-	setTileColor: function(color) {
-		this.$el.find('.tile .icon').css('background-color', color || '');
-	},
-
 	setTileColors: function(id, color) {
 		let tiles = this.parent.getChildren((child) => child.id == id);
 		for (let i = 0; i < tiles.length; i++) {
@@ -183,7 +179,7 @@ export default ItemView.extend(_.extend({}, MultiDraggable, {
 					}
 				});
 			}
-		} else {
+		} else if (this.setTileColor) {
 			this.setTileColor(this.getTileColorById(id));
 		}
 
@@ -194,7 +190,12 @@ export default ItemView.extend(_.extend({}, MultiDraggable, {
 
 	setIcon: function(icon) {
 		this.$el.find('.icon').html($(icon));
-		this.setTileColor(this.getTileColor());
+
+		// set background color
+		//
+		if (this.setTileColor) {
+			this.setTileColor(this.getTileColor());
+		}
 	},
 
 	update: function() {

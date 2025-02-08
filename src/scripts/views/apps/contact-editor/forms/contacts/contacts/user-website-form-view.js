@@ -24,6 +24,7 @@ export default FormView.extend({
 	//
 
 	template: template(`
+		<% if (website_kinds) { %>
 		<div class="website-kind form-group">
 			<label class="control-label"><i class="fa fa-cloud"></i>Kind</label>
 			<div class="controls">
@@ -43,6 +44,7 @@ export default FormView.extend({
 				</select>
 			</div>
 		</div>
+		<% } %>
 		
 		<div class="url form-group">
 			<label class="control-label"><i class="fa fa-user"></i>URL</label>
@@ -70,7 +72,7 @@ export default FormView.extend({
 	getValue: function(key) {
 		switch (key) {
 			case 'website_kind':
-				return this.$el.find('.website-kind option:selected').val();
+				return this.$el.find('.website-kind option:selected').val() || 'homepage';
 			case 'protocol':
 				return this.$el.find('.url option:selected').val();
 			case 'url':
@@ -97,7 +99,7 @@ export default FormView.extend({
 		return {
 			protocol: pair && pair.length == 2? pair[0] : 'http',
 			url: pair && pair.length == 2? pair[1] : url,
-			website_kinds: config.apps.profile_viewer.contacts.websites
+			website_kinds: config.defaults.websites || {}
 		};
 	}
 });

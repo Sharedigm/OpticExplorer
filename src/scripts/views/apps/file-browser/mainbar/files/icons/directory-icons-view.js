@@ -19,12 +19,11 @@ import File from '../../../../../../models/storage/files/file.js';
 import Directory from '../../../../../../models/storage/directories/directory.js';
 import Volume from '../../../../../../models/storage/directories/volume.js';
 import IconsView from '../../../../../../views/items/icons/icons-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
 import FileIconView from '../../../../../../views/apps/file-browser/mainbar/files/icons/file-icon-view.js';
 import DirectoryIconView from '../../../../../../views/apps/file-browser/mainbar/files/icons/directory-icon-view.js';
 import VolumeIconView from '../../../../../../views/apps/file-browser/mainbar/files/icons/volume-icon-view.js';
 
-export default IconsView.extend(_.extend({}, ContainableMappable, {
+export default IconsView.extend({
 
 	//
 	// rendering methods
@@ -39,4 +38,4 @@ export default IconsView.extend(_.extend({}, ContainableMappable, {
 			return DirectoryIconView;
 		}
 	}
-}));
+});

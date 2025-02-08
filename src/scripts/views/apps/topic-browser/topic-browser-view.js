@@ -25,6 +25,7 @@ import SideBarView from '../../../views/apps/topic-browser/sidebar/sidebar-view.
 import TopicsView from '../../../views/apps/topic-browser/mainbar/topics/topics-view.js';
 import FooterBarView from '../../../views/apps/topic-browser/footer-bar/footer-bar-view.js';
 import TopicViewerView from '../../../views/apps/topic-viewer/topic-viewer-view.js';
+import PreferencesFormView from '../../../views/apps/topic-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, TopicInfoShowable, {
 
@@ -170,10 +171,10 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			}
 		});
 
-		// open selected projects in project viewer after delay
+		// open selected topics after delay
 		//
 		window.setTimeout(() => {
-			application.showTopics(this.getSelectedModels());
+			this.showSelectedTopicPosts();
 		}, delay);
 	},
 
@@ -326,6 +327,16 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// set focus
 		//
 		this.$el.find('.search-bar input').focus();
+	},
+
+	showTopicPosts: function(topics) {
+		application.launch('topic_viewer', {
+			collection: new Topics(topics)
+		});
+	},
+
+	showSelectedTopicPosts: function() {
+		this.showTopicPosts(this.getSelectedModels());
 	},
 
 	//
@@ -501,4 +512,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.getChildView('sidebar').setNumSelected(this.numSelected());
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

@@ -125,7 +125,6 @@ export default UserSettings.extend({
 		this.applyIconTilt(this.get('icon_tilt'));
 		this.applyIconTint(this.get('icon_tint'));
 		this.applyIconBackground(this.get('icon_background'));
-		this.applyIconSpinning(this.get('icon_spinning'));
 
 		// apply text styles
 		//
@@ -158,7 +157,7 @@ export default UserSettings.extend({
 		if (theme == 'auto') {
 			theme = Browser.isDarkModeEnabled()? 'dark' : 'medium';
 		}
-		
+
 		// load theme, if necessary
 		//
 		if (theme) {
@@ -262,14 +261,16 @@ export default UserSettings.extend({
 		//
 		if (accentColor && accentColor != 'none') {
 			$('body').addClass('accented');
-			if (!accentColor.startsWith('#')) {
+			if (accentColor.startsWith('#') ||
+				accentColor.startsWith('rgb') ||
+				accentColor.startsWith('hsl')) {
+				$('body').css({
+					'--secondary-color': accentColor
+				});
+			} else {
 				$('body').addClass(accentColor + '-accented');
 				$('body').css({
 					'--secondary-color': ''
-				});
-			} else {
-				$('body').css({
-					'--secondary-color': accentColor
 				});
 			}
 		}
@@ -385,7 +386,7 @@ export default UserSettings.extend({
 			case 'square':
 				$('body').removeClass('round');
 				$('body').removeClass('rounded');
-				$('body').addClass('square');	
+				$('body').addClass('square');
 				break;
 		}
 	},
@@ -449,7 +450,7 @@ export default UserSettings.extend({
 		this.removeIconTint();
 		if (iconTint && iconTint != 'none') {
 			$('body').addClass('tinted');
-			$('body').addClass(iconTint + '-tinted');			
+			$('body').addClass(iconTint + '-tinted');
 		}
 	},
 
@@ -458,14 +459,6 @@ export default UserSettings.extend({
 			$('body').addClass('icon-backgrounds');
 		} else {
 			$('body').removeClass('icon-backgrounds');
-		}
-	},
-
-	applyIconSpinning: function(iconSpinning) {
-		if (iconSpinning && iconSpinning != 'none') {
-			$('body').addClass('icon-spinning');
-		} else {
-			$('body').removeClass('icon-spinning');
 		}
 	},
 
@@ -564,7 +557,7 @@ export default UserSettings.extend({
 
 		// check for font and selector
 		//
-		if (!headingFont || (headingFont == 'none') || !config.defaults.text.headings) {
+		if (!headingFont || (headingFont == 'none') || !config.defaults.text || !config.defaults.text.headings) {
 			return;
 		}
 
@@ -596,7 +589,7 @@ export default UserSettings.extend({
 
 		// check for font and selector
 		//
-		if (!titleFont || (titleFont == 'none') || !config.defaults.text.titles) {
+		if (!titleFont || (titleFont == 'none') || !config.defaults.text || !config.defaults.text.titles) {
 			return;
 		}
 
@@ -630,7 +623,7 @@ export default UserSettings.extend({
 
 		// check for font and selector
 		//
-		if (!labelFont || (labelFont == 'none') || !config.defaults.text.labels) {
+		if (!labelFont || (labelFont == 'none') || !config.defaults.text || !config.defaults.text.labels) {
 			return;
 		}
 

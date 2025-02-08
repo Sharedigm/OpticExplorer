@@ -33,7 +33,7 @@ export default FormView.extend({
 		
 			<input type="search" class="form-control" placeholder="Address or Search" value="<%= address %>">
 		
-			<div class="input-group-addon btn">
+			<div class="search-btn input-group-addon btn">
 				<i class="fa fa-search"></i>
 			</div>
 		</div>

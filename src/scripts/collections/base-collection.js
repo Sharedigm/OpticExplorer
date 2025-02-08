@@ -42,7 +42,8 @@ export default Backbone.Collection.extend({
 
 	includes: function(model) {
 		for (let i = 0; i < this.length; i++) {
-			if (this.at(i).is(model)) {
+			let item = this.at(i);
+			if (item == model || item.is && item.is(model)) {
 				return true;
 			}
 		}

@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                search-bar-view.js                            |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -16,6 +16,9 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByCoordsView from '../../../../../views/apps/map-viewer/header-bar/search-bar/searches/search-by-coords-view.js';
+import SearchByAddressView from '../../../../../views/apps/map-viewer/header-bar/search-bar/searches/search-by-address-view.js';
+import SearchByNameView from '../../../../../views/apps/map-viewer/header-bar/search-bar/searches/search-by-name-view.js';
 
 export default SearchBarView.extend({
 
@@ -24,60 +27,48 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByCoords: function() {
-		import(
-			'../../../../../views/apps/map-viewer/header-bar/search-bar/searches/search-by-coords-view.js'
-		).then((SearchByCoordsView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByCoordsView.default({
-				value: this.options.value
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByCoordsView({
+			value: this.options.value
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByAddress: function() {
-		import(
-			'../../../../../views/apps/map-viewer/header-bar/search-bar/searches/search-by-address-view.js'
-		).then((SearchByAddressView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByAddressView.default({
-				value: this.options.value
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByAddressView({
+			value: this.options.value
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByName: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-name-view.js'
-		).then((SearchByNameView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByNameView.default({
-				value: this.options.value
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByNameView({
+			value: this.options.value
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//

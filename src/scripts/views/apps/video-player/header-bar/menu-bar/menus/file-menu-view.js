@@ -22,59 +22,6 @@ export default FileMenuView.extend({
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="open-file"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="open-clip dropdown-toggle"><i class="fa fa-file-video"></i>Open Clip<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="open-first"><i class="fa fa-fast-backward"></i>First<span class="shortcut">up arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-prev"><i class="fa fa-backward"></i>Prev<span class="shortcut">left arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-next"><i class="fa fa-forward"></i>Next<span class="shortcut">right arrow</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-last"><i class="fa fa-fast-forward"></i>Last<span class="shortcut">down arrow</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="download-file"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
 	
 	events: {
 		'click .new-window': 'onClickNewWindow',
@@ -85,7 +32,7 @@ export default FileMenuView.extend({
 		'click .open-last': 'onClickOpenLast',
 		'click .show-info': 'onClickShowInfo',
 		'click .download-file': 'onClickDownloadFile',
-		'click .close-window': 'onClickCloseWindow',
+		'click .close-window': 'onClickCloseWindow'
 	},
 
 	//

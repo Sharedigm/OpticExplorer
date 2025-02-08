@@ -69,7 +69,8 @@ export default SplitView.extend({
 
 			// callbacks
 			//
-			onchange: this.options.onchange
+			onchange: this.options.onchange,
+			onchangeselection: this.options.onchangeselection
 		});
 	}
 });

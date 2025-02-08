@@ -23,56 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-task"><i class="fa fa-check-circle"></i>New Task<span class="command shortcut">K</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-project"><i class="fa fa-plus"></i>New Project<span class="command shortcut">P</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="open-projects"><i class="fa fa-folder"></i>Open Projects<span class=" command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="add-projects"><i class="fa fa-plus"></i>Add Projects<span class="command shortcut">D</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="remove-project"><i class="fa fa-minus"></i>Remove Project<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-item"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class="command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-task': 'onClickNewTask',
@@ -116,16 +66,6 @@ export default FileMenuView.extend({
 
 	setProject: function(project) {
 		this.setItemDisabled('remove-project', project.isOwnedBy(application.session.user));
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.app.isDesktop()
-		};
 	},
 	
 	//

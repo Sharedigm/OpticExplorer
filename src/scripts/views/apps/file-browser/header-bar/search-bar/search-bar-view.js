@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                search-bar-view.js                            |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -16,6 +16,22 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByNameView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-name-view.js';
+import SearchByKindView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-kind-view.js';
+import SearchBySizeView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-size-view.js';
+import SearchByKeywordView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-keyword-view.js';
+import SearchByMeaningView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-meaning-view.js';
+import SearchByDateView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-date-view.js';
+import SearchByResolutionView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-resolution-view.js';
+import SearchByMakeModelView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-make-model-view.js';
+import SearchByFocalLengthView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-focal-length-view.js';
+import SearchByExposureView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-exposure-view.js';
+import SearchByApertureView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-aperture-view.js';
+import SearchByIsoView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-iso-view.js';
+import SearchByCaptureDateView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-capture-date-view.js';
+import SearchSharedWithMeView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-shared-with-me-view.js';
+import SearchSharedByMeView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-shared-by-me-view.js';
+import SearchByLinksView from '../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-links-view.js';
 
 export default SearchBarView.extend({
 
@@ -24,98 +40,78 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByName: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-name-view.js'
-		).then((SearchByNameView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByNameView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByNameView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByKind: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-kind-view.js'
-		).then((SearchByKindView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByKindView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByKindView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchBySize: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-size-view.js'
-		).then((SearchBySizeView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchBySizeView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchBySizeView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByKeyword: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-keyword-view.js'
-		).then((SearchByKeywordView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByKeywordView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByKeywordView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByMeaning: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-meaning-view.js'
-		).then((SearchByMeaningView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByMeaningView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByMeaningView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//
@@ -123,26 +119,22 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByDate: function(kind) {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js'
-		).then((SearchByDateView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByDateView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByDateView.default({
-				model: this.model,
+			kind: kind
+		}));
 
-				// options
-				//
-				kind: kind
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//
@@ -150,136 +142,108 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByResolution: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-resolution-view.js'
-		).then((SearchByResolutionView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByResolutionView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByResolutionView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByMakeModel: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-make-model-view.js'
-		).then((SearchByMakeModelView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByMakeModelView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByMakeModelView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByFocalLength: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-focal-length-view.js'
-		).then((SearchByFocalLengthView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByFocalLengthView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByFocalLengthView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByExposure: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-exposure-view.js'
-		).then((SearchByExposureView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByExposureView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByExposureView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByAperture: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-aperture-view.js'
-		).then((SearchByApertureView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByApertureView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByApertureView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByIso: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-iso-view.js'
-		).then((SearchByIsoView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByIsoView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByIsoView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByCaptureDate: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-capture-date-view.js'
-		).then((SearchByCaptureDateView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByCaptureDateView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByCaptureDateView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//
@@ -287,60 +251,48 @@ export default SearchBarView.extend({
 	//
 
 	showSearchSharedWithMe: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-shared-with-me-view.js'
-		).then((SearchSharedWithMeView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchSharedWithMeView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchSharedWithMeView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchSharedByMe: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-shared-by-me-view.js'
-		).then((SearchSharedByMeView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchSharedByMeView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchSharedByMeView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByLinks: function() {
-		import(
-			'../../../../../views/apps/file-browser/header-bar/search-bar/searches/search-by-links-view.js'
-		).then((SearchByLinksView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByLinksView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByLinksView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	//

@@ -192,11 +192,16 @@ body:not(.binary):not(.flat-buttons):not(.flat.auto-buttons) {
 
 .buttons-inline {
 	display: inline-block;
+	padding: 2px;
 	
 	.btn {
 		margin-bottom: 5px;
 		// margin-right: 5px;
 	}
+}
+
+.input-group + .buttons-inline {
+	margin-left: 10px;
 }
 
 .panel + .buttons,
@@ -240,6 +245,10 @@ body[device="phone"], body[device="tablet"] {
 	//
 	// button groups
 	//
+
+	.input-group + .buttons-inline {
+		margin-left: 0;
+	}
 
 	.modal-footer {
 		.buttons {

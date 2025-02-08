@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
-import MapViewerView from '../../../../../views/apps/map-viewer/map-viewer-view.js';
 
 export default DialogView.extend({
 
@@ -119,17 +118,13 @@ export default DialogView.extend({
 	},
 
 	showMapViewer: function() {
-		this.showChildView('map_viewer', new MapViewerView({
+		this.showChildApp('map_viewer', {
 
-			// app options
+			// options
 			//
 			place: this.options.place,
-			show_address: true,
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			}
-		}));
+			show_address: true
+		});
 	},
 
 	//

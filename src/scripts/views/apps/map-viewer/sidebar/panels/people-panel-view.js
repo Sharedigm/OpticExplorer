@@ -138,6 +138,12 @@ export default SideBarPanelView.extend({
 		}));
 	},
 
+	showUser: function(user) {
+		application.launch('profile_viewer', {
+			model: user
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -177,12 +183,7 @@ export default SideBarPanelView.extend({
 	//
 
 	onOpen: function(item) {
-
-		// show image
-		//
-		application.launch('profile_viewer', {
-			model: item.model
-		});
+		this.showUser(item.model);
 	},
 
 	//

@@ -137,7 +137,7 @@ export default ModalView.extend(_.extend({}, Resizable, Minimizable, Maximizable
 	},
 
 	//
-	// rendering methods
+	// button adding methods
 	//
 
 	addLeftButtons: function() {
@@ -158,6 +158,10 @@ export default ModalView.extend(_.extend({}, Resizable, Minimizable, Maximizable
 		this.addLeftButtons();
 		this.addRightButtons();
 	},
+
+	//
+	// rendering methods
+	//
 
 	onRender: function() {
 
@@ -224,6 +228,40 @@ export default ModalView.extend(_.extend({}, Resizable, Minimizable, Maximizable
 				});
 			}
 		}
+	},
+
+	showChildApp: function(appName, options) {
+		application.loadResources(appName, {
+
+			// callbacks
+			//
+			success: (resources) => {
+				application.loadAppView(appName, {
+
+					// callbacks
+					//
+					success: (AppView) => {
+
+						// create new view
+						//
+						let view = new AppView(_.extend({
+							dialog: this,
+							hidden: {
+								'footer-bar': true
+							},
+						}, options));
+
+						// set app attributes
+						//
+						view.constructor.resources = resources;
+
+						// render app
+						//
+						this.showChildView(appName, view);
+					}
+				});
+			}
+		});
 	},
 
 	//

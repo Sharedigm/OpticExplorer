@@ -31,16 +31,17 @@ export default ToolbarView.extend(_.extend({}, Timeable, {
 	//
 
 	template: template(`
-		<div class="first" data-toggle="tooltip" title="First" data-placement="top"></div>
-		<div class="prev" data-toggle="tooltip" title="Prev" data-placement="top"></div>
-		<div class="current" data-toggle="tooltip" title="Current" data-placement="top"></div>
+		<div class="first" data-toggle="tooltip" title="First"></div>
+		<div class="prev" data-toggle="tooltip" title="Prev"></div>
+		<div class="current" data-toggle="tooltip" title="Current"></div>
 		<div class="num-items info-bar">/ <span class="total"><%= total %></span></div>
-		<div class="next" data-toggle="tooltip" title="Next" data-placement="top"></div>
-		<div class="last" data-toggle="tooltip" title="Last" data-placement="top"></div>
-		<div class="play hidden-xxs" data-toggle="tooltip" title="Play" data-placement="top"></div>
+		<div class="next" data-toggle="tooltip" title="Next"></div>
+		<div class="last" data-toggle="tooltip" title="Last"></div>
+		<div class="play" data-toggle="tooltip" title="Play"></div>
 	`),
 
 	regions: {
+		full: '.full',
 		first: '.first',
 		prev: '.prev',
 		current: '.current',

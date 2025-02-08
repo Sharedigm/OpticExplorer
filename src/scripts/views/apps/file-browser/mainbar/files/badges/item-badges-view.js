@@ -147,8 +147,18 @@ export default BaseView.extend({
 			has_geoposition: this.model.hasGeoposition && this.model.hasGeoposition(),
 			has_index: this.model.hasIndex(),
 			num_indices: this.model.get('num_indices'),
+			num_shares: this.model.get('num_shares'),
+			num_links: this.model.get('num_links'),
 			icons: this.constructor.icons
 		};
+	},
+
+	showMap: function() {
+		application.launch('map_viewer', {
+			model: this.model
+		}, {
+			new_window: true
+		});
 	},
 
 	//
@@ -163,11 +173,7 @@ export default BaseView.extend({
 
 		// view item on map
 		//
-		application.launch('map_viewer', {
-			model: this.model
-		}, {
-			new_window: true
-		});
+		this.showMap();
 	},
 
 	onMouseDownGeoposition: function(event) {
@@ -178,11 +184,7 @@ export default BaseView.extend({
 
 		// view item on map
 		//
-		application.launch('map_viewer', {
-			model: this.model
-		}, {
-			new_window: true
-		});
+		this.showMap();
 	},
 
 	onMouseDownShares: function(event) {

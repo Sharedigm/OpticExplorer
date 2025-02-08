@@ -1,0 +1,10 @@
+{
+	"items": [
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

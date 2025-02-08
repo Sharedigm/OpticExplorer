@@ -17,7 +17,7 @@
 
 import Timestamped from '../../../models/utilities/timestamped.js';
 import User from '../../../models/users/user.js';
-import Connection from '../../../models/users/connections/connection.js';
+import Connection from '../../../models/connections/connection.js';
 
 export default Timestamped.extend({
 

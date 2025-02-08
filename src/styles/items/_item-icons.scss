@@ -180,6 +180,7 @@ $rounded-icon-text-border-radius: 3px;
 				display: inline-block;
 				word-break: break-word;
 				padding: 0 4px;
+				margin-bottom: -4px;
 				cursor: default;
 
 				// make names clickable
@@ -502,7 +503,7 @@ body[device="phone"], body[device="tablet"] {
 		// items
 		//
 
-		> .item {
+		.item {
 			width: 88px;
 		}
 	}
@@ -512,7 +513,7 @@ body[device="phone"], body[device="tablet"] {
 // mobile icons - fit 3 friend icon columns across iPhone screen
 //
 
-@media (max-width:320px) {
+@media (max-width:360px) {
 
 	.panel {
 		.icon-grid {
@@ -521,7 +522,7 @@ body[device="phone"], body[device="tablet"] {
 			// items
 			//
 
-			> .item {
+			.item {
 				width: 90px;
 			}
 		}
@@ -534,7 +535,7 @@ body[device="phone"], body[device="tablet"] {
 			// items
 			//
 
-			> .item {
+			.item {
 				width: 75px;
 			}
 		}	

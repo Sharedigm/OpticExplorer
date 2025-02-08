@@ -38,10 +38,29 @@ export default BaseView.extend({
 	},
 
 	//
+	// setting methods
+	//
+
+	setOption: function(key, value) {
+		this.getChildView('preferences').setOption(key, value);
+	},
+
+	//
 	// rendering methods
 	//
 
 	onRender: function() {
-		this.showChildView('preferences', new PreferencesPanelView(this.options));
+		this.showChildView('preferences', new PreferencesPanelView({
+			collection: this.collection,
+
+			// options
+			//
+			view_kind: this.options.view_kind,
+			selected: this.options.selected,
+
+			// callbacks
+			//
+			onselect: this.options.onselect
+		}));
 	}
 });

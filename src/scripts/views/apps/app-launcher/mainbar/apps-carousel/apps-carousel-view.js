@@ -16,13 +16,13 @@
 \******************************************************************************/
 
 import BaseView from '../../../../../views/base-view.js';
-import Launchable from '../../../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../../../views/apps/common/behaviors/opening/app-launchable.js';
 import Timeable from '../../../../../views/behaviors/effects/timeable.js';
 import AppsView from '../../../../../views/apps/common/items/apps-view.js';
 import Browser from '../../../../../utilities/web/browser.js';
 import '../../../../../../vendor/flickity/js/flickity.pkgd.js';
 
-export default BaseView.extend(_.extend({}, Launchable, Timeable, {
+export default BaseView.extend(_.extend({}, AppLaunchable, Timeable, {
 
 	//
 	// attributes

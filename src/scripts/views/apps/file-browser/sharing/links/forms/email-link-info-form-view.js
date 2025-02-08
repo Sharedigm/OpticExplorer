@@ -28,48 +28,16 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="item"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="expiration-tab active">
-				<a role="tab" data-toggle="tab" href=".expiration-panel">
-					<i class="fa fa-clock"></i>
-					<label>Expiration</label>
-				</a>
-			</li>
-			
-			<li role="presentation" class="protection-tab">
-				<a role="tab" data-toggle="tab" href=".protection-panel">
-					<i class="fa fa-key"></i>
-					<label>Protection</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="expiration-panel tab-pane active">
-				<p>Links can be set to self destruct after which they can no longer be used. </p>
-				<div class="link-expiration-form"></div>
-			</div>
-		
-			<div role="tabpanel" class="protection-panel tab-pane">
-				<p>Links can be be protected so that the user of a link must provide a password. </p>
-				<div class="link-password-form"></div>
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.item',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "Expiration",
+			"icon": "fa fa-clock"
 		},
-		expiration: '.link-expiration-form',
-		protection: '.link-password-form'
-	},
+		{
+			"name": "Protection",
+			"icon": "fa fa-key"
+		}
+	],
 
 	//
 	// data getting methods

@@ -19,7 +19,6 @@ import SideBarView from '../../../../views/apps/common/sidebar/sidebar-view.js';
 import ActivityPanelView from '../../../../views/apps/profile-viewer/sidebar/panels/activity-panel-view.js';
 import StatusPanelView from '../../../../views/apps/profile-viewer/sidebar/panels/status-panel-view.js';
 import ActionsPanelView from '../../../../views/apps/profile-viewer/sidebar/panels/actions-panel-view.js';
-import MutualConnectionsPanelView from '../../../../views/apps/profile-viewer/sidebar/panels/mutual-connections-panel-view.js';
 
 export default SideBarView.extend({
 
@@ -34,6 +33,13 @@ export default SideBarView.extend({
 	//
 
 	showPanel: function(panel) {
+		let hasMapViewer = config.apps.map_viewer != undefined && config.apps.map_viewer.hidden != true;
+
+		// skip actions panel
+		//
+		if (panel == 'actions' && !hasMapViewer) {
+			return;
+		}
 
 		// show specified panel
 		//
@@ -75,20 +81,24 @@ export default SideBarView.extend({
 
 		// check if we are viewing the profile of the current user
 		//
-		if (this.model.isCurrent()) {
+		if (this.model.isCurrent() || !config.apps.profile_browser) {
 			return;
 		}
 
-		this.showChildView('mutual_connections', new MutualConnectionsPanelView({
-			model: this.model,
+		import(
+			'../../../../views/apps/profile-viewer/sidebar/panels/mutual-connections-panel-view.js'
+		).then((MutualConnectionsPanelView) => {
+			this.showChildView('mutual_connections', new MutualConnectionsPanelView.default({
+				model: this.model,
 
-			// options
-			//
-			view_kind: this.options.view_kind,
+				// options
+				//
+				view_kind: this.options.view_kind,
 
-			// callbacks
-			//
-			onopen: this.options.onopen
-		}));	
+				// callbacks
+				//
+				onopen: this.options.onopen
+			}));
+		});
 	}
 });

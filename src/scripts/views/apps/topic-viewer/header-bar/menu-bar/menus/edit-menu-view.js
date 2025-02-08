@@ -19,47 +19,13 @@ import Topic from '../../../../../../models/topics/topic.js';
 import Post from '../../../../../../models/topics/post.js';
 import Comment from '../../../../../../models/comments/comment.js';
 import Reply from '../../../../../../models/comments/reply.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="topic-option">
-			<a class="edit-topic"><i class="fa fa-pencil-alt"></i>Edit Topic<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="topic-option">
-			<a class="delete-topic"><i class="fa fa-trash-alt"></i>Delete Topic<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="post-option">
-			<a class="edit-post"><i class="fa fa-pencil-alt"></i>Edit Post<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="post-option">
-			<a class="delete-post"><i class="fa fa-trash-alt"></i>Delete Post<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="edit-comment"><i class="fa fa-pencil-alt"></i>Edit Comment<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="delete-comment"><i class="fa fa-trash-alt"></i>Delete Comment<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="edit-reply"><i class="fa fa-pencil-alt"></i>Edit Reply<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="delete-reply"><i class="fa fa-trash-alt"></i>Delete Reply<span class="shortcut">delete</span></a>
-		</li>
-	`),
 
 	events: {
 
@@ -80,6 +46,7 @@ export default MenuView.extend({
 	// querying methods
 	//
 
+	/*
 	visible: function() {
 		let selectedItem = this.parent.app.selected? this.parent.app.selected.model : this.parent.app.model;
 		
@@ -91,15 +58,17 @@ export default MenuView.extend({
 
 		return {
 			'edit-topic': isTopicSelected || isNoneSelected,
-			'delete-topic': isTopicSelected || isNoneSelected,
 			'edit-post': isPostSelected,
-			'delete-post': isPostSelected,
 			'edit-comment': isCommentSelected,
-			'delete-comment': isCommentSelected,
 			'edit-reply': isReplySelected,
+
+			'delete-topic': isTopicSelected || isNoneSelected,
+			'delete-post': isPostSelected,
+			'delete-comment': isCommentSelected,
 			'delete-reply': isReplySelected
 		};
 	},
+	*/
 
 	enabled: function() {
 		let selectedItem = this.parent.app.selected? this.parent.app.selected.model : this.parent.app.model;
@@ -117,12 +86,13 @@ export default MenuView.extend({
 
 		return {
 			'edit-topic': isTopicEditable,
-			'delete-topic': isTopicEditable,
 			'edit-post': isPostEditable,
-			'delete-post': isPostEditable,
 			'edit-comment': isCommentEditable,
-			'delete-comment': isCommentEditable,
 			'edit-reply': isReplyEditable,
+
+			'delete-topic': isTopicEditable,
+			'delete-post': isPostEditable,
+			'delete-comment': isCommentEditable,
 			'delete-reply': isReplyEditable
 		};
 	},

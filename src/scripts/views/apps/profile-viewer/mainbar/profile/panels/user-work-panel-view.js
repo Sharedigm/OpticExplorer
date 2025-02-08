@@ -98,7 +98,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-job-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-job-dialog-view.js'
 		).then((AddUserJobDialogView) => {
 			
 			// show add dialog

@@ -32,7 +32,7 @@ export default BaseView.extend({
 		<div class="header">
 			<label><i class="fa fa-cog"></i>Settings</label>
 		</div>
-		
+
 		<div class="items"></div>
 	`),
 
@@ -122,7 +122,17 @@ export default BaseView.extend({
 			return this.getChildView('items').getSelectedModels();
 		}
 	},
-	
+
+	//
+	// setting methods
+	//
+
+	setViewKind: function(viewKind) {
+		if (this.hasChildView('items')) {
+			return this.getChildView('items').setViewKind(viewKind);
+		}
+	},
+
 	//
 	// selecting methods
 	//
@@ -169,6 +179,9 @@ export default BaseView.extend({
 			// options
 			//
 			view_kind: this.options.view_kind,
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities
@@ -179,6 +192,6 @@ export default BaseView.extend({
 			// callbacks
 			//
 			onselect: this.options.onselect
-		}));		
+		}));
 	}
 });

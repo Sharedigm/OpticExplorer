@@ -28,86 +28,28 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	className: 'form-vertical',
-
-	template: template(`
-		<div class="items">
-			<div class="icon-grid"></div>
-		</div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general tab<% if (tab == 'general') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general.tab-pane">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<% if (show_history) { %>
-			<li role="presentation" class="history tab<% if (tab == 'history') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".history.tab-pane">
-					<i class="fa fa-calendar"></i>
-					<label>History</label>
-				</a>
-			</li>
-			<% } %>
-		
-			<% if (show_members) { %>
-			<li role="presentation" class="members tab<% if (tab == 'members') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".members.tab-pane">
-					<i class="fa fa-user"></i>
-					<label>Members</label>
-				</a>
-			</li>
-			<% } %>
-		
-			<% if (show_security) { %>
-			<li role="presentation" class="security tab<% if (tab == 'security') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".security.tab-pane">
-					<i class="fa fa-shield-alt"></i>
-					<label>Security</label>
-				</a>
-			</li>
-			<% } %>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general tab-pane<% if (tab == 'general') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="history tab-pane<% if (tab == 'history') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="members tab-pane<% if (tab == 'members') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="security tab-pane<% if (tab == 'security') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: '.icon-grid',
-		general: '.general.tab-pane',
-		history: '.history.tab-pane',
-		members: '.members.tab-pane',
-		security: '.security.tab-pane'
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "History",
+			"icon": "fa fa-calendar"
+		},
+		{
+			"name": "Members",
+			"icon": "fa fa-user"
+		},
+		{
+			"name": "Security",
+			"icon": "fa fa-shield-alt"
+		}
+	],
 
 	//
 	// rendering methods
 	//
-
-	templateContext: function() {
-		return {
-			tab: 'general',
-			show_history: !this.model.get('required'),
-			show_members: application.isSignedIn() && !this.model.get('required'),
-			show_security: true
-		};
-	},
 	
 	onRender: function() {
 		let required = this.model.get('required');
@@ -121,6 +63,9 @@ export default InfoFormView.extend({
 		if (!required) {
 			this.showHistoryPane();
 			this.showMembersPane();
+		} else {
+			this.hideTab('history');
+			this.hideTab('members');
 		}
 
 		// fetch project members
@@ -134,6 +79,8 @@ export default InfoFormView.extend({
 					this.showMembersPane(collection);
 				}
 			});
+		} else {
+			this.hideTab('members');
 		}
 	},
 

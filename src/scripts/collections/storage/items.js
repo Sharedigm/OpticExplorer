@@ -20,6 +20,7 @@ import File from '../../models/storage/files/file.js';
 import Directory from '../../models/storage/directories/directory.js';
 import Volume from '../../models/storage/directories/volume.js';
 import ArchiveFile from '../../models/storage/files/archive-file.js';
+import PdfFile from '../../models/storage/files/pdf-file.js';
 import AudioFile from '../../models/storage/media/audio-file.js';
 import ImageFile from '../../models/storage/media/image-file.js';
 import VideoFile from '../../models/storage/media/video-file.js';
@@ -163,19 +164,23 @@ export default GeolocatableCollection.extend({
 
 	filters: _.extend({}, GeolocatableCollection.filters, {
 
-		// item types
+		// directory types
 		//
-		is_file: (model) => model instanceof File,
 		is_directory: (model) => model instanceof Directory,
 		is_volume: (model) => model instanceof Volume,
 
 		// file types
 		//
+		is_file: (model) => model instanceof File,
+		is_pdf: (model) => model instanceof PdfFile,
+
+		// media types
+		//
 		is_audio: (model) => model instanceof AudioFile,
 		is_image: (model) => model instanceof ImageFile,
 		is_video: (model) => model instanceof VideoFile,
 
-		// media types
+		// image types
 		//
 		is_visual: (model) => model instanceof ImageFile || 
 			model instanceof VideoFile,
@@ -194,14 +199,22 @@ export default GeolocatableCollection.extend({
 
 	toItemClass: function(path) {
 
-		// create new directory or file
+		// directories
 		//
 		if (Directory.isValidPath(path)) {
 			return Directory;
 		} else if (Volume.isValidPath(path)) {
 			return Volume;
+
+		// special files
+		//
 		} else if (ArchiveFile.isValidPath(path)) {
 			return ArchiveFile;
+		} else if (PdfFile.isValidPath(path)) {
+			return PdfFile;
+
+		// media files
+		//
 		} else if (AudioFile.isValidPath(path)) {
 			return AudioFile;
 		} else if (ImageFile.isValidPath(path)) {
@@ -210,18 +223,32 @@ export default GeolocatableCollection.extend({
 			return VideoFile;
 		} else if (MapFile.isValidPath(path)) {
 			return MapFile;
+
+		// files
+		//
 		} else {
 			return File;
 		}
 	},
 
 	toClassName: function(item) {
+
+		// directories
+		//
 		if (item instanceof Directory) {
 			return 'directory';
 		} else if (item instanceof Volume) {
 			return 'volume';
+
+		// special files
+		//
 		} else if (item instanceof ArchiveFile) {
 			return 'archive file';
+		} else if (item instanceof PdfFile) {
+			return 'pdf file';
+
+		// media files
+		//
 		} else if (item instanceof AudioFile) {
 			return 'audio file';
 		} else if (item instanceof ImageFile) {
@@ -230,6 +257,9 @@ export default GeolocatableCollection.extend({
 			return 'video file';
 		} else if (item instanceof MapFile) {
 			return 'map file';
+
+		// files
+		//
 		} else {
 			return 'file';
 		}

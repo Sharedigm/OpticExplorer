@@ -1,0 +1,63 @@
+{
+	"items": [
+		{
+			"class": "like-post",
+			"group": "like post-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Post",
+			"shortcut": "command-+"
+		},
+		{
+			"class": "reply-to-post",
+			"group": "reply post-option",
+			"icon": "fa fa-comment",
+			"name": "Comment on Post",
+			"shortcut": ""
+		},
+		{
+			"class": "like-comment",
+			"group": "like comment-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Comment",
+			"shortcut": "command-+"
+		},
+		{
+			"class": "reply-to-comment",
+			"group": "reply comment-option",
+			"icon": "fa fa-reply",
+			"name": "Reply to Comment",
+			"shortcut": ""
+		},
+		{
+			"class": "like-reply",
+			"group": "like reply-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Reply",
+			"shortcut": "command-+"
+		},
+		{
+			"class": "reply-to-reply",
+			"group": "reply reply-option",
+			"icon": "fa fa-reply",
+			"name": "Reply to Reply",
+			"shortcut": ""
+		},
+		"divider",
+		{
+			"class": "share-by-topic",
+			"icon": "fa fa-newspaper",
+			"name": "By Discussion Topic"
+		},
+		{
+			"class": "share-by-message",
+			"icon": "fa fa-comments",
+			"name": "By Chat Messsage"
+		},
+		"divider",
+		{
+			"class": "share-by-link",
+			"icon": "fa fa-link",
+			"name": "By Link"
+		}
+	]
+}

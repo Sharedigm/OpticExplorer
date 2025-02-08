@@ -31,7 +31,7 @@ export default FileItemView.extend({
 			</div>
 		
 			<div class="icon">
-				<i class="fa fa-spinner"></i>
+				<i class="fa fa-spinner spinning"></i>
 				<%= icon %>
 			</div>
 			
@@ -86,6 +86,14 @@ export default FileItemView.extend({
 	},
 
 	//
+	// querying methods
+	//
+
+	isPlaying: function() {
+		return this.model? this.model.isPlaying() : false;
+	},
+
+	//
 	// getting methods
 	//
 
@@ -107,8 +115,8 @@ export default FileItemView.extend({
 			icon: this.getIcon(),
 			name: this.getName(),
 			details: this.hasDetails()? decodeURIComponent(escape(this.getDetails())) : undefined,
-			owner: this.get('owner'),
-			is_playing: this.model? this.model.isPlaying() : false
+			owner: this.getOwner(),
+			is_playing: this.isPlaying()
 		};
 	},
 
@@ -126,7 +134,7 @@ export default FileItemView.extend({
 	//
 
 	onLoad: function() {
-		this.showStatus('fa fa-spinner spinning');
+		this.showStatus('fa fa-spinner');
 		this.listenToOnce(this.model, 'loaded', this.onLoaded);
 	},
 

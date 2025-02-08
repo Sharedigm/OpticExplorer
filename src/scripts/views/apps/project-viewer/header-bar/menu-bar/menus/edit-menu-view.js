@@ -19,47 +19,13 @@ import Project from '../../../../../../models/projects/project.js';
 import Task from '../../../../../../models/projects/task.js';
 import Comment from '../../../../../../models/comments/comment.js';
 import Reply from '../../../../../../models/comments/reply.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="project-option">
-			<a class="edit-project"><i class="fa fa-pencil-alt"></i>Edit Project<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="project-option">
-			<a class="delete-projects"><i class="fa fa-trash-alt"></i>Delete Projects<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="task-option">
-			<a class="edit-task"><i class="fa fa-pencil-alt"></i>Edit Task<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="task-option">
-			<a class="delete-tasks"><i class="fa fa-trash-alt"></i>Delete Tasks<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="edit-comment"><i class="fa fa-pencil-alt"></i>Edit Comment<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="delete-comment"><i class="fa fa-trash-alt"></i>Delete Comment<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="edit-reply"><i class="fa fa-pencil-alt"></i>Edit Reply<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="delete-reply"><i class="fa fa-trash-alt"></i>Delete Reply<span class="shortcut">delete</span></a>
-		</li>
-	`),
 
 	events: {
 
@@ -124,10 +90,6 @@ export default MenuView.extend({
 
 	onRender: function() {
 
-		// call superclass method
-		//
-		MenuView.prototype.onRender.call(this);
-
 		// set initial mode
 		//
 		this.setMenuMode('project');
@@ -141,7 +103,7 @@ export default MenuView.extend({
 
 		// call superclass method
 		//
-		MenuView.prototype.onLoad.call(this);
+		EditMenuView.prototype.onLoad.call(this);
 
 		// set initial menu mode
 		//

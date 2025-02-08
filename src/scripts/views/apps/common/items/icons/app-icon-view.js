@@ -60,7 +60,7 @@ export default IconView.extend({
 	//
 
 	className: function() {
-		let id = this.has('id')? this.get('id').replace('_', '-') : undefined;
+		let id = this.has('id')? this.get('id').replace(/_/g, '-') : undefined;
 		return (Browser.is_mobile? '' : 'unflickable ') + id + ' item';
 	},
 

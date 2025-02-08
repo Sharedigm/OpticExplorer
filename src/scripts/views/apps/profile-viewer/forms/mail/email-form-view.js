@@ -15,10 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import Items from '../../../../../collections/storage/items.js';
 import FormView from '../../../../../views/forms/form-view.js';
-import UsersView from '../../../../../views/apps/profile-browser/mainbar/users/users-view.js';
 
 export default FormView.extend({
 
@@ -29,8 +26,6 @@ export default FormView.extend({
 	className: 'form-horizontal wide', 
 
 	template: template(`
-		<div class="item"></div>
-		
 		<div class="to form-group">
 			<label class="required control-label"><i class="fa fa-user"></i>To</label>
 			<div class="controls">
@@ -71,7 +66,7 @@ export default FormView.extend({
 			<label class="control-label"><i class="fa fa-quote-left"></i>Message</label>
 			<div class="controls">
 				<div class="input-group">
-					<textarea class="form-control" name="message" rows="3" maxlength="1000"><%= message %></textarea>
+					<textarea class="form-control" name="message" rows="10" maxlength="1000"><%= message %></textarea>
 					<div class="input-group-addon">
 						<i class="active fa fa-question-circle" data-toggle="popover" title="Message" data-content="This is the email message to send."></i>
 					</div>
@@ -82,10 +77,6 @@ export default FormView.extend({
 
 	attributes: {
 		name: 'email'
-	},
-
-	regions: {
-		item: '.item'
 	},
 
 	//
@@ -150,26 +141,5 @@ export default FormView.extend({
 
 	templateContext: function() {
 		return this.options;
-	},
-
-	showItem: function() {
-		this.showChildView('item', new UsersView({
-			collection: new Items([this.options.target], {
-				parse: false
-			}),
-
-			// options
-			//
-			preferences: UserPreferences.create('connection_manager', {
-				view_kind: 'icons',
-				detail_kind: null,
-				show_hidden_files: true,
-				sort_kind: null
-			}),
-
-			// capabilities
-			//
-			selectable: false
-		}));
 	}
 });

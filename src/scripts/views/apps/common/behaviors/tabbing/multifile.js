@@ -412,7 +412,7 @@ export default _.extend({}, MultiDoc, {
 
 		// check if changed
 		//
-		if (this.getTabView(index).isDirty() && application.isSignedIn()) {
+		if (index != undefined && this.getTabView(index).isDirty() && application.isSignedIn()) {
 
 			// show prompt
 			//

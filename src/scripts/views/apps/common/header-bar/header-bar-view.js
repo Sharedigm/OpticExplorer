@@ -15,6 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import File from '../../../../models/storage/files/file.js';
 import ToolbarContainerView from '../../../../views/apps/common/toolbars/toolbar-container-view.js';
 
 export default ToolbarContainerView.extend({
@@ -74,6 +75,14 @@ export default ToolbarContainerView.extend({
 		return !this.mandatory_toolbars.includes(toolbar);
 	},
 
+	hasSearchBar: function() {
+		return this.hasChildView('search');
+	},
+
+	hasSearch: function() {
+		return this.hasSearchBar() && this.getChildView('search').hasSearch();
+	},
+
 	//
 	// getting methods
 	//
@@ -128,18 +137,6 @@ export default ToolbarContainerView.extend({
 			}
 		} else {
 			this.setAllToolbarsVisible(visible);
-		}
-	},
-
-	setAllToolbarsVisible: function(isVisible) {
-		for (let i = 0; i < this.toolbars.length; i++) {
-			let toolbar = this.toolbars[i];
-
-			// set visibility of optional toolbars
-			//
-			if (this.isOptionalToolbarKind(toolbar)) {
-				this.setToolbarVisible(toolbar, isVisible);
-			}
 		}
 	},
 
@@ -220,6 +217,12 @@ export default ToolbarContainerView.extend({
 
 	clearSearchBar: function() {
 
+		// check if we need to clear
+		//
+		if (!this.hasSearch()) {
+			return;
+		}
+
 		// remove current search
 		//
 		this.getRegion('search').empty();
@@ -237,6 +240,12 @@ export default ToolbarContainerView.extend({
 		// update content region
 		//
 		this.parent.onResize();
+
+		// perform callback
+		//
+		if (this.options.onclear) {
+			this.options.onclear();
+		}
 	},
 
 	showSearch: function(search) {
@@ -246,11 +255,12 @@ export default ToolbarContainerView.extend({
 		// set search bar
 		//
 		if (kind) {
-			this.showSearchBar(kind, value);
+			let searchKind = kind.replace(/-/g, '_');
+			this.showSearchBar(searchKind, value);
 
 			// set menu
 			//
-			this.getChildView('menu search').setSearchKind(kind);
+			this.getChildView('menu search').setSearchKind(searchKind);
 		} else {
 			this.clearSearchBar();
 		}
@@ -330,5 +340,44 @@ export default ToolbarContainerView.extend({
 				}
 			}
 		}
+	},
+
+	//
+	// converting methods
+	//
+
+	toObjects: function() {
+		let objects = [];
+		let menuBarView = this.getChildView('menu');
+		let keys = Object.keys(menuBarView.regions);
+		for (let i = 0; i < keys.length; i++) {
+			let key = keys[i];
+			let menuView = menuBarView.getChildView(key);
+			let dropdown = menuView.$el.closest('.dropdown');
+			let name = dropdown.find('.dropdown-title').text();
+			let icon = dropdown.find('> a > i').attr('class');
+			let menu = menuView.toObjects()
+
+			objects.push({
+				name: name,
+				icon: icon,
+				menu: menu
+			});
+		}
+
+		return objects;
+	},
+
+	toJson: function() {
+		return JSON.stringify(this.toObjects(), null, 4);
+	},
+
+	showCode: function() {
+		application.launch('code_editor', {
+			model: new File({
+				name: 'menu.json',
+				contents: this.toJson()
+			})
+		});
 	}
 });

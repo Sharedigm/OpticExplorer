@@ -19,41 +19,41 @@
 export default {
 
 	//
+	// rendering methods
+	//
+
+	showMessageByDefaultTopic: function(message, privacy) {
+		application.launch('topic_viewer', {
+			message: message,
+			privacy: privacy
+		});
+	},
+
+	showMessageByFirstChat: function(message) {
+		application.launch('chat_viewer', {
+			message: message
+		});
+	},
+
+	//
 	// sharing methods
 	//
 
 	shareLinkByTopic: function(url, options) {
-		import(
-			'../../../../../views/apps/topic-viewer/topic-viewer-view.js'
-		).then((TopicViewerView) => {
+		let message = (options && options.message? options.message : '') + url;
+		let privacy = options? options.privacy : null;
 
-			// show default topic
-			//
-			application.showTopic(TopicViewerView.default.default_topic, {
-				message: (options && options.message? options.message : '') + url,
-				privacy: options? options.privacy : null
-			});
-		});
+		// show default topic
+		//
+		this.showMessageByDefaultTopic(message, privacy);
 	},
 
 	shareLinkByMessage: function(url, options) {
-		import(
-			'../../../../../collections/chats/chats.js'
-		).then((Chats) => {
-			new Chats.default().fetch({
+		let message = (options && options.message? options.message : '') + url;
 
-				// callbacks
-				//
-				success: (collection) => {
-
-					// show first chat
-					//
-					application.showChat(collection.at(0), {
-						message: (options && options.message? options.message : '') + url
-					});
-				}
-			});
-		});
+		// show first chat
+		//
+		this.showMessageByFirstChat(message);
 	},
 
 	//
@@ -62,7 +62,7 @@ export default {
 
 	showShareByLinkDialog: function(url) {
 		import(
-			'../../../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog

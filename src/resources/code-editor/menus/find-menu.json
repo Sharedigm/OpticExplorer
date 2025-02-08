@@ -1,0 +1,51 @@
+{
+	"items": [
+		{
+			"class": "find",
+			"icon": "fa fa-search",
+			"name": "Find",
+			"shortcut": "command-F"
+		},
+		{
+			"class": "find-next",
+			"icon": "fa fa-step-forward",
+			"name": "Find Next",
+			"shortcut": "command-G"
+		},
+		{
+			"class": "find-prev",
+			"icon": "fa fa-step-backward",
+			"name": "Find Prev",
+			"shortcut": "shift-command-G"
+		},
+		"divider",
+		{
+			"class": "find-replace",
+			"icon": "fa fa-search-plus",
+			"name": "Find / Replace",
+			"shortcut": "shift-command-F"
+		},
+		{
+			"class": "replace-next",
+			"icon": "fa fa-forward",
+			"name": "Replace / Find Next",
+			"shortcut": "command-H"
+		},
+		{
+			"class": "replace-prev",
+			"icon": "fa fa-backward",
+			"name": "Replace / Find Prev",
+			"shortcut": "shift-command-H"
+		},
+		{
+			"class": "find-in-files",
+			"icon": "fa fa-file",
+			"name": "Find in Files"
+		},
+		{
+			"class": "find-replace-in-files",
+			"icon": "fa fa-file",
+			"name": "Find and Replace in Files"
+		}
+	]
+}

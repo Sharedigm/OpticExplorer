@@ -1,0 +1,96 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		"divider",
+		{
+			"class": "open-item",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		{
+			"class": "open-image",
+			"icon": "fa fa-image",
+			"name": "Open Image",
+			"menu": [
+				{
+					"class": "open-first",
+					"icon": "fa fa-fast-backward",
+					"name": "First",
+					"shortcut": "up arrow"
+				},
+				{
+					"class": "open-prev",
+					"icon": "fa fa-backward",
+					"name": "Prev",
+					"shortcut": "left arrow"
+				},
+				{
+					"class": "open-next",
+					"icon": "fa fa-forward",
+					"name": "Next",
+					"shortcut": "right arrow"
+				},
+				{
+					"class": "open-last",
+					"icon": "fa fa-fast-forward",
+					"name": "Last",
+					"shortcut": "down arrow"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "favorites",
+			"icon": "fa fa-star",
+			"name": "Favorites",
+			"menu": [
+				{
+					"class": "add-favorites",
+					"icon": "fa fa-star",
+					"name": "Add Favorites",
+					"shortcut": "shift-command-F"
+				},
+				{
+					"class": "remove-favorites",
+					"icon": "fa fa-trash-alt",
+					"name": "Remove Favorites",
+					"shortcut": "delete"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		"divider",
+		{
+			"class": "download-items",
+			"icon": "fa fa-download",
+			"name": "Download",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "delete-items",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete",
+			"shortcut": "delete"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

@@ -24,7 +24,8 @@ export default FormView.extend({
 	//
 
 	className: 'search form-inline',
-	key: 'search',
+	icon: 'fa fa-search',
+	placeholder: "Search",
 
 	events: {
 
@@ -44,31 +45,36 @@ export default FormView.extend({
 	},
 
 	//
-	// setting methods
+	// constructor
 	//
 
-	setValue: function(value) {
-		this.$el.find('input').val(value);
-	},
+	initialize: function() {
 
-	//
-	// querying methods
-	//
-
-	hasValue: function() {
-		return this.$el.find('input').val() != '';
+		// set attributes
+		//
+		if (this.options.value) {
+			this.value = this.options.value;
+		}
+		if (this.options.kind) {
+			this.kind = this.options.kind;
+			this.key = this.kind;
+		}
 	},
 
 	//
 	// getting methods
 	//
 
-	getKey: function() {
-		return this.key;
+	getIcon: function() {
+		if (this.icons) {
+			return this.icons[this.key];
+		} else {
+			return this.icon;
+		}
 	},
 
-	getValue: function() {
-		return this.$el.find('input').val();
+	getKey: function() {
+		return _.result(this, 'key');
 	},
 	
 	getSearch: function() {
@@ -95,21 +101,22 @@ export default FormView.extend({
 	},
 
 	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			value: this.options.value
-		};
-	},
-
-	//
 	// form handling methods
 	//
 
 	onSubmit: function() {
 		this.submit();
+	},
+
+	//
+	// rendering methods
+	//
+
+	templateContext: function() {
+		return {
+			icon: this.getIcon? this.getIcon() : this.icon,
+			value: this.value
+		};
 	},
 
 	//

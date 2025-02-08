@@ -15,46 +15,21 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-view.js';
+import SearchByTextView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-text-view.js';
 
-export default SearchByView.extend({
+export default SearchByTextView.extend({
 
 	//
 	// attributes
 	//
 
 	className: 'search by-message form-inline',
-
-	template: template(`
-		<div class="input-group">
-			<div class="input-group-addon">
-				<i class="fa fa-quote-left"></i>
-			</div>
-		
-			<input type="search" class="form-control" value="<%= value %>" placeholder="Search by Message">
-		
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
+	icon: 'fa fa-quote-left',
+	placeholder: "Search by Message",
 
 	//
 	// search attributes
 	//
 
-	key: 'message',
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			value: this.options.value
-		};
-	}
+	key: 'message'
 });

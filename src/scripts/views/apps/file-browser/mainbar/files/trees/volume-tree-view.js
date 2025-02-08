@@ -113,7 +113,8 @@ export default TreeView.extend(_.extend({}, DirectoryTreeViewable, {
 	},
 
 	getOwnerThumbnailUrl: function() {
-		return this.has('owner') && this.get('owner').hasProfilePhoto()? this.get('owner').getProfilePhotoUrl({
+		let owner = this.getOwner();
+		return owner && owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
 			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
 		}) : undefined;
 	},

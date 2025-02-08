@@ -4,7 +4,7 @@
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching files by resolution.           |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,53 +15,33 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByQuantityView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-quantity-view.js';
+import SearchByNumbersView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-numbers-view.js';
 
-export default SearchByQuantityView.extend({
+export default SearchByNumbersView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<div class="input-group">
-		
-			<div class="input-group-addon">
-				<i class="fa fa-arrows-alt"></i>
-			</div>
-		
-			<div class="dimension input-group-addon select">
-				<select>
-					<option value="width">w</option>
-					<option value="height">h</option>
-					<option value="resolution">r</option>
-				</select>
-			</div>
-		
-			<div class="operator input-group-addon select">
-				<select>
-					<option value="greater-than">&gt;</option>
-					<option value="equal">=</option>
-					<option value="less-than">&lt;</option>
-				</select>
-			</div>
-		
-			<input type="number" class="form-control" placeholder="Search by resolution">
-		
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
+	icon: 'fa fa-arrows-alt',
 
-	//
-	// querying methods
-	//
+	kinds: {
+		resolution: {
+			icon: 'fa fa-arrows',
+			label: 'r',
+			placeholder: 'Search by Resolution'
+		},
 
-	quantity: function() {
-		return this.$el.find('.dimension select').val();
+		width: {
+			icon: 'fa fa-arrows-h',
+			label: 'w',
+			placeholder: 'Search by Width'
+		},
+
+		height: {
+			icon: 'fa fa-arrows-v',
+			label: 'h',
+			placeholder: 'Search by Height'
+		}
 	}
 });

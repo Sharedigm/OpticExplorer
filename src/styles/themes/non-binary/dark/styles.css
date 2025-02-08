@@ -468,6 +468,41 @@ body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .con
 body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .expander .btn i {
   color: white !important;
 }
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a:hover {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a {
+  color: #c0c0d9 !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a:hover {
+  color: #c0c0d9 !important;
+}
 body:not(.binary).translucent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar, body:not(.binary).translucent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar,
 body:not(.binary) #desktop.translucent-sidebars .desktop.app > .body .contents > .sidebar,
 body:not(.binary) #desktop.translucent-sidebars .desktop.app > .body-region .contents > .sidebar {
@@ -1142,10 +1177,10 @@ body:not(.binary) .item .meter i:nth-child(4).active {
 body:not(.binary) .item .meter i:nth-child(5).active {
   color: red !important;
 }
-body:not(.binary) .icon-grid .icon > img + i {
+body:not(.binary) .icon-grid .icon > img + i, body:not(.binary) .card-grid .icon > img + i {
   display: none;
 }
-body:not(.binary) .icon-grid .icon.colored {
+body:not(.binary) .icon-grid .icon.colored, body:not(.binary) .card-grid .icon.colored {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
 }
 body:not(.binary):not(.flat) .file-body {
@@ -1229,7 +1264,7 @@ body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info .name[
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info > .specifics .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info > .specifics .details i.fa-info-circle {
   color: #6060a0;
@@ -2213,7 +2248,7 @@ body:not(.binary) .icon-grid .item > .row:nth-child(2) .name[contenteditable=tru
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary) .icon-grid .item .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 .dark body:not(.binary) .icon-grid .item .details, .desktop body:not(.binary) .icon-grid .item .details {
   color: white;
@@ -2403,9 +2438,6 @@ body:not(.binary).dark .tile-grid .item > .tile .name[contenteditable=true] {
   color: #272740;
   background-color: white;
   outline-color: rgba(96, 96, 160, 0.5);
-}
-body:not(.binary).dark .tile-grid .item > .specifics .details {
-  background-color: rgba(160, 160, 198, 0.75);
 }
 body:not(.binary).dark .tile-grid .item.highlighted .tile {
   border-color: #a0a0c6;
@@ -3033,14 +3065,6 @@ hr {
 }
 .user-profile-header hr {
   margin: 10px auto;
-}
-
-body.icon-spinning .profile.photo .buttons {
-  display: none;
-}
-
-body:not(.icon-spinning) .user-profile-header .alternate.buttons {
-  display: none;
 }
 
 .scrollable {

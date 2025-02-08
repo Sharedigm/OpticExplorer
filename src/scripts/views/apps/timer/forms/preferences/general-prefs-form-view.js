@@ -24,22 +24,6 @@ export default PreferencesFormView.extend({
 	//
 
 	template: template(`
-		<div class="display form-group">
-			<label class="control-label"><i class="fa fa-display"></i>Display</label>
-			<div class="controls">
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="display" value="led">LED</label>
-				</div>
-		
-				<div class="radio-inline">
-					<label><input type="radio" name="display" value="lcd">LCD</label>
-				</div>
-		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Display" data-content="This is the type of display to use."></i>
-			</div>
-		</div>
-
 		<div class="options form-group">
 			<label class="control-label"><i class="fa fa-check"></i>Show</label>
 			<div class="controls">
@@ -88,7 +72,6 @@ export default PreferencesFormView.extend({
 	`),
 
 	events: {
-		'click .display input': 'onClickDisplay',
 		'change .show-hours input': 'onChangeShowHours',
 		'change .show-hundredths input': 'onChangeShowHundredths',
 		'change .direction input': 'onChangeDirection',
@@ -103,8 +86,6 @@ export default PreferencesFormView.extend({
 
 	getValue: function(key) {
 		switch (key) {
-			case 'display':
-				return this.$el.find('.display input:checked').val();
 			case 'show_hours':
 				return this.$el.find('.show-hours input').is(':checked');
 			case 'show_hundredths':
@@ -122,7 +103,6 @@ export default PreferencesFormView.extend({
 
 	getValues: function() {
 		return {
-			display: this.getValue('display'),
 			show_hours: this.getValue('show_hours'),
 			show_hundredths: this.getValue('show_hundredths'),
 			direction: this.getValue('direction'),
@@ -138,9 +118,6 @@ export default PreferencesFormView.extend({
 
 	setValue: function(key, value) {
 		switch (key) {
-			case 'display':
-				this.$el.find('.display input[value="' + value + '"]').prop('checked', true);
-				break;
 			case 'show_hours':
 				this.$el.find('.show-hours input').prop('checked', value);
 				break;
@@ -166,7 +143,6 @@ export default PreferencesFormView.extend({
 
 	templateContext: function() {
 		return {
-			display: this.model.get('display'),
 			show_hours: this.model.get('show_hours'),
 			show_hundredths: this.model.get('show_hundredths'),
 			direction: this.model.get('direction'),
@@ -179,10 +155,6 @@ export default PreferencesFormView.extend({
 	//
 	// mouse event handling methods
 	//
-
-	onClickDisplay: function() {
-		this.onChangeValue('display', this.getValue('display'));
-	},
 
 	onChangeShowHours: function() {
 		this.onChangeValue('show_hours', this.getValue('show_hours'));

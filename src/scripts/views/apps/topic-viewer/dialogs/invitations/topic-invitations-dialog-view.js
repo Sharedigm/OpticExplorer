@@ -17,7 +17,6 @@
 
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
 import TopicInvitationMessageFormView from '../../../../../views/apps/topic-viewer/forms/invitations/topic-invitation-message-form-view.js';
-import ConnectionManagerView from '../../../../../views/apps/connection-manager/connection-manager-view.js';
 
 export default DialogView.extend({
 
@@ -197,20 +196,13 @@ export default DialogView.extend({
 	},
 
 	showConnectionManager: function() {
-		this.showChildView('connection_manager', new ConnectionManagerView({
-
-			// options
-			//
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
+		this.showChildApp('connection_manager', {
 
 			// callbacks
 			//
 			onselect: () => this.onChange(),
 			ondeselect: () => this.onChange()
-		}));
+		});
 	},
 
 	showMessageForm: function() {

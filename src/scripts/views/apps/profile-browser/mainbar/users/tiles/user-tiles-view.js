@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import TilesView from '../../../../../../views/items/tiles/tiles-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
+import ContainableMappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/containable-mappable.js';
 import UserTileView from '../../../../../../views/apps/profile-browser/mainbar/users/tiles/user-tile-view.js';
 
 export default TilesView.extend(_.extend({}, ContainableMappable, {

@@ -73,45 +73,62 @@ export default ItemPageView.extend(_.extend({}, FileDroppable, {
 	// getting methods
 	//
 
+	getSpecialIconName: function(icons) {
+		if (typeof icons.icon == 'string') {
+			return icons.icon;
+		}
+
+		// select empty or full icon, defaulting to empty
+		//
+		if (this.model.isEmpty()) {
+			return icons.icon[0];
+		} else if (this.model.isFull()) {
+			return icons.icon[1];
+		} else {
+			return icons.icon[0];
+		}
+	},
+
+	getCustomIconName: function(icons) {
+		if (typeof icons.icon == 'string') {
+			return icons.icon;
+		}
+
+		// select empty or full icon, defaulting to full
+		//
+		if (this.model.isEmpty()) {
+			return icons.icon[0];
+		} else {
+			return icons.icon[1];
+		}
+	},
+
+	getDefaultIconName: function() {
+		if (this.model.isAudioAlbum()) {
+			return config.files.folders.albums.audio.icon;
+		} else if (this.model.isImageAlbum()) {
+			return config.files.folders.albums.image.icon;
+		} else if (this.model.isVideoAlbum()) {
+			return config.files.folders.albums.video.icon;
+		} else if (this.model.isEmpty()) {
+			return config.files.folders.icon[0];
+		} else {
+			return config.files.folders.icon[1];
+		}
+	},
+
 	getIconName: function() {
 		let name = this.model.getName().toTitleCase();
 		let icons = config.files.folders.names[name];
 
-		if (icons) {
-
-			// use for custom icon
-			//
-			if (typeof icons.icon == 'string') {
-				return icons.icon;
-			} else {
-
-				// select empty or full icon
-				//
-				if (this.model.isEmpty()) {
-					return icons.icon[0];
-				} else if (this.model.isFull()) {
-					return icons.icon[1];
-				} else {
-					return icons.icon[0];
-				}
-			}
+		// return special, custom or default icon name
+		//
+		if (icons && (name == 'Trash' || name == '.Clipboard')) {
+			return this.getSpecialIconName(icons);
+		} else if (icons) {
+			return this.getCustomIconName(icons);
 		} else {
-
-			// use standard icons
-			//
-			if (this.model.isEmpty()) {
-				return config.files.folders.icon[0];
-			} else if (this.model.isAudioAlbum()) {
-				return config.files.folders.albums.audio.icon;
-			} else if (this.model.isImageAlbum()) {
-				return config.files.folders.albums.image.icon;
-			} else if (this.model.isVideoAlbum()) {
-				return config.files.folders.albums.video.icon;	
-			} else if (this.model.isFull()) {
-				return config.files.folders.icon[1];
-			} else {
-				return config.files.folders.icon[0];
-			}
+			return this.getDefaultIconName();
 		}
 	},
 
@@ -119,49 +136,51 @@ export default ItemPageView.extend(_.extend({}, FileDroppable, {
 		return config.servers.images + '/' + this.constructor.getIconPath() + '/' + this.getIconName();
 	},
 
+	getCustomIconId: function(icons) {
+		let icon;
+		if (typeof icons.icon == 'string') {
+			icon = icons.icon;
+		} else {
+
+			// select empty or full icon
+			//
+			if (this.model.isEmpty()) {
+				icon = icons.icon[0];
+			} else if (this.model.isFull()) {
+				icon = icons.icon[1];
+			} else {
+				icon = icons.icon[0];
+			}
+		}
+
+		let extension = FileUtils.getFileExtension(icon);
+		return icon.replace('.' + extension, '-icon');
+	},
+
+	getDefaultIconId: function() {
+		if (this.model.isAudioAlbum()) {
+			return 'audio-album-icon';
+		} else if (this.model.isImageAlbum()) {
+			return 'image-album-icon';
+		} else if (this.model.isVideoAlbum()) {
+			return 'video-album-icon';
+		} else if (this.model.isEmpty()) {
+			return 'folder-empty-icon';
+		} else {
+			return 'folder-full-icon';
+		}
+	},
+
 	getIconId: function() {
 		let name = this.model.getName().toTitleCase();
 		let icons = config.files.folders.names[name];
 
+		// return custom or standard icon id
+		//
 		if (icons) {
-
-			// use for custom icon
-			//
-			let icon;
-			if (typeof icons.icon == 'string') {
-				icon = icons.icon;
-			} else {
-
-				// select empty or full icon
-				//
-				if (this.model.isEmpty()) {
-					icon = icons.icon[0];
-				} else if (this.model.isFull()) {
-					icon = icons.icon[1];
-				} else {
-					icon = icons.icon[0];
-				}
-			}
-
-			let extension = FileUtils.getFileExtension(icon);
-			return icon.replace('.' + extension, '-icon');
+			return this.getCustomIconId(icons);
 		} else {
-
-			// use standard icons
-			//
-			if (this.model.isEmpty()) {
-				return 'folder-empty-icon';
-			} else if (this.model.isAudioAlbum()) {
-				return 'audio-album-icon';
-			} else if (this.model.isImageAlbum()) {
-				return 'image-album-icon';
-			} else if (this.model.isVideoAlbum()) {
-				return 'video-album-icon';	
-			} else if (this.model.isFull()) {
-				return 'folder-full-icon';
-			} else {
-				return 'folder-empty-icon';
-			}
+			return this.getDefaultIconId();
 		}
 	},
 

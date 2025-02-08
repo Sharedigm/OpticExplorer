@@ -15,13 +15,13 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import BaseView from '../../../../views/base-view.js';
+import TabbedFormView from '../../../../views/forms/tabbed-form-view.js';
 import AppearanceSettingsFormView from '../../../../views/apps/theme-manager/mainbar/appearance/appearance-settings-form-view.js';
 import DesktopSettingsFormView from '../../../../views/apps/theme-manager/mainbar/desktop/desktop-settings-form-view.js';
 import ControlSettingsFormView from '../../../../views/apps/theme-manager/mainbar/controls/control-settings-form-view.js';
 import DialogSettingsFormView from '../../../../views/apps/theme-manager/mainbar/dialogs/dialog-settings-form-view.js';
 
-export default BaseView.extend({
+export default TabbedFormView.extend({
 
 	//
 	// attributes
@@ -29,60 +29,24 @@ export default BaseView.extend({
 
 	className: 'content',
 
-	template: template(`
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="theme-tab<% if (tab == 'appearance' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".appearance-settings">
-					<i class="fa fa-eye"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="desktop-tab<% if (tab == 'desktop') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".desktop-settings">
-					<i class="fa fa-desktop"></i>
-					<label>Desktop</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="controls-tab<% if (tab == 'controls') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".control-settings">
-					<i class="fa fa-sliders-h"></i>
-					<label>Controls</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="dialogs-tab<% if (tab == 'dialogs') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".dialog-settings">
-					<i class="far fa-window-maximize"></i>
-					<label>Dialogs</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="appearance-settings tab-pane<% if (tab == 'appearence' || !tab) { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="desktop-settings tab-pane<% if (tab == 'desktop') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="control-settings tab-pane<% if (tab == 'controls') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="dialog-settings tab-pane<% if (tab == 'dialogs') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		appearance: '.appearance-settings',
-		desktop: '.desktop-settings',
-		controls: '.control-settings',
-		dialogs: '.dialog-settings'
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-eye"
+		},
+		{
+			"name": "Desktop",
+			"icon": "fa fa-desktop"
+		},
+		{
+			"name": "Controls",
+			"icon": "fa fa-sliders-h"
+		},
+		{
+			"name": "Dialogs",
+			"icon": "far fa-window-maximize"
+		}
+	],
 
 	//
 	// constructor
@@ -101,26 +65,42 @@ export default BaseView.extend({
 	// rendering methods
 	//
 
-	templateContext: function() {
-		return {
-			tab: this.options.tab,
-			show_clock: this.options.settings.desktop.get('show_clock')
-		};
+	showTab: function(tab) {
+		switch (tab) {
+			case 'general':
+				this.showGeneralSettings();
+				break;
+			case 'desktop':
+				this.showDesktopSettings();
+				break;
+			case 'controls':
+				this.showControlsSettings();
+				break;
+			case 'dialogs':
+				this.showDialogsSettings();
+				break;
+		}
 	},
 
-	onRender: function() {
-
-		// show child views
-		//
-		this.showChildView('appearance', new AppearanceSettingsFormView({
+	showGeneralSettings: function() {
+		this.showChildView('general', new AppearanceSettingsFormView({
 			tab: this.options.tab == 'appearance'? this.options.tab2 : undefined
 		}));
+	},
+
+	showDesktopSettings: function() {
 		this.showChildView('desktop', new DesktopSettingsFormView({
 			tab: this.options.tab == 'desktop'? this.options.tab2 : undefined
 		}));
+	},
+
+	showControlsSettings: function() {
 		this.showChildView('controls', new ControlSettingsFormView({
 			tab: this.options.tab == 'controls'? this.options.tab2 : undefined
 		}));
+	},
+
+	showDialogsSettings: function() {
 		this.showChildView('dialogs', new DialogSettingsFormView({
 			tab: this.options.tab == 'dialogs'? this.options.tab2 : undefined
 		}));

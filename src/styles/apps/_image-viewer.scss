@@ -30,25 +30,6 @@ $image-shadow: drop-shadow(10px 10px 20px rgba(black, 50%));
 //
 
 .image-viewer.app {
-
-	.header-bar {
-		.mouse-mode-bar {
-			display: inline-block;
-			
-			.button {
-				i.fa.fa-mouse-pointer {
-					margin-left: 3px;
-				}
-			}
-		}
-
-		.zoom-bar {
-			input[type="range"] {
-				margin-right: 5px;
-			}
-		}
-	}
-
 	.body > .contents {
 
 		.sidebar {
@@ -132,21 +113,49 @@ $image-shadow: drop-shadow(10px 10px 20px rgba(black, 50%));
 			// full screen mode
 			//
 
+			.image:fullscreen {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				background: black;
+
+				.caption {
+					position: fixed;
+				}
+			}
 			.image:-webkit-full-screen {
 				position: fixed;
 				width: 100%;
 				top: 0;
 				bottom: 0;
 				background: black;
+
+				.caption {
+					position: fixed;
+				}
 			}
 			.image:-moz-full-screen {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				bottom: 0;
 				background: black;
+
+				.caption {
+					position: fixed;
+				}
 			}
 			.image:-ms-fullscreen {
+				position: fixed;
+				width: 100%;
+				top: 0;
+				bottom: 0;
 				background: black;
-			}
-			.image:fullscreen {
-				background: black;
+
+				.caption {
+					position: fixed;
+				}
 			}
 		}
 	}
@@ -198,22 +207,6 @@ $image-shadow: drop-shadow(10px 10px 20px rgba(black, 50%));
 	}
 }
 */
-
-//
-// non-small styles
-//
-
-@media (min-width: variables.$screen-xs-min) {
-	.image-viewer.app {
-		.header-bar {
-			.zoom-bar {
-				input[type="range"] {
-					width: 125px;
-				}
-			}
-		}
-	}
-}
 
 //
 // extra small styles

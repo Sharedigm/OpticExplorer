@@ -23,58 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-contact"><i class="fa fa-file"></i>New Contact<span class="shift command shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-item"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="presentation" class="import dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-cloud-upload-alt"></i>Import<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="import-google"><i class="fab fa-google"></i>Google Contacts</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="save-contact"><i class="fa fa-save"></i>Save<span class="command shortcut">S</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="save-as"><i class="fa fa-save"></i>Save As<span class="shift command shortcut">S</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class="command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-contact': 'onClickNewContact',
@@ -93,7 +41,6 @@ export default FileMenuView.extend({
 
 	visible: function() {
 		let isSignedIn = application.isSignedIn();
-		let isDesktop = this.parent.app.isDesktop();
 
 		return {
 			'new-window': true,
@@ -104,7 +51,7 @@ export default FileMenuView.extend({
 			'save-contact': isSignedIn,
 			'save-as': isSignedIn,
 			'close-tab': true,
-			'close-window': !isDesktop
+			'close-window': true
 		};
 	},
 
@@ -115,7 +62,6 @@ export default FileMenuView.extend({
 		let isDirty = hasTabs && this.parent.app.isDirty();
 		let isSaved = file && file.isSaved();
 		let isWritable = directory? directory.isWritableBy(application.session.user) : undefined;
-		let isDesktop = this.parent.app.isDesktop();
 		let hasSelected = this.parent.app.hasSelected();
 
 		return {
@@ -127,7 +73,7 @@ export default FileMenuView.extend({
 			'save-contact': isDirty && isWritable,
 			'save-as': isWritable,
 			'close-tab': hasTabs,
-			'close-window': !isDesktop
+			'close-window': true
 		};
 	},
 

@@ -23,27 +23,8 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="open-file dropdown-toggle"><i class="fa fa-file"></i>Open File<span class="command shortcut">O</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
+		'click .new-window': 'onClickNewWindow',
 		'click .open-file': 'onClickOpenFile',
 		'click .show-info': 'onClickShowInfo',
 		'click .close-window': 'onClickCloseWindow'
@@ -55,12 +36,12 @@ export default FileMenuView.extend({
 
 	enabled: function() {
 		let hasSelected = this.parent.app.hasSelected();
-		let isDesktop = this.parent.app.isDesktop();
 
 		return {
+			'new-window': true,
 			'open-file': hasSelected,
 			'show-info': hasSelected,
-			'close-window': !isDesktop
+			'close-window': true
 		};
 	},
 
@@ -70,7 +51,7 @@ export default FileMenuView.extend({
 
 	onClickOpenFile: function() {
 		if (this.parent.app.hasSelected()) {
-			this.parent.app.openFile(this.parent.app.getSelectedModels()[0]);
+			this.parent.app.openFile(this.parent.app.getSelectedModel());
 		}
 	},
 

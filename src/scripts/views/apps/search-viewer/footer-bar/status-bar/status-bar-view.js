@@ -27,7 +27,7 @@ export default BaseView.extend({
 
 	template: template(`
 		<div class="info-bar">
-			<i class="fa fa-file"></i><span class="num-files"><%= num_results %></span>&nbsp;results
+			<i class="fa fa-file"></i><span class="num-files"><%= num_results %></span> results
 		</div>
 	`),
 

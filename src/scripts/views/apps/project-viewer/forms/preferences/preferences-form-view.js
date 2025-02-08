@@ -18,6 +18,7 @@
 import PreferencesGroupView from '../../../../../views/apps/common/forms/preferences-group-view.js';
 import GeneralPrefsFormView from '../../../../../views/apps/project-viewer/forms/preferences/general-prefs-form-view.js';
 import DisplayPrefsFormView from '../../../../../views/apps/project-viewer/forms/preferences/display-prefs-form-view.js';
+import WindowPrefsFormView from '../../../../../views/apps/project-viewer/forms/preferences/window-prefs-form-view.js';
 import StoragePrefsFormView from '../../../../../views/apps/project-viewer/forms/preferences/storage-prefs-form-view.js';
 
 export default PreferencesGroupView.extend({
@@ -26,55 +27,24 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general-tab<% if (tab == 'general' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general-prefs">
-					<i class="fa fa-check"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="display-tab<% if (tab == 'display') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".display-prefs">
-					<i class="fa fa-desktop"></i>
-					<label>Display</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="storage-tab<% if (tab == 'storage') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".storage-prefs">
-					<i class="fa fa-database"></i>
-					<label>Storage</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-prefs tab-pane<% if (tab == 'general' || !tab) { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="display-prefs tab-pane<% if (tab == 'display') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="storage-prefs tab-pane<% if (tab == 'storage') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-check"
 		},
-		general: '.general-prefs',
-		display: '.display-prefs',
-		storage: '.storage-prefs'
-	},
+		{
+			"name": "Display",
+			"icon": "fa fa-desktop"
+		},
+		{
+			"name": "Window",
+			"icon": "fa fa-window-maximize"
+		},
+		{
+			"name": "Storage",
+			"icon": "fa fa-database"
+		}
+	],
 
 	//
 	// rendering methods
@@ -90,6 +60,9 @@ export default PreferencesGroupView.extend({
 				break;
 			case 'display':
 				this.showDisplayPrefs();
+				break;
+			case 'window':
+				this.showWindowPrefs();
 				break;
 			case 'storage':
 				this.showStoragePrefs();
@@ -107,7 +80,7 @@ export default PreferencesGroupView.extend({
 			onchange: (key, value) => {
 				this.setOption(key, value);
 			}
-		}));		
+		}));
 	},
 
 	showDisplayPrefs: function() {
@@ -119,7 +92,19 @@ export default PreferencesGroupView.extend({
 			onchange: (key, value) => {
 				this.setOption(key, value);
 			}
-		}));	
+		}));
+	},
+
+	showWindowPrefs: function() {
+		this.showChildView('window', new WindowPrefsFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onchange: (key, value) => {
+				this.setOption(key, value);
+			}
+		}));
 	},
 
 	showStoragePrefs: function() {

@@ -15,57 +15,13 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="cut"><i class="fa fa-cut"></i>Cut<span class="command shortcut">X</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="copy"><i class="fa fa-copy"></i>Copy<span class="command shortcut">C</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="duplicate"><i class="fa fa-copy"></i>Duplicate<span class="shift command shortcut">D</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="paste"><i class="fa fa-paste"></i>Paste<span class="command shortcut">V</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="put"><i class="fa fa-paste"></i>Put<span class="shift command shortcut">V</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="delete"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="destroy"><i class="fa fa-xmark"></i>Destroy<span class="shift command shortcut">delete</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-clipboard"><i class="fa fa-clipboard"></i>Show Clipboard</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="clear-clipboard"><i class="fa fa-xmark"></i>Clear Clipboard</a>
-		</li>
-	`),
 
 	events: {
 		'click .cut': 'onClickCut',
@@ -137,7 +93,43 @@ export default MenuView.extend({
 			}
 		}));
 	},
-	
+
+	//
+	// rendering methods
+	//
+
+	showDirectory: function(directory) {
+		application.launch('file_browser', {
+			model: directory
+		});
+	},
+
+	showClipboardContents: function() {
+		this.parent.app.getActiveView().fetchClipboardDirectory({
+
+			// callbacks
+			//
+			success: (model) => {
+				this.showDirectory(model);
+			}
+		});
+	},
+
+	clearClipboardContents: function() {
+		this.parent.app.getActiveView().clearClipboard({
+
+			// callbacks
+			//
+			success: () => {
+				this.update();
+
+				// play delete sound
+				//
+				application.play('recycle');
+			}
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -159,7 +151,7 @@ export default MenuView.extend({
 
 		// call superclass method
 		//
-		MenuView.prototype.onLoad.call(this);
+		EditMenuView.prototype.onLoad.call(this);
 	},
 
 	onClickCut: function() {
@@ -225,30 +217,10 @@ export default MenuView.extend({
 	},
 
 	onClickShowClipboard: function() {
-		this.parent.app.getActiveView().fetchClipboardDirectory({
-
-			// callbacks
-			//
-			success: (model) => {
-				application.launch('file_browser', {
-					model: model
-				});
-			}
-		});
+		this.showClipboardContents();
 	},
 
 	onClickClearClipboard: function() {
-		this.parent.app.getActiveView().clearClipboard({
-
-			// callbacks
-			//
-			success: () => {
-				this.update();
-
-				// play delete sound
-				//
-				application.play('recycle');
-			}
-		});
+		this.clearClipboardContents();
 	}
 });

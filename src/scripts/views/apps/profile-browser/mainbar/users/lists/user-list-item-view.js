@@ -17,7 +17,7 @@
 
 import ListItemView from '../../../../../../views/items/lists/list-item-view.js';
 import FileDroppable from '../../../../../../views/apps/file-browser/mainbar/behaviors/file-droppable.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
+import Mappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/mappable.js';
 import UserBadgesView from '../../../../../../views/apps/profile-browser/mainbar/users/badges/user-badges-view.js';
 
 export default ListItemView.extend(_.extend({}, FileDroppable, Mappable, {

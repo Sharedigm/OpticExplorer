@@ -30,10 +30,6 @@ body:not(.binary).colored.colored {
 			@include colored-btns.colored(colors.$medium-red);
 		}
 
-		&.raspberry {
-			@include colored-btns.colored(colors.$medium-raspberry);
-		}
-
 		&.red-orange {
 			@include colored-btns.colored(colors.$medium-red-orange);
 		}
@@ -88,6 +84,10 @@ body:not(.binary).colored.colored {
 
 		&.magenta {
 			@include colored-btns.colored(colors.$medium-magenta);
+		}
+
+		&.raspberry {
+			@include colored-btns.colored(colors.$medium-raspberry);
 		}
 
 		&.brown {

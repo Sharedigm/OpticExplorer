@@ -94,10 +94,12 @@ export default PostFormView.extend({
 
 			// options
 			//
+			preferences: this.options.preferences,
+
+			// capabilities
+			//
 			submitable: this.options.submitable,
 			cancelable: true,
-			features: this.options.features,
-			preferences: this.options.preferences,
 
 			// callbacks
 			//

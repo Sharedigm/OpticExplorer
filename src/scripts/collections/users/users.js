@@ -97,6 +97,12 @@ export default GeolocatableCollection.extend({
 	// fetching methods
 	//
 
+	fetchAll: function(options) {
+		return this.fetch(_.extend(options, {
+			url: config.servers.authentication + '/users/all'
+		}));
+	},
+
 	fetchConnected: function(options) {
 		return this.fetch(_.extend(options, {
 			url: config.servers.authentication + '/connections/connected'

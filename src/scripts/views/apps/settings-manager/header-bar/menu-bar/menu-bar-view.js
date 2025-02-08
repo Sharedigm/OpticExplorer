@@ -24,32 +24,6 @@ import HelpMenuView from '../../../../../views/apps/settings-manager/header-bar/
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	template: template(`
-		<li class="file dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i><span class="dropdown-title">File</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="select dropdown" style="display:none">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-mouse-pointer"></i><span class="dropdown-title">Select</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="view dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eye"></i><span class="dropdown-title">View</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="help dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><span class="dropdown-title">Help</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-	`),
-
-	//
 	// rendering methods
 	//
 
@@ -58,7 +32,7 @@ export default MenuBarView.extend({
 		// call superclass method
 		//
 		MenuBarView.prototype.onRender.call(this);
-		
+
 		// show dropdown menus
 		//
 		this.showChildView('file', new FileMenuView());

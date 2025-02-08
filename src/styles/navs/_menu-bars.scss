@@ -51,10 +51,6 @@ $shadow: 3px 3px 7px rgba(black, 33%);
 			border: none;
 			margin-bottom: 0;
 
-			& + li {
-				margin-left: -5px;
-			}
-
 			> a {
 				display: flex;
 				padding: 5px 10px;
@@ -209,9 +205,11 @@ body:not(.binary):not(.flat-menus):not(.flat.auto-menus) {
 				// hide help menus
 				//
 
+				/*
 				&.help {
 					display: none;
 				}
+				*/
 			}
 		}
 	}

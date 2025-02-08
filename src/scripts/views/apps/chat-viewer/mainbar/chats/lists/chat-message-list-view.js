@@ -38,12 +38,14 @@ export default CollectionView.extend(_.extend({}, SelectableContainable, {
 			// options
 			//
 			preferences: this.options.preferences,
-			selected: this.options.selected,
 			show_elapsed_time: this.options.show_elapsed_time,
+
+			// state
+			//
+			selected: this.options.selected,
 
 			// capabilities
 			//
-			features: this.options.features,
 			editable: this.options.editable,
 
 			// callbacks

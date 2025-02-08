@@ -104,7 +104,7 @@ export default CardView.extend(_.extend({}, Expandable, {
 
 	edit: function() {
 		import(
-			'../../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/edit/contacts/edit-user-address-dialog-view.js'
+			'../../../../../../../views/apps/profile-viewer/dialogs/profile/edit/contacts/edit-user-address-dialog-view.js'
 		).then((EditUserAddressDialogView) => {
 			
 			// show edit dialog

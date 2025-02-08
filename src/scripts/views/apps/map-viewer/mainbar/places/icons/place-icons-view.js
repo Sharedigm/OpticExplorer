@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import IconsView from '../../../../../../views/items/icons/icons-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
+import ContainableMappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/containable-mappable.js';
 import PlaceIconView from '../../../../../../views/apps/map-viewer/mainbar/places/icons/place-icon-view.js';
 
 export default IconsView.extend(_.extend({}, ContainableMappable, {

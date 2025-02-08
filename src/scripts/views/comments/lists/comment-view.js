@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connection from '../../../models/users/connections/connection.js';
+import Connection from '../../../models/connections/connection.js';
 import Reply from '../../../models/comments/reply.js';
 import UserPreferences from '../../../models/preferences/user-preferences.js';
 import Items from '../../../collections/storage/items.js';
@@ -362,14 +362,21 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
+			let message = this.model.get('message');
+
+			// format / limit message
+			//
+			if (message) {
+				message = HtmlUtils.htmlToText(message || '').firstWords(15);
+			}
 
 			// confirm delete
 			//
 			application.confirm({
 				icon: '<i class="fa fa-trash-alt"></i>',
 				title: "Delete Comment",
-				message: "Are you sure you want to delete the comment " + '"' +
-					HtmlUtils.htmlToText(this.get('message')).firstWords(15) + '"?',
+				message: message? "Are you sure you want to delete the comment " + '"' +
+					message + '"?' : "Are you sure you want to delete this comment?",
 
 				// callbacks
 				//
@@ -397,12 +404,19 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 	templateContext: function() {
 		return {
+
+			// options
+			//
 			href: application.getUrl() + '#users/' + this.get('user').get('id'),
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
-			is_current: this.get('user').isCurrent(),
 			name: this.get('user').get('short_name'),
 			message: HtmlUtils.returnify(HtmlUtils.linkify(this.get('message'))),
+
+			// state
+			//
+			is_current: this.get('user').isCurrent(),
+			collapsed: this.options.collapsed,
 
 			// details
 			//
@@ -411,10 +425,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 			has_images: this.get('attachments').hasItems('visual'),
 			num_images: this.get('attachments').numItems('visual'),
 			when: this.model.when(),
-
-			// options
-			//
-			collapsed: this.options.collapsed,
 
 			// capabilities
 			//
@@ -577,8 +587,10 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 				// options
 				//
-				features: this.options.features,
 				preferences: this.options.preferences,
+
+				// state
+				//
 				collapsed: this.options.collapsed,
 				selected: this.options.selected,
 
@@ -618,7 +630,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 				// options
 				//
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks
@@ -640,7 +651,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 				// options
 				//
 				comment: this.model,
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks
@@ -682,7 +692,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 			// options
 			//
-			features: this.options.features,
 			preferences: this.options.preferences,
 
 			// callbacks

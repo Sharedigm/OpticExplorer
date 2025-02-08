@@ -32,7 +32,7 @@ export default IconView.extend({
 				<div class="spinner"></div>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="name" spellcheck="false"><%= name %></div>
 		</div>

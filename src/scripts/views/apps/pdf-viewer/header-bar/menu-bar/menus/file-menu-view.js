@@ -23,53 +23,13 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="open-file"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="save-as"><i class="fa fa-save"></i>Save As<span class="shift command shortcut">S</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="download-file"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-file"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
-	disabled: {
-		'download': true
-	},
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-file': 'onClickOpenFile',
 		'click .show-info': 'onClickShowInfo',
 		'click .save-as': 'onClickSaveAs',
 		'click .download-file': 'onClickDownloadFile',
-		'click .close-file': 'onClickCloseFile',
+		'click .close-window': 'onClickCloseWindow'
 	},
 
 	//
@@ -85,7 +45,7 @@ export default FileMenuView.extend({
 			'show-info': this.parent.app.model != null,
 			'save-as': isSignedIn,
 			'download-file': this.parent.app.model != null,
-			'close-file': true
+			'close-window': true
 		};
 	},
 

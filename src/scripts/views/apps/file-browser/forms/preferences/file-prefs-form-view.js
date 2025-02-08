@@ -95,6 +95,7 @@ export default PreferencesFormView.extend({
 		'change .show-places input': 'onChangeShowPlaces',
 		'change .show-links input': 'onChangeShowLinks',
 		'change .show-shares input': 'onChangeShowShares',
+		'change .show-owners input': 'onChangeShowOwners',
 		'change .show-indices input': 'onChangeShowIndices',
 		'change .show-hidden-files input': 'onChangeShowHiddenFiles',
 		'change .show-thumbnails input': 'onChangeShowThumbnails',
@@ -115,6 +116,8 @@ export default PreferencesFormView.extend({
 				return this.$el.find('.show-links input').is(':checked');
 			case 'show_shares':
 				return this.$el.find('.show-shares input').is(':checked');
+			case 'show_owners':
+				return this.$el.find('.show-owners input').is(':checked');
 			case 'show_indices':
 				return this.$el.find('.show-indices input').is(':checked');
 			case 'show_hidden_files':
@@ -135,12 +138,28 @@ export default PreferencesFormView.extend({
 			show_places: this.getValue('show_places'),
 			show_links: this.getValue('show_links'),
 			show_shares: this.getValue('show_shares'),
+			show_owners: this.getValue('show_owners'),
 			show_indices: this.getValue('show_indices'),
 			show_hidden_files: this.getValue('show_hidden_files'),
 			show_thumbnails: this.getValue('show_thumbnails'),
 			show_image_names: this.getValue('show_image_names'),
 			show_file_extensions: this.getValue('show_file_extensions'),
 			show_clipboard_confirm: this.getValue('show_clipboard_confirm')
+		};
+	},
+
+	templateContext: function() {
+		return {
+			show_places: this.model.get('show_places'),
+			show_links: this.model.get('show_links'),
+			show_shares: this.model.get('show_shares'),
+			show_owners: this.model.get('show_owners'),
+			show_indices: this.model.get('show_indices'),
+			show_hidden_files: this.model.get('show_hidden_files'),
+			show_thumbnails: this.model.get('show_thumbnails'),
+			show_image_names: this.model.get('show_image_names'),
+			show_file_extensions: this.model.get('show_file_extensions'),
+			show_clipboard_confirm: this.model.get('show_clipboard_confirm')
 		};
 	},
 

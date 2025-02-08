@@ -17,4 +17,16 @@
 
 import HelpMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/help-menu-view.js';
 
-export default HelpMenuView.extend();
+export default HelpMenuView.extend({
+
+	//
+	// attributes
+	//
+
+	events: {
+		'click .view-about-info': 'onClickViewAboutInfo',
+		'click .view-app': 'onClickViewApp',
+		'click .view-topic': 'onClickViewTopic',
+		'click .contact-us': 'onClickContactUs'
+	}
+});

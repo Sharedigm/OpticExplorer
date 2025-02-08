@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import CardsView from '../../../../../../views/items/cards/cards-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
+import ContainableMappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/containable-mappable.js';
 import UserCardView from '../../../../../../views/apps/profile-browser/mainbar/users/cards/user-card-view.js';
 
 export default CardsView.extend(_.extend({}, ContainableMappable, {

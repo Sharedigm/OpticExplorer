@@ -17,9 +17,10 @@
 
 import BaseView from '../../../../views/base-view.js';
 import ScrollableContainable from '../../../../views/behaviors/containers/scrollable-containable.js';
+import FullScreenable from '../../../../views/behaviors/layout/full-screenable.js';
 import Timeable from '../../../../views/behaviors/effects/timeable.js';
 
-export default BaseView.extend(_.extend({}, ScrollableContainable, Timeable, {
+export default BaseView.extend(_.extend({}, ScrollableContainable, FullScreenable, Timeable, {
 
 	//
 	// attributes

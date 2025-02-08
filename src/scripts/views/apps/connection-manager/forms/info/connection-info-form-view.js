@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import Connections from '../../../../../collections/users/connections/connections.js';
+import Connections from '../../../../../collections/connections/connections.js';
 import ShareRequests from '../../../../../collections/storage/sharing/share-requests.js';
 import InfoFormView from '../../../../../views/apps/common/forms/info-form-view.js';
 import UserIconView from '../../../../../views/apps/profile-browser/mainbar/users/icons/user-icon-view.js';
@@ -32,77 +32,28 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	className: 'form-vertical',
-
-	template: template(`
-		<div class="items">
-			<div class="icon-grid"></div>
-		</div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general tab<% if (tab == 'general') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general.tab-pane">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="history tab<% if (tab == 'history') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".history.tab-pane">
-					<i class="fa fa-calendar-alt"></i>
-					<label>History</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="mutual tab<% if (tab == 'mutual') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".mutual.tab-pane">
-					<i class="fa fa-user-friends"></i>
-					<label>Mutual</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="sent tab<% if (tab == 'sent') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".sent.tab-pane">
-					<i class="fa fa-share"></i>
-					<label>Sent</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="received tab<% if (tab == 'received') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".received.tab-pane">
-					<i class="fa fa-reply"></i>
-					<label>Received</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-			<div role="tabpanel" class="general tab-pane<% if (tab == 'general') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="history tab-pane<% if (tab == 'history') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="mutual tab-pane<% if (tab == 'mutual') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="sent tab-pane<% if (tab == 'sent') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="received tab-pane<% if (tab == 'received') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: '.icon-grid',
-		general: '.general.tab-pane',
-		history: '.history.tab-pane',
-		mutual: '.mutual.tab-pane',
-		sent: '.sent.tab-pane',
-		received: '.received.tab-pane',
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "History",
+			"icon": "fa fa-calendar-alt"
+		},
+		{
+			"name": "Mutual",
+			"icon": "fa fa-user-friends"
+		},
+		{
+			"name": "Sent",
+			"icon": "fa fa-share"
+		},
+		{
+			"name": "Received",
+			"icon": "fa fa-reply"
+		}
+	],
 
 	events: {
 		'mousedown': 'onMouseDown'
@@ -180,11 +131,13 @@ export default InfoFormView.extend({
 	// rendering methods
 	//
 
-	templateContext: function() {
-		return {
-			index: this.options.index,
-			tab: this.options.tab || 'general'
-		};
+	onRender: function() {
+		this.showRegions();
+
+		// hide tabs
+		//
+		this.hideTab('sent');
+		this.hideTab('received');
 	},
 
 	showRegion: function(name) {
@@ -218,6 +171,18 @@ export default InfoFormView.extend({
 			//
 			selectable: false
 		}));
+	},
+
+	//
+	// tab hiding and showing methods
+	//
+
+	hideTab: function(name) {
+		this.$el.find('.' + name + '-tab').hide();
+	},
+
+	showTab: function(name) {
+		this.$el.find('.' + name + '-tab').show();
 	},
 
 	//
@@ -285,6 +250,15 @@ export default InfoFormView.extend({
 			// callbacks
 			//
 			success: (collection) => {
+
+				// show tab
+				//
+				if (collection.length > 0) {
+					this.showTab('sent');
+				}
+
+				// show panel
+				//
 				this.showSentPane(collection);
 			}
 		});
@@ -296,6 +270,15 @@ export default InfoFormView.extend({
 			// callbacks
 			//
 			success: (collection) => {
+
+				// show tab
+				//
+				if (collection.length > 0) {
+					this.showTab('received');
+				}
+
+				// show panel
+				//
 				this.showReceivedPane(collection);
 			}
 		});

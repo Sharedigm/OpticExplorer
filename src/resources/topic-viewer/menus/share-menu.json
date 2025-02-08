@@ -1,0 +1,76 @@
+{
+	"items": [
+		{
+			"class": "share-topic",
+			"group": "topic-option",
+			"icon": "fa fa-hashtag",
+			"name": "Topic"
+		},
+		{
+			"class": "like post",
+			"group": "like post-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Post",
+			"shortcut": "command-="
+		},
+		{
+			"class": "reply-to post",
+			"group": "reply post-option",
+			"icon": "fa fa-comment",
+			"name": "Comment on Post",
+			"shortcut": "enter"
+		},
+		{
+			"class": "like comment",
+			"group": "like comment-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Comment",
+			"shortcut": "command-="
+		},
+		{
+			"class": "reply-to comment",
+			"group": "reply comment-option",
+			"icon": "fa fa-reply",
+			"name": "Reply to Comment",
+			"shortcut": "enter"
+		},
+		{
+			"class": "like reply",
+			"group": "like reply-option",
+			"icon": "fa fa-thumbs-up",
+			"name": "Like Reply",
+			"shortcut": "command-="
+		},
+		{
+			"class": "reply-to reply",
+			"group": "reply reply-option",
+			"icon": "fa fa-reply",
+			"name": "Reply to Reply",
+			"shortcut": "enter"
+		},
+		{
+			"class": "share-by-topic",
+			"group": "post-option",
+			"icon": "fa fa-newspaper",
+			"name": "By Discussion Topic"
+		},
+		{
+			"class": "share-by-message",
+			"group": "post-option",
+			"icon": "fa fa-comments",
+			"name": "By Chat Messsage"
+		},
+		{
+			"class": "share-by-link",
+			"group": "post-option",
+			"icon": "fa fa-link",
+			"name": "By Link"
+		},
+		{
+			"class": "share-location",
+			"group": "topic-option",
+			"icon": "fa fa-map-marker-alt",
+			"name": "Location"
+		}
+	]
+}

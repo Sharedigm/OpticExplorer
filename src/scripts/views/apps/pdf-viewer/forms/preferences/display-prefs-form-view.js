@@ -26,32 +26,19 @@ export default PreferencesFormView.extend({
 	//
 
 	template: template(`
-		<div class="window-size form-group">
-			<label class="control-label"><i class="fa fa-arrows-alt"></i>Window Size</label>
-			<div class="controls">
-				<select>
-					<% let keys = Object.keys(sizes); %>
-					<% for (let i = 0; i < keys.length; i++) { %>
-					<% let key = keys[i]; %>
-					<% let width = sizes[key][0]; %>
-					<% let height = sizes[key][1]; %>
-					<option value="<%= key %>"<% if (window_size == key) { %> selected<% } %>><%= key.toTitleCase() %> (<%= width %>x<%= height %>)</option>
-					<% } %>
-				</select>
-		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Window Size" data-content="This is the maximum initial size of the application window."></i>
-			</div>
-		</div>
-		
-		<div class="window-panes form-group">
-			<label class="control-label"><i class="fa fa-th-large"></i>Window Panes</label>
+		<div class="sidebar-panes form-group">
+			<label class="control-label"><i class="fa fa-th-large"></i>Sidebar Panes</label>
 			<div class="controls">
 		
 				<div class="show-sidebar checkbox-inline">
 					<label><input type="checkbox"<% if (show_sidebar) { %> checked<% } %>>Sidebar</label>
 				</div>
+
+				<div class="show-exif-info checkbox-inline">
+					<label><input type="checkbox"<% if (show_exif_info) { %> checked<% } %>>Exif Info</label>
+				</div>
 		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Window Panes" data-content="This is which auxilliary window panes to display."></i>
+				<i class="active fa fa-question-circle" data-toggle="popover" title="Sidebar Panes" data-content="This is which sidebar panes to display."></i>
 			</div>
 		</div>
 		
@@ -67,7 +54,7 @@ export default PreferencesFormView.extend({
 		</div>
 		
 		<div class="sidebar-min-size form-group">
-			<label class="control-label"><i class="fa fa-arrows-alt-h"></i>Sidebar Min Size (px)</label>
+			<label class="control-label"><i class="fa fa-arrows-alt-h"></i>Sidebar Min Size</label>
 			<div class="controls">
 				<div class="range-input"></div>
 		
@@ -96,8 +83,8 @@ export default PreferencesFormView.extend({
 	},
 
 	events: {
-		'change .window-size select': 'onChangeWindowSize',
 		'change .show-sidebar input': 'onChangeShowSideBar',
+		'change .show-exif-info input': 'onChangeShowExifInfo',
 		'change .sidebar-panels input': 'onChangeSideBarPanels',
 	},
 
@@ -107,10 +94,10 @@ export default PreferencesFormView.extend({
 
 	getValue: function(key) {
 		switch (key) {
-			case 'window_size':
-				return this.$el.find('.window-size select').val();		
 			case 'show_sidebar':
 				return this.$el.find('.show-sidebar input').is(':checked');
+			case 'show_exif_info':
+				return this.$el.find('.show-exif-info input').is(':checked');
 			case 'sidebar_size':
 				return this.getChildView('sidebar_size').getValue();
 			case 'sidebar_min_size':
@@ -122,8 +109,8 @@ export default PreferencesFormView.extend({
 
 	getValues: function() {
 		return {
-			window_size: this.getValue('window_size'),
 			show_sidebar: this.getValue('show_sidebar'),
+			show_exif_info: this.getValue('show_exif_info'),
 			sidebar_size: this.getValue('sidebar_size'),
 			sidebar_min_size: this.getValue('sidebar_min_size'),
 			sidebar_panels: this.getValue('sidebar_panels')
@@ -136,11 +123,11 @@ export default PreferencesFormView.extend({
 
 	setValue: function(key, value) {
 		switch (key) {
-			case 'window_size':
-				this.$el.find('.window-size select').val(value);
-				break;
 			case 'show_sidebar':
 				this.$el.find('.show-sidebar input[type="checkbox"]').prop('checked', value);
+				break;
+			case 'show_exif_info':
+				this.$el.find('.show-exif-info input[type="checkbox"]').prop('checked', value);
 				break;
 			case 'sidebar_size':
 				this.getChildView('sidebar_size').setValue(value);
@@ -160,7 +147,6 @@ export default PreferencesFormView.extend({
 
 	templateContext: function() {
 		return {
-			sizes: config.defaults.dialogs.sizes,
 			sidebar_panels: this.model.get('sidebar_panels') || []
 		};
 	},
@@ -212,12 +198,12 @@ export default PreferencesFormView.extend({
 	// event handling methods
 	//
 
-	onChangeWindowSize: function() {
-		this.onChangeValue('window_size', this.getValue('window_size'));
-	},
-
 	onChangeShowSideBar: function() {
 		this.onChangeValue('show_sidebar', this.getValue('show_sidebar'));
+	},
+
+	onChangeShowExifInfo: function() {
+		this.onChangeValue('show_exif_info', this.getValue('show_exif_info'));
 	},
 
 	onChangeSideBarSize: function() {

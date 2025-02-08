@@ -18,7 +18,6 @@
 import Items from '../../../../../../collections/storage/items.js';
 import ShareRequests from '../../../../../../collections/storage/sharing/share-requests.js';
 import FormDialogView from '../../../../../../views/forms/dialogs/form-dialog-view.js';
-import ConnectionManagerView from '../../../../../../views/apps/connection-manager/connection-manager-view.js';
 import ShareItemsMessageFormView from '../../../../../../views/apps/file-browser/sharing/share-requests/forms/share-items-message-form-view.js';
 
 export default FormDialogView.extend({
@@ -26,12 +25,12 @@ export default FormDialogView.extend({
 	//
 	// attributes
 	//
-	
+
 	className: 'focused modal dialog',
 
 	template: template(`
 		<div class="modal-dialog">
-			
+
 			<div class="modal-header">
 				<div class="heading">
 					<div class="icon">
@@ -42,18 +41,18 @@ export default FormDialogView.extend({
 					</div>
 				</div>
 			</div>
-		
+
 			<div class="modal-content">
 				<div class="connection-manager"></div>
 				<div class="panel">
 					<div class="message-form"></div>
 				</div>
-		
+
 				<div class="modal-footer">
 					<div class="notes">
 						<span class="required"></span>Fields are required
 					</div>
-					
+
 					<div class="buttons">
 						<button class="share btn btn-primary">
 							<i class="fa fa-share"></i>Share
@@ -97,7 +96,7 @@ export default FormDialogView.extend({
 	},
 
 	hasSelected: function() {
-		return this.getChildView('connection_manager').hasSelected();
+		return this.hasChildView('connection_manager') && this.getChildView('connection_manager').hasSelected();
 	},
 
 	//
@@ -163,7 +162,7 @@ export default FormDialogView.extend({
 		// submit form
 		//
 		this.shareWith(connections, {
-			
+
 			// callbacks
 			//
 			success: () => {
@@ -179,7 +178,7 @@ export default FormDialogView.extend({
 				// play send sound
 				//
 				application.play('send');
-				
+
 				// close dialog
 				//
 				this.hide();
@@ -219,7 +218,7 @@ export default FormDialogView.extend({
 	},
 
 	onRender: function() {
-		
+
 		// call superclass method
 		//
 		FormDialogView.prototype.onRender.call(this);
@@ -234,21 +233,17 @@ export default FormDialogView.extend({
 	},
 
 	showConnectionManager: function() {
-		this.showChildView('connection_manager', new ConnectionManagerView({
+		this.showChildApp('connection_manager', {
 
 			// options
 			//
 			selected: this.options.connections,
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
 
 			// callbacks
 			//
 			onselect: () => this.onChange(),
 			ondeselect: () => this.onChange()
-		}));
+		});
 	},
 
 	form: function() {

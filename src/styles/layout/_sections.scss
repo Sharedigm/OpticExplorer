@@ -38,11 +38,10 @@ $brand-logo-shadow: drop-shadow(3px 3px 10px rgba(black, 33%));
 
 	&.primary {
 		background-color: var(--primary-color) !important;
-		color: white !important;
+	}
 
-		h1, h2, h3 {
-			color: white !important;
-		}
+	&.secondary {
+		background-color: var(--secondary-color) !important;
 	}
 
 	h2 {
@@ -185,6 +184,10 @@ $brand-logo-shadow: drop-shadow(3px 3px 10px rgba(black, 33%));
 	& + p {
 		margin-top: 15px;
 	}
+
+	.attention {
+		margin: auto;
+	}
 }
 
 //
@@ -270,9 +273,11 @@ body[device="phone"] {
 		> .row {
 			flex-direction: column;
 
+			/*
 			> div + div {
 				margin-top: 20px;
 			}
+			*/
 		}
 	}
 }

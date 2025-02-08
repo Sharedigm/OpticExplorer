@@ -197,6 +197,30 @@ body:not(.binary) {
 						.panels > .panel, label, .expander .btn i {
 							color: white !important;
 						}
+
+						.menu, .menu i {
+							color: white !important;
+
+							li {
+								> a {
+									color: white !important;
+
+									&:hover {
+										color: white !important;
+									}
+								}
+							}
+
+							li.disabled {
+								> a {
+									color: text-colors.$light-color !important;
+
+									&:hover {
+										color: text-colors.$light-color !important;
+									}
+								}
+							}
+						}
 					}
 				}
 			}

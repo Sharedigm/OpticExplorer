@@ -631,7 +631,7 @@ CREATE TABLE `task_attachments` (
 CREATE TABLE `tasks` (
   `id` char(36) NOT NULL COMMENT 'primary key',
   `user_id` char(36) NOT NULL,
-  `project_id` char(36) NOT NULL,
+  `project_id` char(36) DEFAULT NULL,
   `kind` varchar(16) DEFAULT NULL,
   `title` varchar(256) DEFAULT NULL,
   `description` varchar(1024) DEFAULT NULL,

@@ -18,7 +18,27 @@
 export default {
 
 	//
-	// sharing methods
+	// rendering methods
+	//
+
+	showItemByMessage: function(item, chat) {
+		application.launch('chat_viewer', {
+			model: chat,
+			items: [item],
+			message: config.apps.file_browser.share_invitation_message
+		});
+	},
+
+	showItemsByMessage: function(items, chat) {
+		application.launch('chat_viewer', {
+			model: chat,
+			items: items,
+			message: config.apps.file_browser.share_invitation_message
+		});
+	},
+
+	//
+	// selection / sharing methods
 	//
 
 	shareItemByMessage: function(item) {
@@ -33,10 +53,7 @@ export default {
 
 				// show selected chat
 				//
-				application.showChat(chats[0], {
-					items: [item],
-					message: config.apps.file_browser.share_invitation_message
-				});
+				this.showItemByMessage(item, chats[0]);
 			}
 		});
 	},
@@ -53,10 +70,7 @@ export default {
 
 				// show selected chat
 				//
-				application.showChat(chats[0], {
-					items: items,
-					message: config.apps.file_browser.share_invitation_message
-				});
+				this.showItemsByMessage(items, chats[0]);
 			}
 		});
 	},
@@ -86,26 +100,19 @@ export default {
 	//
 
 	showOpenChatsDialog: function(options) {
-		import(
-			'../../../../../views/apps/chat-viewer/dialogs/chats/open-chats-dialog-view.js'
-		).then((OpenChatsDialogView) => {
+		application.loadAppView('chat_viewer', {
+			success: (ChatViewer) => {
+				ChatViewer.showOpenChatsDialog({
 
-			// show open dialog
-			//
-			this.show(new OpenChatsDialogView.default({
-
-				// options
-				//
-				title: "Open Chats",
-
-				// callbacks
-				//
-				onopen: (items) => {
-					if (options && options.onopen) {
-						options.onopen(items);
+					// callbacks
+					//
+					onopen: (items) => {
+						if (options && options.onopen) {
+							options.onopen(items);
+						}
 					}
-				}
-			}));
+				});
+			}
 		});
 	}
 };

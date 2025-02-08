@@ -32,12 +32,12 @@ export default HelpPageView.extend({
 					<img src="<%= logo %>" />
 				</div>
 
-				<% if (config.branding.welcome.splash.brand.logotype) { %>
+				<% if (logotype) { %>
 				<h1 class="brand">
-					<% if (config.branding.welcome.splash.brand.logotype.names) { %>
-					<% let names = config.branding.welcome.splash.brand.logotype.names; %>
+					<% if (logotype.names) { %>
+					<% let names = logotype.names; %>
 					<% let keys = Object.keys(names); %>
-					<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+					<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 					<% } %>
 				</h1>
 				<% } %>
@@ -68,6 +68,7 @@ export default HelpPageView.extend({
 	templateContext: function() {
 		return {
 			logo: config.help.logo.src,
+			logotype: config.branding.welcome.splash.brand.logotype,
 			name: config.help.name,
 			version: config.help.version
 		};
@@ -89,7 +90,8 @@ export default HelpPageView.extend({
 		// set logotype styles
 		//
 		if (config.branding.welcome.splash.brand) {
-			if (config.branding.welcome.splash.brand.logotype.font) {
+			if (config.branding.welcome.splash.brand.logotype &&
+				config.branding.welcome.splash.brand.logotype.font) {
 				application.loadFont(config.branding.welcome.splash.brand.logotype.font);
 			}
 			this.setLogoTypeStyles(config.branding.welcome.splash.brand.logotype);
@@ -97,6 +99,9 @@ export default HelpPageView.extend({
 	},
 
 	setLogoTypeStyles: function(logotype) {
+		if (!logotype) {
+			return;
+		}
 
 		// set font styles
 		//

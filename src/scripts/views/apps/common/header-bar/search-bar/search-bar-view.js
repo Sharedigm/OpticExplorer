@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                                search-bar-view.js                            |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -32,6 +32,14 @@ export default ToolbarView.extend({
 			el: '.searches',
 			replaceElement: true
 		}
+	},
+
+	//
+	// querying methods
+	//
+
+	hasSearch: function() {
+		return this.hasChildView('searches');
 	},
 
 	//

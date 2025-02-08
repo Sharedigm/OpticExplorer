@@ -93,18 +93,6 @@ export default ToolbarContainerView.extend({
 		}
 	},
 
-	setAllToolbarsVisible: function(isVisible) {
-		for (let i = 0; i < this.toolbars.length; i++) {
-			let toolbar = this.toolbars[i];
-
-			// set visibility of optional toolbars
-			//
-			if (this.isOptionalToolbarKind(toolbar)) {
-				this.setToolbarVisible(toolbar, isVisible);
-			}
-		}
-	},
-
 	//
 	// rendering methods
 	//

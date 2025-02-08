@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import FileFavorites from '../../../../../models/favorites/file-favorites.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
 import FavoritesView from '../../../../../views/apps/file-browser/sidebar/favorites/favorites-view.js';
 
@@ -31,14 +30,14 @@ export default SideBarPanelView.extend({
 	template: template(`
 		<div class="header">
 			<label><i class="fa fa-star"></i>Favorites</label>
-		
+
 			<div class="buttons">
 				<button type="button" class="add-favorites success btn btn-sm" data-toggle="tooltip" title="Add Favorites">
 					<i class="fa fa-plus"></i>
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="items"></div>
 	`),
 
@@ -62,21 +61,18 @@ export default SideBarPanelView.extend({
 		// call superclass method
 		//
 		SideBarPanelView.prototype.onRender.call(this);
-		
+
 		// fetch favorites
 		//
-		if (!this.constructor.favorites && application.session.user) {
+		if (!this.app.hasFavorites() && application.isSignedIn()) {
 			this.request = this.fetchAndShowFavorites();
 		} else {
-			this.showFavorites(this.constructor.favorites);
+			this.showFavorites(this.app.getFavorites());
 		}
 	},
 
 	fetchAndShowFavorites: function() {
-		return new FileFavorites({
-			category: 'file',
-			defaults: config.apps.file_browser.favorites
-		}).clear().fetchByUser(application.session.user, {
+		return this.app.getFavorites().clear().fetchByUser(application.session.user, {
 
 			// callbacks
 			//
@@ -93,7 +89,7 @@ export default SideBarPanelView.extend({
 				if (Object.keys(model.attributes).length == 0) {
 					model.reset();
 				}
-				this.constructor.favorites = model;
+				this.app.setFavorites(model);
 				this.showFavorites(model);
 			}
 		});
@@ -109,8 +105,10 @@ export default SideBarPanelView.extend({
 			// options
 			//
 			preferences: UserPreferences.create('file_browser', {
-				view_kind: this.options.view_kind
+				// view_kind: this.options.view_kind
+				view_kind: 'lists'
 			}),
+			empty: "No favorites.",
 
 			// capabilities
 			//
@@ -128,51 +126,11 @@ export default SideBarPanelView.extend({
 	},
 
 	//
-	// dialog rendering methods
-	//
-
-	showOpenDialog: function() {
-		import(
-			'../../../../../views/apps/file-browser/dialogs/files/open-items-dialog-view.js'
-		).then((OpenItemsDialogView) => {
-
-			// show open dialog
-			//
-			this.getParentView('app').show(new OpenItemsDialogView.default({
-				model: application.isSignedIn()? application.getDirectory() : this.model,
-
-				// options
-				//
-				title: "Add Favorites",
-
-				// callbacks
-				//
-				onopen: (items) => {
-
-					// add selected items to favorites
-					//
-					this.getChildView('items').addFavorites(items, {
-
-						// callbacks
-						//
-						success: () => {
-
-							// play add sound
-							//
-							application.play('add');
-						}
-					});
-				}
-			}));
-		});
-	},
-
-	//
 	// mouse event handling methods
 	//
 
 	onClickAddFavorites: function() {
-		this.showOpenDialog();
+		this.app.showAddFavoritesDialog();
 	},
 
 	//

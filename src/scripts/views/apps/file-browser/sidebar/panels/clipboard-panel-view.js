@@ -18,10 +18,10 @@
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
 import BaseView from '../../../../../views/base-view.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
-import Openable from '../../../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../../../views/apps/common/behaviors/opening/item-openable.js';
 import FilesView from '../../../../../views/apps/file-browser/mainbar/files/files-view.js';
 
-export default SideBarPanelView.extend(_.extend({}, Openable, {
+export default SideBarPanelView.extend(_.extend({}, ItemOpenable, {
 
 	//
 	// attributes
@@ -93,41 +93,45 @@ export default SideBarPanelView.extend(_.extend({}, Openable, {
 	},
 
 	showClipboard: function() {
+		if (!this.model) {
+			this.showEmptyClipboard();
+			return;
+		}
 
 		// show file icons
 		//
-		if (this.model) {
-			this.showChildView('items', new FilesView({
-				model: this.model,
-				collection: this.model.contents,
+		this.showChildView('items', new FilesView({
+			model: this.model,
+			collection: this.model.contents,
 
-				// options
-				//
-				preferences: UserPreferences.create('file_browser', {
-					view_kind: this.options.view_kind
-				}),
-				empty: "No items.",
+			// options
+			//
+			preferences: UserPreferences.create('file_browser', {
+				view_kind: this.options.view_kind
+			}),
+			empty: "No items.",
 
-				// capabilities
-				//
-				selectable: true,
-				editable: false,
-				draggable: false,
-				droppable: true,
+			// capabilities
+			//
+			selectable: true,
+			editable: false,
+			draggable: false,
+			droppable: true,
 
-				// callbacks
-				//
-				onopen: () => {
-					this.openItems(this.getSelectedModels());
-				}
-			}));
-		} else {
-			this.showChildView('items', new BaseView({
-				tagName: 'ul',
-				className: 'empty',
-				template: template('<li>No clipboard.</li>')		
-			}));
-		}
+			// callbacks
+			//
+			onopen: () => {
+				this.openItems(this.getSelectedModels());
+			}
+		}));
+	},
+
+	showEmptyClipboard: function() {
+		this.showChildView('items', new BaseView({
+			tagName: 'ul',
+			className: 'empty',
+			template: template('<li>No clipboard.</li>')
+		}));
 	},
 
 	//

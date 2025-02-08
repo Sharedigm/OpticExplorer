@@ -113,7 +113,7 @@ export default TreeView.extend(_.extend({}, DirectoryTreeViewable, FileDroppable
 	getName: function() {
 		return this.model.getName() || 'Home';
 	},
-	
+
 	className: function() {
 		let name = '';
 
@@ -148,16 +148,6 @@ export default TreeView.extend(_.extend({}, DirectoryTreeViewable, FileDroppable
 		return name;
 	},
 
-	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;			
-		}
-		return false;
-	},
-
 	//
 	// filtering methods
 	//
@@ -170,57 +160,85 @@ export default TreeView.extend(_.extend({}, DirectoryTreeViewable, FileDroppable
 			return true;
 		}
 	},
-	
+
 	//
 	// rendering methods
 	//
 
-	getIcon: function() {
-		let name = this.model.getName() || 'Home';
-		let icons = config.files.folders.names[name.toTitleCase()];
+	getSpecialIcon: function(icons) {
 		let className;
 
-		if (icons) {
-
-			// use for custom icon
-			//
-			if (typeof icons.font == 'string') {
-				className = icons.font;
-			} else {
-
-				// select empty or full icon
-				//
-				if (this.model.isEmpty()) {
-					className = icons.font[0];
-				} else if (this.model.isFull()) {
-					className = icons.font[1];
-				} else {
-					className = icons.font[0];
-				}
-			}
+		if (typeof icons.font == 'string') {
+			className = icons.font;
 		} else {
 
-			// use standard icons
+			// select empty or full icon, defaulting to empty
 			//
 			if (this.model.isEmpty()) {
-				className = this.isCollapsed()? this.emptyFolderIcon : this.emptyFolderOpenIcon;
-			} else if (this.model.isAudioAlbum()) {
-				className = config.files.folders.albums.audio.font;
-			} else if (this.model.isImageAlbum()) {
-				className = config.files.folders.albums.image.font;
-			} else if (this.model.isVideoAlbum()) {
-				className = config.files.folders.albums.video.font;
+				className = icons.font[0];
 			} else if (this.model.isFull()) {
-				className = this.isCollapsed()? this.folderIcon : this.folderOpenIcon;
+				className = icons.font[1];
 			} else {
-				className = this.isCollapsed()? this.emptyFolderIcon : this.emptyFolderOpenIcon;
+				className = icons.font[0];
 			}
 		}
 
 		return '<i class="' + className + '"></i>';
 	},
 
-	templateContext: function() {		
+	getCustomIcon: function(icons) {
+		let className;
+
+		if (typeof icons.font == 'string') {
+			className = icons.font;
+		} else {
+
+			// select empty or full icon, defaulting to full
+			//
+			if (this.model.isEmpty()) {
+				className = icons.font[0];
+			} else {
+				className = icons.font[1];
+			}
+		}
+
+		return '<i class="' + className + '"></i>';
+	},
+
+	getDefaultIcon: function() {
+		let className;
+
+		if (this.model.isAudioAlbum()) {
+			className = config.files.folders.albums.audio.font;
+		} else if (this.model.isImageAlbum()) {
+			className = config.files.folders.albums.image.font;
+		} else if (this.model.isVideoAlbum()) {
+			className = config.files.folders.albums.video.font;
+		} else if (this.model.isEmpty()) {
+			className = this.isCollapsed()? this.emptyFolderIcon : this.emptyFolderOpenIcon;
+		} else {
+			className = this.isCollapsed()? this.folderIcon : this.folderOpenIcon;
+		}
+
+		return '<i class="' + className + '"></i>';
+	},
+
+	getIcon: function() {
+		let name = this.getName().toTitleCase();
+		let icons = config.files.folders.names[name];
+
+		// return special, custom or default icon
+		//
+		if (icons && (name == 'Trash' || name == '.Clipboard')) {
+			return this.getSpecialIcon(icons);
+		} else if (icons) {
+			return this.getCustomIcon(icons);
+		} else {
+			return this.getDefaultIcon();
+		}
+	},
+
+	templateContext: function() {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
@@ -243,12 +261,6 @@ export default TreeView.extend(_.extend({}, DirectoryTreeViewable, FileDroppable
 		this.showChildView('badges', new ItemBadgesView({
 			model: this.model
 		}));
-
-		/*
-		this.$el.find('> .info .badges').append(new ItemBadgesView({
-			model: this.model
-		}).render().$el.find('.badge'));
-		*/
 	},
 
 	onRender: function() {

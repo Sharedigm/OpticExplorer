@@ -1,0 +1,168 @@
+{
+	"items": [
+		{
+			"class": "search-by-name",
+			"group": "search-by",
+			"icon": "fa fa-font",
+			"name": "By Name",
+			"select": true
+		},
+		{
+			"class": "search-by-kind",
+			"group": "search-by",
+			"icon": "fa fa-file",
+			"name": "By Kind",
+			"select": true
+		},
+		{
+			"class": "search-by-size",
+			"group": "search-by",
+			"icon": "fa fa-download",
+			"name": "By Size",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "search-by-keyword",
+			"group": "search-by",
+			"icon": "fa fa-key",
+			"name": "By Keyword",
+			"select": true
+		},
+		{
+			"class": "search-by-meaning",
+			"group": "search-by",
+			"icon": "fa fa-lightbulb",
+			"name": "By Meaning",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "search-by-date",
+			"icon": "fa fa-calendar-alt",
+			"name": "By Date",
+			"select": true,
+			"menu": [
+				{
+					"class": "search-by-create-date",
+					"group": "search-by",
+					"icon": "fa fa-magic",
+					"name": "Create Date",
+					"select": true
+				},
+				{
+					"class": "search-by-modify-date",
+					"group": "search-by",
+					"icon": "fa fa-edit",
+					"name": "Modify Date",
+					"select": true
+				},
+				{
+					"class": "search-by-access-date",
+					"group": "search-by",
+					"icon": "fa fa-eye",
+					"name": "Access Date",
+					"select": true
+				}
+			]
+		},
+		{
+			"class": "photo",
+			"icon": "fa fa-image",
+			"name": "By Photo",
+			"select": true,
+			"menu": [
+				{
+					"class": "search-by-resolution",
+					"group": "search-by",
+					"icon": "fa fa-arrows-alt",
+					"name": "Resolution",
+					"select": true
+				},
+				{
+					"class": "search-by-make-model",
+					"group": "search-by",
+					"icon": "fa fa-camera",
+					"name": "Make / Model",
+					"select": true
+				},
+				{
+					"class": "search-by-focal-length",
+					"group": "search-by",
+					"icon": "fa fa-arrows-alt-h",
+					"name": "Focal Length",
+					"select": true
+				},
+				{
+					"class": "search-by-aperture",
+					"group": "search-by",
+					"icon": "fa fa-dot-circle",
+					"name": "Aperture",
+					"select": true
+				},
+				{
+					"class": "search-by-exposure",
+					"group": "search-by",
+					"icon": "fa fa-clock",
+					"name": "Exposure",
+					"select": true
+				},
+				{
+					"class": "search-by-iso",
+					"group": "search-by",
+					"icon": "fa fa-film",
+					"name": "ISO",
+					"select": true
+				},
+				{
+					"class": "search-by-capture-date",
+					"group": "search-by",
+					"icon": "fa fa-calendar-alt",
+					"name": "Capture Date",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "sharing",
+			"icon": "fa fa-share",
+			"name": "By Sharing",
+			"select": true,
+			"menu": [
+				{
+					"class": "search-by-shared-with-me",
+					"group": "search-by",
+					"icon": "fa fa-reply",
+					"name": "Shared with Me",
+					"select": true
+				},
+				{
+					"class": "search-by-shared-by-me",
+					"group": "search-by",
+					"icon": "fa fa-share",
+					"name": "Shared by Me",
+					"select": true
+				},
+				{
+					"class": "search-by-links",
+					"group": "search-by",
+					"icon": "fa fa-link",
+					"name": "Links",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "index-items",
+			"icon": "fa fa-list",
+			"name": "Index Items"
+		},
+		{
+			"class": "unindex-items",
+			"icon": "fa fa-close",
+			"name": "Unindex Items"
+		}
+	]
+}

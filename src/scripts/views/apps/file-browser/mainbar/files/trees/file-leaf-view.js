@@ -15,6 +15,9 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import AudioFile from '../../../../../../models/storage/media/audio-file.js';
+import ImageFile from '../../../../../../models/storage/media/image-file.js';
+import VideoFile from '../../../../../../models/storage/media/video-file.js';
 import LeafView from '../../../../../../views/items/trees/leaf-view.js';
 import DirectoryTreeViewable from '../../../../../../views/apps/file-browser/mainbar/files/trees/directory-tree-viewable.js';
 import ItemBadgesView from '../../../../../../views/apps/file-browser/mainbar/files/badges/item-badges-view.js';
@@ -30,7 +33,7 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 		<div class="info">
 			
 			<div class="icon">
-				<i class="fa fa-spinner"></i>
+				<i class="fa fa-spinner spinning"></i>
 				<%= icon %>
 			</div>
 			
@@ -78,7 +81,6 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 
 	className: function() {
 		let name = '';
-		let extension = this.model.getFileExtension().toLowerCase();
 
 		// add system tag
 		//
@@ -86,14 +88,24 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 			name += 'system';
 		}
 
-		// add extension
+		// tag media file icons
 		//
-		if (extension != '') {
+		if (this.model instanceof AudioFile) {
 			if (name != '') {
 				name += ' ';
 			}
-			name += extension;
-		} 
+			name += 'audio';
+		} else if (this.model instanceof ImageFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'image';
+		} else if (this.model instanceof VideoFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'video';
+		}
 
 		// add 'file item'
 		//
@@ -202,16 +214,6 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 			return this.constructor.getIcon(this.model.getName().toLowerCase());
 		}
 	},
-
-	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;		
-		}
-		return false;
-	},
 	
 	//
 	// setting methods
@@ -241,10 +243,9 @@ export default LeafView.extend(_.extend({}, DirectoryTreeViewable, {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
-			owner: this.get('owner'),
+			owner: this.getOwner(),
 			owner_thumbnail_url: this.getOwnerThumbnailUrl(),
-			details: this.getDetails(),
-			geo_orientation: this.model.hasGeoOrientation? this.model.getGeoOrientation() : undefined
+			details: this.getDetails()
 		};
 	},
 

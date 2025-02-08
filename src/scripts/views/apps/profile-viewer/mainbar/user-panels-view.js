@@ -20,13 +20,8 @@ import UserPreferences from '../../../../models/preferences/user-preferences.js'
 import BaseView from '../../../../views/base-view.js';
 import UserProfileHeaderView from '../../../../views/users/profile/user-profile-header-view.js';
 import UserProfileView from '../../../../views/apps/profile-viewer/mainbar/profile/user-profile-view.js';
-import UserNewsView from '../../../../views/apps/profile-viewer/mainbar/news/user-news-view.js';
-import UserConnectionsView from '../../../../views/apps/profile-viewer/mainbar/connections/user-connections-view.js';
 import UserFilesView from '../../../../views/apps/profile-viewer/mainbar/files/user-files-view.js';
 import UserPhotosView from '../../../../views/apps/profile-viewer/mainbar/photos/user-photos-view.js';
-import ConnectionRequestsView from '../../../../views/users/connection-requests/connection-requests-view.js';
-import UserNotificationsView from '../../../../views/apps/common/notifications/user-notifications-view.js';
-import UserSharingView from '../../../../views/apps/profile-viewer/mainbar/sharing/user-sharing-view.js';
 
 export default BaseView.extend({
 
@@ -77,31 +72,6 @@ export default BaseView.extend({
 					<label>Photos</label>
 				</a>
 			</li>
-		
-			<% if (false) { %>
-			<% if (is_current) { %>
-			<li role="presentation" class="requests tab<% if (nav == 'requests') { %> active<% } %>" style="display:none">
-				<a role="tab" data-toggle="tab" href=".requests.tab-pane" class="visible-xs-inline">
-					<i class="fa fa-user-plus"></i>
-					<label>Requests</label>>
-				</a>
-			</li>
-		
-			<li role="presentation" class="notifications tab<% if (nav == 'notifications') { %> active<% } %>" style="display:none">
-				<a role="tab" data-toggle="tab" href=".notifications.tab-pane" class="visible-xs-inline">
-					<i class="fa fa-exclamation-triangle"></i>
-					<label>Notifications</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="sharing tab<% if (nav == 'sharing') { %> active<% } %>" style="display:none">
-				<a role="tab" data-toggle="tab" href=".sharing.tab-pane">
-					<i class="fa fa-share"></i>
-					<label>Sharing</label>
-				</a>
-			</li>
-			<% } %>
-			<% } %>
 		</ul>
 		
 		<div class="tab-content">
@@ -118,15 +88,6 @@ export default BaseView.extend({
 			</div>
 		
 			<div role="tabpanel" class="photos tab-pane<% if (nav == 'photos') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="requests tab-pane<% if (nav == 'requests') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="notifications tab-pane<% if (nav == 'notifications') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="sharing tab-pane<% if (nav == 'sharing') { %> active<% } %>">
 			</div>
 		</div>
 	`),
@@ -169,6 +130,10 @@ export default BaseView.extend({
 	//
 	// querying methods
 	//
+
+	hasActiveView: function() {
+		return this.nav != undefined;
+	},
 
 	hasSelected: function() {
 		if (this.hasActiveView()) {
@@ -242,6 +207,12 @@ export default BaseView.extend({
 		} else {
 			this.showPanels(this.options.nav);
 		}
+
+		// hide connections tab
+		//
+		if (!application.hasApp('connection_manager')) {
+			this.hideTab('connections');
+		}
 	},
 
 	showHeader: function() {
@@ -259,6 +230,14 @@ export default BaseView.extend({
 		}));
 	},
 
+	hideTab: function(name) {
+		this.$el.find('.' + name).hide();
+	},
+
+	//
+	// panel rendering methods
+	//
+
 	showPanels: function(nav) {
 		this.showHeader();
 		this.showPanel(nav || 'profile');
@@ -266,7 +245,10 @@ export default BaseView.extend({
 		// show hidden panels
 		//
 		if (!nav || nav == 'profile') {
-			this.fetchAndShowUserNews();
+
+			//  show profile panels
+			//
+			this.showNewsPanel();
 			this.showUserConnections();
 			this.showUserFiles();
 			this.showUserPhotos();
@@ -303,16 +285,7 @@ export default BaseView.extend({
 			case 'photos':
 				this.showUserPhotos();
 				break;
-			case 'requests':
-				this.showConnectionRequests();
-				break;
-			case 'notifications':
-				this.showUserNotifications();
-				break;
-			case 'sharing':
-				this.showUserSharing();
-				break;
-		}	
+		}
 	},
 
 	showProfile: function() {
@@ -339,7 +312,15 @@ export default BaseView.extend({
 			onremove: this.options.onremove
 		}));
 	},
-	
+
+	showNewsPanel: function() {
+		if (application.hasApp('topic_viewer')) {
+			this.fetchAndShowUserNews();
+		} else {
+			this.hideTab('news');
+		}
+	},
+
 	fetchAndShowUserNews: function() {
 		let preferences = UserPreferences.create('topic_viewer');
 
@@ -357,6 +338,15 @@ export default BaseView.extend({
 			// callbacks
 			//
 			success: (model) => {
+
+				// check if view still exists
+				//
+				if (this.isDestroyed()) {
+					return;
+				}
+
+				// update view
+				//
 				this.showUserNews(model);
 			},
 
@@ -367,60 +357,81 @@ export default BaseView.extend({
 				application.error({
 					message: "Could not fetch user preferences.",
 					response: response
-				});	
+				});
 			}
 		});
 	},
 
 	showUserNews: function(preferences) {
-		this.showChildView('news', new UserNewsView({
-			user: this.model,
-
-			// options
-			//
-			nav: this.options.tab,
-			preferences: preferences,
-			collapsed: !preferences.get('show_comments'),
-			condensed: !preferences.get('show_options'),
-			itemsPerPage: preferences.get('items_per_page'),
-			public: this.options.public,
-
-			// capabilities
-			//
-			editable: false,
+		application.loadAppView('topic_viewer', {
 
 			// callbacks
 			//
-			onselect: this.options.onselect,
-			ondeselect: this.options.ondeselect,
-			onopen: this.options.onopen,
-			onadd: this.options.onadd,
-			onremove: this.options.onremove
-		}));
+			success: (TopicViewerView) => {
+				this.showChildView('news', TopicViewerView.getUserTopicView({
+					user: this.model,
+
+					// options
+					//
+					nav: this.options.tab,
+					preferences: preferences,
+					collapsed: !preferences.get('show_comments'),
+					condensed: !preferences.get('show_options'),
+					itemsPerPage: preferences.get('items_per_page'),
+					public: this.options.public,
+
+					// capabilities
+					//
+					editable: false,
+
+					// callbacks
+					//
+					onselect: this.options.onselect,
+					ondeselect: this.options.ondeselect,
+					onopen: this.options.onopen,
+					onadd: this.options.onadd,
+					onremove: this.options.onremove
+				}));
+			}
+		});
 	},
 
 	showUserConnections: function() {
-		let preferences = UserPreferences.create('connection_manager');
 
-		this.showChildView('connections', new UserConnectionsView({
-			model: this.model,
+		// check if we can show connections
+		//
+		if (!application.hasApp('connection_manager')) {
+			this.$el.find('.connections').hide();
+			return;
+		}
 
-			// options
-			//
-			preferences: preferences,
-
-			// capabilities
-			//
-			selectable: true,
+		application.loadAppView('connection_manager', {
 
 			// callbacks
 			//
-			onselect: this.options.onselect,
-			ondeselect: this.options.ondeselect,
-			onopen: this.options.onopen,
-			onadd: this.options.onadd,
-			onremove: this.options.onremove
-		}));
+			success: (ConnectionManagerView) => {
+				this.showChildView('connections', ConnectionManagerView.getUserConnectionsView({
+					model: this.model,
+					load: true,
+
+					// options
+					//
+					preferences: UserPreferences.create('connection_manager'),
+
+					// capabilities
+					//
+					selectable: true,
+
+					// callbacks
+					//
+					onselect: this.options.onselect,
+					ondeselect: this.options.ondeselect,
+					onopen: this.options.onopen,
+					onadd: this.options.onadd,
+					onremove: this.options.onremove
+				}));
+			}
+		});
 	},
 
 	showUserFiles: function() {
@@ -462,25 +473,6 @@ export default BaseView.extend({
 			// callbacks
 			//
 			onopen: this.options.onopen
-		}));
-	},
-
-	showConnectionRequests: function() {
-		this.showChildView('requests', new ConnectionRequestsView({
-			model: this.model
-		}));
-	},
-
-	showUserNotifications: function() {
-		this.showChildView('notifications', new UserNotificationsView({
-			model: this.model
-		}));
-	},
-
-	showUserSharing: function() {
-		this.showChildView('sharing', new UserSharingView({
-			model: this.model,
-			nav: this.options.tab
 		}));
 	},
 

@@ -1,0 +1,68 @@
+{
+	"items": [
+		{
+			"class": "select-all",
+			"icon": "fa fa-asterisk",
+			"name": "All",
+			"shortcut": "command-A"
+		},
+		{
+			"class": "select-none",
+			"icon": "fa fa-minus",
+			"name": "None",
+			"shortcut": "shift-command-A"
+		},
+		{
+			"class": "select-invert",
+			"icon": "fa fa-random",
+			"name": "Invert",
+			"shortcut": "shift-command-I"
+		},
+		"divider",
+		{
+			"class": "select-multiple",
+			"icon": "fa fa-ellipsis-h",
+			"name": "Multiple",
+			"shortcut": "shift-command-M",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "select-first",
+			"icon": "fa fa-fast-backward",
+			"name": "First",
+			"shortcut": "up arrow"
+		},
+		{
+			"class": "select-prev",
+			"icon": "fa fa-backward",
+			"name": "Prev",
+			"shortcut": "left arrow"
+		},
+		{
+			"class": "select-next",
+			"icon": "fa fa-forward",
+			"name": "Next",
+			"shortcut": "right arrow"
+		},
+		{
+			"class": "select-last",
+			"icon": "fa fa-fast-forward",
+			"name": "Last",
+			"shortcut": "down arrow"
+		},
+		"divider",
+		{
+			"class": "select-before",
+			"icon": "fa fa-long-arrow-left",
+			"name": "Before",
+			"shortcut": "command-9"
+		},
+		{
+			"class": "select-after",
+			"icon": "fa fa-long-arrow-right",
+			"name": "After",
+			"shortcut": "command-0"
+		}
+	]
+}

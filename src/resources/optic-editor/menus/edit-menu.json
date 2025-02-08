@@ -1,0 +1,165 @@
+{
+	"items": [
+		{
+			"class": "add",
+			"icon": "fa fa-plus",
+			"name": "Add",
+			"menu": [
+				{
+					"class": "add-lens",
+					"icon": "element icon",
+					"name": "Lens",
+					"menu": [
+						{
+							"class": "add-biconvex-lens",
+							"icon": "biconvex icon",
+							"name": "Biconvex"
+						},
+						{
+							"class": "add-biconcave-lens",
+							"icon": "biconcave icon",
+							"name": "Biconcave"
+						},
+						{
+							"class": "add-convex-plano-lens",
+							"icon": "convex-plano icon",
+							"name": "Convex Plano"
+						},
+						{
+							"class": "add-concave-plano-lens",
+							"icon": "concave-plano icon",
+							"name": "Concave Plano"
+						},
+						{
+							"class": "add-plano-convex-lens",
+							"icon": "plano-convex icon",
+							"name": "Plano Convex"
+						},
+						{
+							"class": "add-plano-concave-lens",
+							"icon": "plano-concave icon",
+							"name": "Plano Concave"
+						},
+						{
+							"class": "add-positive-meniscus-lens",
+							"icon": "positive-meniscus icon",
+							"name": "Positive Meniscus"
+						},
+						{
+							"class": "add-negative-meniscus-lens",
+							"icon": "negative-meniscus icon",
+							"name": "Negative Meniscus"
+						},
+						{
+							"class": "add-planar-lens",
+							"icon": "planar icon",
+							"name": "Planar"
+						}
+					]
+				},
+				{
+					"class": "add-stop",
+					"icon": "stop icon",
+					"name": "Stop"
+				},
+				{
+					"class": "add-sensor",
+					"icon": "sensor icon",
+					"name": "Sensor"
+				},
+				{
+					"class": "add-camera",
+					"icon": "fa fa-camera",
+					"name": "Camera"
+				},
+				"divider",
+				{
+					"class": "add-distant-light",
+					"icon": "distant-light icon",
+					"name": "Distant Light"
+				},
+				{
+					"class": "add-point-light",
+					"icon": "fa fa-lightbulb",
+					"name": "Point Light"
+				},
+				{
+					"class": "add-light-beam",
+					"icon": "light-beam icon",
+					"name": "Light Beam"
+				},
+				{
+					"class": "add-light-ray",
+					"icon": "light-ray icon",
+					"name": "Light Ray"
+				},
+				"divider",
+				{
+					"class": "add-scene-object",
+					"icon": "fa fa-arrow-up-long",
+					"name": "Scene Object"
+				},
+				{
+					"class": "add-distant-object",
+					"icon": "fa fa-moon",
+					"name": "Distant Object"
+				}
+			]
+		},
+		{
+			"class": "edit-selected",
+			"icon": "fa fa-pencil",
+			"name": "Edit",
+			"shortcut": "shift-command-E"
+		},
+		{
+			"class": "flip-elements",
+			"icon": "fa fa-repeat",
+			"name": "Flip",
+			"shortcut": "command-F"
+		},
+		"divider",
+		{
+			"class": "cut",
+			"icon": "fa fa-cut",
+			"name": "Cut",
+			"shortcut": "command-X"
+		},
+		{
+			"class": "copy",
+			"icon": "fa fa-copy",
+			"name": "Copy",
+			"shortcut": "command-C"
+		},
+		{
+			"class": "paste",
+			"icon": "fa fa-paste",
+			"name": "Paste",
+			"shortcut": "command-V"
+		},
+		{
+			"class": "put",
+			"icon": "fa fa-file-arrow-down",
+			"name": "Put",
+			"shortcut": "shift-command-V"
+		},
+		{
+			"class": "duplicate",
+			"icon": "fa fa-copy",
+			"name": "Duplicate",
+			"shortcut": "shift-command-D"
+		},
+		{
+			"class": "delete",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete",
+			"shortcut": "delete"
+		},
+		"divider",
+		{
+			"class": "clear-clipboard",
+			"icon": "fa fa-xmark",
+			"name": "Clear Clipboard"
+		}
+	]
+}

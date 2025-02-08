@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import ItemsView from '../../../../../views/items/items-view.js';
-import ContainableMappable from '../../../../../views/maps/behaviors/containable-mappable.js';
+import ContainableMappable from '../../../../../views/apps/map-viewer/mainbar/maps/behaviors/containable-mappable.js';
 import PlaceIconsView from '../../../../../views/apps/map-viewer/mainbar/places/icons/place-icons-view.js';
 import PlaceListView from '../../../../../views/apps/map-viewer/mainbar/places/lists/place-list-view.js';
 import PlaceTilesView from '../../../../../views/apps/map-viewer/mainbar/places/tiles/place-tiles-view.js';

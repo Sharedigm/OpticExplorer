@@ -18,6 +18,7 @@
 import AppView from '../../../views/apps/common/app-view.js';
 import FaceView from '../../../views/apps/decibel-meter/panels/face-view.js';
 import ButtonsView from '../../../views/apps/decibel-meter/panels/buttons-view.js';
+import PreferencesFormView from '../../../views/apps/decibel-meter/forms/preferences/preferences-form-view.js'
 
 export default AppView.extend({
 
@@ -199,5 +200,14 @@ export default AppView.extend({
 		} else {
 			this.$el.find('.face').css('transform', '');
 		}
+	}
+}, {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	}
 });

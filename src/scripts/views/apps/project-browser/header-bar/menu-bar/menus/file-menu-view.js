@@ -23,39 +23,12 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-project"><i class="fa fa-plus"></i>New Project<span class="command shortcut">P</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-projects"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-project': 'onClickNewProject',
 		'click .open-projects': 'onClickOpenProjects',
 		'click .show-info': 'onClickShowInfo',
+		'click .delete-projects': 'onClickDeleteProjects',
 		'click .close-window': 'onClickCloseWindow'
 	},
 
@@ -72,6 +45,7 @@ export default FileMenuView.extend({
 			'new-project': isSignedIn,
 			'open-projects': isSignedIn && hasSelected,
 			'show-info': isSignedIn && hasSelected,
+			'delete-projects': isSignedIn && hasSelected,
 			'close-window': true
 		};
 	},
@@ -90,5 +64,9 @@ export default FileMenuView.extend({
 
 	onClickShowInfo: function() {
 		this.parent.app.showInfoDialog();
+	},
+
+	onClickDeleteProjects: function() {
+		this.parent.app.deleteSelectedProjects();
 	}
 });

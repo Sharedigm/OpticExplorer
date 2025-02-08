@@ -15,27 +15,41 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-$medium-red:			hsl(0, 80%, 60%);
-$medium-raspberry:		hsl(-30, 80%, 60%);
-$medium-red-orange:		hsl(15, 80%, 60%);
-$medium-orange:			hsl(30, 80%, 60%);
-$medium-yellow:			hsl(60, 50%, 60%);
-$medium-lime:			hsl(90, 50%, 50%);
-$medium-green: 			hsl(135, 33%, 50%);
-$medium-teal:			hsl(180, 50%, 40%);
-$medium-aqua:			hsl(200, 50%, 50%);
-$medium-cyan:			hsl(200, 100%, 66%);
-$medium-blue:			hsl(220, 100%, 66%);
-$medium-indigo:			hsl(230, 75%, 50%);
-$medium-violet:			hsl(250, 33%, 50%);
-$medium-plum:			hsl(270, 25%, 50%);
-$medium-purple:			hsl(270, 50%, 50%);
-$medium-magenta:		hsl(280, 33%, 50%);
+$red:					0;
+$red-orange:			15;
+$orange:				30;
+$yellow:				60;
+$lime:					90;
+$green: 				135;
+$teal:					180;
+$cyan:					200;
+$blue:					220;
+$indigo:				230;
+$violet:				250;
+$purple:				270;
+$magenta:				280;
+$raspberry:				330;
+
+$medium-red:			hsl($red, 80%, 60%);
+$medium-red-orange:		hsl($red-orange, 80%, 60%);
+$medium-orange:			hsl($orange, 80%, 60%);
+$medium-yellow:			hsl($yellow, 50%, 60%);
+$medium-lime:			hsl($green, 50%, 50%);
+$medium-green: 			hsl($green, 33%, 50%);
+$medium-teal:			hsl($teal, 50%, 40%);
+$medium-aqua:			hsl($cyan, 50%, 50%);
+$medium-cyan:			hsl($cyan, 100%, 66%);
+$medium-blue:			hsl($blue, 100%, 66%);
+$medium-indigo:			hsl($indigo, 75%, 50%);
+$medium-violet:			hsl($violet, 33%, 50%);
+$medium-plum:			hsl($purple, 25%, 50%);
+$medium-purple:			hsl($purple, 50%, 50%);
+$medium-magenta:		hsl($magenta, 33%, 50%);
+$medium-raspberry:		hsl($raspberry, 80%, 60%);
 $medium-black:			black;
 $medium-white:			white;
 
 $light-red:				lighten($medium-red, 10%);
-$light-raspberry:		lighten($medium-raspberry, 10%);
 $light-red-orange:		lighten($medium-red-orange, 10%);
 $light-orange:			lighten($medium-orange, 10%);
 $light-yellow:			lighten($medium-yellow, 10%);
@@ -50,11 +64,11 @@ $light-violet:			lighten($medium-violet, 10%);
 $light-plum:			lighten($medium-plum, 10%);
 $light-purple:			lighten($medium-purple, 10%);
 $light-magenta:			lighten($medium-magenta, 10%);
+$light-raspberry:		lighten($medium-raspberry, 10%);
 $light-black:			lighten($medium-black, 10%);
 $light-white:			lighten($medium-white, 10%);
 
 $dark-red:				darken($medium-red, 10%);
-$dark-raspberry:		darken($medium-raspberry, 10%);
 $dark-red-orange:		darken($medium-red-orange, 10%);
 $dark-orange:			darken($medium-orange, 10%);
 $dark-yellow:			darken($medium-yellow, 10%);
@@ -69,6 +83,7 @@ $dark-violet:			darken($medium-violet, 10%);
 $dark-plum:				darken($medium-plum, 10%);
 $dark-purple:			darken($medium-purple, 10%);
 $dark-magenta:			darken($medium-magenta, 10%);
+$dark-raspberry:		darken($medium-raspberry, 10%);
 $dark-black:			darken($medium-black, 10%);
 $dark-white:			darken($medium-white, 10%);
 

@@ -28,6 +28,13 @@ export default BaseView.extend({
 	tagName: 'ul',
 	className: 'nav nav-menus',
 
+	menuTemplate: template(`
+		<li class="<%= className %> dropdown"<% if (hidden) { %> style="display:none"<% } %>>
+			<a class="dropdown-toggle" data-toggle="dropdown"><i class="<%= icon %>"></i><span class="dropdown-title"><%= name %></span></a>
+			<div class="dropdown-menu"></div>
+		</li>
+	`),
+
 	events: {
 
 		// mouse events
@@ -58,11 +65,32 @@ export default BaseView.extend({
 		}
 	},
 
+	getMenus: function() {
+		if (this.menus) {
+
+			// get menus from view
+			//
+			return this.menus;
+		} else {
+
+			// get menus from resources
+			//
+			let appView = this.parent.parent;
+			let resources = appView.getResources('menu_bar');
+
+			if (resources) {
+				return resources.menus;
+			} else {
+				return [];
+			}
+		}
+	},
+
 	getMenuNames: function() {
 		return Object.keys(this.regions);
 	},
 
-	getMenus: function() {
+	getMenuViews: function() {
 		let menus = [];
 		let names = this.getMenuNames();
 		for (let i = 0; i < names.length; i++) {
@@ -169,8 +197,43 @@ export default BaseView.extend({
 	},
 
 	//
+	// item rendering methods
+	//
+
+	menuToHtml: function(menu) {
+		return this.menuTemplate({
+			className: menu.class,
+			icon: menu.icon,
+			name: menu.name,
+			hidden: menu.hidden
+		});
+	},
+
+	//
 	// rendering methods
 	//
+
+	template: function(data) {
+		return data.view.toHtml(data.view.getMenus());
+	},
+
+	templateContext: function() {
+		return {
+			view: this,
+			menus: this.menus
+		};
+	},
+
+	toHtml: function(menus) {
+		let html = '';
+		if (!menus) {
+			return;
+		}
+		for (let i = 0; i < menus.length; i++) {
+			html += this.menuToHtml(menus[i]);
+		}
+		return html;
+	},
 
 	onRender: function() {
 
@@ -271,24 +334,55 @@ export default BaseView.extend({
 		// block event from parent
 		//
 		this.block(event);
+	},
+
+	//
+	// json display methods
+	//
+
+	showCode: function(file) {
+		application.launch('code_editor', {
+			model: file
+		});
+	},
+
+	showJson: function() {
+		import(
+			'../../../../../models/storage/files/file.js'
+		).then((File) => {
+			this.showCode(new File.default({
+				contents: this.constructor.toJson(this.el)
+			}));
+		});
 	}
+}, {
 
-	/*
-	onTapDropdown: function(event) {
+	//
+	// json converting methods
+	//
 
-		// skip touch events if not touch enabled
-		//
-		if (!Browser.is_touch_enabled) {
-			return;
+	toObject: function(element) {
+		let className = $(element).attr('class').replace('dropdown', '').replace('open', '').trim();
+		let name = $(element).find('.dropdown-title').text().trim();
+		let icon = $(element).find('i').attr('class');
+		return {
+			class: className,
+			icon: icon,
+			name: name
+		};
+	},
+
+	toObjects: function(element) {
+		let elements = $(element).find('> .dropdown');
+		let items = [];
+		for (let i = 0; i < elements.length; i++) {
+			let element = elements[i];
+			items.push(this.toObject(element));
 		}
+		return items;
+	},
 
-		// play tap sound
-		//
-		application.play('tap');
-		
-		// handle tap event
-		//
-		this.onMouseDown(event);
+	toJson: function(element) {
+		return JSON.stringify(this.toObjects(element), null, 4);
 	}
-	*/
 });

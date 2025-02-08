@@ -152,7 +152,9 @@ export default BaseView.extend(_.extend({}, PopoverShowable, Validatable, UnitSe
 
 		// create form validator
 		//
-		this.validate();
+		if (!this.validator) {
+			this.validate();
+		}
 	},
 
 	onAttach: function() {

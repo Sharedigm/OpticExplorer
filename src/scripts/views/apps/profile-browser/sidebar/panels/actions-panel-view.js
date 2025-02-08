@@ -84,6 +84,10 @@ export default SideBarPanelView.extend({
 		}
 	},
 
+	showConnections: function() {
+		application.launch('connection_manager');
+	},
+
 	//
 	// mouse event handling methods
 	//
@@ -142,7 +146,7 @@ export default SideBarPanelView.extend({
 	},
 
 	onClickViewConnections: function() {
-		application.launch('connection_manager');
+		this.showConnections();
 	},
 
 	//

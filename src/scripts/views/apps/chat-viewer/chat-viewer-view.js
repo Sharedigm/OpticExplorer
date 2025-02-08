@@ -26,15 +26,17 @@ import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import MultiDoc from '../../../views/apps/common/behaviors/tabbing/multidoc.js';
 import ContainableSelectable from '../../../views/behaviors/containers/containable-selectable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import ChatInfoShowable from '../../../views/apps/chat-browser/dialogs/info/behaviors/chat-info-showable.js';
 import HeaderBarView from '../../../views/apps/chat-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/chat-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/chat-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/chat-viewer/footer-bar/footer-bar-view.js';
+import OpenChatsDialogView from '../../../views/apps/chat-viewer/dialogs/chats/open-chats-dialog-view.js';
+import PreferencesFormView from '../../../views/apps/chat-viewer/forms/preferences/preferences-form-view.js'
 
-export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, Openable, ItemInfoShowable, ChatInfoShowable, {
+export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, ItemInfoShowable, ChatInfoShowable, {
 
 	//
 	// attributes
@@ -190,14 +192,15 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	setSearch: function(search) {
 		let kind = search? Object.keys(search)[0] : '';
 		let value = search? search[kind] : '';
+		let searchKind = kind? kind.replace(/-/g, '_') : undefined;
 
 		// set menu
 		//
-		this.getChildView('header menu search').setSearchKind(kind);
+		this.getChildView('header menu search').setSearchKind(searchKind);
 
 		// set search bar
 		//
-		this.getChildView('header').showSearchBar(kind, value);
+		this.getChildView('header').showSearchBar(searchKind, value);
 	},
 
 	//
@@ -324,7 +327,9 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	},
 
 	endSelectedChat: function() {
-		this.endChat(this.getSelectedChats()[0]);
+		if (this.hasSelectedChat()) {
+			this.endChat(this.getSelectedChats()[0]);
+		}
 	},
 
 	//
@@ -341,39 +346,9 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	// sharing methods
 	//
 
-	shareItemsWithChat: function() {
+	shareItemsWithChat: function(directory) {
 		this.getActiveView().shareItems({
-			model: application.getDirectory()
-		});
-	},
-
-	shareAudioWithChat: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Audio')
-		});
-	},
-
-	shareMusicWithChat: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Music')
-		});
-	},
-
-	sharePicturesWithChat: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Pictures')
-		});
-	},
-
-	shareVideosWithChat: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Videos')
-		});
-	},
-	
-	shareMapsWithChat: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Maps')
+			model: directory
 		});
 	},
 
@@ -389,6 +364,11 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	searchFor: function(search) {
 		this.options.search = search;
+		this.showContent();
+	},
+
+	clearSearch: function() {
+		this.options.search = undefined;
 		this.showContent();
 	},
 
@@ -436,6 +416,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 			// options
 			//
 			panels: this.preferences.get('sidebar_panels'),
+			info_kind: this.preferences.get('sidebar_info_kind'),
 			view_kind: this.preferences.get('sidebar_view_kind'),
 
 			// callbacks
@@ -457,10 +438,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 			message: this.options.message,
 			items: this.options.items,
 			search: this.options.search,
-
-			// capabilities
-			//
-			features: this.options.features,
 			check_in: this.options.check_in,
 
 			// callbacks
@@ -568,10 +545,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 				// options
 				//
-				features: this.options.features,
-
-				// capabilities
-				//
 				preferences: this.preferences,
 
 				// callbacks
@@ -615,12 +588,24 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		//
 		this.hideMessage();
 
-		// open first chat
+		// open a chat
 		//
 		if (this.collection.isEmpty() && collection && collection.length > 0) {
+
+			// get selected chat
+			//
+			if (this.options.user) {
+				this.model = collection.getChatByUser(this.options.user)
+			}
+
+			// get first chat
+			//
 			if (!this.model) {
 				this.model = collection.at(0);
 			}
+
+			// load chat
+			//
 			this.loadModel(this.model);
 		}
 
@@ -684,18 +669,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass method
 		//
 		AppSplitView.prototype.onSelect.call(this, item);
-
-		/*
-		// update menu
-		//
-		this.getChildView('header menu').onSelect(item);
-
-		// perform callback
-		//
-		if (this.options.onselect) {
-			this.options.onselect(item);
-		}
-		*/
 	},
 
 	onDeselect: function(item) {
@@ -704,17 +677,22 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass method
 		//
 		AppSplitView.prototype.onDeselect.call(this, item);
-
-		/*
-		// update menu
-		//
-		this.getChildView('header menu').onDeselect(item);
-
-		// perform callback
-		//
-		if (this.options.ondeselect) {
-			this.options.ondeselect(item);
-		}
-		*/
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showOpenChatsDialog: function(options) {
+		application.show(new OpenChatsDialogView(options));
+	}
+});

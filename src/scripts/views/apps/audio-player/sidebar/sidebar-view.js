@@ -16,9 +16,9 @@
 \******************************************************************************/
 
 import SideBarView from '../../../../views/apps/common/sidebar/sidebar-view.js';
-import FilesPanelView from '../../../../views/apps/audio-player/sidebar/panels/files-panel-view.js';
 import FavoritesPanelView from '../../../../views/apps/audio-player/sidebar/panels/favorites-panel-view.js';
 import TrackInfoPanelView from '../../../../views/apps/audio-player/sidebar/panels/track-info-panel-view.js';
+import FilesPanelView from '../../../../views/apps/audio-player/sidebar/panels/files-panel-view.js';
 
 export default SideBarView.extend({
 
@@ -97,7 +97,10 @@ export default SideBarView.extend({
 
 	showFavoritesPanel: function() {
 		this.showChildView('favorites', new FavoritesPanelView({
-			favorites: this.options.favorites,
+
+			// options
+			//
+			view_kind: this.options.view_kind,
 
 			// callback options
 			//

@@ -80,10 +80,6 @@ export default Timestamped.extend({
 	// getting methods
 	//
 
-	getUrl: function() {
-		return application.getUrl() + '#posts/' + this.get('id');
-	},
-
 	getMessage: function(options) {
 		let message = this.get('message');
 		if (options && options.max_words) {
@@ -114,6 +110,10 @@ export default Timestamped.extend({
 			name: this.get('topic_name') || config.apps.topic_viewer.defaults.topic.name,
 			icon_path: config.apps.topic_viewer.defaults.topic.icon_path
 		});
+	},
+
+	getUrl: function() {
+		return application.getUrl() + '#posts/' + this.get('id');
 	},
 
 	//

@@ -15,20 +15,22 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import Post from '../../../models/topics/post.js';
 import Topic from '../../../models/topics/topic.js';
 import Topics from '../../../collections/topics/topics.js';
 import Directory from '../../../models/storage/directories/directory.js';
 import File from '../../../models/storage/files/file.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import LinkShareable from '../../../views/apps/common/behaviors/sharing/link-shareable.js';
 import HeaderBarView from '../../../views/apps/post-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/post-viewer/sidebar/sidebar-view.js';
 import PostView from '../../../views/apps/post-viewer/mainbar/posts/post-view.js';
 import FooterBarView from '../../../views/apps/post-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/post-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
+export default AppSplitView.extend(_.extend({}, ItemOpenable, LinkShareable, {
 
 	//
 	// attributes
@@ -75,6 +77,15 @@ export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
 			this.options.dislikeable = false;
 		}
 
+		// set default topic
+		//
+		if (!this.constructor.default_topic) {
+			this.constructor.default_topic = new Topic({
+				id: 0,
+				name: this.constructor.getDefaultTopicName()
+			});
+		}
+
 		// set attributes
 		//
 		this.topic = new Topic({
@@ -100,7 +111,8 @@ export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
 
 	getDefaultTopic: function() {
 		let name = this.preferences.get('default_topic');
-		if (!name || name == '' || name == config.apps.topic_viewer.defaults.topic.name) {
+
+		if (this.constructor.isDefaultTopicName(name)) {
 			return this.constructor.default_topic;
 		} else {
 			return this.getTopicByName(name);
@@ -231,7 +243,7 @@ export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
 
 	shareByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -327,8 +339,11 @@ export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
 			// options
 			//
 			preferences: this.preferences,
-			selected: this.options.selected,
+
+			// state
+			//
 			collapsed: false,
+			selected: this.options.selected,
 
 			// capabilities
 			//
@@ -468,8 +483,98 @@ export default AppSplitView.extend(_.extend({}, Openable, LinkShareable, {
 }), {
 
 	//
-	// static attributes
+	// static querying methods
 	//
 
-	default_topic: new Topic(config.apps.topic_viewer.defaults.topic),
+	isDefaultTopicName: function(name) {
+		return name && name != '' && this.getDefaultTopicName() == name;
+	},
+
+	hasDefaultTopicName: function() {
+		return this.getTopicName() != undefined;
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferences: function() {
+		return config.preferences.post_viewer || {};
+	},
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getDefaultTopicName: function() {
+		return this.getPreferences().default_topic;
+	},
+
+	//
+	// static rendering methods
+	//
+
+	showPost: function(id, options) {
+		import(
+			'../../../views/apps/post-viewer/mainbar/post-info-view.js'
+		).then((PostInfoView) => {
+			this.fetchPost(id, {
+
+				// callbacks
+				//
+				success: (post) => {
+
+					// show post info page
+					//
+					application.showPage(new PostInfoView.default({
+						model: post
+					}));
+				},
+
+				error: (response) => {
+					if (options && options.error) {
+						options.error(response);
+					}
+				}
+			});
+		});
+	},
+
+	showGallery: function() {
+		import(
+			'../../../views/apps/post-viewer/mainbar/post-gallery-view.js'
+		).then((PostGalleryView) => {
+
+			// show post gallery page
+			//
+			application.showPage(new PostGalleryView.default(), {
+				nav: 'gallery'
+			});
+		});
+	},
+
+	//
+	// static ajax methods
+	//
+
+	fetchPost: function(id, options) {
+		new Post({
+			'id': id
+		}).fetch({
+
+			// callbacks
+			//
+			success: (model) => {
+				if (options && options.success) {
+					options.success(model);
+				}
+			},
+
+			error: (model, response) => {
+				if (options && options.error) {
+					options.error(response);
+				}
+			}
+		});
+	}
 });

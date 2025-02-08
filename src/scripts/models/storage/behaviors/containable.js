@@ -300,18 +300,33 @@ export default {
 				return 'num_links';
 			case 'shares':
 				return 'num_shares';
+			case 'owners':
+				return 'owner';
 			case 'indices':
 				return 'num_indices';
 		}
 	},
 
 	getDetailsAttributes: function(details) {
+
+		// check if only a single detail
+		//
+		if (typeof (details) == 'string') {
+			return [this.getDetailsAttribute(details)];
+		}
+
+		// get attributes for multiple details
+		//
 		let attributes = [];
 		if (details) {
 			for (let i = 0; i < details.length; i++) {
-				attributes.push(this.getDetailsAttribute(details[i]));
+				let attribute = this.getDetailsAttribute(details[i]);
+				if (attribute && !attributes.includes(attribute)) {
+					attributes.push(attribute);
+				}
 			}
 		}
+
 		return attributes;
 	},
 

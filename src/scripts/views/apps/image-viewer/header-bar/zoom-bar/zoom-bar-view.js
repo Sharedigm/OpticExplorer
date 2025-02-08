@@ -19,6 +19,7 @@ import ToolbarView from '../../../../../views/apps/common/toolbars/toolbar-view.
 import ZoomInButtonView from '../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-in-button-view.js';
 import ZoomOutButtonView from '../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-out-button-view.js';
 import ZoomInputView from '../../../../../views/apps/image-viewer/header-bar/zoom-bar/inputs/zoom-input-view.js';
+import FullScreenButtonView from '../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/full-screen-button-view.js';
 
 export default ToolbarView.extend({
 
@@ -30,12 +31,14 @@ export default ToolbarView.extend({
 		<div class="zoom-out" data-toggle="tooltip" title="Zoom Out" data-placement="bottom"></div>
 		<div class="zoom-in" data-toggle="tooltip" title="Zoom In" data-placement="bottom"></div>
 		<div class="zoom-amount" data-toggle="tooltip" title="Zoom" data-placement="bottom"></div>
+		<div class="fill-screen hidden-xxs" data-toggle="tooltip" title="Full Screen"></div>
 	`),
 
 	regions: {
 		zoom_in: '.zoom-in',
 		zoom_out: '.zoom-out',
-		zoom_amount: '.zoom-amount'
+		zoom_amount: '.zoom-amount',
+		fill_screen: '.fill-screen'
 	},
 
 	zoomLevels: [
@@ -245,6 +248,9 @@ export default ToolbarView.extend({
 			// callbacks
 			//
 			onchange: (zoom) => this.setZoom(zoom)
+		}));
+		this.showChildView('fill_screen', new FullScreenButtonView({
+			model: this.model
 		}));
 
 		// set initial state

@@ -97,9 +97,6 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 
 		// set optional parameter defaults
 		//
-		if (this.options.features == undefined) {
-			this.options.features = config.apps[this.name].features;
-		}
 		if (this.options.show_header_bar == undefined) {
 			this.options.show_header_bar = true;
 		}
@@ -176,6 +173,14 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 		return !this.dialog && this.parent && this.parent.hasParentView('desktop');
 	},
 
+	hasSpaces: function() {
+		return this.isDesktop() && this.numSpaces() > 1;
+	},
+
+	isWindowed: function() {
+		return !this.isDesktop();
+	},
+
 	isCompatibleWith: function(item) {
 		if (item instanceof Directory) {
 			return false;
@@ -187,16 +192,44 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 		}
 	},
 
+	isHeaderBarHidden: function() {
+		return this.options.hidden && this.options.hidden['header-bar'];
+	},
+
+	isFooterBarHidden: function() {
+		return this.options.hidden && this.options.hidden['footer-bar'];
+	},
+
+	hasResources: function() {
+		return this.constructor.resources != undefined;
+	},
+
 	hasStatusBar: function() {
 		return this.getStatusBar() != null;
 	},
-	
+
+	hasHeaderBar: function() {
+		return this.$el.find('.header-bar').length > 0 && this.getHeaderBarView;
+	},
+
+	hasFooterBar: function() {
+		return this.showFooterBar != null;
+	},
+
+	numSpaces: function() {
+		return this.parent.parent.numChildren();
+	},
+
 	//
 	// getting methods
 	//
 
+	getApp: function() {
+		return this.preferences.app;
+	},
+
 	getName: function() {
-		return config.apps[this.name].name;
+		return config.apps[this.getApp()].name;
 	},
 
 	getPageOrientation: function() {
@@ -227,7 +260,7 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 			let app = this.preferences.app;
 			if (app) {
 				return app.replace('phone_', '').replace('tablet_', '');
-			}			
+			}
 		}
 	},
 
@@ -235,6 +268,19 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 		let id = this.getAppId();
 		if (id) {
 			return config.apps[id].color;
+		}
+	},
+
+	getResources: function(name) {
+		let resources = this.constructor.resources;
+		if (resources) {
+			if (name) {
+				return resources[name];
+			} else {
+				return resources;
+			}
+		} else {
+			return {};
 		}
 	},
 
@@ -280,6 +326,9 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 			case "toolbars":
 				this.setToolbarsVisible(value);
 				break;
+			case "show_toolbars":
+				this.setAllToolbarsVisible(value);
+				break;
 
 			// window options
 			//
@@ -305,6 +354,26 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 		for (let key in options) {
 			this.setOption(key, options[key]);
 		}
+	},
+
+	setLaunchOptions: function(launchOptions, preferences) {
+		if (!launchOptions) {
+			launchOptions = {};
+		}
+
+		// add maximized option
+		//
+		if (preferences.has('maximized')) {
+			launchOptions.maximized = preferences.get('maximized');
+		}
+
+		// add full screen option
+		//
+		if (preferences.has('full_screen')) {
+			launchOptions.full_screen = preferences.get('full_screen');
+		}
+
+		return launchOptions;
 	},
 
 	reset: function() {
@@ -353,77 +422,48 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 	},
 
 	setAllToolbarsVisible: function(isVisible) {
-		if (this.hasChildView('header')) {
-			this.getChildView('header').setAllToolbarsVisible(isVisible);
-		}
-		if (this.hasChildView('footer')) {
-			this.getChildView('footer').setAllToolbarsVisible(isVisible);
-		}
-
 		if (isVisible) {
-			this.$el.find('.mainbar .toolbar').show();
+			this.getChildView('header').$el.removeClass('hidden-toolbars');
 		} else {
-			this.$el.find('.mainbar .toolbar').hide();
+			this.getChildView('header').$el.addClass('hidden-toolbars');
 		}
 	},
 
 	//
-	// fetching methods
+	// loading methods
 	//
 
 	loadPreferences: function(options) {
+		if (this.preferences && !this.preferences.loaded && application.session.user) {
 
-		// check if application requires preferences
-		//
-		if (application.session.user && this.preferences) {
-
-			// check if preferences are loaded
+			// load app preferences
 			//
-			if (!this.preferences.loaded && application.session.user) {
+			this.preferences.load({
 
-				// fetch user preferences
+				// callbacks
 				//
-				this.preferences.load({
-
-					// callbacks
-					//
-					success: () => {
-						this.preferences.loaded = true;
-
-						// perform callback
-						//
-						if (options && options.success) {
-							options.success();
-						}
-					},
-
-					error: () => {
-						
-						// perform callback
-						//
-						if (options && options.error) {
-							options.error();
-						}
+				success: (preferences) => {
+					if (options && options.success) {
+						options.success(preferences);
 					}
-				});
-			} else {
+				},
 
-				// perform callback
-				//
-				if (options && options.success) {
-					options.success();
+				error: () => {
+
+					// show error message
+					//
+					application.error({
+						message: "Could not load application preferences."
+					});
 				}
-			}
+			});
 		} else {
-
-			// perform callback
-			//
 			if (options && options.success) {
-				options.success();
+				options.success(this.preferences);
 			}
 		}
 	},
-	
+
 	//
 	// launching methods
 	//
@@ -447,40 +487,23 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 			options.maximized = true;
 		}
 
-		if (this.preferences && !this.preferences.loaded && application.session.user) {
-			
-			// load app preferences
-			//
-			this.preferences.load({
+		this.loadPreferences({
 
-				// callbacks
+			// callbacks
+			//
+			success: (preferences) => {
+
+				// set launch / window options
 				//
-				success: () => {
+				options = this.setLaunchOptions(options, preferences);
 
-					// show app
-					//
-					application.show(new AppDialogView(_.extend({
-						app: this
-					}, options)));
-				},
-
-				error: () => {
-
-					// show error message
-					//
-					application.error({
-						message: "Could not load application preferences."
-					});
-				}
-			});
-		} else {
-
-			// show app
-			//
-			application.show(new AppDialogView(_.extend({
-				app: this
-			}, options)));
-		}
+				// show app
+				//
+				application.show(new AppDialogView(_.extend({}, options, {
+					app: this
+				})));
+			}
+		});
 	},
 
 	//
@@ -554,20 +577,16 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 
 		// show header bar
 		//
-		if (!this.options.hidden || !this.options.hidden['header-bar']) {
-			if (this.showHeaderBar) {
-				this.showHeaderBar();
-			}
+		if (this.hasHeaderBar() && !this.isHeaderBarHidden()) {
+			this.showHeaderBar();
 		} else {
 			this.$el.find('.header-bar').remove();
 		}
 
 		// show footer bar
 		//
-		if (!this.options.hidden || !this.options.hidden['footer-bar']) {
-			if (this.showFooterBar) {
-				this.showFooterBar();
-			}
+		if (this.hasFooterBar() && !this.isFooterBarHidden()) {
+			this.showFooterBar();
 		} else {
 			this.$el.find('.footer-bar').remove();
 		}
@@ -649,7 +668,7 @@ export default BaseView.extend(_.extend({}, ItemDroppable, Highlightable, Timeab
 	getMessage: function(message, options) {
 		let overlay = $('<div class="full-size message overlay"><div class="help message"></div></div>');
 		let helpMessage = overlay.find('.help.message');
-		helpMessage.html((options.icon? '<div class="icon">' + options.icon + '</div>': '') + message);
+		helpMessage.html((options && options.icon? '<div class="icon">' + options.icon + '</div>': '') + message);
 
 		// add callback
 		//

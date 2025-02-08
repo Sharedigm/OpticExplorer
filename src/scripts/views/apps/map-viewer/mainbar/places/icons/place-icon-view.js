@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import IconView from '../../../../../../views/items/icons/icon-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
+import Mappable from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/mappable.js';
 
 export default IconView.extend(_.extend({}, Mappable, {
 	

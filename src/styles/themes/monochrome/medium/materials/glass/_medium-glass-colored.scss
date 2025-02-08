@@ -42,10 +42,6 @@ body:not(.binary) {
 				@include glass.shade($color);
 			}
 
-			&.raspberry {
-				@include glass.shade($color);
-			}
-
 			&.red-orange {
 				@include glass.shade($color);
 			}
@@ -102,6 +98,10 @@ body:not(.binary) {
 				@include glass.shade($color);
 			}
 
+			&.raspberry {
+				@include glass.shade($color);
+			}
+
 			&.brown {
 				@include glass.shade($color);
 			}
@@ -138,10 +138,6 @@ body:not(.binary) {
 		.selected .colored:not(.btn) {
 
 			.red {
-				@include glass.shade($selected-color);
-			}
-
-			.raspberry {
 				@include glass.shade($selected-color);
 			}
 
@@ -198,6 +194,10 @@ body:not(.binary) {
 			}
 
 			.magenta {
+				@include glass.shade($selected-color);
+			}
+
+			.raspberry {
 				@include glass.shade($selected-color);
 			}
 

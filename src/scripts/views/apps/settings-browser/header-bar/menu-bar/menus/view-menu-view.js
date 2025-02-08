@@ -23,74 +23,17 @@ export default ViewMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="mobile-only">
-			<a class="expand-window"><i class="fa fa-expand"></i>Expand</a>
-		</li>
-		
-		<li role="presentation" class="windowed-app-only window-size dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="far fa-window-maximize"></i>Window Size<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="shrink-window"><i class="fa fa-minus"></i>Shrink<span class="command shortcut">[</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="grow-window"><i class="fa fa-plus"></i>Grow<span class="command shortcut">]</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="expand-window"><i class="fa fa-expand"></i>Expand<span class="command shortcut">\\</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only spaces dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-maximize"></i>Spaces<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="prev-space"><i class="fa fa-chevron-left"></i>Prev<span class="command shortcut">left arrow</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="next-space"><i class="fa fa-chevron-right"></i>Next<span class="command shortcut">right arrow</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="desktop-app-only windows dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-restore"></i>Windows<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="minimize-all"><i class="fa fa-window-minimize"></i>Minimize All</a>
-				</li>
-
-				<li role="presentation">
-					<a class="unminimize-all"><i class="fa fa-window-restore"></i>Unminimize All</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only">
-			<a class="view-full-screen"><i class="fa fa-check full-screen-visible"></i><i class="fa fa-desktop"></i>Full Screen<span class="command shortcut">\\</span></a>
-		</li>
-		
-		<% if (application.session.user) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="view-preferences"><i class="fa fa-snowflake"></i>Preferences</a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
+
+		// view options
+		//
+		'click .view-kind > a': 'onClickViewKind',
+
+		// sidebar options
+		//
+		'click .show-sidebar': 'onClickShowSidebar',
+		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
 
 		// window options
 		//
@@ -109,5 +52,35 @@ export default ViewMenuView.extend({
 		// preferences options
 		//
 		'click .view-preferences': 'onClickViewPreferences'
+	},
+
+	//
+	// querying methods
+	//
+
+	selected: function() {
+		let preferences = this.parent.app.preferences;
+		let isDesktop = this.parent.app.isDesktop();
+		let viewKind = preferences.get('view_kind');
+		let sidebarViewKind = preferences.get('sidebar_view_kind');
+
+		return {
+
+			// view options
+			//
+			'view-icons': viewKind == 'icons',
+			'view-lists': viewKind == 'lists',
+			'view-cards': viewKind == 'cards',
+
+			// sidebar options
+			//
+			'show-sidebar': isDesktop? preferences.get('show_desktop_sidebar') : preferences.get('show_sidebar'),
+
+			// sidebar item options
+			//
+			'view-sidebar-icons': sidebarViewKind == 'icons',
+			'view-sidebar-lists': sidebarViewKind == 'lists',
+			'view-sidebar-cards': sidebarViewKind == 'cards'
+		}
 	}
 });

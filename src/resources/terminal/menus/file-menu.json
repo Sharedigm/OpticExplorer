@@ -1,0 +1,17 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

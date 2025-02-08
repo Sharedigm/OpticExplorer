@@ -151,9 +151,6 @@ export default LinkView.extend({
 	//
 
 	showFileBrowser: function(directory) {
-
-		// launch file browser
-		//
 		application.launch('file_browser', {
 			model: directory,
 			defaults: {
@@ -165,9 +162,6 @@ export default LinkView.extend({
 	},
 
 	showImageViewer: function(imageFile) {
-
-		// launch image viewer
-		//
 		application.launch('image_viewer', {
 			model: imageFile
 		}, {
@@ -176,9 +170,6 @@ export default LinkView.extend({
 	},
 
 	showMapViewer: function(imageFiles) {
-
-		// launch map viewer
-		//
 		application.launch('map_viewer', {
 			photos: imageFiles
 		}, {

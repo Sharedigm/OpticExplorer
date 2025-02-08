@@ -1,0 +1,230 @@
+{
+	"file_menu": {
+		"items": [
+			{
+				"class": "clear-all",
+				"icon": "fa fa-xmark",
+				"name": "Clear All"
+			},
+			"divider",
+			{
+				"class": "close-window",
+				"icon": "fa fa-circle-xmark",
+				"name": "Close",
+				"shortcut": "command-L"
+			}
+		]
+	},
+	"help_menu": {
+		"items": [
+			{
+				"class": "view-about-info",
+				"icon": "fa fa-info-circle",
+				"name": "About"
+			},
+			"divider",
+			{
+				"class": "view-app",
+				"icon": "fa fa-question-circle",
+				"name": "View Help Pages"
+			},
+			{
+				"class": "view-topic",
+				"icon": "fa fa-newspaper",
+				"name": "Search Community Help"
+			},
+			"divider",
+			{
+				"class": "contact-us",
+				"icon": "fa fa-envelope",
+				"name": "Contact Us"
+			}
+		]
+	},
+	"menu_bar": {
+		"menus": [
+			{
+				"class": "file",
+				"icon": "fa fa-file",
+				"name": "File"
+			},
+			{
+				"class": "select",
+				"icon": "fa fa-mouse-pointer",
+				"name": "Select",
+				"hidden": true
+			},
+			{
+				"class": "view",
+				"icon": "fa fa-eye",
+				"name": "View"
+			},
+			{
+				"class": "help",
+				"icon": "fa fa-question-circle",
+				"name": "Help"
+			}
+		]
+	},
+	"select_menu": {
+		"items": [
+			{
+				"class": "select-first",
+				"icon": "fa fa-fast-backward",
+				"name": "First",
+				"shortcut": "up arrow"
+			},
+			{
+				"class": "select-prev",
+				"icon": "fa fa-backward",
+				"name": "Prev",
+				"shortcut": "left arrow"
+			},
+			{
+				"class": "select-next",
+				"icon": "fa fa-forward",
+				"name": "Next",
+				"shortcut": "right arrow"
+			},
+			{
+				"class": "select-last",
+				"icon": "fa fa-fast-forward",
+				"name": "Last",
+				"shortcut": "down arrow"
+			}
+		]
+	},
+	"view_menu": {
+		"items": [
+			{
+				"class": "show-sidebar",
+				"icon": "fa fa-pause",
+				"name": "Sidebar",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-settings-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-cog",
+						"name": "Settings",
+						"select": true
+					},
+					{
+						"class": "show-preferences-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-snowflake",
+						"name": "Preferences",
+						"select": true
+					}
+				]
+			},
+			{
+				"class": "sidebar-view-kind",
+				"icon": "fa fa-th",
+				"name": "Sidebar Items",
+				"select": true,
+				"menu": [
+					{
+						"class": "view-sidebar-icons",
+						"group": "sidebar-view-kind",
+						"icon": "fa fa-th",
+						"name": "Icons",
+						"select": true
+					},
+					{
+						"class": "view-sidebar-lists",
+						"group": "sidebar-view-kind",
+						"icon": "fa fa-list",
+						"name": "Lists",
+						"select": true
+					},
+					{
+						"class": "view-sidebar-cards",
+						"group": "sidebar-view-kind",
+						"icon": "fa fa-id-card",
+						"name": "Cards",
+						"select": true
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "window-size",
+				"icon": "far fa-window-maximize",
+				"name": "Window Size",
+				"menu": [
+					{
+						"class": "shrink-window",
+						"icon": "fa fa-minus",
+						"name": "Shrink",
+						"shortcut": "command-["
+					},
+					{
+						"class": "grow-window",
+						"icon": "fa fa-plus",
+						"name": "Grow",
+						"shortcut": "command-]"
+					},
+					{
+						"class": "expand-window",
+						"icon": "fa fa-expand",
+						"name": "Expand",
+						"shortcut": "command-\\"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "spaces",
+				"icon": "far fa-window-maximize",
+				"name": "Spaces",
+				"select": true,
+				"menu": [
+					{
+						"class": "prev-space",
+						"icon": "fa fa-chevron-left",
+						"name": "Prev",
+						"shortcut": "command-left arrow"
+					},
+					{
+						"class": "next-space",
+						"icon": "fa fa-chevron-right",
+						"name": "Next",
+						"shortcut": "command-right arrow"
+					}
+				]
+			},
+			{
+				"class": "windows",
+				"icon": "far fa-window-restore",
+				"name": "Windows",
+				"select": true,
+				"menu": [
+					{
+						"class": "minimize-all",
+						"icon": "fa fa-window-minimize",
+						"name": "Minimize All"
+					},
+					{
+						"class": "unminimize-all",
+						"icon": "fa fa-window-restore",
+						"name": "Unminimize All"
+					}
+				]
+			},
+			{
+				"class": "view-full-screen",
+				"icon": "fa fa-desktop",
+				"name": "Full Screen",
+				"shortcut": "command-up arrow",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "view-preferences",
+				"icon": "fa fa-snowflake",
+				"name": "Preferences"
+			}
+		]
+	}
+}

@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connection from '../../../../../models/users/connections/connection.js';
+import Connection from '../../../../../models/connections/connection.js';
 import Topic from '../../../../../models/topics/topic.js';
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
 import Items from '../../../../../collections/storage/items.js';
@@ -382,9 +382,11 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 		application.launch('image_viewer', {
 			model: imageFile,
 			collection: new Items([imageFile]),
+			/*
 			defaults: {
 				show_sidebar: false
 			}
+			*/
 		});
 	},
 
@@ -435,14 +437,21 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
+			let message = this.model.get('message');
+
+			// format / limit message
+			//
+			if (message) {
+				message = HtmlUtils.htmlToText(message || '').firstWords(15);
+			}
 
 			// confirm delete
 			//
 			application.confirm({
 				icon: '<i class="fa fa-trash-alt"></i>',
 				title: "Delete Post",
-				message: this.has('message')? "Are you sure you want to delete the post " + '"' +
-					HtmlUtils.htmlToText(this.get('message')).firstWords(15) + '"?' : "Are you sure you want to delete this post?",
+				message: message? "Are you sure you want to delete the post " + '"' +
+					message + '"?' : "Are you sure you want to delete this post?",
 
 				// callbacks
 				//
@@ -478,6 +487,9 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 	templateContext: function() {
 		return {
+
+			// attributes
+			//
 			href: this.model? application.getUrl() + '#users/' + this.model.get('user').get('id') : undefined,
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
@@ -495,8 +507,11 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 			// options
 			//
-			collapsed: this.options.collapsed,
 			show_elapsed_time: this.options.preferences? this.options.preferences.get('show_elapsed_time') : true,
+
+			// state
+			//
+			collapsed: this.options.collapsed,
 
 			// capabilities
 			//
@@ -534,12 +549,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 			this.$el.find('button.comment').hide();
 		}
 		*/
-
-		// start tiles spinning at random intervals
-		//
-		window.setTimeout(() => {
-			this.$el.find('.tile').addClass('spinnable3d');
-		}, Math.floor(Math.random() * 2000));
 
 		// add tooltip triggers
 		//
@@ -726,8 +735,10 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 
 			// options
 			//
-			features: this.options.features,
 			preferences: this.options.preferences,
+
+			// state
+			//
 			collapsed: this.options.collapsed,
 			selected: this.options.selected,
 
@@ -790,7 +801,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 				// options
 				//
 				post: this.model,
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks
@@ -939,7 +949,6 @@ export default ModelView.extend(_.extend({}, Collapsable, Selectable, FileDownlo
 				// options
 				//
 				topic: this.options.topic,
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks

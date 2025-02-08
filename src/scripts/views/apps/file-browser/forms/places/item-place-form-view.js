@@ -34,17 +34,6 @@ export default FormView.extend({
 			<div class="icon-grid"></div>
 		</div>
 
-		<div class="set-location form-group">
-			<label class="control-label"><i class="fa fa-map-marker"></i>Location</label>
-			<div class="inline controls">
-				<div class="buttons">
-					<button class="select-place btn">
-						<i class="fa fa-crosshairs"></i>Select Place
-					</button>
-				</div>
-			</div>
-		</div>
-
 		<div class="name form-group">
 			<label class="control-label"><i class="fa fa-font"></i>Location</label>
 			<div class="controls">
@@ -93,6 +82,13 @@ export default FormView.extend({
 						<i class="active fa fa-question-circle" data-toggle="popover" title="Zoom Level" data-content="This is the map zoom level to use for this place."></i>
 					</div>
 				</div>
+				<% if (show_map_dialog) { %>
+				<div class="buttons-inline">
+					<button class="select-place btn">
+						<i class="fa fa-crosshairs"></i>Set Coordinates
+					</button>
+				</div>
+				<% } %>
 			</div>
 		</div>
 	`),
@@ -206,6 +202,7 @@ export default FormView.extend({
 			latitude: place? place.get('latitude') : undefined,
 			longitude: place? place.get('longitude') : undefined,
 			zoom_level: place? place.get('zoom_level') : undefined,
+			show_map_dialog: application.hasApp('map_viewer')
 		};
 	},
 
@@ -235,13 +232,13 @@ export default FormView.extend({
 	//
 
 	showSelectPlaceDialog: function(options) {
-		import(
-			'../../../../../views/apps/map-viewer/dialogs/places/select-place-dialog-view.js'
-		).then((SelectPlaceDialogView) => {
+		application.loadAppView('map_viewer', {
 
-			// show select place dialog
+			// callbacks
 			//
-			application.show(new SelectPlaceDialogView.default(options));
+			success: (MapViewerView) => {
+				MapViewerView.showSelectPlaceDialog(options);
+			}
 		});
 	},
 
@@ -260,7 +257,7 @@ export default FormView.extend({
 
 	onClickSelectPlace: function(event) {
 		this.showSelectPlaceDialog({
-			place: this.model.get('place'),
+			model: this.model.get('place'),
 
 			// callbacks
 			//

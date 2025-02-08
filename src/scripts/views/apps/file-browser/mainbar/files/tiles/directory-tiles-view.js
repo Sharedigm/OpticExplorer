@@ -19,12 +19,11 @@ import File from '../../../../../../models/storage/files/file.js';
 import Directory from '../../../../../../models/storage/directories/directory.js';
 import Volume from '../../../../../../models/storage/directories/volume.js';
 import TilesView from '../../../../../../views/items/tiles/tiles-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
 import FileTileView from '../../../../../../views/apps/file-browser/mainbar/files/tiles/file-tile-view.js';
 import DirectoryTileView from '../../../../../../views/apps/file-browser/mainbar/files/tiles/directory-tile-view.js';
 import VolumeTileView from '../../../../../../views/apps/file-browser/mainbar/files/tiles/volume-tile-view.js';
 
-export default TilesView.extend(_.extend({}, ContainableMappable, {
+export default TilesView.extend({
 
 	//
 	// rendering methods
@@ -50,4 +49,4 @@ export default TilesView.extend(_.extend({}, ContainableMappable, {
 			return DirectoryTileView;
 		}
 	}
-}));
+});

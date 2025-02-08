@@ -28,6 +28,41 @@ export default BaseView.extend({
 	tagName: 'ul',
 	className: 'dropdown-menu',
 
+	itemTemplate: template(`
+		<li role="presentation"<% if (itemClass) { %> class="<%= itemClass %>"<% } %><% if (tags) { %> <%= tags %><% } %>>
+			<a class="<%= linkClass %><% if (menu) { %> dropdown-toggle<% } %>">
+				<% if (select != undefined) { %>
+				<i class="fa fa-check"></i>
+				<% } %>
+
+				<% if (icon) { %>
+				<% if (!icon.includes(' icon')) { %>
+				<i class="<%= icon %>"></i>
+				<% } else { %>
+				<%= icons[icon.replace(' icon', '').replace(/-/g, '_')] %>
+				<% } %>
+				<% } %>
+				<%= name %>
+
+				<% if (menu) { %>
+				<i class="fa fa-caret-left"></i>
+				<i class="fa fa-caret-right"></i>
+				<% } %>
+
+				<% if (shortcut) { %>
+				<span class="<%= shortcutClass %>"><%= shortcut %></span>
+				<% } %>
+			</a>
+			<% if (menu) { %>
+			<ul class="dropdown-menu" data-toggle="dropdown">
+				<%= menu %>
+			</ul>
+			<% } %>
+		</li>
+	`),
+
+	divider: '<li role="separator" class="divider"></li>',
+
 	// initial state
 	//
 	selected: {},
@@ -39,6 +74,7 @@ export default BaseView.extend({
 	//
 
 	initialize: function() {
+		window.MenuView = this.constructor;
 
 		// replace click events with tap events
 		//
@@ -101,16 +137,38 @@ export default BaseView.extend({
 	// querying methods
 	//
 
+	isOpen: function() {
+		return this.$el.closest('.dropdown').hasClass('open');
+	},
+
 	isItemDisabled: function(name) {
-		return this.getItems(name).hasClass('disabled');
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
+		return item.hasClass('disabled');
 	},
 
 	isItemSelected: function(name) {
-		return this.getItems(name).hasClass('selected');
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
+		return item.hasClass('selected');
 	},
 
 	isItemHidden: function(name) {
-		return this.getItems(name).hasClass('hidden');
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
+		return item.hasClass('hidden');
 	},
 
 	isValidEvent: function(event) {
@@ -149,9 +207,33 @@ export default BaseView.extend({
 		return originLeft + menuWidth > containerWidth? 'left' : 'right';
 	},
 
-	getItems: function(name) {
+	getItem: function(name) {
 		let className = name.replace(' ', '.').replace(/_/g, '-');
-		return this.$el.find('.' + className).closest('li');
+		if (className) {
+			return this.$el.find('.' + className).closest('li');
+		}
+	},
+
+	getItems: function() {
+		if (this.items) {
+
+			// get menu items from menu
+			//
+			return this.items;
+		} else {
+
+			// get menu items from resources
+			//
+			let appView = this.parent.parent.parent;
+			let resourceName = this.region_name + '_menu';
+			let resources = appView.getResources(resourceName);
+
+			if (resources) {
+				return resources.items;
+			} else {
+				return [];
+			}
+		}
 	},
 
 	getEnabledItems: function() {
@@ -218,17 +300,20 @@ export default BaseView.extend({
 	},
 	
 	setItemVisible: function(name, visible) {
-		let items = this.getItems(name);
+		let item = this.getItem(name);
 
-		if (visible !== false) {
-			items.removeClass('hidden');
-		} else {
-			items.addClass('hidden');
+		if (!item) {
+			return;
 		}
 
-		// hide / show prev separator if last item
+		if (visible !== false) {
+			item.removeClass('hidden');
+		} else {
+			item.addClass('hidden');
+		}
+
+		// hide / show prev divider if last item
 		//
-		let item = $(items[0]);
 		let prev = item.prev();
 		let next = item.next();
 		if (prev.hasClass('divider') && next.length == 0) {
@@ -241,17 +326,20 @@ export default BaseView.extend({
 	},
 
 	setItemHidden: function(name, hidden) {
-		let items = this.getItems(name);
+		let item = this.getItem(name);
 
-		if (hidden !== false) {
-			items.addClass('hidden');
-		} else {
-			items.removeClass('hidden');
+		if (!item) {
+			return;
 		}
 
-		// hide / show prev separator if last item
+		if (hidden !== false) {
+			item.addClass('hidden');
+		} else {
+			item.removeClass('hidden');
+		}
+
+		// hide / show prev divider if last item
 		//
-		let item = $(items[0]);
 		let prev = item.prev();
 		let next = item.next();
 		if (prev.hasClass('divider') && next.length == 0) {
@@ -264,7 +352,12 @@ export default BaseView.extend({
 	},
 
 	setItemEnabled: function(name, enabled) {
-		let item = this.getItems(name);
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
 		if (enabled !== false) {
 			item.removeClass('disabled');
 		} else {
@@ -273,26 +366,44 @@ export default BaseView.extend({
 	},
 
 	setItemDisabled: function(name, disabled) {
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
 		if (disabled !== false) {
-			this.getItems(name).addClass('disabled');
+			item.addClass('disabled');
 		} else {
-			this.getItems(name).removeClass('disabled');
+			item.removeClass('disabled');
 		}
 	},
 
 	setItemSelected: function(name, selected) {
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
 		if (selected !== false) {
-			this.getItems(name).addClass('selected');
+			item.addClass('selected');
 		} else {
-			this.getItems(name).removeClass('selected');
+			item.removeClass('selected');
 		}
 	},
 
 	setItemDeselected: function(name, deselected) {
+		let item = this.getItem(name);
+
+		if (!item) {
+			return;
+		}
+
 		if (deselected !== false) {
-			this.getItems(name).removeClass('selected');
+			item.removeClass('selected');
 		} else {
-			this.getItems(name).addClass('selected');
+			item.addClass('selected');
 		}
 	},
 
@@ -515,6 +626,18 @@ export default BaseView.extend({
 	},
 
 	//
+	// opening / closing methods
+	//
+
+	open: function() {
+		this.$el.closest('.dropdown').addClass('open');
+	},
+
+	close: function() {
+		this.$el.closest('.dropdown').removeClass('open');
+	},
+
+	//
 	// toggling methods
 	//
 
@@ -590,10 +713,20 @@ export default BaseView.extend({
 	},
 
 	handleShortcut: function(shortcut) {
+
+		// get event handler for menu item
+		//
 		let className = $(shortcut).closest('a').attr('class');
-		let classNames = className? className.split(' ') : null;
-		let firstClassName = classNames? classNames[0] : null;
-		let eventHandler = firstClassName? this.getEventHandler(firstClassName) : null;
+		let eventName = className.replace('dropdown-toggle', '');
+		let eventHandler = this.getEventHandler(eventName.replace(/ /g, '.'));
+
+		// if event handler not found then look for abbreviated version
+		//
+		if (!eventHandler) {
+			let eventNames = eventName? eventName.split(' ') : null;
+			let firstEventName = eventNames? eventNames[0] : null;
+			eventHandler = this.getEventHandler(firstEventName.replace(/ /g, '.'));
+		}
 
 		// call event handler
 		//
@@ -601,17 +734,108 @@ export default BaseView.extend({
 			this[eventHandler].call(this, event);
 		}
 	},
-	
+
+	//
+	// item rendering methods
+	//
+
+	getShortcutName(shortcut) {
+		if (!shortcut) {
+			return;
+		}
+		shortcut = shortcut.replace('command-', '');
+		shortcut = shortcut.replace('shift-', '');
+		return shortcut;
+	},
+
+	getShortcutClass(shortcut) {
+		let className = 'shortcut';
+		if (!shortcut) {
+			return;
+		}
+		if (shortcut.contains('command')) {
+			className = 'command ' + className;
+		}
+		if (shortcut.contains('shift')) {
+			className = 'shift ' + className;
+		}
+		return className;
+	},
+
+	tagsToString: function(tags) {
+		let string = '';
+		let keys = Object.keys(tags);
+		for (let i = 0; i < keys.length; i++) {
+			let key = keys[i];
+			let value = tags[key];
+			if (string) {
+				string += ' ';
+			}
+			string += key + '=' + value;
+		}
+		return string;
+	},
+
+	itemToHtml: function(item) {
+		let className = item.group || '';
+
+		// add to item class
+		//
+		if (item.menu) {
+			className += (className? ' ' : '') + 'dropdown dropdown-submenu';
+		}
+		if (item.hidden) {
+			className += (className? ' ' : '') + 'hidden';
+		}
+
+		return this.itemTemplate({
+			name: item.name,
+			icon: item.icon,
+			select: item.select,
+			itemClass: className,
+			linkClass: item.class,
+			shortcut: this.getShortcutName(item.shortcut),
+			shortcutClass: this.getShortcutClass(item.shortcut),
+			menu: item.menu? this.toHtml(item.menu) : undefined,
+			tags: item.tags? this.tagsToString(item.tags) : undefined,
+			icons: this.constructor.icons
+		});
+	},
+
 	//
 	// rendering methods
 	//
 
+	toHtml: function(items) {
+		let html = ''
+		if (items) {
+			for (let i = 0; i < items.length; i++) {
+				let item = items[i];
+
+				// add divider or menu item
+				//
+				if (item == 'divider') {
+					html += this.divider;
+				} else {
+					html += this.itemToHtml(item);
+				}
+			}
+		}
+		return html;
+	},
+
+	template: function(data) {
+		return data.view.toHtml(data.items);
+	},
+
 	templateContext: function() {
 		return {
-			is_desktop: this.getParentView('app').isDesktop()
+			view: this,
+			items: this.getItems(),
+			icons: this.constructor.icons
 		};
 	},
-	
+
 	onRender: function() {
 
 		// set menu items disabled until loaded
@@ -625,6 +849,23 @@ export default BaseView.extend({
 		// find shortcuts from DOM
 		//
 		this.keyCodes = this.getShortcutKeyCodes();
+
+		// remove last menu item, if hidden
+		//
+		if (this.parent.app && this.parent.app.isDesktop()) {
+
+			// remove last hidden items
+			//
+			while (this.$el.find('> li.hidden:last-child').length > 0) {
+				this.$el.find('> li.hidden:last-child').remove();
+			}
+
+			// remove trailing dividers
+			//
+			while (this.$el.find('> .divider:last-child').length > 0) {
+				this.$el.find('> .divider:last-child').remove();
+			}
+		}
 	},
 
 	setMenuOrientation: function(orientation) {
@@ -815,6 +1056,17 @@ export default BaseView.extend({
 	//
 
 	onKeyDown: function(event) {
+		let showJson = false;
+
+		// display as json
+		//
+		if (showJson) {
+			if (this.isOpen()) {
+				if (event.keyCode == Keyboard.keyCodes['escape']) {
+					this.showJson();
+				}
+			}
+		}
 
 		// check if this is a valid menu event
 		//
@@ -857,6 +1109,26 @@ export default BaseView.extend({
 		}
 
 		return false;
+	},
+
+	//
+	// json display methods
+	//
+
+	showCode: function(file) {
+		application.launch('code_editor', {
+			model: file
+		});
+	},
+
+	showJson: function() {
+		import(
+			'../../../../../../models/storage/files/file.js'
+		).then((File) => {
+			this.showCode(new File.default({
+				contents: this.constructor.toJson(this.el)
+			}));
+		});
 	}
 }, {
 
@@ -864,5 +1136,168 @@ export default BaseView.extend({
 	// static attributes
 	//
 
-	inputs: ['input', 'textarea']
+	inputs: ['input', 'textarea'],
+
+	//
+	// json converting methods
+	//
+
+	getShortcutText: function(shortcut) {
+		let text = $(shortcut).text();
+		let command = shortcut.hasClass('command');
+		let shift = shortcut.hasClass('shift');
+
+		// compose shortcut text
+		//
+		if (command) {
+			text = 'command-' + text;
+		}
+		if (shift) {
+			text = 'shift-' + text;
+		}
+
+		return text;
+	},
+
+	dropdownToObject: function(item) {
+		let link = $(item).find('> a');
+		let icons = $(link).find('i');
+		let itemClass = $(item).attr('class');
+		let linkClass = $(link).attr('class');
+		let shortcut = $(link).find('.shortcut');
+		let selectable = $(link).find('.fa.fa-check').length > 0;
+		let dropdown = $(item).find('> .dropdown-menu');
+
+		// get name text
+		//
+		let clone = link.clone();
+		clone.children('.shortcut, i').each(function (child) {
+			this.remove(child);
+		});
+		let name = clone.text().trim();
+
+		// find icon
+		//
+		let icon;
+		if (icons.length > 0) {
+			if (icons[0].className.contains('fa-check') && icons.length > 1) {
+				icon = icons[1].className;
+			} else {
+				icon = icons[0].className;
+			}
+		}
+
+		// format item class
+		//
+		let mode = undefined;
+		let platform = undefined;
+
+		if (itemClass) {
+			if (itemClass.contains('selected')) {
+				itemClass = itemClass.replace('selected', '').trim();
+			}
+			if (itemClass.contains('disabled')) {
+				itemClass = itemClass.replace('disabled', '').trim();
+			}
+			if (itemClass.contains('hidden')) {
+				itemClass = itemClass.replace('hidden', '').trim();
+			}
+
+			// remove dropdown classes
+			//
+			if (itemClass.contains('dropdown')) {
+				itemClass = itemClass.replace('dropdown', '').trim();
+			}
+			if (itemClass.contains('dropdown-submenu')) {
+				itemClass = itemClass.replace('dropdown-submenu', '').trim();
+			}
+
+			// parse mode
+			//
+			if (itemClass.contains('windowed-app-only')) {
+				mode = 'windowed';
+				itemClass = itemClass.replace('windowed-app-only', '').trim();
+			}
+			if (itemClass.contains('desktop-app-only')) {
+				mode = 'desktop';
+				itemClass = itemClass.replace('desktop-app-only', '').trim();
+			}
+
+			// parse platform
+			//
+			if (itemClass.contains('mobile-only')) {
+				platform = 'mobile';
+				itemClass = itemClass.replace('mobile-only', '').trim();
+			}
+			if (itemClass.contains('desktop-only')) {
+				platform = 'desktop';
+				itemClass = itemClass.replace('desktop-only', '').trim();
+			}
+		}
+
+		// format link class
+		//
+		if (linkClass) {
+			linkClass = linkClass.replace('dropdown-toggle', '').trim();
+		}
+
+		// create object
+		//
+		let object;
+		if (name) {
+			object = {};
+
+			// set object attributes
+			//
+			if (linkClass) {
+				object.class = linkClass;
+			}
+			if (itemClass) {
+				object.group = itemClass;
+			}
+			if (icon) {
+				object.icon = icon;
+			}
+			if (name) {
+				object.name = name;
+			}
+			if (shortcut.length > 0) {
+				object.shortcut = this.getShortcutText(shortcut);
+			}
+			if (selectable) {
+				object.select = true;
+			}
+			if (mode) {
+				object.mode = mode;
+			}
+			if (platform) {
+				object.platform = platform;
+			}
+			if (dropdown.length > 0) {
+				object.menu = this.getDropdownObjects(dropdown);
+			}
+		} else {
+			object = "divider";
+		}
+
+		return object;
+	},
+
+	getDropdownObjects: function(element) {
+		let elements = $(element).find('> li');
+		let items = [];
+		for (let i = 0; i < elements.length; i++) {
+			let item = elements[i];
+			items.push(this.dropdownToObject(item));
+		}
+		return items;
+	},
+
+	toObjects: function(element) {
+		return this.getDropdownObjects(element);
+	},
+
+	toJson: function(element) {
+		return JSON.stringify(this.toObjects(element), null, 4);
+	}
 });

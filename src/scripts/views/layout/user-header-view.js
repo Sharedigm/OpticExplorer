@@ -19,8 +19,6 @@ import UserProfile from '../../models/users/profile/user-profile.js';
 import HeaderView from '../../views/layout/header-view.js';
 import StorageIndicatorView from '../../views/layout/storage-indicator-view.js';
 import AppsBarView from '../../views/apps/common/apps-bar-view.js';
-import ConnectionRequestsDropdownView from '../../views/users/connection-requests/connection-requests-dropdown-view.js';
-import NotificationsDropdownView from '../../views/apps/common/notifications/notifications-dropdown-view.js';
 import Browser from '../../utilities/web/browser.js';
 import '../../../vendor/bootstrap/js/collapse.js';
 
@@ -47,7 +45,7 @@ export default HeaderView.extend({
 						<div class="logotype">
 							<% if (branding.header.brand.logotype.names) { %>
 							<% let keys = Object.keys(branding.header.brand.logotype.names); %>
-							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 							<% } %>
 						</div>
 						<% } %>
@@ -56,10 +54,11 @@ export default HeaderView.extend({
 		
 				<ul class="nav navbar-nav navbar-right">
 		
+					<% if (has_profile) { %>
 					<li class="my-profile hidden-xxs <% if (nav == 'self') {%> active<% } %>">
 						<a class="hidden-xxs self">
-							<div data-toggle="tooltip" title="Profile" data-placement="bottom" data-container="body"> 
-							
+							<div data-toggle="tooltip" title="Profile" data-placement="bottom" data-container="body">
+
 								<div class="small tile">
 									<div class="thumbnail" style="background-image:url(<%= thumbnail_url %>)<% if (!thumbnail_url) { %>; display:none<% } %>">
 									</div>
@@ -67,32 +66,33 @@ export default HeaderView.extend({
 										<i class="fa fa-user"></i>
 									</div>
 								</div>
-		
+
 								<span class="name">
 									<%= user.getName('single') %>
 								</span>
 							</div>
 						</a>
 					</li>
-					
+					<% } %>
+
 					<li class="settings-info hidden-xxs">
 						<a class="my-settings">
 							<i class="fa fa-cog" data-toggle="tooltip" title="Settings" data-placement="bottom" data-container="body"></i>
 						</a>
 					</li>
-		
+
 					<li class="storage-info hidden-xxs">
 						<a class="storage-indicator">
 							<div class="my-storage" data-toggle="tooltip" title="Storage" data-placement="bottom" data-container="body"></div>
 						</a>
 					</li>
 				</ul>
-		
+
 				<ul class="apps-bar nav navbar-nav navbar-right"></ul>
-		
+
 				<ul class="nav navbar-nav navbar-right">
 
-					<% if (config.apps.connection_manager && !config.apps.connection_manager.hidden) { %>
+					<% if (has_connections) { %>
 					<li class="hidden-xxs">
 						<a class="find-connections">
 							<span data-toggle="tooltip" title="Find Connections" data-placement="bottom" data-container="body">
@@ -101,10 +101,10 @@ export default HeaderView.extend({
 						</a>
 					</li>
 					<% } %>
-		
+
 					<li class="connection-requests-dropdown hidden-xxs"></li>
 					<li class="notifications-dropdown hidden-xxs"></li>
-		
+
 					<li class="buttons">
 						<a class="sign-out">
 							<i class="fa fa-sign-out-alt"></i>
@@ -265,11 +265,14 @@ export default HeaderView.extend({
 		return {
 			defaults: config.defaults,
 			branding: config.branding,
-			nav: this.options.nav,		
+			nav: this.options.nav,
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
 			user: application.session.user,
-			is_mobile: Browser.is_mobile
+			is_mobile: Browser.is_mobile,
+			has_profile: application.hasApp('profile_viewer'),
+			has_connections: application.hasApp('connection_manager'),
+			has_notifications: application.hasApp('notification_center')
 		};
 	},
 
@@ -287,8 +290,18 @@ export default HeaderView.extend({
 			this.hideStorageIndicator();
 		}
 		if (!Browser.is_mobile) {
-			this.showConnectionRequests();
-			this.showNotifications();			
+
+			// show connection requests dropdown
+			//
+			if (application.hasApp('connection_manager')) {
+				this.showConnectionRequests();
+			}
+
+			// show notifications dropdown
+			//
+			if (application.hasApp('notification_center')) {
+				this.showNotifications();
+			}
 		}
 
 		// add tooltip triggers
@@ -349,21 +362,31 @@ export default HeaderView.extend({
 	},
 
 	showConnectionRequests: function() {
+		application.loadAppView('connection_manager', {
 
-		// show connection requests dropdown
-		//
-		this.showChildView('connection_requests', new ConnectionRequestsDropdownView({
-			model: this.model
-		}));
+			// callbacks
+			//
+			success: (ConnectionManager) => {
+
+				// show connection requests dropdown
+				//
+				this.showChildView('connection_requests', ConnectionManager.getConnectionRequestsDropdownView(this.model));
+			}
+		});
 	},
 
 	showNotifications: function() {
+		application.loadAppView('notification_center', {
 
-		// show notifications dropdown
-		//
-		this.showChildView('notifications', new NotificationsDropdownView({
-			model: this.model
-		}));
+			// callbacks
+			//
+			success: (NotificationCenter) => {
+
+				// show notifications dropdown
+				//
+				this.showChildView('notifications', NotificationCenter.getNotificationsDropdownView(this.model));
+			}
+		});
 	},
 
 	//
@@ -379,14 +402,28 @@ export default HeaderView.extend({
 	},
 
 	showFindConnectionsDialog: function() {
-		import(
-			'../../views/apps/connection-manager/dialogs/connections/find-connections-dialog-view.js'
-		).then((FindConnectionsDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show find connections dialog
+			// callbacks
 			//
-			application.show(new FindConnectionsDialogView.default());
-		});	
+			success: (ConnectionManager) => {
+				ConnectionManager.showFindConnectionsDialog();
+			}
+		});
+	},
+
+	showMyAccount: function() {
+		application.launch('account_manager', {
+			model: this.getChildView('storage_indicator').model,
+			nav: 'general',
+		});
+	},
+
+	showMySettings: function() {
+		application.launch('settings_manager', {
+			model: this.getChildView('storage_indicator').model,
+			nav: 'Storage'
+		});
 	},
 
 	//
@@ -404,10 +441,10 @@ export default HeaderView.extend({
 	},
 
 	onClickMyAccount: function() {
-		application.launch('account_manager', {		
-			model: this.getChildView('storage_indicator').model,
-			nav: 'general',
-		});
+
+		// show current user's account
+		//
+		this.showMyAccount();
 	},
 
 	onClickMyProfile: function() {
@@ -422,10 +459,7 @@ export default HeaderView.extend({
 	},
 
 	onClickMyStorage: function() {
-		application.launch('settings_manager', {
-			model: this.getChildView('storage_indicator').model,
-			nav: 'Storage'
-		});
+		this.showMySettings();
 	},
 
 	onClickFindConnections: function() {

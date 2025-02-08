@@ -15,81 +15,24 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import ShareMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/share-menu-view.js';
 
-export default MenuView.extend({
+export default ShareMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="share-chat"><i class="fa fa-comments"></i>Chat</a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<% if (features && features.files) { %>
-		<li role="presentation">
-			<a class="share-files"><i class="fa fa-file"></i>Files</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.audio) { %>
-		<li role="presentation">
-			<a class="share-audio"><i class="fa fa-volume-up"></i>Audio</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.music) { %>
-		<li role="presentation">
-			<a class="share-music"><i class="fa fa-music"></i>Music</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.pictures) { %>
-		<li role="presentation">
-			<a class="share-pictures"><i class="fa fa-image"></i>Pictures</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.video) { %>
-		<li role="presentation">
-			<a class="share-videos"><i class="fa fa-video"></i>Videos</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.maps) { %>
-		<li role="presentation">
-			<a class="share-maps"><i class="fa fa-map"></i>Maps</a>
-		</li>
-		<% } %>
-		
-		<% if (features && features.locations) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="share-location"><i class="fa fa-map-marker-alt"></i>Location</a>
-		</li>
-		<% } %>
-	`),
 
 	events: {
 
 		// share chat
 		//
 		'click .share-chat': 'onClickShareChat',
+		'click .share-location': 'onClickShareLocation',
 
 		// share items
 		//
-		'click .share-files': 'onClickShareFiles',
-		'click .share-audio': 'onClickShareAudio',
-		'click .share-music': 'onClickShareMusic',
-		'click .share-pictures': 'onClickSharePictures',
-		'click .share-videos': 'onClickShareVideos',
-		'click .share-maps': 'onClickShareMaps',
-		'click .share-location': 'onClickShareLocation'
+		'click .share-attachments': 'onClickShareAttachments'
 	},
 
 	//
@@ -101,25 +44,19 @@ export default MenuView.extend({
 		let hasChat = this.parent.app.collection.length > 0;
 
 		return {
-			'share-files': isSignedIn && hasChat,
-			'share-audio': isSignedIn && hasChat,
-			'share-music': isSignedIn && hasChat,
-			'share-pictures': isSignedIn && hasChat,
-			'share-videos': isSignedIn && hasChat,
-			'share-maps': isSignedIn && hasChat,
+			'share-chat': isSignedIn && hasChat,
 			'share-location': isSignedIn && hasChat,
-			'share-chat': isSignedIn && hasChat
+			'share-attachments': isSignedIn && hasChat
 		};
 	},
 
 	//
-	// rendering methods
+	// getting methods
 	//
 
-	templateContext: function() {
-		return {
-			features: config.apps.chat_viewer.features
-		}
+	getItems: function() {
+		let items = ShareMenuView.prototype.getItems.call(this);
+		return items.concat(this.getFileItems());
 	},
 
 	//
@@ -130,28 +67,11 @@ export default MenuView.extend({
 		this.parent.app.showChatInvitationsDialog(this.parent.app.getActiveModel());
 	},
 
-	onClickShareFiles: function() {
-		this.parent.app.shareItemsWithChat();
-	},
-
-	onClickShareAudio: function() {
-		this.parent.app.shareAudioWithChat();
-	},
-
-	onClickShareMusic: function() {
-		this.parent.app.shareMusicWithChat();
-	},
-
-	onClickSharePictures: function() {
-		this.parent.app.sharePicturesWithChat();
-	},
-
-	onClickShareVideos: function() {
-		this.parent.app.shareVideosWithChat();
-	},
-
-	onClickShareMaps: function() {
-		this.parent.app.shareMapsWithChat();
+	onClickShareAttachments: function(event) {
+		let key = $(event.target).closest('a').text().trim();
+		let files = config.defaults.sharing.files[key];
+		let directory = application.getDirectory(files.directory);
+		this.parent.app.shareItemsWithChat(directory);
 	},
 
 	onClickShareLocation: function() {

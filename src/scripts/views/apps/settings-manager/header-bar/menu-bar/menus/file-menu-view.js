@@ -23,13 +23,16 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-	`),
-
 	events: {
+		'click .clear-all': 'onClickClearAll',
 		'click .close-window': 'onClickCloseWindow'
+	},
+
+	//
+	// mouse event handling methods
+	//
+
+	onClickClearAll: function() {
+		this.parent.app.clearAll();
 	}
 });

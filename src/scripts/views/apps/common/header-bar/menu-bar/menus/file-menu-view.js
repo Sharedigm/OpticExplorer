@@ -34,6 +34,18 @@ export default MenuView.extend({
 	},
 
 	//
+	// querying methods
+	//
+
+	visible: function() {
+		let isWindowed = this.parent.app.isWindowed();
+
+		return {
+			'close-window': isWindowed
+		};
+	},
+
+	//
 	// mouse event handling methods
 	//
 

@@ -98,7 +98,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-publication-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-publication-dialog-view.js'
 		).then((AddUserPublicationDialogView) => {
 			
 			// show add dialog

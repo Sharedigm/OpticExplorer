@@ -85,7 +85,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-home-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-home-dialog-view.js'
 		).then((AddUserHomeDialogView) => {
 			
 			// show add dialog

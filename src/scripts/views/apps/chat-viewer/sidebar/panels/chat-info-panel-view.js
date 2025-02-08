@@ -71,9 +71,11 @@ export default SideBarPanelView.extend({
 
 		// set defaults
 		//
+		/*
 		if (this.options.view_kind == undefined) {
 			this.options.view_kind = 'icons';
 		}
+		*/
 	},
 
 	//

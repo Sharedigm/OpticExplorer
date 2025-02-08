@@ -22,445 +22,6 @@ export default ViewMenuView.extend({
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="fit dropdown-toggle"><i class="fa fa-expand"></i>Fit<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="fit-all"><i class="fa fa-expand"></i>Fit All</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="fit-optics"><i class="fa fa-database rotated flipped"></i>Fit Optics</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="fit-track"><i class="fa fa-arrows-left-right"></i>Fit Track</a>
-				</li>
-
-				<li role="presentation">
-					<a class="fit-images"><i class="fa fa-image"></i>Fit Images</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="zoom dropdown-toggle"><i class="fa fa-search"></i>Zoom<i class="fa fa-caret-left"></i><i class="fa fa-caret-right">
-			</i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="zoom-in"><i class="fa fa-search-plus"></i>Zoom In<span class="shortcut">=</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="zoom-out"><i class="fa fa-search-minus"></i>Zoom Out<span class="shortcut">-</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="zoom-to-actual"><i>1:1</i>Zoom to Actual Size<span class="command shortcut">1</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="pan dropdown-toggle"><i class="fa fa-arrows"></i>Pan<i class="fa fa-caret-left"></i><i class="fa fa-caret-right">
-			</i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="pan-up"><i class="fa fa-arrow-up"></i>Up<span class="shortcut">up arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="pan-down"><i class="fa fa-arrow-down"></i>Down<span class="shortcut">down arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="pan-left"><i class="fa fa-arrow-left"></i>Left<span class="shortcut">left arrow</span></a>
-				</li>
-				
-				<li role="presentation">
-					<a class="pan-right"><i class="fa fa-arrow-right"></i>Right<span class="shortcut">right arrow</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation" class="scheme-kind dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-palette"></i>Colors<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="monochrome-scheme"><i class="fa fa-check"></i><i class="fa fa-palette"></i>Monochrome</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="standard-scheme"><i class="fa fa-check"></i><i class="fa fa-palette"></i>Standard</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="colorful-scheme"><i class="fa fa-check"></i><i class="fa fa-palette"></i>Colorful</a>
-				</li>
-
-				<li role="presentation">
-					<a class="vibrant-scheme"><i class="fa fa-check"></i><i class="fa fa-palette"></i>Vibrant</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="next-scheme"><i class="fa fa-check"></i><i class="fa fa-chevron-right"></i>Next<span class="shift command option shortcut">C</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="theme-kind dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-adjust"></i>Brightness<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="light-theme"><i class="fa fa-check"></i><i class="far fa-sun"></i>Light</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="medium-theme"><i class="fa fa-check"></i><i class="fa fa-sun"></i>Medium</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="dark-theme"><i class="fa fa-check"></i><i class="fa fa-moon"></i>Dark</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="auto-theme"><i class="fa fa-check"></i><i class="fa fa-adjust"></i>Auto</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="view-kind dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-eye"></i>Viewport<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-grid"><i class="fa fa-check"></i><i class="fa fa-border-none"></i>Grid<span class="command shortcut">G</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-optical-axis"><i class="fa fa-check"></i><i class="fa fa-arrows-left-right"></i>Optical Axis</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-perpendicular-axis"><i class="fa fa-check"></i><i class="fa fa-arrows-up-down"></i>Perpendicular Axis</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-colored-viewport"><i class="fa fa-check"></i><i class="fa fa-paint-brush"></i>Colored</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="show-axes"><i class="fa fa-plus"></i>Show Axes</a>
-				</li>
-
-				<li role="presentation">
-					<a class="hide-axes"><i class="fa fa-minus"></i>Hide Axes</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-all"><i class="fa fa-plus"></i>Show All</a>
-				</li>
-
-				<li role="presentation">
-					<a class="hide-all"><i class="fa fa-minus"></i>Hide All</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation" class="view-elements dropdown dropdown-submenu">
-			<a class="show-elements dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-database rotated flipped"></i>Elements<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-filled-elements"><i class="fa fa-check"></i><i class="fa fa-fill"></i>Filled</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-stroked-elements"><i class="fa fa-check"></i><i class="fa fa-pen"></i>Stroked</a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<li role="presentation">
-					<a class="show-shaded-elements"><i class="fa fa-check"></i><i class="fa fa-lightbulb"></i>Shaded</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-illustrated-elements"><i class="fa fa-check"></i><i class="fa fa-brush"></i>illustrated</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-shadowed-elements"><i class="fa fa-check"></i><i class="fa fa-sun"></i>Shadowed</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="view-light-beams dropdown dropdown-submenu">
-			<a class="show-lights dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-lightbulb"></i>Lights<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="show-filled-lights"><i class="fa fa-check"></i><i class="fa fa-fill"></i>Filled</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-stroked-lights"><i class="fa fa-check"></i><i class="fa fa-pen"></i>Stroked</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="show-transmitted-lights"><i class="fa fa-check"></i><i class="fa fa-arrow-right"></i>Transmitted</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-obstructed-lights"><i class="fa fa-check"></i><i class="fa fa-arrows-down-to-line flipped rotated"></i>Obstructed</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-reflected-lights"><i class="fa fa-check"></i><i class="fa fa-arrow-right-arrow-left"></i>Reflected</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="view-object-beams dropdown dropdown-submenu">
-			<a class="show-objects dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-arrow-up-long"></i>Objects<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="show-filled-objects"><i class="fa fa-check"></i><i class="fa fa-fill"></i>Filled</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-stroked-objects"><i class="fa fa-check"></i><i class="fa fa-pen"></i>Stroked</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="show-transmitted-objects"><i class="fa fa-check"></i><i class="fa fa-arrow-right"></i>Transmitted</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-obstructed-objects"><i class="fa fa-check"></i><i class="fa fa-arrows-down-to-line flipped rotated"></i>Obstructed</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-reflected-objects"><i class="fa fa-check"></i><i class="fa fa-arrow-right-arrow-left"></i>Reflected</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation" class="view-annotations dropdown dropdown-submenu">
-			<a class="show-annotations dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-font"></i>Annotations<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-thickness"><i class="fa fa-check"></i><i class="fa fa-arrows-left-right-to-line"></i>Thickness</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-spacing"><i class="fa fa-check"></i><i class="fa fa-arrow-right-arrow-left"></i>Spacing</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-focal-points"><i class="fa fa-check"></i><i class="fa fa-map-pin"></i>Focal Points</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-principal-planes"><i class="fa fa-check"></i><i class="fa fa-arrows-up-down"></i>Principal Planes</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="show-filled-arrows"><i class="fa fa-check"></i><i class="fa fa-fill"></i>Filled</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-stroked-arrows"><i class="fa fa-check"></i><i class="fa fa-pen"></i>Stroked</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="show-diagonal-labels"><i class="fa fa-check"></i><i class="fa fa-expand-alt"></i>Diagonal</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-horizontal-labels"><i class="fa fa-check"></i><i class="fa fa-arrows-alt-h"></i>Horizontal</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation" class="show-toolbars dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-wrench"></i>Toolbars<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="show-toolbar dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation" class="option">
-					<a class="show-nav-bar"><i class="fa fa-check"></i><i class="fa fa-sitemap"></i>Nav</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-mouse-mode-bar"><i class="fa fa-check"></i><i class="fa fa-mouse-pointer"></i>Mouse Mode</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-nav-mode-bar"><i class="fa fa-check"></i><i class="fa fa-arrows-alt"></i>Nav Mode</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-zoom-mode-bar"><i class="fa fa-check"></i><i class="fa fa-expand"></i>Zoom Mode</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-zoom-bar"><i class="fa fa-check"></i><i class="fa fa-search"></i>Zoom</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-optics-bar"><i class="fa fa-check"></i><i class="fa fa-database rotated flipped"></i>Optics</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="show-sidebar dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-pause"></i>Sidebar<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="show-sidebar-panels dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="show-optics-panel"><i class="fa fa-check"></i><i class="fa fa-database rotated flipped"></i>Optics</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-shared-panel"><i class="fa fa-check"></i><i class="fa fa-book"></i>Optics Library</a>
-				</li>			
-			</ul>
-		</li>
-
-		<li role="presentation" class="sidebar-view-kind dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-th"></i>Sidebar Items<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="show-sidebar-items dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-sidebar-icons"><i class="fa fa-check"></i><i class="fa fa-th"></i>Icons</a>
-				</li>
-				
-				<li role="presentation">
-					<a class="show-sidebar-lists"><i class="fa fa-check"></i><i class="fa fa-list"></i>Lists</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-sidebar-trees"><i class="fa fa-check"></i><i class="fa fa-tree"></i>Trees</a>
-				</li>
-
-				<li role="presentation">
-					<a class="show-sidebar-cards"><i class="fa fa-check"></i><i class="fa fa-id-card"></i>Cards</a>
-				</li>
-				
-				<li role="presentation">
-					<a class="show-sidebar-tiles"><i class="fa fa-check"></i><i class="fa fa-th-large"></i>Tiles</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation">
-			<a class="show-data-editor"><i class="fa fa-check"></i><i class="fa fa-table"></i>Data Editor<span class="command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="windowed-app-only window-size dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="far fa-window-maximize"></i>Window Size<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="shrink-window"><i class="fa fa-minus"></i>Shrink<span class="command shortcut">[</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="grow-window"><i class="fa fa-plus"></i>Grow<span class="command shortcut">]</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="expand-window"><i class="fa fa-expand"></i>Expand<span class="command shortcut">\\</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only spaces dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-maximize"></i>Spaces<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="prev-space"><i class="fa fa-chevron-left"></i>Prev<span class="command shortcut">left arrow</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="next-space"><i class="fa fa-chevron-right"></i>Next<span class="command shortcut">right arrow</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="desktop-app-only windows dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-restore"></i>Windows<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="minimize-all"><i class="fa fa-window-minimize"></i>Minimize All</a>
-				</li>
-
-				<li role="presentation">
-					<a class="unminimize-all"><i class="fa fa-window-restore"></i>Unminimize All</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only">
-			<a class="view-full-screen"><i class="fa fa-check full-screen-visible"></i><i class="fa fa-desktop"></i>Full Screen<span class="command shortcut">\\</span></a>
-		</li>
-		
-		<% if (application.session.user) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="view-preferences"><i class="fa fa-snowflake"></i>Preferences</a>
-		</li>
-		<% } %>
-	`),
 	
 	events: {
 
@@ -483,7 +44,7 @@ export default ViewMenuView.extend({
 
 		// viewport options
 		//
-		'click .scheme-kind li a': 'onClickShowScheme',
+		'click .color-scheme > a': 'onClickScheme',
 		'click .next-scheme': 'onClickNextScheme',
 		'click .theme-kind li a': 'onClickShowTheme',
 		'click .next-theme': 'onClickNextTheme',
@@ -541,13 +102,13 @@ export default ViewMenuView.extend({
 		// toolbar options
 		//
 		'click .show-toolbars > a': 'onClickShowToolbars',
-		'click .show-toolbar > li > a': 'onClickShowToolbar',
+		'click .show-toolbar > a': 'onClickShowToolbar',
 
 		// sidebar options
 		//
-		'click .show-sidebar': 'onClickOption',
-		'click .show-sidebar-panels a': 'onClickShowSideBarPanel',
-		'click .show-sidebar-items a': 'onClickSideBarViewKind',
+		'click .show-sidebar': 'onClickShowSidebar',
+		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
 		'click .show-data-editor': 'onClickShowDataEditor',
 
 		// window options
@@ -663,16 +224,19 @@ export default ViewMenuView.extend({
 			'show-sidebar': preferences.get('show_sidebar'),
 			'show-optics-panel': sidebarPanels.includes('optics'),
 			'show-shared-panel': sidebarPanels.includes('shared'),
-			'show-sidebar-icons': sidebarViewKind == 'icons',
-			'show-sidebar-lists': sidebarViewKind == 'lists',
-			'show-sidebar-trees': sidebarViewKind == 'trees',
-			'show-sidebar-cards': sidebarViewKind == 'cards',
-			'show-sidebar-tiles': sidebarViewKind == 'tiles',
 			'show-data-editor': preferences.get('show_data_editor'),
+
+			// sidebar item options
+			//
+			'view-sidebar-icons': sidebarViewKind == 'icons',
+			'view-sidebar-lists': sidebarViewKind == 'lists',
+			'view-sidebar-trees': sidebarViewKind == 'trees',
+			'view-sidebar-cards': sidebarViewKind == 'cards',
+			'view-sidebar-tiles': sidebarViewKind == 'tiles',
 
 			// viewing options
 			//
-			'view-full-screen': true,
+			'view-full-screen': false,
 		}
 	},
 
@@ -682,10 +246,10 @@ export default ViewMenuView.extend({
 
 	getSchemes: function() {
 		let schemes = [];
-		this.$el.find('.scheme-kind li a').each((i, element) => { 
-			schemes.push($(element).attr('class').replace('-scheme', '')); 
+		this.$el.find('.color-scheme > a').each((i, element) => {
+			schemes.push($(element).attr('class').replace('-scheme', ''));
 		});
-		return schemes.slice(0, schemes.length - 1);
+		return schemes.slice(0, schemes.length);
 	},
 
 	getScheme: function(which) {
@@ -695,7 +259,7 @@ export default ViewMenuView.extend({
 			case 'first':
 				return schemes[0];
 			case 'prev': {
-				let index = schemes.indexOf(this.getScheme());
+				let index = schemes.indexOf(this.getSelectedScheme());
 				if (index == 0) {
 					return schemes[schemes.length - 1];
 				} else {
@@ -703,7 +267,7 @@ export default ViewMenuView.extend({
 				}
 			}
 			case 'next': {
-				let index = schemes.indexOf(this.getScheme());
+				let index = schemes.indexOf(this.getSelectedScheme());
 				if (index == schemes.length - 1) {
 					return schemes[0];
 				} else {
@@ -713,8 +277,12 @@ export default ViewMenuView.extend({
 			case 'last':
 				return schemes[schemes.length - 1];
 			default:
-				return this.$el.find('.scheme-kind li.selected a').attr('class').replace('-scheme', '');
+				return this.getSelectedScheme();
 		}
+	},
+
+	getSelectedScheme: function() {
+		return this.$el.find('.color-scheme.selected > a').attr('class').replace('color-scheme', '').replace('-scheme', '');
 	},
 
 	getThemes: function() {
@@ -722,7 +290,7 @@ export default ViewMenuView.extend({
 		this.$el.find('.theme-kind li a').each((i, element) => { 
 			themes.push($(element).attr('class').replace('-theme', '')); 
 		});
-		return themes.slice(0, themes.length - 1);
+		return themes.slice(0, themes.length);
 	},
 
 	getTheme: function(which) {
@@ -732,16 +300,16 @@ export default ViewMenuView.extend({
 			case 'first':
 				return themes[0];
 			case 'prev': {
-				let index = themes.indexOf(this.getTheme());
+				let index = themes.indexOf(this.getSelectedTheme());
 				if (index == 0) {
-					return themes[themes.length - 1];
+					return themes[themes.length];
 				} else {
 					return themes[index - 1];
 				}
 			}
 			case 'next': {
-				let index = themes.indexOf(this.getTheme());
-				if (index == themes.length - 1) {
+				let index = themes.indexOf(this.getSelectedTheme());
+				if (index == themes.length) {
 					return themes[0];
 				} else {
 					return themes[index + 1];
@@ -750,13 +318,17 @@ export default ViewMenuView.extend({
 			case 'last':
 				return themes[themes.length - 1];
 			default: {
-				let theme = this.$el.find('.theme-kind li.selected a').attr('class').replace('-theme', '');
-				if (theme == 'auto') {
-					theme = 'medium';
-				}
-				return theme;
+				return this.getSelectedTheme();
 			}
 		}
+	},
+
+	getSelectedTheme: function() {
+		let theme = this.$el.find('.theme-kind li.selected a').attr('class').replace('-theme', '');
+		if (theme == 'auto') {
+			theme = 'medium';
+		}
+		return theme;
 	},
 
 	//
@@ -764,12 +336,12 @@ export default ViewMenuView.extend({
 	//
 
 	setScheme: function(scheme) {
-		this.$el.find('.scheme-kind li').removeClass('selected');
+		this.$el.find('.color-scheme').removeClass('selected');
 		this.$el.find('.' + scheme + '-scheme').closest('li').addClass('selected');
 	},
 
 	setTheme: function(theme) {
-		this.$el.find('.theme-kind li').removeClass('selected');
+		this.$el.find('.theme-kind').removeClass('selected');
 		this.$el.find('.' + theme + '-theme').closest('li').addClass('selected');
 	},
 
@@ -847,12 +419,10 @@ export default ViewMenuView.extend({
 	// color scheme mouse event handling methods
 	//
 
-	onClickShowScheme: function(event) {
+	onClickScheme: function(event) {
 		let scheme = $(event.currentTarget).attr('class').replace('-scheme', '');
-		if (scheme != 'next') {
-			this.setScheme(scheme);
-			this.parent.app.setOption('scheme', scheme);
-		}
+		this.setScheme(scheme);
+		this.parent.app.setOption('scheme', scheme);
 	},
 
 	onClickNextScheme: function() {

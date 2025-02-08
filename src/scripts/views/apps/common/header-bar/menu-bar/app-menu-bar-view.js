@@ -57,31 +57,31 @@ export default MenuBarView.extend({
 	//
 
 	onLoad: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onLoad) {
-				menu.onLoad();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onLoad) {
+				menuView.onLoad();
 			}
 		}
 	},
 
 	onChange: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onChange) {
-				menu.onChange();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onChange) {
+				menuView.onChange();
 			}
 		}
 	},
 
 	onSave: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onSave) {
-				menu.onSave();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onSave) {
+				menuView.onSave();
 			}
 		}
 	},
@@ -91,21 +91,21 @@ export default MenuBarView.extend({
 	//
 
 	onChangeTab: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onChangeTab) {
-				menu.onChangeTab();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onChangeTab) {
+				menuView.onChangeTab();
 			}
 		}
 	},
 
 	onCloseTab: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onChangeTab) {
-				menu.onCloseTab();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onChangeTab) {
+				menuView.onCloseTab();
 			}
 		}
 	},
@@ -115,31 +115,31 @@ export default MenuBarView.extend({
 	//
 
 	onSelect: function(view) {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onSelect) {
-				menu.onSelect(view);
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onSelect) {
+				menuView.onSelect(view);
 			}
 		}
 	},
 
 	onDeselect: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onDeselect) {
-				menu.onDeselect();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onDeselect) {
+				menuView.onDeselect();
 			}
 		}
 	},
 
 	onChangeSelection: function() {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onChangeSelection) {
-				menu.onChangeSelection();
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onChangeSelection) {
+				menuView.onChangeSelection();
 			}
 		}
 	},
@@ -149,11 +149,11 @@ export default MenuBarView.extend({
 	//
 
 	onKeyDown: function(event) {
-		let menus = this.getMenus();
-		for (let i = 0; i < menus.length; i++) {
-			let menu = menus[i];
-			if (menu && menu.onKeyDown) {
-				menu.onKeyDown(event);
+		let menuViews = this.getMenuViews();
+		for (let i = 0; i < menuViews.length; i++) {
+			let menuView = menuViews[i];
+			if (menuView && menuView.onKeyDown) {
+				menuView.onKeyDown(event);
 			}
 		}
 	}

@@ -16,8 +16,8 @@
 \******************************************************************************/
 
 import BaseView from '../../../../views/base-view.js';
-import NotificationsListView from '../../../../views/apps/common/notifications/lists/notifications-list-view.js';
-import ConnectionRequestsListView from '../../../../views/users/connection-requests/lists/connection-requests-list-view.js';
+import NotificationsListView from '../../../../views/apps/notification-center/mainbar/notifications/lists/notifications-list-view.js';
+import ConnectionRequestsListView from '../../../../views/apps/connection-manager/connection-requests/lists/connection-requests-list-view.js';
 
 export default BaseView.extend({
 
@@ -48,7 +48,7 @@ export default BaseView.extend({
 			<div class="tab-content">
 				<div role="tabpanel" class="notifications-panel tab-pane active">
 					<div class="notifications" style="margin:-5px">
-						<i class="fa fa-3x centered fa-spinner spinning" style="margin-left:-10px; margin-top:-10px"></i>
+						<i class="fa fa-3x centered fa-spinner" style="margin-left:-10px; margin-top:-10px"></i>
 					</div>
 				</div>
 		

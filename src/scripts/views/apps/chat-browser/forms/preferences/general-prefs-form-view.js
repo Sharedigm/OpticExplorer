@@ -45,7 +45,7 @@ export default PreferencesFormView.extend({
 			<div class="controls">
 				<select>
 					<% for (let i = 0; i < detail_kinds.length; i++) { %>
-					<option value="<%= detail_kinds[i] %>"<% if (detail_kind == detail_kinds[i]) { %> selected<% } %>><%= detail_kinds[i]? detail_kinds[i].toTitleCase() : 'None' %></option>
+					<option value="<%= detail_kinds[i] %>"<% if (detail_kind == detail_kinds[i]) { %> selected<% } %>><%= detail_kinds[i]? detail_kinds[i].replace(/_/g, ' ').toTitleCase() : 'None' %></option>
 					<% } %>
 				</select>
 		

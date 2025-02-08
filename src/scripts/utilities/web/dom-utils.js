@@ -84,12 +84,23 @@ export default {
 		}
 	},
 
+	setFont: function(element, font) {
+		application.loadFont(font);
+		if (font) {
+			if (config.fonts[font]) {
+				$(element).css('font-family', config.fonts[font]['font-family']);
+			} else {
+				$(element).css('font-family', font);
+			}
+		}
+	},
+
 	setFontStyles: function(element, attributes) {
 		if (!attributes) {
 			return;
 		}
-		if (attributes.font && config.fonts[attributes.font]) {
-			$(element).css('font-family', config.fonts[attributes.font]['font-family']);
+		if (attributes.font) {
+			this.setFont(element, attributes.font);
 		}
 		if (attributes.font_variant) {
 			$(element).css('font-variant', attributes.font_variant);

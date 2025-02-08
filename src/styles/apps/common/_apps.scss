@@ -71,7 +71,7 @@ $rounded-message-border-radius: 10px;
 		}
 
 		.toolbar {
-			display: inline-flex;
+			display: inline-flex !important;
 			max-width: 100%;
 			background: none !important;
 			border: none;
@@ -334,6 +334,7 @@ $rounded-message-border-radius: 10px;
 		}
 
 		.address-bar, .info-bar, .nav-bar, .toolbar {
+			display: block;
 			height: 30px;
 
 			.icon-size {
@@ -348,10 +349,6 @@ $rounded-message-border-radius: 10px;
 
 		.status-bar {
 			flex-shrink: 0;
-
-			> div {
-				display: flex;
-			}
 		}
 
 		.toolbar {
@@ -410,6 +407,7 @@ $rounded-message-border-radius: 10px;
 		height: 100%;
 
 		.body {
+			height: 100%;
 			flex-grow: 0 !important;
 			margin: auto;
 		}
@@ -541,6 +539,14 @@ body[device="desktop"] {
 			> div:first-child,
 			> div:last-child {
 				min-width: 125px;
+			}
+
+			> div:first-child {
+				justify-content: flex-start;
+			}
+
+			> div:last-child:not(:first-child) {
+				justify-content: flex-end;
 			}
 		}
 	}

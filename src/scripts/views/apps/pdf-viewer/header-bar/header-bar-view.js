@@ -71,7 +71,7 @@ export default HeaderBarView.extend({
 
 				// set zoom of image element
 				//
-				this.parent.getChildView('content').setZoom(zoom);
+				this.parent.getPdfView().setZoom(zoom);
 			}
 		}));
 	},

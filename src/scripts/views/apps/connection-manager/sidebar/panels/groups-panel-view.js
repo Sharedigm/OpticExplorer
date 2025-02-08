@@ -15,11 +15,11 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Group from '../../../../../models/users/connections/group.js';
+import Group from '../../../../../models/connections/group.js';
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
-import Connections from '../../../../../collections/users/connections/connections.js';
-import Groups from '../../../../../collections/users/connections/groups.js';
-import Members from '../../../../../collections/users/connections/members.js';
+import Connections from '../../../../../collections/connections/connections.js';
+import Groups from '../../../../../collections/connections/groups.js';
+import Members from '../../../../../collections/connections/members.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
 import GroupsView from '../../../../../views/apps/connection-manager/sidebar/groups/groups-view.js';
 
@@ -105,6 +105,12 @@ export default SideBarPanelView.extend({
 	getSelected: function() {
 		if (this.hasChildView('items')) {
 			return this.getChildView('items').getSelected();
+		}
+	},
+
+	getSelectedModel: function() {
+		if (this.hasChildView('items')) {
+			return this.getChildView('items').getSelectedModel();
 		}
 	},
 

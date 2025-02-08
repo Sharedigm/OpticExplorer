@@ -161,16 +161,12 @@ export default DialogView.extend({
 	},
 
 	showFileBrowser: function() {
-		this.showChildView('file_browser', new FileBrowserView({
+		this.showChildApp('file_browser', {
 			model: this.model,
 
 			// options
 			//
 			parent: FileBrowserView.root,
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
 
 			// callbacks
 			//
@@ -186,7 +182,7 @@ export default DialogView.extend({
 					return this.options.onopen(items);
 				}
 			}
-		}));
+		});
 	},
 
 	showFileNameForm: function() {

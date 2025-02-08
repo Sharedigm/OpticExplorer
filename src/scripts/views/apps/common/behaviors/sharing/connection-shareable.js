@@ -48,17 +48,17 @@ export default _.extend({}, ItemShareable, {
 	//
 
 	showShareWithConnectionsDialog: function(connections, items, options) {
-		import(
-			'../../../../../views/apps/connection-manager/dialogs/sharing/share-with-connections-dialog-view.js'
-		).then((ShareWithConnectionsDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show preferences dialog
+			// callbacks
 			//
-			this.show(new ShareWithConnectionsDialogView.default(_.extend({
-				items: items,
-				connections: connections,
-				message: config.apps.file_browser.share_invitation_message
-			}, options)));
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showShareWithConnectionsDialog(_.extend({
+					items: items,
+					connections: connections,
+					message: config.apps.file_browser.share_invitation_message
+				}, options));
+			}
 		});
 	},
 });

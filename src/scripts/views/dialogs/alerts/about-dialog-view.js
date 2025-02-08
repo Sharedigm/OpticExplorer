@@ -61,7 +61,7 @@ export default ModalView.extend({
 							<% if (branding.welcome.splash.brand.logotype.names) { %>
 							<% let names = branding.welcome.splash.brand.logotype.names; %>
 							<% let keys = Object.keys(names); %>
-							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+							<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 							<% } %>
 						</h1>
 						<% } %>
@@ -104,6 +104,49 @@ export default ModalView.extend({
 	//
 
 	size: config.defaults.dialogs.sizes.tiny,
+
+	//
+	// constructor
+	//
+
+	initialize: function() {
+
+		// load required fonts
+		//
+		if (config.branding.welcome) {
+			this.loadFonts(config.branding.welcome);
+		}
+	},
+
+	loadFonts: function(welcome) {
+		if (welcome.splash && welcome.splash.brand && welcome.splash.brand.logotype) {
+			this.loadLogoTypeFonts(welcome.splash.brand.logotype);
+		}
+		if (welcome.splash && welcome.splash.tagline && welcome.splash.tagline.font) {
+			application.loadFont(welcome.splash.tagline.font);
+		}
+		if (welcome.splash && welcome.splash.description && welcome.splash.description.font) {
+			application.loadFont(welcome.splash.description.font);
+		}
+	},
+
+	loadLogoTypeFonts: function(logotype) {
+		if (logotype.font) {
+			application.loadFont(logotype.font);
+		}
+
+		// load fonts for logotype names
+		//
+		if (logotype.names) {
+			let keys = Object.keys(logotype.names);
+			for (let i = 0; i < keys.length; i++) {
+				let key = keys[i];
+				if (logotype.names[key].font) {
+					application.loadFont(logotype.names[key].font);
+				}
+			}
+		}
+	},
 
 	//
 	// dialog methods

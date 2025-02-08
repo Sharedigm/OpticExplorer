@@ -1,0 +1,392 @@
+{
+	"file_menu": {
+		"items": [
+			{
+				"class": "new-window",
+				"icon": "far fa-window-maximize",
+				"name": "New Window",
+				"shortcut": "command-enter"
+			},
+			{
+				"class": "open-file",
+				"icon": "fa fa-folder-open",
+				"name": "Open",
+				"shortcut": "command-O"
+			},
+			"divider",
+			{
+				"class": "show-info",
+				"icon": "fa fa-info-circle",
+				"name": "Show Info",
+				"shortcut": "command-I"
+			},
+			"divider",
+			{
+				"class": "save-as",
+				"icon": "fa fa-save",
+				"name": "Save As",
+				"shortcut": "shift-command-S"
+			},
+			"divider",
+			{
+				"class": "download-file",
+				"icon": "fa fa-download",
+				"name": "Download",
+				"shortcut": "shift-command-D"
+			},
+			"divider",
+			{
+				"class": "close-window",
+				"icon": "fa fa-circle-xmark",
+				"name": "Close",
+				"shortcut": "command-L"
+			}
+		]
+	},
+	"find_menu": {
+		"items": [
+			{
+				"class": "find",
+				"icon": "fa fa-search",
+				"name": "Find",
+				"shortcut": "command-F"
+			},
+			{
+				"class": "find-next",
+				"icon": "fa fa-search",
+				"name": "Find Next",
+				"shortcut": "shift-command-F"
+			}
+		]
+	},
+	"help_menu": {
+		"items": [
+			{
+				"class": "view-about-info",
+				"icon": "fa fa-info-circle",
+				"name": "About"
+			},
+			"divider",
+			{
+				"class": "view-app",
+				"icon": "fa fa-question-circle",
+				"name": "View Help Pages"
+			},
+			{
+				"class": "view-topic",
+				"icon": "fa fa-newspaper",
+				"name": "Search Community Help"
+			},
+			"divider",
+			{
+				"class": "contact-us",
+				"icon": "fa fa-envelope",
+				"name": "Contact Us"
+			}
+		]
+	},
+	"menu_bar": {
+		"menus": [
+			{
+				"class": "file",
+				"icon": "fa fa-file",
+				"name": "File"
+			},
+			{
+				"class": "view",
+				"icon": "fa fa-eye",
+				"name": "View"
+			},
+			{
+				"class": "find",
+				"icon": "fa fa-search",
+				"name": "Find"
+			},
+			{
+				"class": "share",
+				"icon": "fa fa-share",
+				"name": "Share"
+			},
+			{
+				"class": "help",
+				"icon": "fa fa-question-circle",
+				"name": "Help"
+			}
+		]
+	},
+	"share_menu": {
+		"items": [
+			{
+				"class": "share-by-invitation",
+				"icon": "fa fa-user-friends",
+				"name": "By Invitation"
+			},
+			"divider",
+			{
+				"class": "share-by-topic",
+				"icon": "fa fa-newspaper",
+				"name": "By Discussion Topic"
+			},
+			{
+				"class": "share-by-message",
+				"icon": "fa fa-comments",
+				"name": "By Chat Messsage"
+			},
+			"divider",
+			{
+				"class": "share-by-link",
+				"icon": "fa fa-link",
+				"name": "By Link"
+			},
+			{
+				"class": "share-by-email",
+				"icon": "fa fa-envelope",
+				"name": "By Email"
+			}
+		]
+	},
+	"view_menu": {
+		"items": [
+			{
+				"class": "view-page",
+				"icon": "fa fa-file",
+				"name": "Page",
+				"menu": [
+					{
+						"class": "view-first",
+						"icon": "fa fa-fast-backward",
+						"name": "First",
+						"shortcut": "up arrow"
+					},
+					{
+						"class": "view-prev",
+						"icon": "fa fa-backward",
+						"name": "Prev",
+						"shortcut": "left arrow"
+					},
+					{
+						"class": "view-next",
+						"icon": "fa fa-forward",
+						"name": "Next",
+						"shortcut": "right arrow"
+					},
+					{
+						"class": "view-last",
+						"icon": "fa fa-fast-forward",
+						"name": "Last",
+						"shortcut": "down arrow"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "view-text",
+				"icon": "fa fa-font",
+				"name": "Text",
+				"shortcut": "shift-command-T"
+			},
+			"divider",
+			{
+				"class": "fit-page",
+				"icon": "fa fa-expand",
+				"name": "Fit",
+				"menu": [
+					{
+						"class": "fit-width",
+						"icon": "fa fa-arrows-left-right-to-line",
+						"name": "Fit Width",
+						"shortcut": "shift-command-D"
+					},
+					{
+						"class": "fit-height",
+						"icon": "fa fa-arrows-left-right-to-line rotated",
+						"name": "Fit Height",
+						"shortcut": "shift-command-H"
+					},
+					{
+						"class": "fit-size",
+						"icon": "fa fa-expand",
+						"name": "Fit Size",
+						"shortcut": "shift-command-F"
+					}
+				]
+			},
+			{
+				"class": "zoom-page",
+				"icon": "fa fa-search",
+				"name": "Zoom",
+				"menu": [
+					{
+						"class": "zoom-in",
+						"icon": "fa fa-search-plus",
+						"name": "Zoom In",
+						"shortcut": "="
+					},
+					{
+						"class": "zoom-out",
+						"icon": "fa fa-search-minus",
+						"name": "Zoom Out",
+						"shortcut": "-"
+					},
+					{
+						"class": "zoom-to-actual",
+						"icon": "fa fa-search",
+						"name": "Zoom to Actual Size",
+						"shortcut": "command-1"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "show-toolbars",
+				"icon": "fa fa-wrench",
+				"name": "Toolbars",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-zoom-mode-bar",
+						"group": "show-toolbar",
+						"icon": "fa fa-expand",
+						"name": "Zoom Mode",
+						"select": true
+					},
+					{
+						"class": "show-zoom-bar",
+						"group": "show-toolbar",
+						"icon": "fa fa-search",
+						"name": "Zoom",
+						"select": true
+					}
+				]
+			},
+			{
+				"class": "show-sidebar",
+				"icon": "fa fa-pause",
+				"name": "Sidebar",
+				"select": true,
+				"menu": [
+					{
+						"class": "show-pages-panel",
+						"group": "show-sidebar-panel",
+						"icon": "fa fa-file",
+						"name": "Pages",
+						"select": true
+					}
+				]
+			},
+			{
+				"class": "sidebar-tile-size",
+				"icon": "fa fa-th-large",
+				"name": "Sidebar Tile Size",
+				"select": true,
+				"menu": [
+					{
+						"class": "small-tile-size",
+						"group": "sidebar-tile-size",
+						"icon": "fa fa-th",
+						"name": "Small",
+						"select": true
+					},
+					{
+						"class": "medium-tile-size",
+						"group": "sidebar-tile-size",
+						"icon": "fa fa-th-large",
+						"name": "Medium",
+						"select": true
+					},
+					{
+						"class": "large-tile-size",
+						"group": "sidebar-tile-size",
+						"icon": "fa fa-image",
+						"name": "Large",
+						"select": true
+					}
+				]
+			},
+			{
+				"class": "show-exif-info",
+				"icon": "fa fa-table",
+				"name": "Exif Info",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "window-size",
+				"icon": "far fa-window-maximize",
+				"name": "Window Size",
+				"menu": [
+					{
+						"class": "shrink-window",
+						"icon": "fa fa-minus",
+						"name": "Shrink",
+						"shortcut": "command-["
+					},
+					{
+						"class": "grow-window",
+						"icon": "fa fa-plus",
+						"name": "Grow",
+						"shortcut": "command-]"
+					},
+					{
+						"class": "expand-window",
+						"icon": "fa fa-expand",
+						"name": "Expand",
+						"shortcut": "command-\\"
+					}
+				]
+			},
+			"divider",
+			{
+				"class": "spaces",
+				"icon": "far fa-window-maximize",
+				"name": "Spaces",
+				"select": true,
+				"menu": [
+					{
+						"class": "prev-space",
+						"icon": "fa fa-chevron-left",
+						"name": "Prev",
+						"shortcut": "command-left arrow"
+					},
+					{
+						"class": "next-space",
+						"icon": "fa fa-chevron-right",
+						"name": "Next",
+						"shortcut": "command-right arrow"
+					}
+				]
+			},
+			{
+				"class": "windows",
+				"icon": "far fa-window-restore",
+				"name": "Windows",
+				"select": true,
+				"menu": [
+					{
+						"class": "minimize-all",
+						"icon": "fa fa-window-minimize",
+						"name": "Minimize All"
+					},
+					{
+						"class": "unminimize-all",
+						"icon": "fa fa-window-restore",
+						"name": "Unminimize All"
+					}
+				]
+			},
+			{
+				"class": "view-full-screen",
+				"icon": "fa fa-desktop",
+				"name": "Full Screen",
+				"shortcut": "command-up arrow",
+				"select": true
+			},
+			"divider",
+			{
+				"class": "view-preferences",
+				"icon": "fa fa-snowflake",
+				"name": "Preferences"
+			}
+		]
+	}
+}

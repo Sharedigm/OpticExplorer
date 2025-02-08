@@ -23,24 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="select-first"><i class="fa fa-fast-backward"></i>First<span class="shortcut">up arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-prev"><i class="fa fa-backward"></i>Prev<span class="shortcut">left arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-next"><i class="fa fa-forward"></i>Next<span class="shortcut">right arrow</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-last"><i class="fa fa-fast-forward"></i>Last<span class="shortcut">down arrow</span></a>
-		</li>
-	`),
-
 	events: {
 		'click .select-first': 'onClickSelectFirst',
 		'click .select-prev': 'onClickSelectPrev',

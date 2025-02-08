@@ -9,6 +9,8 @@
 <div class="content">
 	<p>These guidelines cover expections for user conduct when using the social functions such as social networking and chat. The social platform is potentially visible to a wide audience, so it's expected that you behave accordingly. </p>
 
+	<div class="attention"><div class="emphasis">Be <br />Nice!</div></div>
+
 	<h2><i class="fa fa-smile"></i>Encouraged Behavior</h2>
 	<p>The following are considered to be positive, encouraged behavior.</p>
 

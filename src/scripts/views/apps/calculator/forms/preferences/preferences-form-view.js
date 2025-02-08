@@ -24,33 +24,12 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general-tab<% if (tab == 'general' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general-prefs">
-					<i class="fa fa-check"></i>
-					<label>General</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-prefs tab-pane<% if (tab == 'general' || !tab) { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
-		},
-		general: '.general-prefs'
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-check"
+		}
+	],
 
 	//
 	// rendering methods

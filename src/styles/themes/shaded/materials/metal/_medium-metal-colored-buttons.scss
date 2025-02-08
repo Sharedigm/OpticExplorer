@@ -30,10 +30,6 @@ body:not(.binary) {
 				@include metal-btns.shaded(colors.$medium-red);
 			}
 
-			&.raspberry {
-				@include metal-btns.shaded(colors.$medium-raspberry);
-			}
-
 			&.red-orange {
 				@include metal-btns.shaded(colors.$medium-red-orange);
 			}
@@ -88,6 +84,10 @@ body:not(.binary) {
 
 			&.magenta {
 				@include metal-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.raspberry {
+				@include metal-btns.shaded(colors.$medium-raspberry);
 			}
 
 			&.brown {

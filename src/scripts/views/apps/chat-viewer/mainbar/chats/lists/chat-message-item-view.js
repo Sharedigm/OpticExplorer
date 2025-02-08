@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import UserPreferences from '../../../../../../models/preferences/user-preferences.js';
-import Connection from '../../../../../../models/users/connections/connection.js';
+import Connection from '../../../../../../models/connections/connection.js';
 import Items from '../../../../../../collections/storage/items.js';
 import Selectable from '../../../../../../views/behaviors/selection/selectable.js';
 import ModelView from '../../../../../../views/items/model-view.js';
@@ -202,12 +202,19 @@ export default ModelView.extend(_.extend({}, Selectable, {
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
+			let message = this.model.get('message');
+
+			// format / limit message
+			//
+			if (message) {
+				message = HtmlUtils.htmlToText(message || '').firstWords(15);
+			}
 
 			// confirm delete
 			//
 			application.confirm({
-				message: "Are you sure you want to delete the message " + '"' +
-					HtmlUtils.htmlToText(this.model.get('message')).firstWords(15) + '"?',
+				message: message? "Are you sure you want to delete the message " + '"' +
+					message + '"?' : "Are you sure you want to delete this message?",
 
 				// callbacks
 				//
@@ -402,7 +409,6 @@ export default ModelView.extend(_.extend({}, Selectable, {
 
 				// options
 				//
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks

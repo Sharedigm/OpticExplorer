@@ -18,6 +18,7 @@
 import PreferencesGroupView from '../../../../../views/apps/common/forms/preferences-group-view.js';
 import GeneralPrefsFormView from '../../../../../views/apps/optic-editor/forms/preferences/general-prefs-form-view.js';
 import DisplayPrefsFormView from '../../../../../views/apps/optic-editor/forms/preferences/display-prefs-form-view.js';
+import WindowPrefsFormView from '../../../../../views/apps/optic-editor/forms/preferences/window-prefs-form-view.js';
 import OpticsPrefsFormView from '../../../../../views/apps/optic-editor/forms/preferences/optics-prefs-form-view.js';
 import RayTracingPrefsFormView from '../../../../../views/apps/optic-editor/forms/preferences/ray-tracing-prefs-form-view.js';
 
@@ -27,66 +28,28 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-
-			<li role="presentation" class="general-tab<% if (tab == 'general' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general-prefs">
-					<i class="fa fa-check"></i>
-					<label>General</label>
-				</a>
-			</li>
-
-			<li role="presentation" class="display-tab<% if (tab == 'display') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".display-prefs">
-					<i class="fa fa-desktop"></i>
-					<label>Display</label>
-				</a>
-			</li>
-
-			<li role="presentation" class="optics-tab<% if (tab == 'optics') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".optics-prefs">
-					<i class="fa fa-database rotated flipped"></i>
-					<label>Optics</label>
-				</a>
-			</li>
-
-			<li role="presentation" class="ray-tracing-tab<% if (tab == 'ray_tracing') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".ray-tracing-prefs">
-					<i class="fa fa-lightbulb"></i>
-					<label>Ray Tracing</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-prefs tab-pane<% if (tab == 'general' || !tab) { %> active<% } %>">
-			</div>
-
-			<div role="tabpanel" class="display-prefs tab-pane<% if (tab == 'display') { %> active<% } %>">
-			</div>
-
-			<div role="tabpanel" class="optics-prefs tab-pane<% if (tab == 'optics') { %> active<% } %>">
-			</div>
-
-			<div role="tabpanel" class="ray-tracing-prefs tab-pane<% if (tab == 'ray_tracing') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-check"
 		},
-		general: '.general-prefs',
-		display: '.display-prefs',
-		optics: '.optics-prefs',
-		ray_tracing: '.ray-tracing-prefs'
-	},
+		{
+			"name": "Display",
+			"icon": "fa fa-desktop"
+		},
+		{
+			"name": "Window",
+			"icon": "fa fa-window-maximize"
+		},
+		{
+			"name": "Optics",
+			"icon": "fa fa-database rotated flipped"
+		},
+		{
+			"name": "Ray Tracing",
+			"icon": "fa fa-lightbulb"
+		}
+	],
 
 	//
 	// rendering methods
@@ -102,6 +65,9 @@ export default PreferencesGroupView.extend({
 				break;
 			case 'display':
 				this.showDisplayPrefs();
+				break;
+			case 'window':
+				this.showWindowPrefs();
 				break;
 			case 'optics':
 				this.showOpticsPrefs();
@@ -126,6 +92,18 @@ export default PreferencesGroupView.extend({
 
 	showDisplayPrefs: function() {
 		this.showChildView('display', new DisplayPrefsFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onchange: (key, value) => {
+				this.setOption(key, value);
+			}
+		}));
+	},
+
+	showWindowPrefs: function() {
+		this.showChildView('window', new WindowPrefsFormView({
 			model: this.model,
 
 			// callbacks

@@ -61,6 +61,16 @@ export default SideBarPanelView.extend({
 	},
 
 	//
+	// querying methods
+	//
+
+	hasActivities: function() {
+		return application.hasApp('connection_manager') ||
+			application.hasApp('post_viewer') ||
+			application.hasApp('chat_viewer');
+	},
+
+	//
 	// rendering methods
 	//
 
@@ -73,15 +83,18 @@ export default SideBarPanelView.extend({
 		};
 	},
 
-	showDefaultTopic: function() {
-		import(
-			'../../../../../views/apps/topic-viewer/topic-viewer-view.js'
-		).then((TopicViewerView) => {
+	onRender: function() {
+		if (!this.hasActivities()) {
+			this.hide();
+		}
+	},
 
-			// show default topic
-			//
-			application.showTopic(TopicViewerView.default.default_topic);
-		});
+	showConnections: function() {
+		application.launch('connection_manager');
+	},
+
+	showDefaultTopic: function() {
+		application.launch('topic_viewer');
 	},
 
 	//
@@ -89,7 +102,7 @@ export default SideBarPanelView.extend({
 	//
 
 	onClickNumConnections: function() {
-		application.launch('connection_manager');
+		this.showConnections();
 	},
 
 	onClickNumPosts: function() {

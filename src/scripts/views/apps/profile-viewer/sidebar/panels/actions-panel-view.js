@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connections from '../../../../../collections/users/connections/connections.js';
+import Connections from '../../../../../collections/connections/connections.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
 
 export default SideBarPanelView.extend({
@@ -51,16 +51,16 @@ export default SideBarPanelView.extend({
 	//
 
 	sendConnectionRequest: function() {
-		import(
-			'../../../../../views/users/connection-requests/dialogs/connection-request-dialog-view.js'
-		).then((ConnectionRequestDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show connection dialog
+			// callbacks
 			//
-			application.show(new ConnectionRequestDialogView.default({
-				model: application.session.user,
-				collection: new Connections([this.model])
-			}));
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showConnectionRequestDialog({
+					model: application.session.user,
+					collection: new Connections([this.model])
+				});
+			}
 		});
 	},
 

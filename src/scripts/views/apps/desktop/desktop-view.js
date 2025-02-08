@@ -82,7 +82,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 	},
 
 	isCurrentApp: function(appName) {
-		return appName == this.getCurrentApp().appName;
+		return appName == this.getCurrentApp().getApp();
 	},
 
 	hasClock: function() {
@@ -128,7 +128,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 	},
 
 	getAppView: function(appName) {
-		let index = this.settings.get('desktop_apps').indexOf(appName);
+		let index = this.getDesktopAppNames().indexOf(appName);
 		return this.getChildView('spaces').getChildViewAt(index).getChildView('body');
 	},
 
@@ -172,6 +172,18 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 		}
 	},
 
+	getDesktopAppNames: function() {
+		if (application.isAdmin()) {
+			return this.settings.get('admin_apps')
+		} else {
+			return this.settings.get('desktop_apps');
+		}
+	},
+
+	getDesktopApps: function() {
+		return application.apps.getByIds(this.getDesktopAppNames());
+	},
+
 	getDesktopNames: function(apps) {
 		let names = [];
 		for (let i = 0; i < apps.length; i++) {
@@ -191,7 +203,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 	//
 
 	setApp: function(appName, done) {
-		let index = this.settings.get('desktop_apps').indexOf(appName);
+		let index = this.getDesktopAppNames().indexOf(appName);
 		this.getChildView('spaces').setItemNumber(index + 1);
 		if (done) {
 			window.setTimeout(done, 500);
@@ -561,20 +573,21 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 	},
 
 	showDesktopSpaces: function() {
-		this.collection = application.apps.getByIds(this.settings.get('desktop_apps'));
+		this.collection = this.getDesktopApps();
 		this.showAppsBar();
 		this.showSpaces();
 		this.showLaunchers(this.settings.get('launcher_style'));
 	},
 
 	showAppsBar: function() {
-		let desktopApps = this.settings.get('desktop_apps');
-		if (desktopApps && desktopApps.length > 1) {
+		let desktopAppNames = this.getDesktopAppNames();
+		let multipleDesktops = desktopAppNames && desktopAppNames.length > 1;
+		if (multipleDesktops) {
 			if (application.hasChildView('header') &&
 				application.getChildView('header').showAppsBar) {
-				application.getChildView('header').showAppsBar(desktopApps, {
-					names: this.getDesktopNames(desktopApps),
-					current: desktopApps[0]
+				application.getChildView('header').showAppsBar(desktopAppNames, {
+					names: this.getDesktopNames(desktopAppNames),
+					current: desktopAppNames[0]
 				});
 			}
 		}
@@ -620,7 +633,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, {
 	},
 
 	showDock: function() {
-		let apps = this.settings.get('desktop_apps');
+		let apps = this.getDesktopAppNames();
 
 		// show dock
 		//

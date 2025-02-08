@@ -23,40 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="fa fa-file"></i>New Window<span class="shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-url"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="add-to-favorites"><i class="fa fa-star"></i>Add to Favorites<span class="command shortcut">=</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="delete-favorites"><i class="fa fa-trash-alt"></i>Delete Favorites<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="save-url-as"><i class="fa fa-save"></i>Save As<span class="command shortcut">S</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-url': 'onClickOpenUrl',
@@ -113,10 +79,6 @@ export default FileMenuView.extend({
 
 	onClickSaveUrlAs: function() {
 		this.parent.app.showSaveAsDialog(this.parent.app.getUrl());
-	},
-
-	onClickCloseWindow: function() {
-		this.parent.app.close();
 	},
 
 	//

@@ -1,0 +1,24 @@
+{
+	"menus": [
+		{
+			"class": "file",
+			"icon": "fa fa-file",
+			"name": "File"
+		},
+		{
+			"class": "edit",
+			"icon": "fa fa-pencil",
+			"name": "Edit"
+		},
+		{
+			"class": "view",
+			"icon": "fa fa-eye",
+			"name": "View"
+		},
+		{
+			"class": "help",
+			"icon": "fa fa-question-circle",
+			"name": "Help"
+		}
+	]
+}

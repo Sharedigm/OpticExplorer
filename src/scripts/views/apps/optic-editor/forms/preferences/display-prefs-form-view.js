@@ -26,25 +26,8 @@ export default PreferencesFormView.extend({
 	//
 
 	template: template(`
-		<div class="window-size form-group">
-			<label class="control-label"><i class="fa fa-arrows-alt"></i>Window Size</label>
-			<div class="controls">
-				<select>
-					<% let keys = Object.keys(sizes); %>
-					<% for (let i = 0; i < keys.length; i++) { %>
-					<% let key = keys[i]; %>
-					<% let width = sizes[key][0]; %>
-					<% let height = sizes[key][1]; %>
-					<option value="<%= key %>"<% if (window_size == key) { %> selected<% } %>><%= key.toTitleCase() %> (<%= width %>x<%= height %>)</option>
-					<% } %>
-				</select>
-		
-				<i class="active fa fa-question-circle" data-toggle="popover" title="Window Size" data-content="This is the maximum initial size of the application window."></i>
-			</div>
-		</div>
-		
-		<div class="window-panes form-group">
-			<label class="control-label"><i class="fa fa-th-large"></i>Window Panes</label>
+		<div class="sidebar-panes form-group">
+			<label class="control-label"><i class="fa fa-th-large"></i>Sidebar Panes</label>
 			<div class="controls">
 		
 				<div class="show-sidebar checkbox-inline">
@@ -75,7 +58,7 @@ export default PreferencesFormView.extend({
 		</div>
 		
 		<div class="sidebar-min-size form-group">
-			<label class="control-label"><i class="fa fa-arrows-alt-h"></i>Sidebar Min Size (px)</label>
+			<label class="control-label"><i class="fa fa-arrows-alt-h"></i>Sidebar Min Size</label>
 			<div class="controls">
 				<div class="range-input"></div>
 		
@@ -108,7 +91,6 @@ export default PreferencesFormView.extend({
 	},
 
 	events: {
-		'change .window-size select': 'onChangeWindowSize',
 		'change .show-sidebar input': 'onChangeShowSideBar',
 		'change .show-toolbar input': 'onChangeShowToolbar',
 		'change .show-data-editor input': 'onChangeShowDataEditor',
@@ -121,8 +103,6 @@ export default PreferencesFormView.extend({
 
 	getValue: function(key) {
 		switch (key) {
-			case 'window_size':
-				return this.$el.find('.window-size select').val();		
 			case 'show_sidebar':
 				return this.$el.find('.show-sidebar input').is(':checked');
 			case 'show_toolbar':
@@ -140,7 +120,6 @@ export default PreferencesFormView.extend({
 
 	getValues: function() {
 		return {
-			window_size: this.getValue('window_size'),
 			show_sidebar: this.getValue('show_sidebar'),
 			show_toolbar: this.getValue('show_toolbar'),
 			show_data_editor: this.getValue('show_data_editor'),
@@ -156,9 +135,6 @@ export default PreferencesFormView.extend({
 
 	setValue: function(key, value) {
 		switch (key) {
-			case 'window_size':
-				this.$el.find('.window-size select').val(value);
-				break;
 			case 'show_sidebar':
 				this.$el.find('.show-sidebar input[type="checkbox"]').prop('checked', value);
 				break;
@@ -186,7 +162,6 @@ export default PreferencesFormView.extend({
 
 	templateContext: function() {
 		return {
-			sizes: config.defaults.dialogs.sizes,
 			sidebar_panels: this.model.get('sidebar_panels') || []		
 		};
 	},
@@ -237,10 +212,6 @@ export default PreferencesFormView.extend({
 	//
 	// event handling methods
 	//
-
-	onChangeWindowSize: function() {
-		this.onChangeValue('window_size', this.getValue('window_size'));
-	},
 
 	onChangeShowSideBar: function() {
 		this.onChangeValue('show_sidebar', this.getValue('show_sidebar'));

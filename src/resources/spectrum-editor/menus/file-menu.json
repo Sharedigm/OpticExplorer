@@ -1,0 +1,74 @@
+{
+	"items": [
+		{
+			"class": "new",
+			"icon": "fa fa-magic",
+			"name": "New",
+			"menu": [
+				{
+					"class": "new-wavelengths",
+					"icon": "fa fa-rainbow",
+					"name": "New Wavelengths",
+					"shortcut": "command-enter"
+				},
+				{
+					"class": "new-folder",
+					"icon": "fa fa-folder",
+					"name": "New Folder"
+				},
+				{
+					"class": "new-window",
+					"icon": "far fa-window-maximize",
+					"name": "New Window",
+					"shortcut": "shift-command-enter"
+				}
+			]
+		},
+		{
+			"class": "open-wavelengths",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		"divider",
+		{
+			"class": "save-wavelengths",
+			"icon": "fa fa-save",
+			"name": "Save",
+			"shortcut": "command-S"
+		},
+		{
+			"class": "save-as",
+			"icon": "fa fa-save",
+			"name": "Save As",
+			"shortcut": "shift-command-S"
+		},
+		"divider",
+		{
+			"class": "delete-items",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Items",
+			"shortcut": "command-delete"
+		},
+		"divider",
+		{
+			"class": "close-tab",
+			"icon": "fa fa-xmark",
+			"name": "Close Tab",
+			"shortcut": "command-L"
+		},
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

@@ -17,7 +17,6 @@
 
 import Topic from '../../../../../models/topics/topic.js';
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
-import TopicBrowserView from '../../../../../views/apps/topic-browser/topic-browser-view.js';
 
 export default DialogView.extend({
 
@@ -59,7 +58,7 @@ export default DialogView.extend({
 	`),
 
 	regions: {
-		body: {
+		topic_browser: {
 			el: '.modal-body',
 			replaceElement: true
 		},
@@ -174,20 +173,18 @@ export default DialogView.extend({
 	},
 
 	showTopicBrowser: function() {
-		this.showChildView('body', new TopicBrowserView({
+		this.showChildApp('topic_browser', {
 			model: this.model,
 
 			// options
 			//
 			search: '',
 			subscribed: false,
+
+			// state
+			//
 			selected: this.options.selected,
-			dialog: this,
-			hidden: {
-				'add-topics': true,
-				'footer-bar': true
-			},
-			
+
 			// callbacks
 			//
 			onopen: (items) => this.onOpen(items),
@@ -195,7 +192,7 @@ export default DialogView.extend({
 			onselect: () => this.update(),
 			ondeselect: () => this.update(),
 			onsave: (item) => this.onSave(item)
-		}));
+		});
 	},
 
 	onShown: function() {
@@ -213,7 +210,7 @@ export default DialogView.extend({
 
 		// update buttons
 		//
-		this.setDisabled(!this.getChildView('body').hasSelected());
+		this.setDisabled(!this.getChildView('topic_browser').hasSelected());
 	},
 
 	//
@@ -252,7 +249,7 @@ export default DialogView.extend({
 
 		// add selected topics
 		//
-		this.addTopics(this.getChildView('body').getSelectedModels());
+		this.addTopics(this.getChildView('topic_browser').getSelectedModels());
 	},
 
 	//
@@ -260,6 +257,6 @@ export default DialogView.extend({
 	//
 
 	onKeyDown: function(event) {
-		this.getChildView('body').onKeyDown(event);
+		this.getChildView('topic_browser').onKeyDown(event);
 	}
 });

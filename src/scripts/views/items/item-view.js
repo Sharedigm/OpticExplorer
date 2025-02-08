@@ -446,7 +446,7 @@ export default ModelView.extend(_.extend({}, Selectable, DragSelectable, Highlig
 	},
 
 	onClickOwner: function() {
-		application.showUser(this.get('owner'));
+		application.showUser(this.getOwner());
 	},
 
 	//

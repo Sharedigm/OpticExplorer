@@ -15,146 +15,13 @@
 |        Copyright (C) 2016-2023, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="add dropdown-toggle"><i class="fa fa-plus"></i>Add<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation" class="dropdown dropdown-submenu">
-					<a class="add-lens dropdown-toggle"><%= icons.element %>Lens<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-					<ul class="dropdown-menu" data-toggle="dropdown">
-
-						<li role="presentation">
-							<a class="add-biconvex-lens"><%= icons.biconvex %>Biconvex</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-biconcave-lens"><%= icons.biconcave %>Biconcave</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-convex-plano-lens"><%= icons.convex_plano %>Convex Plano</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-concave-plano-lens"><%= icons.concave_plano %>Concave Plano</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-plano-convex-lens"><%= icons.plano_convex %>Plano Convex</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-plano-concave-lens"><%= icons.plano_concave %>Plano Concave</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-positive-meniscus-lens"><%= icons.positive_meniscus %>Positive Meniscus</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-negative-meniscus-lens"><%= icons.negative_meniscus %>Negative Meniscus</a>
-						</li>
-
-						<li role="presentation">
-							<a class="add-planar-lens"><%= icons.planar %>Planar</a>
-						</li>
-					</ul>
-				</li>
-
-				<li role="presentation">
-					<a class="add-stop"><%= icons.stop %>Stop</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-sensor"><%= icons.sensor %>Sensor</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-camera"><%= icons.camera %>Camera</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="add-distant-light"><%= icons.distant_light %>Distant Light</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-point-light"><%= icons.point_light %>Point Light</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-light-beam"><%= icons.light_beam %>Light Beam</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-light-ray"><%= icons.light_ray %>Light Ray</a>
-				</li>
-
-				<li role="separator" class="divider"></li>
-
-				<li role="presentation">
-					<a class="add-scene-object"><%= icons.scene_object %>Scene Object</a>
-				</li>
-
-				<li role="presentation">
-					<a class="add-distant-object"><%= icons.distant_object %>Distant Object</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation">
-			<a class="edit-selected"><i class="fa fa-pencil"></i>Edit<span class="shift command shortcut">E</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="flip-elements"><i class="fa fa-repeat"></i>Flip<span class="command shortcut">F</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="cut"><i class="fa fa-cut"></i>Cut<span class="command shortcut">X</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="copy"><i class="fa fa-copy"></i>Copy<span class="command shortcut">C</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="paste"><i class="fa fa-paste"></i>Paste<span class="command shortcut">V</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="put"><i class="fa fa-file-arrow-down"></i>Put<span class="shift command shortcut">V</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="duplicate"><i class="fa fa-copy"></i>Duplicate<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="delete"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="clear-clipboard"><i class="fa fa-xmark"></i>Clear Clipboard</a>
-		</li>
-	`),
 
 	events: {
 		'click .add-biconvex-lens': 'onClickAddBiConvexLens',
@@ -225,16 +92,6 @@ export default MenuView.extend({
 			'duplicate': hasSelectedElements,
 			'delete': hasSelected,
 			'clear-clipboard': hasClipboardItems
-		};
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			icons: this.constructor.icons
 		};
 	},
 
@@ -362,21 +219,21 @@ export default MenuView.extend({
 		//
 
 		element: `
-			<i class="icon">
+			<i class="element icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512px" height="512px" viewBox="0 50 512 562">
 					<path d="m 103.6688,334.08496 c 0,119.18143 34.49617,215.79625 77.05269,215.79625 42.55265,0 77.05011,-96.61482 77.05011,-215.79625 0,-119.18143 -34.49746,-215.79625 -77.05011,-215.79625 -42.55652,0 -77.05269,96.61482 -77.05269,215.79625 z M 271.52554,168.2803 c 16.02674,44.88903 24.85413,103.77243 24.85413,165.80466 0,62.03223 -8.82739,120.91433 -24.85413,165.80466 -7.0964,19.87375 -15.48364,36.63374 -24.9957,49.99159 l 59.49057,0 c 42.55524,0 77.05269,-96.61482 77.05269,-215.79625 0,-119.18143 -34.49745,-215.79625 -77.05269,-215.79625 l -59.49057,0 c 9.51206,13.35785 17.8993,30.11654 24.9957,49.99159 z" />
 				</svg>
 			</i>
 		`,
 		stop: `
-			<i class="icon">
+			<i class="stop icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512px" height="512px" viewBox="0 0 1000 1000">
 					<path d="M608 443.5l-225 -382q47 -8 81 -8 177 0 304 120zm-33 168l233 -395q103 125 103 283 0 53 -16 112l-320 0zm-96 -280l-427 0q37 -91 109 -158t167 -97zm-24 335l423 0q-37 90 -108.5 156.5t-164.5 98.5zm-99 -278l-234 396q-104 -126 -104 -285 0 -52 16 -111l322 0zm-33 165l227 384q-48 9 -86 9 -172 0 -302 -120z" />
 				</svg>
 			</i>
 		`,
 		sensor: `
-			<i class="icon">
+			<i class="sensor icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512px" height="512px" viewBox="0 0 24 24">
 					<path d="M19 17c0 1.104-.896 2-2 2h-11c-1.104 0-2-.896-2-2v-11c0-1.104.896-2 2-2h11c1.104 0 2 .896 2 2v11zm-11 3v3h-1v-3h1zm4 0v3h-1v-3h1zm2 0v3h-1v-3h1zm-4 0v3h-1v-3h1zm6 0v3h-1v-3h1zm-8-20v3h-1v-3h1zm4 0v3h-1v-3h1zm2 0v3h-1v-3h1zm-4 0v3h-1v-3h1zm6 0v3h-1v-3h1zm4 15h3v1h-3v-1zm0-4h3v1h-3v-1zm0-2h3v1h-3v-1zm0 4h3v1h-3v-1zm0-6h3v1h-3v-1zm-20 8h3v1h-3v-1zm0-4h3v1h-3v-1zm0-2h3v1h-3v-1zm0 4h3v1h-3v-1zm0-6h3v1h-3v-1z"/>
 				</svg>
@@ -391,63 +248,63 @@ export default MenuView.extend({
 		//
 
 		biconvex: `
-			<i class="icon">
+			<i class="biconvex icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 45, 5 c -9, 9.2 -15, 25.9 -15, 45c0, 19.1, 6, 35.8, 15, 45 h 10 c 9 -9.2, 15 -25.9, 15 -45 c 0 -19.1 -6 -35.8 -15 -45 H 45 z M 50.4, 85 h -0.8 c -6 -8.1 -9.6 -21.1 -9.6 -35 s 3.6 -26.9, 9.6 -35 h 0.8 c 6, 8.1, 9.6, 21.1, 9.6, 35 S 56.4, 76.9, 50.4, 85 z"/>
 				</svg>
 			</i>
 		`,
 		biconcave: `
-			<i class="icon">
+			<i class="biconcave icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 25, 5 c 6, 9.2, 10, 25.9, 10, 45 c 0, 19.1 -4, 35.8 -10, 45h50c -6 -9.2 -10 -25.9 -10 -45 c 0 -19.1, 4 -35.8, 10 -45 H 25 z M 59.8, 85 H 40.2 C 43.3, 74.9, 45, 62.8, 45, 50 s -1.7 -24.9 -4.8 -35 h 19.5 C 56.7, 25.1, 55, 37.2, 55, 50 S 56.7, 74.9, 59.8, 85 z"/>
 				</svg>
 			</i>
 		`,
 		planar: `
-			<i class="icon">
+			<i class="planar icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 30, 5 v 90 h 35 c 0 0, 0 0 0 -45 c 0 0, 0 0, 0 -45 H 30 z M 54.8, 85 H 40 V 15 h 14.8 z "/>
 				</svg>
 			</i>
 		`,
 		plano_convex: `
-			<i class="icon">
+			<i class="plano-convex icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path transform="translate(50, 50) scale(-1, 1) translate(-50, -50)" d="M 65, 95 V 5 H 50 c -9, 9.2 -15, 25.9 -15, 45 c 0, 19.1, 6, 35.8, 15, 45 H 65 z M 54.6, 15 H 55 v 70 h -0.4 c -6 -8.1 -9.6 -21.1 -9.6 -35 S 48.6, 23.1, 54.6, 15 z" />
 				</svg>
 			</i>
 		`,
 		plano_concave: `
-			<i class="icon">
+			<i class="plano-concave icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 30, 5 v 90 h 40 c -6 -9.2 -10 -25.9 -10 -45 c 0 -19.1, 4 -35.8, 10 -45 H 30 z M 54.8, 85 H 40 V 15 h 14.8 C 51.7, 25.1, 50, 37.2, 50, 50 S 51.7, 74.9, 54.8, 85 z "/>
 				</svg>
 			</i>
 		`,
 		convex_plano: `
-			<i class="icon">
+			<i class="convex-plano icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 65, 95 V 5 H 50 c -9, 9.2 -15, 25.9 -15, 45 c 0, 19.1, 6, 35.8, 15, 45 H 65 z M 54.6, 15 H 55 v 70 h -0.4 c -6 -8.1 -9.6 -21.1 -9.6 -35 S 48.6, 23.1, 54.6, 15 z" />
 				</svg>
 			</i>
 		`,
 		concave_plano: `
-			<i class="icon">
+			<i class="concave-plano icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path transform="translate(50, 50) scale(-1, 1) translate(-50, -50)" d="M 30, 5 v 90 h 40 c -6 -9.2 -10 -25.9 -10 -45 c 0 -19.1, 4 -35.8, 10 -45 H 30 z M 54.8, 85 H 40 V 15 h 14.8 C 51.7, 25.1, 50, 37.2, 50, 50 S 51.7, 74.9, 54.8, 85 z "/>
 				</svg>
 			</i>
 		`,
 		positive_meniscus: `
-			<i class="icon">
+			<i class="positive-meniscus icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 50, 5 c -12, 9.2 -20, 25.9 -20, 45 c 0, 19.1, 8, 35.8, 20, 45 h 20 c -6 -9.2 -10 -25.9 -10 -45 c 0 -19.1, 4 -35.8, 10 -45 H 50 z M 54.8, 85 h -1.1 C 45.2, 77, 40, 64, 40, 50 s 5.2 -27, 13.7 -35 h 1.1 C 51.7, 25.1, 50, 37.2, 50, 50 S 51.7, 74.9, 54.8, 85 z" />
 				</svg>
 			</i>
 		`,
 		negative_meniscus: `
-			<i class="icon">
+			<i class="negative-meniscus icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 -5 100 100">
 					<path d="M 75, 5 H 35 c -6, 9.2 -10, 25.9 -10, 45c0, 19.1, 4, 35.8, 10, 45 h 40 c -12 -9.2 -20 -25.9 -20 -45 C 55, 30.9, 63, 14.2, 75, 5z M53.7, 85 H 41 c -3.1 -7.2 -6 -19.3 -6 -35 c0 -15.7, 2.9 -27.8, 6 -35 h 12.7 C 48.1, 25.1, 45, 37.2, 45, 50 C 45, 62.8, 48.1, 74.9, 53.7, 85 z" />
 				</svg>
@@ -459,7 +316,7 @@ export default MenuView.extend({
 		//
 
 		distant_light: `
-			<i class="icon">
+			<i class="distant-light icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512px" height="512px" viewBox="0 0 512 512">
 					<polygon points="256,60.082 293.022,225.727 462,209.75 315.903,296.147 383.314,451.918 256,339.67 128.686,451.918 196.097,296.147 50,209.75 218.978,225.727" transform="matrix(1.1,0,0,1.1,-53.76,-53.76)" />
 				</svg>
@@ -469,7 +326,7 @@ export default MenuView.extend({
 			<i class="fa fa-lightbulb"></i>
 		`,
 		light_beam: `
-			<i class="icon">
+			<i class="light-beam icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512px" height="512px" viewBox="0 0 512 512">
 					<path d="M307.5,153 c 0,0 -40.234,27.359 -64.626,42.439 c  -11.919,5.959 -25.062,9.061 -38.374,9.061H81.022
 					C64.577,208.289,50,231.239,50,257.467 c 0,25.256,13.948,46.11,31.022,50.033H204.5 c 13.311,0,26.454,2.564,38.374,8.516
@@ -481,7 +338,7 @@ export default MenuView.extend({
 			</i>
 		`,
 		light_ray: `
-			<i class="icon">
+			<i class="light-ray icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
 					<path d="M17 12c0 2.762-2.238 5-5 5s-5-2.238-5-5 2.238-5 5-5 5 2.238 5 5zm-9.184-5.599l-3.594-3.594-1.414 1.414 3.594 3.595c.402-.537.878-1.013 1.414-1.415zm4.184-1.401c.34 0 .672.033 1 .08v-5.08h-2v5.08c.328-.047.66-.08 1-.08zm5.598 2.815l3.594-3.595-1.414-1.414-3.594 3.595c.536.402 1.012.878 1.414 1.414zm-12.598 4.185c0-.34.033-.672.08-1h-5.08v2h5.08c-.047-.328-.08-.66-.08-1zm11.185 5.598l3.594 3.593 1.415-1.414-3.594-3.594c-.403.537-.879 1.013-1.415 1.415zm-9.784-1.414l-3.593 3.593 1.414 1.414 3.593-3.593c-.536-.402-1.011-.877-1.414-1.414zm12.519-5.184c.047.328.08.66.08 1s-.033.672-.08 1h5.08v-2h-5.08zm-6.92 8c-.34 0-.672-.033-1-.08v5.08h2v-5.08c-.328.047-.66.08-1 .08z" />
 				</svg>

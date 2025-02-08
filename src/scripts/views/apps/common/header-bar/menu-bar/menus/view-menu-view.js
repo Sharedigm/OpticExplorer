@@ -23,23 +23,27 @@ export default MenuView.extend({
 
 		// view options
 		//
-		'click .view-kind a': 'onClickViewKind',
-		'click .map-view-kind a': 'onClickMapViewKind',
-		'click li[type=property-kind] > a': 'onClickPropertyKind',
-		'click li[type=detail-kind] a': 'onClickDetailKind',
-		'click li[type=date-format] a': 'onClickDateFormat',
+		'click .view-kind > a': 'onClickViewKind',
+		'click .map-view-kind > a': 'onClickMapViewKind',
+		'click .property-kind > a': 'onClickPropertyKind',
+
+		// details options
+		//
+		'click .view-details': 'onClickViewDetails',
+		'click .detail-kind > a': 'onClickDetailKind',
+		'click .date-format > a': 'onClickDateFormat',
 
 		// toolbar options
 		//
-		'click .show-toolbars > a': 'onClickShowToolbars',
-		'click .show-toolbar > li > a': 'onClickShowToolbar',
+		'click .show-toolbars': 'onClickShowToolbars',
+		'click .show-toolbar > a': 'onClickShowToolbar',
 
 		// sidebar options
 		//
-		'click .show-sidebar': 'onClickOption',
-		'click .show-sidebar-panels a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind a': 'onClickSideBarViewKind',
-		'click .sidebar-tile-size a': 'onClickSideBarTileSize',
+		'click .show-sidebar': 'onClickShowSidebar',
+		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
 
 		// window options
 		//
@@ -60,24 +64,37 @@ export default MenuView.extend({
 		'click .view-preferences': 'onClickViewPreferences'
 	},
 
+	visible: function() {
+		let isDesktop = this.parent.app.isDesktop();
+		let hasSpaces = isDesktop && this.parent.app.hasSpaces();
+		let isWindowed = !isDesktop;
+
+		return {
+			'window-size': isWindowed,
+			'spaces': hasSpaces,
+			'windows': isDesktop,
+			'view-full-screen': isDesktop
+		};
+	},
+
 	//
 	// getting methods
 	//
 
 	getSelectedSideBarPanels: function() {
-		return this.getElementAttributes('.show-sidebar-panels li.selected a', 'class', (value) => {
+		return this.getElementAttributes('.show-sidebar-panel.selected a', 'class', (value) => {
 			return value.replace('show-', '').replace('-panel', '').replace(/-/g, '_');
 		});
 	},
 
 	getSelectedToolbars: function() {
-		return this.getElementAttributes('.show-toolbars li.selected.option a', 'class', (value) => {
+		return this.getElementAttributes('.show-toolbar.selected a', 'class', (value) => {
 			return value.replace('show-', '').replace('-bar', '').replace(/-/g, '_');
 		});
 	},
 
 	getSelectedLayers: function() {
-		return this.getElementAttributes('.show-layers li.selected a', 'class', (value) => {
+		return this.getElementAttributes('.show-layer.selected a', 'class', (value) => {
 			return value.replace('show-', '').replace('-layer', '').replace(/-/g, '_');
 		});
 	},
@@ -92,22 +109,22 @@ export default MenuView.extend({
 	},
 
 	setMapViewKind: function(viewKind) {
-		this.$el.find('.map-view-kind.selected:not(.option)').removeClass('selected');
-		this.$el.find('.map-view-kind .view-map-' + viewKind).closest('li').addClass('selected');
+		this.$el.find('.map-view-kind.selected').removeClass('selected');
+		this.$el.find('.view-map-' + viewKind).closest('li').addClass('selected');
 	},
 
 	setSideBarViewKind: function(viewKind) {
-		this.$el.find('.sidebar-view-kind .selected').removeClass('selected');
-		this.$el.find('.sidebar-view-kind .view-sidebar-' + viewKind).closest('li').addClass('selected');
+		this.$el.find('.sidebar-view-kind.selected').removeClass('selected');
+		this.$el.find('.view-sidebar-' + viewKind).closest('li').addClass('selected');
 	},
 
 	setSideBarTileSize: function(tileSize) {
-		this.$el.find('.sidebar-tile-size .selected').removeClass('selected');
-		this.$el.find('.sidebar-tile-size .' + tileSize + '-tile-size').closest('li').addClass('selected');
+		this.$el.find('.sidebar-tile-size.selected').removeClass('selected');
+		this.$el.find('.' + tileSize + '-tile-size').closest('li').addClass('selected');
 	},
 
 	setDetailKind: function(detailKind, detailValue) {
-		let classNames = this.$el.find('li[type=detail-kind]').map((index, element) => {
+		let classNames = this.$el.find('li.detail-kind').map((index, element) => {
 			return $(element).find('a').attr('class');
 		}).get();
 
@@ -122,7 +139,7 @@ export default MenuView.extend({
 	},
 
 	setDateFormat: function(dateFormat) {
-		let classNames = this.$el.find('li[type=date-format]').map((index, element) => {
+		let classNames = this.$el.find('li.date-format').map((index, element) => {
 			return $(element).find('a').attr('class');
 		}).get();
 
@@ -182,18 +199,22 @@ export default MenuView.extend({
 	},
 
 	//
+	// rendering methods
+	//
+
+	showSettingsManager: function() {
+		application.launch('settings_manager', {
+			app: this.parent.app
+		});
+	},
+
+	//
 	// mouse event handling methods
 	//
 
 	onClickOption: function(event) {
 		let className = $(event.target).closest('a').attr('class');
 		let option = className? className.replace('dropdown-toggle', '').trim() : undefined;
-
-		// check for option
-		//
-		if (!option) {
-			return;
-		}
 
 		// update menu and app
 		//
@@ -203,12 +224,6 @@ export default MenuView.extend({
 	onClickViewKind: function(event) {
 		let className = $(event.currentTarget).attr('class').split(' ')[0];
 		let viewKind = className? className.replace('view-', '').replace(/-/g, '_').trim() : undefined;
-
-		// check for view kind
-		//
-		if (!viewKind) {
-			return;
-		}
 
 		// update menu
 		//
@@ -223,12 +238,6 @@ export default MenuView.extend({
 		let className = $(event.currentTarget).attr('class').split(' ')[0];
 		let mapViewKind = className? className.replace('view-map-', '').replace(/-/g, '_') : undefined;
 
-		// check for map view kind
-		//
-		if (!mapViewKind) {
-			return;
-		}
-
 		// update menu
 		//
 		this.setMapViewKind(mapViewKind);
@@ -236,6 +245,21 @@ export default MenuView.extend({
 		// update parent
 		//
 		this.parent.app.setOption('map_view_kind', mapViewKind);
+	},
+
+	onClickViewDetails: function() {
+		let classNames = this.$el.find('li.detail-kind').map((index, element) => {
+			return $(element).find('a').attr('class');
+		}).get();
+
+		// update menu
+		//
+		this.setItemsDeselected(classNames);
+		this.setItemSelected('view-details', false);
+
+		// update parent
+		//
+		this.parent.app.setOption('detail_kind', false);
 	},
 
 	onClickDetailKind: function(event) {
@@ -269,15 +293,21 @@ export default MenuView.extend({
 	// sidebar mouse event handling methods
 	//
 
+	onClickShowSidebar: function(event) {
+		this.onClickOption(event);
+	},
+
+	onClickShowSideBarPanel: function(event) {
+		let className = $(event.target).closest('a').attr('class');
+
+		// update menu and app
+		//
+		this.toggleSideBarPanel(className);
+	},
+
 	onClickSideBarViewKind: function(event) {
 		let className = $(event.currentTarget).attr('class').split(' ')[0];
 		let sidebarViewKind = className? className.replace('view-sidebar-', '').replace(/-/g, '_') : undefined;
-
-		// check for sidebar view kind
-		//
-		if (!sidebarViewKind) {
-			return;
-		}
 
 		// update menu
 		//
@@ -292,12 +322,6 @@ export default MenuView.extend({
 		let className = $(event.currentTarget).attr('class').split(' ')[0];
 		let sidebarTileSize = className? className.replace('-tile-size', '').replace(/-/g, '_') : undefined;
 
-		// check for sidebar tile size
-		//
-		if (!sidebarTileSize) {
-			return;
-		}
-
 		// update menu
 		//
 		this.setSideBarTileSize(sidebarTileSize);
@@ -307,32 +331,28 @@ export default MenuView.extend({
 		this.parent.app.setOption('sidebar_tile_size', sidebarTileSize);
 	},
 
-	onClickShowSideBarPanel: function(event) {
-		let className = $(event.target).closest('a').attr('class');	
-
-		// update menu and app
-		//
-		this.toggleSideBarPanel(className);
-	},
-
 	//
 	// toolbar mouse event handling methods
 	//
 
 	onClickShowToolbars: function() {
 		let showToolbars = this.isItemSelected('show-toolbars');
+
+		// update menu
+		//
 		this.toggleMenuItem('show-toolbars');
-		if (!showToolbars) {
-			this.$el.find('.show-toolbar > li').addClass('selected');
-		} else {
-			this.$el.find('.show-toolbar > li').removeClass('selected');
-		}
-		this.parent.app.setOption('toolbars', !showToolbars);
+
+		// update app
+		//
+		this.parent.app.setOption('show_toolbars', !showToolbars);
 	},
 
 	onClickShowToolbar: function(event) {
-		this.toggleToolbar($(event.target).closest('a').attr('class'));
-		this.setItemSelected('show-toolbars', true);
+		let className = $(event.target).closest('a').attr('class');
+
+		// update toolbar
+		//
+		this.toggleToolbar(className);
 	},
 
 	//
@@ -385,9 +405,7 @@ export default MenuView.extend({
 
 	onClickViewPreferences: function() {
 		if (this.show_settings_manager != false) {
-			application.launch('settings_manager', {
-				app: this.parent.app
-			});
+			this.showSettingsManager();
 		} else {
 			this.parent.app.showPreferencesDialog();
 		}

@@ -127,7 +127,7 @@ export default CardView.extend(_.extend({}, Expandable, {
 
 	edit: function() {
 		import(
-			'../../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/edit/publications/edit-user-patent-dialog-view.js'
+			'../../../../../../../views/apps/profile-viewer/dialogs/profile/edit/publications/edit-user-patent-dialog-view.js'
 		).then((EditUserPatentDialogView) => {
 			
 			// show edit dialog

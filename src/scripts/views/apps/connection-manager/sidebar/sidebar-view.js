@@ -70,7 +70,7 @@ export default SideBarView.extend({
 
 	getSelectedModel: function() {
 		if (this.hasChildView('groups')) {
-			return this.getChildView('groups').getSelectedModels()[0];
+			return this.getChildView('groups').getSelectedModel();
 		}
 	},
 

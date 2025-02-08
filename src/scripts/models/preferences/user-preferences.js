@@ -117,9 +117,9 @@ export default UserKeyValues.extend({
 	},
 
 	getDefaults: function(app) {
-		let defaults = config.apps[app];
-		if (defaults) {
-			return this.toKeyValuePairs(defaults.preferences, Browser.device);
+		let preferences = config.preferences[app];
+		if (preferences) {
+			return this.toKeyValuePairs(preferences, Browser.device);
 		}
 	},
 

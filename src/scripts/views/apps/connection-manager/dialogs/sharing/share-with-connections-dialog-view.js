@@ -18,7 +18,6 @@
 import ShareRequests from '../../../../../collections/storage/sharing/share-requests.js';
 import Users from '../../../../../collections/users/users.js';
 import FormDialogView from '../../../../../views/forms/dialogs/form-dialog-view.js';
-import FileBrowserView from '../../../../../views/apps/file-browser/file-browser-view.js';
 import ShareItemsMessageFormView from '../../../../../views/apps/connection-manager/forms/messages/share-items-message-form-view.js';
 
 export default FormDialogView.extend({
@@ -114,7 +113,7 @@ export default FormDialogView.extend({
 	},
 
 	hasSelected: function() {
-		return this.getChildView('file_browser').hasSelected();
+		return this.hasChildView('file_browser') && this.getChildView('file_browser').hasSelected();
 	},
 
 	//
@@ -252,22 +251,18 @@ export default FormDialogView.extend({
 	},
 
 	showFileBrowser: function() {
-		this.showChildView('file_browser', new FileBrowserView({
+		this.showChildApp('file_browser', {
 			model: this.model,
 
 			// options
 			//
 			selected: this.options.items,
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
 
 			// callbacks
 			//
 			onselect: () => this.onChange(),
 			ondeselect: () => this.onChange()
-		}));
+		});
 	},
 
 	form: function() {

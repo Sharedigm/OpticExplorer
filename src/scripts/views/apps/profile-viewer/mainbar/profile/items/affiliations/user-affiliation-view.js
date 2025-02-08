@@ -93,7 +93,7 @@ export default CardView.extend(_.extend({}, Expandable, {
 
 	edit: function() {
 		import(
-			'../../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/edit/edit-user-affiliation-dialog-view.js'
+			'../../../../../../../views/apps/profile-viewer/dialogs/profile/edit/edit-user-affiliation-dialog-view.js'
 		).then((EditUserAffiliationDialogView) => {
 			
 			// show edit dialog

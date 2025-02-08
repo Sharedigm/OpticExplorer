@@ -222,7 +222,7 @@ export default SelectableCollectionView.extend({
 		return _.extend({}, this.options, {
 			model: model,
 
-			// options
+			// state
 			//
 			selected: this.options.selected && this.options.selected.length > 0 && this.options.selected.contains(model)
 		});

@@ -4,7 +4,7 @@
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching files by sharing.              |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,49 +15,26 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connections from '../../../../../../collections/users/connections/connections.js';
-import SearchByView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-view.js';
+import SearchByTextView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-text-view.js';
 
-export default SearchByView.extend({
+export default SearchByTextView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<div class="input-group">
-			<div class="input-group-addon">
-				<i class="fa fa-share"></i>
-			</div>
-		
-			<input type="search" class="form-control" placeholder="Search shared with me" spellcheck="false" readonly>
-		
-			<div class="select-user input-group-addon btn">
-				<i class="fa fa-user"></i>
-			</div>
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
+	icon: 'fa fa-share',
+	placeholder: "Search Shared with Me",
+	readonly: true,
 
-	events: _.extend({}, SearchByView.prototype.events, {
+	buttons: [{
+		kind: 'select-user',
+		icon: 'fa fa-user'
+	}],
+
+	events: _.extend({}, SearchByTextView.prototype.events, {
 		'click .select-user': 'onClickSelectUser'
 	}),
-
-	//
-	// constructor
-	//
-
-	initialize: function() {
-
-		// set attributes
-		//
-		this.collection = new Connections();
-	},
 
 	//
 	// setting methods
@@ -74,7 +51,7 @@ export default SearchByView.extend({
 
 	submit: function() {
 		this.parent.app.searchFor({
-			'shared-by': this.model.get('id')
+			'shared_by': this.model.get('id')
 		});
 	},
 
@@ -82,23 +59,70 @@ export default SearchByView.extend({
 	// rendering methods
 	//
 
-	showSelectConnectionsDialog: function() {
+	showConnections: function() {
 		import(
-			'../../../../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js'
-		).then((SelectConnectionsDialogView) => {
+			'../../../../../../collections/connections/connections.js'
+		).then((Connections) => {
 
-			// show open dialog
+			// create new collection
 			//
-			this.parent.app.show(new SelectConnectionsDialogView.default({
-				collection: this.collection,
+			if (!this.collection) {
+				this.collection = new Connections.default();
+			}
 
-				// callbacks
+			// fetch connections
+			//
+			if (this.collection.length == 0) {
+				this.collection.fetch({
+
+					// callbacks
+					//
+					success: () => {
+
+						// show dialog
+						//
+						this.showSelectConnectionsDialog();
+					},
+
+					error: () => {
+
+						// show error message
+						//
+						application.error({
+							message: "Could not fetch connections."
+						});
+					}
+				});
+			} else {
+
+				// show dialog
 				//
-				select: (items) => {
-					this.setModel(items[0]);
-				}
-			}));
-		});	
+				this.showSelectConnectionsDialog();
+			}
+		});
+	},
+
+	//
+	// dialog rendering methods
+	//
+
+	showSelectConnectionsDialog: function() {
+		application.loadAppView('connection_manager', {
+
+			// callbacks
+			//
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showSelectConnectionsDialog({
+					collection: this.collection,
+
+					// callbacks
+					//
+					select: (items) => {
+						this.setModel(items[0]);
+					}
+				});
+			}
+		});
 	},
 
 	//
@@ -106,35 +130,6 @@ export default SearchByView.extend({
 	//
 
 	onClickSelectUser: function() {
-
-		// fetch connections
-		//
-		if (this.collection.length == 0) {
-			this.collection.fetch({
-
-				// callbacks
-				//
-				success: () => {
-
-					// show dialog
-					//
-					this.showSelectConnectionsDialog();
-				},
-
-				error: () => {
-
-					// show error message
-					//
-					application.error({
-						message: "Could not fetch connections."
-					});
-				}
-			});
-		} else {
-
-			// show dialog
-			//
-			this.showSelectConnectionsDialog();
-		}
+		this.showConnections();
 	}
 });

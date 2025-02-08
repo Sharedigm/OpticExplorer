@@ -85,6 +85,27 @@ export default MenuView.extend({
 	// rendering methods
 	//
 
+	getItems: function() {
+		if (this.items) {
+
+			// get menu items from menu
+			//
+			return this.items;
+		} else {
+			let appView = this.getParentView('app');
+
+			// get menu items from resources
+			//
+			let resources = appView.getResources('context_menu');
+
+			if (resources) {
+				return resources.items;
+			} else {
+				return [];
+			}
+		}
+	},
+
 	openDropdown: function(dropdown) {
 		if (!dropdown.hasClass('disabled')) {
 			dropdown.addClass('open');

@@ -1,0 +1,47 @@
+{
+	"items": [
+		{
+			"class": "select-all",
+			"icon": "fa fa-asterisk",
+			"name": "All",
+			"shortcut": "command-A"
+		},
+		"divider",
+		{
+			"class": "select-word",
+			"icon": "fa fa-text-width",
+			"name": "Word",
+			"shortcut": "command-1"
+		},
+		{
+			"class": "select-line",
+			"icon": "fa fa-arrows-alt-h",
+			"name": "Line",
+			"shortcut": "command-2"
+		},
+		{
+			"class": "select-paragraph",
+			"icon": "fa fa-paragraph",
+			"name": "Paragraph",
+			"shortcut": "command-3"
+		},
+		"divider",
+		{
+			"class": "select-before",
+			"icon": "fa fa-long-arrow-alt-up",
+			"name": "Before",
+			"shortcut": "command-9"
+		},
+		{
+			"class": "select-after",
+			"icon": "fa fa-long-arrow-alt-down",
+			"name": "After",
+			"shortcut": "command-0"
+		},
+		{
+			"class": "select-range",
+			"icon": "fa fa-arrows-alt-v",
+			"name": "Range"
+		}
+	]
+}

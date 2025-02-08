@@ -23,64 +23,6 @@ export default ContextMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="open-item"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="share dropdown-toggle"><i class="fa fa-share"></i>Share<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="share-files"><i class="fa fa-file"></i>Files</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-audio"><i class="fa fa-volume-up"></i>Audio</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-music"><i class="fa fa-music"></i>Music</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-pictures"><i class="fa fa-image"></i>Pictures</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-videos"><i class="fa fa-video"></i>Videos</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-maps"><i class="fa fa-map"></i>Maps</a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<li role="presentation">
-					<a class="share-message"><i class="fa fa-comments"></i>Message</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-gesture"><i class="fa fa-hand-pointer"></i>Gesture</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="show-on-map"><i class="fa fa-map"></i>Show on Map<span class="command shortcut">M</span></a>
-		</li>
-	`),
-
 	events: _.extend({}, ContextMenuView.prototype.events, {
 		'click .open-item': 'onClickOpenItem',
 		'click .show-info': 'onClickShowInfo',
@@ -120,21 +62,11 @@ export default ContextMenuView.extend({
 	},
 
 	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.isDesktop()
-		};
-	},
-
-	//
 	// mouse event handling methods
 	//
 
 	onClickOpenItem: function() {
-		this.parent.openConnection(this.parent.getSelectedModels()[0]);
+		this.parent.openConnection(this.parent.getSelectedModel());
 	},
 
 	onClickShowInfo: function() {
@@ -142,9 +74,7 @@ export default ContextMenuView.extend({
 	},
 
 	onClickShowOnMap: function() {
-		application.launch('map_viewer', {
-			people: this.parent.getSelectedGeolocatedModels()
-		});
+		this.parent.showSelectedGeolocatedModels();
 	},
 
 	onClickShareFiles: function() {

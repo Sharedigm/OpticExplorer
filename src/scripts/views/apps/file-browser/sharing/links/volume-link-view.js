@@ -112,9 +112,6 @@ export default LinkView.extend({
 	//
 
 	showFileBrowser: function(volume) {
-
-		// launch file browser
-		//
 		application.launch('file_browser', {
 			model: volume,
 			defaults: {

@@ -26,166 +26,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="new dropdown-toggle"><i class="fa fa-magic"></i>New<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="new-folder"><i class="fa fa-folder"></i>New Folder<span class="command shortcut">enter</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="new-volume"><i class="fa fa-database"></i>New Volume<span class="shift command shortcut">L</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="new-text-file"><i class="fa fa-file-alt"></i>New Text File<span class="command shortcut">T</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="shift command shortcut">enter</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="open-item dropdown-toggle"><i class="fa fa-folder-open"></i>Open<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i><span class="command shortcut">O</span></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="open-in-new-window"><i class="fa fa-folder-open"></i>In New Window</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-in-new-tab"><i class="fa fa-folder-open"></i>In New Tab</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-with"><i class="fa fa-folder-open"></i>Open With</a>
-		</li>
-		
-		<li role="presentation" class="import dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-cloud-upload-alt"></i>Import<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="upload-item"><i class="fa fa-upload"></i>Upload<span class="command shortcut">U</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="upload-dropbox"><i class="fab fa-dropbox"></i>Dropbox</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="upload-google"><i class="fab fa-google"></i>Google Drive</a>
-				</li>
-			</ul>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="favorites dropdown-toggle"><i class="fa fa-star"></i>Favorites<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="add-favorites"><i class="fa fa-star"></i>Add Favorites<span class="shift command shortcut">F</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="remove-favorites"><i class="fa fa-trash-alt"></i>Remove Favorites<span class="shortcut">delete</span></a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<li role="presentation">
-					<a class="open-first"><i class="fa fa-fast-backward"></i>First Favorite</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-prev"><i class="fa fa-backward"></i>Prev Favorite<span class="shortcut">left arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-next"><i class="fa fa-forward"></i>Next Favorite<span class="shortcut">right arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-last"><i class="fa fa-fast-forward"></i>Last Favorite</a>
-				</li>
-			</ul>
-		</li>
-		<% } %>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="show-on-map"><i class="fa fa-map"></i>Show on Map<span class="command shortcut">M</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="rename-item"><i class="fa fa-font"></i>Rename<span class="shift command shortcut">R</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="compress-items"><i class="fa fa-compress"></i>Compress<span class="shift command shortcut">Z</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="expand-item"><i class="fa fa-expand"></i>Expand<span class="shift command shortcut">X</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-items"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<% if (config.defaults.search && config.defaults.search.index) { %>
-		<li role="presentation">
-			<a class="index-items"><i class="fa fa-list"></i>Index Items</a>
-		</li>
-
-		<li role="presentation">
-			<a class="unindex-items"><i class="fa fa-close"></i>Unindex Items</a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		<% } %>
-
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class="command shortcut">L</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="empty-trash"><i class="fa fa-trash-alt"></i>Empty Trash<span class="command shortcut">E</span></a>
-		</li>
-
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-folder': 'onClickNewFolder',
 		'click .new-volume': 'onClickNewVolume',
@@ -205,13 +45,11 @@ export default FileMenuView.extend({
 		'click .open-next': 'onClickOpenNext',
 		'click .open-last': 'onClickOpenLast',
 		'click .show-info': 'onClickShowInfo',
-		'click .show-on-map': 'onClickShowOnMap',
+		'click .set-place': 'onClickSetPlace',
 		'click .rename-item': 'onClickRenameItem',
 		'click .compress-items': 'onClickCompressItems',
 		'click .expand-item': 'onClickExpandItem',
 		'click .download-items': 'onClickDownloadItems',
-		'click .index-items': 'onClickIndexItems',
-		'click .unindex-items': 'onClickUnindexItems',
 		'click .empty-trash': 'onClickEmptyTrash',
 		'click .close-tab': 'onClickCloseTab',
 		'click .close-window': 'onClickCloseWindow'
@@ -224,7 +62,8 @@ export default FileMenuView.extend({
 	visible: function() {
 		let isSignedIn = application.isSignedIn();
 		let hasOpenFolders = this.parent.app.hasOpenFolders();
-		let isDesktop = this.parent.app.isDesktop();
+		let isWindowed = this.parent.app.isWindowed();
+		let hasMapViewer = application.hasApp('map_viewer');
 
 		return {
 			'new-window': true,
@@ -233,7 +72,7 @@ export default FileMenuView.extend({
 			'new-text-file': true,
 			'open-item': isSignedIn,
 			'open-with': isSignedIn,
-			'open-in-new-window': !isDesktop,
+			'open-in-new-window': isWindowed,
 			'open-in-new-tab': true,
 			'open-favorites': isSignedIn,
 			'upload-item': true,
@@ -245,16 +84,14 @@ export default FileMenuView.extend({
 			'open-next': isSignedIn,
 			'open-last': isSignedIn,
 			'show-info': true,
-			'show-on-map': true,
+			'set-place': hasMapViewer,
 			'rename-item': true,
 			'compress-items': true,
 			'expand-item': true,
 			'download-items': true,
-			'index-items': true,
-			'unindex-items': true,
 			'empty-trash': true,
 			'close-tab': hasOpenFolders,
-			'close-window': !isDesktop
+			'close-window': isWindowed
 		};
 	},
 
@@ -264,16 +101,14 @@ export default FileMenuView.extend({
 		let preferences = this.parent.app.preferences;
 		let numSelected = this.parent.app.numSelected();
 		let hasSelected = numSelected != 0;
-		let selectedModel = this.parent.app.getSelectedModels()[0];
+		let selectedModel = this.parent.app.getSelectedModel();
 		let hasSelectedFile = selectedModel instanceof File;
 		let hasSelectedFolder = selectedModel instanceof Directory;
 		let hasSelectedArchive = selectedModel instanceof ArchiveFile;
-		let hasSelectedGeolocated = this.parent.app.hasSelectedGeolocated();
 		let hasSelectedFavorites = this.parent.app.hasSelectedFavorites();
 		let viewingMap = preferences.get('view_kind') == 'maps';
 		let isDialog = this.parent.app.dialog != undefined;
 		let isTrashEmpty = this.parent.app.isTrashEmpty();
-		let isDesktop = this.parent.app.isDesktop();
 
 		return {
 			'new-window': true,
@@ -294,16 +129,14 @@ export default FileMenuView.extend({
 			'open-next': hasSelectedFavorites && !viewingMap,
 			'open-last': !hasSelected && !viewingMap,
 			'show-info': hasSelected,
-			'show-on-map': hasSelectedGeolocated,
+			'set-place': hasSelected,
 			'rename-item': numSelected == 1,
 			'compress-items': hasSelected,
 			'expand-item': hasSelectedArchive,
 			'download-items': hasSelected,
-			'index-items': hasSelected,
-			'unindex-items': hasSelected,
 			'empty-trash': !isTrashEmpty,
 			'close-tab': hasTabs,
-			'close-window': !isDesktop
+			'close-window': true
 		};
 	},
 
@@ -366,11 +199,11 @@ export default FileMenuView.extend({
 	},
 
 	onClickAddFavorites: function() {
-		this.parent.app.addFavorites();
+		this.parent.app.showAddFavoritesDialog();
 	},
 
 	onClickRemoveFavorites: function() {
-		this.parent.app.removeFavorites(this.parent.app.getSelectedFavorites());
+		this.parent.app.removeSelectedFavorites();
 	},
 	
 	onClickOpenFirst: function() {
@@ -405,14 +238,12 @@ export default FileMenuView.extend({
 		this.parent.app.showInfoDialog();
 	},
 
-	onClickShowOnMap: function() {
-		application.launch('map_viewer', {
-			photos: this.parent.app.getSelectedGeolocatedModels()
-		});
+	onClickSetPlace: function() {
+		this.parent.app.showSetItemPlaceDialogView(this.parent.app.getSelected()[0]);
 	},
 
 	onClickRenameItem: function() {
-		this.parent.app.rename(this.parent.app.getChildren((item) => item.isSelected()));
+		this.parent.app.rename(this.parent.app.getSelected());
 	},
 
 	onClickCompressItems: function() {
@@ -434,20 +265,6 @@ export default FileMenuView.extend({
 		// download selected items
 		//
 		this.parent.app.downloadSelected();
-	},
-
-	onClickIndexItems: function() {
-
-		// index selected items
-		//
-		this.parent.app.indexSelected();
-	},
-
-	onClickUnindexItems: function() {
-
-		// unindex selected items
-		//
-		this.parent.app.unindexSelected();
 	},
 
 	onClickEmptyTrash: function() {

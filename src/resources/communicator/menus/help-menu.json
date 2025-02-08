@@ -1,0 +1,26 @@
+{
+	"items": [
+		{
+			"class": "view-about-info",
+			"icon": "fa fa-info-circle",
+			"name": "About"
+		},
+		"divider",
+		{
+			"class": "view-app",
+			"icon": "fa fa-question-circle",
+			"name": "View Help Pages"
+		},
+		{
+			"class": "view-topic",
+			"icon": "fa fa-newspaper",
+			"name": "Search Community Help"
+		},
+		"divider",
+		{
+			"class": "contact-us",
+			"icon": "fa fa-envelope",
+			"name": "Contact Us"
+		}
+	]
+}

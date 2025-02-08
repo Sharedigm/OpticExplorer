@@ -20,6 +20,18 @@ import ShareMenuView from '../../../../../../views/apps/common/header-bar/menu-b
 export default ShareMenuView.extend({
 
 	//
+	// attributes
+	//
+
+	events: {
+		'click .share-by-invitation': 'onClickShareByInvitation',
+		'click .share-by-topic': 'onClickShareByTopic',
+		'click .share-by-message': 'onClickShareByMessage',
+		'click .share-by-link': 'onClickShareByLink',
+		'click .share-by-email': 'onClickShareByEmail'
+	},
+
+	//
 	// querying methods
 	//
 

@@ -1,0 +1,19 @@
+{
+	"items": [
+		{
+			"class": "edit-group",
+			"group": "delete group-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Group",
+			"shortcut": "command-E"
+		},
+		"divider",
+		{
+			"class": "delete-members",
+			"group": "delete member-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Members",
+			"shortcut": "delete"
+		}
+	]
+}

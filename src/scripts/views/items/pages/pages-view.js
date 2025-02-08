@@ -85,7 +85,7 @@ export default CarouselView.extend({
 			model: model,
 			current: this.collection.indexOf(model) == this.options.index,
 
-			// options
+			// state
 			//
 			selected: this.options.selected && this.options.selected.length > 0 && this.options.selected.contains(model)
 		});

@@ -15,35 +15,16 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connection from '../../../../../../models/users/connections/connection.js';
-import Member from '../../../../../../models/users/connections/member.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="delete group-option">
-			<a class="edit-group"><i class="fa fa-pencil-alt"></i>Edit Group<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="delete connection-option">
-			<a class="delete-connections"><i class="fa fa-trash-alt"></i>Delete Connections<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="delete member-option">
-			<a class="delete-members"><i class="fa fa-trash-alt"></i>Delete Members<span class="shortcut">delete</span></a>
-		</li>
-	`),
-
 	events: {
 		'click .edit-group': 'onClickEditGroup',
-		'click .delete-connections': 'onClickDeleteItems',
 		'click .delete-members': 'onClickDeleteItems'
 	},
 
@@ -52,15 +33,12 @@ export default MenuView.extend({
 	//
 
 	enabled: function() {
-		let selected = this.parent.app.getSelectedModel();
 		let hasSelectedGroup = this.parent.app.hasSelectedGroup();
-		let hasSelectedMembers = selected instanceof Member;
-		let hasSelectedConnections = (selected != undefined) && (selected instanceof Connection) && !hasSelectedMembers;
+		let hasSelectedMember = this.parent.app.hasSelectedMember();
 
 		return {
-			'edit-group': hasSelectedGroup == true,
-			'delete-connections': hasSelectedConnections,
-			'delete-members': hasSelectedMembers
+			'edit-group': hasSelectedGroup,
+			'delete-members': hasSelectedMember
 		};
 	},
 

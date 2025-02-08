@@ -1,0 +1,25 @@
+{
+	"items": [
+		{
+			"class": "share-by-topic",
+			"icon": "fa fa-newspaper",
+			"name": "By Discussion Topic"
+		},
+		{
+			"class": "share-by-message",
+			"icon": "fa fa-comments",
+			"name": "By Chat Messsage"
+		},
+		"divider",
+		{
+			"class": "share-by-link",
+			"icon": "fa fa-link",
+			"name": "By Link"
+		},
+		{
+			"class": "share-by-email",
+			"icon": "fa fa-envelope",
+			"name": "By Email"
+		}
+	]
+}

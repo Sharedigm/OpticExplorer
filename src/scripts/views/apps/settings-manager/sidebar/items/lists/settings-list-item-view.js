@@ -19,7 +19,6 @@ export default ListItemView.extend({
 	// attributes
 	//
 
-	tagName: 'li',
 	className: 'item',
 
 	template: template(`

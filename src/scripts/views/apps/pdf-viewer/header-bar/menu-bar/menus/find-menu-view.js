@@ -15,23 +15,13 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import FindMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/find-menu-view.js';
 
-export default MenuView.extend({
+export default FindMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="find"><i class="fa fa-search"></i>Find<span class="command shortcut">F</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="find-next"><i class="fa fa-search"></i>Find Next<span class="shift command shortcut">F</span></a>
-		</li>
-	`),
 
 	events: {
 		'click .find': 'onClickFind',

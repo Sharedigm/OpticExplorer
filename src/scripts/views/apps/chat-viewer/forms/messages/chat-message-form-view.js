@@ -25,7 +25,7 @@ import FileMovable from '../../../../../views/apps/file-browser/mainbar/behavior
 import FileCopyable from '../../../../../views/apps/file-browser/mainbar/behaviors/file-copyable.js';
 import FileUploadable from '../../../../../views/apps/file-browser/mainbar/behaviors/file-uploadable.js';
 import DroppableUploadable from '../../../../../views/apps/file-browser/mainbar/behaviors/droppable-uploadable.js';
-import Geolocatable from '../../../../../views/maps/behaviors/geolocatable.js';
+import Geolocatable from '../../../../../views/apps/map-viewer/mainbar/maps/behaviors/geolocatable.js';
 import FilesView from '../../../../../views/apps/file-browser/mainbar/files/files-view.js';
 import HtmlUtils from '../../../../../utilities/web/html-utils.js';
 import Browser from '../../../../../utilities/web/browser.js';
@@ -62,33 +62,35 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 		</div>
 		
 		<div class="options">
+
+			<% if (sharing) { %>
 			<div class="buttons">
 		
-				<% if (features && features.emoji) { %>
+				<% if (sharing.emoji) { %>
 				<button class="add-emoji btn btn-sm" data-toggle="tooltip" title="Add Emoji">
 					<i class="fa fa-grin"></i>
 				</button>
 				<% } %>
-		
-				<% if (features && features.pictures) { %>
-				<button class="add-pictures btn btn-sm" data-toggle="tooltip" title="Add Pictures">
+
+				<% if (sharing.files && sharing.files.Pictures) { %>
+				<button class="optional add-pictures btn btn-sm" data-toggle="tooltip" title="Add Pictures">
 					<i class="fa fa-image"></i>
 				</button>
 				<% } %>
 
-				<% if (features && features.files) { %>
+				<% if (sharing.files && sharing.files.Files) { %>
 				<button class="add-files btn btn-sm" data-toggle="tooltip" title="Add Files">
 					<i class="fa fa-file"></i>
 				</button>
 				<% } %>
 		
-				<% if (features && features.uploads) { %>
+				<% if (sharing.uploads) { %>
 				<button class="upload-file btn btn-sm" data-toggle="tooltip" title="Upload File">
 					<i class="fa fa-upload"></i>
 				</button>
 				<% } %>
 		
-				<% if (features && features.locations) { %>
+				<% if (sharing.locations) { %>
 				<button class="check-in btn btn-sm" data-toggle="tooltip" title="Check In"<% if (typeof check_in != 'undefined' && check_in) { %> style="display:none"<% } %>>
 					<i class="fa fa-map-marker-alt"></i>
 				</button>
@@ -97,12 +99,13 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 				</button>
 				<% } %>
 				
-				<% if (features && (features.pictures || features.files || features.uploads)) { %>
+				<% if (sharing.files || sharing.uploads) { %>
 				<button class="remove warning btn btn-sm" data-toggle="tooltip" title="Remove Items" style="display:none">
 					<i class="active fa fa-file-circle-xmark"></i>
 				</button>
 				<% } %>
 			</div>
+			<% } %>
 		
 			<div class="buttons">
 				<% if (submitable) { %>
@@ -247,7 +250,7 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 	},
 
 	getNewMessageDirectory: function(messagesDirectory) {
-		let numMessages = messagesDirectory.numDirectories();
+		let numMessages = messagesDirectory.numDirectories() || 0;
 		let digits = this.constructor.toDigits(numMessages + 1);
 		return new Directory({
 			path: messagesDirectory.get('path') + 'Message ' + digits + '/'
@@ -652,10 +655,16 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 
 	templateContext: function() {
 		return {
+
+			// options
+			//
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
 			message: HtmlUtils.textToHtml(this.model.get('message')),
-			features: this.options.features,
+			sharing: config.defaults.sharing,
+
+			// capabilities
+			//
 			submitable: this.options.submitable,
 			cancelable: this.options.cancelable
 		};
@@ -671,9 +680,13 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 		//
 		this.showAttachments();
 
-		// pre-fetch uploads directory
+		// pre-create uploads directory
 		//
-		this.directories.uploads.create();
+		/*
+		if (this.directories) {
+			this.directories.uploads.create();
+		}
+		*/
 
 		// set initial state
 		//
@@ -788,7 +801,7 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 
 	showOpenImagesDialog: function(options) {
 		import(
-			'../../../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 			
 			// show open images dialog
@@ -882,8 +895,11 @@ export default FormView.extend(_.extend({}, Emotable, FileMovable, FileCopyable,
 			return;
 		}
 
+		let files = config.defaults.sharing.files['Pictures'];
+		let directoryName = files? files.directory : '';
+
 		this.showOpenImagesDialog({
-			model: application.getDirectory('Pictures')
+			model: application.getDirectory(directoryName)
 		});
 	},
 

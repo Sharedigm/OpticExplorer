@@ -29,95 +29,32 @@ export default ItemInfoView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="items">
-			<div class="icon-grid"></div>
-		</div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-			
-			<li role="presentation" class="general tab<% if (tab == 'general') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general.tab-pane">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="volume tab<% if (tab == 'volume') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".volume.tab-pane">
-					<i class="fa fa-database"></i>
-					<label>Volume</label>
-				</a>
-			</li>
-		
-			<% if (show_meta_info) { %>
-			<li role="presentation" class="history tab<% if (tab == 'history') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".history.tab-pane">
-					<i class="fa fa-calendar-alt"></i>
-					<label>History</label>
-				</a>
-			</li>
-			<% } %>
-		
-			<% if (show_meta_info) { %>
-			<li role="presentation" class="permissions tab<% if (tab == 'permissions') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".permissions.tab-pane">
-					<i class="fa fa-lock"></i>
-					<label>Permissions</label>
-				</a>
-			</li>
-			<% } %>
-		
-			<% if (show_meta_info) { %>
-			<li role="presentation" class="sharing tab<% if (tab == 'sharing') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".sharing.tab-pane">
-					<i class="fa fa-share"></i>
-					<label>Sharing</label>
-				</a>
-			</li>
-			<% } %>
-		
-			<% if (show_meta_info) { %>
-			<li role="presentation" class="links tab<% if (tab == 'links') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".links.tab-pane">
-					<i class="fa fa-link"></i>
-					<label>Links</label>
-				</a>
-			</li>
-			<% } %>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general tab-pane<% if (tab == 'general') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="volume tab-pane<% if (tab == 'volume') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="history tab-pane<% if (tab == 'history') { %> active<% } %>">
-			</div>
-			
-			<div role="tabpanel" class="permissions tab-pane<% if (tab == 'permissions') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="sharing tab-pane<% if (tab == 'sharing') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="links tab-pane<% if (tab == 'links') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: '.icon-grid',
-		general: '.general.tab-pane',
-		volume: '.volume.tab-pane',
-		history: '.history.tab-pane',
-		permissions: '.permissions.tab-pane',
-		sharing: '.sharing.tab-pane',
-		links: '.links.tab-pane'
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "Volume",
+			"icon": "fa fa-database"
+		},
+		{
+			"name": "History",
+			"icon": "fa fa-calendar-alt"
+		},
+		{
+			"name": "Permissions",
+			"icon": "fa fa-lock"
+		},
+		{
+			"name": "Sharing",
+			"icon": "fa fa-share"
+		},
+		{
+			"name": "Links",
+			"icon": "fa fa-link"
+		}
+	],
 
 	//
 	// getting methods

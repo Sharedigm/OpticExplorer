@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import User from '../../../../../../models/users/user.js';
-import Group from '../../../../../../models/users/connections/group.js';
+import Group from '../../../../../../models/connections/group.js';
 import TreeView from '../../../../../../views/items/trees/tree-view.js';
 import ItemDroppable from '../../../../../../views/behaviors/drag-and-drop/item-droppable.js';
 import GroupMemberView from '../../../../../../views/apps/connection-manager/sidebar/groups/trees/group-member-view.js';

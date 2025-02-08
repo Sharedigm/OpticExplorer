@@ -17,7 +17,7 @@
 
 import Apps from '../../../../../collections/apps/apps.js';
 import OpenAppDialogView from '../../../../../views/apps/app-launcher/dialogs/apps/open-app-dialog-view.js';
-import Launchable from '../../../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../../../views/apps/common/behaviors/opening/app-launchable.js';
 
 export default OpenAppDialogView.extend({
 
@@ -39,6 +39,6 @@ export default OpenAppDialogView.extend({
 		
 		// set attributes
 		//
-		this.collection = new Apps(application.apps.filter(Launchable.filters.desktop));
+		this.collection = new Apps(application.apps.filter(AppLaunchable.filters.desktop));
 	}
 });

@@ -1,0 +1,59 @@
+{
+	"items": [
+		{
+			"class": "cut",
+			"icon": "fa fa-cut",
+			"name": "Cut",
+			"shortcut": "command-X"
+		},
+		{
+			"class": "copy",
+			"icon": "fa fa-copy",
+			"name": "Copy",
+			"shortcut": "command-C"
+		},
+		{
+			"class": "duplicate",
+			"icon": "fa fa-copy",
+			"name": "Duplicate",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "paste",
+			"icon": "fa fa-paste",
+			"name": "Paste",
+			"shortcut": "command-V"
+		},
+		{
+			"class": "put",
+			"icon": "fa fa-paste",
+			"name": "Put",
+			"shortcut": "shift-command-V"
+		},
+		"divider",
+		{
+			"class": "delete",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete",
+			"shortcut": "delete"
+		},
+		{
+			"class": "destroy",
+			"icon": "fa fa-xmark",
+			"name": "Destroy",
+			"shortcut": "shift-command-delete"
+		},
+		"divider",
+		{
+			"class": "show-clipboard",
+			"icon": "fa fa-clipboard",
+			"name": "Show Clipboard"
+		},
+		{
+			"class": "clear-clipboard",
+			"icon": "fa fa-xmark",
+			"name": "Clear Clipboard"
+		}
+	]
+}

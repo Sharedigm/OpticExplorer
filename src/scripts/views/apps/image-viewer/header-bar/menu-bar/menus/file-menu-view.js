@@ -22,50 +22,16 @@ export default FileMenuView.extend({
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="open-item"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="download-items"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="delete-items"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
 	
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .open-item': 'onClickOpenItem',
+		'click .open-first': 'onClickOpenFirst',
+		'click .open-prev': 'onClickOpenPrev',
+		'click .open-next': 'onClickOpenNext',
+		'click .open-last': 'onClickOpenLast',
+		'click .add-favorites': 'onClickAddFavorites',
+		'click .remove-favorites': 'onClickRemoveFavorites',
 		'click .show-info': 'onClickShowInfo',
 		'click .download-items': 'onClickDownloadItems',
 		'click .delete-items': 'onClickDeleteItems',
@@ -80,12 +46,21 @@ export default FileMenuView.extend({
 		let isSignedIn = application.isSignedIn();
 		let isOpen = this.parent.app.hasImage();
 		let directory = this.parent.app.directory;
+		let hasImages = this.parent.app.hasImages();
 		let hasSelectedItems = this.parent.app.hasSelectedItems();
 		let isDirectoryWritable = directory? directory.isWritableBy(application.session.user) : isSignedIn;
+		let hasSelectedFavorites = this.parent.app.hasSelectedFavorites();
 
 		return {
 			'new-window': true,
 			'open-item': isSignedIn,
+			'open-first': hasImages,
+			'open-prev': hasImages,
+			'open-next': hasImages,
+			'open-last': hasImages,
+			'favorites': true,
+			'add-favorites': true,
+			'remove-favorites': hasSelectedFavorites,
 			'show-info': isOpen,
 			'download-items': isOpen,
 			'delete-items': hasSelectedItems === true && isDirectoryWritable,
@@ -99,6 +74,30 @@ export default FileMenuView.extend({
 
 	onClickOpenItem: function() {
 		this.parent.app.showOpenDialog();
+	},
+
+	onClickOpenFirst: function() {
+		this.parent.app.select('first');
+	},
+
+	onClickOpenPrev: function() {
+		this.parent.app.select('prev');
+	},
+
+	onClickOpenNext: function() {
+		this.parent.app.select('next');
+	},
+
+	onClickOpenLast: function() {
+		this.parent.app.select('last');
+	},
+
+	onClickAddFavorites: function() {
+		this.parent.app.showAddFavoritesDialog();
+	},
+
+	onClickRemoveFavorites: function() {
+		this.parent.app.removeSelectedFavorites();
 	},
 
 	onClickShowInfo: function() {

@@ -42,10 +42,6 @@ body:not(.binary).monochrome {
 				.chalk($color);
 			}
 
-			&.raspberry {
-				.chalk($color);
-			}
-
 			&.red-orange {
 				.chalk($color);
 			}
@@ -99,6 +95,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.chalk($color);
+			}
+
+			&.raspberry {
 				.chalk($color);
 			}
 
@@ -141,10 +141,6 @@ body:not(.binary).monochrome {
 				.chalk($selected-color);
 			}
 
-			&.raspberry {
-				.chalk($selected-color);
-			}
-
 			&.red-orange {
 				.chalk($selected-color);
 			}
@@ -198,6 +194,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.chalk($selected-color);
+			}
+
+			&.raspberry {
 				.chalk($selected-color);
 			}
 

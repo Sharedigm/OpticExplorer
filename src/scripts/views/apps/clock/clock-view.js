@@ -19,6 +19,7 @@ import AppView from '../../../views/apps/common/app-view.js';
 import Timeable from '../../../views/behaviors/effects/timeable.js';
 import FaceView from '../../../views/apps/clock/mainbar/face-view.js';
 import ButtonsView from '../../../views/apps/clock/mainbar/buttons-view.js';
+import PreferencesFormView from '../../../views/apps/clock/forms/preferences/preferences-form-view.js'
 import TimeUtils from '../../../utilities/time/time-utils.js';
 
 export default AppView.extend(_.extend({}, Timeable, {
@@ -196,4 +197,13 @@ export default AppView.extend(_.extend({}, Timeable, {
 		//
 		this.constructor.current = null;
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

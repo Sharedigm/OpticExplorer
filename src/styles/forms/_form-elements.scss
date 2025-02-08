@@ -98,7 +98,8 @@ input[type="file"] {
 
 input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"] {
 	font-size: 1em;
-	padding: 10px;
+	padding: 0 10px;
+	line-height: inherit;
 }
 
 //
@@ -130,6 +131,21 @@ input[data-file]::after {
 
 input[type=file]::-webkit-file-upload-button {
 	display: none;
+}
+
+//
+// form wells
+//
+
+.well {
+	select {
+		height: 25px;
+	}
+
+	input[type="text"], input[type="number"], input[type="password"], input[type="date"], input[type="time"] {
+		height: 25px;
+		padding: 0 5px;
+	}
 }
 
 //

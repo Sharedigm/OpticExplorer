@@ -22,82 +22,6 @@ export default FileMenuView.extend({
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="open-file"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="open-track dropdown-toggle"><i class="fa fa-play"></i>Open Track<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="open-first"><i class="fa fa-fast-backward"></i>First<span class="shortcut">up arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-prev"><i class="fa fa-backward"></i>Prev<span class="shortcut">left arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-next"><i class="fa fa-forward"></i>Next<span class="shortcut">right arrow</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="open-last"><i class="fa fa-fast-forward"></i>Last<span class="shortcut">down arrow</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="favorites dropdown-toggle"><i class="fa fa-star"></i>Favorites<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="add-favorites"><i class="fa fa-star"></i>Add Favorites<span class="shift command shortcut">F</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="remove-favorites"><i class="fa fa-trash-alt"></i>Remove Favorites<span class="shortcut">delete</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="download-file"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="delete-items"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
 	
 	events: {
 		'click .new-window': 'onClickNewWindow',
@@ -111,7 +35,7 @@ export default FileMenuView.extend({
 		'click .show-info': 'onClickShowInfo',
 		'click .download-file': 'onClickDownloadFile',
 		'click .delete-items': 'onClickDeleteItems',
-		'click .close-window': 'onClickCloseWindow',
+		'click .close-window': 'onClickCloseWindow'
 	},
 
 	//
@@ -168,11 +92,11 @@ export default FileMenuView.extend({
 	},
 
 	onClickAddFavorites: function() {
-		this.parent.app.addFavorites();
+		this.parent.app.showAddFavoritesDialog();
 	},
 
 	onClickRemoveFavorites: function() {
-		this.parent.app.removeFavorites(this.parent.app.getSelectedFavorites());
+		this.parent.app.removeSelectedFavorites();
 	},
 	
 	onClickShowInfo: function() {

@@ -27,116 +27,6 @@ export default ContextMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-folder"><i class="fa fa-folder"></i>New Folder<span class="command shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-item"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-with"><i class="fa fa-folder-open"></i>Open With</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-selected"><i class="fa fa-folder-open"></i>Open Selected<span class="shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-in-new-window"><i class="fa fa-folder-open"></i>Open in New Window</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="upload-item"><i class="fa fa-upload"></i>Upload<span class="command shortcut">U</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="show-on-map"><i class="fa fa-map"></i>Show on Map<span class="command shortcut">M</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="share dropdown-toggle"><i class="fa fa-share"></i>Share<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="share-by-invitation"><i class="fa fa-user-friends"></i>By Invitation</a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<li role="presentation">
-					<a class="share-by-topic"><i class="fa fa-newspaper"></i>By Discussion Topic</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-by-message"><i class="fa fa-comments"></i>By Chat Messsage</a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<li role="presentation">
-					<a class="share-by-link"><i class="fa fa-link"></i>By Link</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="share-by-email"><i class="fa fa-envelope"></i>By Email</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="rename-item"><i class="fa fa-font"></i>Rename<span class="shift command shortcut">R</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="compress-item"><i class="fa fa-compress"></i>Compress<span class="shift command shortcut">Z</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-item"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="set-profile"><i class="fa fa-user"></i>Set Profile Picture</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="set-background"><i class="fa fa-desktop"></i>Set Background Picture</a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="delete-item"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="empty-trash"><i class="fa fa-trash-alt"></i>Empty Trash<span class="command shortcut">E</span></a>
-		</li>
-		
-		<% if (is_desktop) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="change-background"><i class="fa fa-image"></i>Change Background</a>
-		</li>
-		<% } %>
-	`),
-
 	events: _.extend({}, ContextMenuView.prototype.events, {
 		'click .new-folder': 'onClickNewFolder',
 		'click .open-item': 'onClickOpenItem',
@@ -185,9 +75,13 @@ export default ContextMenuView.extend({
 		let numSelected = this.parent.numSelected();
 		let hasSelected = numSelected != 0;
 		let oneSelected = numSelected == 1;
-		let hasSelectedFolder = oneSelected && this.parent.getSelectedModels()[0] instanceof Directory;
-		let hasSelectedPicture = oneSelected && this.parent.getSelectedModels()[0] instanceof ImageFile;
+		let hasSelectedFolder = oneSelected && this.parent.getSelectedModel() instanceof Directory;
+		let hasSelectedPicture = oneSelected && this.parent.getSelectedModel() instanceof ImageFile;
 		let isDesktop = this.parent.isDesktop();
+		let hasMapViewer = application.hasApp('map_viewer');
+		let hasConnectionManager = application.hasApp('connection_manager');
+		let hasTopicViewer = application.hasApp('topic_viewer');
+		let hasChatViewer = application.hasApp('chat_viewer');
 
 		return {
 			'new-folder': !hasSelected,
@@ -199,12 +93,29 @@ export default ContextMenuView.extend({
 			'upload-item': !hasSelected,
 			'share': hasSelected,
 			'show-info': hasSelected,
-			'show-on-map': hasSelected,
+			'show-on-map': hasSelected && hasMapViewer,
+
+			// share with connections
+			//
+			'share-by-invitation': hasSelected && hasConnectionManager,
+			'share-by-topic': hasSelected && hasTopicViewer,
+			'share-by-message': hasSelected && hasChatViewer,
+
+			// share with anyone
+			//
+			'share-by-link': oneSelected,
+			'share-by-email': oneSelected,
+
+			// picture options
+			//
+			'set-profile': hasSelectedPicture,
+			'set-background': hasSelectedPicture,
+
+			// other options
+			//
 			'rename-item': hasSelected,
 			'compress-item': hasSelected,
 			'download-item': hasSelected,
-			'set-profile': hasSelectedPicture,
-			'set-background': hasSelectedPicture,
 			'delete-item': hasSelected,
 			'empty-trash': !hasSelected,
 			'change-background': !hasSelected
@@ -218,8 +129,8 @@ export default ContextMenuView.extend({
 		let hasSelected = numSelected != 0;
 		let isWritable = this.parent.model.isWritableBy(application.session.user);
 		let isTrashEmpty = FileDisposable.isTrashEmpty();
-		let hasSelectedFile = oneSelected && this.parent.getSelectedModels()[0] instanceof File;
-		let hasSelectedPicture = oneSelected && this.parent.getSelectedModels()[0] instanceof ImageFile;
+		let hasSelectedFile = oneSelected && this.parent.getSelectedModel() instanceof File;
+		let hasSelectedPicture = oneSelected && this.parent.getSelectedModel() instanceof ImageFile;
 		let hasSelectedGeolocated = this.parent.hasSelectedGeolocated();
 
 		return {
@@ -263,10 +174,11 @@ export default ContextMenuView.extend({
 	// rendering methods
 	//
 
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.isDesktop()
-		};
+	showThemeManager: function() {
+		application.launch('theme_manager', {
+			tab: 'desktop',
+			tab2: 'background'
+		});
 	},
 
 	//
@@ -310,9 +222,7 @@ export default ContextMenuView.extend({
 	},
 
 	onClickShowOnMap: function() {
-		application.launch('map_viewer', {
-			photos: this.parent.getSelectedGeolocatedModels()
-		});
+		this.parent.showSelectedGeolocatedModels();
 	},
 
 	onClickShareByInvitation: function() {
@@ -344,15 +254,15 @@ export default ContextMenuView.extend({
 	},
 
 	onClickDownloadItem: function() {
-		this.parent.download();
+		this.parent.download(this.parent.getSelectedModels());
 	},
 
 	onClickSetProfile: function() {
-		application.setProfilePhoto(this.parent.getSelectedModels()[0]);
+		application.setProfilePhoto(this.parent.getSelectedModel());
 	},
 
 	onClickSetBackground: function() {
-		application.desktop.setBackgroundPicture(this.parent.getSelectedModels()[0]);
+		application.desktop.setBackgroundPicture(this.parent.getSelectedModel());
 	},
 
 	onClickDelete: function(event) {
@@ -366,9 +276,6 @@ export default ContextMenuView.extend({
 	},
 	
 	onClickChangeBackground: function() {
-		application.launch('theme_manager', {
-			tab: 'desktop',
-			tab2: 'background'
-		});
+		this.showThemeManager();
 	}
 });

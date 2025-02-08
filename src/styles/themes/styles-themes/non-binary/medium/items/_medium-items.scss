@@ -23,8 +23,8 @@
 // colors
 //
 
-$details-background-opacity: 50%;
-$details-background-color: colors.faded(colors.$very-light-grey, $details-background-opacity);
+$details-background-opacity: 25%;
+$details-background-color: colors.faded(colors.$very-very-light-grey, $details-background-opacity);
 
 //
 // styles
@@ -70,7 +70,7 @@ body:not(.binary) {
 		}
 	}
 
-	.icon-grid {
+	.icon-grid, .card-grid {
 		.icon {
 			> img {
 				& + i {

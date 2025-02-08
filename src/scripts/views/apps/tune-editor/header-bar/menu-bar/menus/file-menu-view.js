@@ -23,48 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-file"><i class="fa fa-file-alt"></i>New File<span class="command shortcut">F</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="open-file"><i class="fa fa-folder-open"></i>Open<span class="command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="save-file"><i class="fa fa-save"></i>Save<span class="command shortcut">S</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="save-as"><i class="fa fa-save"></i>Save As<span class="shift command shortcut">S</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class="command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-file': 'onClickNewFile',
 		'click .new-window': 'onClickNewWindow',
@@ -88,7 +46,6 @@ export default FileMenuView.extend({
 		let isOpen = file != undefined;
 		let isDirectoryReadable = directory? directory.isReadableBy(application.session.user) : isSignedIn;
 		let isDirectoryWritable = directory? directory.isWritableBy(application.session.user) : isSignedIn;
-		let isDesktop = this.parent.app.isDesktop();
 		
 		return {
 			'new-file': true,
@@ -98,7 +55,7 @@ export default FileMenuView.extend({
 			'save-file': false,
 			'save-as': hasTabs && isDirectoryWritable,
 			'close-tab': hasTabs,
-			'close-window': !isDesktop
+			'close-window': true
 		};
 	},
 

@@ -213,10 +213,6 @@ export default FormPanelView.extend({
 				<div class="icon-background checkbox-inline">
 					<label><input type="checkbox"<% if (icon_background) { %> checked="checked"<% } %>>Background</label>
 				</div>
-		
-				<div class="icon-spinning checkbox-inline">
-					<label><input type="checkbox"<% if (icon_spinning) { %> checked="checked"<% } %>>Spinning</label>
-				</div>
 			</div>
 		</div>
 		
@@ -348,7 +344,6 @@ export default FormPanelView.extend({
 		'change .icon-tilt input': 'onChangeIconTilt',
 		'change .icon-tint input': 'onChangeIconTint',
 		'change .icon-background input': 'onChangeIconBackground',
-		'change .icon-spinning input': 'onChangeIconSpinning',
 		'change .icon-select-effect input': 'onChangeIconSelectEffect',
 		'change .icon-deselect-effect input': 'onChangeIconDeselectEffect',
 		'change .icon-highlight-effect input': 'onChangeIconHighlightEffect',
@@ -374,8 +369,6 @@ export default FormPanelView.extend({
 				return this.$el.find('.icon-tint input:checked').val();
 			case 'icon_background':
 				return this.$el.find('.icon-background input:checked').val();
-			case 'icon_spinning':
-				return this.$el.find('.icon-spinning input:checked').val();
 			case 'icon_select_effect':
 				return this.$el.find('.icon-select-effect input:checked').val();
 			case 'icon_deselect_effect':
@@ -397,7 +390,6 @@ export default FormPanelView.extend({
 			icon_tilt: this.getValue('icon_tilt'),
 			icon_tint: this.getValue('icon_tint'),
 			icon_background: this.getValue('icon_background'),
-			icon_spinning: this.getValue('icon_spinning'),
 			icon_select_effect: this.getValue('icon_select_effect'),
 			icon_deselect_effect: this.getValue('icon_deselect_effect'),
 			icon_highlight_effect: this.getValue('icon_highlight_effect'),
@@ -421,7 +413,6 @@ export default FormPanelView.extend({
 			icon_tilt: application.settings.theme.get('icon_tilt'),
 			icon_tint: application.settings.theme.get('icon_tint'),
 			icon_background: application.settings.theme.get('icon_background'),
-			icon_spinning: application.settings.theme.get('icon_spinning'),
 			icon_select_effect: application.settings.theme.get('icon_select_effect'),
 			icon_deselect_effect: application.settings.theme.get('icon_deselect_effect'),
 			icon_highlight_effect: application.settings.theme.get('icon_highlight_effect'),
@@ -476,10 +467,6 @@ export default FormPanelView.extend({
 
 	onChangeIconBackground: function() {
 		application.settings.theme.set('icon_background', this.getValue('icon_background'));
-	},
-
-	onChangeIconSpinning: function() {
-		application.settings.theme.set('icon_spinning', this.getValue('icon_spinning'));
 	},
 
 	onChangeIconSelectEffect: function() {

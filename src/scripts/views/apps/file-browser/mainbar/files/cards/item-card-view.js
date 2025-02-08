@@ -16,11 +16,10 @@
 \******************************************************************************/
 
 import CardView from '../../../../../../views/items/cards/card-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
 import ItemBadgesView from '../../../../../../views/apps/file-browser/mainbar/files/badges/item-badges-view.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
-export default CardView.extend(_.extend({}, Mappable, {
+export default CardView.extend({
 
 	//
 	// attributes
@@ -79,7 +78,11 @@ export default CardView.extend(_.extend({}, Mappable, {
 		let item = this.model.collection.directory.getItemNamed(name);
 		return !item || item == this.model;
 	},
-		
+
+	hasOwner: function() {
+		return this.model? this.model.has('owner') : false;
+	},
+
 	//
 	// getting methods
 	//
@@ -88,14 +91,22 @@ export default CardView.extend(_.extend({}, Mappable, {
 		return this.model.getName();
 	},
 
+	getOwner: function() {
+		return this.model? this.model.get('owner') : undefined;
+	},
+
 	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;	
+		if (!this.hasOwner()) {
+			return false;
 		}
-		return false;
+		let owner = this.getOwner()
+		return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
+			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
+		}) : undefined;
+	},
+
+	getGeoOrientation: function() {
+		return this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined;
 	},
 
 	//
@@ -140,10 +151,9 @@ export default CardView.extend(_.extend({}, Mappable, {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
-			owner: this.get('owner'),
+			owner: this.getOwner(),
 			owner_thumbnail_url: this.getOwnerThumbnailUrl(),
-			details: this.getDetails(),
-			geo_orientation: this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined
+			details: this.getDetails()
 		};
 	},
 
@@ -165,4 +175,4 @@ export default CardView.extend(_.extend({}, Mappable, {
 			this.options.ondropout(this.parent.getSelectedModels());
 		}
 	}
-}));
+});

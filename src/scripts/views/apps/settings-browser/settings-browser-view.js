@@ -20,6 +20,7 @@ import HeaderBarView from '../../../views/apps/settings-browser/header-bar/heade
 import SideBarView from '../../../views/apps/settings-browser/sidebar/sidebar-view.js';
 import MainBarView from '../../../views/apps/settings-browser/mainbar/mainbar-view.js';
 import FooterBarView from '../../../views/apps/settings-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/settings-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend({
 
@@ -45,9 +46,23 @@ export default AppSplitView.extend({
 		//
 		AppSplitView.prototype.initialize.call(this);
 
+		// set attributes
+		//
+		this.collection = application.getVisibleApps((app)=> {
+			return config.preferences[app.id] != undefined;
+		});
+
 		// set static attributes
 		//
 		this.constructor.current = this;
+	},
+
+	//
+	// querying methods
+	//
+
+	numApps: function() {
+		return this.collection.length;
 	},
 
 	//
@@ -91,7 +106,7 @@ export default AppSplitView.extend({
 			// options
 			//
 			panels: this.preferences.get('sidebar_panels'),
-			view_kind: this.options.view_kind,
+			view_kind: this.preferences.get('sidebar_view_kind'),
 
 			// callbacks
 			//
@@ -101,10 +116,11 @@ export default AppSplitView.extend({
 
 	getContentView: function() {
 		return new MainBarView({
+			collection: this.collection,
 
 			// options
 			//
-			view_kind: this.options.view_kind,
+			view_kind: this.preferences.get('view_kind'),
 
 			// callbacks
 			//
@@ -137,6 +153,18 @@ export default AppSplitView.extend({
 		});
 	},
 
+	showSettings: function(nav) {
+		application.launch('settings_manager', {
+			nav: nav
+		});
+	},
+
+	showPreferences: function(app) {
+		application.launch('settings_manager', {
+			app: app
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -145,20 +173,18 @@ export default AppSplitView.extend({
 
 		// launch settings manager
 		//
-		if (!item.model.has('app')) {
+		if (item.model) {
+			if (!item.model.has('app')) {
 
-			// show settings
-			//
-			application.launch('settings_manager', {
-				nav: item.model.get('name')
-			});
-		} else {
+				// show settings
+				//
+				this.showSettings(item.model.get('name'));
+			} else {
 
-			// show preferences
-			//
-			application.launch('settings_manager', {
-				app: item.model
-			});
+				// show preferences
+				//
+				this.showPreferences(item.model);
+			}
 		}
 
 		// deselect after a pause
@@ -177,5 +203,14 @@ export default AppSplitView.extend({
 		// clear static attributes
 		//
 		this.constructor.current = null;
+	}
+}, {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	}
 });

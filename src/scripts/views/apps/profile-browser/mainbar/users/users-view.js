@@ -127,12 +127,12 @@ export default ItemsView.extend({
 
 	showMap: function() {
 		import(
-			'../../../../../views/apps/profile-browser/mainbar/users/maps/user-map-view.js'
-		).then((UserMapView) => {
+			'../../../../../views/apps/map-viewer/mainbar/maps/users-map-view.js'
+		).then((UsersMapView) => {
 
 			// show user map
 			//
-			this.showChildView('items', new UserMapView.default(_.extend({}, this.options, {
+			this.showChildView('items', new UsersMapView.default(_.extend({}, this.options, {
 				collection: this.collection
 			})));
 		});

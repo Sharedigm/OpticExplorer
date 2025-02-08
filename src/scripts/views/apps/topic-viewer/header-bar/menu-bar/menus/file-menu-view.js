@@ -24,56 +24,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-topic"><i class="fa fa-plus"></i>New Topic<span class="shift command shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-topics"><i class="fa fa-folder"></i>Open Topics<span class=" command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="add-topics"><i class="fa fa-plus"></i>Add Topics<span class="command shortcut">D</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="remove-topics"><i class="fa fa-minus"></i>Remove Topics<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-item"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-topic"><i class="fa fa-xmark"></i>Close Topic<span class=" command shortcut">L</span></a>
-		</li>
-		
-		<li role="presentation" class="hidden">
-			<a class="close-post"><i class="fa fa-xmark"></i>Close Post<span class=" command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-topic': 'onClickNewTopic',
@@ -95,6 +45,7 @@ export default FileMenuView.extend({
 		let isSignedIn = application.isSignedIn();
 		let hasSelectedOpenTopic = this.parent.app.hasSelectedOpenTopic();
 		let hasSelectedOpenPost = this.parent.app.hasSelectedOpenPost();
+		let isDesktop = this.parent.app.isDesktop();
 
 		return {
 			'new-window': true,
@@ -106,7 +57,7 @@ export default FileMenuView.extend({
 			'download-item': isSignedIn,
 			'close-topic': isSignedIn && hasSelectedOpenTopic,
 			'close-post': isSignedIn && hasSelectedOpenPost,
-			'close-window': isSignedIn
+			'close-window': !isDesktop
 		};
 	},
 
@@ -130,8 +81,7 @@ export default FileMenuView.extend({
 			'show-info': hasOpenItem || hasSelectedTopic,
 			'download-item': hasSelectedItem,
 			'close-topic': hasTabs,
-			'close-post': hasTabs,
-			'close-window': true
+			'close-post': hasTabs
 		};
 	},
 
@@ -142,16 +92,6 @@ export default FileMenuView.extend({
 	setTopic: function(topic) {
 		this.setItemDisabled('remove-topic', topic.isRequired() || 
 			topic.isOwnedBy(application.session.user));
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.app.isDesktop()
-		};
 	},
 	
 	//

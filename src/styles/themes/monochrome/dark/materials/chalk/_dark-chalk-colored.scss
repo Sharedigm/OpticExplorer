@@ -42,10 +42,6 @@ body:not(.binary).monochrome {
 				.chalk($dark-color);
 			}
 
-			&.raspberry {
-				.chalk($dark-color);
-			}
-
 			&.red-orange {
 				.chalk($dark-color);
 			}
@@ -99,6 +95,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.chalk($dark-color);
+			}
+
+			&.raspberry {
 				.chalk($dark-color);
 			}
 
@@ -141,10 +141,6 @@ body:not(.binary).monochrome {
 				.chalk($selected-dark-color);
 			}
 
-			&.raspberry {
-				.chalk($selected-dark-color);
-			}
-
 			&.red-orange {
 				.chalk($selected-dark-color);
 			}
@@ -198,6 +194,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.chalk($selected-dark-color);
+			}
+
+			&.raspberry {
 				.chalk($selected-dark-color);
 			}
 

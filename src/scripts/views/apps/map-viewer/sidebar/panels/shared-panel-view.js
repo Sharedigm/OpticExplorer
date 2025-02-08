@@ -55,6 +55,26 @@ export default SideBarPanelView.extend({
 	path: config.apps['map_viewer'].maps_directory,
 
 	//
+	// querying methods
+	//
+
+	hasSelected: function() {
+		if (this.hasChildView('items')) {
+			return this.getChildView('items').hasSelected();
+		}
+	},
+
+	//
+	// getting methods
+	//
+
+	getSelectedModels: function() {
+		if (this.hasChildView('items')) {
+			return this.getChildView('items').getSelectedModels();
+		}
+	},
+
+	//
 	// rendering methods
 	//
 

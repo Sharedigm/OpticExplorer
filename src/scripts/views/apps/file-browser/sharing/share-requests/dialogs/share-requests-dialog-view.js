@@ -197,7 +197,7 @@ export default DialogView.extend({
 
 	onClickNewShares: function() {
 		import(
-			'../../../../../../collections/users/connections/connections.js'
+			'../../../../../../collections/connections/connections.js'
 		).then((Connections) => {
 
 			// fetch connections

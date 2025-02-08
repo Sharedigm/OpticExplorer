@@ -15,23 +15,26 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-view.js';
+import SearchByTextView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-text-view.js';
 import SearchOptionsListView from '../../../../../../views/apps/map-viewer/header-bar/search-bar/search-options-list/search-options-list-view.js';
-import GoogleAutocomplete from '../../../../../../views/maps/behaviors/autocomplete/google-autocomplete.js';
+import GoogleAutocomplete from '../../../../../../views/apps/map-viewer/mainbar/maps/behaviors/autocomplete/google-autocomplete.js';
 
-export default SearchByView.extend({
+export default SearchByTextView.extend({
 
 	//
 	// attributes
 	//
 
+	icon: 'fa fa-home',
+	placeholder: "Search by Address",
+
 	template: template(`
 		<div class="search-by-address input-group">
 			<div class="input-group-addon">
-				<i class="fa fa-home"></i>
+				<i class="<%= icon %>"></i>
 			</div>
 		
-			<input type="search" class="form-control" placeholder="Search by address" spellcheck="false" value="<%= value %>">
+			<input type="search" class="form-control" placeholder="<%= placeholder %>" spellcheck="false" value="<%= value %>">
 			
 			<div class="close-btn input-group-addon btn">
 				<i class="fa fa-xmark"></i>

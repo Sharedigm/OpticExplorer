@@ -62,7 +62,7 @@ export default BaseView.extend({
 
 	edit: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/edit-user-profile-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/edit/edit-user-profile-dialog-view.js'
 		).then((EditUserProfileDialogView) => {
 			
 			// show edit dialog

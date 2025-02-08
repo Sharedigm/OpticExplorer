@@ -103,49 +103,81 @@ export default DirectoryListItemView.extend(_.extend({}, FileDroppable, {
 		return this.model.getName() || 'Home';
 	},
 	
-	getIcon: function() {
-		let name = this.model.getName().toTitleCase();
-		let icons = config.files.folders.names[name];
+	getSpecialIcon: function(name, icons) {
 		let className;
 
-		if (icons) {
-
-			// use for custom icon
-			//
-			if (typeof icons.font == 'string') {
-				className = icons.font;
-			} else {
-
-				// select empty or full icon
-				//
-				if (this.model.isEmpty()) {
-					className = icons.font[0];
-				} else if (this.model.isFull()) {
-					className = icons.font[1];
-				} else {
-					className = icons.font[0];
-				}
-			}
+		if (typeof icons.font == 'string') {
+			className = icons.font;
 		} else {
 
-			// use standard icons
+			// select empty or full icon, defaulting to empty
 			//
 			if (this.model.isEmpty()) {
-				className = config.files.folders.font[0];
-			} else if (this.model.isAudioAlbum()) {
-				className = config.files.folders.albums.audio.font;
-			} else if (this.model.isImageAlbum()) {
-				className = config.files.folders.albums.image.font;
-			} else if (this.model.isVideoAlbum()) {
-				className = config.files.folders.albums.video.font;
+				className = icons.font[0];
 			} else if (this.model.isFull()) {
-				className = config.files.folders.font[1];
+				className = icons.font[1];
 			} else {
-				className = config.files.folders.font[0];
+				className = icons.font[0];
 			}
 		}
 
 		return '<i class="' + className + '"></i>';
+	},
+
+	getCustomIcon: function(name, icons) {
+		let className;
+
+		if (typeof icons.font == 'string') {
+			className = icons.font;
+		} else {
+			if (name == 'Trash' || name == '.Clipboard') {
+
+
+
+				// select empty or full icon, defaulting to full
+				//
+				if (this.model.isEmpty()) {
+					className = icons.font[0];
+				} else {
+					className = icons.font[1];
+				}
+			}
+		}
+
+		return '<i class="' + className + '"></i>';
+	},
+
+	getDefaultIcon: function() {
+		let className;
+
+		if (this.model.isAudioAlbum()) {
+			className = config.files.folders.albums.audio.font;
+		} else if (this.model.isImageAlbum()) {
+			className = config.files.folders.albums.image.font;
+		} else if (this.model.isVideoAlbum()) {
+			className = config.files.folders.albums.video.font;
+		} else if (this.model.isEmpty()) {
+			className = config.files.folders.font[0];
+		} else {
+			className = config.files.folders.font[1];
+		}
+
+		return '<i class="' + className + '"></i>';
+	},
+
+	getIcon: function() {
+		let name = this.model.getName().toTitleCase();
+		let icons = config.files.folders.names[name];
+
+		// return special, custom or default icon
+		//
+		if (icons && (name == 'Trash' || name == '.Clipboard')) {
+			return this.getSpecialIcon(name, icons);
+		} else if (icons) {
+			return this.getCustomIcon(name, icons);
+		} else {
+			return this.getDefaultIcon();
+		}
 	},
 
 	//

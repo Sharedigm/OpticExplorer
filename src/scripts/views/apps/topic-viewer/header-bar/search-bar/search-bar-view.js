@@ -16,6 +16,11 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByMessageView from '../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-message-view.js';
+import SearchByDateView from '../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-date-view.js';
+import SearchByNumLikesView from '../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-num-likes-view.js';
+import SearchByNumCommentsView from '../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-num-comments-view.js';
+import SearchByNumAttachmentsView from '../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-num-attachments-view.js';
 
 export default SearchBarView.extend({
 
@@ -40,96 +45,98 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByMessage: function() {
-		import(
-			'../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-message-view.js'
-		).then((SearchByMessageView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByMessageView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByMessageView.default({
-				model: this.model,
+			value: this.options.value
+		}));
 
-				// options
-				//
-				value: this.options.value
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByDate: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js'
-		).then((SearchByDateView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByDateView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByDateView.default({
-				model: this.model,
+			value: this.options.value
+		}));
 
-				// options
-				//
-				kind: 'create_date',
-				value: this.options.value
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});		
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByNumLikes: function() {
-		import(
-			'../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-num-likes-view.js'
-		).then((SearchByNumLikesView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByNumLikesView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByNumLikesView.default({
-				model: this.model,
+			value: this.options.value
+		}));
 
-				// options
-				//
-				value: this.options.value
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}				
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByNumComments: function() {
-		import(
-			'../../../../../views/apps/topic-viewer/header-bar/search-bar/searches/search-by-num-comments-view.js'
-		).then((SearchByNumCommentsView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByNumCommentsView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByNumCommentsView.default({
-				model: this.model,
+			value: this.options.value
+		}));
 
-				// options
-				//
-				value: this.options.value
-			}));
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
+	},
 
-			// perform callback
+	showSearchByNumAttachments: function() {
+
+		// show search
+		//
+		this.showChildView('searches', new SearchByNumAttachmentsView({
+			model: this.model,
+
+			// options
 			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}	
-		});
+			value: this.options.value
+		}));
+
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	onRender: function() {
@@ -147,15 +154,27 @@ export default SearchBarView.extend({
 				break;
 
 			case 'date':
+			case 'before':
+			case 'after':
 				this.showSearchByDate(this.options.kind);
 				break;
 
+			case 'min_likes':
 			case 'num_likes':
+			case 'max_likes':
 				this.showSearchByNumLikes();
 				break;
 
+			case 'min_comments':
 			case 'num_comments':
+			case 'max_comments':
 				this.showSearchByNumComments();
+				break;
+
+			case 'min_attachments':
+			case 'num_attachments':
+			case 'max_attachments':
+				this.showSearchByNumAttachments();
 				break;
 
 			default:

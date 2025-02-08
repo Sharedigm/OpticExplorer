@@ -17,12 +17,12 @@
 
 import File from '../../../models/storage/files/file.js';
 import Directory from '../../../models/storage/directories/directory.js';
-import Connection from '../../../models/users/connections/connection.js';
-import Group from '../../../models/users/connections/group.js';
-import Member from '../../../models/users/connections/member.js';
+import Connection from '../../../models/connections/connection.js';
+import Group from '../../../models/connections/group.js';
+import Member from '../../../models/connections/member.js';
 import Gesture from '../../../models/gestures/gesture.js';
-import Connections from '../../../collections/users/connections/connections.js';
-import Groups from '../../../collections/users/connections/groups.js';
+import Connections from '../../../collections/connections/connections.js';
+import Groups from '../../../collections/connections/groups.js';
 import SelectableContainable from '../../../views/behaviors/containers/selectable-containable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
@@ -33,7 +33,14 @@ import HeaderBarView from '../../../views/apps/connection-manager/header-bar/hea
 import SideBarView from '../../../views/apps/connection-manager/sidebar/sidebar-view.js';
 import ContextMenuView from '../../../views/apps/connection-manager/context-menus/context-menu-view.js';
 import FooterBarView from '../../../views/apps/connection-manager/footer-bar/footer-bar-view.js';
-import UsersView from '../../../views/apps/profile-browser/mainbar/users/users-view.js';
+import UserConnectionsView from '../../../views/apps/connection-manager/mainbar/user-connections-view.js';
+import ConnectionRequestsDropdownView from '../../../views/apps/connection-manager/connection-requests/connection-requests-dropdown-view.js';
+import FindConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/connections/find-connections-dialog-view.js';
+import SelectConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js';
+import ConnectionInfoDialogView from '../../../views/apps/connection-manager/dialogs/info/connection-info-dialog-view.js';
+import ShareWithConnectionsDialogView from '../../../views/apps/connection-manager/dialogs/sharing/share-with-connections-dialog-view.js';
+import ConnectionRequestDialogView from '../../../views/apps/connection-manager/dialogs/connections/connection-request-dialog-view.js';
+import PreferencesFormView from '../../../views/apps/connection-manager/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, LinkShareable, ConnectionShareable, ConnectionInfoShowable, {
 
@@ -111,6 +118,11 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		}
 	},
 
+	hasSelectedMember: function() {
+		let selected = this.getSelectedModel() || false;
+		return selected && (selected instanceof Connection);
+	},
+
 	hasSelectedGroup: function() {
 		if (this.hasChildView('content')) {
 			return this.getChildView('sidebar').hasSelected();
@@ -151,7 +163,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 
 	getSelectedModel: function() {
 		if (this.hasChildView('content')) {
-			return this.getChildView('content').getSelectedModels()[0];
+			return this.getChildView('content').getSelectedModel();
 		}
 	},
 
@@ -198,7 +210,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// call attention to selected items
 		//
 		this.each((item) => {
-			if (item.isSelected()) {
+			if (item.isSelected && item.isSelected()) {
 				item.showEffect(effect);
 			}
 		});
@@ -301,6 +313,10 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		}
 	},
 
+	deleteSelectedConnections: function() {
+		this.deleteItems(this.getSelectedModels());
+	},
+
 	//
 	// group methods
 	//
@@ -329,7 +345,8 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 
 		// perform search
 		//
-		new Connections().findByName(application.session.user, search, {
+		new Connections().fetchByUser(application.session.user, {
+			data: search,
 
 			// callbacks
 			//
@@ -371,6 +388,10 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// clear search bar
 		//
 		this.getChildView('header').clearSearchBar();
+
+		// reset collection
+		//
+		this.reset();
 
 		// clear search attributes
 		//
@@ -460,6 +481,17 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	},
 
 	//
+	// rendering methods
+	//
+
+	showChatMessage: function(chat, message) {
+		application.launch('chat_viewer', {
+			model: chat,
+			message: message
+		});
+	},
+
+	//
 	// sharing methods
 	//
 
@@ -471,36 +503,6 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		this.shareWithConnections(this.getSelectedModels(), items, options);
 	},
 
-	shareAudioWithSelected: function(options) {
-		this.shareWithSelected(_.extend({
-			model: application.getDirectory('Audio')
-		}, options));
-	},
-
-	shareMusicWithSelected: function(options) {
-		this.shareWithSelected(_.extend({
-			model: application.getDirectory('Music')
-		}, options));
-	},
-
-	sharePicturesWithSelected: function(options) {
-		this.shareWithSelected(_.extend({
-			model: application.getDirectory('Pictures')
-		}, options));
-	},
-
-	shareVideosWithSelected: function(options) {
-		this.shareWithSelected(_.extend({
-			model: application.getDirectory('Videos')
-		}, options));
-	},
-
-	shareMapsWithSelected: function(options) {
-		this.shareWithSelected(_.extend({
-			model: application.getDirectory('Maps')
-		}, options));
-	},
-
 	shareMessageWithSelected: function() {
 		import(
 			'../../../collections/chats/chats.js'
@@ -510,12 +512,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 				// callbacks
 				//
 				success: (collection) => {
+					let user = this.getSelectedModel();
+					let chat = collection.getChatByUser(user);
+					let message = config.apps.connection_manager.connection_message;
 
-					// show first chat
+					// show user's chat
 					//
-					application.showChat(collection.getChatByUser(this.getSelectedModel()), {
-						message: config.apps.file_browser.share_invitation_message
-					});
+					this.showChatMessage(chat, message);
 				}
 			});
 		});
@@ -643,23 +646,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		AppSplitView.prototype.onRender.call(this);
 
-		// show child views
-		//
-		this.showHeaderBar();
-		this.showContents();
-		if (this.options.search_kind) {
-			this.getChildView('header').showSearch(this.options.search_kind);
-		}
-
-		// hide footer bar
-		//
-		if (this.options.hidden && this.options.hidden['footer-bar']) {
-			this.$el.find('.footer-bar').remove();
-		}
-
 		// load connections
 		//
 		this.load();
+	},
+
+	reset: function() {
+		this.setConnections(this.collection.models);
 	},
 
 	//
@@ -695,14 +688,17 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	},
 
 	getContentView: function() {
-		return new UsersView({
+		return new UserConnectionsView({
 			collection: this.connections,
 
 			// options
 			//
 			preferences: this.preferences,
-			selected: this.options.selected,
 			multicolumn: true,
+
+			// state
+			//
+			selected: this.options.selected,
 
 			// capabilities
 			//
@@ -901,7 +897,19 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	//
 
 	onSelectGroup: function(item) {
+
+		// check that we are selecting group view
+		//
+		if (!item.model || !(item.model instanceof Group)) {
+			return;
+		}
+
+		// set attributes
+		//
 		this.selected = item;
+
+		// update view
+		//
 		this.setConnections(item.model.get('members').models);
 		if (!this.options.dialog) {
 			this.setTitle(this.title());
@@ -942,4 +950,57 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			this.shareWithConnections(connections, items);
 		}
 	}
-}));
+}), {
+
+	//
+	// static methods
+	//
+
+	fetchMutualConnections(model, options) {
+		new Connections().fetchMutual(application.session.user, model, options);
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getConnectionRequestsDropdownView: function(model) {
+		return new ConnectionRequestsDropdownView({
+			model: model
+		});
+	},
+
+	getUserConnectionsView: function(options) {
+		return new UserConnectionsView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showFindConnectionsDialog: function() {
+		application.show(new FindConnectionsDialogView());
+	},
+
+	showSelectConnectionsDialog: function(options) {
+		application.show(new SelectConnectionsDialogView(options));
+	},
+
+	showConnectionInfoDialog: function(model) {
+		application.show(new ConnectionInfoDialogView({
+			model: model
+		}));
+	},
+
+	showShareWithConnectionsDialog: function(options) {
+		application.show(new ShareWithConnectionsDialogView(options));
+	},
+
+	showConnectionRequestDialog: function(options) {
+		application.show(new ConnectionRequestDialogView(options));
+	}
+});

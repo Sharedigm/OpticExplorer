@@ -62,6 +62,21 @@ $rounded-desktop-info-bar-border-radius: 7px;
 				box-shadow: none;
 
 				//
+				// toolbars
+				//
+
+				.toolbar {
+
+					// range inputs
+					//
+					.input {
+						input[type=range] {
+							width: 150px;
+						}
+					}
+				}
+
+				//
 				// app bars
 				//
 

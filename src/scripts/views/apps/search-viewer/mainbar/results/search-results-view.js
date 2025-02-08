@@ -34,14 +34,14 @@ export default BaseView.extend({
 			Searching for "<%= query %>" ...
 
 			<div class="buttons">
-				<button class="search btn btn-sm" data-toggle="tooltip" title="Search Again">
-					<i class="fa fa-reply"></i>
+				<button class="search btn btn-sm" data-toggle="tooltip" title="Clear">
+					<i class="fa fa-close"></i>
 				</button>
 			</div>
 		</div>
 
 		<div class="desktop-app-only options">
-			<div class="view-kind">
+			<div class="view-kind" style="display:none">
 				<label>View</label>
 				<select>
 					<option value="icons">Icons</option>
@@ -51,7 +51,7 @@ export default BaseView.extend({
 				</select>
 			</div>
 
-			<div class="detail-kind">
+			<div class="detail-kind" style="display:none">
 				<label>Details</label>
 				<select>
 					<option value="size">Size</option>
@@ -114,8 +114,8 @@ export default BaseView.extend({
 			<% if (has_index) { %>
 			<li role="presentation" class="search-index-tab active">
 				<a role="tab" data-toggle="tab" href=".search-index">
-					<i class="fa fa-list"></i>
-					<label>Search Index</label>
+					<i class="fa fa-file"></i>
+					<label>Files</label>
 					<div class="badges">
 						<div class="badge"></div>
 					</div>
@@ -126,7 +126,7 @@ export default BaseView.extend({
 			<% if (has_files) { %>
 			<li role="presentation" class="shared-files-tab<% if (!has_index) { %> active<% } %>">
 				<a role="tab" data-toggle="tab" href=".shared-files">
-					<i class="fa fa-file"></i>
+					<i class="fa fa-share"></i>
 					<label>Shared Files</label>
 					<div class="badges">
 						<div class="badge"></div>
@@ -360,13 +360,13 @@ export default BaseView.extend({
 	//
 
 	templateContext: function() {
-		let kind = config.defaults.search? config.defaults.search.kind : undefined;
+		let search_kind = this.options.search_kind;
 
 		return {
 			query: decodeURI(this.options.query),
-			has_index: !kind || kind.includes('index'),
-			has_files: !kind || kind.includes('files'),
-			has_posts: !kind || kind.includes('posts')
+			has_index: !search_kind || search_kind.includes('index'),
+			has_files: !search_kind || search_kind.includes('files'),
+			has_posts: !search_kind || search_kind.includes('posts')
 		};
 	},
 
@@ -467,18 +467,18 @@ export default BaseView.extend({
 	fetchAndShowResults: function() {
 		let query = this.options.query;
 		let directory = config.defaults.search.directory;
-		let kind = config.defaults.search? config.defaults.search.kind : undefined;
+		let search_kind = this.options.search_kind;
 
 		// fetch and show results
 		//
-		if (!kind || kind.includes('index')) {
+		if (!search_kind || search_kind.includes('index')) {
 			this.fetchAndShowSearchIndexCount(query);
 			this.fetchAndShowSearchIndex(query);
 		}
-		if (!kind || kind.includes('files')) {
+		if (!search_kind || search_kind.includes('files')) {
 			this.fetchAndShowSharedFiles(query, directory);
 		}
-		if (!kind || kind.includes('posts')) {
+		if (!search_kind || search_kind.includes('posts')) {
 			this.fetchAndShowTopicPosts(query);
 		}
 

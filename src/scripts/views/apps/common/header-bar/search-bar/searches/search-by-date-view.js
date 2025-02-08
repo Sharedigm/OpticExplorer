@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                               search-by-date-view.js                         |
+|                            search-by-date-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching by date.                       |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,35 +15,33 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByQuantityView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-quantity-view.js';
+import SearchByOrderableView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-orderable-view.js';
 
-export default SearchByQuantityView.extend({
+export default SearchByOrderableView.extend({
 
 	//
 	// attributes
 	//
 
+	icon: 'fa fa-calendar',
+
 	template: template(`
 		<div class="input-group">
-			<div class="date-kind input-group-addon">
-				<% if (kind == 'create_date') { %>
-				<i class="fa fa-magic"></i>
-				<% } else if (kind == 'modify_date') { %>
-				<i class="fa fa-edit"></i>
-				<% } else if (kind == 'access_date') { %>
-				<i class="fa fa-eye"></i>
-				<% } %>
+			<div class="input-group-addon">
+				<i class="<%= icon %>"></i>
 			</div>
 		
-			<div class="operator input-group-addon select">
-				<select>
-					<option value="greater-than">&gt;</option>
-					<option value="equals">=</option>
-					<option value="less-than">&lt;</option>
+			<div class="input-group-addon select">
+				<select class="operator">
+					<% let keys = Object.keys(operators); %>
+					<% for (let i = 0; i < keys.length; i++) { %>
+					<% let key = keys[i]; %>
+					<option value="<%= key %>"><%= operators[key] %></option>
+					<% } %>
 				</select>
 			</div>
 		
-			<input type="date" class="form-control">
+			<input type="date" class="form-control" value="<%= value %>">
 		
 			<div class="close-btn input-group-addon btn">
 				<i class="fa fa-xmark"></i>
@@ -53,44 +51,35 @@ export default SearchByQuantityView.extend({
 			</div>
 		</div>
 	`),
+
 	focusable: 'input[type="date"]',
-
-	//
-	// querying methods
-	//
-
-	quantity: function() {
-		return this.options.kind;
-	},
 
 	//
 	// getting methods
 	//
 
-	getKey: function() {
-		let quantity = _.result(this, 'quantity');
-
-		// replace underscores with dashes
-		//
-		quantity = quantity.replace(/_/g, '-');
-
-		switch (this.getOperator()) {
-			case 'less-than':
-				return 'before-' + quantity;
-			case 'equal':
-				return quantity;
-			case 'greater-than':
-				return 'after-' + quantity;
+	getRelation: function() {
+		let operator = this.getOperator();
+		switch (operator) {
+			case 'greater_than':
+				return 'after';
+			case 'less_than':
+				return 'before';
+			default:
+				return 'at';
 		}
 	},
 
-	//
-	// rendering methods
-	//
+	getKey: function() {
+		let key = _.result(this, 'key');
 
-	templateContext: function() {
-		return {
-			kind: this.options.kind
-		};
+		switch (this.getOperator()) {
+			case 'greater_than':
+				return 'after' + (key? '_' + key : '');
+			case 'less_than':
+				return 'before' + (key? '_' + key : '');
+			default:
+				return key? key : 'date'
+		}
 	}
 });

@@ -131,17 +131,12 @@ export default BaseView.extend({
 
 			// options
 			//
+			search_kind: this.options.preferences.get('search'),
 			view_kind: this.options.preferences.get('view_kind'),
 			items_per_page: this.options.preferences.get('items_per_page'),
 			detail_kind: this.options.preferences.get('detail_kind'),
 			date_format: this.options.preferences.get('date_format'),
 			multicolumn: this.options.multicolumn,
-
-			// flags
-			//
-			show_index: this.getOption('search').includes('index'),
-			show_files: this.getOption('search').includes('files'),
-			show_posts: this.getOption('search').includes('posts'),
 
 			// callbacks
 			//

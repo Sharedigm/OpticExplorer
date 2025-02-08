@@ -215,7 +215,7 @@ export default BaseView.extend({
 	
 	onClickSelectProfilePhoto: function() {
 		import(
-			'../../../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 
 			// show open dialog

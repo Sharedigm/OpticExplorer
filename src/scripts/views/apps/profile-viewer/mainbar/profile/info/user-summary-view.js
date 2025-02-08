@@ -243,19 +243,27 @@ export default BaseView.extend({
 		};
 	},
 
+	showPlace: function(place) {
+		application.launch('map_viewer', {
+			place: place
+		});
+	},
+
+	showDate: function(date) {
+		application.launch('calendar', {
+			date: date
+		});
+	},
+
 	//
 	// mouse event handling methods
 	//
 
 	onClickWhere: function() {
-		application.launch('map_viewer', {
-			place: new Place(this.options.user.get('check_in').attributes)
-		});
+		this.showPlace(new Place(this.options.user.get('check_in').attributes));
 	},
 
 	onClickWhen: function() {
-		application.launch('calendar', {
-			date: this.options.user.get('check_in').get('created_at')
-		});
+		this.showDate(this.options.user.get('check_in').get('created_at'));
 	}
 });

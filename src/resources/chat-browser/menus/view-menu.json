@@ -1,0 +1,214 @@
+{
+	"items": [
+		{
+			"class": "view-icons",
+			"group": "view-kind",
+			"icon": "fa fa-th",
+			"name": "Icons",
+			"select": true
+		},
+		{
+			"class": "view-names",
+			"group": "view-kind",
+			"icon": "fa fa-align-left",
+			"name": "Names",
+			"select": true
+		},
+		{
+			"class": "view-lists",
+			"group": "view-kind",
+			"icon": "fa fa-list",
+			"name": "Lists",
+			"select": true
+		},
+		{
+			"class": "view-cards",
+			"group": "view-kind",
+			"icon": "fa fa-id-card",
+			"name": "Cards",
+			"select": true
+		},
+		{
+			"class": "view-tiles",
+			"group": "view-kind",
+			"icon": "fa fa-th-large",
+			"name": "Tiles",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "view-details",
+			"icon": "fa fa-tags",
+			"name": "Details",
+			"select": true,
+			"menu": [
+				{
+					"class": "view-members",
+					"group": "detail-kind",
+					"icon": "fa fa-users",
+					"name": "Members",
+					"select": true
+				},
+				{
+					"class": "view-messages",
+					"group": "detail-kind",
+					"icon": "fa fa-comments",
+					"name": "Messages",
+					"select": true
+				},
+				{
+					"class": "view-date",
+					"icon": "fa fa-calendar-alt",
+					"name": "Date",
+					"select": true,
+					"menu": [
+						{
+							"class": "view-create-date",
+							"group": "detail-kind",
+							"icon": "fa fa-magic",
+							"name": "Create Date",
+							"select": true
+						},
+						{
+							"class": "view-modify-date",
+							"group": "detail-kind",
+							"icon": "fa fa-edit",
+							"name": "Modify Date",
+							"select": true
+						},
+						"divider",
+						{
+							"class": "view-date-only",
+							"group": "date-format",
+							"icon": "fa fa-calendar-alt",
+							"name": "Date Only",
+							"select": true
+						},
+						{
+							"class": "view-day-date",
+							"group": "date-format",
+							"icon": "fa fa-calendar-plus",
+							"name": "Day, Date",
+							"select": true
+						},
+						{
+							"class": "view-time-only",
+							"group": "date-format",
+							"icon": "fa fa-clock",
+							"name": "Time Only",
+							"select": true
+						},
+						{
+							"class": "view-date-time",
+							"group": "date-format",
+							"icon": "fa fa-calendar-check",
+							"name": "Date, Time",
+							"select": true
+						},
+						{
+							"class": "view-day-date-time",
+							"group": "date-format",
+							"icon": "fa fa-calendar-alt",
+							"name": "Day, Date, Time",
+							"select": true
+						}
+					]
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "show-sidebar",
+			"icon": "fa fa-pause",
+			"name": "Sidebar",
+			"select": true,
+			"menu": [
+				{
+					"class": "show-actions-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-play-circle",
+					"name": "Actions",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "window-size",
+			"icon": "far fa-window-maximize",
+			"name": "Window Size",
+			"menu": [
+				{
+					"class": "shrink-window",
+					"icon": "fa fa-minus",
+					"name": "Shrink",
+					"shortcut": "command-["
+				},
+				{
+					"class": "grow-window",
+					"icon": "fa fa-plus",
+					"name": "Grow",
+					"shortcut": "command-]"
+				},
+				{
+					"class": "expand-window",
+					"icon": "fa fa-expand",
+					"name": "Expand",
+					"shortcut": "command-\\"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "spaces",
+			"icon": "far fa-window-maximize",
+			"name": "Spaces",
+			"select": true,
+			"menu": [
+				{
+					"class": "prev-space",
+					"icon": "fa fa-chevron-left",
+					"name": "Prev",
+					"shortcut": "command-left arrow"
+				},
+				{
+					"class": "next-space",
+					"icon": "fa fa-chevron-right",
+					"name": "Next",
+					"shortcut": "command-right arrow"
+				}
+			]
+		},
+		{
+			"class": "windows",
+			"icon": "far fa-window-restore",
+			"name": "Windows",
+			"select": true,
+			"menu": [
+				{
+					"class": "minimize-all",
+					"icon": "fa fa-window-minimize",
+					"name": "Minimize All"
+				},
+				{
+					"class": "unminimize-all",
+					"icon": "fa fa-window-restore",
+					"name": "Unminimize All"
+				}
+			]
+		},
+		{
+			"class": "view-full-screen",
+			"icon": "fa fa-desktop",
+			"name": "Full Screen",
+			"shortcut": "command-up arrow",
+			"select": true
+		},
+		"divider",
+		{
+			"class": "view-preferences",
+			"icon": "fa fa-snowflake",
+			"name": "Preferences"
+		}
+	]
+}

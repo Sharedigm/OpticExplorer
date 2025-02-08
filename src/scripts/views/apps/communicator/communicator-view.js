@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                              communicator-view.js                               |
+|                            communicator-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -29,7 +29,7 @@ import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import MultiDoc from '../../../views/apps/common/behaviors/tabbing/multidoc.js';
 import ContainableSelectable from '../../../views/behaviors/containers/containable-selectable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import LinkShareable from '../../../views/apps/common/behaviors/sharing/link-shareable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import TopicInfoShowable from '../../../views/apps/topic-browser/dialogs/info/behaviors/topic-info-showable.js';
@@ -38,11 +38,11 @@ import HeaderBarView from '../../../views/apps/communicator/header-bar/header-ba
 import SideBarView from '../../../views/apps/communicator/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/communicator/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/communicator/footer-bar/footer-bar-view.js';
-import TopicViewerView from '../../../views/apps/topic-viewer/topic-viewer-view.js';
+import PreferencesFormView from '../../../views/apps/communicator/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 import HtmlUtils from '../../../utilities/web/html-utils.js';
 
-export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, Openable, LinkShareable, ItemInfoShowable, TopicInfoShowable, ChatInfoShowable, {
+export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, LinkShareable, ItemInfoShowable, TopicInfoShowable, ChatInfoShowable, {
 
 	//
 	// attributes
@@ -59,6 +59,15 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass constructor
 		//
 		AppSplitView.prototype.initialize.call(this);
+
+		// set default topic
+		//
+		if (!this.constructor.default_topic) {
+			this.constructor.default_topic = new Topic({
+				id: 0,
+				name: this.constructor.getDefaultTopicName()
+			});
+		}
 
 		// set attributes
 		//
@@ -200,8 +209,9 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getDefaultTopic: function() {
 		let name = this.preferences.get('default_topic');
-		if (!name || name == '' || name == config.apps.topic_viewer.defaults.topic.name) {
-			return TopicViewerView.default_topic;
+
+		if (this.constructor.isDefaultTopicName(name)) {
+			return this.constructor.default_topic;
 		} else {
 			return this.getTopicByName(name);
 		}
@@ -397,14 +407,15 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	setSearch: function(search) {
 		let kind = search? Object.keys(search)[0] : '';
 		let value = search? search[kind] : '';
+		let searchKind = kind? kind.replace(/-/g, '_') : undefined;
 
 		// set menu
 		//
-		this.getChildView('header menu search').setSearchKind(kind);
+		this.getChildView('header menu search').setSearchKind(searchKind);
 
 		// set search bar
 		//
-		this.getChildView('header').showSearchBar(kind, value);
+		this.getChildView('header').showSearchBar(searchKind, value);
 	},
 
 	//
@@ -761,12 +772,19 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
+			let message = this.model.get('message');
+
+			// format / limit message
+			//
+			if (message) {
+				message = HtmlUtils.htmlToText(message || '').firstWords(15);
+			}
 
 			// confirm delete
 			//
 			application.confirm({
-				message: "Are you sure you want to delete the message " + '"' +
-					HtmlUtils.htmlToText(message.get('message')).firstWords(15) + '"?',
+				message: message? "Are you sure you want to delete the message " + '"' +
+					message + '"?' : "Are you sure you want to delete this message?",
 
 				// callbacks
 				//
@@ -882,39 +900,9 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	// sharing methods
 	//
 
-	shareItems: function() {
+	shareItems: function(directory) {
 		this.getActiveView().shareItems({
-			model: application.getDirectory()
-		});
-	},
-
-	shareAudio: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Audio')
-		});
-	},
-
-	shareMusic: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Music')
-		});
-	},
-
-	sharePictures: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Pictures')
-		});
-	},
-
-	shareVideos: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Videos')
-		});
-	},
-
-	shareMaps: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Maps')
+			model: directory
 		});
 	},
 
@@ -926,7 +914,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	shareSelectedByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -999,7 +987,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 			// capabilities
 			//
-			features: this.options.features,
 			editable: this.options.editable,
 
 			// callbacks
@@ -1429,4 +1416,29 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 			this.request2.abort();
 		}
 	}
-}));
+}), {
+
+	//
+	// static methods
+	//
+
+	isDefaultTopicName: function(name) {
+		return name && name != '' && this.getDefaultTopicName() == name;
+	},
+
+	hasDefaultTopicName: function() {
+		return this.getTopicName() != undefined;
+	},
+
+	getPreferences: function() {
+		return config.preferences.communicator || {};
+	},
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getDefaultTopicName: function() {
+		return this.getPreferences().default_topic;
+	}
+});

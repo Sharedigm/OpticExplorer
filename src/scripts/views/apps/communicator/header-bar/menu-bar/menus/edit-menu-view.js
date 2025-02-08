@@ -21,55 +21,13 @@ import Comment from '../../../../../../models/comments/comment.js';
 import Reply from '../../../../../../models/comments/reply.js';
 import Chat from '../../../../../../models/chats/chat.js';
 import ChatMessage from '../../../../../../models/chats/chat-message.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="topic-option">
-			<a class="edit-topic"><i class="fa fa-pencil-alt"></i>Edit Topic<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="topic-option">
-			<a class="delete-topic"><i class="fa fa-trash-alt"></i>Delete Topic<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="post-option">
-			<a class="edit-post"><i class="fa fa-pencil-alt"></i>Edit Post<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="post-option">
-			<a class="delete-post"><i class="fa fa-trash-alt"></i>Delete Post<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="edit-comment"><i class="fa fa-pencil-alt"></i>Edit Comment<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="comment-option">
-			<a class="delete-comment"><i class="fa fa-trash-alt"></i>Delete Comment<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="edit-reply"><i class="fa fa-pencil-alt"></i>Edit Reply<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="reply-option">
-			<a class="delete-reply"><i class="fa fa-trash-alt"></i>Delete Reply<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="message-option">
-			<a class="edit-message"><i class="fa fa-pencil-alt"></i>Edit Message<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="message-option">
-			<a class="delete-message"><i class="fa fa-trash-alt"></i>Delete Message<span class="shortcut">delete</span></a>
-		</li>
-	`),
 
 	events: {
 
@@ -169,10 +127,6 @@ export default MenuView.extend({
 	//
 
 	onRender: function() {
-
-		// call superclass method
-		//
-		MenuView.prototype.onRender.call(this);
 
 		// set initial menu mode
 		//

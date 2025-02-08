@@ -21,6 +21,7 @@ import Items from '../../../collections/storage/items.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import Loadable from '../../../views/behaviors/effects/loadable.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import FileDownloadable from '../../../views/apps/file-browser/mainbar/behaviors/file-downloadable.js';
 import FileUploadable from '../../../views/apps/file-browser/mainbar/behaviors/file-uploadable.js';
 import FileDisposable from '../../../views/apps/file-browser/mainbar/behaviors/file-disposable.js';
@@ -28,9 +29,10 @@ import HeaderBarView from '../../../views/apps/image-viewer/header-bar/header-ba
 import SideBarView from '../../../views/apps/image-viewer/sidebar/sidebar-view.js';
 import ImageSplitView from '../../../views/apps/image-viewer/mainbar/image-split-view.js';
 import FooterBarView from '../../../views/apps/image-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/image-viewer/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
-export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDownloadable, FileUploadable, FileDisposable, {
+export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, ItemFavorable, FileDownloadable, FileUploadable, FileDisposable, {
 
 	//
 	// attributes
@@ -656,6 +658,24 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 	},
 
 	//
+	// full screen methods
+	//
+
+	toggleFullScreen: function() {
+
+		// request full screen
+		//
+		let imageView = this.getImageView();
+		if (imageView) {
+			if (!imageView.isFullScreen()) {
+				imageView.requestFullScreen();
+			} else {
+				imageView.exitFullScreen();
+			}
+		}
+	},
+
+	//
 	// rotating methods
 	//
 
@@ -707,15 +727,18 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 		//
 		AppSplitView.prototype.onRender.call(this);
 
+		// add tooltip triggers
+		//
+		this.addTooltips();
+	},
+
+	onAttach: function() {
+
 		// load images from home directory
 		//
 		if (this.collection.length == 0) {
 			this.openDirectory(this.getHomeDirectory());
 		}
-
-		// add tooltip triggers
-		//
-		this.addTooltips();
 	},
 
 	update: function() {
@@ -778,7 +801,12 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 			//
 			panels: this.preferences.get('sidebar_panels'),
 			view_kind: this.preferences.get('sidebar_view_kind'),
-			tile_size: this.preferences.get('sidebar_tile_size')
+			tile_size: this.preferences.get('sidebar_tile_size'),
+
+			// callbacks
+			//
+			onselect: (item) => this.onSelect(item),
+			ondeselect: (item) => this.onDeselect(item)
 		});
 	},
 
@@ -789,7 +817,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 			// options
 			//
 			preferences: this.preferences,
-			show_sidebar: this.preferences.get('show_image_info'),
+			show_sidebar: this.preferences.get('show_exif_info'),
 			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks
@@ -839,7 +867,7 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 
 	showOpenImagesDialog: function() {
 		import(
-			'../../../views/apps/image-viewer/dialogs/images/open-images-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/images/open-images-dialog-view.js'
 		).then((OpenImagesDialogView) => {
 
 			// show open images dialog
@@ -1064,4 +1092,13 @@ export default AppSplitView.extend(_.extend({}, Loadable, ItemShareable, FileDow
 			this.animation.stop();
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

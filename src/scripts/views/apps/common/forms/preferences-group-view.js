@@ -28,6 +28,40 @@ export default PreferencesFormView.extend({
 
 	className: 'preferences form-vertical',
 
+	template: template(`
+		<div class="app-icons"></div>
+
+		<% if (typeof tabs != 'undefined') { %>
+		<ul class="nav nav-tabs" role="tablist">
+			<% for (let i = 0; i < tabs.length; i++) { %>
+			<% let tab = tabs[i]; %>
+			<% let name = tab.name; %>
+			<% let icon = tab.icon; %>
+			<% let className = name.toLowerCase().replace(/ /g, '-'); %>
+			<li role="presentation" class="<%= className %>-tab<% if (i == 0) { %> active<% } %>">
+				<a role="tab" data-toggle="tab" href=".<%= className %>-prefs">
+					<i class="<%= icon %>"></i>
+					<label><%= name %></label>
+				</a>
+			</li>
+			<% } %>
+		</ul>
+
+		<div class="tab-content">
+			<% for (let i = 0; i < tabs.length; i++) { %>
+			<% let tab = tabs[i]; %>
+			<% let name = tab.name; %>
+			<% let icon = tab.icon; %>
+			<% let className = name.toLowerCase().replace(/ /g, '-'); %>
+			<div role="tabpanel" class="<%= className %>-prefs tab-pane<% if (i == 0) { %> active<% } %>">
+			</div>
+			<% } %>
+		</div>
+		<% } %>
+	`),
+
+	tabs: [],
+
 	//
 	// form queryimg methods
 	//
@@ -86,9 +120,26 @@ export default PreferencesFormView.extend({
 	// rendering methods
 	//
 
+	regions: function() {
+		let regions = {
+			item: {
+				el: '.app-icons',
+				replaceElement: true
+			}
+		};
+		for (let i = 0; i < this.tabs.length; i++) {
+			let tab = this.tabs[i];
+			let region = tab.name.toLowerCase().replace(/ /g, '_');
+			let className = region.replace(/_/g, '-');
+			regions[region] = '.' + className + '-prefs';
+		}
+		return regions;
+	},
+
 	templateContext: function() {
 		return {
-			tab: this.options.tab
+			tab: this.options.tab,
+			tabs: this.tabs
 		};
 	},
 

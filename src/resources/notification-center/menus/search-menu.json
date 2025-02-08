@@ -1,0 +1,25 @@
+{
+	"items": [
+		{
+			"class": "search-by-name",
+			"group": "search-by",
+			"icon": "fa fa-font",
+			"name": "By Name",
+			"select": true
+		},
+		{
+			"class": "search-by-kind",
+			"group": "search-by",
+			"icon": "fa fa-exclamation-triangle",
+			"name": "By Kind",
+			"select": true
+		},
+		{
+			"class": "search-by-date",
+			"group": "search-by",
+			"icon": "fa fa-calendar-alt",
+			"name": "Date",
+			"select": true
+		}
+	]
+}

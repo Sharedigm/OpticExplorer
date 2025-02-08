@@ -439,6 +439,41 @@ body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .con
 body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .expander .btn i {
   color: white !important;
 }
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li > a:hover {
+  color: white !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a {
+  color: #c0c0d9 !important;
+}
+body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a:hover, body:not(.binary).transparent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body .contents > .sidebar .menu i li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu li.disabled > a:hover,
+body:not(.binary) #desktop.transparent-sidebars .desktop.app > .body-region .contents > .sidebar .menu i li.disabled > a:hover {
+  color: #c0c0d9 !important;
+}
 body:not(.binary).translucent #desktop.auto-sidebars .desktop.app > .body .contents > .sidebar, body:not(.binary).translucent #desktop.auto-sidebars .desktop.app > .body-region .contents > .sidebar,
 body:not(.binary) #desktop.translucent-sidebars .desktop.app > .body .contents > .sidebar,
 body:not(.binary) #desktop.translucent-sidebars .desktop.app > .body-region .contents > .sidebar {
@@ -896,21 +931,6 @@ body:not(.binary).colored .colored.btn:active.red:active, body:not(.binary).colo
   background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(0, 80%, 60%));
   border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(0, 80%, 60%));
 }
-body:not(.binary).colored .colored.btn.raspberry, body:not(.binary).colored .colored.btn:focus.raspberry,
-body:not(.binary).colored .colored.btn:active.raspberry, body:not(.binary).colored .colored.btn:active:focus.raspberry {
-  background: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).colored .colored.btn.raspberry:hover, body:not(.binary).colored .colored.btn:focus.raspberry:hover,
-body:not(.binary).colored .colored.btn:active.raspberry:hover, body:not(.binary).colored .colored.btn:active:focus.raspberry:hover {
-  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
-}
-body:not(.binary).colored .colored.btn.raspberry:active, body:not(.binary).colored .colored.btn:focus.raspberry:active,
-body:not(.binary).colored .colored.btn:active.raspberry:active, body:not(.binary).colored .colored.btn:active:focus.raspberry:active {
-  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
-}
 body:not(.binary).colored .colored.btn.red-orange, body:not(.binary).colored .colored.btn:focus.red-orange,
 body:not(.binary).colored .colored.btn:active.red-orange, body:not(.binary).colored .colored.btn:active:focus.red-orange {
   background: hsl(15, 80%, 60%);
@@ -958,18 +978,18 @@ body:not(.binary).colored .colored.btn:active.yellow:active, body:not(.binary).c
 }
 body:not(.binary).colored .colored.btn.lime, body:not(.binary).colored .colored.btn:focus.lime,
 body:not(.binary).colored .colored.btn:active.lime, body:not(.binary).colored .colored.btn:active:focus.lime {
-  background: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored .colored.btn.lime:hover, body:not(.binary).colored .colored.btn:focus.lime:hover,
 body:not(.binary).colored .colored.btn:active.lime:hover, body:not(.binary).colored .colored.btn:active:focus.lime:hover {
-  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(90, 50%, 50%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(90, 50%, 50%));
+  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(135, 50%, 50%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(135, 50%, 50%));
 }
 body:not(.binary).colored .colored.btn.lime:active, body:not(.binary).colored .colored.btn:focus.lime:active,
 body:not(.binary).colored .colored.btn:active.lime:active, body:not(.binary).colored .colored.btn:active:focus.lime:active {
-  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(90, 50%, 50%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(90, 50%, 50%));
+  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(135, 50%, 50%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(135, 50%, 50%));
 }
 body:not(.binary).colored .colored.btn.green, body:not(.binary).colored .colored.btn:focus.green,
 body:not(.binary).colored .colored.btn:active.green, body:not(.binary).colored .colored.btn:active:focus.green {
@@ -1120,6 +1140,21 @@ body:not(.binary).colored .colored.btn.magenta:active, body:not(.binary).colored
 body:not(.binary).colored .colored.btn:active.magenta:active, body:not(.binary).colored .colored.btn:active:focus.magenta:active {
   background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(280, 33%, 50%));
   border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(280, 33%, 50%));
+}
+body:not(.binary).colored .colored.btn.raspberry, body:not(.binary).colored .colored.btn:focus.raspberry,
+body:not(.binary).colored .colored.btn:active.raspberry, body:not(.binary).colored .colored.btn:active:focus.raspberry {
+  background: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).colored .colored.btn.raspberry:hover, body:not(.binary).colored .colored.btn:focus.raspberry:hover,
+body:not(.binary).colored .colored.btn:active.raspberry:hover, body:not(.binary).colored .colored.btn:active:focus.raspberry:hover {
+  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
+}
+body:not(.binary).colored .colored.btn.raspberry:active, body:not(.binary).colored .colored.btn:focus.raspberry:active,
+body:not(.binary).colored .colored.btn:active.raspberry:active, body:not(.binary).colored .colored.btn:active:focus.raspberry:active {
+  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
 }
 body:not(.binary).colored .colored.btn.brown, body:not(.binary).colored .colored.btn:focus.brown,
 body:not(.binary).colored .colored.btn:active.brown, body:not(.binary).colored .colored.btn:active:focus.brown {
@@ -1819,10 +1854,10 @@ body:not(.binary) .item .meter i:nth-child(4).active {
 body:not(.binary) .item .meter i:nth-child(5).active {
   color: red !important;
 }
-body:not(.binary) .icon-grid .icon > img + i {
+body:not(.binary) .icon-grid .icon > img + i, body:not(.binary) .card-grid .icon > img + i {
   display: none;
 }
-body:not(.binary) .icon-grid .icon.colored {
+body:not(.binary) .icon-grid .icon.colored, body:not(.binary) .card-grid .icon.colored {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
 }
 body:not(.binary):not(.flat) .file-body {
@@ -1909,7 +1944,7 @@ body:not(.binary) .icon-grid .item > .row:nth-child(2) .name[contenteditable=tru
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary) .icon-grid .item .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 .dark body:not(.binary) .icon-grid .item .details, .desktop body:not(.binary) .icon-grid .item .details {
   color: white;
@@ -1999,7 +2034,7 @@ body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info .name[
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info > .specifics .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 body:not(.binary):not(.dark) .item-list:not(.dropdown-menu) .item > .info > .specifics .details i.fa-info-circle {
   color: #6060a0;
@@ -2268,7 +2303,7 @@ body:not(.binary) .tile-grid .item > .tile .name[contenteditable=true] {
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary) .tile-grid .item > .specifics .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 body:not(.binary) .tile-grid .item.highlighted .tile {
   border-color: #a0a0c6;
@@ -2365,7 +2400,7 @@ body:not(.binary) .card-grid .cards .item .card .info .name[contenteditable=true
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary) .card-grid .cards .item .card .info .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 body:not(.binary) .card-grid .cards .empty {
   background-color: rgba(192, 192, 217, 0.25);
@@ -2389,13 +2424,9 @@ body:not(.binary) .card-grid .cards .item.highlighted .card a {
 }
 body:not(.binary) .card-grid .cards .item.selected .card {
   color: white;
-  /*
-  .icon {
-  	i {
-  		color: white;
-  	}
-  }
-  */
+}
+body:not(.binary) .card-grid .cards .item.selected .card i {
+  color: white;
 }
 body:not(.binary) .card-grid .cards .item.selected .card .info .name:not([contenteditable=true]) {
   color: white;
@@ -2446,7 +2477,7 @@ body:not(.binary) .pages .main-carousel .item .name[contenteditable=true] {
   outline-color: rgba(128, 128, 179, 0.5);
 }
 body:not(.binary) .pages .main-carousel .item .details {
-  background-color: rgba(160, 160, 198, 0.5);
+  background-color: rgba(192, 192, 217, 0.25);
 }
 .dark body:not(.binary) .pages .main-carousel .item .details, .desktop body:not(.binary) .pages .main-carousel .item .details {
   color: white;
@@ -2628,8 +2659,8 @@ body:not(.binary) span.secondary {
   color: #6060a0;
 }
 body:not(.binary) .search-bar .input:focus-within {
-  border-color: color-mix(in srgb, var(--primary-color) 75%, transparent) !important;
-  box-shadow: 1px 1px 10px 0 color-mix(in srgb, var(--primary-color) 50%, transparent) !important;
+  border-color: color-mix(in srgb, var(--primary-color) 100%, transparent) !important;
+  box-shadow: 0 0 20px 0 color-mix(in srgb, var(--primary-color) 50%, transparent) !important;
 }
 
 /******************************************************************************\
@@ -3446,14 +3477,6 @@ hr {
 }
 .user-profile-header hr {
   margin: 10px auto;
-}
-
-body.icon-spinning .profile.photo .buttons {
-  display: none;
-}
-
-body:not(.icon-spinning) .user-profile-header .alternate.buttons {
-  display: none;
 }
 
 .scrollable {

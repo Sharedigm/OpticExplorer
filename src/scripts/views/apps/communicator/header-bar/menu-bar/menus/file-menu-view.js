@@ -23,66 +23,6 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="new-window"><i class="far fa-window-maximize"></i>New Window<span class="command shortcut">enter</span></a>
-		</li>
-
-		<li role="presentation">
-			<a class="new-topic"><i class="fa fa-hashtag"></i>New Topic<span class="shift command shortcut">enter</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="new-chat"><i class="fa fa-comments"></i>New Chat<span class="shift command shortcut">enter</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="open-topics"><i class="fa fa-folder"></i>Open Topics<span class=" command shortcut">O</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="open-chats"><i class="fa fa-folder"></i>Open Chats<span class=" command shortcut">O</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="show-info"><i class="fa fa-info-circle"></i>Show Info<span class="command shortcut">I</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="download-item"><i class="fa fa-download"></i>Download<span class="shift command shortcut">D</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="add-topics"><i class="fa fa-plus"></i>Add Topics<span class="command shortcut">D</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="remove-topics"><i class="fa fa-minus"></i>Remove Topics<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="hidden">
-			<a class="end-chat"><i class="fa fa-minus"></i>End Chat<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="close-tab"><i class="fa fa-xmark"></i>Close Tab<span class=" command shortcut">L</span></a>
-		</li>
-		
-		<% if (!is_desktop) { %>
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 		'click .new-window': 'onClickNewWindow',
 		'click .new-topic': 'onClickNewTopic',
@@ -108,6 +48,7 @@ export default FileMenuView.extend({
 		let hasSelectedOpenPost = this.parent.app.hasSelectedOpenPost();
 		let hasSelectedOpenChat = this.parent.app.hasSelectedOpenChat();
 		let hasSelectedOpenTab = hasSelectedOpenTopic || hasSelectedOpenPost || hasSelectedOpenChat;
+		let isWindowed = this.parent.app.isWindowed();
 
 		return {
 			'new-window': true,
@@ -121,7 +62,7 @@ export default FileMenuView.extend({
 			'show-info': true,
 			'download-item': true,
 			'close-chat': hasSelectedOpenTab,
-			'close-window': true
+			'close-window': isWindowed
 		};
 	},
 
@@ -160,16 +101,6 @@ export default FileMenuView.extend({
 	setTopic: function(topic) {
 		this.setItemDisabled('remove-topic', topic.isRequired() || 
 			topic.isOwnedBy(application.session.user));
-	},
-
-	//
-	// rendering methods
-	//
-
-	templateContext: function() {
-		return {
-			is_desktop: this.parent.app.isDesktop()
-		};
 	},
 
 	//

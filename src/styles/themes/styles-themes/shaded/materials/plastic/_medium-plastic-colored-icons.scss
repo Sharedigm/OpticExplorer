@@ -38,10 +38,6 @@ body:not(.binary) {
 					@include round-plastic.shaded(colors.$medium-red);
 				}
 
-				&.raspberry {
-					@include round-plastic.shaded(colors.$medium-raspberry);
-				}
-
 				&.red-orange {
 					@include round-plastic.shaded(colors.$medium-red-orange);
 				}
@@ -98,6 +94,10 @@ body:not(.binary) {
 					@include round-plastic.shaded(colors.$medium-magenta);
 				}
 
+				&.raspberry {
+					@include round-plastic.shaded(colors.$medium-raspberry);
+				}
+
 				&.brown {
 					@include round-plastic.shaded(colors.$medium-brown);
 				}
@@ -135,10 +135,6 @@ body:not(.binary) {
 			.selected .icon .colored {
 				&.red {
 					@include round-plastic.shaded(colors.$dark-red);
-				}
-
-				&.raspberry {
-					@include round-plastic.shaded(colors.$dark-raspberry);
 				}
 
 				&.red-orange {
@@ -195,6 +191,10 @@ body:not(.binary) {
 
 				&.magenta {
 					@include round-plastic.shaded(colors.$dark-magenta);
+				}
+
+				&.raspberry {
+					@include round-plastic.shaded(colors.$dark-raspberry);
 				}
 
 				&.brown {

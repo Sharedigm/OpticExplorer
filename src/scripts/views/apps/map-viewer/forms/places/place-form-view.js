@@ -333,7 +333,7 @@ export default FormView.extend({
 
 	onClickSelectPlace: function(event) {
 		this.showSelectPlaceDialog({
-			place: this.model,
+			model: this.model,
 			
 			// callbacks
 			//

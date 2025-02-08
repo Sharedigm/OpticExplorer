@@ -46,63 +46,63 @@ body:not(.binary).colored #desktop.colored,
 body:not(.binary).colored .desktop.preview.colored,
 body:not(.binary).colored #desktop.auto-colored,
 body:not(.binary).colored .desktop.preview.auto-colored {
-  background-color: color-mix(in srgb, #303030 50%, var(--primary-color));
+  background-color: color-mix(in srgb, #404040 66%, var(--primary-color));
 }
 body:not(.binary).colored #desktop.colored.red,
 body:not(.binary).colored .desktop.preview.colored.red, body:not(.binary).colored.red #desktop.auto-colored, body:not(.binary).colored.red .desktop.preview.auto-colored {
-  background-color: #8b2525;
+  background-color: #783333;
 }
 body:not(.binary).colored #desktop.colored.orange,
 body:not(.binary).colored .desktop.preview.colored.orange, body:not(.binary).colored.orange #desktop.auto-colored, body:not(.binary).colored.orange .desktop.preview.auto-colored {
-  background-color: #8b5825;
+  background-color: #785633;
 }
 body:not(.binary).colored #desktop.colored.gold,
 body:not(.binary).colored .desktop.preview.colored.gold, body:not(.binary).colored.gold #desktop.auto-colored, body:not(.binary).colored.gold .desktop.preview.auto-colored {
-  background-color: #887028;
+  background-color: #766635;
 }
 body:not(.binary).colored #desktop.colored.yellow,
 body:not(.binary).colored .desktop.preview.colored.yellow, body:not(.binary).colored.yellow #desktop.auto-colored, body:not(.binary).colored.yellow .desktop.preview.auto-colored {
-  background-color: #787838;
+  background-color: #6b6b40;
 }
 body:not(.binary).colored #desktop.colored.green,
 body:not(.binary).colored .desktop.preview.colored.green, body:not(.binary).colored.green #desktop.auto-colored, body:not(.binary).colored.green .desktop.preview.auto-colored {
-  background-color: #3a5c43;
+  background-color: #415847;
 }
 body:not(.binary).colored #desktop.colored.teal,
 body:not(.binary).colored .desktop.preview.colored.teal, body:not(.binary).colored.teal #desktop.auto-colored, body:not(.binary).colored.teal .desktop.preview.auto-colored {
-  background-color: #2b5252;
+  background-color: #375151;
 }
 body:not(.binary).colored #desktop.colored.aqua,
 body:not(.binary).colored .desktop.preview.colored.aqua, body:not(.binary).colored.aqua #desktop.auto-colored, body:not(.binary).colored.aqua .desktop.preview.auto-colored {
-  background-color: #325465;
+  background-color: #3c535e;
 }
 body:not(.binary).colored #desktop.colored.cyan,
 body:not(.binary).colored .desktop.preview.colored.cyan, body:not(.binary).colored.cyan #desktop.auto-colored, body:not(.binary).colored.cyan .desktop.preview.auto-colored {
-  background-color: #287298;
+  background-color: #356781;
 }
 body:not(.binary).colored #desktop.colored.blue,
 body:not(.binary).colored .desktop.preview.colored.blue, body:not(.binary).colored.blue #desktop.auto-colored, body:not(.binary).colored.blue .desktop.preview.auto-colored {
-  background-color: #284d98;
+  background-color: #354e81;
 }
 body:not(.binary).colored #desktop.colored.violet,
 body:not(.binary).colored .desktop.preview.colored.violet, body:not(.binary).colored.violet #desktop.auto-colored, body:not(.binary).colored.violet .desktop.preview.auto-colored {
-  background-color: #403a5c;
+  background-color: #454158;
 }
 body:not(.binary).colored #desktop.colored.magenta,
 body:not(.binary).colored .desktop.preview.colored.magenta, body:not(.binary).colored.magenta #desktop.auto-colored, body:not(.binary).colored.magenta .desktop.preview.auto-colored {
-  background-color: #513a5c;
+  background-color: #514158;
 }
 body:not(.binary).colored #desktop.colored.brown,
 body:not(.binary).colored .desktop.preview.colored.brown, body:not(.binary).colored.brown #desktop.auto-colored, body:not(.binary).colored.brown .desktop.preview.auto-colored {
-  background-color: #5b4b3c;
+  background-color: #574d42;
 }
 body:not(.binary).colored #desktop.colored.grey,
 body:not(.binary).colored .desktop.preview.colored.grey, body:not(.binary).colored.grey #desktop.auto-colored, body:not(.binary).colored.grey .desktop.preview.auto-colored {
-  background-color: #3f3f58;
+  background-color: #444456;
 }
 body:not(.binary).colored #desktop.colored.black,
 body:not(.binary).colored .desktop.preview.colored.black, body:not(.binary).colored.black #desktop.auto-colored, body:not(.binary).colored.black .desktop.preview.auto-colored {
-  background-color: #181818;
+  background-color: #2a2a2a;
 }
 
 /******************************************************************************\
@@ -375,18 +375,6 @@ body:not(.binary).colored.colored .colored.btn.red:active {
   background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(0, 80%, 60%));
   border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(0, 80%, 60%));
 }
-body:not(.binary).colored.colored .colored.btn.raspberry {
-  background: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).colored.colored .colored.btn.raspberry:hover {
-  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
-}
-body:not(.binary).colored.colored .colored.btn.raspberry:active {
-  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
-}
 body:not(.binary).colored.colored .colored.btn.red-orange {
   background: hsl(15, 80%, 60%);
   border-color: hsl(15, 80%, 60%);
@@ -424,16 +412,16 @@ body:not(.binary).colored.colored .colored.btn.yellow:active {
   border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(60, 50%, 60%));
 }
 body:not(.binary).colored.colored .colored.btn.lime {
-  background: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored.colored .colored.btn.lime:hover {
-  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(90, 50%, 50%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(90, 50%, 50%));
+  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(135, 50%, 50%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(135, 50%, 50%));
 }
 body:not(.binary).colored.colored .colored.btn.lime:active {
-  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(90, 50%, 50%));
-  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(90, 50%, 50%));
+  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(135, 50%, 50%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(135, 50%, 50%));
 }
 body:not(.binary).colored.colored .colored.btn.green {
   background: hsl(135, 33%, 50%);
@@ -554,6 +542,18 @@ body:not(.binary).colored.colored .colored.btn.magenta:hover {
 body:not(.binary).colored.colored .colored.btn.magenta:active {
   background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(280, 33%, 50%));
   border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(280, 33%, 50%));
+}
+body:not(.binary).colored.colored .colored.btn.raspberry {
+  background: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).colored.colored .colored.btn.raspberry:hover {
+  background: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 10%, hsl(330, 80%, 60%));
+}
+body:not(.binary).colored.colored .colored.btn.raspberry:active {
+  background: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
+  border-color: color-mix(in srgb, rgb(0, 0, 127) 20%, hsl(330, 80%, 60%));
 }
 body:not(.binary).colored.colored .colored.btn.brown {
   background: hsl(30, 30%, 50%);
@@ -1392,18 +1392,6 @@ body:not(.binary).flat.colored .colored.btn.red:active {
   background-color: #b81414;
   border-color: #b81414;
 }
-body:not(.binary).flat.colored .colored.btn.raspberry {
-  background-color: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).flat.colored .colored.btn.raspberry:hover {
-  background-color: #e61a80;
-  border-color: #e61a80;
-}
-body:not(.binary).flat.colored .colored.btn.raspberry:active {
-  background-color: #b81466;
-  border-color: #b81466;
-}
 body:not(.binary).flat.colored .colored.btn.red-orange {
   background-color: hsl(15, 80%, 60%);
   border-color: hsl(15, 80%, 60%);
@@ -1441,16 +1429,16 @@ body:not(.binary).flat.colored .colored.btn.yellow:active {
   border-color: #999933;
 }
 body:not(.binary).flat.colored .colored.btn.lime {
-  background-color: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).flat.colored .colored.btn.lime:hover {
-  background-color: #669933;
-  border-color: #669933;
+  background-color: #33994d;
+  border-color: #33994d;
 }
 body:not(.binary).flat.colored .colored.btn.lime:active {
-  background-color: #4d7326;
-  border-color: #4d7326;
+  background-color: #267339;
+  border-color: #267339;
 }
 body:not(.binary).flat.colored .colored.btn.green {
   background-color: hsl(135, 33%, 50%);
@@ -1572,6 +1560,18 @@ body:not(.binary).flat.colored .colored.btn.magenta:active {
   background-color: #553366;
   border-color: #553366;
 }
+body:not(.binary).flat.colored .colored.btn.raspberry {
+  background-color: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).flat.colored .colored.btn.raspberry:hover {
+  background-color: #e61a80;
+  border-color: #e61a80;
+}
+body:not(.binary).flat.colored .colored.btn.raspberry:active {
+  background-color: #b81466;
+  border-color: #b81466;
+}
 body:not(.binary).flat.colored .colored.btn.brown {
   background-color: hsl(30, 30%, 50%);
   border-color: hsl(30, 30%, 50%);
@@ -1689,29 +1689,6 @@ body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.red.long.ro
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.red.long.round {
   background-color: hsl(0, 80%, 60%);
 }
-body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry {
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.round,
-body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.round,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.round {
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.rounded,
-body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.rounded,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.rounded {
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.long.round,
-body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.long.round,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.long.round {
-  background-color: hsl(330, 80%, 60%);
-}
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.red-orange, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.red-orange {
@@ -1784,25 +1761,25 @@ body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.yellow
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.lime, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.lime {
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.lime.round,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.lime.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.lime.round,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.lime.round {
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.lime.rounded,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.lime.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.lime.rounded,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.lime.rounded {
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.lime.long.round,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.lime.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.lime.long.round,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.lime.long.round {
-  background-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.green,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.green, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.green,
@@ -2034,6 +2011,29 @@ body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.magenta.lon
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.magenta.long.round {
   background-color: hsl(280, 33%, 50%);
 }
+body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry {
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.round,
+body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.round,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.round {
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.rounded,
+body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.rounded,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.rounded {
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.raspberry.long.round,
+body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.raspberry.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.raspberry.long.round,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.raspberry.long.round {
+  background-color: hsl(330, 80%, 60%);
+}
 body:not(.binary).colored.flat-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.flat-icons.icon-backgrounds .icon .colored.brown, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .icon .colored.brown {
@@ -2218,29 +2218,6 @@ body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.r
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.red.long.round {
   background-color: #e61a1a;
 }
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.round,
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.round,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.round {
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.rounded,
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.rounded,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.rounded {
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.long.round,
-body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.long.round,
-body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.long.round {
-  background-color: #e61a80;
-}
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.red-orange, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.red-orange {
@@ -2313,25 +2290,25 @@ body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colo
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.lime, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.lime {
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.lime.round,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.lime.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.lime.round,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.lime.round {
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.lime.rounded,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.lime.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.lime.rounded,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.lime.rounded {
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.lime.long.round,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.lime.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.lime.long.round,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.lime.long.round {
-  background-color: #669933;
+  background-color: #33994d;
 }
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.green,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.green, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.green,
@@ -2563,6 +2540,29 @@ body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.m
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.magenta.long.round {
   background-color: #714488;
 }
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
+  background-color: #e61a80;
+  border-color: #cf1780;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.round,
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.round,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.round {
+  background-color: #e61a80;
+  border-color: #cf1780;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.rounded,
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.rounded, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.rounded,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.rounded {
+  background-color: #e61a80;
+  border-color: #cf1780;
+}
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.raspberry.long.round,
+body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.raspberry.long.round, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.raspberry.long.round,
+body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.raspberry.long.round {
+  background-color: #e61a80;
+}
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.flat-icons.icon-backgrounds .selected .icon .colored.brown, body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.flat.auto-icons.icon-backgrounds .selected .icon .colored.brown {
@@ -2756,21 +2756,6 @@ body:not(.binary).colored .colored.red.rounded {
 body:not(.binary).colored .colored.red.long.round {
   background-color: hsl(0, 80%, 60%);
 }
-body:not(.binary).colored .colored.raspberry {
-  background-color: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).colored .colored.raspberry.round {
-  background-color: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).colored .colored.raspberry.rounded {
-  background-color: hsl(330, 80%, 60%);
-  border-color: hsl(330, 80%, 60%);
-}
-body:not(.binary).colored .colored.raspberry.long.round {
-  background-color: hsl(330, 80%, 60%);
-}
 body:not(.binary).colored .colored.red-orange {
   background-color: hsl(15, 80%, 60%);
   border-color: hsl(15, 80%, 60%);
@@ -2817,19 +2802,19 @@ body:not(.binary).colored .colored.yellow.long.round {
   background-color: hsl(60, 50%, 60%);
 }
 body:not(.binary).colored .colored.lime {
-  background-color: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored .colored.lime.round {
-  background-color: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored .colored.lime.rounded {
-  background-color: hsl(90, 50%, 50%);
-  border-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
+  border-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored .colored.lime.long.round {
-  background-color: hsl(90, 50%, 50%);
+  background-color: hsl(135, 50%, 50%);
 }
 body:not(.binary).colored .colored.green {
   background-color: hsl(135, 33%, 50%);
@@ -2981,6 +2966,21 @@ body:not(.binary).colored .colored.magenta.rounded {
 body:not(.binary).colored .colored.magenta.long.round {
   background-color: hsl(280, 33%, 50%);
 }
+body:not(.binary).colored .colored.raspberry {
+  background-color: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).colored .colored.raspberry.round {
+  background-color: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).colored .colored.raspberry.rounded {
+  background-color: hsl(330, 80%, 60%);
+  border-color: hsl(330, 80%, 60%);
+}
+body:not(.binary).colored .colored.raspberry.long.round {
+  background-color: hsl(330, 80%, 60%);
+}
 body:not(.binary).colored .colored.brown {
   background-color: hsl(30, 30%, 50%);
   border-color: hsl(30, 30%, 50%);
@@ -3101,21 +3101,6 @@ body:not(.binary).colored .selected .colored.red.rounded {
 body:not(.binary).colored .selected .colored.red.long.round {
   background-color: #e61a1a;
 }
-body:not(.binary).colored .selected .colored.raspberry {
-  background-color: #e61a80;
-  border-color: #e61a80;
-}
-body:not(.binary).colored .selected .colored.raspberry.round {
-  background-color: #e61a80;
-  border-color: #e61a80;
-}
-body:not(.binary).colored .selected .colored.raspberry.rounded {
-  background-color: #e61a80;
-  border-color: #e61a80;
-}
-body:not(.binary).colored .selected .colored.raspberry.long.round {
-  background-color: #e61a80;
-}
 body:not(.binary).colored .selected .colored.red-orange {
   background-color: #e64d1a;
   border-color: #e64d1a;
@@ -3162,19 +3147,19 @@ body:not(.binary).colored .selected .colored.yellow.long.round {
   background-color: #bfbf40;
 }
 body:not(.binary).colored .selected .colored.lime {
-  background-color: #669933;
-  border-color: #669933;
+  background-color: #33994d;
+  border-color: #33994d;
 }
 body:not(.binary).colored .selected .colored.lime.round {
-  background-color: #669933;
-  border-color: #669933;
+  background-color: #33994d;
+  border-color: #33994d;
 }
 body:not(.binary).colored .selected .colored.lime.rounded {
-  background-color: #669933;
-  border-color: #669933;
+  background-color: #33994d;
+  border-color: #33994d;
 }
 body:not(.binary).colored .selected .colored.lime.long.round {
-  background-color: #669933;
+  background-color: #33994d;
 }
 body:not(.binary).colored .selected .colored.green {
   background-color: #448855;
@@ -3325,6 +3310,21 @@ body:not(.binary).colored .selected .colored.magenta.rounded {
 }
 body:not(.binary).colored .selected .colored.magenta.long.round {
   background-color: #714488;
+}
+body:not(.binary).colored .selected .colored.raspberry {
+  background-color: #e61a80;
+  border-color: #e61a80;
+}
+body:not(.binary).colored .selected .colored.raspberry.round {
+  background-color: #e61a80;
+  border-color: #e61a80;
+}
+body:not(.binary).colored .selected .colored.raspberry.rounded {
+  background-color: #e61a80;
+  border-color: #e61a80;
+}
+body:not(.binary).colored .selected .colored.raspberry.long.round {
+  background-color: #e61a80;
 }
 body:not(.binary).colored .selected .colored.brown {
   background-color: #856647;
@@ -3847,21 +3847,6 @@ body:not(.binary).chalk.colored .colored.btn.red:active {
   background-color: #b81414;
   border-color: #a6121f;
 }
-body:not(.binary).chalk.colored .colored.btn.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
-body:not(.binary).chalk.colored .colored.btn.raspberry:hover {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
-body:not(.binary).chalk.colored .colored.btn.raspberry:active {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #b81466;
-  border-color: #a61269;
-}
 body:not(.binary).chalk.colored .colored.btn.red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(15, 80%, 60%);
@@ -3909,18 +3894,18 @@ body:not(.binary).chalk.colored .colored.btn.yellow:active {
 }
 body:not(.binary).chalk.colored .colored.btn.lime {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).chalk.colored .colored.btn.lime:hover {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).chalk.colored .colored.btn.lime:active {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #4d7326;
-  border-color: #45682f;
+  background-color: #267339;
+  border-color: #226840;
 }
 body:not(.binary).chalk.colored .colored.btn.green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -4072,6 +4057,21 @@ body:not(.binary).chalk.colored .colored.btn.magenta:active {
   background-color: #553366;
   border-color: #4d2e69;
 }
+body:not(.binary).chalk.colored .colored.btn.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
+body:not(.binary).chalk.colored .colored.btn.raspberry:hover {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
+}
+body:not(.binary).chalk.colored .colored.btn.raspberry:active {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #b81466;
+  border-color: #a61269;
+}
 body:not(.binary).chalk.colored .colored.btn.brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(30, 30%, 50%);
@@ -4188,13 +4188,6 @@ body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.red {
   background-color: hsl(0, 80%, 60%);
   border-color: #d4404d;
 }
-body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
 body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.red-orange, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.red-orange {
@@ -4220,8 +4213,8 @@ body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.lime, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.lime {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.green,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.green, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.green,
@@ -4293,6 +4286,13 @@ body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.magen
   background-color: hsl(280, 33%, 50%);
   border-color: #804da6;
 }
+body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
 body:not(.binary).colored.chalk-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .icon .colored.brown, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .icon .colored.brown {
@@ -4349,13 +4349,6 @@ body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .col
   background-color: #e61a1a;
   border-color: #cf1724;
 }
-body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.red-orange, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .colored.red-orange {
@@ -4381,8 +4374,8 @@ body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.l
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.lime, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .colored.lime {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.green,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.green, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.green,
@@ -4453,6 +4446,13 @@ body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .col
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #714488;
   border-color: #663d87;
+}
+body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
 }
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.chalk-icons.icon-backgrounds .selected .icon .colored.brown, body:not(.binary).colored.chalk.auto-icons.icon-backgrounds .selected .colored.icon.brown,
@@ -4525,11 +4525,6 @@ body:not(.binary).colored.chalk .colored:not(.flat).red {
   background-color: hsl(0, 80%, 60%);
   border-color: #d4404d;
 }
-body:not(.binary).colored.chalk .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
 body:not(.binary).colored.chalk .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(15, 80%, 60%);
@@ -4547,8 +4542,8 @@ body:not(.binary).colored.chalk .colored:not(.flat).yellow {
 }
 body:not(.binary).colored.chalk .colored:not(.flat).lime {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.chalk .colored:not(.flat).green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -4600,6 +4595,11 @@ body:not(.binary).colored.chalk .colored:not(.flat).magenta {
   background-color: hsl(280, 33%, 50%);
   border-color: #804da6;
 }
+body:not(.binary).colored.chalk .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
 body:not(.binary).colored.chalk .colored:not(.flat).brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(30, 30%, 50%);
@@ -4640,11 +4640,6 @@ body:not(.binary).colored.chalk .selected .colored:not(.flat).red {
   background-color: #e61a1a;
   border-color: #cf1724;
 }
-body:not(.binary).colored.chalk .selected .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
 body:not(.binary).colored.chalk .selected .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #e64d1a;
@@ -4662,8 +4657,8 @@ body:not(.binary).colored.chalk .selected .colored:not(.flat).yellow {
 }
 body:not(.binary).colored.chalk .selected .colored:not(.flat).lime {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.chalk .selected .colored:not(.flat).green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -4714,6 +4709,11 @@ body:not(.binary).colored.chalk .selected .colored:not(.flat).magenta {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #714488;
   border-color: #663d87;
+}
+body:not(.binary).colored.chalk .selected .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
 }
 body:not(.binary).colored.chalk .selected .colored:not(.flat).brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 25%, transparent 100%) no-repeat, linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5173,21 +5173,6 @@ body:not(.binary).plastic.colored .colored.btn.red:active {
   background-color: #b81414;
   border-color: #a6121f;
 }
-body:not(.binary).plastic.colored .colored.btn.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
-body:not(.binary).plastic.colored .colored.btn.raspberry:hover {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
-body:not(.binary).plastic.colored .colored.btn.raspberry:active {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #b81466;
-  border-color: #a61269;
-}
 body:not(.binary).plastic.colored .colored.btn.red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(15, 80%, 60%);
@@ -5235,18 +5220,18 @@ body:not(.binary).plastic.colored .colored.btn.yellow:active {
 }
 body:not(.binary).plastic.colored .colored.btn.lime {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).plastic.colored .colored.btn.lime:hover {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).plastic.colored .colored.btn.lime:active {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #4d7326;
-  border-color: #45682f;
+  background-color: #267339;
+  border-color: #226840;
 }
 body:not(.binary).plastic.colored .colored.btn.green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5398,6 +5383,21 @@ body:not(.binary).plastic.colored .colored.btn.magenta:active {
   background-color: #553366;
   border-color: #4d2e69;
 }
+body:not(.binary).plastic.colored .colored.btn.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
+body:not(.binary).plastic.colored .colored.btn.raspberry:hover {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
+}
+body:not(.binary).plastic.colored .colored.btn.raspberry:active {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #b81466;
+  border-color: #a61269;
+}
 body:not(.binary).plastic.colored .colored.btn.brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(30, 30%, 50%);
@@ -5514,13 +5514,6 @@ body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.red
   background-color: hsl(0, 80%, 60%);
   border-color: #d4404d;
 }
-body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
 body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.red-orange, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.red-orange {
@@ -5546,8 +5539,8 @@ body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.lime, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.lime {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.green,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.green, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.green,
@@ -5619,6 +5612,13 @@ body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.mag
   background-color: hsl(280, 33%, 50%);
   border-color: #804da6;
 }
+body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
 body:not(.binary).colored.plastic-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .icon .colored.brown, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .icon .colored.brown {
@@ -5675,13 +5675,6 @@ body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .c
   background-color: #e61a1a;
   border-color: #cf1724;
 }
-body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.red-orange, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .colored.red-orange {
@@ -5707,8 +5700,8 @@ body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.lime, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .colored.lime {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon.green,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.green, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.green,
@@ -5779,6 +5772,13 @@ body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .c
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #714488;
   border-color: #663d87;
+}
+body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
 }
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.plastic-icons.icon-backgrounds .selected .icon .colored.brown, body:not(.binary).colored.plastic.auto-icons.icon-backgrounds .selected .colored.icon.brown,
@@ -5851,11 +5851,6 @@ body:not(.binary).colored.plastic .colored:not(.flat).red {
   background-color: hsl(0, 80%, 60%);
   border-color: #d4404d;
 }
-body:not(.binary).colored.plastic .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(330, 80%, 60%);
-  border-color: #d44096;
-}
 body:not(.binary).colored.plastic .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(15, 80%, 60%);
@@ -5873,8 +5868,8 @@ body:not(.binary).colored.plastic .colored:not(.flat).yellow {
 }
 body:not(.binary).colored.plastic .colored:not(.flat).lime {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: hsl(90, 50%, 50%);
-  border-color: #73ac46;
+  background-color: hsl(135, 50%, 50%);
+  border-color: #3aac63;
 }
 body:not(.binary).colored.plastic .colored:not(.flat).green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -5926,6 +5921,11 @@ body:not(.binary).colored.plastic .colored:not(.flat).magenta {
   background-color: hsl(280, 33%, 50%);
   border-color: #804da6;
 }
+body:not(.binary).colored.plastic .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: hsl(330, 80%, 60%);
+  border-color: #d44096;
+}
 body:not(.binary).colored.plastic .colored:not(.flat).brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: hsl(30, 30%, 50%);
@@ -5966,11 +5966,6 @@ body:not(.binary).colored.plastic .selected .colored:not(.flat).red {
   background-color: #e61a1a;
   border-color: #cf1724;
 }
-body:not(.binary).colored.plastic .selected .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #e61a80;
-  border-color: #cf1780;
-}
 body:not(.binary).colored.plastic .selected .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #e64d1a;
@@ -5988,8 +5983,8 @@ body:not(.binary).colored.plastic .selected .colored:not(.flat).yellow {
 }
 body:not(.binary).colored.plastic .selected .colored:not(.flat).lime {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
-  background-color: #669933;
-  border-color: #5c8a3b;
+  background-color: #33994d;
+  border-color: #2e8a52;
 }
 body:not(.binary).colored.plastic .selected .colored:not(.flat).green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -6040,6 +6035,11 @@ body:not(.binary).colored.plastic .selected .colored:not(.flat).magenta {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
   background-color: #714488;
   border-color: #663d87;
+}
+body:not(.binary).colored.plastic .selected .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
+  background-color: #e61a80;
+  border-color: #cf1780;
 }
 body:not(.binary).colored.plastic .selected .colored:not(.flat).brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(0, 0, 0, 0.1) 100%) no-repeat;
@@ -6499,21 +6499,6 @@ body:not(.binary).glass.colored .colored.btn.red:active {
   background-color: #810e34;
   border-color: #810e34;
 }
-body:not(.binary).glass.colored .colored.btn.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
-  background-color: #a53291;
-  border-color: #a53291;
-}
-body:not(.binary).glass.colored .colored.btn.raspberry:hover {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
-  background-color: #a11280;
-  border-color: #a11280;
-}
-body:not(.binary).glass.colored .colored.btn.raspberry:active {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #f1d0e0 0%, #bf2c75 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(184, 20, 102, 0.5) 100%) no-repeat;
-  background-color: #810e6e;
-  border-color: #810e6e;
-}
 body:not(.binary).glass.colored .colored.btn.red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbe2da 0%, #ed7e59 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 112, 71, 0.5) 100%) no-repeat;
   background-color: #a54e58;
@@ -6560,19 +6545,19 @@ body:not(.binary).glass.colored .colored.btn.yellow:active {
   border-color: #6b6b4a;
 }
 body:not(.binary).glass.colored .colored.btn.lime {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e6f2d9 0%, #8dc553 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(128, 191, 64, 0.5) 100%) no-repeat;
-  background-color: #5a8653;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d9f2df 0%, #53c570 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(64, 191, 96, 0.5) 100%) no-repeat;
+  background-color: #2d8669;
+  border-color: #2d8669;
 }
 body:not(.binary).glass.colored .colored.btn.lime:hover {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e0ebd6 0%, #75a347 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(102, 153, 51, 0.5) 100%) no-repeat;
-  background-color: #476b4a;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d6ebdb 0%, #47a35f 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(51, 153, 77, 0.5) 100%) no-repeat;
+  background-color: #246b5c;
+  border-color: #246b5c;
 }
 body:not(.binary).glass.colored .colored.btn.lime:active {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #dbe3d4 0%, #5f813c 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(77, 115, 38, 0.5) 100%) no-repeat;
-  background-color: #365141;
-  border-color: #365141;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d4e3d7 0%, #3c814d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(38, 115, 57, 0.5) 100%) no-repeat;
+  background-color: #1b514e;
+  border-color: #1b514e;
 }
 body:not(.binary).glass.colored .colored.btn.green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #ddeee1 0%, #66b379 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(85, 170, 106, 0.5) 100%) no-repeat;
@@ -6724,6 +6709,21 @@ body:not(.binary).glass.colored .colored.btn.magenta:active {
   background-color: #3c246e;
   border-color: #3c246e;
 }
+body:not(.binary).glass.colored .colored.btn.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
+  background-color: #a53291;
+  border-color: #a53291;
+}
+body:not(.binary).glass.colored .colored.btn.raspberry:hover {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
+  background-color: #a11280;
+  border-color: #a11280;
+}
+body:not(.binary).glass.colored .colored.btn.raspberry:active {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #f1d0e0 0%, #bf2c75 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(184, 20, 102, 0.5) 100%) no-repeat;
+  background-color: #810e6e;
+  border-color: #810e6e;
+}
 body:not(.binary).glass.colored .colored.btn.brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #ede6de 0%, #af8d6a 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(166, 128, 89, 0.5) 100%) no-repeat;
   background-color: #745a64;
@@ -6840,13 +6840,6 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.red {
   background-color: #a53258;
   border-color: #a53258;
 }
-body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
-  background-color: #a53291;
-  border-color: #a53291;
-}
 body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.red-orange, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.red-orange {
@@ -6871,9 +6864,9 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.yello
 body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.lime, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.lime {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e6f2d9 0%, #8dc553 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(128, 191, 64, 0.5) 100%) no-repeat;
-  background-color: #5a8653;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d9f2df 0%, #53c570 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(64, 191, 96, 0.5) 100%) no-repeat;
+  background-color: #2d8669;
+  border-color: #2d8669;
 }
 body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.green,
 body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.green, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.green,
@@ -6945,6 +6938,13 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.magen
   background-color: #633c9d;
   border-color: #633c9d;
 }
+body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
+  background-color: #a53291;
+  border-color: #a53291;
+}
 body:not(.binary).colored.glass-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.glass-icons.icon-backgrounds .icon .colored.brown, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.glass.auto-icons.icon-backgrounds .icon .colored.brown {
@@ -7001,13 +7001,6 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .col
   background-color: #a11238;
   border-color: #a11238;
 }
-body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
-  background-color: #a11280;
-  border-color: #a11280;
-}
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.red-orange, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .colored.red-orange {
@@ -7032,9 +7025,9 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .col
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.lime, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .colored.lime {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e0ebd6 0%, #75a347 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(102, 153, 51, 0.5) 100%) no-repeat;
-  background-color: #476b4a;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d6ebdb 0%, #47a35f 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(51, 153, 77, 0.5) 100%) no-repeat;
+  background-color: #246b5c;
+  border-color: #246b5c;
 }
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.green,
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.green, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.green,
@@ -7105,6 +7098,13 @@ body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .col
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e3dae7 0%, #7f5794 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(113, 68, 136, 0.5) 100%) no-repeat;
   background-color: #4f3085;
   border-color: #4f3085;
+}
+body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
+  background-color: #a11280;
+  border-color: #a11280;
 }
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.glass-icons.icon-backgrounds .selected .icon .colored.brown, body:not(.binary).colored.glass.auto-icons.icon-backgrounds .selected .colored.icon.brown,
@@ -7177,11 +7177,6 @@ body:not(.binary).colored.glass .colored:not(.flat).red {
   background-color: #a53258;
   border-color: #a53258;
 }
-body:not(.binary).colored.glass .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
-  background-color: #a53291;
-  border-color: #a53291;
-}
 body:not(.binary).colored.glass .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbe2da 0%, #ed7e59 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 112, 71, 0.5) 100%) no-repeat;
   background-color: #a54e58;
@@ -7198,9 +7193,9 @@ body:not(.binary).colored.glass .colored:not(.flat).yellow {
   border-color: #8f8f6e;
 }
 body:not(.binary).colored.glass .colored:not(.flat).lime {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e6f2d9 0%, #8dc553 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(128, 191, 64, 0.5) 100%) no-repeat;
-  background-color: #5a8653;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d9f2df 0%, #53c570 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(64, 191, 96, 0.5) 100%) no-repeat;
+  background-color: #2d8669;
+  border-color: #2d8669;
 }
 body:not(.binary).colored.glass .colored:not(.flat).green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #ddeee1 0%, #66b379 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(85, 170, 106, 0.5) 100%) no-repeat;
@@ -7252,6 +7247,11 @@ body:not(.binary).colored.glass .colored:not(.flat).magenta {
   background-color: #633c9d;
   border-color: #633c9d;
 }
+body:not(.binary).colored.glass .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fbdaeb 0%, #ed59a3 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(235, 71, 153, 0.5) 100%) no-repeat;
+  background-color: #a53291;
+  border-color: #a53291;
+}
 body:not(.binary).colored.glass .colored:not(.flat).brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #ede6de 0%, #af8d6a 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(166, 128, 89, 0.5) 100%) no-repeat;
   background-color: #745a64;
@@ -7292,11 +7292,6 @@ body:not(.binary).colored.glass .selected .colored:not(.flat).red {
   background-color: #a11238;
   border-color: #a11238;
 }
-body:not(.binary).colored.glass .selected .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
-  background-color: #a11280;
-  border-color: #a11280;
-}
 body:not(.binary).colored.glass .selected .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fadbd1 0%, #e95f31 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 77, 26, 0.5) 100%) no-repeat;
   background-color: #a13638;
@@ -7313,9 +7308,9 @@ body:not(.binary).colored.glass .selected .colored:not(.flat).yellow {
   border-color: #868653;
 }
 body:not(.binary).colored.glass .selected .colored:not(.flat).lime {
-  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e0ebd6 0%, #75a347 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(102, 153, 51, 0.5) 100%) no-repeat;
-  background-color: #476b4a;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #d6ebdb 0%, #47a35f 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(51, 153, 77, 0.5) 100%) no-repeat;
+  background-color: #246b5c;
+  border-color: #246b5c;
 }
 body:not(.binary).colored.glass .selected .colored:not(.flat).green {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #dae7dd 0%, #579466 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(68, 136, 85, 0.5) 100%) no-repeat;
@@ -7366,6 +7361,11 @@ body:not(.binary).colored.glass .selected .colored:not(.flat).magenta {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e3dae7 0%, #7f5794 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(113, 68, 136, 0.5) 100%) no-repeat;
   background-color: #4f3085;
   border-color: #4f3085;
+}
+body:not(.binary).colored.glass .selected .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #fad1e6 0%, #e9318d 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(230, 26, 128, 0.5) 100%) no-repeat;
+  background-color: #a11280;
+  border-color: #a11280;
 }
 body:not(.binary).colored.glass .selected .colored:not(.flat).brown {
   background: radial-gradient(ellipse 25% 12% at 50% 10%, white 25%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.5) 50%, transparent 100%) no-repeat, radial-gradient(ellipse 50% 50% at 50% 85%, #e7e0da 0%, #917559 50%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 33%, rgba(133, 102, 71, 0.5) 100%) no-repeat;
@@ -7825,21 +7825,6 @@ body:not(.binary).metal.colored .colored.btn.red:active {
   background-color: #5c0a4a;
   border-color: #810e34;
 }
-body:not(.binary).metal.colored .colored.btn.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
-  background-color: #76248c;
-  border-color: #a53291;
-}
-body:not(.binary).metal.colored .colored.btn.raspberry:hover {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
-  background-color: #730d80;
-  border-color: #a11280;
-}
-body:not(.binary).metal.colored .colored.btn.raspberry:active {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(198, 67, 133, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #b81466 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(184, 20, 102, 0.5) 66%, #cd5b94 100%) no-repeat;
-  background-color: #5c0a73;
-  border-color: #810e6e;
-}
 body:not(.binary).metal.colored .colored.btn.red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 141, 108, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb7047 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 112, 71, 0.5) 66%, #f19b7e 100%) no-repeat;
   background-color: #763863;
@@ -7886,19 +7871,19 @@ body:not(.binary).metal.colored .colored.btn.yellow:active {
   border-color: #6b6b4a;
 }
 body:not(.binary).metal.colored .colored.btn.lime {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(153, 204, 102, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #80bf40 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(128, 191, 64, 0.5) 66%, #a6d279 100%) no-repeat;
-  background-color: #406060;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(102, 204, 128, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #40bf60 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(64, 191, 96, 0.5) 66%, #79d290 100%) no-repeat;
+  background-color: #206070;
+  border-color: #2d8669;
 }
 body:not(.binary).metal.colored .colored.btn.lime:hover {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(133, 173, 92, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #669933 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(102, 153, 51, 0.5) 66%, #94b870 100%) no-repeat;
-  background-color: #334d59;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(92, 173, 113, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #33994d 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(51, 153, 77, 0.5) 66%, #70b882 100%) no-repeat;
+  background-color: #1a4d66;
+  border-color: #246b5c;
 }
 body:not(.binary).metal.colored .colored.btn.lime:active {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(113, 143, 81, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #4d7326 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(77, 115, 38, 0.5) 66%, #829d67 100%) no-repeat;
-  background-color: #273a53;
-  border-color: #365141;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(81, 143, 97, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #267339 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(38, 115, 57, 0.5) 66%, #679d74 100%) no-repeat;
+  background-color: #133a5c;
+  border-color: #1b514e;
 }
 body:not(.binary).metal.colored .colored.btn.green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(119, 187, 136, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #55aa6a 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(85, 170, 106, 0.5) 66%, #88c497 100%) no-repeat;
@@ -8050,6 +8035,21 @@ body:not(.binary).metal.colored .colored.btn.magenta:active {
   background-color: #2b1a73;
   border-color: #3c246e;
 }
+body:not(.binary).metal.colored .colored.btn.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
+  background-color: #76248c;
+  border-color: #a53291;
+}
+body:not(.binary).metal.colored .colored.btn.raspberry:hover {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
+  background-color: #730d80;
+  border-color: #a11280;
+}
+body:not(.binary).metal.colored .colored.btn.raspberry:active {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(198, 67, 133, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #b81466 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(184, 20, 102, 0.5) 66%, #cd5b94 100%) no-repeat;
+  background-color: #5c0a73;
+  border-color: #810e6e;
+}
 body:not(.binary).metal.colored .colored.btn.brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(184, 153, 122, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #a68059 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(166, 128, 89, 0.5) 66%, #c1a68b 100%) no-repeat;
   background-color: #53406c;
@@ -8166,13 +8166,6 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.red {
   background-color: #762463;
   border-color: #a53258;
 }
-body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.raspberry,
-body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
-  background-color: #76248c;
-  border-color: #a53291;
-}
 body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.red-orange, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.red-orange,
 body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.red-orange {
@@ -8197,9 +8190,9 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.yello
 body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.lime, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.lime,
 body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.lime {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(153, 204, 102, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #80bf40 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(128, 191, 64, 0.5) 66%, #a6d279 100%) no-repeat;
-  background-color: #406060;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(102, 204, 128, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #40bf60 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(64, 191, 96, 0.5) 66%, #79d290 100%) no-repeat;
+  background-color: #206070;
+  border-color: #2d8669;
 }
 body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.green,
 body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.green, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.green,
@@ -8271,6 +8264,13 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.magen
   background-color: #472b95;
   border-color: #633c9d;
 }
+body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.raspberry, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.raspberry,
+body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
+  background-color: #76248c;
+  border-color: #a53291;
+}
 body:not(.binary).colored.metal-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.metal-icons.icon-backgrounds .icon .colored.brown, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .colored.icon.brown,
 body:not(.binary).colored.metal.auto-icons.icon-backgrounds .icon .colored.brown {
@@ -8327,13 +8327,6 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .col
   background-color: #730d4d;
   border-color: #a11238;
 }
-body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
-body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
-  background-color: #730d80;
-  border-color: #a11280;
-}
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.red-orange, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.red-orange,
 body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .colored.red-orange {
@@ -8358,9 +8351,9 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .col
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.lime, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.lime,
 body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .colored.lime {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(133, 173, 92, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #669933 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(102, 153, 51, 0.5) 66%, #94b870 100%) no-repeat;
-  background-color: #334d59;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(92, 173, 113, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #33994d 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(51, 153, 77, 0.5) 66%, #70b882 100%) no-repeat;
+  background-color: #1a4d66;
+  border-color: #246b5c;
 }
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.green,
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.green, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.green,
@@ -8431,6 +8424,13 @@ body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .col
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(141, 105, 160, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #714488 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(113, 68, 136, 0.5) 66%, #9c7cac 100%) no-repeat;
   background-color: #392284;
   border-color: #4f3085;
+}
+body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.raspberry, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.raspberry,
+body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .icon .colored.raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
+  background-color: #730d80;
+  border-color: #a11280;
 }
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .colored.icon.brown,
 body:not(.binary).colored.metal-icons.icon-backgrounds .selected .icon .colored.brown, body:not(.binary).colored.metal.auto-icons.icon-backgrounds .selected .colored.icon.brown,
@@ -8503,11 +8503,6 @@ body:not(.binary).colored.metal .colored:not(.flat).red {
   background-color: #762463;
   border-color: #a53258;
 }
-body:not(.binary).colored.metal .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
-  background-color: #76248c;
-  border-color: #a53291;
-}
 body:not(.binary).colored.metal .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 141, 108, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb7047 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 112, 71, 0.5) 66%, #f19b7e 100%) no-repeat;
   background-color: #763863;
@@ -8524,9 +8519,9 @@ body:not(.binary).colored.metal .colored:not(.flat).yellow {
   border-color: #8f8f6e;
 }
 body:not(.binary).colored.metal .colored:not(.flat).lime {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(153, 204, 102, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #80bf40 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(128, 191, 64, 0.5) 66%, #a6d279 100%) no-repeat;
-  background-color: #406060;
-  border-color: #5a8653;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(102, 204, 128, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #40bf60 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(64, 191, 96, 0.5) 66%, #79d290 100%) no-repeat;
+  background-color: #206070;
+  border-color: #2d8669;
 }
 body:not(.binary).colored.metal .colored:not(.flat).green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(119, 187, 136, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #55aa6a 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(85, 170, 106, 0.5) 66%, #88c497 100%) no-repeat;
@@ -8578,6 +8573,11 @@ body:not(.binary).colored.metal .colored:not(.flat).magenta {
   background-color: #472b95;
   border-color: #633c9d;
 }
+body:not(.binary).colored.metal .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(239, 108, 173, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #eb4799 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(235, 71, 153, 0.5) 66%, #f17eb8 100%) no-repeat;
+  background-color: #76248c;
+  border-color: #a53291;
+}
 body:not(.binary).colored.metal .colored:not(.flat).brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(184, 153, 122, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #a68059 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(166, 128, 89, 0.5) 66%, #c1a68b 100%) no-repeat;
   background-color: #53406c;
@@ -8618,11 +8618,6 @@ body:not(.binary).colored.metal .selected .colored:not(.flat).red {
   background-color: #730d4d;
   border-color: #a11238;
 }
-body:not(.binary).colored.metal .selected .colored:not(.flat).raspberry {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
-  background-color: #730d80;
-  border-color: #a11280;
-}
 body:not(.binary).colored.metal .selected .colored:not(.flat).red-orange {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 113, 72, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e64d1a 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 77, 26, 0.5) 66%, #ee825f 100%) no-repeat;
   background-color: #73274d;
@@ -8639,9 +8634,9 @@ body:not(.binary).colored.metal .selected .colored:not(.flat).yellow {
   border-color: #868653;
 }
 body:not(.binary).colored.metal .selected .colored:not(.flat).lime {
-  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(133, 173, 92, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #669933 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(102, 153, 51, 0.5) 66%, #94b870 100%) no-repeat;
-  background-color: #334d59;
-  border-color: #476b4a;
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(92, 173, 113, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #33994d 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(51, 153, 77, 0.5) 66%, #70b882 100%) no-repeat;
+  background-color: #1a4d66;
+  border-color: #246b5c;
 }
 body:not(.binary).colored.metal .selected .colored:not(.flat).green {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(105, 160, 119, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #448855 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(68, 136, 85, 0.5) 66%, #7cac88 100%) no-repeat;
@@ -8692,6 +8687,11 @@ body:not(.binary).colored.metal .selected .colored:not(.flat).magenta {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(141, 105, 160, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #714488 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(113, 68, 136, 0.5) 66%, #9c7cac 100%) no-repeat;
   background-color: #392284;
   border-color: #4f3085;
+}
+body:not(.binary).colored.metal .selected .colored:not(.flat).raspberry {
+  background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(235, 72, 153, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #e61a80 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(230, 26, 128, 0.5) 66%, #ee5fa6 100%) no-repeat;
+  background-color: #730d80;
+  border-color: #a11280;
 }
 body:not(.binary).colored.metal .selected .colored:not(.flat).brown {
   background: radial-gradient(ellipse 50% 25% at 50% 10%, rgba(255, 255, 255, 0.75) 0%, rgba(157, 133, 108, 0.75) 50%, rgba(0, 0, 0, 0) 100%) no-repeat, radial-gradient(ellipse 50% 25% at 50% 10%, #856647 0%, transparent 100%) no-repeat, linear-gradient(var(--light-direction), transparent 25%, rgba(133, 102, 71, 0.5) 66%, #aa947e 100%) no-repeat;

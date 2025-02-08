@@ -19,55 +19,13 @@ import Topic from '../../../../../../models/topics/topic.js';
 import Post from '../../../../../../models/topics/post.js';
 import Comment from '../../../../../../models/comments/comment.js';
 import Reply from '../../../../../../models/comments/reply.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import ShareMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/share-menu-view.js';
 
-export default MenuView.extend({
+export default ShareMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="like post-option" style="display:none">
-			<a class="like-post"><i class="fa fa-thumbs-up"></i>Like Post<span class="command shortcut">+</span></a>
-		</li>
-		
-		<li role="presentation" class="reply post-option" style="display:none">
-			<a class="reply-to-post"><i class="fa fa-comment"></i>Comment on Post<span class="shortcut"><i class="fa fa-caret-square-o-right"></i></span></a>
-		</li>
-		
-		<li role="presentation" class="like comment-option" style="display:none">
-			<a class="like-comment"><i class="fa fa-thumbs-up"></i>Like Comment<span class="command shortcut">+</span></a>
-		</li>
-		
-		<li role="presentation" class="reply comment-option" style="display:none">
-			<a class="reply-to-comment"><i class="fa fa-reply"></i>Reply to Comment<span class="shortcut"><i class="fa fa-caret-square-o-right"></i></span></a>
-		</li>
-		
-		<li role="presentation" class="like reply-option" style="display:none">
-			<a class="like-reply"><i class="fa fa-thumbs-up"></i>Like Reply<span class="command shortcut">+</span></a>
-		</li>
-		
-		<li role="presentation" class="reply reply-option" style="display:none">
-			<a class="reply-to-reply"><i class="fa fa-reply"></i>Reply to Reply<span class="shortcut"><i class="fa fa-caret-square-o-right"></i></span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="share-by-topic"><i class="fa fa-newspaper"></i>By Discussion Topic</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="share-by-message"><i class="fa fa-comments"></i>By Chat Messsage</a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="share-by-link"><i class="fa fa-link"></i>By Link</a>
-		</li>
-	`),
 
 	events: {
 		'click .like-post': 'onClickLikeItem',

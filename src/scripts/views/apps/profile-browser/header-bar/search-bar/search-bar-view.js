@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                               search-bar-view.js                             |
+|                              search-bar-view.js                              |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -33,7 +33,7 @@ export default FormView.extend({
 		
 			<input type="search" class="form-control" placeholder="Search people" value="<%= search %>">
 		
-			<div class="input-group-addon btn">
+			<div class="search-btn input-group-addon btn">
 				<i class="fa fa-search"></i>
 			</div>
 		</div>

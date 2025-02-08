@@ -24,6 +24,7 @@ import HeaderBarView from '../../../views/apps/project-browser/header-bar/header
 import SideBarView from '../../../views/apps/project-browser/sidebar/sidebar-view.js';
 import ProjectsView from '../../../views/apps/project-browser/mainbar/projects/projects-view.js';
 import FooterBarView from '../../../views/apps/project-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/project-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ProjectInfoShowable, {
 
@@ -136,7 +137,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// open selected projects in project viewer after delay
 		//
 		window.setTimeout(() => {
-			application.showProjects(this.getSelectedModels());
+			this.showSelectedProjects();
 		}, delay);
 	},
 
@@ -165,7 +166,7 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 			if (this.hasChildView('info')) {
 				this.getChildView('info').onChange();
 			}
-		
+
 			return;
 		}
 
@@ -228,6 +229,74 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 	},
 
 	//
+	// deleting methods
+	//
+
+	deleteProject: function(project, options) {
+
+		// check if project can be deleted
+		//
+		if (!project || project.isDefault() || !project.isOwnedBy(application.session.user)) {
+			return;
+		}
+
+		// check if we need to confirm
+		//
+		if (!options || options.confirm != false) {
+
+			// confirm delete
+			//
+			application.confirm({
+				icon: '<i class="fa fa-trash-alt"></i>',
+				title: "Delete Project",
+				message: "Are you sure you want to delete #" + project.get('name') +
+					" and all of its tasks?",
+
+				// callbacks
+				//
+				accept: () => {
+					this.deleteProject(project, _.extend({
+						confirm: false
+					}, options));
+				}
+			});
+		} else {
+
+			// delete project
+			//
+			project.destroy({
+
+				// callbacks
+				//
+				success: () => {
+
+					// reset selected project
+					//
+					this.setProject(this.getDefaultProject());
+
+					// play delete sound
+					//
+					application.play('delete');
+				},
+
+				error: (model, response) => {
+
+					// show error message
+					//
+					application.error({
+						message: "Could not delete project.",
+						response: response
+					});
+				}
+			});
+		}
+	},
+
+	deleteSelectedProjects: function() {
+		this.deleteProject(this.getSelectedModel());
+	},
+
+	//
 	// rendering methods
 	//
 
@@ -277,6 +346,16 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// set focus
 		//
 		this.$el.find('.search-bar input').focus();
+	},
+
+	showProjects: function(projects) {
+		application.launch('project_viewer', {
+			collection: new Projects(projects)
+		});
+	},
+
+	showSelectedProjects: function() {
+		this.showProjects(this.getSelectedModels());
 	},
 
 	//
@@ -452,4 +531,13 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		//
 		this.getChildView('sidebar').setNumSelected(this.numSelected());
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

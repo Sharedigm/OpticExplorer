@@ -22,51 +22,120 @@ export default {
 	//
 
 	launch: function(appName, options, launchOptions) {
-		this.loadAppView(appName.replace(/-/g, '_'), (AppView) => {
+		if (application.hasApp(appName)) {
 
-			// check if app was found
+			// load app
 			//
-			if (!AppView) {
+			this.loadApp(appName.replace(/-/g, '_'), {
 
-				// show alert message dialog
+				// callbacks
 				//
-				this.alert({
-					message: "Application " + appName +  " not found."
-				});
+				success: (AppView) => {
+					if (AppView) {
+						this.launchApp(appName, AppView, options, launchOptions);
+					} else {
 
-				// perform callback
-				//
-				if (launchOptions && launchOptions.error) {
-					launchOptions.error();
+						// show alert message dialog
+						//
+						this.alert({
+							title: "App Loading Error",
+							message: "App Not Found."
+						});
+					}
+				},
+
+				error: (error) => {
+
+					// show alert message dialog
+					//
+					this.alert({
+						title: "App Loading Error",
+						message: error.stack
+					});
+
+					// perform callback
+					//
+					if (launchOptions && launchOptions.error) {
+						launchOptions.error(error);
+					}
 				}
+			});
+		} else {
 
-			// launch app
+			// show alert message dialog
 			//
-			} else {
-				this.launchApp(appName, AppView, options, launchOptions);
+			this.alert({
+				title: "Application Error",
+				message: appName.replace(/_/g, ' ').toTitleCase() +  " not installed."
+			});
+
+			// perform callback
+			//
+			if (launchOptions && launchOptions.error) {
+				launchOptions.error();
 			}
-		});
+		}
 	},
 
-	launchApp(appName, AppView, options, launchOptions) {
-		if (this.isEmbedded()) {
+	launchApp: function(appName, AppView, options, launchOptions) {
 
-			// show app formatted for iframe
-			//
+		// open in iframe
+		//
+		if (this.isEmbedded()) {
 			this.openEmbedded(AppView, options, launchOptions);
 
-		// check if app is already open
+		// open already open app
 		//
 		} else if (AppView.current && AppView.current.dialog) {
+			this.openExistingApp(AppView, options, launchOptions);
 
-			// activate current app dialog
-			//
-			this.activateDialog(AppView.current, options);
+		// open in desktop
+		//
+		} else if (this.desktop && this.desktop.isOpenableApp(appName, options) &&
+			!(launchOptions && launchOptions.new_window)) {
+			this.openDesktopApp(appName, AppView, options, launchOptions);
 
-			// open items
+		// open new app dialog
+		//
+		} else {
+			this.openInDialog(appName, AppView, options, launchOptions);
+		}
+	},
+
+	openExistingApp: function(AppView, options, launchOptions) {
+
+		// activate current app dialog
+		//
+		this.activateDialog(AppView.current, options);
+
+		// open items
+		//
+		if (options) {
+			this.activateApp(AppView.current, options);
+		}
+
+		// perform callback
+		//
+		if (launchOptions && launchOptions.success) {
+			launchOptions.success();
+		}
+	},
+
+	openDesktopApp: function(appName, AppView, options, launchOptions) {
+		if (!this.desktop.isCurrentApp(appName)) {
+
+			// switch to desktop app
 			//
-			if (options) {
-				this.activateApp(AppView.current, options);
+			this.openInDesktop(appName, options, launchOptions);
+		} else if (options && (options.model || options.collection)) {
+			let appView = this.desktop.getAppView(appName);
+
+			// open items in current desktop app
+			//
+			if (options.collection) {
+				appView.openItems(options.collection.models);
+			} else {
+				appView.openItem(options.model);
 			}
 
 			// perform callback
@@ -74,53 +143,20 @@ export default {
 			if (launchOptions && launchOptions.success) {
 				launchOptions.success();
 			}
-
-		// open in desktop
-		//
-		} else if (this.desktop && this.desktop.isOpenableApp(appName, options) &&
-			!(launchOptions && launchOptions.new_window)) {
-
-			if (!this.desktop.isCurrentApp(appName)) {
-
-				// switch to desktop app
-				//
-				this.openInDesktop(appName, options, launchOptions);
-			} else if (options && (options.model || options.collection)) {
-				let appView = this.desktop.getAppView(appName);
-
-				// open items in current desktop app
-				//
-				if (options.collection) {
-					appView.openItems(options.collection.models);
-				} else {
-					appView.openItem(options.model);
-				}
-
-				// perform callback
-				//
-				if (launchOptions && launchOptions.success) {
-					launchOptions.success();
-				}
-			} else {
-
-				// show notify message
-				//
-				let name = config.apps[appName].name;
-				this.notify({
-					message: "The " + name + " app is already open on your desktop."
-				});
-
-				// perform callback
-				//
-				if (launchOptions && launchOptions.success) {
-					launchOptions.success();
-				}
-			}
-
-		// open new app dialog
-		//
 		} else {
-			this.openInDialog(appName, AppView, options, launchOptions);
+
+			// show notify message
+			//
+			let name = config.apps[appName].name;
+			this.notify({
+				message: "The " + name + " app is already open on your desktop."
+			});
+
+			// perform callback
+			//
+			if (launchOptions && launchOptions.success) {
+				launchOptions.success();
+			}
 		}
 	},
 
@@ -187,19 +223,13 @@ export default {
 
 	openInDialog: function(appName, AppView, options, launchOptions) {
 
-		// add full screen option
+		// create new app
 		//
-		if (config.apps && config.apps[appName]) {
-			let preferences = config.apps[appName].preferences;
-			if (preferences && preferences.full_screen) {
-				launchOptions = _.extend({
-					maximized: true,
-					full_screen: true
-				}, launchOptions);
-			}
-		}
+		let appView = new AppView(options);
 
-		let appView = new AppView(options).launch(launchOptions);
+		// launch app
+		//
+		appView.launch(launchOptions);
 
 		// perform callback
 		//

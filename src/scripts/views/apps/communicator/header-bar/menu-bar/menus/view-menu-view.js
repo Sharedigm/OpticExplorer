@@ -24,147 +24,6 @@ export default ViewMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="show-comments"><i class="fa fa-check"></i><i class="fa fa-comment"></i>Comments</a>
-		</li>
-		
-		<% if (languages && languages.length > 0) { %>
-		<li role="separator" class="show-options divider"></li>
-		
-		<li role="presentation" class="language dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-language"></i>Language<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation">
-					<a class="translation"><i class="fa fa-check"></i><i class="fa fa-exchange-alt"></i>Translation</a>
-				</li>
-		
-				<li role="separator" class="divider"></li>
-		
-				<% if (languages) { %>
-				<% for (let i = 0; i < languages.length; i++) { %>
-				<li role="presentation"<% if (language == languages[i]) { %> class="selected"<% } %>">
-					<a class="language-option"><i class="fa fa-check"></i><i class="fa fa-language"></i><%= languages[i] %></a>
-				</li>
-				<% } %>
-				<% } %>
-			</ul>
-		</li>
-		<% } %>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="hidden-xs dropdown dropdown-submenu">
-			<a class="show-sidebar dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-pause"></i>Sidebar<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="show-sidebar-panels dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-info-panel"><i class="fa fa-check"></i><i class="fa fa-info-circle"></i>Info</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-topics-panel"><i class="fa fa-check"></i><i class="fa fa-hashtag"></i>Topics</a>
-				</li>
-		
-				<li role="presentation">
-					<a class="show-chats-panel"><i class="fa fa-check"></i><i class="fa fa-comments"></i>Chats</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="sidebar-view-kind dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-th"></i>Sidebar Items<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation" class="sidebar-view-kind">
-					<a class="view-sidebar-icons"><i class="fa fa-check"></i><i class="fa fa-th"></i>Icons</a>
-				</li>
-				
-				<li role="presentation" class="sidebar-view-kind">
-					<a class="view-sidebar-lists"><i class="fa fa-check"></i><i class="fa fa-list"></i>Lists</a>
-				</li>
-		
-				<li role="presentation" class="sidebar-view-kind">
-					<a class="view-sidebar-cards"><i class="fa fa-check"></i><i class="fa fa-id-card"></i>Cards</a>
-				</li>
-		
-				<li role="presentation" class="sidebar-view-kind">
-					<a class="view-sidebar-tiles"><i class="fa fa-check"></i><i class="fa fa-th-large"></i>Tiles</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="mobile-only">
-			<a class="expand-window"><i class="fa fa-expand"></i>Expand</a>
-		</li>
-		
-		<li role="presentation" class="windowed-app-only window-size dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="far fa-window-maximize"></i>Window Size<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="shrink-window"><i class="fa fa-minus"></i>Shrink<span class="command shortcut">[</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="grow-window"><i class="fa fa-plus"></i>Grow<span class="command shortcut">]</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="expand-window"><i class="fa fa-expand"></i>Expand<span class="command shortcut">\\</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only spaces dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-maximize"></i>Spaces<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="prev-space"><i class="fa fa-chevron-left"></i>Prev<span class="command shortcut">left arrow</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="next-space"><i class="fa fa-chevron-right"></i>Next<span class="command shortcut">right arrow</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="desktop-app-only windows dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-restore"></i>Windows<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="minimize-all"><i class="fa fa-window-minimize"></i>Minimize All</a>
-				</li>
-
-				<li role="presentation">
-					<a class="unminimize-all"><i class="fa fa-window-restore"></i>Unminimize All</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only">
-			<a class="view-full-screen"><i class="fa fa-check full-screen-visible"></i><i class="fa fa-desktop"></i>Full Screen<span class="command shortcut">\\</span></a>
-		</li>
-		
-		<% if (application.session.user) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="view-preferences"><i class="fa fa-snowflake"></i>Preferences</a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 
 		// mainbar options
@@ -176,9 +35,9 @@ export default ViewMenuView.extend({
 
 		// sidebar options
 		//
-		'click .show-sidebar': 'onClickOption',
-		'click .show-sidebar-panels a': 'onClickShowSideBarPanel',
-		'click .sidebar-view-kind a': 'onClickSideBarViewKind',
+		'click .show-sidebar': 'onClickShowSidebar',
+		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
 
 		// window options
 		//
@@ -253,12 +112,14 @@ export default ViewMenuView.extend({
 	// rendering methods
 	//
 
+	/*
 	templateContext: function() {
 		return {
 			language: this.parent.app.preferences.get('language'),
 			languages: application.session.get('config').languages
 		};
 	},
+	*/
 
 	onRender: function() {
 

@@ -1,0 +1,29 @@
+{
+	"items": [
+		{
+			"class": "find",
+			"icon": "fa fa-search",
+			"name": "Find",
+			"shortcut": "command-F"
+		},
+		{
+			"class": "find-next",
+			"icon": "fa fa-search",
+			"name": "Find Next",
+			"shortcut": "shift-command-F"
+		},
+		"divider",
+		{
+			"class": "find-replace",
+			"icon": "fa fa-search-plus",
+			"name": "Find & Replace",
+			"shortcut": "command-G"
+		},
+		{
+			"class": "replace-next",
+			"icon": "fa fa-search",
+			"name": "Replace Next",
+			"shortcut": "shift-command-G"
+		}
+	]
+}

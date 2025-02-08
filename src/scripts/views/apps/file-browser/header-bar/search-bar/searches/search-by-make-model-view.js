@@ -4,7 +4,7 @@
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching files by camera.               |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,39 +15,20 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-view.js';
+import SearchByTextView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-text-view.js';
 
-export default SearchByView.extend({
+export default SearchByTextView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<div class="input-group">
-		
-			<div class="input-group-addon">
-				<i class="fa fa-camera"></i>
-			</div>
-		
-			<input type="search" class="form-control" placeholder="Search by make/model">
-		
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
+	icon: 'fa fa-camera',
+	placeholder: "Search by Make / Model",
 
 	//
-	// form methods
+	// search attributes
 	//
 
-	submit: function() {
-		this.parent.app.searchFor({
-			'make-model': this.getValue()
-		});
-	}
+	key: 'make_model'
 });

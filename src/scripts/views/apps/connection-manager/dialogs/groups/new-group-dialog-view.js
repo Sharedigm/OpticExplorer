@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Group from '../../../../../models/users/connections/group.js';
+import Group from '../../../../../models/connections/group.js';
 import FormModalView from '../../../../../views/forms/dialogs/form-modal-view.js';
 import GroupFormView from '../../../../../views/apps/connection-manager/forms/groups/group-form-view.js';
 

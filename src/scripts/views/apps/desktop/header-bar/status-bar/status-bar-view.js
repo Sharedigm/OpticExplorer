@@ -17,7 +17,7 @@
 
 import BaseView from '../../../../../views/base-view.js';
 import DesktopToolbarView from '../../../../../views/apps/desktop/toolbar/desktop-toolbar-view.js';
-import ClockView from '../../../../../views/apps/desktop/header-bar/status-bar/clock/clock-view.js';
+import ClockBarView from '../../../../../views/apps/desktop/header-bar/status-bar/clock-bar/clock-bar-view.js';
 
 export default BaseView.extend({
 
@@ -44,14 +44,15 @@ export default BaseView.extend({
 	},
 
 	onRender: function() {
-		let launcherStyle = application.desktop.settings.get('launcher_style');
+		let settings = application.desktop? application.desktop.settings : undefined;
+		let launcherStyle = settings? settings.get('launcher_style') : undefined;
 
 		// show child views
 		//
 		if (launcherStyle != 'taskbar') {
 			this.showToolbar();
 		}
-		if (application.desktop.settings.get('show_clock') != false) {
+		if (settings && settings.get('show_clock') != false) {
 			this.showClock();
 		}
 
@@ -68,7 +69,7 @@ export default BaseView.extend({
 	},
 
 	showClock: function() {
-		this.showChildView('clock', new ClockView({
+		this.showChildView('clock', new ClockBarView({
 			show_day: application.desktop.settings.get('show_day'),
 			show_date: application.desktop.settings.get('show_date'),
 			show_time: application.desktop.settings.get('show_time'),

@@ -23,10 +23,12 @@ export default SearchByView.extend({
 	// attributes
 	//
 
+	icon: 'fa fa-crosshairs',
+
 	template: template(`
 		<div class="search-by-coords input-group">
 			<div class="input-group-addon">
-				<i class="fa fa-crosshairs"></i>
+				<i class="<%= icon %>"></i>
 			</div>
 		
 			<input type="text" class="latitude form-control" placeholder="Latitude" spellcheck="false">

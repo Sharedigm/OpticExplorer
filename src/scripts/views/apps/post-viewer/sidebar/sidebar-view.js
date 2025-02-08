@@ -25,7 +25,7 @@ export default SideBarView.extend({
 	// attributes
 	//
 
-	panels: ['topic_info', 'topics'],
+	panels: ['info', 'topics'],
 
 	//
 	// attribute methods
@@ -35,7 +35,7 @@ export default SideBarView.extend({
 		let isSignedIn = application.isSignedIn();
 
 		return {
-			'topic_info': isSignedIn,
+			'info': isSignedIn,
 			'topics': isSignedIn
 		};
 	},
@@ -52,8 +52,8 @@ export default SideBarView.extend({
 
 		// update child views
 		//
-		if (this.isPanelVisible('topic_info')) {
-			this.showPanel('topic_info');
+		if (this.isPanelVisible('info')) {
+			this.showPanel('info');
 		}
 
 		// set selected
@@ -82,8 +82,8 @@ export default SideBarView.extend({
 		// show specified panel
 		//
 		switch (panel) {
-			case 'topic_info':
-				this.showTopicInfoPanel();
+			case 'info':
+				this.showInfoPanel();
 				break;
 			case 'topics':
 				this.showTopicsPanel();
@@ -91,13 +91,13 @@ export default SideBarView.extend({
 		}
 	},
 
-	showTopicInfoPanel: function() {
-		this.showChildView('topic_info', new TopicInfoPanelView({
+	showInfoPanel: function() {
+		this.showChildView('info', new TopicInfoPanelView({
 			model: this.model,
 
 			// options
 			//
-			view_kind: this.options.view_kind
+			view_kind: this.options.info_kind != 'auto'? this.options.info_kind : this.options.view_kind,
 		}));		
 	},
 
@@ -113,7 +113,7 @@ export default SideBarView.extend({
 
 			// callbacks
 			//
-			onload: (model) => this.onLoad(model),
+			onload: (topics) => this.onLoad(topics),
 			onselect: this.options.onselect,
 			ondeselect: this.options.ondeselect,
 			onopen: this.options.onopen,
@@ -121,9 +121,15 @@ export default SideBarView.extend({
 		}));		
 	},
 
-	onLoad: function(model) {
-		this.model = model;
-		this.showTopicInfoPanel();
+	onLoad: function(topics) {
+
+		// set attributes
+		//
+		this.model = topics.at(0);
+
+		// update view
+		//
+		this.showInfoPanel();
 	},
 
 	//

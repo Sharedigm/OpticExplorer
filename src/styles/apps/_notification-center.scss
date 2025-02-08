@@ -21,6 +21,13 @@
 
 .notification-center.app {
 
+	.header-bar {
+		.search-bar {
+			min-width: 0 !important;
+			width: 100% !important;
+		}
+	}
+
 	.body {
 		> .contents {
 			overflow: hidden;

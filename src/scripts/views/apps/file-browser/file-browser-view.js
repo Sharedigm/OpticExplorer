@@ -25,10 +25,11 @@ import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import MultiDoc from '../../../views/apps/common/behaviors/tabbing/multidoc.js';
 import SelectableContainable from '../../../views/behaviors/containers/selectable-containable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import FileCopyable from '../../../views/apps/file-browser/mainbar/behaviors/file-copyable.js';
 import FileDownloadable from '../../../views/apps/file-browser/mainbar/behaviors/file-downloadable.js';
 import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-shareable.js';
+import ItemFavorable from '../../../views/apps/common/behaviors/opening/item-favorable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import DropboxUploadable from '../../../views/apps/file-browser/mainbar/behaviors/dropbox-uploadable.js';
 import GDriveUploadable from '../../../views/apps/file-browser/mainbar/behaviors/gdrive-uploadable.js';
@@ -41,11 +42,12 @@ import FileDisposable from '../../../views/apps/file-browser/mainbar/behaviors/f
 import FileIconView from '../../../views/apps/file-browser/mainbar/files/icons/file-icon-view.js';
 import FooterBarView from '../../../views/apps/file-browser/footer-bar/footer-bar-view.js';
 import ContextMenuView from '../../../views/apps/file-browser/context-menus/context-menu-view.js';
+import PreferencesFormView from '../../../views/apps/file-browser/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 import Url from '../../../utilities/web/url.js';
 import '../../../utilities/scripting/array-utils.js';
 
-export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable, MultiSelectable, Openable, FileCopyable, FileDownloadable, ItemShareable, ItemInfoShowable, DropboxUploadable, GDriveUploadable, Indexable, Unindexable, {
+export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable, MultiSelectable, ItemOpenable, FileCopyable, FileDownloadable, ItemShareable, ItemFavorable, ItemInfoShowable, DropboxUploadable, GDriveUploadable, Indexable, Unindexable, {
 
 	//
 	// attributes
@@ -187,11 +189,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 		return true;
 	},
 
-	hasSelectedFavorites: function() {
-		let favoriteItemsView = this.getChildView('sidebar favorites items');
-		return favoriteItemsView? favoriteItemsView.hasSelected() : false;
-	},
-
 	hasGeolocatedItems: function() {
 		return this.model.hasItems(Items.filters.is_geolocated) ||
 			this.model.hasItems(Items.filters.is_geopositioned);
@@ -237,13 +234,26 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 		}
 	},
 
-	getSelectedFavorites: function() {
-		let favoriteItemsView = this.getChildView('sidebar favorites items');
-		return favoriteItemsView? favoriteItemsView.getSelectedModels() : [];
-	},
-
 	getStatusBarView: function() {
 		return FooterBarView.prototype.getStatusBarView();
+	},
+
+	getDetails: function() {
+		if (!this.preferences) {
+			return [];
+		}
+
+		// get details
+		//
+		let details = this.preferences.get('properties');
+
+		// add detail kind
+		//
+		if (this.preferences.has('detail_kind')) {
+			details.push(this.preferences.get('detail_kind'))
+		}
+
+		return details;
 	},
 
 	//
@@ -1095,56 +1105,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 	},
 
 	//
-	// favorites methods
-	//
-
-	addFavorites: function() {
-		this.getChildView('sidebar').getChildView('favorites').showOpenDialog();
-	},
-
-	removeFavorites: function(favorites) {
-
-		// check if there are favorites to remove
-		//
-		if (favorites && favorites.length > 0) {
-
-			// remove favorites from sidebar
-			//
-			this.getChildView('sidebar').getChildView('favorites').getChildView('items').removeFavorites(favorites, {
-				confirm: true,
-
-				// callbacks
-				//
-				success: () => {
-					this.onChange();
-				}
-			});
-		}
-	},
-
-	openFavorite: function(which) {
-
-		// check for sidebar
-		//
-		if (!this.hasChildView('sidebar')) {
-			return;
-		}
-
-		// check for favorites
-		//
-		let favoritesListView = this.getChildView('sidebar').getChildView('favorites').getChildView('items').getChildView('items');
-		if (!favoritesListView) {
-			return;
-		}
-
-		// select favorite
-		//
-		let itemView = favoritesListView.getChildView(which);
-		favoritesListView.deselectAll();
-		itemView.select();
-	},
-
-	//
 	// compression methods
 	//
 
@@ -1261,8 +1221,12 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 		// start search
 		//
 		this.model.load({
+
+			// options
+			//
 			search: search,
 			recursive: true,
+			details: this.getDetails(),
 
 			// callbacks
 			//
@@ -1518,6 +1482,36 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 				});
 			}
 		}, delay);
+	},
+
+	showSetItemPlaceDialogView: function(item) {
+		import(
+			'../../../views/apps/file-browser/dialogs/places/set-item-place-dialog-view.js'
+		).then((SetItemPlaceDialogView) => {
+
+			// show set place dialog
+			//
+			application.show(new SetItemPlaceDialogView.default({
+				model: item.model,
+
+				// callbacks
+				//
+				onsubmit: (place) => {
+
+					// update database
+					//
+					item.model.setPlace(place);
+
+					// update model
+					//
+					item.model.set('place', place);
+
+					// update views
+					//
+					item.render();
+				}
+			}));
+		});
 	},
 	
 	showPreferencesDialog: function() {
@@ -1811,11 +1805,13 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 		//
 		if (Browser.is_chrome) {
 			window.setTimeout(() => {
-				this.getActiveView().each((view) => {
-					if (view instanceof FileIconView) {
-						view.render();
-					}
-				});
+				if (this.hasActiveView()) {
+					this.getActiveView().each((view) => {
+						if (view instanceof FileIconView) {
+							view.render();
+						}
+					});
+				}
 			}, 100);
 		}
 	},
@@ -1884,5 +1880,13 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, SelectableContainable,
 
 	root: null,
 	list: [],
-	allowDialogs: true
+	allowDialogs: true,
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

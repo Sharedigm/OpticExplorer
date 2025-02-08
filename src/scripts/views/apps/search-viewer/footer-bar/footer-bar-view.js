@@ -26,5 +26,5 @@ export default FooterBarView.extend({
 
 	getStatusBarView: function() {
 		return new StatusBarView();
-	}
+	},
 });

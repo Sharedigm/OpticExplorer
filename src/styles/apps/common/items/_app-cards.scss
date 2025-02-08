@@ -55,10 +55,12 @@ $rounded-icon-border-radius: 25%;
 
 .round-icons .apps-list.card-grid,
 .round.auto-corner-icons .apps-list.card-grid {
-	.item {
-		.card {
-			.icon {
-				border-radius: $round-icon-border-radius;
+	.cards {
+		.item {
+			.card {
+				.icon {
+					border-radius: $round-icon-border-radius;
+				}
 			}
 		}
 	}
@@ -66,10 +68,12 @@ $rounded-icon-border-radius: 25%;
 
 .rounded-icons .apps-list.card-grid,
 .rounded.auto-corner-icons .apps-list.card-grid {
-	.item {
-		.card {
-			.icon {
-				border-radius: $rounded-icon-border-radius;
+	.cards {
+		.item {
+			.card {
+				.icon {
+					border-radius: $rounded-icon-border-radius;
+				}
 			}
 		}
 	}
@@ -77,10 +81,12 @@ $rounded-icon-border-radius: 25%;
 
 .square-icons .apps-list.card-grid,
 .square.auto-corner-icons .apps-list.card-grid {
-	.item {
-		.card {
-			.icon {
-				border-radius: 0;
+	.cards {
+		.item {
+			.card {
+				.icon {
+					border-radius: 0;
+				}
 			}
 		}
 	}

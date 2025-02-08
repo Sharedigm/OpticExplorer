@@ -32,10 +32,10 @@ export default SideBarView.extend({
 	//
 
 	enabled: function() {
-		let isUserSignedIn = application.isUserSignedIn();
+		let isSignedIn = application.isSignedIn();
 
 		return {
-			'optics': isUserSignedIn,
+			'optics': isSignedIn,
 			'shared': true
 		};
 	},

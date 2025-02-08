@@ -17,7 +17,7 @@
 
 import PreferencesGroupView from '../../../../../views/apps/common/forms/preferences-group-view.js';
 import GeneralPrefsFormView from '../../../../../views/apps/text-editor/forms/preferences/general-prefs-form-view.js';
-import DisplayPrefsFormView from '../../../../../views/apps/text-editor/forms/preferences/display-prefs-form-view.js';
+import WindowPrefsFormView from '../../../../../views/apps/text-editor/forms/preferences/window-prefs-form-view.js';
 
 export default PreferencesGroupView.extend({
 
@@ -25,44 +25,16 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general-tab<% if (tab == 'general' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general-prefs">
-					<i class="fa fa-check"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="display-tab<% if (tab == 'display') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".display-prefs">
-					<i class="fa fa-desktop"></i>
-					<label>Display</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-prefs tab-pane<% if (tab == 'general' || !tab) { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="display-prefs tab-pane<% if (tab == 'display') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-check"
 		},
-		general: '.general-prefs',
-		display: '.display-prefs'
-	},
+		{
+			"name": "Window",
+			"icon": "fa fa-window-maximize"
+		}
+	],
 	
 	//
 	// rendering methods
@@ -76,8 +48,8 @@ export default PreferencesGroupView.extend({
 			case 'general':
 				this.showGeneralPrefs();
 				break;
-			case 'display':
-				this.showDisplayPrefs();
+			case 'window':
+				this.showWindowPrefs();
 				break;
 		}
 	},
@@ -94,8 +66,8 @@ export default PreferencesGroupView.extend({
 		}));		
 	},
 
-	showDisplayPrefs: function() {
-		this.showChildView('display', new DisplayPrefsFormView({
+	showWindowPrefs: function() {
+		this.showChildView('window', new WindowPrefsFormView({
 			model: this.model,
 
 			// callbacks

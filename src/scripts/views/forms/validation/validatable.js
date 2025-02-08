@@ -25,7 +25,7 @@ export default {
 
 	// this determines whether to revalidate on losing focus
 	//
-	onfocusout: undefined,
+	onfocusout: false,
 
 	//
 	// validating methods
@@ -50,8 +50,10 @@ export default {
 
 	isValid: function() {
 		if (this.validator) {
-			// return this.validator.checkForm();
-			return this.validator.form();
+
+			// check form without showing errors
+			//
+			return this.validator.checkForm();
 		} else {
 			return true;
 		}
@@ -62,6 +64,9 @@ export default {
 		// trigger form updates
 		//
 		if (this.validator) {
+
+			// validate form and show errors
+			//
 			return this.validator.form();
 		} else {
 			return true;

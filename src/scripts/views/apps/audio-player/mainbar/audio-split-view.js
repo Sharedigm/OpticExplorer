@@ -47,7 +47,7 @@ export default SplitView.extend({
 			return this.getChildView('mainbar').getSelected();
 		}
 	},
-	
+
 	getSelectedModels: function() {
 		if (this.hasChildView('mainbar')) {
 			return this.getChildView('mainbar').getSelectedModels();

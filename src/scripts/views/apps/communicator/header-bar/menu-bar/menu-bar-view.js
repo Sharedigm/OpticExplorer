@@ -27,47 +27,6 @@ import HelpMenuView from '../../../../../views/apps/communicator/header-bar/menu
 export default MenuBarView.extend({
 
 	//
-	// attributes
-	//
-
-	template: template(`
-		<li class="file dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i><span class="dropdown-title">File</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="edit dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil-alt"></i><span class="dropdown-title">Edit</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="select dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-mouse-pointer"></i><span class="dropdown-title">Select</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="view dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-eye"></i><span class="dropdown-title">View</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="search dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i><span class="dropdown-title">Search</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="share dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share"></i><span class="dropdown-title">Share</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-		
-		<li class="help dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-question-circle"></i><span class="dropdown-title">Help</span></a>
-			<div class="dropdown-menu"></div>
-		</li>
-	`),
-
-	//
 	// rendering methods
 	//
 

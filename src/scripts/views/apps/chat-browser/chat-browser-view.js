@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                              chat-browser-view.js                           |
+|                              chat-browser-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines an app used for browsing and finding chats.             |
+|        This defines an app used for browsing and finding chats.              |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -24,6 +24,7 @@ import HeaderBarView from '../../../views/apps/chat-browser/header-bar/header-ba
 import SideBarView from '../../../views/apps/chat-browser/sidebar/sidebar-view.js';
 import ChatsView from '../../../views/apps/chat-browser/mainbar/chats/chats-view.js';
 import FooterBarView from '../../../views/apps/chat-browser/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/chat-browser/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSelectable, ChatInfoShowable, {
 
@@ -122,8 +123,59 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		// open selected chats in chat viewer after delay
 		//
 		window.setTimeout(() => {
-			application.showChats(this.getSelectedModels());
+			this.showSelectedChats();
 		}, delay);
+	},
+
+	endChat: function(chat, options) {
+
+		// check if we need to confirm
+		//
+		if (!options || options.confirm != false) {
+
+			// confirm end chat
+			//
+			application.confirm({
+				message: "Are you sure that you want to leave your chat with " + chat.getName() + '?',
+
+				// callbacks
+				//
+				accept: () => {
+					this.endChat(chat, {
+						confirm: false
+					});
+				}
+			});
+		} else {
+
+			// remove current user from chat
+			//
+			chat.removeMember(application.session.user, {
+
+				// callbacks
+				//
+				success: () => {
+
+					// set current chat
+					//
+					this.model = this.collection.at(0);
+
+					// update
+					//
+					this.showContents();
+
+					// play remove sound
+					//
+					application.play('remove');
+				}
+			});
+		}
+	},
+
+	endSelectedChat: function() {
+		if (this.hasSelected()) {
+			this.endChat(this.getSelectedModel());
+		}
 	},
 
 	//
@@ -166,11 +218,14 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		});
 	},
 
-	onShow: function() {
+	showChats: function(chats) {
+		application.launch('chat_viewer', {
+			collection: new Chats(chats)
+		});
+	},
 
-		// set focus
-		//
-		this.$el.find('.search-bar input').focus();
+	showSelectedChats: function() {
+		this.showChats(this.getSelectedModels());
 	},
 
 	//
@@ -318,5 +373,25 @@ export default AppSplitView.extend(_.extend({}, SelectableContainable, MultiSele
 		if (this.options.onopen) {
 			this.options.onopen(item);
 		}
+	},
+
+	//
+	// rendering event handling methods
+	//
+
+	onShow: function() {
+
+		// set focus
+		//
+		this.$el.find('.search-bar input').focus();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

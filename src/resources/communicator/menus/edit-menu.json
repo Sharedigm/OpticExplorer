@@ -1,0 +1,74 @@
+{
+	"items": [
+		{
+			"class": "edit-topic",
+			"group": "topic-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Topic",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-topic",
+			"group": "topic-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Topic",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-post",
+			"group": "post-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Post",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-post",
+			"group": "post-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Post",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-comment",
+			"group": "comment-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Comment",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-comment",
+			"group": "comment-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Comment",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-reply",
+			"group": "reply-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Reply",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-reply",
+			"group": "reply-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Reply",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-message",
+			"group": "message-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Message",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-message",
+			"group": "message-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Message",
+			"shortcut": "delete"
+		}
+	]
+}

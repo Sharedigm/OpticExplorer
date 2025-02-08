@@ -1,10 +1,10 @@
 /******************************************************************************\
 |                                                                              |
-|                              search-by-size-view.js                          |
+|                            search-by-size-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
-|        This defines a view used for searching files.                         |
+|        This defines a view used for searching files by size.                 |
 |                                                                              |
 |        Author(s): Abe Megahed                                                |
 |                                                                              |
@@ -15,56 +15,38 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import SearchByQuantityView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-quantity-view.js';
+import SearchByUnitsView from '../../../../../../views/apps/common/header-bar/search-bar/searches/search-by-units-view.js';
 
-export default SearchByQuantityView.extend({
+export default SearchByUnitsView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<div class="input-group">
-			<div class="input-group-addon">
-				<i class="fa fa-download"></i>
-			</div>
-		
-			<div class="operator input-group-addon select">
-				<select>
-					<option value="greater-than">&gt;</option>
-					<option value="equal">=</option>
-					<option value="less-than">&lt;</option>
-				</select>
-			</div>
-		
-			<input type="number" class="form-control" placeholder="Search by size">
-		
-			<div class="units input-group-addon select">
-				<select>
-					<option value="bytes">b</option>
-					<option value="kilobytes" selected>kb</option>
-					<option value="megabytes">mb</option>
-					<option value="gigabytes">gb</option>
-				</select>
-			</div>
-		
-			<div class="close-btn input-group-addon btn">
-				<i class="fa fa-xmark"></i>
-			</div>
-			<div class="search-btn input-group-addon btn">
-				<i class="fa fa-search"></i>
-			</div>
-		</div>
-	`),
+	icon: 'fa fa-download',
+	placeholder: "Search by Size",
 
-	quantity: 'size',
+	units: {
+		bytes: 'b',
+		kilobytes: 'kb',
+		megabytes: 'mb',
+		gigabytes: 'gb'
+	},
+
+	selected_units: 'kilobytes',
+
+	//
+	// search attributes
+	//
+
+	key: 'size',
 
 	//
 	// getting methods
 	//
 
 	getUnits: function() {
-		return this.$el.find('.units select').val();
+		return this.$el.find('.units').val();
 	},
 
 	getMultiplier: function() {
@@ -82,8 +64,12 @@ export default SearchByQuantityView.extend({
 
 	getValue: function() {
 
-		// call superclass method and multiply by units multiplier
+		// call superclass method
 		//
-		return SearchByQuantityView.prototype.getValue.call(this) * this.getMultiplier();
+		let value = SearchByUnitsView.prototype.getValue.call(this);
+
+		// multiply by units
+		//
+		return parseFloat(value) * this.getMultiplier();
 	}
 });

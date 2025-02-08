@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import Timestamped from '../../models/utilities/timestamped.js';
-import Connections from '../../collections/users/connections/connections.js';
+import Connections from '../../collections/connections/connections.js';
 import ChatInvitations from '../../collections/chats/sharing/chat-invitations.js';
 import DateUtils from '../../utilities/time/date-utils.js';
 import Browser from '../../utilities/web/browser.js';
@@ -57,7 +57,7 @@ export default Timestamped.extend({
 	},
 
 	hasUser: function(user) {
-		return this.has('members')? this.get('members').contains(user) : false;
+		return this.has('members')? this.get('members').includes(user) : false;
 	},
 
 	hasFirstOtherMember: function() {

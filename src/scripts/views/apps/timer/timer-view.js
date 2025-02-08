@@ -18,6 +18,7 @@
 import AppView from '../../../views/apps/common/app-view.js';
 import FaceView from '../../../views/apps/timer/panels/face-view.js';
 import ButtonsView from '../../../views/apps/timer/panels/buttons-view.js';
+import PreferencesFormView from '../../../views/apps/timer/forms/preferences/preferences-form-view.js'
 import TimeUtils from '../../../utilities/time/time-utils.js';
 
 export default AppView.extend({
@@ -299,5 +300,14 @@ export default AppView.extend({
 
 	onBeforeDestroy: function() {
 		this.stopBlinking();
+	}
+}, {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
 	}
 });

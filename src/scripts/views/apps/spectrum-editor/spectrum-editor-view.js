@@ -30,6 +30,7 @@ import HeaderBarView from '../../../views/apps/spectrum-editor/header-bar/header
 import SideBarView from '../../../views/apps/spectrum-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/spectrum-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/spectrum-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/spectrum-editor/forms/preferences/preferences-form-view.js'
 
 export default AppSplitView.extend(_.extend({}, Multifile, FileUploadable, SelectableContainable, MultiSelectable, ItemShareable, ItemInfoShowable, {
 
@@ -594,5 +595,13 @@ export default AppSplitView.extend(_.extend({}, Multifile, FileUploadable, Selec
 	//
 
 	defaultName: 'Untitled.lght',
-	count: 0
+	count: 0,
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
 });

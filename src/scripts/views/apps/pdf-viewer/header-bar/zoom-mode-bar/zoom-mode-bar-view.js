@@ -16,7 +16,7 @@
 \******************************************************************************/
 
 import ToolbarView from '../../../../../views/apps/common/toolbars/toolbar-view.js';
-import ZoomModeButtonsView from '../../../../../views/apps/image-viewer/header-bar/zoom-mode-bar/zoom-mode-buttons-view.js';
+import ZoomModeButtonsView from '../../../../../views/apps/pdf-viewer/header-bar/zoom-mode-bar/zoom-mode-buttons-view.js';
 
 export default ToolbarView.extend({
 

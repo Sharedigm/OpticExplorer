@@ -17,6 +17,7 @@
 
 import PreferencesGroupView from '../../../../../views/apps/common/forms/preferences-group-view.js';
 import DisplayPrefsFormView from '../../../../../views/apps/material-map-viewer/forms/preferences/display-prefs-form-view.js';
+import WindowPrefsFormView from '../../../../../views/apps/material-map-viewer/forms/preferences/window-prefs-form-view.js';
 
 export default PreferencesGroupView.extend({
 
@@ -24,33 +25,16 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="display-tab<% if (tab == 'display' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".display-prefs">
-					<i class="fa fa-desktop"></i>
-					<label>Display</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="display-prefs tab-pane<% if (tab == 'display' || !tab) { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "Display",
+			"icon": "fa fa-desktop"
 		},
-		display: '.display-prefs'
-	},
+		{
+			"name": "Window",
+			"icon": "fa fa-window-maximized"
+		}
+	],
 	
 	//
 	// rendering methods
@@ -63,6 +47,9 @@ export default PreferencesGroupView.extend({
 				break;
 			case 'display':
 				this.showDisplayPrefs();
+				break;
+			case 'window':
+				this.showWindowPrefs();
 				break;
 		}
 	},
@@ -77,5 +64,17 @@ export default PreferencesGroupView.extend({
 				this.setOption(key, value);
 			}
 		}));	
+	},
+
+	showWindowPrefs: function() {
+		this.showChildView('window', new WindowPrefsFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onchange: (key, value) => {
+				this.setOption(key, value);
+			}
+		}));
 	}
 });

@@ -18,11 +18,12 @@
 import BaseView from '../../../../views/base-view.js';
 import ScrollableContainable from '../../../../views/behaviors/containers/scrollable-containable.js';
 import Loadable from '../../../../views/behaviors/effects/loadable.js';
+import FullScreenable from '../../../../views/behaviors/layout/full-screenable.js';
 import '../../../../../vendor/pdfjs/build/pdf.js';
 
 PDFJS.workerSrc = 'vendor/pdfjs/build/pdf.worker.js';
 
-export default BaseView.extend(_.extend({}, ScrollableContainable, Loadable, {
+export default BaseView.extend(_.extend({}, ScrollableContainable, Loadable, FullScreenable, {
 
 	//
 	// attributes
@@ -323,6 +324,30 @@ export default BaseView.extend(_.extend({}, ScrollableContainable, Loadable, {
 	},
 
 	//
+	// full screen methods
+	//
+
+	requestFullScreen: function() {
+		let self = this;
+		window.addEventListener('fullscreenchange', function(event) {
+
+			// perform callback after a slight delay for repainting
+			//
+			window.setTimeout(() => {
+				self.onFullScreenChange(event);
+			}, 100);
+
+			window.removeEventListener('fullscreenchange', this);
+		});
+		FullScreenable.requestFullScreen.call(this);
+	},
+
+	exifFullScreen: function() {
+		FullScreenable.exitFullScreen.call(this);
+		this.onResize();
+	},
+
+	//
 	// rendering methods
 	//
 
@@ -471,6 +496,10 @@ export default BaseView.extend(_.extend({}, ScrollableContainable, Loadable, {
 		if (this.zoom) {
 			this.setZoom(this.zoom);
 		}
+	},
+
+	onFullScreenChange: function() {
+		this.onResize();
 	}
 }), {
 

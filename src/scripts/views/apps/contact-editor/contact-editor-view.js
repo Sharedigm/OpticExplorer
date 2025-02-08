@@ -29,6 +29,7 @@ import HeaderBarView from '../../../views/apps/contact-editor/header-bar/header-
 import SideBarView from '../../../views/apps/contact-editor/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/contact-editor/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/contact-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/contact-editor/forms/preferences/preferences-form-view.js';
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable, MultiSelectable, ItemShareable, GoogleContactsImportable, ItemInfoShowable, {
@@ -718,11 +719,15 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 		//
 		this.getChildView('content').setDirty(false);
 	}
-}, {
+}), {
 
 	//
-	// static methods
+	// static getting methods
 	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
 
 	toJSON: function(contact) {
 		let json = contact.toJSON();
@@ -739,4 +744,4 @@ export default AppSplitView.extend(_.extend({}, Multifile, ContainableSelectable
 
 		return json;
 	}
-}));
+});

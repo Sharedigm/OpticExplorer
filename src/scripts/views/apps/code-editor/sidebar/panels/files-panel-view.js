@@ -180,6 +180,9 @@ export default SideBarPanelView.extend({
 				view_kind: this.options.view_kind,
 				show_file_extensions: true
 			}),
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities

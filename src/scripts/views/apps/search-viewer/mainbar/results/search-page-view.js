@@ -70,6 +70,7 @@ export default BaseView.extend({
 
 			// options
 			//
+			search_kind: config.defaults.search.kind,
 			view_kind: preferences.get('view_kind'),
 			items_per_page: preferences.get('items_per_page'),
 			detail_kind: preferences.get('detail_kind'),

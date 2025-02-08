@@ -25,10 +25,22 @@ export default PanelsView.extend(_.extend({}, Scrollable, {
 	//
 
 	isPanelVisible: function(name) {
-		if (this.hasChildView(name)) {
-			return this.getChildView(name).isVisible();
+
+		// if shown, return current state
+		//
+		if (this.isVisible()) {
+			if (this.hasChildView(name)) {
+				return this.getChildView(name).isVisible();
+			} else {
+				return false;
+			}
+
+		// if not shown, return initial state
+		//
+		} else if (this.options.panels) {
+			return this.options.panels.includes(name);
 		} else {
-			return this.options.panels && this.options.panels.includes(name);
+			return false;
 		}
 	},
 
@@ -77,15 +89,18 @@ export default PanelsView.extend(_.extend({}, Scrollable, {
 	setViewKind: function(viewKind) {
 		this.options.view_kind = viewKind;
 
-		// set option on all panels except info or files
+		// set option on all panels except for exempted ones
 		//
 		for (let i = 0; i < this.panels.length; i++) {
 			let panel = this.panels[i];
 
-			if (panel == 'info' || panel == 'files') {
-				if (this.options.info_kind != 'auto') {
-					continue;
-				}
+			// skip these panels
+			//
+			if (panel == 'files' || panel == 'favorites') {
+				continue;
+			}
+			if (panel == 'info' && this.options.info_kind != 'auto') {
+				continue;
 			}
 
 			let childView = this.getChildView(panel);

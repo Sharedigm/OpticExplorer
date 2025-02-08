@@ -15,6 +15,9 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import AudioFile from '../../../../../../models/storage/media/audio-file.js';
+import ImageFile from '../../../../../../models/storage/media/image-file.js';
+import VideoFile from '../../../../../../models/storage/media/video-file.js';
 import ItemIconView from '../../../../../../views/apps/file-browser/mainbar/files/icons/item-icon-view.js';
 
 export default ItemIconView.extend({
@@ -25,7 +28,6 @@ export default ItemIconView.extend({
 
 	className: function() {
 		let name = '';
-		let extension = this.model.getFileExtension().toLowerCase();
 
 		// add system tag
 		//
@@ -33,14 +35,24 @@ export default ItemIconView.extend({
 			name += 'system';
 		}
 
-		// add extension
+		// tag media file icons
 		//
-		if (extension != '') {
+		if (this.model instanceof AudioFile) {
 			if (name != '') {
 				name += ' ';
 			}
-			name += extension;
-		} 
+			name += 'audio';
+		} else if (this.model instanceof ImageFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'image';
+		} else if (this.model instanceof VideoFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'video';
+		}
 
 		// add 'file item'
 		//

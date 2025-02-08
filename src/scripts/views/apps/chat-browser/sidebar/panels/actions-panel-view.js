@@ -33,11 +33,28 @@ export default SideBarPanelView.extend({
 		<ul class="nav menu">
 			<li class="new-chat"><a><i class="fa fa-plus"></i>New Chat</a></li>
 		</ul>
+
+		<ul class="nav menu">
+			<li class="end-chat"><a><i class="fa fa-minus"></i>End Chat</a></li>
+		</ul>
 	`),
 
 	events: {
-		'click .new-chat a': 'onClickNewChat'
+		'click .new-chat a': 'onClickNewChat',
+		'click .end-chat a': 'onClickEndChat'
 	},	
+
+	//
+	// setting methods
+	//
+
+	update: function() {
+		if (this.app.hasSelectedChat()) {
+			this.$el.find('.end-chat').removeClass('disabled');
+		} else {
+			this.$el.find('.end-chat').addClass('disabled');
+		}
+	},
 
 	//
 	// mouse event handling methods
@@ -48,5 +65,20 @@ export default SideBarPanelView.extend({
 		// show new dialog
 		//
 		this.app.showChatInvitationsDialog();
+	},
+
+	onClickEndChat: function() {
+
+		// show new dialog
+		//
+		this.app.endSelectedChat();
+	},
+
+	//
+	// event handling methods
+	//
+
+	onChangeSelected: function() {
+		this.update();
 	}
 });

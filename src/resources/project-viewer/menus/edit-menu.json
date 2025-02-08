@@ -1,0 +1,60 @@
+{
+	"items": [
+		{
+			"class": "edit-project",
+			"group": "project-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Project",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-projects",
+			"group": "project-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Projects",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-task",
+			"group": "task-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Task",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-tasks",
+			"group": "task-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Tasks",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-comment",
+			"group": "comment-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Comment",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-comment",
+			"group": "comment-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Comment",
+			"shortcut": "delete"
+		},
+		{
+			"class": "edit-reply",
+			"group": "reply-option",
+			"icon": "fa fa-pencil-alt",
+			"name": "Edit Reply",
+			"shortcut": "command-E"
+		},
+		{
+			"class": "delete-reply",
+			"group": "reply-option",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Reply",
+			"shortcut": "delete"
+		}
+	]
+}

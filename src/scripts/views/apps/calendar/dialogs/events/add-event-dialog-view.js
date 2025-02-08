@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import UserEvent from '../../../../../models/users/events/user-event.js';
+import UserEvent from '../../../../../models/events/user-event.js';
 import FormDialogView from '../../../../../views/forms/dialogs/form-dialog-view.js';
 import EventFormView from '../../../../../views/apps/calendar/forms/events/event-form-view.js';
 

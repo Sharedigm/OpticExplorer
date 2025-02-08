@@ -35,10 +35,6 @@ body:not(.binary) {
 				@include flat.shaded(colors.$medium-red);
 			}
 
-			&.raspberry {
-				@include flat.shaded(colors.$medium-raspberry);
-			}
-
 			&.red-orange {
 				@include flat.shaded(colors.$medium-red-orange);
 			}
@@ -95,6 +91,10 @@ body:not(.binary) {
 				@include flat.shaded(colors.$medium-magenta);
 			}
 
+			&.raspberry {
+				@include flat.shaded(colors.$medium-raspberry);
+			}
+
 			&.brown {
 				@include flat.shaded(colors.$medium-brown);
 			}
@@ -131,10 +131,6 @@ body:not(.binary) {
 		.selected .colored {
 			&.red {
 				@include flat.shaded(colors.$dark-red);
-			}
-
-			&.raspberry {
-				@include flat.shaded(colors.$dark-raspberry);
 			}
 
 			&.red-orange {
@@ -191,6 +187,10 @@ body:not(.binary) {
 
 			&.magenta {
 				@include flat.shaded(colors.$dark-magenta);
+			}
+
+			&.raspberry {
+				@include flat.shaded(colors.$dark-raspberry);
 			}
 
 			&.brown {

@@ -276,7 +276,7 @@ export default CollectionView.extend(_.extend({}, SelectableContainable, TreeCon
 		return _.extend({}, this.options, {
 			model: model,
 
-			// options
+			// state
 			//
 			selected: this.options.selected && this.options.selected.length > 0 && this.options.selected.contains(model),
 			top: this.isTop()? this : this.options.top

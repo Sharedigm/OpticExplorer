@@ -16,10 +16,10 @@
 \******************************************************************************/
 
 import ButtonGroupView from '../../../../../../views/apps/common/toolbars/button-groups/button-group-view.js';
-import FitSizeButtonView from '../../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-size-button-view.js';
-import FitWidthButtonView from '../../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-width-button-view.js';
-import FitHeightButtonView from '../../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-height-button-view.js';
-import ActualSizeButtonView from '../../../../../../views/apps/image-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/actual-size-button-view.js';
+import FitSizeButtonView from '../../../../../../views/apps/pdf-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-size-button-view.js';
+import FitWidthButtonView from '../../../../../../views/apps/pdf-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-width-button-view.js';
+import FitHeightButtonView from '../../../../../../views/apps/pdf-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/fit-height-button-view.js';
+import ActualSizeButtonView from '../../../../../../views/apps/pdf-viewer/header-bar/zoom-bar/buttons/zoom-mode-buttons/actual-size-button-view.js';
 
 export default ButtonGroupView.extend({
 

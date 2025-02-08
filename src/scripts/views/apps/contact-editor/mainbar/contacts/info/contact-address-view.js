@@ -180,6 +180,14 @@ export default CardView.extend(_.extend({}, Expandable, {
 		this.addTooltips();
 	},
 
+	showMap: function() {
+		application.launch('map_viewer', {
+			search: {
+				address: this.model.toString()
+			}
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -206,10 +214,6 @@ export default CardView.extend(_.extend({}, Expandable, {
 	},
 
 	onClickMapMarker: function() {
-		application.launch('map_viewer', {
-			search: {
-				address: this.model.toString()
-			}
-		});
+		this.showMap();
 	}
 }));

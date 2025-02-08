@@ -1,0 +1,28 @@
+{
+	"items": [
+		{
+			"class": "select-first",
+			"icon": "fa fa-fast-backward",
+			"name": "First",
+			"shortcut": "up arrow"
+		},
+		{
+			"class": "select-prev",
+			"icon": "fa fa-backward",
+			"name": "Prev",
+			"shortcut": "left arrow"
+		},
+		{
+			"class": "select-next",
+			"icon": "fa fa-forward",
+			"name": "Next",
+			"shortcut": "right arrow"
+		},
+		{
+			"class": "select-last",
+			"icon": "fa fa-fast-forward",
+			"name": "Last",
+			"shortcut": "down arrow"
+		}
+	]
+}

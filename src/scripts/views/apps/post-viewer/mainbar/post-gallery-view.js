@@ -125,12 +125,32 @@ export default BaseView.extend(_.extend({}, Loadable, {
 		}));
 	},
 
+	showPostInViewer: function(post) {
+		application.launch('post_viewer', {
+			model: post
+		});
+	},
+
+	showPost: function(post) {
+		if (this.desktop && application.hasApp('post_viewer')) {
+
+			// show post in viewer app
+			//
+			this.showPostInViewer(post);
+		} else {
+
+			// show post in web page
+			//
+			application.showUrl(post.getUrl(), '_blank');
+		}
+	},
+
 	//
 	// event handling methods
 	//
 
 	onSelect: function(item) {
-		application.showPost(item.model.get('post'));
+		this.showPost(item.model.get('post'));
 	},
 
 	onChangeSorting: function() {

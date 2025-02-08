@@ -18,146 +18,20 @@
 import Post from '../../../../../../models/topics/post.js';
 import Comment from '../../../../../../models/comments/comment.js';
 import Reply from '../../../../../../models/comments/reply.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="about profile option">
-			<a class="edit-name"><i class="fa fa-font"></i>Edit Name</a>
-		</li>
-		
-		<li role="presentation" class="about profile option">
-			<a class="edit-profile"><i class="fa fa-pencil-alt"></i>Edit Profile</a>
-		</li>
-		
-		<li role="presentation" class="home option" style="display:none">
-			<a class="add home"><i class="fa fa-plus"></i>Add Home</a>
-		</li>
-		
-		<li role="presentation" class="home option" style="display:none">
-			<a class="edit home"><i class="fa fa-pencil-alt"></i>Edit Home</a>
-		</li>
-		
-		<li role="presentation" class="home option" style="display:none">
-			<a class="delete home"><i class="fa fa-trash-alt"></i>Delete Homes<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="work option" style="display:none">
-			<a class="add job"><i class="fa fa-plus"></i>Add Job</a>
-		</li>
-		
-		<li role="presentation" class="work option" style="display:none">
-			<a class="edit job"><i class="fa fa-pencil-alt"></i>Edit Job</a>
-		</li>
-		
-		<li role="presentation" class="work option" style="display:none">
-			<a class="delete job"><i class="fa fa-trash-alt"></i>Delete Jobs<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="family option" style="display:none">
-			<a class="add family member"><i class="fa fa-plus"></i>Add Family Member</a>
-		</li>
-		
-		<li role="presentation" class="family option" style="display:none">
-			<a class="edit family member"><i class="fa fa-pencil-alt"></i>Edit Family Member</a>
-		</li>
-		
-		<li role="presentation" class="family option" style="display:none">
-			<a class="delete family member"><i class="fa fa-trash-alt"></i>Delete Family Members<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="school option" style="display:none">
-			<a class="add school"><i class="fa fa-plus"></i>Add School</a>
-		</li>
-		
-		<li role="presentation" class="school option" style="display:none">
-			<a class="edit school"><i class="fa fa-pencil-alt"></i>Edit School</a>
-		</li>
-		
-		<li role="presentation" class="school option" style="display:none">
-			<a class="delete school"><i class="fa fa-trash-alt"></i>Delete Schools<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="contact option" style="display:none">
-			<a class="add contact"><i class="fa fa-plus"></i>Add Contact</a>
-		</li>
-		
-		<li role="presentation" class="contact option" style="display:none">
-			<a class="edit contact"><i class="fa fa-pencil-alt"></i>Edit Contact</a>
-		</li>
-		
-		<li role="presentation" class="contact option" style="display:none">
-			<a class="delete contact"><i class="fa fa-trash-alt"></i>Delete Contacts<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="affiliations option" style="display:none">
-			<a class="add affiliation"><i class="fa fa-plus"></i>Add Affiliation</a>
-		</li>
-		
-		<li role="presentation" class="affiliations option" style="display:none">
-			<a class="edit affiliation"><i class="fa fa-pencil-alt"></i>Edit Affiliation</a>
-		</li>
-		
-		<li role="presentation" class="affiliations option" style="display:none">
-			<a class="delete affiliation"><i class="fa fa-trash-alt"></i>Delete Affiliations<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="post option" style="display:none">
-			<a class="edit post"><i class="fa fa-pencil-alt"></i>Edit Post<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="post option" style="display:none">
-			<a class="delete post"><i class="fa fa-trash-alt"></i>Delete Posts<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="comment option" style="display:none">
-			<a class="edit comment"><i class="fa fa-pencil-alt"></i>Edit Comment<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="comment option" style="display:none">
-			<a class="delete comment"><i class="fa fa-trash-alt"></i>Delete Comment<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="reply option" style="display:none">
-			<a class="edit reply"><i class="fa fa-pencil-alt"></i>Edit Reply<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="reply option" style="display:none">
-			<a class="delete reply"><i class="fa fa-trash-alt"></i>Delete Reply<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="connections option" style="display:none">
-			<a class="delete connections"><i class="fa fa-trash-alt"></i>Delete Connections</a>
-		</li>
-		
-		<li role="presentation" class="sharing option" style="display:none">
-			<a class="delete shares"><i class="fa fa-trash-alt"></i>Delete Shares<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="presentation" class="sharing option" style="display:none">
-			<a class="edit link"><i class="fa fa-pencil-alt"></i>Edit Link</a>
-		</li>
-		
-		<li role="presentation" class="sharing option" style="display:none">
-			<a class="copy link"><i class="fa fa-copy"></i>Copy Link</a>
-		</li>
-		
-		<li role="presentation" class="sharing option" style="display:none">
-			<a class="delete link"><i class="fa fa-trash-alt"></i>Delete Link<span class="shortcut">delete</span></a>
-		</li>
-	`),
-
 	events: {
 
 		// profile options
 		//
-		'click .edit-name': 'onClickEditName',
-		'click .edit-profile': 'onClickEditProfile',
+		'click .edit.name': 'onClickEditName',
+		'click .edit.profile': 'onClickEditProfile',
 
 		// home options
 		//
@@ -183,6 +57,12 @@ export default MenuView.extend({
 		'click .edit.school': 'onClickEditItem',
 		'click .delete.school': 'onClickDeleteItems',
 
+		// publication options
+		//
+		'click .add.publications': 'onClickAddItem',
+		'click .edit.publications': 'onClickEditItem',
+		'click .delete.publications': 'onClickDeleteItems',
+
 		// contact options
 		//
 		'click .add.contact': 'onClickAddItem',
@@ -191,13 +71,9 @@ export default MenuView.extend({
 
 		// affiliation options
 		//
-		'click .add.affiliation': 'onClickAddItem',
-		'click .edit.affiliation': 'onClickEditItem',
-		'click .delete.affiliation': 'onClickDeleteItems',
-
-		// connections options
-		//
-		'click .delete.connections': 'onClickDeleteItems',
+		'click .add.affiliations': 'onClickAddItem',
+		'click .edit.affiliations': 'onClickEditItem',
+		'click .delete.affiliations': 'onClickDeleteItems',
 
 		// topic options
 		//
@@ -225,13 +101,28 @@ export default MenuView.extend({
 	//
 
 	setMenuMode: function(mode) {
-		this.$el.find('.option').hide();
-		this.$el.find('.' + mode + '.option').show();
+		this.$el.find('li.option').hide();
+		this.$el.find('li.' + mode + '.option').show();
 
-		if (mode == 'posts') {
-			this.$el.find('.post.option').show();
-			this.setItemDisabled('edit.post', true);
-			this.setItemDisabled('delete.post', true);
+		switch (mode) {
+			case 'about':
+			case 'news':
+			case 'connections':
+			case 'files':
+			case 'photos':
+				this.reset();
+				this.setItemEnabled('name.option');
+				this.setItemEnabled('profile.option');
+				break;
+			case 'posts':
+				this.$el.find('li.post.option').show();
+				this.setItemDisabled('edit.post');
+				this.setItemDisabled('delete.post');
+				break;
+			default:
+				this.setItemEnabled('add');
+				this.setItemDisabled('edit');
+				this.setItemDisabled('delete');
 		}
 	},
 
@@ -278,27 +169,48 @@ export default MenuView.extend({
 		//
 		let model = view.model;
 		if (model instanceof Post) {
-			this.setMenuMode('post');
+			this.setMenuMode('posts');
 		} else if (model instanceof Comment) {
-			this.setMenuMode('comment');
+			this.setMenuMode('comments');
 		} else if (model instanceof Reply) {
-			this.setMenuMode('reply');
+			this.setMenuMode('replies');
 		}
 
 		// set enabled / disabled state
 		//
 		let editable = !model.isOwnedBy || model.isOwnedBy(application.session.user);
 		if (editable) {
-			this.setItemDisabled('edit', false);
-			this.setItemDisabled('delete', false);
+			this.setItemEnabled('edit');
+			this.setItemEnabled('delete');
 		} else {
-			this.setItemDisabled('edit', true);
-			this.setItemDisabled('delete', true);
+			this.setItemDisabled('edit');
+			this.setItemDisabled('delete');
 		}
 	},
 
 	onDeselect: function() {
-		this.setItemDisabled('edit', true);
-		this.setItemDisabled('delete', true);
+		this.setItemDisabled('edit');
+		this.setItemDisabled('delete');
+	},
+
+	reset: function() {
+		this.$el.find('.option').hide();
+		this.$el.find('.name.option').show();
+		this.$el.find('.profile.option').show();
+	},
+
+	//
+	// rendering methods
+	//
+
+	onRender: function() {
+
+		// call superclass method
+		//
+		EditMenuView.prototype.onRender.call(this);
+
+		// set initial menu state
+		//
+		this.reset();
 	}
 });

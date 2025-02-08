@@ -15,69 +15,17 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import SortMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/sort-menu-view.js';
 
-export default MenuView.extend({
+export default SortMenuView.extend({
 
 	//
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" type="sort-by">
-			<a class="sort-by-name"><i class="fa fa-check"></i><i class="fa fa-font"></i>By Name</a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" type="sort-by">
-			<a class="sort-by-location"><i class="fa fa-check"></i><i class="fa fa-globe-americas"></i>By Location</a>
-		</li>
-		
-		<li role="presentation" type="sort-by">
-			<a class="sort-by-occupation"><i class="fa fa-check"></i><i class="fa fa-briefcase"></i>By Occupation</a>
-		</li>
-		
-		<li role="presentation" type="sort-by">
-			<a class="sort-by-gender"><i class="fa fa-check"></i><i class="fa fa-transgender"></i>By Gender</a>
-		</li>
-		
-		<li role="presentation" type="sort-by">
-			<a class="sort-by-age"><i class="fa fa-check"></i><i class="fa fa-hourglass-half"></i>By Age</a>
-		</li>
-		
-		<li role="presentation" class="dropdown dropdown-submenu">
-			<a class="sort-by-date dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-calendar-alt"></i>By Date<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-				<li role="presentation" type="sort-by">
-					<a class="sort-by-birth-date"><i class="fa fa-check"></i><i class="fa fa-birthday-cake"></i>Birth Date</a>
-				</li>
-		
-				<li role="presentation" type="sort-by">
-					<a class="sort-by-join-date"><i class="fa fa-check"></i><i class="fa fa-user-circle"></i>Join Date</a>
-				</li>
-		
-				<li role="presentation" type="sort-by">
-					<a class="sort-by-connect-date"><i class="fa fa-check"></i><i class="fa fa-user-friends"></i>Connect Date</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" type="sort-order">
-			<a class="sort-increasing"><i class="fa fa-check"></i><i class="fa fa-sort-amount-up"></i>Increasing</a>
-		</li>
-		
-		<li role="presentation" type="sort-order">
-			<a class="sort-decreasing"><i class="fa fa-check"></i><i class="fa fa-sort-amount-down"></i>Decreasing</a>
-		</li>
-	`),
-
 	events: {
-		'click li[type=sort-by] a': 'onClickSortBy',
-		'click li[type=sort-order] a': 'onClickSortOrder'
+		'click .sort-by a': 'onClickSortBy',
+		'click .sort-order a': 'onClickSortOrder'
 	},
 
 	//
@@ -103,39 +51,5 @@ export default MenuView.extend({
 			'sort-increasing': sortOrder == 'increasing',
 			'sort-decreasing': sortOrder == 'decreasing'
 		};
-	},
-
-	//
-	// mouse event handling methods
-	//
-
-	onClickSortBy: function(event) {
-		let className = $(event.currentTarget).attr('class');
-		let sortKind = className.replace('sort-by-', '').replace(/-/g, '_');
-
-		// update menu
-		//
-		this.$el.find('li[type="sort-by"]').removeClass('selected');
-		this.$el.find('li .' + className).closest('li').addClass('selected');
-
-		// update files
-		//
-		this.parent.app.setOption('sort_kind', sortKind);
-		this.parent.app.getChildView('contents').onChange();
-	},
-
-	onClickSortOrder: function(event) {
-		let className = $(event.currentTarget).attr('class');
-		let sortOrder = className.replace('sort-', '').replace(/-/g, '_');
-
-		// update menu
-		//
-		this.$el.find('li[type="sort-order"]').removeClass('selected');
-		this.$el.find('li .' + className).closest('li').addClass('selected');
-
-		// update files
-		//
-		this.parent.app.setOption('sort_order', sortOrder);
-		this.parent.app.getChildView('contents').onChange();
 	}
 });

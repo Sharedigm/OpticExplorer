@@ -86,18 +86,25 @@ export default ItemsView.extend(_.extend({}, FileCopyable, {
 
 				// fetch updates
 				//
-				this.model.load({
-					details: this.getDetails(),
+				if (this.model) {
+					this.model.load({
+						details: this.getDetails(),
 
-					// callbacks
-					//
-					success: () => {
-
-						// call superclass method
+						// callbacks
 						//
-						ItemsView.prototype.setOption.call(this, key, value);
-					}
-				});
+						success: () => {
+
+							// call superclass method
+							//
+							ItemsView.prototype.setOption.call(this, key, value);
+						}
+					});
+				} else {
+
+					// call superclass method
+					//
+					ItemsView.prototype.setOption.call(this, key, value);
+				}
 				break;
 
 			default:
@@ -364,27 +371,30 @@ export default ItemsView.extend(_.extend({}, FileCopyable, {
 	},
 
 	showMap: function() {
-		import(
-			'../../../../../views/apps/file-browser/mainbar/files/maps/directory-map-view.js'
-		).then((DirectoryMapView) => {
+		application.loadAppView('map_viewer', {
 
-			// show directory map
+			// callbacks
 			//
-			this.showChildView('items', new DirectoryMapView.default(_.extend({}, this.options, {
-				collection: this.collection,
+			success: (MapViewer) => {
 
-				// options
+				// show directory map
 				//
-				filter: this.options.filter || this.filter,
-				max_size: 512,
+				this.showChildView('items', MapViewer.getDirectoryMapView(_.extend({}, this.options, {
+					collection: this.collection,
 
-				// callbacks
-				//
-				onselect: (item) => this.onSelect(item),
-				ondeselect: (item) => this.onDeselect(item),
-				onopen: (item) => this.onOpen(item),
-				ondropout: (items) => this.onDropOut(items)
-			})));
+					// options
+					//
+					filter: this.options.filter || this.filter,
+					max_size: 512,
+
+					// callbacks
+					//
+					onselect: (item) => this.onSelect(item),
+					ondeselect: (item) => this.onDeselect(item),
+					onopen: (item) => this.onOpen(item),
+					ondropout: (items) => this.onDropOut(items)
+				})));
+			}
 		});
 	},
 

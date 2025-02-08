@@ -16,6 +16,12 @@
 \******************************************************************************/
 
 import SearchBarView from '../../../../../views/apps/common/header-bar/search-bar/search-bar-view.js';
+import SearchByNameView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-name-view.js';
+import SearchByLocationView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-location-view.js';
+import SearchByOccupationView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-occupation-view.js';
+import SearchByAgeView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-age-view.js';
+import SearchByGenderView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-gender-view.js';
+import SearchByDateView from '../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-date-view.js';
 
 export default SearchBarView.extend({
 
@@ -40,121 +46,97 @@ export default SearchBarView.extend({
 	//
 
 	showSearchByName: function() {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-name-view.js'
-		).then((SearchByNameView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByNameView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByNameView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByLocation: function() {
-		import(
-			'../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-location-view.js'
-		).then((SearchByLocationView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByLocationView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByLocationView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByOccupation: function() {
-		import(
-			'../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-occupation-view.js'
-		).then((SearchByOccupationView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByOccupationView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByOccupationView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByAge: function() {
-		import(
-			'../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-age-view.js'
-		).then((SearchByAgeView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByAgeView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByAgeView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByGender: function() {
-		import(
-			'../../../../../views/apps/connection-manager/header-bar/search-bar/searches/search-by-gender-view.js'
-		).then((SearchByGenderView) => {
 
-			// show search
-			//
-			this.showChildView('searches', new SearchByGenderView.default({
-				model: this.model
-			}));
+		// show search
+		//
+		this.showChildView('searches', new SearchByGenderView({
+			model: this.model
+		}));
 
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	showSearchByDate: function(kind) {
-		import(
-			'../../../../../views/apps/common/header-bar/search-bar/searches/search-by-date-view.js'
-		).then((SearchByDateView) => {
 
-			// show search
+		// show search
+		//
+		this.showChildView('searches', new SearchByDateView({
+			model: this.model,
+
+			// options
 			//
-			this.showChildView('searches', new SearchByDateView.default({
-				model: this.model,
+			kind: kind
+		}));
 
-				// options
-				//
-				kind: kind
-			}));
-
-			// perform callback
-			//
-			if (this.options.onshow) {
-				this.options.onshow();
-			}
-		});
+		// perform callback
+		//
+		if (this.options.onshow) {
+			this.options.onshow();
+		}
 	},
 
 	onRender: function() {

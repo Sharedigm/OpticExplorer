@@ -37,8 +37,8 @@ $rounded-border-radius: 5px;
 		border-color: unset;
 	}
 
-	input[type="date"], input[type="time"] {
-		line-height: 15px;
+	input[type="date"], input[type="time"], input[type="date"] {
+		line-height: 25px;
 	}
 
 	//
@@ -62,6 +62,7 @@ $rounded-border-radius: 5px;
 
 	textarea {
 		border-color: unset;
+		min-height: 30px;
 	}
 
 	//

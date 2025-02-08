@@ -23,8 +23,9 @@ import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-sha
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import HeaderBarView from '../../../views/apps/pdf-viewer/header-bar/header-bar-view.js';
 import SideBarView from '../../../views/apps/pdf-viewer/sidebar/sidebar-view.js';
-import PdfView from '../../../views/apps/pdf-viewer/mainbar/pdf-view.js';
+import PdfSplitView from '../../../views/apps/pdf-viewer/mainbar/pdf-split-view.js';
 import FooterBarView from '../../../views/apps/pdf-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/pdf-viewer/forms/preferences/preferences-form-view.js'
 import FileUtils from '../../../utilities/files/file-utils.js';
 import Browser from '../../../utilities/web/browser.js';
 
@@ -72,20 +73,28 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	},
 	
 	//
-	// counting methods
+	// querying methods
 	//
 
+	hasPdfView: function() {
+		return this.hasChildView('mainbar mainbar');
+	},
+
 	numPages: function() {
-		return this.getChildView('content').numPages();
+		return this.getPdfView().numPages();
 	},
 
 	//
 	// getting methods
 	//
 
+	getPdfView: function() {
+		return this.getChildView('mainbar mainbar');
+	},
+
 	getPdf: function() {
-		if (this.hasChildView('content')) {
-			return this.getChildView('content').pdf;
+		if (this.hasPdfView()) {
+			return this.getPdfView().pdf;
 		}
 	},
 
@@ -128,11 +137,11 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	},
 
 	getZoom: function(zoomMode) {
-		return this.getChildView('content').getZoom(zoomMode);
+		return this.getPdfView().getZoom(zoomMode);
 	},
 
 	getSelected: function() {
-		return this.getChildView('content').getSelected();
+		return this.getPdfView().getSelected();
 	},
 
 	getPageNumber: function(which, options) {
@@ -146,7 +155,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			case 'last':
 				return this.numPages();
 			default:
-				return this.getChildView('content').pageNumber;
+				return this.getPdfView().pageNumber;
 		}
 	},
 
@@ -173,10 +182,10 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	},
 
 	getDocumentSize: function() {
-		let documentView = this.getChildView('content');
-		let viewportSize = documentView.getViewportSize();
+		let pdfView = this.getPdfView();
+		let viewportSize = pdfView.getViewportSize();
 		if (viewportSize) {
-			let ppi = 72 * documentView.constructor.scale;
+			let ppi = 72 * pdfView.constructor.scale;
 			let width = (viewportSize.width / ppi).toPrecision(2);
 			let height = (viewportSize.height / ppi).toPrecision(2);
 			let documentSize =  width + '" x ' + height + '"';
@@ -196,46 +205,6 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	// setting methods
 	//
 
-	setOption: function(key, value) {
-		switch (key) {
-			
-			// sidebar options
-			//
-			case 'show_sidebar':
-
-				// show / hide sidebar
-				//
-				if (value) {
-					if (!this.hasChildView('sidebar')) {
-
-						// render sidebar
-						//
-						this.showSideBar();
-
-						// load sidebar
-						//
-						let sidebarView = this.getChildView('contents').getChildView('sidebar');
-						if (!sidebarView.loaded) {
-							sidebarView.onLoad();
-						}
-					}
-					this.getChildView('contents').showSideBar();
-				} else {
-					this.getChildView('contents').hideSideBar();
-				}
-				break;
-
-			// other options
-			//
-			default:
-
-				// call superclass method
-				//
-				AppSplitView.prototype.setOption.call(this, key, value);
-				break;
-		}
-	},
-
 	setZoom: function(zoom) {
 		this.getChildView('zoom').setZoom(zoom);	
 	},
@@ -252,7 +221,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 		// set page number
 		//
-		this.getChildView('content').loadPage(pageNumber);
+		this.getPdfView().loadPage(pageNumber);
 		this.getChildView('header page').setPageNumber(pageNumber);
 		this.getChildView('footer page').setPageNumber(pageNumber);
 
@@ -315,11 +284,11 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 		// clear sidebar
 		//
-		this.getChildView('contents').getChildView('sidebar').reset();
+		this.getChildView('contents sidebar').reset();
 
 		// update pdf
 		//
-		this.getChildView('content').loadFile(model, options);
+		this.getPdfView().loadFile(model, options);
 	},
 
 	//
@@ -458,7 +427,18 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 		// download current pdf file
 		//
-		this.model.download();
+		if (this.model) {
+			this.model.download();
+		}
+	},
+
+	fetchText: function(options) {
+
+		// fetch text from current pdf file
+		//
+		if (this.model) {
+			this.model.fetchText(options);
+		}
 	},
 
 	//
@@ -469,7 +449,25 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 		// find needle in text
 		//
-		return this.getChildView('content').find(needle, options);
+		return this.getPdfView().find(needle, options);
+	},
+
+	//
+	// full screen methods
+	//
+
+	toggleFullScreen: function() {
+
+		// request full screen
+		//
+		let pdfView = this.getPdfView();
+		if (pdfView) {
+			if (!pdfView.isFullScreen()) {
+				pdfView.requestFullScreen();
+			} else {
+				pdfView.exitFullScreen();
+			}
+		}
 	},
 
 	//
@@ -535,12 +533,14 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	},
 
 	getContentView: function() {
-		return new PdfView({
+		return new PdfSplitView({
 			model: this.model,
 
 			// options
 			//
 			preferences: this.preferences,
+			show_sidebar: this.preferences.get('show_exif_info'),
+			sidebar_size: this.preferences.get('info_bar_size'),
 
 			// callbacks
 			//
@@ -642,6 +642,29 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 	},
 
 	//
+	// text extraction methods
+	//
+
+	showTextFile: function(file) {
+		application.launch('text_editor', {
+			model: file
+		});
+	},
+
+	showText: function() {
+		this.fetchText({
+
+			// callbacks
+			//
+			success: function(text) {
+				this.showTextFile(new File({
+					contents: text
+				}));
+			}
+		})
+	},
+
+	//
 	// event handling methods
 	//
 
@@ -664,7 +687,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			// show split view
 			//
 			if (this.preferences.get('show_sidebar')) {
-				this.getChildView('contents').getChildView('sidebar').onLoad();
+				this.getChildView('contents sidebar').onLoad();
 			}
 		}
 	},
@@ -688,7 +711,7 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 
 		// set zoom of document
 		//
-		this.getChildView('content').setZoom(zoom);
+		this.getPdfView().setZoom(zoom);
 	},
 
 	//
@@ -729,4 +752,13 @@ export default AppSplitView.extend(_.extend({}, Findable, ItemShareable, ItemInf
 			}
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

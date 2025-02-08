@@ -23,48 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="select-all"><i class="fa fa-asterisk"></i>All<span class="command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-none"><i class="fa fa-minus"></i>None<span class="shift command shortcut">A</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-invert"><i class="fa fa-random"></i>Invert<span class="shift command shortcut">I</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-multiple"><i class="fa fa-check"></i><i class="fa fa-ellipsis-h"></i>Multiple<span class="shift command shortcut">M</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-photos"><i class="fa fa-camera"></i>Photos</a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-videos"><i class="fa fa-video"></i>Videos</a>
-		</li>
-
-		<li role="presentation">
-			<a class="select-people"><i class="fa fa-user-friends"></i>People</a>
-		</li>
-
-		<li role="presentation">
-			<a class="select-places"><i class="fa fa-map-marker-alt"></i>Places</a>
-		</li>
-
-		<li role="presentation">
-			<a class="select-favorites"><i class="fa fa-map-pin"></i>Favorites</a>
-		</li>
-	`),
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-none': 'onClickSelectNone',

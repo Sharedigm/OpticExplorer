@@ -1,0 +1,81 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "far fa-window-maximize",
+			"name": "New Window",
+			"shortcut": "command-enter"
+		},
+		{
+			"class": "new-topic",
+			"icon": "fa fa-hashtag",
+			"name": "New Topic",
+			"shortcut": "shift-command-enter"
+		},
+		{
+			"class": "new-chat",
+			"icon": "fa fa-comments",
+			"name": "New Chat",
+			"shortcut": "shift-command-enter"
+		},
+		"divider",
+		{
+			"class": "open-topics",
+			"icon": "fa fa-folder",
+			"name": "Open Topics",
+			"shortcut": "command-O"
+		},
+		{
+			"class": "open-chats",
+			"icon": "fa fa-folder",
+			"name": "Open Chats",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "show-info",
+			"icon": "fa fa-info-circle",
+			"name": "Show Info",
+			"shortcut": "command-I"
+		},
+		{
+			"class": "download-item",
+			"icon": "fa fa-download",
+			"name": "Download",
+			"shortcut": "shift-command-D"
+		},
+		"divider",
+		{
+			"class": "add-topics",
+			"icon": "fa fa-plus",
+			"name": "Add Topics",
+			"shortcut": "command-D"
+		},
+		{
+			"class": "remove-topics",
+			"icon": "fa fa-minus",
+			"name": "Remove Topics",
+			"shortcut": "delete"
+		},
+		{
+			"class": "end-chat",
+			"icon": "fa fa-minus",
+			"name": "End Chat",
+			"shortcut": "delete"
+		},
+		"divider",
+		{
+			"class": "close-tab",
+			"icon": "fa fa-xmark",
+			"name": "Close Tab",
+			"shortcut": "command-L"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

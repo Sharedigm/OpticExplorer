@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connection from '../../../../models/users/connections/connection.js';
+import Connection from '../../../../models/connections/connection.js';
 import Post from '../../../../models/topics/post.js';
 import Directory from '../../../../models/storage/directories/directory.js';
 import File from '../../../../models/storage/files/file.js';
@@ -110,6 +110,12 @@ export default BaseView.extend({
 		}));
 	},
 
+	showPost: function(post) {
+		application.launch('post_viewer', {
+			model: post
+		});
+	},
+
 	//
 	// event handling methods
 	//
@@ -120,11 +126,6 @@ export default BaseView.extend({
 			// show connection's profile info
 			//
 			application.showUser(item.model);
-		} else if (item.model instanceof Post) {
-
-			// show post
-			//
-			application.showPost(item.model);
 		} else if (item.model instanceof Directory) {
 
 			// open directory
@@ -135,6 +136,11 @@ export default BaseView.extend({
 			// open file
 			//
 			application.openFile(item.model);
+		} else if (item.model instanceof Post) {
+
+			// show post
+			//
+			this.showPost(item.model);
 		}
 	},
 

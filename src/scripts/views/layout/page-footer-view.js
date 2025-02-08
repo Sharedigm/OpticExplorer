@@ -45,7 +45,7 @@ export default FooterView.extend({
 						<% if (branding.page.footer.brand.logotype.names) { %>
 						<% let names = branding.page.footer.brand.logotype.names; %>
 						<% let keys = Object.keys(names); %>
-						<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(' ', '&nbsp') %></span><% } %>
+						<% for (let i = 0; i < keys.length; i++) { %><% let key = keys[i]; %><span><%= key.replace(/ /g, '&nbsp') %></span><% } %>
 						<% } %>
 					</div>
 					<% } %>
@@ -64,7 +64,7 @@ export default FooterView.extend({
 						<% let key = keys[i]; %>
 						<% let info = branding.page.footer.info[key]; %>
 						<div class="column">
-							<div class="heading"<% if (info.color) { %> style="color:<%= info.color %>"<% } %>>
+							<div class="heading">
 								<i class="<%= info.icon %>"></i>
 								<%= key %>
 							</div>
@@ -171,17 +171,24 @@ export default FooterView.extend({
 		}
 	},
 
+	setHeadingStyles: function(elements, attributes) {
+		let keys = Object.keys(attributes);
+		for (let i = 0; i < elements.length; i++) {
+			let element = elements[i];
+			let key = keys[i];
+			DomUtils.setTextBlockStyles(element, attributes[key]);
+		}
+	},
+
 	setPageFooterStyles: function(element, attributes) {
 		if (attributes) {
 			DomUtils.setBackgroundStyles(element, attributes);
 		}
-		if (attributes.color) {
-			$(element).css('color', attributes.color);
-			// $(element).find('a').css('color', attributes.color);
-		}
-		if (attributes.font) {
-			$(element).css('font-family', config.fonts[attributes.font]['font-family']);
-		}
+
+		// set heading link styles
+		//
+		DomUtils.setTextBlockStyles($(element), attributes);
+		this.setHeadingStyles($(element).find('.heading'), attributes.info);
 
 		// set brand styles
 		//

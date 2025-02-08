@@ -145,37 +145,21 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 	// loading methods
 	//
 
-	loadPreferences: function(user, appName, options) {
+	loadPreferences: function(appName, options) {
 
-		// check for user
+		// load user preferences
 		//
-		if (!user) {
-			return;
-		}
-
-		// load preferences by user
-		//
-		this.preferences.loadByUser(user, {
+		UserPreferences.create(appName).fetch({
 
 			// callbacks
 			//
-			success: (model) => {
+			success: (preferences) => {
 
 				// perform callback
 				//
 				if (options && options.success) {
-					options.success(model);
+					options.success(preferences);
 				}
-			},
-
-			error: (model, response) => {
-
-				// show error message
-				//
-				application.error({
-					message: "Could not fetch desktop app preferences.",
-					response: response
-				});
 			}
 		});
 	},
@@ -200,7 +184,7 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 
 		// show child views
 		//
-		this.loadApp(this.options.app.get('id'));
+		this.showApp(this.options.app.get('id'));
 
 		// add modals to desktop space
 		//
@@ -222,60 +206,89 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 		this.showChildView('modals', new ModalsView());
 	},
 
-	loadApp: function(appName) {
-		let user = this.getUser();
+	showAppView: function(appName, AppView) {
 
-		// set attributes
+		// show app in desktop body
 		//
-		if (appName != this.appName) {
-			this.appName = appName;
-		} else {
-			return;
-		}
+		this.showChildView('body', new AppView({
 
-		// create default preferences
-		//
-		switch (appName) {
-			case 'app_launcher':
-				this.preferences = null;
-				break;
-			default:
-				this.preferences = UserPreferences.create(appName);
-				break;
-		}
-
-		if (this.preferences) {
-			this.loadPreferences(user, appName, {
-
-				// callbacks
-				//
-				success: () => {
-
-					// check if view still exists
-					//
-					if (this.isDestroyed()) {
-						return;
-					}
-
-					// update view
-					//
-					this.showApp(appName);
-				}
-			});
-		} else {
-
-			// update view
+			// options
 			//
-			this.showApp(appName);
+			preferences: this.preferences,
+			selectedPath: this.options.selectedPath,
+			hidden: {
+				'sidebar': !this.hasSideBar(appName),
+				'footer-bar': true
+			},
+
+			// callbacks
+			//
+			onload: () => this.onLoad(),
+			onchange: () => this.onChange(),
+			onchangetab: () => this.onChangeTab(),
+			onselect: () => this.onSelect(),
+			ondeselect: () => this.onDeselect(),
+			onchangeselection: () => this.onChangeSelection(),
+			onclosetab: () => this.onCloseTab()
+		}));
+
+		// append app name to header bar
+		//
+		let defaults = config.apps[appName];
+		if (this.options.show_app_name) {
+			let name = $('<div class="app-bar hidden-xs">' +
+				'<i class="' + defaults.icon + '"></i>' +
+				(defaults.alias || defaults.name) +
+				'</div>');
+			this.$el.find('.body > .app > .header-bar').prepend(name);
 		}
+
+		// make desktop apps unflickable
+		//
+		this.$el.find('.body > .app > .body').addClass('unflickable');
+
+		// remove footer bar
+		//
+		this.$el.find('.body > .app > .footer-bar').remove();
 	},
 
 	showApp: function(appName) {
-		this.loadAppView(appName, (AppView) => {
 
-			// check for app
+		// show desktop app
+		//
+		application.loadApp(appName, {
+
+			// callbacks
 			//
-			if (!AppView) {
+			success: (AppView) => {
+
+				// load user preferences
+				//
+				this.loadPreferences(appName, {
+
+					// callbacks
+					//
+					success: (preferences) => {
+						this.preferences = preferences;
+
+						// check if view still exists
+						//
+						if (this.isDestroyed()) {
+							return;
+						}
+
+						// update view
+						//
+						this.showAppView(appName, AppView);
+
+						// apply dialog styles
+						//
+						application.settings.dialogs.apply();
+					}
+				});
+			},
+
+			error: () => {
 
 				// show error message
 				//
@@ -283,49 +296,6 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 					message: "The app '" + appName.replace('_', ' ') + "'' could not be loaded."
 				});
 			}
-
-			// show app in desktop body
-			//
-			this.showChildView('body', new AppView({
-
-				// options
-				//
-				preferences: this.preferences,
-				selectedPath: this.options.selectedPath,
-				hidden: {
-					'sidebar': !this.hasSideBar(appName),
-					'footer-bar': true
-				},
-
-				// callbacks
-				//
-				onload: () => this.onLoad(),
-				onchange: () => this.onChange(),
-				onchangetab: () => this.onChangeTab(),
-				onselect: () => this.onSelect(),
-				ondeselect: () => this.onDeselect(),
-				onchangeselection: () => this.onChangeSelection(),
-				onclosetab: () => this.onCloseTab()
-			}));
-
-			// append app name to header bar
-			//
-			let defaults = config.apps[appName];
-			if (this.options.show_app_name) {
-				let name = $('<div class="app-bar hidden-xs">' +
-					'<i class="' + defaults.icon + '"></i>' +
-					(defaults.alias || defaults.name) +
-					'</div>');
-				this.$el.find('.body > .app > .header-bar').prepend(name);
-			}
-
-			// make desktop apps unflickable
-			//
-			this.$el.find('.body > .app > .body').addClass('unflickable');
-
-			// remove footer bar
-			//
-			this.$el.find('.body > .app > .footer-bar').remove();
 		});
 
 		// show run menu if appropriate
@@ -343,10 +313,6 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 		// show app launcher
 		//
 		this.showLauncher(application.desktop.settings.get('launcher_style'));
-
-		// apply dialog styles
-		//
-		application.settings.dialogs.apply();
 
 		// set initial focus
 		//
@@ -414,6 +380,16 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 		if (this.hasChildView('footer')) {
 			this.getChildView('footer').showStatusBar();
 		}
+	},
+
+	showLink: function(url) {
+		application.launch('web_browser', {
+			url: url
+		});
+	},
+
+	showAppByName: function(app, options) {
+		application.launch(app, options);
 	},
 
 	update: function() {
@@ -504,16 +480,14 @@ export default AppView.extend(_.extend({}, Wallpaperable, AppLoadable, {
 	onClickApp: function(view) {
 		if (view.model.has('link')) {
 
-			// go to link
+			// show link
 			//
-			application.launch('web_browser', {
-				url: view.model.get('link')
-			});
+			this.showLink(view.model.get('link'))
 		} else {
 
-			// launch app
+			// show app
 			//
-			application.launch(view.model.get('id'), view.model.get('options'));
+			this.showAppByName(view.model.get('id'), view.model.get('options'));
 
 			// deselect app icon
 			//

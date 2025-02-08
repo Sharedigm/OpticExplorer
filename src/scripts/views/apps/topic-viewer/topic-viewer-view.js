@@ -26,7 +26,7 @@ import AppSplitView from '../../../views/apps/common/app-split-view.js';
 import MultiDoc from '../../../views/apps/common/behaviors/tabbing/multidoc.js';
 import ContainableSelectable from '../../../views/behaviors/containers/containable-selectable.js';
 import MultiSelectable from '../../../views/behaviors/selection/multi-selectable.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import LinkShareable from '../../../views/apps/common/behaviors/sharing/link-shareable.js';
 import ItemInfoShowable from '../../../views/apps/file-browser/dialogs/info/behaviors/item-info-showable.js';
 import TopicInfoShowable from '../../../views/apps/topic-browser/dialogs/info/behaviors/topic-info-showable.js';
@@ -34,8 +34,11 @@ import HeaderBarView from '../../../views/apps/topic-viewer/header-bar/header-ba
 import SideBarView from '../../../views/apps/topic-viewer/sidebar/sidebar-view.js';
 import TabbedContentView from '../../../views/apps/topic-viewer/mainbar/tabbed-content/tabbed-content-view.js';
 import FooterBarView from '../../../views/apps/topic-viewer/footer-bar/footer-bar-view.js';
+import OpenTopicsDialogView from '../../../views/apps/topic-viewer/dialogs/topics/open-topics-dialog-view.js';
+import UserTopicView from '../../../views/apps/topic-viewer/mainbar/topics/user-topic-view.js';
+import PreferencesFormView from '../../../views/apps/topic-viewer/forms/preferences/preferences-form-view.js';
 
-export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, Openable, LinkShareable, ItemInfoShowable, TopicInfoShowable, {
+export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable, MultiSelectable, ItemOpenable, LinkShareable, ItemInfoShowable, TopicInfoShowable, {
 
 	//
 	// attributes
@@ -52,6 +55,15 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		// call superclass constructor
 		//
 		AppSplitView.prototype.initialize.call(this);
+
+		// set default topic
+		//
+		if (!this.constructor.default_topic) {
+			this.constructor.default_topic = new Topic({
+				id: 0,
+				name: this.constructor.getDefaultTopicName()
+			});
+		}
 
 		// set attributes
 		//
@@ -144,7 +156,8 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	getDefaultTopic: function() {
 		let name = this.preferences.get('default_topic');
-		if (!name || name == '' || name == config.apps[this.name].defaults.topic.name) {
+
+		if (this.constructor.isDefaultTopicName(name)) {
 			return this.constructor.default_topic;
 		} else {
 			return this.getTopicByName(name);
@@ -256,6 +269,23 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	loadModel: function(model, options) {
 		this.addModel(model, options);
+
+		// set options
+		//
+		if (options && (options.message || options.items)) {
+			let activeView = this.getActiveView();
+			if (activeView) {
+				let formView = activeView.getChildView('form');
+				if (formView) {
+					if (options.message) {
+						formView.setValue('message', options.message);
+					}
+					if (options.items) {
+						formView.addAttachments(options.items);
+					}
+				}
+			}
+		}
 	},
 
 	//
@@ -385,14 +415,15 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	setSearch: function(search) {
 		let kind = search? Object.keys(search)[0] : '';
 		let value = search? search[kind] : '';
+		let searchKind = kind? kind.replace(/-/g, '_') : undefined;
 
 		// set menu
 		//
-		this.getChildView('header menu').getChildView('search').setSearchKind(kind);
+		this.getChildView('header menu').getChildView('search').setSearchKind(searchKind);
 
 		// set search bar
 		//
-		this.getChildView('header').showSearchBar(kind, value);
+		this.getChildView('header').showSearchBar(searchKind, value);
 	},
 
 	//
@@ -400,24 +431,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 	//
 
 	openTopic: function(topic, options) {
-		this.openModel(topic);
-
-		// set options
-		//
-		if (options && (options.message || options.items)) {
-			let activeView = this.getActiveView();
-			if (activeView) {
-				let formView = activeView.getChildView('form');
-				if (formView) {
-					if (options.message) {
-						formView.setValue('message', options.message);
-					}
-					if (options.items) {
-						formView.addAttachments(options.items);
-					}
-				}
-			}
-		}
+		this.openModel(topic, options);
 	},
 
 	openTopics: function(topics, options) {
@@ -528,7 +542,10 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		if (this.hasSelectedTopic()) {
 			this.removeTopics(this.getSelectedTopics(), options);
 		} else {
-			this.removeTopics([this.model]);
+			application.alert({
+				title: "No Topics Selected",
+				message: "No topics have been selected.  Click on a topic in the Topics panel to select it for removal."
+			});
 		}
 	},
 
@@ -668,43 +685,18 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 		this.showContent();
 	},
 
+	clearSearch: function() {
+		this.options.search = undefined;
+		this.showContent();
+	},
+
 	//
 	// sharing methods
 	//
 
-	shareItems: function() {
+	shareItems: function(directory) {
 		this.getActiveView().shareItems({
-			model: application.getDirectory()
-		});
-	},
-
-	shareAudio: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Audio')
-		});
-	},
-
-	shareMusic: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Music')
-		});
-	},
-
-	sharePictures: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Pictures')
-		});
-	},
-
-	shareVideos: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Videos')
-		});
-	},
-
-	shareMaps: function() {
-		this.getActiveView().shareItems({
-			model: application.getDirectory('Maps')
+			model: directory
 		});
 	},
 
@@ -716,7 +708,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 	shareSelectedByLink: function() {
 		import(
-			'../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog
@@ -758,6 +750,7 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 			// options
 			//
 			panels: this.preferences.get('sidebar_panels'),
+			info_kind: this.preferences.get('sidebar_info_kind'),
 			view_kind: this.preferences.get('sidebar_view_kind'),
 
 			// callbacks
@@ -783,7 +776,6 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 			// capabilities
 			//
-			features: this.options.features,
 			editable: this.options.editable,
 
 			// callbacks
@@ -1024,13 +1016,17 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 
 		// set initial search
 		//
-		if (this.options.search) {
+		if (this.options.search && !this.loaded) {
 			this.setSearch(this.options.search);
 		}
 
 		// call superclass method
 		//
 		AppSplitView.prototype.onLoad.call(this);
+
+		// set attributes
+		//
+		this.loaded = true;
 	},
 
 	onChangeTab: function(index) {
@@ -1108,8 +1104,42 @@ export default AppSplitView.extend(_.extend({}, MultiDoc, ContainableSelectable,
 }), {
 
 	//
-	// static attributes
+	// static querying methods
 	//
 
-	default_topic: new Topic(config.apps.topic_viewer.defaults.topic)
+	isDefaultTopicName: function(name) {
+		return name && name != '' && this.getDefaultTopicName() == name;
+	},
+
+	hasDefaultTopicName: function() {
+		return this.getTopicName() != undefined;
+	},
+
+	//
+	// static getting methods
+	//
+
+	getPreferences: function() {
+		return config.preferences.topic_viewer || {};
+	},
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	},
+
+	getDefaultTopicName: function() {
+		return this.getPreferences().default_topic;
+	},
+
+	getUserTopicView: function(options) {
+		return new UserTopicView(options);
+	},
+
+	//
+	// static dialog rendering methods
+	//
+
+	showOpenTopicsDialog: function(options) {
+		application.show(new OpenTopicsDialogView(options));
+	}
 });

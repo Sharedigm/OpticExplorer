@@ -24,6 +24,7 @@ import HeaderBarView from '../../../views/apps/video-player/header-bar/header-ba
 import SideBarView from '../../../views/apps/video-player/sidebar/sidebar-view.js';
 import VideoSplitView from '../../../views/apps/video-player/mainbar/video-split-view.js';
 import FooterBarView from '../../../views/apps/video-player/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/video-player/forms/preferences/preferences-form-view.js'
 import Browser from '../../../utilities/web/browser.js';
 
 export default AppSplitView.extend(_.extend({}, ItemShareable, {
@@ -722,4 +723,13 @@ export default AppSplitView.extend(_.extend({}, ItemShareable, {
 			this.play();
 		}
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

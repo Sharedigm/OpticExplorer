@@ -98,7 +98,7 @@ export default BaseView.extend(_.extend({}, Expandable, {
 
 	addItem: function() {
 		import(
-			'../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/add/add-user-affiliation-dialog-view.js'
+			'../../../../../../views/apps/profile-viewer/dialogs/profile/add/add-user-affiliation-dialog-view.js'
 		).then((AddUserAffiliationDialogView) => {
 			
 			// show add dialog

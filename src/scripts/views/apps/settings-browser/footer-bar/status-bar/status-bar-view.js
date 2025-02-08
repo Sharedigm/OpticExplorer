@@ -16,7 +16,6 @@
 \******************************************************************************/
 
 import BaseView from '../../../../../views/base-view.js';
-import PreferencesPanelView from '../../../../../views/apps/settings-browser/mainbar/panels/preferences-panel-view.js';
 
 export default BaseView.extend({
 
@@ -28,21 +27,26 @@ export default BaseView.extend({
 
 	template: template(`
 		<div class="info-bar">
-			<i class="fa fa-rocket"></i><span class="num-settings">0</span> apps
+			<i class="fa fa-rocket"></i><span class="num-apps"><%= num_apps %></span>&nbsp;apps
 		</div>
 	`),
+
+	//
+	// querying methods
+	//
+
+	numApps: function() {
+		return this.parent.app.numApps();
+	},
 
 	//
 	// rendering methods
 	//
 
-	onRender: function() {
-		this.update();
-	},
-
-	update: function() {
-		let numSettings = PreferencesPanelView.defaults.length;
-		this.$el.find('.num-settings').html(numSettings);
+	templateContext: function() {
+		return {
+			num_apps: this.numApps()
+		}
 	},
 
 	//

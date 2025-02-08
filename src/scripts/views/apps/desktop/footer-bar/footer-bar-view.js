@@ -15,7 +15,6 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Apps from '../../../../collections/apps/apps.js';
 import ToolbarContainerView from '../../../../views/apps/common/toolbars/toolbar-container-view.js';
 import RunMenuView from '../../../../views/apps/desktop/footer-bar/run-menu-view.js';
 import TaskBarView from '../../../../views/apps/desktop/footer-bar/task-bar/task-bar-view.js';
@@ -118,9 +117,7 @@ export default ToolbarContainerView.extend({
 
 	showRunMenu: function() {
 		this.showChildView('menu', new RunMenuView({
-			collection: new Apps(this.collection.filter((app) => {
-				return !app.get('hidden');
-			})),
+			collection: application.getVisibleApps(),
 
 			// callbacks
 			//

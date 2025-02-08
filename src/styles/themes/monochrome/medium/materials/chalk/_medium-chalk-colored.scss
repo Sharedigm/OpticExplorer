@@ -42,10 +42,6 @@ body:not(.binary) {
 				@include chalk.shade($color);
 			}
 
-			&.raspberry {
-				@include chalk.shade($color);
-			}
-
 			&.red-orange {
 				@include chalk.shade($color);
 			}
@@ -102,6 +98,10 @@ body:not(.binary) {
 				@include chalk.shade($color);
 			}
 
+			&.raspberry {
+				@include chalk.shade($color);
+			}
+
 			&.brown {
 				@include chalk.shade($color);
 			}
@@ -138,10 +138,6 @@ body:not(.binary) {
 		.selected .colored:not(.btn) {
 
 			.red {
-				@include chalk.shade($selected-color);
-			}
-
-			.raspberry {
 				@include chalk.shade($selected-color);
 			}
 
@@ -198,6 +194,10 @@ body:not(.binary) {
 			}
 
 			.magenta {
+				@include chalk.shade($selected-color);
+			}
+
+			.raspberry {
 				@include chalk.shade($selected-color);
 			}
 

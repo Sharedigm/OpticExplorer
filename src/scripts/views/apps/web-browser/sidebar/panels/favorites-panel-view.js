@@ -31,14 +31,14 @@ export default SideBarPanelView.extend({
 	template: template(`
 		<div class="header">
 			<label><i class="fa fa-star"></i>Favorites</label>
-		
+
 			<div class="buttons">
 				<button type="button" class="add-favorites success btn btn-sm" data-toggle="tooltip" title="Add to Favorites">
 					<i class="fa fa-plus"></i>
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="items"></div>
 	`),
 
@@ -117,12 +117,12 @@ export default SideBarPanelView.extend({
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
-			
+
 			// confirm delete
 			//
 			application.confirm({
 				title: "Remove from Favorites",
-				message: "Are you sure you want to delete " + 
+				message: "Are you sure you want to delete " +
 					(items.length == 1? '"' + items[0].model.get('name') + '"' : "these " + items.length + " items") +
 					" from your list of favorites?",
 
@@ -199,7 +199,7 @@ export default SideBarPanelView.extend({
 				this.constructor.favorites = model;
 				this.showFavorites(model);
 			}
-		});		
+		});
 	},
 
 	showFavorites: function(favorites) {

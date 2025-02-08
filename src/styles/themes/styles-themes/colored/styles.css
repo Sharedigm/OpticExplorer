@@ -820,15 +820,15 @@ body:not(.binary).colored .badge {
   background-color: var(--primary-color);
 }
 body:not(.binary).colored .badge.success {
-  color: white;
+  color: white !important;
   background-color: hsl(135, 33%, 50%);
 }
 body:not(.binary).colored .badge.caution {
-  color: white;
+  color: white !important;
   background-color: #e9ac4a;
 }
 body:not(.binary).colored .badge.warning {
-  color: white;
+  color: white !important;
   background-color: #eb7047;
 }
 

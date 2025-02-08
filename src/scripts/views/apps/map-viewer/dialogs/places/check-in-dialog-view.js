@@ -18,7 +18,6 @@
 import Place from '../../../../../models/places/place.js';
 import DialogView from '../../../../../views/dialogs/dialog-view.js';
 import PlaceNameFormView from '../../../../../views/apps/map-viewer/forms/info/place-name-form-view.js';
-import MapViewerView from '../../../../../views/apps/map-viewer/map-viewer-view.js';
 
 export default DialogView.extend({
 
@@ -167,20 +166,16 @@ export default DialogView.extend({
 	},
 
 	showMapViewer: function() {
-		this.showChildView('map_viewer', new MapViewerView({
+		this.showChildApp('map_viewer', {
 
 			// app options
 			//
 			currentPlace: this.model,
-			dialog: this,
-			hidden: {
-				'footer-bar': true
-			},
 
 			// callbacks
 			//
 			onselect: (item) => this.setName(item.model.get('name'))
-		}));
+		});
 	},
 
 	showPlaceNameForm: function() {

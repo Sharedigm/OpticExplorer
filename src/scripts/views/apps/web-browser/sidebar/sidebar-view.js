@@ -57,14 +57,6 @@ export default SideBarView.extend({
 	},
 
 	//
-	// adding methods
-	//
-
-	addFavorites: function(items, options) {
-		this.getChildView('favorites').addFavorites(items, options);
-	},
-
-	//
 	// panel rendering methods
 	//
 

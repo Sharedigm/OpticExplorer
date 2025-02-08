@@ -91,7 +91,7 @@ export default _.extend({}, Tabbed, {
 	// opening / closing methods
 	//
 
-	openModel: function(model) {
+	openModel: function(model, options) {
 
 		// hide help message
 		//
@@ -103,7 +103,7 @@ export default _.extend({}, Tabbed, {
 
 			// activate existing tab
 			//
-			this.setActiveModel(model);
+			this.setActiveModel(model, options);
 
 		// open file
 		//
@@ -111,7 +111,7 @@ export default _.extend({}, Tabbed, {
 
 			// load model
 			//
-			this.loadModel(model);
+			this.loadModel(model, options);
 		}
 	},
 

@@ -22,6 +22,7 @@ import ItemShareable from '../../../views/apps/common/behaviors/sharing/item-sha
 import HeaderBarView from '../../../views/apps/text-editor/header-bar/header-bar-view.js';
 import EditableTextView from '../../../views/apps/text-editor/mainbar/editable-text-view.js';
 import FooterBarView from '../../../views/apps/text-editor/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/text-editor/forms/preferences/preferences-form-view.js'
 import FileUtils from '../../../utilities/files/file-utils.js';
 
 export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
@@ -155,7 +156,7 @@ export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
 					if (!end) {
 						end = numLines;
 					}
-					this.getChildView('contents').getChildView('contents').selectRange(start, end);
+					this.getChildView('contents contents').selectRange(start, end);
 				}
 			}));
 		});
@@ -270,7 +271,7 @@ export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
 				}
 			});
 		} else {
-			this.getChildView('contents').set('');
+			this.getChildView('contents').set(this.model.get('contents'));
 		}
 
 		this.onLoad();
@@ -694,4 +695,13 @@ export default AppView.extend(_.extend({}, FindReplaceable, ItemShareable, {
 		this.getChildView('contents').changed = false;
 		this.getChildView('header menu').onSave();
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

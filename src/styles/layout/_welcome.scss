@@ -27,7 +27,7 @@ $splash-logo-shadow: drop-shadow(10px 10px 10px rgba(black, 20%));
 $text-shadow: 1px 1px 5px rgba(black, 50%);
 $text-size: 1.25em;
 $round-border-radius: 30px;
-$rounded-border-radius: 10px;
+$rounded-border-radius: 15px;
 
 //
 // styles
@@ -110,6 +110,16 @@ $rounded-border-radius: 10px;
 					//
 					&.active {
 						cursor: pointer;
+					}
+				}
+
+				.logotype {
+					&.round {
+						border-radius: $round-border-radius;
+					}
+
+					&.rounded {
+						border-radius: $rounded-border-radius;
 					}
 				}
 				
@@ -242,6 +252,10 @@ $rounded-border-radius: 10px;
 						flex-direction: column;
 						justify-content: center;
 					} 
+
+					> .background {
+						pointer-events: none;
+					}
 
 					.caption {
 						font-size: $text-size;

@@ -42,10 +42,6 @@ body:not(.binary).monochrome {
 				.metal($color);
 			}
 
-			&.raspberry {
-				.metal($color);
-			}
-
 			&.red-orange {
 				.metal($color);
 			}
@@ -99,6 +95,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.metal($color);
+			}
+
+			&.raspberry {
 				.metal($color);
 			}
 
@@ -141,10 +141,6 @@ body:not(.binary).monochrome {
 				.metal($selected-color);
 			}
 
-			&.raspberry {
-				.metal($selected-color);
-			}
-
 			&.red-orange {
 				.metal($selected-color);
 			}
@@ -198,6 +194,10 @@ body:not(.binary).monochrome {
 			}
 
 			&.magenta {
+				.metal($selected-color);
+			}
+
+			&.raspberry {
 				.metal($selected-color);
 			}
 

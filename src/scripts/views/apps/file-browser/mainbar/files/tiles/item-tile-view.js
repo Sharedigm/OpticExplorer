@@ -16,11 +16,10 @@
 \******************************************************************************/
 
 import TileView from '../../../../../../views/items/tiles/tile-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
 import ItemBadgesView from '../../../../../../views/apps/file-browser/mainbar/files/badges/item-badges-view.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
-export default TileView.extend(_.extend({}, Mappable, {
+export default TileView.extend({
 
 	//
 	// attributes
@@ -28,16 +27,11 @@ export default TileView.extend(_.extend({}, Mappable, {
 
 	template: template(`
 		<div class="tile">
-		
+
 			<div class="icon">
 				<%= icon %>
-				<% if (geo_orientation != undefined) { %>
-				<div class="geoorientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)">
-					<i class="fa fa-location-arrow"></i>
-				</div>
-				<% } %>
 			</div>
-			
+
 			<div class="name" spellcheck="false"><%= name %></div>
 		
 			<% if (owner) { %>
@@ -82,6 +76,10 @@ export default TileView.extend(_.extend({}, Mappable, {
 		return !item || item == this.model;
 	},
 
+	hasOwner: function() {
+		return this.model? this.model.has('owner') : false;
+	},
+
 	//
 	// getting methods
 	//
@@ -90,14 +88,22 @@ export default TileView.extend(_.extend({}, Mappable, {
 		return this.model.getName();
 	},
 
+	getOwner: function() {
+		return this.model? this.model.get('owner') : undefined;
+	},
+
 	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;
+		if (!this.hasOwner()) {
+			return false;
 		}
-		return false;
+		let owner = this.getOwner()
+		return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
+			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
+		}) : undefined;
+	},
+
+	getGeoOrientation: function() {
+		return this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined;
 	},
 
 	//
@@ -142,10 +148,9 @@ export default TileView.extend(_.extend({}, Mappable, {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
-			owner: this.get('owner'),
+			owner: this.getOwner(),
 			owner_thumbnail_url: this.getOwnerThumbnailUrl(),
-			details: this.getDetails(),
-			geo_orientation: this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined
+			details: this.getDetails()
 		};
 	},
 
@@ -167,4 +172,4 @@ export default TileView.extend(_.extend({}, Mappable, {
 			this.options.ondropout(this.parent.getSelectedModels());
 		}
 	}
-}));
+});

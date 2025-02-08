@@ -23,116 +23,19 @@ export default ViewMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation" class="show-toolbars dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-wrench"></i>Toolbars<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="show-toolbar dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation" class="option">
-					<a class="show-nav-bar"><i class="fa fa-check"></i><i class="fa fa-sitemap"></i>Nav</a>
-				</li>
-
-				<li role="presentation" class="option">
-					<a class="show-track-bar"><i class="fa fa-check"></i><i class="fa fa-play"></i>Track</a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="hidden-xs dropdown dropdown-submenu">
-			<a class="show-sidebar dropdown-toggle"><i class="fa fa-check"></i><i class="fa fa-pause"></i>Sidebar<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="show-sidebar-panels dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="show-tunes-panel"><i class="fa fa-check"></i><i class="fa fa-music"></i>Tunes</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation">
-			<a class="show-markup"><i class="fa fa-check"></i><i class="fa fa-font"></i>Markup</a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation" class="mobile-only">
-			<a class="expand-window"><i class="fa fa-expand"></i>Expand</a>
-		</li>
-		
-		<li role="presentation" class="windowed-app-only window-size dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="far fa-window-maximize"></i>Window Size<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-		
-			<ul class="dropdown-menu" data-toggle="dropdown">
-		
-				<li role="presentation">
-					<a class="shrink-window"><i class="fa fa-minus"></i>Shrink<span class="command shortcut">[</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="grow-window"><i class="fa fa-plus"></i>Grow<span class="command shortcut">]</span></a>
-				</li>
-		
-				<li role="presentation">
-					<a class="expand-window"><i class="fa fa-expand"></i>Expand<span class="command shortcut">\\</span></a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only spaces dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-maximize"></i>Spaces<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="prev-space"><i class="fa fa-chevron-left"></i>Prev<span class="command shortcut">left arrow</span></a>
-				</li>
-
-				<li role="presentation">
-					<a class="next-space"><i class="fa fa-chevron-right"></i>Next<span class="command shortcut">right arrow</span></a>
-				</li>
-			</ul>
-		</li>
-
-		<li role="presentation" class="desktop-app-only windows dropdown dropdown-submenu">
-			<a class="dropdown-toggle"><i class="fa fa-check"></i><i class="far fa-window-restore"></i>Windows<i class="fa fa-caret-left"></i><i class="fa fa-caret-right"></i></a>
-
-			<ul class="dropdown-menu" data-toggle="dropdown">
-
-				<li role="presentation">
-					<a class="minimize-all"><i class="fa fa-window-minimize"></i>Minimize All</a>
-				</li>
-
-				<li role="presentation">
-					<a class="unminimize-all"><i class="fa fa-window-restore"></i>Unminimize All</a>
-				</li>
-			</ul>
-		</li>
-		
-		<li role="presentation" class="desktop-app-only">
-			<a class="view-full-screen"><i class="fa fa-check full-screen-visible"></i><i class="fa fa-desktop"></i>Full Screen<span class="command shortcut">\\</span></a>
-		</li>
-		
-		<% if (application.session.user) { %>
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="view-preferences"><i class="fa fa-snowflake"></i>Preferences</a>
-		</li>
-		<% } %>
-	`),
-
 	events: {
 
 		// toolbar options
 		//
-		'click .show-toolbars > a': 'onClickShowToolbars',
-		'click .show-toolbar > li > a': 'onClickShowToolbar',
+		'click .show-toolbars': 'onClickShowToolbars',
+		'click .show-toolbar > a': 'onClickShowToolbar',
 
 		// sidebar options
 		//
-		'click .show-sidebar': 'onClickOption',
-		'click .show-sidebar-panels a': 'onClickShowSideBarPanel',
+		'click .show-sidebar': 'onClickShowSidebar',
+		'click .show-sidebar-panel > a': 'onClickShowSideBarPanel',
+		'click .sidebar-view-kind > a': 'onClickSideBarViewKind',
+		'click .sidebar-tile-size > a': 'onClickSideBarTileSize',
 		'click .show-markup': 'onClickOption',
 
 		// window options

@@ -16,12 +16,13 @@
 \******************************************************************************/
 
 import AppView from '../../../views/apps/common/app-view.js';
-import Launchable from '../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../views/apps/common/behaviors/opening/app-launchable.js';
 import HeaderBarView from '../../../views/apps/app-launcher/header-bar/header-bar-view.js';
 import AppsCarouselView from '../../../views/apps/app-launcher/mainbar/apps-carousel/apps-carousel-view.js';
 import FooterBarView from '../../../views/apps/app-launcher/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/app-launcher/forms/preferences/preferences-form-view.js'
 
-export default AppView.extend(_.extend({}, Launchable, {
+export default AppView.extend(_.extend({}, AppLaunchable, {
 
 	//
 	// attributes
@@ -50,9 +51,7 @@ export default AppView.extend(_.extend({}, Launchable, {
 		// set attributes
 		//
 		if (!this.collection) {
-			this.collection = this.getApps((app) => {
-				return app.get('id') != 'app_launcher' && !app.get('hidden');
-			});
+			this.collection = this.getLaunchableApps();
 		}
 
 		// set static attributes
@@ -63,6 +62,21 @@ export default AppView.extend(_.extend({}, Launchable, {
 	//
 	// getting methods
 	//
+
+	getLaunchableApps: function() {
+		let apps = application.getVisibleApps((app) => {
+			return app.get('id') != 'app_launcher' && !app.get('hidden');
+		});
+
+		// sort by app name
+		//
+		apps.comparator = function(item) {
+			return item.get('name');
+		};
+		apps.sort();
+
+		return apps;
+	},
 
 	getStatusBarView: function() {
 		return FooterBarView.prototype.getStatusBarView();
@@ -127,7 +141,7 @@ export default AppView.extend(_.extend({}, Launchable, {
 				//
 				if (item) {						
 					window.setTimeout(() => {
-						this.openApp(item);
+						this.openItem(item);
 
 						// close dialog
 						//
@@ -194,4 +208,13 @@ export default AppView.extend(_.extend({}, Launchable, {
 		//
 		this.constructor.current = null;
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

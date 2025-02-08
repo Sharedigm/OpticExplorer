@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"class": "open-theme",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "save-as",
+			"icon": "fa fa-save",
+			"name": "Save As",
+			"shortcut": "command-S"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

@@ -16,36 +16,14 @@
 \******************************************************************************/
 
 import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
-import Launchable from '../../../../../../views/apps/common/behaviors/launching/launchable.js';
+import AppLaunchable from '../../../../../../views/apps/common/behaviors/opening/app-launchable.js';
 import Minimizable from '../../../../../../views/dialogs/behaviors/minimizable.js';
 
-export default MenuView.extend(_.extend({}, Launchable, {
+export default MenuView.extend(_.extend({}, AppLaunchable, {
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<% if (apps) { %>
-		<% for (let i = 0; i < apps.length; i++) { %>
-		<% let app = apps.at(i); %>
-		<li role="presentation">
-			<a class="app-item" data-index="<%= i %>"><i class="<%= app.get('icon') %>"></i><%= app.get('name') %></a>
-		</li>
-		<% } %>
-		
-		<% if (tasks.length > 0) { %>
-		<li role="separator" class="divider"></li>
-		<% } %>
-		<% } %>
-		
-		<% for (let j = 0; j < tasks.length; j++) { %>
-		<% let task = tasks.at(j); %>
-		<li role="presentation">
-			<a class="task-item" data-index="<%= j %>"><i class="<%= task.get('icon') %>"></i><%= task.get('title') %></a>
-		</li>
-		<% } %>
-	`),
 
 	events: {
 		'click .app-item': 'onClickApp',
@@ -68,6 +46,7 @@ export default MenuView.extend(_.extend({}, Launchable, {
 			this.apps = this.getApps();
 		}
 		this.tasks = Minimizable.getMinimized();
+		this.items = this.getDesktopItems();
 
 		// update menu upon change in tasks
 		//
@@ -79,15 +58,50 @@ export default MenuView.extend(_.extend({}, Launchable, {
 		});
 	},
 
+	getDesktopItems: function() {
+		let items = [];
+
+		// add apps
+		//
+		for (let i = 0; i < this.apps.length; i++) {
+			let app = this.apps.at(i);
+			items.push({
+				class: 'app-item',
+				icon: app.get('icon'),
+				name: app.get('name'),
+				tags: {
+					'data-index': i
+				}
+			});
+		}
+
+		// add tasks
+		//
+		if (this.tasks.length > 0) {
+			items.push("separator");
+
+			for (let i = 0; i < this.tasks.length; i++) {
+				let task = this.tasks.at(i);
+				items.push({
+					class: 'task-item',
+					icon: task.get('icon'),
+					name: task.get('title'),
+					tags: {
+						'data-index': i
+					}
+				});
+			}
+		}
+
+		return items;
+	},
+
 	//
 	// rendering methods
 	//
 
-	templateContext: function() {
-		return {
-			apps: this.apps,
-			tasks: this.tasks
-		};
+	template: function(data) {
+		return data.view.toHtml(data.view.getDesktopItems());
 	},
 
 	onRender: function() {
@@ -108,33 +122,41 @@ export default MenuView.extend(_.extend({}, Launchable, {
 		});
 	},
 
+	showLink: function(url) {
+		application.launch('web_browser', {
+			url: url
+		});
+	},
+
+	showApp: function(app, options) {
+		application.launch(app, options);
+	},
+
 	//
 	// mouse event handling methods
 	//
 
 	onClickApp: function(event) {
-		let index = parseInt($(event.target).attr('data-index'));
+		let element = $(event.target).closest('li');
+		let index = parseInt($(element).attr('data-index'));
 		let model = this.apps.at(index);
 
 		if (model.has('link')) {
 
-			// go to link
+			// show link
 			//
-			/*
-			application.navigate(model.get('link'), {
-				trigger: true
-			});
-			*/
-			application.launch('web_browser', {
-				url: model.get('link')
-			});
+			this.showLink(model.get('link'));
 		} else {
-			application.launch(model.get('id'), model.get('options'));
+
+			// show app
+			//
+			this.showApp(model.get('id'), model.get('options'));
 		}
 	},
 
 	onClickTask: function() {
-		let index = parseInt($(event.target).attr('data-index'));
+		let element = $(event.target).closest('li');
+		let index = parseInt($(element).attr('data-index'));
 		let model = this.tasks.at(index);
 
 		let view = model.get('view');

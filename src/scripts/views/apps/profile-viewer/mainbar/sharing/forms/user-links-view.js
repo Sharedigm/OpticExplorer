@@ -192,7 +192,7 @@ export default BaseView.extend({
 
 	onClickShareLink: function() {
 		import(
-			'../../../../../../views/apps/web-browser/dialogs/links/copy-link-dialog-view.js'
+			'../../../../../../views/apps/file-browser/dialogs/links/copy-link-dialog-view.js'
 		).then((CopyLinkDialogView) => {
 
 			// show copy link dialog

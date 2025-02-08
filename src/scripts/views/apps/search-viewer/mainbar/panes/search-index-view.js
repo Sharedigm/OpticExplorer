@@ -20,12 +20,12 @@ import UserPreferences from '../../../../../models/preferences/user-preferences.
 import File from '../../../../../models/storage/files/file.js';
 import Items from '../../../../../collections/storage/items.js';
 import BaseView from '../../../../../views/base-view.js';
-import Openable from '../../../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../../../views/apps/common/behaviors/opening/item-openable.js';
 import FilesView from '../../../../../views/apps/search-viewer/mainbar/files/files-view.js';
 import PagerView from '../../../../../views/apps/common/mainbar/pager/pager-view.js';
 import FileIndex from '../../../../../utilities/files/file-index.js';
 
-export default BaseView.extend(_.extend({}, Openable, {
+export default BaseView.extend(_.extend({}, ItemOpenable, {
 
 	//
 	// attributes
@@ -145,7 +145,7 @@ export default BaseView.extend(_.extend({}, Openable, {
 						path: (owner.isAdmin()? '/' : '') + data[i].path,
 						size: item.size,
 						file_id: item.id,
-						owner: owner,
+						// owner: owner,
 						score: item.score,
 						created_at: new Date(item.created_at),
 						modified_at: new Date(item.updated_at),

@@ -30,10 +30,6 @@ body:not(.binary) {
 				@include chalk-btns.shaded(colors.$medium-red);
 			}
 
-			&.raspberry {
-				@include chalk-btns.shaded(colors.$medium-raspberry);
-			}
-
 			&.red-orange {
 				@include chalk-btns.shaded(colors.$medium-red-orange);
 			}
@@ -88,6 +84,10 @@ body:not(.binary) {
 
 			&.magenta {
 				@include chalk-btns.shaded(colors.$medium-magenta);
+			}
+
+			&.raspberry {
+				@include chalk-btns.shaded(colors.$medium-raspberry);
 			}
 
 			&.brown {

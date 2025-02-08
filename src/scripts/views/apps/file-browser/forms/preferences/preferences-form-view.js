@@ -19,6 +19,7 @@ import PreferencesGroupView from '../../../../../views/apps/common/forms/prefere
 import GeneralPrefsFormView from '../../../../../views/apps/file-browser/forms/preferences/general-prefs-form-view.js';
 import FilePrefsFormView from '../../../../../views/apps/file-browser/forms/preferences/file-prefs-form-view.js';
 import DisplayPrefsFormView from '../../../../../views/apps/file-browser/forms/preferences/display-prefs-form-view.js';
+import WindowPrefsFormView from '../../../../../views/apps/file-browser/forms/preferences/window-prefs-form-view.js';
 import SlideShowPrefsFormView from '../../../../../views/apps/file-browser/forms/preferences/slide-show-prefs-form-view.js';
 import FileAssociationsListView from '../../../../../views/apps/file-browser/lists/file-associations-list/file-associations-list-view.js';
 
@@ -28,77 +29,32 @@ export default PreferencesGroupView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="app-icons"></div>
-		
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general-tab<% if (tab == 'general' || !tab) { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".general-prefs">
-					<i class="fa fa-check"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="files-tab<% if (tab == 'files') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".file-prefs">
-					<i class="fa fa-file"></i>
-					<label>Files</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="display-tab<% if (tab == 'display') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".display-prefs">
-					<i class="fa fa-desktop"></i>
-					<label>Display</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="slide-show-tab<% if (tab == 'slide_show') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".slide-show-prefs">
-					<i class="fa fa-play"></i>
-					<label>Slide Show</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="behavior-tab<% if (tab == 'associations') { %> active<% } %>">
-				<a role="tab" data-toggle="tab" href=".associations">
-					<i class="fa fa-rocket"></i>
-					<label>Associations</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-prefs tab-pane<% if (tab == 'general' || !tab) { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="file-prefs tab-pane<% if (tab == 'files') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="display-prefs tab-pane<% if (tab == 'display') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="slide-show-prefs tab-pane<% if (tab == 'slide_show') { %> active<% } %>">
-			</div>
-		
-			<div role="tabpanel" class="associations tab-pane<% if (tab == 'associations') { %> active<% } %>">
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: {
-			el: '.app-icons',
-			replaceElement: true
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-check"
 		},
-		general: '.general-prefs',
-		files: '.file-prefs',
-		display: '.display-prefs',
-		slide_show: '.slide-show-prefs',
-		associations: '.associations',
-	},
+		{
+			"name": "Display",
+			"icon": "fa fa-desktop"
+		},
+		{
+			"name": "Window",
+			"icon": "fa fa-window-maximize"
+		},
+		{
+			"name": "Files",
+			"icon": "fa fa-file"
+		},
+		{
+			"name": "Slide Show",
+			"icon": "fa fa-play"
+		},
+		{
+			"name": "Apps",
+			"icon": "fa fa-rocket"
+		}
+	],
 
 	//
 	// constructor
@@ -122,16 +78,19 @@ export default PreferencesGroupView.extend({
 			case 'general':
 				this.showGeneralPrefs();
 				break;
-			case 'files':
-				this.showFilePrefs();
-				break;
 			case 'display':
 				this.showDisplayPrefs();
+				break;
+			case 'window':
+				this.showWindowPrefs();
+				break;
+			case 'files':
+				this.showFilePrefs();
 				break;
 			case 'slide_show':
 				this.showSlideShowPrefs();
 				break;
-			case 'associations':
+			case 'apps':
 				this.showFileAssociations();
 				break;
 		}
@@ -139,18 +98,6 @@ export default PreferencesGroupView.extend({
 
 	showGeneralPrefs: function() {
 		this.showChildView('general', new GeneralPrefsFormView({
-			model: this.model,
-
-			// callbacks
-			//
-			onchange: (key, value) => {
-				this.setOption(key, value);
-			}
-		}));		
-	},
-
-	showFilePrefs: function() {
-		this.showChildView('files', new FilePrefsFormView({
 			model: this.model,
 
 			// callbacks
@@ -170,7 +117,31 @@ export default PreferencesGroupView.extend({
 			onchange: (key, value) => {
 				this.setOption(key, value);
 			}
-		}));	
+		}));
+	},
+
+	showWindowPrefs: function() {
+		this.showChildView('window', new WindowPrefsFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onchange: (key, value) => {
+				this.setOption(key, value);
+			}
+		}));
+	},
+
+	showFilePrefs: function() {
+		this.showChildView('files', new FilePrefsFormView({
+			model: this.model,
+
+			// callbacks
+			//
+			onchange: (key, value) => {
+				this.setOption(key, value);
+			}
+		}));		
 	},
 
 	showSlideShowPrefs: function() {
@@ -186,7 +157,7 @@ export default PreferencesGroupView.extend({
 	},
 
 	showFileAssociations: function() {
-		this.showChildView('associations', new FileAssociationsListView({
+		this.showChildView('apps', new FileAssociationsListView({
 			collection: this.options.associations.toCollection('extension', 'application'),
 
 			// callbacks

@@ -26,6 +26,7 @@ Promise.all([
 	fetch('config/fonts.json').then(response => response.json()),
 	fetch('config/help.json').then(response => response.json()),
 	fetch('config/keycodes.json').then(response => response.json()),
+	fetch('config/preferences.json').then(response => response.json()),
 	fetch('config/sounds.json').then(response => response.json()),
 	fetch('config/theme.json').then(response => response.json()),
 	fetch('config/welcome.json').then(response => response.json())
@@ -42,6 +43,7 @@ Promise.all([
 	window.config.fonts = files[i++];
 	window.config.help = files[i++];
 	window.config.keycodes = files[i++];
+	window.config.preferences = files[i++];
 	window.config.sounds = files[i++];
 	window.config.theme = files[i++];
 	window.config.welcome = files[i++];

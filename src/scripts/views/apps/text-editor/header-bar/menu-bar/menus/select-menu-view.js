@@ -23,40 +23,6 @@ export default SelectMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="select-all"><i class="fa fa-asterisk"></i>All<span class="command shortcut">A</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-word"><i class="fa fa-text-width"></i>Word<span class="command shortcut">1</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-line"><i class="fa fa-arrows-alt-h"></i>Line<span class="command shortcut">2</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-paragraph"><i class="fa fa-paragraph"></i>Paragraph<span class="command shortcut">3</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="select-before"><i class="fa fa-long-arrow-alt-up"></i>Before<span class="command shortcut">9</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-after"><i class="fa fa-long-arrow-alt-down"></i>After<span class="command shortcut">0</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="select-range"><i class="fa fa-arrows-alt-v"></i>Range</a>
-		</li>
-	`),
-
 	events: {
 		'click .select-all': 'onClickSelectAll',
 		'click .select-word': 'onClickSelectWord',

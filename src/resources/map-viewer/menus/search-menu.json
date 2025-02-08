@@ -1,0 +1,25 @@
+{
+	"items": [
+		{
+			"class": "search-by-address",
+			"group": "search-by",
+			"icon": "fa fa-home",
+			"name": "By Address",
+			"select": true
+		},
+		{
+			"class": "search-by-name",
+			"group": "search-by",
+			"icon": "fa fa-font",
+			"name": "By Place Name",
+			"select": true
+		},
+		{
+			"class": "search-by-coords",
+			"group": "search-by",
+			"icon": "fa fa-crosshairs",
+			"name": "By Coordinates",
+			"select": true
+		}
+	]
+}

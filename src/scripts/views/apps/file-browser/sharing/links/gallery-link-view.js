@@ -121,9 +121,6 @@ export default FolderLinkView.extend({
 	//
 
 	showImageViewer: function(imageFile) {
-
-		// launch image viewer
-		//
 		application.launch('image_viewer', {
 			model: imageFile
 		}, {
@@ -132,9 +129,6 @@ export default FolderLinkView.extend({
 	},
 
 	showMapViewer: function(imageFiles) {
-
-		// launch map viewer
-		//
 		application.launch('map_viewer', {
 			photos: imageFiles
 		}, {
@@ -143,9 +137,6 @@ export default FolderLinkView.extend({
 	},
 
 	showSlideShow: function(imageFile) {
-
-		// launch image viewer in slide show mode
-		//
 		application.launch('image_viewer', {
 			model: imageFile,
 			defaults: {
@@ -159,9 +150,6 @@ export default FolderLinkView.extend({
 	},
 
 	showFileBrowser: function(directory) {
-
-		// launch file browser
-		//
 		application.launch('file_browser', {
 			model: directory,
 			defaults: {

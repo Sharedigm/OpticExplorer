@@ -18,6 +18,7 @@
 import ItemsView from '../../../../../views/items/items-view.js';
 import SettingsIconsView from '../../../../../views/apps/settings-manager/sidebar/items/icons/settings-icons-view.js';
 import SettingsListView from '../../../../../views/apps/settings-manager/sidebar/items/lists/settings-list-view.js';
+import SettingsCardsView from '../../../../../views/apps/settings-manager/sidebar/items/cards/settings-cards-view.js';
 
 export default ItemsView.extend({
 
@@ -107,6 +108,9 @@ export default ItemsView.extend({
 			case 'lists':
 				this.showLists();
 				break;
+			case 'cards':
+				this.showCards();
+				break;
 		}
 	},
 
@@ -118,6 +122,12 @@ export default ItemsView.extend({
 
 	showLists: function() {
 		this.showChildView('items', new SettingsListView(_.extend({
+			collection: this.collection
+		}, this.options)));
+	},
+
+	showCards: function() {
+		this.showChildView('items', new SettingsCardsView(_.extend({
 			collection: this.collection
 		}, this.options)));
 	}

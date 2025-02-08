@@ -19,13 +19,12 @@ import File from '../../../../../../models/storage/files/file.js';
 import Directory from '../../../../../../models/storage/directories/directory.js';
 import Volume from '../../../../../../models/storage/directories/volume.js';
 import ListView from '../../../../../../views/items/lists/list-view.js';
-import ContainableMappable from '../../../../../../views/maps/behaviors/containable-mappable.js';
 import DirectoryItemView from '../../../../../../views/apps/file-browser/mainbar/files/lists/directory-item-view.js';
 import FileItemView from '../../../../../../views/apps/file-browser/mainbar/files/lists/file-item-view.js';
 import VolumeItemView from '../../../../../../views/apps/file-browser/mainbar/files/lists/volume-item-view.js';
 import CssUtils from '../../../../../../utilities/web/css-utils.js';
 
-export default ListView.extend(_.extend({}, ContainableMappable, {
+export default ListView.extend({
 
 	//
 	// rendering methods
@@ -51,7 +50,7 @@ export default ListView.extend(_.extend({}, ContainableMappable, {
 		//
 		this.constructor.applyFileStyles(config.files.files.extensions);
 	}
-}), {
+}, {
 
 	//
 	// static methods

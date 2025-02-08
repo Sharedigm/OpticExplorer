@@ -23,61 +23,22 @@ export default MenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<% if (config.apps.connection_manager && !config.apps.connection_manager.hidden) { %>
-		<li role="presentation">
-			<a class="share-by-invitation"><i class="fa fa-user-friends"></i>By Invitation</a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-		<% } %>
-
-		<li role="presentation">
-			<a class="share-by-topic"><i class="fa fa-newspaper"></i>By Discussion Topic</a>
-		</li>
-
-		<li role="presentation">
-			<a class="share-by-message"><i class="fa fa-comments"></i>By Chat Messsage</a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="share-by-link"><i class="fa fa-link"></i>By Link</a>
-		</li>
-
-		<li role="presentation">
-			<a class="share-by-email"><i class="fa fa-envelope"></i>By Email</a>
-		</li>
-	`),
-
-	events: {
-		'click .share-by-invitation': 'onClickShareByInvitation',
-		'click .share-by-topic': 'onClickShareByTopic',
-		'click .share-by-message': 'onClickShareByMessage',
-		'click .share-by-link': 'onClickShareByLink',
-		'click .share-by-email': 'onClickShareByEmail'
-	},
-
-	//
-	// querying methods
-	//
-
 	visible: function() {
-		let hasTopics = config.apps.topic_browser.hidden != true;
-		let hasChats = config.apps.chat_browser.hidden != true;
+		let hasConnectionManager = application.hasApp('connection_manager');
+		let hasTopicViewer = application.hasApp('topic_viewer');
+		let hasChatViewer = application.hasApp('chat_viewer');
 
 		return {
-			'share-by-invitation': true,
-			'share-by-topic': hasTopics,
-			'share-by-message': hasChats,
+			'share-by-invitation': hasConnectionManager,
+			'share-by-topic': hasTopicViewer,
+			'share-by-message': hasChatViewer,
 			'share-by-link': true,
 			'share-by-email': true
 		};
 	},
 
 	enabled: function() {
-		let hasShareable = this.parent.app.hasShareable();
+		let hasShareable = this.parent.app.hasShareable? this.parent.app.hasShareable() : false;
 
 		return {
 			'share-by-invitation': hasShareable,
@@ -86,5 +47,31 @@ export default MenuView.extend({
 			'share-by-link': hasShareable,
 			'share-by-email': hasShareable
 		};
+	},
+
+	//
+	// getting methods
+	//
+
+	getFileItems: function() {
+		let files = config.defaults.sharing.files;
+		let items = [];
+
+		// add file types
+		//
+		if (files) {
+			items.push('separator');
+			let keys = Object.keys(files);
+			for (let i = 0; i < keys.length; i++) {
+				let key = keys[i];
+				items.push({
+					class: 'share-attachments',
+					icon: files[key].icon,
+					name: key
+				});
+			}
+		}
+
+		return items;
 	}
 });

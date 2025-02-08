@@ -159,26 +159,6 @@ export default File.extend({
 
 	fetchExif: function(options) {
 
-		// compose data
-		//
-		/*
-		let data = {
-			path: this.get('path')
-		};
-		if (this.has('volume')) {
-			data.volume = this.get('volume');
-		}
-		if (this.has('link_id')) {
-			data.link_id = this.get('link_id');
-		}
-		if (this.has('share_id')) {
-			data.share_id = this.get('share_id');
-		}
-		if (this.has('post_attachment_id')) {
-			data.post_attachment_id = this.get('post_attachment_id');
-		}
-		*/
-
 		// fetch exif info
 		//
 		$.ajax({

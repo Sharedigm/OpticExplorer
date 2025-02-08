@@ -16,11 +16,10 @@
 \******************************************************************************/
 
 import IconView from '../../../../../../views/items/icons/icon-view.js';
-import Mappable from '../../../../../../views/maps/behaviors/mappable.js';
 import ItemBadgesView from '../../../../../../views/apps/file-browser/mainbar/files/badges/item-badges-view.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
-export default IconView.extend(_.extend({}, Mappable, {
+export default IconView.extend({
 
 	//
 	// attributes
@@ -31,12 +30,6 @@ export default IconView.extend(_.extend({}, Mappable, {
 		
 			<div class="icon">
 				<%= icon %>
-
-				<% if (geo_orientation != undefined) { %>
-				<div class="geoorientation marker" style="transform:rotate(<%= Math.round(geo_orientation.heading) %>deg)" data-toggle="tooltip" title="orientation: <%= Math.round(geo_orientation.heading) %> &deg; N">
-					<i class="fa fa-location-arrow"></i>
-				</div>
-				<% } %>
 
 				<% if (owner) { %>
 				<div class="owner small tile" data-toggle="tooltip" data-html="true" title="shared by<br /><%= owner.getName() %>" data-placement="right">
@@ -83,7 +76,11 @@ export default IconView.extend(_.extend({}, Mappable, {
 		let item = this.model.collection.directory.getItemNamed(name);
 		return !item || item == this.model;
 	},
-	
+
+	hasOwner: function() {
+		return this.model? this.model.has('owner') : false;
+	},
+
 	//
 	// getting methods
 	//
@@ -92,14 +89,22 @@ export default IconView.extend(_.extend({}, Mappable, {
 		return this.model.getName();
 	},
 
+	getOwner: function() {
+		return this.model? this.model.get('owner') : undefined;
+	},
+
 	getOwnerThumbnailUrl: function() {
-		if (this.model.has('owner')) {
-			let owner = this.model.get('owner');
-			return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
-				min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
-			}) : undefined;
+		if (!this.hasOwner()) {
+			return false;
 		}
-		return false;
+		let owner = this.getOwner()
+		return owner.hasProfilePhoto()? owner.getProfilePhotoUrl({
+			min_size: Math.floor(this.ownerThumbnailSize * (window.devicePixelRatio || 1))
+		}) : undefined;
+	},
+
+	getGeoOrientation: function() {
+		return this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined;
 	},
 
 	getDetailLevel: function() {
@@ -179,10 +184,9 @@ export default IconView.extend(_.extend({}, Mappable, {
 		return {
 			icon: this.getIcon(),
 			name: this.getName(),
-			owner: this.get('owner'),
+			owner: this.getOwner(),
 			owner_thumbnail_url: this.getOwnerThumbnailUrl(),
-			details: this.getDetails(),
-			geo_orientation: this.model.getGeoOrientation? this.model.getGeoOrientation() : undefined
+			details: this.getDetails()
 		};
 	},
 
@@ -204,4 +208,4 @@ export default IconView.extend(_.extend({}, Mappable, {
 			this.options.ondropout(this.parent.getSelectedModels());
 		}
 	}
-}));
+});

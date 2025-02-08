@@ -141,8 +141,11 @@ export default SideBarPanelView.extend({
 			filter: (view) => {
 				return !view.isHidden();
 			},
-			selected: this.options.selected,
 			show_root: true,
+
+			// state
+			//
+			selected: this.options.selected,
 
 			// capabilities
 			//

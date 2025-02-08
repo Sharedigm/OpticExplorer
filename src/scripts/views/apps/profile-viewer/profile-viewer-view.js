@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             profile-viewer-view.js                            |
+|                            profile-viewer-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -15,7 +15,7 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import Connection from '../../../models/users/connections/connection.js';
+import Connection from '../../../models/connections/connection.js';
 import Post from '../../../models/topics/post.js';
 import UserProfile from '../../../models/users/profile/user-profile.js';
 import Gesture from '../../../models/gestures/gesture.js';
@@ -23,17 +23,18 @@ import File from '../../../models/storage/files/file.js';
 import Directory from '../../../models/storage/directories/directory.js';
 import Place from '../../../models/places/place.js';
 import CheckIn from '../../../models/places/check-in.js';
-import Connections from '../../../collections/users/connections/connections.js';
+import Connections from '../../../collections/connections/connections.js';
 import AppSplitView from '../../../views/apps/common/app-split-view.js';
-import Openable from '../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../views/apps/common/behaviors/opening/item-openable.js';
 import ConnectionShareable from '../../../views/apps/common/behaviors/sharing/connection-shareable.js';
 import LinkShareable from '../../../views/apps/common/behaviors/sharing/link-shareable.js';
 import HeaderBarView from '../../../views/apps/profile-viewer/header-bar/header-bar-view.js';
 import UserPanelsView from '../../../views/apps/profile-viewer/mainbar/user-panels-view.js';
 import SideBarView from '../../../views/apps/profile-viewer/sidebar/sidebar-view.js';
 import FooterBarView from '../../../views/apps/profile-viewer/footer-bar/footer-bar-view.js';
+import PreferencesFormView from '../../../views/apps/profile-viewer/forms/preferences/preferences-form-view.js'
 
-export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, LinkShareable, {
+export default AppSplitView.extend(_.extend({}, ItemOpenable, ConnectionShareable, LinkShareable, {
 
 	//
 	// attributes
@@ -181,7 +182,13 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 		}
 	},
 
-	deleteItems: function() {
+	deleteItems: function(items, options) {
+		for (let i = 0; i < items.length; i++) {
+			items[i].delete(options);
+		}
+	},
+
+	deleteSelectedItems: function() {
 
 		// check if current user
 		//
@@ -198,25 +205,24 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 			return;
 		}
 
+		if (!this.hasSelected()) {
+			return;
+		}
+
 		// delete selected
 		//
 		switch (this.tab) {
 			case 'profile':
 			case 'posts': {
-				let selected = this.getSelected();
-				for (let i = 0; i < selected.length; i++) {
-					selected[i].delete({
-						confirm: true
-					});
-				}
+				this.deleteItems(this.getSelected(), {
+					confirm: true
+				});
 				break;
 			}
 			case 'connections': {
-				if (this.hasSelected()) {
-					this.deleteConnections(this.getSelectedModels(), {
-						confirm: true
-					});
-				}
+				this.deleteConnections(this.getSelectedModels(), {
+					confirm: true
+				});
 				break;
 			}
 		}
@@ -285,42 +291,16 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	// sharing methods
 	//
 
-	shareFiles: function(options) {
-		this.shareWithConnection(this.model, null, options);
+	shareWithSelected: function(options) {
+		this.shareWithConnections([this.model], null, options);
 	},
 
-	shareAudio: function(options) {
-		this.shareFiles(_.extend({
-			model: application.getDirectory('Audio')
-		}, options));
-	},
-
-	shareMusic: function(options) {
-		this.shareFiles(_.extend({
-			model: application.getDirectory('Music')
-		}, options));
-	},
-
-	sharePictures: function(options) {
-		this.shareFiles(_.extend({
-			model: application.getDirectory('Pictures')
-		}, options));
-	},
-
-	shareVideos: function(options) {
-		this.shareFiles(_.extend({
-			model: application.getDirectory('Videos')
-		}, options));
-	},
-
-	shareMaps: function(options) {
-		this.shareFiles(_.extend({
-			model: application.getDirectory('Maps')
-		}, options));
+	shareItemsWithSelected: function(items, options) {
+		this.shareWithConnections([this.model], items, options);
 	},
 
 	shareMessage: function() {
-		application.launch('chat-viewer', {
+		application.launch('chat_viewer', {
 			user: this.model
 		});
 	},
@@ -398,7 +378,7 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 
 	editName: function() {
 		import(
-			'../../../views/apps/profile-viewer/dialogs/profile/edit-user-name-dialog-view.js'
+			'../../../views/apps/profile-viewer/dialogs/profile/edit/edit-user-name-dialog-view.js'
 		).then((EditUserNameDialogView) => {
 			
 			// show edit dialog
@@ -439,7 +419,9 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	},
 
 	openPost: function(post) {
-		application.showPost(post);
+		application.launch('post_viewer', {
+			model: post
+		});
 	},
 
 	//
@@ -603,9 +585,6 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	setMenuMode: function(mode) {
 		let editMenu = this.getChildView('header menu edit');
 		editMenu.setMenuMode(mode);
-		editMenu.setItemEnabled('add');
-		editMenu.setItemDisabled('edit');
-		editMenu.setItemDisabled('delete'); 
 	},
 
 	//
@@ -688,9 +667,7 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 			onselect: (item) => this.onSelect(item),
 			ondeselect: () => this.onDeselect(),
 			onclicktab: (tab) => this.onClickTab(tab),
-			onopen: (item) => this.onOpen(item),
-			onadd: (item) => this.onAdd(item),
-			onremove: (items) => this.onRemove(items)
+			onopen: (item) => this.onOpen(item)
 		});
 	},
 
@@ -707,19 +684,19 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	//
 
 	showOpenDialog: function(connections) {
-		import(
-			'../../../views/apps/connection-manager/dialogs/connections/select-connections-dialog-view.js'
-		).then((SelectConnectionsDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show open dialog
+			// callbacks
 			//
-			this.show(new SelectConnectionsDialogView.default({
-				collection: connections,
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showSelectConnectionsDialog({
+					collection: connections,
 
-				// callbacks
-				//
-				select: (items) => this.setModel(items[0])
-			}));
+					// callbacks
+					//
+					select: (items) => this.setModel(items[0])
+				});
+			}
 		});
 	},
 
@@ -751,16 +728,14 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	},
 
 	showInfoDialog: function() {
-		import(
-			'../../../views/apps/connection-manager/dialogs/info/connection-info-dialog-view.js'
-		).then((ConnectionInfoDialogView) => {
+		application.loadAppView('connection_manager', {
 
-			// show connection info dialog
+			// callbacks
 			//
-			this.show(new ConnectionInfoDialogView.default({
-				model: this.model
-			}));				
-		});	
+			success: (ConnectionManagerView) => {
+				ConnectionManagerView.showConnectionInfoDialog(this.model);
+			}
+		});
 	},
 
 	showPreferencesDialog: function() {
@@ -777,13 +752,13 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 	},
 
 	showCheckInDialog: function(options) {
-		import(
-			'../../../views/apps/map-viewer/dialogs/places/check-in-dialog-view.js'
-		).then((CheckInDialogView) => {
+		application.loadAppView('map_viewer', {
 
-			// show check in-in dialog
+			// callbacks
 			//
-			this.show(new CheckInDialogView.default(options));
+			success: (MapViewerView) => {
+				MapViewerView.showCheckInDialog(options);
+			}
 		});
 	},
 
@@ -858,21 +833,14 @@ export default AppSplitView.extend(_.extend({}, Openable, ConnectionShareable, L
 		} else if (item.model instanceof File) {
 			this.openFile(item.model);
 		}
-	},
-
-	onAdd: function() {
-
-		// play new sound
-		//
-		application.play('new');
-	},
-
-	onRemove: function(item) {
-		this.selected = null;
-		this.getChildView('header menu').onDeselect(item);
-
-		// play delete sound
-		//
-		application.play('delete');
 	}
-}));
+}), {
+
+	//
+	// static getting methods
+	//
+
+	getPreferencesFormView: function(options) {
+		return new PreferencesFormView(options);
+	}
+});

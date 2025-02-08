@@ -17,10 +17,10 @@
 
 import UserPreferences from '../../../../../models/preferences/user-preferences.js';
 import BaseView from '../../../../../views/base-view.js';
-import Openable from '../../../../../views/apps/common/behaviors/launching/openable.js';
+import ItemOpenable from '../../../../../views/apps/common/behaviors/opening/item-openable.js';
 import FilesView from '../../../../../views/apps/file-browser/mainbar/files/files-view.js';
 
-export default BaseView.extend(_.extend({}, Openable, {
+export default BaseView.extend(_.extend({}, ItemOpenable, {
 
 	//
 	// attributes

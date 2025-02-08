@@ -281,7 +281,6 @@ export default CommentView.extend({
 
 				// options
 				//
-				features: this.options.features,
 				preferences: this.options.preferences,
 
 				// callbacks
@@ -324,14 +323,21 @@ export default CommentView.extend({
 		// check if we need to confirm
 		//
 		if (!options || options.confirm != false) {
+			let message = this.model.get('message');
+
+			// format / limit message
+			//
+			if (message) {
+				message = HtmlUtils.htmlToText(message || '').firstWords(15);
+			}
 
 			// confirm delete
 			//
 			application.confirm({
 				icon: '<i class="fa fa-trash-alt"></i>',
 				title: "Delete Reply",
-				message: "Are you sure you want to delete the reply " + '"' +
-					HtmlUtils.htmlToText(this.get('message')).firstWords(15) + '"?',
+				message: message? "Are you sure you want to delete the reply " + '"' +
+					message + '"?' : "Are you sure you want to delete this reply?",
 
 				// callbacks
 				//
@@ -359,12 +365,19 @@ export default CommentView.extend({
 
 	templateContext: function() {
 		return {
+
+			// options
+			//
 			href: application.getUrl() + '#users/' + this.get('user').get('id'),
 			thumbnail_url: this.getThumbnailUrl(),
 			thumbnail_size: this.thumbnailSize + 'px',
-			is_current: this.get('user').isCurrent(),
 			name: this.get('user').get('short_name'),
 			message: HtmlUtils.returnify(HtmlUtils.linkify(this.get('message'))),
+
+			// state
+			//
+			is_current: this.get('user').isCurrent(),
+			collapsed: this.options.collapsed,
 
 			// details
 			//
@@ -373,10 +386,6 @@ export default CommentView.extend({
 			has_images: this.get('attachments').hasItems('visual'),
 			num_images: this.get('attachments').numItems('visual'),
 			when: this.model.when(),
-
-			// options
-			//
-			collapsed: this.options.collapsed,
 
 			// capabilities
 			//
@@ -397,7 +406,6 @@ export default CommentView.extend({
 
 			// options
 			//
-			features: this.options.features,
 			preferences: this.options.preferences,
 
 			// callbacks

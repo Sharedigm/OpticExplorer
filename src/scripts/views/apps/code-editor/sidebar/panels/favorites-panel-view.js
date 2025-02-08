@@ -15,9 +15,9 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import FileFavorites from '../../../../../models/favorites/file-favorites.js';
+import UserPreferences from '../../../../../models/preferences/user-preferences.js';
 import SideBarPanelView from '../../../../../views/apps/common/sidebar/panels/sidebar-panel-view.js';
-import CodeFavoritesView from '../../../../../views/apps/code-editor/sidebar/lists/code-favorites-view.js';
+import FavoritesView from '../../../../../views/apps/file-browser/sidebar/favorites/favorites-view.js';
 
 export default SideBarPanelView.extend({
 
@@ -30,14 +30,14 @@ export default SideBarPanelView.extend({
 	template: template(`
 		<div class="header">
 			<label><i class="fa fa-star"></i>Favorites</label>
-		
+
 			<div class="buttons">
 				<button type="button" class="add-favorites success btn btn-sm" data-toggle="tooltip" title="Add Favorites">
 					<i class="fa fa-plus"></i>
 				</button>
 			</div>
 		</div>
-		
+
 		<div class="items"></div>
 	`),
 
@@ -62,28 +62,34 @@ export default SideBarPanelView.extend({
 		//
 		SideBarPanelView.prototype.onRender.call(this);
 
-		// check if we need to fetch favorites
+		// fetch favorites
 		//
-		if (!this.constructor.favorites && application.session.user) {
+		if (!this.app.hasFavorites() && application.isSignedIn()) {
 			this.request = this.fetchAndShowFavorites();
 		} else {
-			this.showFavorites(this.constructor.favorites);
+			this.showFavorites(this.app.getFavorites());
 		}
 	},
 
 	fetchAndShowFavorites: function() {
-		return new FileFavorites({
-			category: 'code',
-			defaults: config.apps.code_editor.favorites,
-		}).clear().fetchByUser(application.session.user, {
+		return this.app.getFavorites().clear().fetchByUser(application.session.user, {
 
 			// callbacks
 			//
 			success: (model) => {
+
+				// check if view still exists
+				//
+				if (this.isDestroyed()) {
+					return;
+				}
+
+				// update favorites list
+				//
 				if (Object.keys(model.attributes).length == 0) {
 					model.reset();
 				}
-				this.constructor.favorites = model;
+				this.app.setFavorites(model);
 				this.showFavorites(model);
 			}
 		});
@@ -93,19 +99,23 @@ export default SideBarPanelView.extend({
 
 		// show list of favorites
 		//
-		this.showChildView('items', new CodeFavoritesView({
+		this.showChildView('items', new FavoritesView({
+			model: favorites,
 
 			// options
 			//
-			favorites: favorites,
+			preferences: UserPreferences.create('file_browser', {
+				// view_kind: this.options.view_kind,
+				view_kind: 'lists'
+			}),
+			empty: "No favorites.",
 
 			// capabilities
 			//
 			selectable: true,
 			editable: false,
-			draggable: true,
+			draggable: false,
 			droppable: true,
-			uploadable: false,
 
 			// callbacks
 			//
@@ -116,51 +126,11 @@ export default SideBarPanelView.extend({
 	},
 
 	//
-	// dialog rendering methods
-	//
-
-	showOpenDialog: function() {
-		import(
-			'../../../../../views/apps/file-browser/dialogs/files/open-items-dialog-view.js'
-		).then((OpenItemsDialogView) => {
-
-			// show open dialog
-			//
-			this.getParentView('app').show(new OpenItemsDialogView.default({
-				model: this.getParentView('app').getHomeDirectory(),
-
-				// options
-				//
-				title: "Add Favorites",
-
-				// callbacks
-				//
-				onopen: (items) => {
-
-					// add selected items to favorites
-					//
-					this.getChildView('items').addFavorites(items, {
-
-						// callbacks
-						//
-						success: () => {
-
-							// play add sound
-							//
-							application.play('add');
-						}
-					});
-				}
-			}));
-		});
-	},
-
-	//
 	// mouse event handling methods
 	//
 
 	onClickAddFavorites: function() {
-		this.showOpenDialog();
+		this.app.showAddFavoritesDialog();
 	},
 
 	//
@@ -180,6 +150,19 @@ export default SideBarPanelView.extend({
 	onResize: function(event) {
 		if (this.hasChildView('items')) {
 			this.getChildView('items').onResize(event);
+		}
+	},
+
+	//
+	// cleanup methods
+	//
+
+	onBeforeDestroy: function() {
+
+		// abort request
+		//
+		if (this.request && this.request.state() == 'pending') {
+			this.request.abort();
 		}
 	}
 });

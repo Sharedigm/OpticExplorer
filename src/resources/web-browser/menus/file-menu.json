@@ -1,0 +1,43 @@
+{
+	"items": [
+		{
+			"class": "new-window",
+			"icon": "fa fa-file",
+			"name": "New Window",
+			"shortcut": "enter"
+		},
+		{
+			"class": "open-url",
+			"icon": "fa fa-folder-open",
+			"name": "Open",
+			"shortcut": "command-O"
+		},
+		"divider",
+		{
+			"class": "add-to-favorites",
+			"icon": "fa fa-star",
+			"name": "Add to Favorites",
+			"shortcut": "command-="
+		},
+		{
+			"class": "delete-favorites",
+			"icon": "fa fa-trash-alt",
+			"name": "Delete Favorites",
+			"shortcut": "delete"
+		},
+		"divider",
+		{
+			"class": "save-url-as",
+			"icon": "fa fa-save",
+			"name": "Save As",
+			"shortcut": "command-S"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

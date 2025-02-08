@@ -15,6 +15,9 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
+import AudioFile from '../../../../../../models/storage/media/audio-file.js';
+import ImageFile from '../../../../../../models/storage/media/image-file.js';
+import VideoFile from '../../../../../../models/storage/media/video-file.js';
 import ItemTileView from '../../../../../../views/apps/file-browser/mainbar/files/tiles/item-tile-view.js';
 import FileUtils from '../../../../../../utilities/files/file-utils.js';
 
@@ -26,7 +29,6 @@ export default ItemTileView.extend({
 
 	className: function() {
 		let name = '';
-		let extension = this.model.getFileExtension().toLowerCase();
 
 		// add system tag
 		//
@@ -34,14 +36,24 @@ export default ItemTileView.extend({
 			name += 'system';
 		}
 
-		// add extension
+		// tag media file icons
 		//
-		if (extension != '') {
+		if (this.model instanceof AudioFile) {
 			if (name != '') {
 				name += ' ';
 			}
-			name += extension;
-		} 
+			name += 'audio';
+		} else if (this.model instanceof ImageFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'image';
+		} else if (this.model instanceof VideoFile) {
+			if (name != '') {
+				name += ' ';
+			}
+			name += 'video';
+		}
 
 		// add 'file item'
 		//
@@ -224,6 +236,10 @@ export default ItemTileView.extend({
 		// call superclass method
 		//
 		ItemTileView.prototype.setName.call(this, name);
+	},
+
+	setTileColor: function(color) {
+		this.$el.find('.tile .icon').css('background-color', color || '');
 	}
 }, {
 

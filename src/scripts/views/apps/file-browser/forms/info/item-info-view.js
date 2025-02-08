@@ -28,19 +28,6 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	tagName: 'form',
-	className: 'form-vertical',
-
-	regions: {
-		item: '.icon-grid',
-		general: '.general.tab-pane',
-		history: '.history.tab-pane',
-		permissions: '.permissions.tab-pane',
-		place: '.place.tab-pane',
-		sharing: '.sharing.tab-pane',
-		links: '.links.tab-pane'
-	},
-
 	events: {
 		'mousedown': 'onMouseDown'
 	},
@@ -93,16 +80,20 @@ export default InfoFormView.extend({
 	// rendering methods
 	//
 
-	templateContext: function() {
-		return {
-			index: this.options.index,
-			tab: this.options.tab || 'general',
-			show_meta_info: !this.model.isAttached()
-		};
-	},
-
 	onRender: function() {
 		this.showRegions();
+
+		// hide tabs
+		//
+		if (!this.model.has('place')) {
+			this.hideTab('place');
+		}
+		if (!this.model.get('num_links')) {
+			this.hideTab('links');
+		}
+		if (!this.model.get('num_shares')) {
+			this.hideTab('sharing');
+		}
 	},
 
 	showRegion: function(name) {
@@ -140,6 +131,22 @@ export default InfoFormView.extend({
 			selectable: false
 		}));
 	},
+
+	//
+	// tab hiding and showing methods
+	//
+
+	hideTab: function(name) {
+		this.$el.find('.' + name + '-tab').hide();
+	},
+
+	showTab: function(name) {
+		this.$el.find('.' + name + '-tab').show();
+	},
+
+	//
+	// pane rendering methods
+	//
 
 	showHistoryInfo: function() {
 		this.showChildView('history', new ItemHistoryPaneView({

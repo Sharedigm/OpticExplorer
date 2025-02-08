@@ -83,7 +83,7 @@ export default CardView.extend(_.extend({}, Expandable, {
 
 	edit: function() {
 		import(
-			'../../../../../../../views/apps/profile-viewer/mainbar/profile/dialogs/edit/edit-user-home-dialog-view.js'
+			'../../../../../../../views/apps/profile-viewer/dialogs/profile/edit/edit-user-home-dialog-view.js'
 		).then((EditUserHomeDialogView) => {
 			
 			// show edit dialog

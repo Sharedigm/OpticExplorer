@@ -15,24 +15,13 @@
 |        Copyright (C) 2016-2024, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import ChatMessage from '../../../../../../models/chats/chat-message.js';
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation" class="chat option">
-			<a class="edit message"><i class="fa fa-pencil-alt"></i>Edit Message<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation" class="chat option">
-			<a class="delete message"><i class="fa fa-trash-alt"></i>Delete Message<span class="shortcut">delete</span></a>
-		</li>
-	`),
 
 	events: {
 
@@ -47,13 +36,12 @@ export default MenuView.extend({
 	//
 
 	enabled: function() {
-		let selected = this.parent.app.selected;
-		let isMessage = selected && selected instanceof ChatMessage;
-		let editable = isMessage && selected.isOwnedBy(application.session.user);
+		let hasChat = this.parent.app.collection.length > 0;
+		let hasSelectedMessage = hasChat && this.parent.app.hasSelectedMessage();
 
 		return {
-			'edit': editable,
-			'delete': editable
+			'edit': hasSelectedMessage,
+			'delete': hasSelectedMessage
 		};
 	},
 

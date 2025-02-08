@@ -1,0 +1,433 @@
+{
+	"items": [
+		{
+			"class": "zoom",
+			"icon": "fa fa-search",
+			"name": "Zoom",
+			"menu": [
+				{
+					"class": "zoom-in",
+					"icon": "fa fa-search-plus",
+					"name": "Zoom In",
+					"shortcut": "="
+				},
+				{
+					"class": "zoom-out",
+					"icon": "fa fa-search-minus",
+					"name": "Zoom Out",
+					"shortcut": "-"
+				}
+			]
+		},
+		{
+			"class": "pan",
+			"icon": "fa fa-arrows",
+			"name": "Pan",
+			"menu": [
+				{
+					"class": "pan-up",
+					"icon": "fa fa-arrow-up",
+					"name": "Up",
+					"shortcut": "up arrow"
+				},
+				{
+					"class": "pan-down",
+					"icon": "fa fa-arrow-down",
+					"name": "Down",
+					"shortcut": "down arrow"
+				},
+				{
+					"class": "pan-left",
+					"icon": "fa fa-arrow-left",
+					"name": "Left",
+					"shortcut": "left arrow"
+				},
+				{
+					"class": "pan-right",
+					"icon": "fa fa-arrow-right",
+					"name": "Right",
+					"shortcut": "right arrow"
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "color-schemes",
+			"icon": "fa fa-paint-brush",
+			"name": "Colors",
+			"menu": [
+				{
+					"class": "monochrome-scheme",
+					"group": "color-scheme",
+					"icon": "fa fa-paint-brush",
+					"name": "Monochrome",
+					"select": true
+				},
+				{
+					"class": "standard-scheme",
+					"group": "color-scheme",
+					"icon": "fa fa-paint-brush",
+					"name": "Standard",
+					"select": true
+				},
+				{
+					"class": "colorful-scheme",
+					"group": "color-scheme",
+					"icon": "fa fa-paint-brush",
+					"name": "Colorful",
+					"select": true
+				},
+				{
+					"class": "vibrant-scheme",
+					"group": "color-scheme",
+					"icon": "fa fa-paint-brush",
+					"name": "Vibrant",
+					"select": true
+				},
+				"divider",
+				{
+					"class": "next-scheme",
+					"icon": "fa fa-chevron-right",
+					"name": "Next",
+					"shortcut": "shift-command-C",
+					"select": true
+				}
+			]
+		},
+		{
+			"class": "theme-kinds",
+			"icon": "fa fa-adjust",
+			"name": "Brightness",
+			"menu": [
+				{
+					"class": "light-theme",
+					"group": "theme-kind",
+					"icon": "far fa-sun",
+					"name": "Light",
+					"select": true
+				},
+				{
+					"class": "medium-theme",
+					"group": "theme-kind",
+					"icon": "fa fa-sun",
+					"name": "Medium",
+					"select": true
+				},
+				{
+					"class": "dark-theme",
+					"group": "theme-kind",
+					"icon": "fa fa-moon",
+					"name": "Dark",
+					"select": true
+				},
+				{
+					"class": "auto-theme",
+					"group": "theme-kind",
+					"icon": "fa fa-adjust",
+					"name": "Auto",
+					"select": true
+				},
+				"divider",
+				{
+					"class": "next-theme",
+					"icon": "fa fa-chevron-right",
+					"name": "Next",
+					"shortcut": "command-B"
+				}
+			]
+		},
+		{
+			"class": "viewport-options",
+			"icon": "fa fa-eye",
+			"name": "Viewport",
+			"menu": [
+				{
+					"class": "show-grid",
+					"group": "viewport-option",
+					"icon": "fa fa-border-none",
+					"name": "Grid",
+					"shortcut": "command-G",
+					"select": true
+				},
+				{
+					"class": "show-abbe-axis",
+					"group": "viewport-option",
+					"icon": "fa fa-arrows-left-right",
+					"name": "Abbe Axis",
+					"select": true
+				},
+				{
+					"class": "show-index-axis",
+					"group": "viewport-option",
+					"icon": "fa fa-arrows-up-down",
+					"name": "Index Axis",
+					"select": true
+				},
+				{
+					"class": "show-colored-viewport",
+					"group": "viewport-option",
+					"icon": "fa fa-paint-brush",
+					"name": "Colored",
+					"select": true
+				},
+				"divider",
+				{
+					"class": "show-axes",
+					"icon": "fa fa-plus",
+					"name": "Show Axes"
+				},
+				{
+					"class": "hide-axes",
+					"icon": "fa fa-minus",
+					"name": "Hide Axes"
+				}
+			]
+		},
+		{
+			"class": "view-diagram",
+			"icon": "fa fa-chart-line",
+			"name": "Diagram",
+			"menu": [
+				{
+					"class": "show-regions",
+					"group": "diagram-option",
+					"icon": "fa fa-square",
+					"name": "Regions",
+					"select": true
+				},
+				{
+					"class": "show-edges",
+					"group": "diagram-option",
+					"icon": "fa fa-code-merge",
+					"name": "Edges",
+					"select": true
+				},
+				{
+					"class": "show-vertices",
+					"group": "diagram-option",
+					"icon": "fa fa-code-commit",
+					"name": "Vertices",
+					"select": true
+				},
+				{
+					"class": "show-labels",
+					"group": "diagram-option",
+					"icon": "fa fa-font",
+					"name": "Labels",
+					"select": true
+				},
+				"divider",
+				{
+					"class": "show-shading",
+					"group": "diagram-option",
+					"icon": "fa fa-lightbulb",
+					"name": "Shading",
+					"select": true
+				},
+				{
+					"class": "show-shadows",
+					"group": "diagram-option",
+					"icon": "fa fa-sun",
+					"name": "Shadows",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"group": "show-toolbars",
+			"icon": "fa fa-wrench",
+			"name": "Toolbars",
+			"select": true,
+			"menu": [
+				{
+					"class": "show-nav-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-sitemap",
+					"name": "Nav",
+					"select": true
+				},
+				{
+					"class": "show-mouse-mode-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-mouse-pointer",
+					"name": "Mouse Mode",
+					"select": true
+				},
+				{
+					"class": "show-nav-mode-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-arrows-alt",
+					"name": "Nav Mode",
+					"select": true
+				},
+				{
+					"class": "show-zoom-mode-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-expand",
+					"name": "Zoom Mode",
+					"select": true
+				},
+				{
+					"class": "show-zoom-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-search",
+					"name": "Zoom",
+					"select": true
+				},
+				{
+					"class": "show-map-bar",
+					"group": "show-toolbar",
+					"icon": "fa fa-map",
+					"name": "Map",
+					"select": true
+				}
+			]
+		},
+		{
+			"class": "show-sidebar",
+			"icon": "fa fa-pause",
+			"name": "Sidebar",
+			"select": true,
+			"menu": [
+				{
+					"class": "show-maps-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-map",
+					"name": "Material Maps",
+					"select": true
+				},
+				{
+					"class": "show-shared-panel",
+					"group": "show-sidebar-panel",
+					"icon": "fa fa-book",
+					"name": "Material Maps Library",
+					"select": true
+				}
+			]
+		},
+		{
+			"class": "sidebar-view-kind",
+			"icon": "fa fa-th",
+			"name": "Sidebar Items",
+			"select": true,
+			"menu": [
+				{
+					"class": "view-sidebar-icons",
+					"group": "sidebar-view-kind",
+					"icon": "fa fa-th",
+					"name": "Icons",
+					"select": true
+				},
+				{
+					"class": "view-sidebar-lists",
+					"group": "sidebar-view-kind",
+					"icon": "fa fa-list",
+					"name": "Lists",
+					"select": true
+				},
+				{
+					"class": "view-sidebar-trees",
+					"group": "sidebar-view-kind",
+					"icon": "fa fa-tree",
+					"name": "Trees",
+					"select": true
+				},
+				{
+					"class": "view-sidebar-cards",
+					"group": "sidebar-view-kind",
+					"icon": "fa fa-id-card",
+					"name": "Cards",
+					"select": true
+				},
+				{
+					"class": "view-sidebar-tiles",
+					"group": "sidebar-view-kind",
+					"icon": "fa fa-th-large",
+					"name": "Tiles",
+					"select": true
+				}
+			]
+		},
+		"divider",
+		{
+			"class": "window-size",
+			"icon": "far fa-window-maximize",
+			"name": "Window Size",
+			"menu": [
+				{
+					"class": "shrink-window",
+					"icon": "fa fa-minus",
+					"name": "Shrink",
+					"shortcut": "command-["
+				},
+				{
+					"class": "grow-window",
+					"icon": "fa fa-plus",
+					"name": "Grow",
+					"shortcut": "command-]"
+				},
+				{
+					"class": "expand-window",
+					"icon": "fa fa-expand",
+					"name": "Expand",
+					"shortcut": "command-\\"
+				}
+			]
+		},
+		{
+			"class": "spaces",
+			"icon": "far fa-window-maximize",
+			"name": "Spaces",
+			"select": true,
+			"mode": "desktop",
+			"menu": [
+				{
+					"class": "prev-space",
+					"icon": "fa fa-chevron-left",
+					"name": "Prev",
+					"shortcut": "command-left arrow"
+				},
+				{
+					"class": "next-space",
+					"icon": "fa fa-chevron-right",
+					"name": "Next",
+					"shortcut": "command-right arrow"
+				}
+			]
+		},
+		{
+			"class": "windows",
+			"icon": "far fa-window-restore",
+			"name": "Windows",
+			"select": true,
+			"mode": "desktop",
+			"menu": [
+				{
+					"class": "minimize-all",
+					"icon": "fa fa-window-minimize",
+					"name": "Minimize All"
+				},
+				{
+					"class": "unminimize-all",
+					"icon": "fa fa-window-restore",
+					"name": "Unminimize All"
+				}
+			]
+		},
+		{
+			"class": "view-full-screen",
+			"icon": "fa fa-desktop",
+			"name": "Full Screen",
+			"shortcut": "command-\\",
+			"select": true,
+			"mode": "desktop"
+		},
+		"divider",
+		{
+			"class": "view-preferences",
+			"icon": "fa fa-snowflake",
+			"name": "Preferences"
+		}
+	]
+}

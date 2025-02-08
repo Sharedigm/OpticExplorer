@@ -10,10 +10,11 @@
 
 	<div class="attention"><div class="emphasis">Run Your Own <%= application.name %>!</div></div>
 
-	<h2><i class="fa fa-file-zipper"></i>Releases</h2>
-	<p>To install your own version of <%= application.name %>, you will first need to download the files from a link below: </p>
+	<% if (config.defaults.downloads && (config.defaults.downloads.production || config.defaults.downloads.development)) { %>
 
-	<% if (config.defaults.releases) { %>
+	<% if (config.defaults.downloads.production) { %>
+	<h2><i class="fa fa-file-zipper"></i>Releases</h2>
+	<p>To download a pre-compiled, ready-to-run version of <%= application.name %>, click a link below. This software is ready to deploy - to run it, just download it and then install it on your web server using the instructions below. </p>
 	<table>
 		<thead>
 			<tr>
@@ -22,17 +23,48 @@
 			</tr>
 		</thead>
 		<tbody>
-		<% let dates = Object.keys(config.defaults.releases); %>
-		<% for (let i = 0; i < dates.length; i++) { %>
-		<% let date = dates[i]; %>
-		<% let release = config.defaults.releases[date]; %>
+		<% let keys = Object.keys(config.defaults.downloads.production); %>
+		<% for (let i = 0; i < keys.length; i++) { %>
+		<% let key = keys[i]; %>
+		<% let href = config.defaults.downloads.production[key]; %>
 			<tr>
-				<td><%= date %></td>
-				<td><a href="<%= release %>" target="_blank"><%= release %></a></td>
+				<td style="width:33%"><%= key %></td>
+				<td><a href="<%= href %>" target="_blank"><%= href %></a></td>
 			</tr>
 		<% } %>
 		</tbody>
 	</table>
+	<% } %>
+
+	<% if (config.defaults.downloads.development) { %>
+	<br />
+	<h2><i class="fa fa-code"></i>For Developers</h2>
+	<p>To view or download the <%= application.name %> source code, visit a link below. This software is provided in its original, uncompiled form, which can be installed as-is, or can be compiled for better performance. As always, make sure to read the licensing terms included in the repository. </p>
+
+	<% if (config.defaults.downloads.development) { %>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Link</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% let keys = Object.keys(config.defaults.downloads.development); %>
+		<% for (let i = 0; i < keys.length; i++) { %>
+		<% let key = keys[i]; %>
+		<% let href = config.defaults.downloads.development[key]; %>
+			<tr>
+				<td style="width:33%"><%= key %></td>
+				<td><a href="<%= href %>" target="_blank"><%= href %></a></td>
+			</tr>
+		<% } %>
+		</tbody>
+	</table>
+	<% } %>
+	<% } %>
+	<% } else { %>
+	<p>No downloads are currently available.  Please <a href="#contact">contact us</a> for more information.
 	<% } %>
 
 	<br />

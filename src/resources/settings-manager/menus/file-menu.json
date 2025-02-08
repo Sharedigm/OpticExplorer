@@ -1,0 +1,16 @@
+{
+	"items": [
+		{
+			"class": "clear-all",
+			"icon": "fa fa-xmark",
+			"name": "Clear All"
+		},
+		"divider",
+		{
+			"class": "close-window",
+			"icon": "fa fa-circle-xmark",
+			"name": "Close",
+			"shortcut": "command-L"
+		}
+	]
+}

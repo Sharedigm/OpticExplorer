@@ -21,9 +21,11 @@ import ContactAddress from '../../../../../models/contacts/info/contact-address.
 import ContactEmailAddr from '../../../../../models/contacts/info/contact-email-addr.js';
 import ContactPhone from '../../../../../models/contacts/info/contact-phone.js';
 import ContactWebsite from '../../../../../models/contacts/info/contact-website.js';
+
 //
 // private variables
 //
+
 let scope = 'https://www.googleapis.com/auth/contacts.readonly';
 let method = 'https://www.google.com/m8/feeds/contacts/default/thin?alt=json';
 

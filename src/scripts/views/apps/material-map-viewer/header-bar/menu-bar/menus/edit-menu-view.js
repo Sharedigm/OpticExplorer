@@ -15,51 +15,13 @@
 |        Copyright (C) 2016-2023, Megahed Labs LLC, www.sharedigm.com          |
 \******************************************************************************/
 
-import MenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/menu-view.js';
+import EditMenuView from '../../../../../../views/apps/common/header-bar/menu-bar/menus/edit-menu-view.js';
 
-export default MenuView.extend({
+export default EditMenuView.extend({
 
 	//
 	// attributes
 	//
-
-	template: template(`
-		<li role="presentation">
-			<a class="add-material"><i class="fa fa-plus"></i>Add<span class="command shortcut">E</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="edit-material"><i class="fa fa-pencil"></i>Edit<span class="shift command shortcut">E</span></a>
-		</li>
-
-		<li role="separator" class="divider"></li>
-
-		<li role="presentation">
-			<a class="cut"><i class="fa fa-cut"></i>Cut<span class="command shortcut">X</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="copy"><i class="fa fa-copy"></i>Copy<span class="command shortcut">C</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="paste"><i class="fa fa-paste"></i>Paste<span class="command shortcut">V</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="put"><i class="fa fa-file-arrow-down"></i>Put<span class="shift command shortcut">V</span></a>
-		</li>
-		
-		<li role="presentation">
-			<a class="delete"><i class="fa fa-trash-alt"></i>Delete<span class="shortcut">delete</span></a>
-		</li>
-		
-		<li role="separator" class="divider"></li>
-		
-		<li role="presentation">
-			<a class="clear-clipboard"><i class="fa fa-xmark"></i>Clear Clipboard</a>
-		</li>
-	`),
 	
 	events: {
 		'click .add-material': 'onClickAddMaterial',

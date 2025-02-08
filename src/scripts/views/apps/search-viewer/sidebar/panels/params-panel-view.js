@@ -62,7 +62,9 @@ export default SideBarPanelView.extend({
 	},
 
 	showParamsForm: function() {
-		this.showChildView('form', new ParamsFormView());
+		this.showChildView('form', new ParamsFormView({
+			search_kind: this.parent.app.preferences.get('search')
+		}));
 	},
 
 	//

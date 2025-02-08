@@ -23,13 +23,20 @@ export default FileMenuView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<li role="presentation">
-			<a class="close-window"><i class="fa fa-circle-xmark"></i>Close<span class="command shortcut">L</span></a>
-		</li>
-	`),
-
 	events: {
 		'click .close-window': 'onClickCloseWindow'
+	},
+
+	//
+	// querying methods
+	//
+
+	visible: function() {
+		let isDesktop = this.parent.app.isDesktop();
+		let isWindowed = !isDesktop;
+
+		return {
+			'close-window': isWindowed
+		};
 	}
 });

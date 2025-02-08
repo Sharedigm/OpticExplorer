@@ -32,57 +32,20 @@ export default InfoFormView.extend({
 	// attributes
 	//
 
-	template: template(`
-		<div class="items">
-			<div class="icon-grid"></div>
-		</div>
-
-		<ul class="nav nav-tabs" role="tablist">
-		
-			<li role="presentation" class="general-tab active">
-				<a role="tab" data-toggle="tab" href=".general-panel">
-					<i class="fa fa-info-circle"></i>
-					<label>General</label>
-				</a>
-			</li>
-		
-			<li role="presentation" class="expiration-tab">
-				<a role="tab" data-toggle="tab" href=".expiration-panel">
-					<i class="fa fa-clock"></i>
-					<label>Expiration</label>
-				</a>
-			</li>
-			
-			<li role="presentation" class="protection-tab">
-				<a role="tab" data-toggle="tab" href=".protection-panel">
-					<i class="fa fa-key"></i>
-					<label>Protection</label>
-				</a>
-			</li>
-		</ul>
-		
-		<div class="tab-content">
-		
-			<div role="tabpanel" class="general-panel tab-pane active">
-				<div class="link-attributes-form"></div>
-			</div>
-		
-			<div role="tabpanel" class="expiration-panel tab-pane">
-				<div class="link-expiration-form"></div>
-			</div>
-		
-			<div role="tabpanel" class="protection-panel tab-pane">
-				<div class="link-password-form"></div>
-			</div>
-		</div>
-	`),
-
-	regions: {
-		item: '.icon-grid',
-		attributes: '.link-attributes-form',
-		expiration: '.link-expiration-form',
-		protection: '.link-password-form'
-	},
+	tabs: [
+		{
+			"name": "General",
+			"icon": "fa fa-info-circle"
+		},
+		{
+			"name": "Expiration",
+			"icon": "fa fa-clock"
+		},
+		{
+			"name": "Protection",
+			"icon": "fa fa-key"
+		}
+	],
 
 	//
 	// data getting methods
@@ -90,8 +53,8 @@ export default InfoFormView.extend({
 
 	getData: function() {
 		return {
-			editable: this.getChildView('attributes').getValue('role') == 'editor',
-			message: this.getChildView('attributes').getValue('message'),
+			editable: this.getChildView('general').getValue('role') == 'editor',
+			message: this.getChildView('general').getValue('message'),
 			limit: this.getChildView('expiration').getValue('limit'),
 			expiration_date: this.getChildView('expiration').getValue('expiration_date'),
 			password: this.getChildView('protection').getValue('password')
@@ -117,8 +80,8 @@ export default InfoFormView.extend({
 			case 'item':
 				this.showItem();
 				break;
-			case 'attributes':
-				this.showAttributes();
+			case 'general':
+				this.showGeneral();
 				break;
 			case 'expiration':
 				this.showExpiration();
@@ -142,8 +105,8 @@ export default InfoFormView.extend({
 		}));
 	},
 
-	showAttributes: function() {
-		this.showChildView('attributes', new LinkAttributesFormView({
+	showGeneral: function() {
+		this.showChildView('general', new LinkAttributesFormView({
 			model: this.model
 		}));
 	},

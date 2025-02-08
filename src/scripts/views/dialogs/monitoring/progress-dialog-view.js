@@ -35,7 +35,7 @@ export default DialogView.extend({
 						<% if (icon) { %>
 						<%= icon %>
 						<% } else { %>
-						<i class="fa fa-spinner"></i>
+						<i class="fa fa-spinner spinning"></i>
 						<% } %>
 					</div>
 					<div class="title">

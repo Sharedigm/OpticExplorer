@@ -1,0 +1,9 @@
+{
+	"items": [
+		{
+			"class": "share-by-link",
+			"icon": "fa fa-link",
+			"name": "By Link"
+		}
+	]
+}

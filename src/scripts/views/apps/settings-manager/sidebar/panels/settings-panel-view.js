@@ -1,6 +1,6 @@
 /******************************************************************************\
 |                                                                              |
-|                             actions-panel-view.js                            |
+|                            settings-panel-view.js                            |
 |                                                                              |
 |******************************************************************************|
 |                                                                              |
@@ -65,11 +65,6 @@ export default SideBarPanelView.extend({
 					icon: 'fa fa-desktop'
 				}),
 				new BaseModel({
-					name: 'Notifications',
-					image: 'images/icons/settings/notifications.svg',
-					icon: 'fa fa-exclamation-triangle'
-				}),
-				new BaseModel({
 					name: 'Sign-Ins',
 					image: 'images/icons/settings/sign-ins.svg',
 					icon: 'fa fa-sign-in-alt'
@@ -78,13 +73,28 @@ export default SideBarPanelView.extend({
 					name: 'Sound',
 					image: 'images/icons/settings/sound.svg',
 					icon: 'fa fa-volume-up'
-				}),
-				new BaseModel({
+				})
+			]);
+
+			// add storage settings
+			//
+			if (application.hasApp('file_browser')) {
+				this.collection.add(new BaseModel({
 					name: 'Storage',
 					image: 'images/icons/settings/storage.svg',
 					icon: 'fa fa-database'
-				})
-			]);
+				}));
+			}
+
+			// add notification settings
+			//
+			if (application.hasApp('notification_center')) {
+				this.collection.add(new BaseModel({
+					name: 'Notifications',
+					image: 'images/icons/settings/notifications.svg',
+					icon: 'fa fa-exclamation-triangle'
+				}));
+			}
 		}
 	},
 
@@ -160,6 +170,9 @@ export default SideBarPanelView.extend({
 			// options
 			//
 			view_kind: this.options.view_kind,
+
+			// state
+			//
 			selected: this.options.selected,
 
 			// capabilities
