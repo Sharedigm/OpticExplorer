@@ -1,0 +1,1435 @@
+{
+	"account_manager": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": "location",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav",
+			"search"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions"
+		]
+	},
+	
+	"app_launcher": {
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": true
+	},
+	
+	"audio_player": {
+		"home_directory": "Music/",
+		"view_kind": "lists",
+		"detail_kind": "artist",
+		"sort_kind": "track_number",
+		"volume": 5,
+		"track_looping": false,
+		"album_looping": true,
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"play",
+			"volume"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites",
+			"track_info"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"show_analyser": true,
+		"analyzer_size": {
+			"phone": 25,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"calculator": {
+		"mode": "basic"
+	},
+
+	"calendar": {
+		"view_kind": "month",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 225,
+			"desktop": 225
+		},
+		"sidebar_panels": [
+			"events"
+		]
+	},
+
+	"chat_browser": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": "messages",
+		"date_format": "date_only",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions"
+		]
+	},
+
+	"chat_viewer": {
+		"messages_per_page": 50,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"show_elapsed_time": true,
+		"translation": false,
+		"language": "English",
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 200,
+			"desktop": 200
+		},
+		"sidebar_panels": [
+			"info",
+			"chats"
+		],
+		"sidebar_info_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"uploads_directory": "Uploads/",
+		"copy_attachments": true,
+		"messages_directory": ".Messages/"
+	},
+	
+	"clock": {
+		"mode": "analog",
+		"show_mode": true,
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"code_editor": {
+		"home_directory": "Code/",
+		"show_gutter": true,
+		"show_indent_guides": true,
+		"show_print_margin": false,
+		"show_invisibles": false,
+		"font_size": 12,
+		"tab_size": 4,
+		"soft_tabs": false,
+		"soft_wrap": "off",
+		"key_binding": "default",
+		"highlight_active_line": false,
+		"highlight_selected": true,
+		"select_full_line": true,
+		"animated_scroll": true,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites",
+			"files"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"show_console": false,
+		"console_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"communicator": {
+		"default_topic": "What's New",
+		"posts_per_page": 10,
+		"posts_direction": "top_down",
+		"messages_per_page": 50,
+		"default_privacy": "connections",
+		"show_comments": true,
+		"show_options": true,
+		"show_elapsed_time": true,
+		"translation": false,
+		"language": "English",
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 200,
+			"desktop": 200
+		},
+		"sidebar_panels": [
+			"info",
+			"topics",
+			"chats"
+		],
+		"sidebar_info_kind": {
+			"phone": "cards",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"uploads_directory": "Uploads/",
+		"copy_attachments": true,
+		"storage_directory": ".News/",
+		"messages_directory": ".Messages/"
+	},
+
+	"connection_manager": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": null,
+		"date_format": "date_only",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"map_mode": "hybrid",
+		"map_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"show_item_names": true,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"groups"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "icons",
+			"desktop": "icons"
+		}
+	},
+	
+	"contact_editor": {
+		"home_directory": "Contacts/",
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"contacts"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		}
+	},
+
+	"decibel_meter": {
+		"display": "led",
+		"sensitivity": 100,
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"file_browser": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": {
+			"phone": "size",
+			"tablet": "size",
+			"desktop": null
+		},
+		"date_format": "date_only",
+		"open_folders_in_new_window": false,
+		"share_invitation_message": "Check this out!",
+		"show_hidden_files": false,
+		"show_file_extensions": false,
+		"show_thumbnails": true,
+		"show_image_names": true,
+		"show_clipboard_confirm": false,
+		"properties": [
+			"places",
+			"links",
+			"shares",
+			"owners",
+			"indices"
+		],
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"show_desktop_sidebar": false,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites",
+			"shared"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"map_mode": "hybrid",
+		"map_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"show_item_names": true,
+		"show_geo_orientations": true,
+		"slide_duration": 2,
+		"slide_looping": true
+	},
+
+	"help_viewer": {
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav",
+			"page"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 0,
+			"desktop": 0
+		},
+		"sidebar_panels": [
+			"index"
+		]
+	},
+
+	"image_viewer": {
+		"home_directory": "Pictures/",
+		"background_color": null,
+		"zoom_duration": 100,
+		"rotate_duration": 500,
+		"slide_duration": 5,
+		"slide_looping": true,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"mouse_mode",
+			"zoom_mode",
+			"zoom",
+			"image"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites",
+			"images"
+		],
+		"sidebar_view_kind": {
+			"phone": "tiles",
+			"tablet": "tiles",
+			"desktop": "tiles"
+		},
+		"sidebar_tile_size": {
+			"phone": "small",
+			"tablet": "medium",
+			"desktop": "large"
+		},
+		"show_exif_info": false,
+		"info_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"mail_reader": {
+		"window_size": "medium"
+	},
+
+	"map_viewer": {
+		"use_my_location": false,
+		"latitude": 39.8283,
+		"longitude": 98.5795,
+		"zoom_level": 2,
+		"max_zoom_level": 11,
+		"map_mode": "hybrid",
+		"aero_mode": "vfr",
+		"search_kind": null,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"map_layers": [
+			"crosshairs",
+			"photos",
+			"videos",
+			"overlays",
+			"people",
+			"places",
+			"favorites"
+		],
+		"weather_layers": [
+			"satellite",
+			"radar"
+		],
+		"toolbars": {
+			"phone": [
+				"nav",
+				"mouse_mode",
+				"nav_mode"
+			],
+			"tablet": [
+				"nav",
+				"mouse_mode",
+				"nav_mode",
+				"map"
+			],
+			"desktop": [
+				"nav",
+				"mouse_mode",
+				"nav_mode",
+				"map"
+			]		
+		},
+		"map_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"show_grid": true,
+		"show_smoothing": true,
+		"show_item_names": true,
+		"show_geo_orientations": true,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"maps",
+			"photos",
+			"videos",
+			"overlays",
+			"people",
+			"places",
+			"favorites"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"pan_duration": 500,
+		"zoom_duration": 500,
+		"zoom_to_duration": 5,
+		"measuring_units": "metric",
+		"arrow_style": "filled",
+		"label_style": "rotated",
+		"home_directory": "Maps/",
+		"photos_directory": "Pictures/",
+		"videos_directory": "Videos/",
+		"uploads_directory": "Uploads/",
+		"dropbox_directory": "Pictures/Dropbox/",
+		"google_directory": "Pictures/Google/"
+	},
+
+	"material_editor": {
+		"initial_file (unused)": "/Shared/Optics/Materials/Schott/N-BK7.mtrl",
+		"home_directory": "Materials/",
+		"window_size": "large",
+		"maximized": true,
+		"full_screen": false,
+		"view_kind": "data_sheet",
+		"toolbars": {
+			"phone": [
+			],
+			"tablet": [
+			],
+			"desktop": [
+				"view"
+			]		
+		},
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 0,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"materials",
+			"shared"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"show_toolbar": true,
+		"show_data_editor": {
+			"phone": false,
+			"tablet": true,
+			"desktop": true
+		},
+		"data_editor_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"material_map_viewer": {
+		"initial_file (unused)": "/Shared/Optics/Maps/Schott.abbe",
+		"home_directory": "Maps/",
+		"window_size": "large",
+		"maximized": true,
+		"full_screen": false,
+		"pan_duration": 500,
+		"zoom_duration": 500,
+		"zoom_to_duration": 5,
+		"show_grid": true,
+		"show_axes": true,
+		"toolbars": {
+			"phone": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom_mode",
+				"zoom"
+			],
+			"tablet": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom_mode",
+				"zoom"
+			],
+			"desktop": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom",
+				"zoom_mode",
+				"map"
+			]
+		},
+		"scheme": "standard",
+		"theme": "auto",
+		"show_grid": true,
+		"show_abbe_axis": true,
+		"show_index_axis": true,
+		"show_colored_viewport": false,
+		"show_regions": false,
+		"show_edges": true,
+		"show_vertices": true,
+		"show_labels": true,
+		"show_shading": false,
+		"show_shadows": false,
+		"show_highlights": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 0,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"maps",
+			"shared"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"show_toolbar": true,
+		"show_data_editor": {
+			"phone": false,
+			"tablet": true,
+			"desktop": true
+		},
+		"data_editor_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"notification_center": {
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"optic_editor": {
+		"window_size": "large",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": {
+			"phone": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom_mode",
+				"zoom"
+			],
+			"tablet": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom_mode",
+				"zoom"
+			],
+			"desktop": [
+				"mouse_mode",
+				"nav_mode",
+				"zoom_mode",
+				"zoom",
+				"optics"
+			]
+		},
+		"scheme": "standard",
+		"theme": "auto",
+		"show_grid": true,
+		"show_optical_axis": true,
+		"show_perpendicular_axis": true,
+		"show_colored_viewport": false,
+		"number_of_rays": 100,
+		"max_ray_depth": 50,
+
+		"show_elements": true,
+		"show_filled_elements": true,
+		"show_stroked_elements": true,
+		"show_shaded_elements": true,
+		"show_illustrated_elements": true,
+		"show_shadowed_elements": true,
+
+		"show_lights": true,
+		"show_filled_lights": true,
+		"show_stroked_lights": false,
+		"show_transmitted_lights": true,
+		"show_obstructed_lights": false,
+		"show_reflected_lights": false,
+
+		"show_objects": true,
+		"show_filled_objects": true,
+		"show_stroked_objects": false,
+		"show_transmitted_objects": true,
+		"show_obstructed_objects": false,
+		"show_reflected_objects": false,
+
+		"show_annotations": true,
+		"arrow_style": "filled",
+		"label_style": "diagonal",			
+		"show_thickness": true,
+		"show_spacing": true,
+		"show_focal_points": true,
+		"show_principal_planes": true,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 0,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"optics",
+			"shared"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"show_toolbar": true,
+		"show_data_editor": {
+			"phone": false,
+			"tablet": true,
+			"desktop": true
+		},
+		"data_editor_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"pan_duration": 500,
+		"zoom_duration": 500,
+		"zoom_to_duration": 5,
+		"move_duration": 300,
+		"measuring_units": "metric",
+		"home_directory": "Optics/",
+		"uploads_directory": "Optics/"
+	},
+
+	"pdf_viewer": {
+		"home_directory": "Documents/",
+		"background_color": null,
+		"zoom_duration": 100,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"zoom_mode",
+			"zoom",
+			"page"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"pages"
+		],
+		"sidebar_tile_size": {
+			"phone": "small",
+			"tablet": "medium",
+			"desktop": "large"
+		},
+		"show_exif_info": false,
+		"info_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"post_viewer": {
+		"show_comments": true,
+		"show_options": true,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"topics"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"uploads_directory": "Uploads/",
+		"storage_directory": ".News/"
+	},
+
+	"profile_browser": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": "location",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav",
+			"search"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions"
+		]
+	},
+
+	"profile_viewer": {
+		"open_connections_in_new_window": false,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"activity",
+			"status",
+			"actions",
+			"mutual_connections"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"photos_view_kind": {
+			"phone": "gallery",
+			"tablet": "gallery",
+			"desktop": "gallery"
+		}
+	},
+
+	"project_browser": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": "tasks",
+		"date_format": "date_only",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions"
+		]
+	},
+
+	"project_viewer": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "lists"
+		},
+		"tile_size": "medium",
+		"detail_kind": "priority",
+		"date_format": "date_only",
+		"default_project": "To Do List",
+		"tasks_per_page": 10,
+		"show_comments": true,
+		"show_options": true,
+		"show_elapsed_time": true,
+		"sort_kind": "title",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"tasks"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"info",
+			"projects"
+		],
+		"sidebar_info_kind": {
+			"phone": "cards",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"uploads_directory": "Uploads/",
+		"copy_attachments": true,
+		"storage_directory": "Projects/"
+	},
+
+	"search_viewer": {
+		"search": ["files", "posts"],
+		"target": "text",
+		"min_score": 50,
+		"max_results": 100,
+		"view_kind": "lists",
+		"items_per_page": 30,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"detail_kind": {
+			"phone": "size",
+			"tablet": "size",
+			"desktop": "size"
+		},
+		"date_format": "date_only",
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 225,
+			"desktop": 225
+		},
+		"sidebar_panels": [
+			"params"
+		]
+	},
+
+	"settings_browser": {
+		"view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 35,
+			"desktop": 35
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"settings"
+		],
+		"sidebar_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		}
+	},
+
+	"settings_manager": {
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"settings",
+			"preferences"
+		],
+		"sidebar_view_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		}
+	},
+
+	"spectrum_editor": {
+		"initial_file (unused)": "/Shared/Optics/Spectra/Visible (x6).spct",
+		"home_directory": "Spectra/",
+		"window_size": "large",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": {
+			"phone": [
+			],
+			"tablet": [
+			],
+			"desktop": [
+			]		
+		},
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 0,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"spectra",
+			"shared"
+		],
+		"sidebar_view_kind": {
+			"phone": "trees",
+			"tablet": "trees",
+			"desktop": "trees"
+		},
+		"show_data_editor": {
+			"phone": false,
+			"tablet": true,
+			"desktop": true
+		},
+		"data_editor_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"terminal": {
+		"font_size": 13,
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"text_editor": {
+		"font": "Open Sans",
+		"font_size": 14,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false
+	},
+
+	"theme_manager": {
+		"home_directory": "/Shared/Documents/Themes/",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions",
+			"themes"
+		],
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		}
+	},
+
+	"theme_picker": {
+		"window_size": "small",
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"timer": {
+		"display": "led",
+		"show_hours": true,
+		"show_hundredths": true,
+		"direction": "up",
+		"hours": 0,
+		"minutes": 0,
+		"seconds": 0,
+		"maximized": false,
+		"full_screen": false
+	},
+
+	"topic_browser": {
+		"view_kind": {
+			"phone": "cards",
+			"tablet": "cards",
+			"desktop": "icons"
+		},
+		"tile_size": "medium",
+		"detail_kind": "members",
+		"date_format": "date_only",
+		"sort_kind": "name",
+		"sort_order": "increasing",
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"nav"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"actions"
+		]
+	},
+
+	"topic_viewer": {
+		"default_topic": "What's New",
+		"posts_per_page": 10,
+		"posts_direction": "top_down",
+		"default_privacy": "connections",
+		"show_comments": true,
+		"show_options": true,
+		"show_elapsed_time": true,
+		"translation": false,
+		"language": "English",
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 200,
+			"desktop": 200
+		},
+		"sidebar_panels": [
+			"info",
+			"topics"
+		],
+		"sidebar_info_kind": {
+			"phone": "icons",
+			"tablet": "icons",
+			"desktop": "icons"
+		},
+		"sidebar_view_kind": {
+			"phone": "lists",
+			"tablet": "lists",
+			"desktop": "lists"
+		},
+		"uploads_directory": "Uploads/",
+		"copy_attachments": true,
+		"storage_directory": ".News/"
+	},
+
+	"tune_editor": {
+		"home_directory": "/Music",
+		"notation_size": 100,
+		"fit_width": false,
+		"tune_looping": false,
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav",
+			"track"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"tunes"
+		],
+		"show_markup": true,
+		"markup_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"video_player": {
+		"home_directory": "Videos/",
+		"background_color": null,
+		"volume": 5,
+		"clip_looping": false,
+		"album_looping": true,
+		"window_size": "medium",
+		"maximized": false,
+		"full_screen": false,
+		"toolbars": [
+			"clip", 
+			"volume",
+			"video"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 30,
+			"desktop": 30
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"videos"
+		],
+		"sidebar_view_kind": {
+			"phone": "tiles",
+			"tablet": "tiles",
+			"desktop": "tiles"
+		},
+		"sidebar_tile_size": {
+			"phone": "small",
+			"tablet": "medium",
+			"desktop": "large"
+		},
+		"show_video_info": false,
+		"info_bar_size": {
+			"phone": 50,
+			"tablet": 25,
+			"desktop": 25
+		}
+	},
+
+	"web_browser": {
+		"homepage": "https://www.google.com/webhp?igu=1",
+		"home_directory": "Favorites/",
+		"window_size": "medium",
+		"maximized": true,
+		"full_screen": false,
+		"toolbars": [
+			"nav", 
+			"address"
+		],
+		"show_sidebar": true,
+		"sidebar_size": {
+			"phone": 0,
+			"tablet": 25,
+			"desktop": 25
+		},
+		"sidebar_min_size": {
+			"phone": 0,
+			"tablet": 175,
+			"desktop": 175
+		},
+		"sidebar_panels": [
+			"favorites"
+		]
+	}
+}

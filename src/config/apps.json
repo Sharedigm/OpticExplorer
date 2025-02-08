@@ -1,229 +1,136 @@
 {
+	"account_manager": {
+		"name": "Accounts",
+		"icon": "fa fa-users",
+		"category": "system",
+		"platform": "all",
+		"access": "admin",
+		"disabled": false,
+		"hidden": false,
+		"args": true,
+		"color": "grey"
+	},
+	
 	"app_launcher": {
 		"name": "Apps",
 		"icon": "fa fa-rocket",
-		"platform": "all",
 		"category": "system",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "orange",
-		"preferences": {
-			"window_size": "medium",
-			"full_screen": true
-		}
+		"color": "orange"
 	},
 	
 	"audio_player": {
 		"name": "Audio",
 		"icon": "fa fa-volume-up",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
 		"color": "plum",
-		"preferences": {
-			"home_directory": "Music/",
-			"view_kind": "lists",
-			"detail_kind": "artist",
-			"sort_kind": "track_number",
-			"volume": 5,
-			"track_looping": false,
-			"album_looping": true,
-			"window_size": "medium",
-			"toolbars": [
-				"play",
-				"volume"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"favorites",
-				"track_info"
-			],
-			"show_analyser": true,
-			"analyzer_size": {
-				"phone": 25,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
 		"favorites": {
 			"#1": "Music/",
 			"#2": "Audio/"
-		},
-		"extensions": [
-			"flac",
-			"m4a",
-			"m4p",
-			"mid",
-			"midi",
-			"mp3",
-			"wav"
-		]
+		}
 	},
 
 	"calculator": {
 		"name": "Calculator",
 		"icon": "fa fa-calculator",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"mode": "basic"
-		}
+		"color": "green"
 	},
 
 	"calendar": {
 		"name": "Calendar",
 		"icon": "fa fa-calendar-alt",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"view_kind": "month",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 225,
-				"desktop": 225
-			},
-			"sidebar_panels": [
-				"events"
-			]
-		}
+		"color": "cyan"
 	},
 
 	"chat_browser": {
 		"name": "Chats",
 		"icon": "fa fa-comments",
-		"platform": "all",
 		"category": "social",
+		"platform": "all",
+		"access": "user",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
+		"color": "blue"
+	},
+
+	"chat_viewer": {
+		"name": "Messages",
+		"icon": "fa fa-comment",
+		"category": "social",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
 		"color": "blue",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": "messages",
-			"date_format": "date_only",
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"actions"
-			]
-		}
+		"new_chat_invitation_message": "Hi. Let's chat!",
+		"join_chat_invitation_message": "Hi. You're invited to join a chat!"
 	},
 	
 	"clock": {
 		"name": "Clock",
 		"icon": "fa fa-clock",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
-		"hidden": true,
+		"hidden": false,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"mode": "analog",
-			"show_mode": true
-		}
+		"color": "cyan"
 	},
 
 	"code_editor": {
 		"name": "Code",
 		"icon": "fa fa-code",
+		"category": "productivity",
 		"platform": "all",
-		"category": "utility",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
 		"color": "teal",
-		"preferences": {
-			"home_directory": "",
-			"show_gutter": true,
-			"show_indent_guides": true,
-			"show_print_margin": false,
-			"show_invisibles": false,
-			"font_size": 12,
-			"tab_size": 4,
-			"soft_tabs": false,
-			"soft_wrap": "off",
-			"key_binding": "default",
-			"highlight_active_line": false,
-			"highlight_selected": true,
-			"select_full_line": true,
-			"animated_scroll": true,
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 30,
-				"desktop": 30
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"files"
-			],
-			"sidebar_view_kind": {
-				"phone": "trees",
-				"tablet": "trees",
-				"desktop": "trees"
-			},
-			"show_console": false,
-			"console_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
+		"favorites": {
+			"#1": "Code/"
+		}
+	},
+
+	"communicator": {
+		"name": "Conversations",
+		"icon": "fa fa-message",
+		"category": "social",
+		"platform": "all",
+		"access": "user",
+		"disabled": false,
+		"hidden": false,
+		"args": false,
+		"color": "blue",
+		"defaults": {
+			"topic": {
+				"name": "What's New",
+				"description": "This is the default topic.",
+				"required": true
 			}
 		}
 	},
@@ -231,321 +138,60 @@
 	"connection_manager": {
 		"name": "Connections",
 		"icon": "fa fa-user-friends",
-		"platform": "all",
 		"category": "social",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "blue",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": null,
-			"date_format": "date_only",
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"groups"
-			],
-			"sidebar_view_kind": {
-				"phone": "cards",
-				"tablet": "icons",
-				"desktop": "icons"
-			}
-		},
 		"group_icon_selector_path": "/Shared/Pictures"
 	},
 	
 	"contact_editor": {
 		"name": "Contacts",
 		"icon": "fa fa-address-book",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
-		"color": "raspberry",
-		"preferences": {
-			"home_directory": "Contacts/",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"contacts"
-			],
-			"sidebar_view_kind": {
-				"phone": "cards",
-				"tablet": "icons",
-				"desktop": "lists"
-			}
-		}
+		"color": "raspberry"
 	},
 
 	"decibel_meter": {
 		"name": "Decibels",
 		"icon": "fa fa-volume-up",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
-		"color": "plum",
-		"preferences": {
-			"display": "led",
-			"sensitivity": 100
-		}
-	},
-
-	"communicator": {
-		"name": "Discussions",
-		"icon": "fa fa-message",
-		"platform": "all",
-		"category": "social",
-		"disabled": false,
-		"hidden": false,
-		"args": false,
-		"color": "blue",
-		"defaults": {
-			"topic": {
-				"name": "What's New",
-				"description": "This is the default topic.",
-				"required": true
-			}
-		},
-		"features": {
-			"emoji": true,
-			"files": true,
-			"pictures": true,
-			"audio": true,
-			"music": true,
-			"video": true,
-			"maps": true,
-			"uploads": true,
-			"locations": true
-		},
-		"preferences": {
-			"default_topic": "What's New",
-			"posts_per_page": 10,
-			"posts_direction": "top_down",
-			"messages_per_page": 50,
-			"default_privacy": "connections",
-			"show_comments": false,
-			"show_options": true,
-			"show_elapsed_time": true,
-			"translation": false,
-			"language": "English",
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 200,
-				"desktop": 200
-			},
-			"sidebar_panels": [
-				"info",
-				"topics",
-				"chats"
-			],
-			"sidebar_info_kind": {
-				"phone": "cards",
-				"tablet": "icons",
-				"desktop": "icons"
-			},
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"copy_attachments": true,
-			"storage_directory": ".News/",
-			"messages_directory": ".Messages/"
-		}
-	},
-
-	"topic_viewer": {
-		"name": "Comments",
-		"icon": "fa fa-newspaper",
-		"platform": "all",
-		"category": "social",
-		"disabled": false,
-		"hidden": true,
-		"args": false,
-		"color": "blue",
-		"defaults": {
-			"topic": {
-				"name": "What's New",
-				"description": "This is the default topic.",
-				"required": true
-			}
-		},
-		"features": {
-			"emoji": true,
-			"files": true,
-			"pictures": true,
-			"audio": true,
-			"music": true,
-			"video": true,
-			"maps": true,
-			"uploads": true,
-			"locations": true
-		},
-		"preferences": {
-			"default_topic": "What's New",
-			"posts_per_page": 10,
-			"posts_direction": "top_down",
-			"default_privacy": "connections",
-			"show_comments": false,
-			"show_options": true,
-			"show_elapsed_time": true,
-			"translation": false,
-			"language": "English",
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 200,
-				"desktop": 200
-			},
-			"sidebar_panels": [
-				"info",
-				"topics"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"copy_attachments": true,
-			"storage_directory": ".News/"
-		},
-		"topic_icon_selector_path": "/Shared/Pictures",
-		"topic_invitation_message": "I thought you might be interested in this topic!"
+		"color": "plum"
 	},
 
 	"file_browser": {
 		"name": "Files",
 		"icon": "fa fa-folder",
-		"platform": "all",
 		"category": "system",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "cyan",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": {
-				"phone": "size",
-				"tablet": "size",
-				"desktop": null
-			},
-			"date_format": "date_only",
-			"open_folders_in_new_window": false,
-			"show_hidden_files": false,
-			"show_file_extensions": false,
-			"show_thumbnails": true,
-			"show_image_names": true,
-			"show_clipboard_confirm": false,
-			"properties": [
-				"places",
-				"links",
-				"shares",
-				"indices"
-			],
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"show_desktop_sidebar": false,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"favorites",
-				"shared"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"map_mode": "hybrid",
-			"map_view_kind": {
-				"phone": "icons",
-				"tablet": "icons",
-				"desktop": "icons"
-			},
-			"show_item_names": true,
-			"show_geo_orientations": true,
-			"slide_duration": 2,
-			"slide_looping": true
-		},
 		"favorites": {
 			"#1": "~/",
-			"#2": "Maps/",
-			"#3": "Materials/",
-			"#4": "Optics/",
-			"#5": "Spectra/",
-			"#6": "Trash/"
+			"#2": "Documents/",
+			"#3": "Pictures/",
+			"#4": "Profile/",
+			"#5": "Music/",
+			"#6": "Videos/",
+			"#7": "Trash/"
 		},
-		"shared_directory": "/Shared/Optics",
+		"shared_directory": "/Shared",
 		"max_thumbnail_file_size": 100000000,
 		"max_thumbnail_svg_file_size": 1000000,
 		"share_invitation_message": "Check this out!"
@@ -554,198 +200,52 @@
 	"help_viewer": {
 		"name": "Help",
 		"icon": "fa fa-question-circle",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
-		"color": "red",
-		"preferences": {
-			"window_size": "medium",
-			"toolbars": [
-				"nav",
-				"page"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 30,
-				"desktop": 30
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 200,
-				"desktop": 200
-			},
-			"sidebar_panels": [
-				"index"
-			]
-		}
+		"color": "red"
 	},
 
 	"image_viewer": {
 		"name": "Images",
 		"icon": "fa fa-image",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
 		"color": "gold",
-		"preferences": {
-			"home_directory": "Pictures/",
-			"background_color": null,
-			"zoom_duration": 100,
-			"rotate_duration": 500,
-			"slide_duration": 5,
-			"slide_looping": true,
-			"window_size": "medium",
-			"toolbars": [
-				"mouse_mode",
-				"zoom_mode",
-				"zoom"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 30,
-				"desktop": 30
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"images"
-			],
-			"sidebar_view_kind": {
-				"phone": "tiles",
-				"tablet": "tiles",
-				"desktop": "tiles"
-			},
-			"sidebar_tile_size": {
-				"phone": "small",
-				"tablet": "medium",
-				"desktop": "large"
-			},
-			"show_image_info": false,
-			"info_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
-		"extensions": [
-			"bmp",
-			"dng",
-			"gif",
-			"jpg",
-			"jpeg",
-			"png",
-			"psd",
-			"svg",
-			"tga",
-			"tif",
-			"tiff"
-		]
+		"favorites": {
+			"#1": "Pictures/"
+		}
 	},
 
 	"mail_reader": {
 		"name": "Mail",
 		"icon": "fa fa-envelope",
-		"platform": "all",
 		"category": "productivity",
+		"platform": "all",
+		"access": "user",
 		"disabled": true,
 		"hidden": true,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"window_size": "medium"
-		}
+		"color": "cyan"
 	},
 
 	"map_viewer": {
 		"name": "Maps",
 		"icon": "fa fa-map",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
 		"color": "green",
-		"preferences": {
-			"use_my_location": false,
-			"latitude": 39.8283,
-			"longitude": 98.5795,
-			"zoom_level": 2,
-			"max_zoom_level": 11,
-			"map_mode": "hybrid",
-			"aero_mode": "vfr",
-			"search_kind": null,
-			"window_size": "medium",
-			"map_layers": [
-				"crosshairs",
-				"photos",
-				"videos",
-				"people",
-				"places",
-				"favorites"
-			],
-			"weather_layers": [
-				"satellite",
-				"radar"
-			],
-			"toolbars": [
-				"nav",
-				"mouse_mode",
-				"nav_mode",
-				"map"
-			],
-			"view_kind": {
-				"phone": "icons",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"show_grid": true,
-			"show_smoothing": true,
-			"show_item_names": true,
-			"show_geo_orientations": true,
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"maps",
-				"photos",
-				"videos",
-				"places"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"pan_duration": 500,
-			"zoom_duration": 500,
-			"zoom_to_duration": 5,
-			"measuring_units": "metric",
-			"arrow_style": "filled",
-			"label_style": "rotated",
-			"home_directory": "Maps/",
-			"photos_directory": "Pictures/",
-			"videos_directory": "Videos/",
-			"uploads_directory": "Uploads/",
-			"dropbox_directory": "Pictures/Dropbox/",
-			"google_directory": "Pictures/Google/"
-		},
 		"markers": {
 			"Places": {
 				"Home": "/Shared/Pictures/Twemoji/Travel/Buildings/1f3e0.svg",
@@ -755,67 +255,19 @@
 				"Church": "/Shared/Pictures/Twemoji/Travel/Buildings/26ea.svg"
 			}
 		},
-		"extensions": [
-			"kml"
-		],
-		"maps_directory": "/Shared/Maps/"
+		"maps_directory": "/Shared/Documents/Maps/"
 	},
 
 	"material_editor": {
 		"name": "Materials",
 		"icon": "fa fa-gem",
-		"platform": "all",
 		"category": "optical",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "white",
-		"preferences": {
-			"initial_file (unused)": "/Shared/Optics/Materials/Schott/N-BK7.mtrl",
-			"home_directory": "Materials/",
-			"window_size": "large",
-			"view_kind": "data_sheet",
-			"toolbars": {
-				"phone": [
-				],
-				"tablet": [
-				],
-				"desktop": [
-					"view"
-				]		
-			},
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"materials",
-				"shared"
-			],
-			"sidebar_view_kind": {
-				"phone": "trees",
-				"tablet": "trees",
-				"desktop": "trees"
-			},
-			"show_toolbar": true,
-			"show_data_editor": {
-				"phone": false,
-				"tablet": true,
-				"desktop": true
-			},
-			"data_editor_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
 		"wavelengths": {
 			"Fe N": 358.121,
 			"Fe L": 382.044,
@@ -838,149 +290,22 @@
 	"material_map_viewer": {
 		"name": "Material Maps",
 		"icon": "fa fa-map",
-		"platform": "all",
 		"category": "optical",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "white",
-		"preferences": {
-			"initial_file (unused)": "/Shared/Optics/Maps/Schott.abbe",
-			"home_directory": "Maps/",
-			"window_size": "large",
-			"pan_duration": 500,
-			"zoom_duration": 500,
-			"zoom_to_duration": 5,
-			"show_grid": true,
-			"show_axes": true,
-			"toolbars": {
-				"phone": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom_mode",
-					"zoom"
-				],
-				"tablet": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom_mode",
-					"zoom"
-				],
-				"desktop": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom",
-					"zoom_mode",
-					"map"
-				]
-			},
-			"scheme": "standard",
-			"theme": "auto",
-			"show_grid": true,
-			"show_abbe_axis": true,
-			"show_index_axis": true,
-			"show_colored_viewport": false,
-			"show_regions": false,
-			"show_edges": true,
-			"show_vertices": true,
-			"show_labels": true,
-			"show_shading": false,
-			"show_shadows": false,
-			"show_highlights": false,
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"maps",
-				"shared"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"show_toolbar": true,
-			"show_data_editor": {
-				"phone": false,
-				"tablet": true,
-				"desktop": true
-			},
-			"data_editor_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
 		"material_maps_directory": "/Shared/Optics/Maps"
-	},
-
-	"chat_viewer": {
-		"name": "Messages",
-		"icon": "fa fa-comments",
-		"platform": "all",
-		"category": "social",
-		"disabled": false,
-		"hidden": true,
-		"args": false,
-		"color": "blue",
-		"features": {
-			"emoji": true,
-			"files": true,
-			"pictures": true,
-			"audio": true,
-			"music": true,
-			"video": true,
-			"maps": true,
-			"uploads": true,
-			"locations": true
-		},
-		"preferences": {
-			"messages_per_page": 50,
-			"window_size": "medium",
-			"show_elapsed_time": true,
-			"translation": false,
-			"language": "English",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 200,
-				"desktop": 200
-			},
-			"sidebar_panels": [
-				"info",
-				"chats"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"copy_attachments": true,
-			"messages_directory": ".Messages/"
-		},
-		"new_chat_invitation_message": "Hi. Let's chat!",
-		"join_chat_invitation_message": "Hi. You're invited to join a chat!"
 	},
 
 	"notification_center": {
 		"name": "Notifications",
 		"icon": "fa fa-exclamation-triangle",
-		"platform": "mobile",
 		"category": "system",
+		"platform": "mobile",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
@@ -1004,368 +329,63 @@
 	"optic_editor": {
 		"name": "Optics",
 		"icon": "fa fa-database rotated flipped",
-		"platform": "all",
 		"category": "optical",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "white",
-		"preferences": {
-			"window_size": "large",
-			"toolbars": {
-				"phone": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom_mode",
-					"zoom"
-				],
-				"tablet": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom_mode",
-					"zoom"
-				],
-				"desktop": [
-					"mouse_mode",
-					"nav_mode",
-					"zoom_mode",
-					"zoom",
-					"optics"
-				]
-			},
-			"scheme": "standard",
-			"theme": "auto",
-			"show_grid": true,
-			"show_optical_axis": true,
-			"show_perpendicular_axis": true,
-			"show_colored_viewport": false,
-			"number_of_rays": 100,
-			"max_ray_depth": 50,
-
-			"show_elements": true,
-			"show_filled_elements": true,
-			"show_stroked_elements": true,
-			"show_shaded_elements": true,
-			"show_illustrated_elements": true,
-			"show_shadowed_elements": true,
-
-			"show_lights": true,
-			"show_filled_lights": true,
-			"show_stroked_lights": false,
-			"show_transmitted_lights": true,
-			"show_obstructed_lights": false,
-			"show_reflected_lights": false,
-
-			"show_objects": true,
-			"show_filled_objects": true,
-			"show_stroked_objects": false,
-			"show_transmitted_objects": true,
-			"show_obstructed_objects": false,
-			"show_reflected_objects": false,
-
-			"show_annotations": true,
-			"arrow_style": "filled",
-			"label_style": "diagonal",			
-			"show_thickness": true,
-			"show_spacing": true,
-			"show_focal_points": true,
-			"show_principal_planes": true,
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"optics",
-				"shared"
-			],
-			"sidebar_view_kind": {
-				"phone": "trees",
-				"tablet": "trees",
-				"desktop": "trees"
-			},
-			"show_toolbar": true,
-			"show_data_editor": {
-				"phone": false,
-				"tablet": true,
-				"desktop": true
-			},
-			"data_editor_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"pan_duration": 500,
-			"zoom_duration": 500,
-			"zoom_to_duration": 5,
-			"move_duration": 300,
-			"measuring_units": "metric",
-			"home_directory": "Optics/",
-			"uploads_directory": "Optics/"
-		},
-		"extensions": [
-			"lens"
-		],
 		"optics_directory": "/Shared/Optics/Optics"
 	},
 
 	"pdf_viewer": {
 		"name": "PDF",
 		"icon": "fa fa-file-pdf",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
-		"color": "white",
-		"preferences": {
-			"home_directory": "Documents/",
-			"background_color": null,
-			"zoom_duration": 100,
-			"window_size": "medium",
-			"toolbars": [
-				"zoom_mode",
-				"zoom"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 30,
-				"desktop": 30
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"pages"
-			],
-			"sidebar_tile_size": {
-				"phone": "small",
-				"tablet": "medium",
-				"desktop": "large"
-			}
-		}
+		"color": "white"
 	},
 
 	"post_viewer": {
-		"name": "Posts",
+		"name": "Comments",
 		"icon": "fa fa-newspaper",
-		"platform": "all",
 		"category": "social",
+		"platform": "all",
+		"access": "user",
 		"disabled": true,
 		"hidden": true,
 		"args": false,
-		"color": "blue",
-		"preferences": {
-			"show_comments": true,
-			"show_options": true,
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"topics"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"storage_directory": ".News/"
-		}
+		"color": "blue"
 	},
 
 	"profile_browser": {
 		"name": "People",
 		"icon": "fa fa-users",
-		"platform": "mobile",
 		"category": "social",
+		"platform": "mobile",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
 		"color": "blue",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": "location",
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"nav",
-				"search"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"actions"
-			]
-		},
 		"invitation_message": "I'd like to invite you to use this platform, which I use to store, manage, and share my data!"
 	},
 
 	"profile_viewer": {
 		"name": "Profile",
 		"icon": "fa fa-user-circle",
-		"platform": "all",
 		"category": "social",
+		"platform": "mobile",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "blue",
-		"preferences": {
-			"open_connections_in_new_window": false,
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"activity",
-				"status",
-				"actions",
-				"mutual_connections"
-			],
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"photos_view_kind": {
-				"phone": "gallery",
-				"tablet": "gallery",
-				"desktop": "gallery"
-			}
-		},
-		"contacts": {
-			"websites": {
-				"Categories": {
-					"homepage": {
-						"icon": "fa fa-home",
-						"label": "Homepage"
-					},
-					"blog": {
-						"icon": "fa fa-comment",
-						"label": "Blog"						
-					},
-					"business": {
-						"icon": "fa fa-money-bill",
-						"label": "Business"						
-					},
-					"photos": {
-						"icon": "fa fa-camera",
-						"label": "Photos"						
-					},
-					"videos": {
-						"icon": "fa fa-video",
-						"label": "Videos"						
-					},
-					"music": {
-						"icon": "fa fa-music",
-						"label": "Music"						
-					},
-					"portfolio": {
-						"icon": "fa fa-briefcase",
-						"label": "Portfolio"						
-					},
-					"interest": {
-						"icon": "fa fa-smile",
-						"label": "Interest"						
-					},
-					"social": {
-						"icon": "fa fa-users",
-						"label": "Social"						
-					}
-				},
-				"Commercial": {
-					"etsy": {
-						"icon": "fab fa-etsy",
-						"label": "Etsy"						
-					},
-					"facebook": {
-						"icon": "fab fa-facebook-official",
-						"label": "Facebook"						
-					},
-					"flickr": {
-						"icon": "fab fa-flickr",
-						"label": "Flickr"						
-					},
-					"github": {
-						"icon": "fab fa-github",
-						"label": "GitHub"						
-					},
-					"instagram": {
-						"icon": "fab fa-instagram",
-						"label": "Instagram"						
-					},
-					"linkedin": {
-						"icon": "fab fa-linkedin-square",
-						"label": "LinkedIn"						
-					},
-					"pinterest": {
-						"icon": "fab fa-pinterest",
-						"label": "Pinterest"						
-					},
-					"snapchat": {
-						"icon": "fab fa-snapchat-ghost",
-						"label": "Snapchat"						
-					},
-					"twitter": {
-						"icon": "fab fa-twitter-square",
-						"label": "Twitter"						
-					},
-					"vimeo": {
-						"icon": "fab fa-vimeo",
-						"label": "Vimeo"						
-					},
-					"wordpress": {
-						"icon": "fab fa-wordpress",
-						"label": "Wordpress"						
-					},
-					"youtube": {
-						"icon": "fab fa-youtube",
-						"label": "YouTube"						
-					}
-				}
-			}
-		},
 		"avatars_directory": "/Shared/Pictures/Avatars",
 		"cover_photos_directory": "/Shared/Pictures/Desktops"
 	},
@@ -1373,49 +393,21 @@
 	"project_browser": {
 		"name": "Projects",
 		"icon": "fa fa-clipboard",
-		"platform": "all",
 		"category": "productivity",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
-		"color": "green",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": "tasks",
-			"date_format": "date_only",
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"actions"
-			]
-		}
+		"color": "brown"
 	},
 
 	"project_viewer": {
 		"name": "Tasks",
 		"icon": "fa fa-check",
-		"platform": "all",
 		"category": "productivity",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
@@ -1427,55 +419,6 @@
 				"required": true
 			}
 		},
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "lists"
-			},
-			"tile_size": "medium",
-			"detail_kind": "priority",
-			"date_format": "date_only",
-			"default_project": "To Do List",
-			"tasks_per_page": 10,
-			"show_comments": false,
-			"show_options": true,
-			"show_elapsed_time": true,
-			"sort_kind": "title",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"tasks"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"info",
-				"projects"
-			],
-			"sidebar_info_kind": {
-				"phone": "cards",
-				"tablet": "icons",
-				"desktop": "icons"
-			},
-			"sidebar_view_kind": {
-				"phone": "lists",
-				"tablet": "lists",
-				"desktop": "lists"
-			},
-			"uploads_directory": "Uploads/",
-			"copy_attachments": true,
-			"storage_directory": "Projects/"
-		},
 		"project_icon_selector_path": "/Shared/Pictures",
 		"project_invitation_message": "I thought you might be interested in this!"
 	},
@@ -1483,240 +426,87 @@
 	"search_viewer": {
 		"name": "Search",
 		"icon": "fa fa-search",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"search": ["index", "files", "posts"],
-			"target": "text",
-			"min_score": 50,
-			"max_results": 100,
-			"view_kind": "lists",
-			"items_per_page": 30,
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"detail_kind": {
-				"phone": null,
-				"tablet": null,
-				"desktop": null
-			},
-			"date_format": "date_only",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 225,
-				"desktop": 225
-			},
-			"sidebar_panels": [
-				"params"
-			]
-		}
+		"color": "cyan"
 	},
 
 	"settings_browser": {
 		"name": "Settings",
 		"icon": "fa fa-cogs",
-		"platform": "all",
 		"category": "system",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
-		"color": "grey",
-		"preferences": {
-			"view_kind": {
-				"phone": "icons",
-				"tablet": "icons",
-				"desktop": "icons"
-			},
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 35,
-				"desktop": 35
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"settings"
-			],
-			"sidebar_view_kind": {
-				"phone": "icons",
-				"tablet": "icons",
-				"desktop": "icons"
-			}
-		}
+		"color": "grey"
 	},
 
 	"settings_manager": {
 		"name": "Settings Manager",
 		"icon": "fa fa-cog",
-		"platform": "all",
 		"category": "system",
+		"platform": "all",
+		"access": "all",
 		"disabled": true,
 		"hidden": true,
 		"args": false,
 		"color": "grey",
-		"preferences": {
-			"window_size": "medium",
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"settings",
-				"preferences"
-			],
-			"sidebar_view_kind": {
-				"phone": "icons",
-				"tablet": "icons",
-				"desktop": "icons"
-			}
-		},
 		"upgrade_account_url": "#contact"
 	},
 
 	"spectrum_editor": {
 		"name": "Spectra",
 		"icon": "fa fa-rainbow",
-		"platform": "all",
 		"category": "optical",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "white",
-		"preferences": {
-			"initial_file (unused)": "/Shared/Optics/Spectra/Visible (x6).spct",
-			"home_directory": "Spectra/",
-			"window_size": "large",
-			"toolbars": {
-				"phone": [
-				],
-				"tablet": [
-				],
-				"desktop": [
-				]		
-			},
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"spectra",
-				"shared"
-			],
-			"sidebar_view_kind": {
-				"phone": "trees",
-				"tablet": "trees",
-				"desktop": "trees"
-			},
-			"show_data_editor": {
-				"phone": false,
-				"tablet": true,
-				"desktop": true
-			},
-			"data_editor_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
 		"spectra_directory": "/Shared/Optics/Spectra"
 	},
 
 	"terminal": {
 		"name": "Terminal",
 		"icon": "fa fa-terminal",
-		"platform": "all",
 		"category": "system",
-		"disabled": true,
-		"hidden": true,
+		"platform": "all",
+		"access": "admin",
+		"disabled": false,
+		"hidden": false,
 		"args": false,
-		"color": "green",
-		"preferences": {
-			"window_size": "medium"
-		}
+		"color": "green"
 	},
 
 	"text_editor": {
 		"name": "Text",
 		"icon": "fa fa-file-alt",
-		"platform": "all",
 		"category": "productivity",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
-		"color": "teal",
-		"preferences": {
-			"font": "Open Sans",
-			"font_size": 14,
-			"window_size": "medium"
-		}
+		"color": "teal"
 	},
 
 	"theme_manager": {
 		"name": "Themes",
 		"icon": "fa fa-paint-roller",
-		"platform": "all",
 		"category": "system",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": false,
 		"args": false,
 		"color": "grey",
-		"preferences": {
-			"home_directory": "/Shared/Documents/Themes/",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"actions",
-				"themes"
-			],
-			"sidebar_view_kind": {
-				"phone": "cards",
-				"tablet": "icons",
-				"desktop": "lists"
-			}
-		},
 		"colors": [
 			"red", "orange", "gold", "yellow", "green", "teal", "aqua", "cyan", "blue", "violet",
 			"magenta", "brown", "grey"
@@ -1727,228 +517,112 @@
 	"theme_picker": {
 		"name": "Theme Picker",
 		"icon": "fa fa-mouse-pointer",
-		"platform": "mobile",
 		"category": "system",
+		"platform": "mobile",
+		"access": "user",
 		"disabled": false,
-		"hidden": true,
+		"hidden": false,
 		"args": false,
 		"color": "grey",
-		"preferences": {
-			"themes": [
-				"/Shared/Documents/Themes/Common/Colorful.thme",
-				"/Shared/Documents/Themes/Common/Dark.thme",
-				"/Shared/Documents/Themes/Common/Light.thme",
-				"/Shared/Documents/Themes/Common/Standard.thme",
-				"/Shared/Documents/Themes/Mac/System 1.thme",
-				"/Shared/Documents/Themes/Mac/X Monterey.thme",
-				"/Shared/Documents/Themes/Linux/Linux Penguin.thme",
-				"/Shared/Documents/Themes/Linux/Ubuntu Beaver.thme",
-				"/Shared/Documents/Themes/Windows/Windows XP.thme",
-				"/Shared/Documents/Themes/Windows/Windows 10.thme",
-				"/Shared/Documents/Themes/Windows/Windows 11.thme",
-				"/Shared/Documents/Themes/Windows/Windows 11 Dark.thme"
-			],
-			"window_size": "small"
-		}
+		"themes": [
+			"/Shared/Documents/Themes/Common/Colorful.thme",
+			"/Shared/Documents/Themes/Common/Dark.thme",
+			"/Shared/Documents/Themes/Common/Light.thme",
+			"/Shared/Documents/Themes/Common/Standard.thme",
+			"/Shared/Documents/Themes/Mac/System 1X.thme",
+			"/Shared/Documents/Themes/Mac/X Monterey.thme",
+			"/Shared/Documents/Themes/Linux/Linux Penguin.thme",
+			"/Shared/Documents/Themes/Linux/Ubuntu Beaver.thme",
+			"/Shared/Documents/Themes/Windows/Windows XP.thme",
+			"/Shared/Documents/Themes/Windows/Windows 10.thme",
+			"/Shared/Documents/Themes/Windows/Windows 11.thme",
+			"/Shared/Documents/Themes/Windows/Windows 11 Dark.thme"
+		]
 	},
 
 	"timer": {
 		"name": "Timer",
 		"icon": "fa fa-hourglass",
-		"platform": "all",
 		"category": "utility",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": true,
 		"args": false,
-		"color": "cyan",
-		"preferences": {
-			"display": "led",
-			"show_hours": true,
-			"show_hundredths": true
-		}
+		"color": "cyan"
 	},
 
 	"topic_browser": {
 		"name": "Topics",
 		"icon": "fa fa-hashtag",
-		"platform": "all",
 		"category": "social",
+		"platform": "all",
+		"access": "all",
 		"disabled": false,
 		"hidden": false,
 		"args": true,
+		"color": "blue"
+	},
+
+	"topic_viewer": {
+		"name": "Discussions",
+		"icon": "fa fa-hashtag",
+		"category": "social",
+		"platform": "all",
+		"access": "user",
+		"disabled": false,
+		"hidden": true,
+		"args": false,
 		"color": "blue",
-		"preferences": {
-			"view_kind": {
-				"phone": "cards",
-				"tablet": "cards",
-				"desktop": "icons"
-			},
-			"tile_size": "medium",
-			"detail_kind": "members",
-			"date_format": "date_only",
-			"sort_kind": "name",
-			"sort_order": "increasing",
-			"window_size": "medium",
-			"toolbars": [
-				"nav"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"actions"
-			]
-		}
+		"defaults": {
+			"topic": {
+				"name": "What's New",
+				"description": "This is the default topic.",
+				"required": true
+			}
+		},
+		"topic_icon_selector_path": "/Shared/Pictures",
+		"topic_invitation_message": "I thought you might be interested in this!"
 	},
 
 	"tune_editor": {
 		"name": "Tunes",
 		"icon": "fa fa-music",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
-		"color": "magenta",
-		"preferences": {
-			"home_directory": "/Music",
-			"notation_size": 100,
-			"fit_width": false,
-			"tune_looping": false,
-			"window_size": "medium",
-			"toolbars": [
-				"nav",
-				"track"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"tunes"
-			],
-			"show_markup": true,
-			"markup_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		}
+		"color": "magenta"
 	},
 
 	"video_player": {
 		"name": "Videos",
 		"icon": "fa fa-video",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
-		"color": "violet",
-		"preferences": {
-			"home_directory": "Videos/",
-			"background_color": null,
-			"volume": 5,
-			"clip_looping": false,
-			"album_looping": true,
-			"window_size": "medium",
-			"toolbars": [
-				"clip", 
-				"volume"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"videos"
-			],
-			"sidebar_view_kind": {
-				"phone": "tiles",
-				"tablet": "tiles",
-				"desktop": "tiles"
-			},
-			"sidebar_tile_size": {
-				"phone": "small",
-				"tablet": "medium",
-				"desktop": "large"
-			},
-			"show_video_info": false,
-			"info_bar_size": {
-				"phone": 50,
-				"tablet": 25,
-				"desktop": 25
-			}
-		},
-		"extensions": [
-			"avi",
-			"mp4",
-			"mov",
-			"ogg",
-			"webm",
-			"mpeg",
-			"mpg",
-			"wmv"
-		]
+		"color": "violet"
 	},
 
 	"web_browser": {
 		"name": "Web",
 		"icon": "fa fa-cloud",
-		"platform": "all",
 		"category": "multimedia",
+		"platform": "all",
+		"access": "user",
 		"disabled": false,
 		"hidden": true,
 		"args": true,
 		"color": "violet",
-		"preferences": {
-			"homepage": "https://www.wikipedia.org",
-			"home_directory": "Favorites/",
-			"window_size": "medium",
-			"toolbars": [
-				"nav", 
-				"address"
-			],
-			"show_sidebar": true,
-			"sidebar_size": {
-				"phone": 0,
-				"tablet": 25,
-				"desktop": 25
-			},
-			"sidebar_min_size": {
-				"phone": 0,
-				"tablet": 0,
-				"desktop": 175
-			},
-			"sidebar_panels": [
-				"favorites"
-			]
-		},
 		"favorites": {
-			"Wikipedia": "https://www.wikipedia.org",
-			"BBC News": "https://www.bbc.com"
+			"Google": "https://www.google.com/webhp?igu=1",
+			"Bing": "https://www.bing.com",
+			"Wikipedia": "https://www.wikipedia.org"
 		}
 	}
 }

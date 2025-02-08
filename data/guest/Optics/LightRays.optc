@@ -1,0 +1,44 @@
+################################################################################
+#                                                                              #
+#                                LightRays.optc                                #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 100 mm
+        diameter: 75 mm
+      - type: spherical
+        curvature: -200 mm
+        diameter: 75 mm
+    thickness: 20 mm
+    material:
+      n: 1.52
+      v: 75
+
+LIGHTS:
+
+  - type: ray
+    distance: 66.1396 mm
+    offset: -12.4771 mm
+    angle: 18.1006 deg
+    color: "#ff0000"
+
+  - type: ray
+    distance: 59.8831 mm
+    offset: 32.6926 mm
+    angle: 0
+    color: "#04ff00"
+
+OBJECTS: []

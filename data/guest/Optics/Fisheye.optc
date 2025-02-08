@@ -1,0 +1,160 @@
+################################################################################
+#                                                                              #
+#                                 Fisheye.optc                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 85 mm
+        diameter: 50 mm
+      - type: spherical
+        curvature: 16.45 mm
+        diameter: 30 mm
+    thickness: 2.04 mm
+    spacing: 8.32 mm
+    beveled: true
+    material: Hikari/SK16
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 61.18 mm
+        diameter: 30 mm
+      - type: spherical
+        curvature: 20.15 mm
+        diameter: 25 mm
+    thickness: 1.7 mm
+    spacing: 10.316 mm
+    material: Hikari/E-LASF09
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -204 mm
+        diameter: 20 mm
+      - type: spherical
+        curvature: -31.26 mm
+        diameter: 20 mm
+    thickness: 3.43 mm
+    spacing: 0.25 mm
+    material: Hikari/E-LAF02
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -27 mm
+        diameter: 20 mm
+      - type: spherical
+        curvature: 11.48 mm
+        diameter: 16 mm
+    thickness: 2.78 mm
+    material: Hikari/SF10
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 11.48 mm
+        diameter: 16 mm
+      - type: spherical
+        curvature: -55.84 mm
+        diameter: 16 mm
+    thickness: 4.93 mm
+    spacing: 5.865 mm
+    material: Hikari/SF10
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 59.67 mm
+        diameter: 13 mm
+      - type: spherical
+        curvature: -14.2 mm
+        diameter: 13 mm
+    thickness: 2.57 mm
+    material: Hikari/KF6
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -14.2 mm
+        diameter: 13 mm
+      - type: spherical
+        curvature: -76 mm
+        diameter: 15 mm
+    thickness: 1.41 mm
+    spacing: 3.66 mm
+    material: Hikari/E-LASF05
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -1732 mm
+        diameter: 17 mm
+      - type: spherical
+        curvature: 29.9 mm
+        diameter: 17 mm
+    thickness: 1.49 mm
+    material: Hikari/SF03
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 29.9 mm
+        diameter: 17 mm
+      - type: spherical
+        curvature: -21.55 mm
+        diameter: 17 mm
+    thickness: 4.02 mm
+    spacing: 0.19 mm
+    material: Hikari/E-FK01
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 44.74 mm
+        diameter: 20 mm
+      - type: spherical
+        curvature: -44.74 mm
+        diameter: 20 mm
+    thickness: 3.21 mm
+    spacing: 41 mm
+    material: Hikari/LAK7
+
+  - type: sensor
+    width: 36 mm
+    height: 24 mm
+    horizontal: 6000
+    vertical: 4000
+
+LIGHTS:
+
+  - type: distant
+    distance: 25 mm
+    number_of_rays: 100
+    color: "#00ff00"
+
+  - type: distant
+    distance: 25 mm
+    angle: 45 deg
+    number_of_rays: 100
+    color: "#ff0000"
+
+  - type: distant
+    distance: 25 mm
+    angle: -45 deg
+    number_of_rays: 100
+    color: "#0000ff"
+
+OBJECTS: []

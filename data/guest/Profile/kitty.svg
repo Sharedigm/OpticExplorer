@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<defs>
+		<style>
+			#kitty #head {
+				stroke: white;
+				stroke-width: 20;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				fill: lightgrey;
+			}
+
+			#kitty #mouth, 
+			#kitty #whiskers {
+				stroke-width: 20;
+			}
+
+			#kitty #whiskers {
+				stroke-linecap: round;
+			}
+
+			#kitty #eyes {
+				fill: black
+			}
+
+			#kitty #nose {
+				fill: hsl(0, 100%, 75%);
+			}
+
+			#kitty #mouth, 
+			#kitty #whiskers {
+				stroke: grey;
+			}
+		</style>
+	</defs>
+
+	<rect width="512" height="512" fill="hsl(200, 100%, 66%)" />
+
+	<g id="kitty">
+		<path id="head" d="M 204.6, 186.1 l -42.4 -69.5 c -1.6 -4 -5.4 -6.8 -9.7 -7.2 -4.3 -.4 -8.5, 1.6 -10.8, 5.3 -112.2, 238.9 -53.9, 304.5, 114.4, 303.7, 252.7, 1, 166.6 -206.3, 114.4 -310.7 -5.1-7.9 -16.9-6.9 -20.6, 1.8 l -42.4, 76.5 h -102.9 Z" />
+
+		<g id="eyes">
+			<ellipse cx="205" cy="270" rx="20" ry="30" />
+			<ellipse cx="305" cy="270" rx="20" ry="30" />
+		</g>
+
+		<g id="mouth" style="display:none">
+			<line x1="255" y1="315" x2="255" y2="365" />
+			<line x1="215" y1="370" x2="255" y2="365" />
+			<line x1="255" y1="365" x2="295" y2="370" />
+		</g>
+
+		<g id="nose">
+			<ellipse cx="255" cy="320" rx="30" ry="20" />
+		</g>
+
+		<g id="whiskers">
+			<line x1="30" y1="330" x2="150" y2="330" />
+			<line x1="60" y1="390" x2="150" y2="360" />
+			<line x1="475" y1="330" x2="350" y2="330" />
+			<line x1="445" y1="390" x2="350" y2="360" />
+		</g>
+	</g>
+</svg>

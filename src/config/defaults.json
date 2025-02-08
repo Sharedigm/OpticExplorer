@@ -1,7 +1,7 @@
 {
 	"colors": [
 		"red", "orange", "gold", "yellow", "green", "teal", "aqua", "cyan", "blue", "violet",
-		"magenta", "brown", "grey"
+		"magenta", "raspberry", "brown", "grey"
 	],
 
 	"contact": {
@@ -10,10 +10,8 @@
 			"Question",
 			"Comment",
 			"Feature Request",
-			"Upgrading My Account",
 			"Setting Up My Own Instance",
 			"Bug Report",
-			"Security Incident",
 			"Other"
 		],
 		"label": "Submit Question"
@@ -38,6 +36,11 @@
 				"phone": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"],
 				"tablet": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"],
 				"desktop": ["optic_editor", "material_editor", "material_map_viewer", "spectrum_editor", "search_viewer"]
+			},
+			"admin_apps": {
+				"phone": ["app_launcher"],
+				"tablet": ["app_launcher"],
+				"desktop": ["account_manager"]
 			},
 			"pinned_apps": []
 		}
@@ -90,6 +93,34 @@
 		"volume": 5
 	},
 
+	"sharing": {
+		"emoji": true,
+		"files": {
+			"Files": {
+				"icon": "fa fa-file",
+				"directory": ""
+			},
+			"Optics": {
+				"icon": "fa fa-database rotated flipped",
+				"directory": "Optics/"
+			},
+			"Materials": {
+				"icon": "fa fa-gem",
+				"directory": "Materials/"
+			},
+			"Material Maps": {
+				"icon": "fa fa-map",
+				"directory": "Maps/"
+			},
+			"Spectra": {
+				"icon": "fa fa-rainbow",
+				"directory": "Spectra/"
+			}
+		},
+		"uploads": true,
+		"locations": true
+	},
+
 	"text": {
 
 		"titles": [
@@ -119,6 +150,10 @@
 
 		"headings": [
 			"h1", "h2", "h3"
+		],
+
+		"content": [
+			"p", ".section li"
 		]
 	}
 }

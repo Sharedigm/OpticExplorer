@@ -1,0 +1,138 @@
+################################################################################
+#                                                                              #
+#                              Double Gauss.optc                               #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 110 mm
+        diameter: 80 mm
+      - type: spherical
+        curvature: 588.748 mm
+        diameter: 80 mm
+    thickness: 10 mm
+    spacing: 0.2 mm
+    material:
+      n: 1.80416
+      v: 46.6
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 51.6 mm
+        diameter: 75 mm
+      - type: spherical
+        curvature: 100.426 mm
+        diameter: 75 mm
+    thickness: 14.5 mm
+    spacing: 3.5 mm
+    material:
+      n: 1.79446
+      v: 45.4
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 119 mm
+        diameter: 65 mm
+      - type: spherical
+        curvature: 32.792 mm
+        diameter: 52 mm
+    thickness: 3 mm
+    spacing: 17.5 mm
+    beveled: true,
+    material:
+      n: 1.71736
+      v: 29.5
+
+  - type: stop
+    aperture: 50 mm
+    diameter: 75 mm
+    spacing: 15 mm
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -36.5 mm
+        diameter: 52 mm
+      - type: spherical
+        curvature: 131.5 mm
+        diameter: 65 mm
+    thickness: 2 mm
+    beveled: true,
+    material:
+      n: 1.68893
+      v: 31.1
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 131.5 mm
+        diameter: 65 mm
+      - type: spherical
+        curvature: -56.806 mm
+        diameter: 65 mm
+    thickness: 20 mm
+    spacing: 0.2 mm
+    material:
+      n: 1.77252
+      v: 49.6
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -160.5 mm
+        diameter: 65 mm
+      - type: spherical
+        curvature: -74.352 mm
+        diameter: 65 mm
+    thickness: 8.5 mm
+    spacing: 0.2 mm
+    material:
+      n: 1.77252
+      v: 49.6
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 122 mm
+        diameter: 65 mm
+      - type: spherical
+        curvature: 2092.57 mm
+        diameter: 65 mm
+    thickness: 9.5 mm
+    spacing: 16.9 mm
+    material:
+      n: 1.77252
+      v: 49.6
+
+  - type: stop
+    aperture: 44 mm
+    diameter: 57 mm
+    spacing: 46.5 mm
+
+  - type: sensor
+    width: 36 mm
+    height: 24 mm
+    horizontal: 6000
+    vertical: 4000
+
+LIGHTS:
+
+  - type: distant
+    distance: 25 mm
+    number_of_rays: 100
+
+OBJECTS: []

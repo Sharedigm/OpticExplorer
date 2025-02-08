@@ -1,0 +1,62 @@
+################################################################################
+#                                                                              #
+#                                BeamTest.optc                                 #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 100 mm
+        diameter: 75 mm
+      - type: spherical
+        curvature: -200 mm
+        diameter: 75 mm
+    thickness: 20 mm
+    material:
+      n: 1.52
+      v: 75
+
+LIGHTS:
+
+  - type: beam
+    distance: 52.6521 mm
+    width: 10 mm
+    offset: -35.9833 mm
+    angle: -27.146 deg
+    number_of_rays: 10
+    color: "#00ff00"
+
+  - type: beam
+    distance: 55.1206 mm
+    width: 10 mm
+    offset: 28.7239 mm
+    number_of_rays: 10
+    color: "#ff0000"
+
+  - type: beam
+    distance: 57.2373 mm
+    width: 10 mm
+    offset: 8.88003 mm
+    angle: 19.9534 deg
+    number_of_rays: 10
+    color: "#ffbb00"
+
+  - type: beam
+    distance: 59.6185 mm
+    width: 10 mm
+    offset: -15.7262 mm
+    angle: 0
+    number_of_rays: 10
+
+OBJECTS: []

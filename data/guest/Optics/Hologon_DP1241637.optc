@@ -1,0 +1,85 @@
+################################################################################
+#                                                                              #
+#                            Hologon_DP1241637.optc                            #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer optical system.             #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+ELEMENTS:
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 77.6 mm
+        diameter: 148.293 mm
+      - type: spherical
+        curvature: 25.62 mm
+        diameter: 51.0535 mm
+    thickness: 53.19 mm
+    spacing: 19.02 mm
+    material:
+      n: 1.80518
+      v: 25.5
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: 37.79 mm
+        diameter: 44.5831 mm
+      - type: planar
+        diameter: 10.164 mm
+    thickness: 25.5 mm
+    spacing: 0
+    beveled: true
+    material:
+      n: 1.713
+      v: 53.9
+
+  - type: element
+    surfaces:
+      - type: planar
+        diameter: 10.164 mm
+      - type: spherical
+        curvature: -36.72 mm
+        diameter: 43.6528 mm
+    thickness: 25.49 mm
+    spacing: 16.03 mm
+    beveled: true
+    material:
+      n: 1.713
+      v: 53.9
+
+  - type: element
+    surfaces:
+      - type: spherical
+        curvature: -24.19 mm
+        diameter: 48.0026 mm
+      - type: spherical
+        curvature: -59.89 mm
+        diameter: 112.994 mm
+    thickness: 34.91 mm
+    spacing: 29.0195 mm
+    material:
+      n: 1.80518
+      v: 25.5
+
+  - type: sensor
+    width: 36 mm
+    height: 24 mm
+    horizontal: 6000
+    vertical: 4000
+
+LIGHTS:
+
+  - type: distant
+    distance: 35 mm
+    number_of_rays: 100
+
+OBJECTS: []

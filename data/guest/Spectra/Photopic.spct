@@ -1,0 +1,22 @@
+################################################################################
+#                                                                              #
+#                                 Photopic.spct                                #
+#                                                                              #
+################################################################################
+#                                                                              #
+#        This is a description of an OpticExplorer emission spectrum.          #
+#                                                                              #
+#        Author(s): Ray Tracer                                                 #
+#                                                                              #
+################################################################################
+#        Made with OpticExplorer, opticexplorer.com, Optics for Everyone       #
+################################################################################
+
+DESCRIPTION:
+   Light simulating the spectral response of the human eye.
+
+WAVELENGTHS: [435.84, 486.13, 546.07, 587.56, 656.27]
+
+WEIGHTS: [0.2, 0.5, 1.0, 0.7, 0.15]
+
+PRIMARY: 3
