@@ -14,31 +14,43 @@ Welcome Screen
 ![Screen Shot](images/screen-shots/desktop.png)
 Desktop
 
-## Requirements
+## Features
 
-### 1. PHP 8.1+
+- Simulate optical systems using ray tracing analysis.
+- Import and export optic files in .ZMX or .OPTC formats.
+- Explore thousands of designs from the OpticExplorer database.
+- Simulate distant lights, point lights, light rays, and light beams.
+- Explore optical materials including refraction, reflection, transmission, and absorption characteristics.
+- Explore material libraries from glass producers such as Schott, Ohara, CDGM, and others.
+- Easy to install - with a one-step Docker installation.
+- Easy to use - works like the desktop and mobile systems you already know.
+- Platform independent - desktop or mobile.
+- Self-hostable - run on your own server.
 
-The back end code is built upon Laravel10 which relies upon PHP 8.1 or later.
+## Benefits
 
-### 2. Web Server
+- Explore and learn about optical systems.
+- Perform optical analysis.
+- Enables photographers to better understand their equiptment.
+- Use in classrooms to teach geometric optics.
+- Manage and share your optical designs.
 
-This application requires Apache or another similar web server.
+## Live Demo
 
-### 2. SQL Database
-
-SQL is used for storing user, authentication, and academic information.
+You can create an account and explore the features and benefits of the platform at [www.opticexplorer.com](https://www.opticexplorer.com).
 
 ## Installation
 
-Please follow the instructions in [documentation/INSTALL.md](documentation/INSTALL.md) to install the software on your web server.   If you would like some pointers for configuring your web server, see:  [documentation/CONFIG.md](documentation/CONFIG.md).
+Please follow the instructions in [www.chatkitty.org/#installation](https://www.opticexplorer.com/#installation) to install the software on your computer or web server.
 
+## Instructions
 
-<!-- LICENSE -->
+See the [OpticExplorer User Guide](https://www.opticexplorer.com/#help) for instructions on how to use the platform.
+
 ## License
 
 Distributed under the IndieSource License which allows unrestricted use of the software except by very large corporations. See [LICENSE.md](LICENSE.md) for more information.
 
-<!-- CONTACT -->
 ## Contact
 
-Abe Megahed - (mailto:amegahed@wisc.edu) - email
+mailto:admin@opticexplorer.com
